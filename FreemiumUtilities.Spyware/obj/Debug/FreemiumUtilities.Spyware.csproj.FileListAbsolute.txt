@@ -1,0 +1,16 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.dll.config
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\de\FreemiumUtilities.Spyware.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\WPFLocalizeExtension.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.FrmSpyware.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.FrmSpyware.de.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.csproj.GenerateResource.Cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\de\FreemiumUtilities.Spyware.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.csprojResolveAssemblyReference.cache

@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminRightsNeeded" xml:space="preserve">
+    <value>Benötigen Adminrechte, um zu laufen.</value>
+  </data>
+  <data name="arguments" xml:space="preserve">
+    <value>Argumente</value>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Kommando</value>
+  </data>
+  <data name="commands_disabled" xml:space="preserve">
+    <value>Alle Kommandos, außer Löschen, sind deaktiviert</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>Hersteller</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="delete_selected_item" xml:space="preserve">
+    <value>Möchten Sie den gewählten Eintrag immer noch löschen</value>
+  </data>
+  <data name="delete_startup_item" xml:space="preserve">
+    <value>Autostarteintrag löschen</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="disable" xml:space="preserve">
+    <value>Deaktivieren</value>
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value>Deaktiviert</value>
+  </data>
+  <data name="disable_startup_item" xml:space="preserve">
+    <value>Autostarteintrag deaktivieren</value>
+  </data>
+  <data name="do_you_wish" xml:space="preserve">
+    <value>Möchten Sie fortfahren</value>
+  </data>
+  <data name="enable" xml:space="preserve">
+    <value>Aktivieren</value>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>Aktiviert</value>
+  </data>
+  <data name="enable_startup_item" xml:space="preserve">
+    <value>Autostarteintrag aktivieren</value>
+  </data>
+  <data name="error_occurred" xml:space="preserve">
+    <value>Es trat ein Fehler auf in</value>
+  </data>
+  <data name="execute" xml:space="preserve">
+    <value>Ausführen</value>
+  </data>
+  <data name="execute_command" xml:space="preserve">
+    <value>Kommando ausführen</value>
+  </data>
+  <data name="file_appear_not_valid" xml:space="preserve">
+    <value>Die Datei scheint keine gültige Verknüpfung zu sein</value>
+  </data>
+  <data name="file_folder_not_found" xml:space="preserve">
+    <value>Die Datei und/oder der Ordner können nicht gefunden werden</value>
+  </data>
+  <data name="file_invalid" xml:space="preserve">
+    <value>Die Datei ist ungültig und existiert nicht</value>
+  </data>
+  <data name="file_name" xml:space="preserve">
+    <value>Dateiname</value>
+  </data>
+  <data name="file_not_found" xml:space="preserve">
+    <value>Die Datei wurde nicht gefunden oder ist verborgen</value>
+  </data>
+  <data name="file_not_found1" xml:space="preserve">
+    <value>Die Datei wurde nicht gefunden</value>
+  </data>
+  <data name="file_not_found_warning" xml:space="preserve">
+    <value>Die Datei wurde nicht gefunden</value>
+  </data>
+  <data name="file_path" xml:space="preserve">
+    <value>Dateipfad</value>
+  </data>
+  <data name="folder_not_found" xml:space="preserve">
+    <value>Der Ordner wurde nicht gefunden</value>
+  </data>
+  <data name="full_version" xml:space="preserve">
+    <value>Dateiversion</value>
+  </data>
+  <data name="if_you_continue" xml:space="preserve">
+    <value>Wenn Sie fortfahren, werden Sie nur die Einträge mit der Markierung "Aktueller Benutzer" ändern können</value>
+  </data>
+  <data name="item_name" xml:space="preserve">
+    <value>Name des Eintrags</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="move_to_all" xml:space="preserve">
+    <value>Zu Alle verschieben</value>
+  </data>
+  <data name="move_to_all_tip" xml:space="preserve">
+    <value>Eintrag zu Alle Benutzer verschieben</value>
+  </data>
+  <data name="move_to_all_users" xml:space="preserve">
+    <value>Zu &amp;Alle Benutzer verschieben</value>
+  </data>
+  <data name="move_to_current_user" xml:space="preserve">
+    <value>Zu aktueller Ben&amp;utzer verschieben</value>
+  </data>
+  <data name="move_to_uesr" xml:space="preserve">
+    <value>Zu Benutzer verschieben</value>
+  </data>
+  <data name="move_to_user_tip" xml:space="preserve">
+    <value>Eintrag zu aktueller Benutzer verschieben</value>
+  </data>
+  <data name="no_permission" xml:space="preserve">
+    <value>Sie besitzen nicht die nötigen Rechte, um die Eigenschaften dieser Datei anzuzeigen.</value>
+  </data>
+  <data name="open_file_folder" xml:space="preserve">
+    <value>Dateiordner öffnen</value>
+  </data>
+  <data name="open_folder" xml:space="preserve">
+    <value>Ordner öffnen</value>
+  </data>
+  <data name="open_folder_tip" xml:space="preserve">
+    <value>Ordner des Eintrags öffnen</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>Produkt</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Aktualisieren</value>
+  </data>
+  <data name="refresh_tip" xml:space="preserve">
+    <value>Anzeige aktualisieren</value>
+  </data>
+  <data name="run_as_admin" xml:space="preserve">
+    <value>Um alle Autostarteinträge zu ändern, müssen Sie dieses Programm als Administrator ausführen.</value>
+  </data>
+  <data name="startup_manager" xml:space="preserve">
+    <value>Systemstart verwalten</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="system_returned" xml:space="preserve">
+    <value>Das System hat die folgenden Informationen zurükgegeben</value>
+  </data>
+  <data name="unable_to_delete" xml:space="preserve">
+    <value>Dieser Eintrag konnte nicht gelöscht werden</value>
+  </data>
+  <data name="unable_to_disable" xml:space="preserve">
+    <value>Dieser Eintrag konnte nicht deaktiviert werden</value>
+  </data>
+  <data name="unable_to_enable" xml:space="preserve">
+    <value>Dieser Eintrag konnte nicht aktiviert werden</value>
+  </data>
+  <data name="unable_to_execute" xml:space="preserve">
+    <value>Dieser Eintrag konnte nicht ausgeführt werden</value>
+  </data>
+  <data name="unable_to_move" xml:space="preserve">
+    <value>Dieser Eintrag konnte nicht verschoben werden</value>
+  </data>
+  <data name="unable_to_open" xml:space="preserve">
+    <value>Der Ordner dieses Eintrags konnte nicht geöffnet werden</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Warnung: Löschen Sie keine Autostart-Einträge, wenn Sie nicht 100% sicher sind. In den meisten Fällen sollten Sie diese nur deaktivieren.</value>
+  </data>
+  <data name="HKCU" xml:space="preserve">
+    <value>Registry: Aktueller Benutzer</value>
+  </data>
+  <data name="HKLM" xml:space="preserve">
+    <value>Registry: Alle Benutzer</value>
+  </data>
+  <data name="StartupAllUsers" xml:space="preserve">
+    <value>Autostart-Ordner: Alle Benutzer</value>
+  </data>
+  <data name="StartupCurrentUser" xml:space="preserve">
+    <value>Autostart-Ordner: Aktueller Benutzer</value>
+  </data>
+  <data name="WHKCU" xml:space="preserve">
+    <value>Registry: x86 Aktueller Benutzer</value>
+  </data>
+  <data name="WHKLM" xml:space="preserve">
+    <value>Registry: x86 Alle Benutzer</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+</root>

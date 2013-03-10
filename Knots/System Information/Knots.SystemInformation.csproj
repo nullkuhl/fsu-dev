@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>
+    </StartupObject>
+    <RootNamespace>SystemInformation</RootNamespace>
+    <AssemblyName>SystemInfo</AssemblyName>
+    <OptionStrict>On</OptionStrict>
+    <ApplicationIcon>Resources\FSUIcon.ico</ApplicationIcon>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreemiumUtil">
+      <HintPath>bin\FreemiumUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BottomControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ButtomControl.Designer.cs">
+      <DependentUpon>BottomControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBusy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBusy.designer.cs">
+      <DependentUpon>FormBusy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HolidayCalculator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListViewItemComparer.cs" />
+    <Compile Include="Panels\Bios.Designer.cs">
+      <DependentUpon>Bios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Computer.Designer.cs">
+      <DependentUpon>Computer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Cpu.Designer.cs">
+      <DependentUpon>Cpu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\DateAndTime.Designer.cs">
+      <DependentUpon>DateAndTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Drives.Designer.cs">
+      <DependentUpon>Drives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\InstalledPrograms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\InstalledPrograms.Designer.cs">
+      <DependentUpon>InstalledPrograms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Introduction.Designer.cs">
+      <DependentUpon>Introduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Network.Designer.cs">
+      <DependentUpon>Network.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\OperatingSystem.Designer.cs">
+      <DependentUpon>OperatingSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Services.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Sound.Designer.cs">
+      <DependentUpon>Sound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SpecialFolders.Designer.cs">
+      <DependentUpon>SpecialFolders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\StartupPrograms.Designer.cs">
+      <DependentUpon>StartupPrograms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Users.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\StartupPrograms.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\DateAndTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InformationClass.cs" />
+    <Compile Include="Panels\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\Video.Designer.cs">
+      <DependentUpon>Video.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\VisualStyles.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\VisualStyles.Designer.cs">
+      <DependentUpon>VisualStyles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="NativeMethods.cs" />
+    <Compile Include="Resources.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShortcutClass.cs" />
+    <Compile Include="TopControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TopControl.designer.cs">
+      <DependentUpon>TopControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\SpecialFolders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Introduction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Video.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Sound.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Network.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Drives.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Computer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Bios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\Cpu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Panels\OperatingSystem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Panels\TaskPanelBase.Designer.cs">
+      <DependentUpon>TaskPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Panels\TaskPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ButtomControl.resx">
+      <DependentUpon>BottomControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBusy.resx">
+      <DependentUpon>FormBusy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\InstalledPrograms.resx">
+      <DependentUpon>InstalledPrograms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\StartupPrograms.resx">
+      <DependentUpon>StartupPrograms.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\DateAndTime.resx">
+      <DependentUpon>DateAndTime.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\VisualStyles.resx">
+      <DependentUpon>VisualStyles.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.en.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopControl.resx">
+      <DependentUpon>TopControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\SpecialFolders.resx">
+      <DependentUpon>SpecialFolders.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Introduction.resx">
+      <DependentUpon>Introduction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Video.resx">
+      <DependentUpon>Video.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Sound.resx">
+      <DependentUpon>Sound.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Network.resx">
+      <DependentUpon>Network.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Drives.resx">
+      <DependentUpon>Drives.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Computer.resx">
+      <DependentUpon>Computer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Bios.resx">
+      <DependentUpon>Bios.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\Cpu.resx">
+      <DependentUpon>Cpu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\OperatingSystem.resx">
+      <DependentUpon>OperatingSystem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Panels\TaskPanelBase.resx">
+      <DependentUpon>TaskPanelBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="freemium.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="SystemInformation.Designer.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BIOS_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPU_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BIOS_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Computer_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CPU_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drive_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Network_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sound_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Video_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Virtual Software with Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialFolder_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SpecialFolder_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_off.png" />
+    <None Include="Resources\help_on.png" />
+    <None Include="Resources\FSUIcon.ico" />
+    <Content Include="SystemInformation.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\segoeui.ttf" />
+    <None Include="Resources\segoeuib.ttf" />
+    <None Include="Resources\VisualStyles_48x48.png" />
+    <None Include="Resources\Date-Time_16x16.png" />
+    <None Include="Resources\Date-Time_48x48.png" />
+    <None Include="Resources\Windows XP_48x48.png" />
+    <None Include="Resources\Windows2000_48x48.png" />
+    <None Include="Resources\Windows Vista_48x48.png" />
+    <None Include="Resources\System Information_16x16.png" />
+    <None Include="Resources\System Information_48x48.png" />
+    <None Include="Resources\Windows2000_16x16.png" />
+    <None Include="Resources\Windows Vista_16x16.png" />
+    <None Include="Resources\Windows XP_16x16.png" />
+    <Content Include="Libraries\FreemiumUtil.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Adobe.ico" />
+    <Content Include="Resources\Blank.png" />
+    <None Include="Resources\bottomBar.png" />
+    <Content Include="Resources\CDROM_16x16.png" />
+    <Content Include="Resources\covus_waiting.png" />
+    <Content Include="Resources\Delete.png" />
+    <Content Include="Resources\Floppy_16x16.png" />
+    <Content Include="Resources\Folder.png" />
+    <None Include="Resources\Installed Programs_16x16.png" />
+    <None Include="Resources\Installed Programs_48x48.png" />
+    <None Include="Resources\loader.gif" />
+    <None Include="Resources\HelpButton.png" />
+    <None Include="Resources\HelpButton_On.png" />
+    <None Include="Resources\info.png" />
+    <Content Include="Resources\NetworkDrive_16x16.png" />
+    <None Include="Resources\Unknown_16x16.png" />
+    <None Include="System Information.exe.manifest" />
+    <None Include="System Information.RES" />
+    <None Include="Resources\Services_48x48.png" />
+    <None Include="Resources\Services_16x16.png" />
+    <Content Include="Resources\Startup_16x16.png" />
+    <Content Include="Resources\Startup_48x48.png" />
+    <Content Include="Resources\System Information.ico" />
+    <None Include="Resources\UsbDrive_16x16.png" />
+    <None Include="Resources\thinBar.png" />
+    <Content Include="Resources\UserDisabled_16x16.png" />
+    <Content Include="Resources\Users_16x16.png" />
+    <Content Include="Resources\Users_48x48.png" />
+    <Content Include="Resources\User_16x16.png" />
+    <Content Include="System Information.ico" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>xcopy "$(SolutionDir)Knots\System Information\bin" "$(SolutionDir)FreemiumUtilities\bin\" /Y /S /I /R</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>"%ProgramFiles%\Microsoft Visual Studio 8\SDK\v2.0\Bin\rc.exe" "$(ProjectDir)$(ProjectName).rc"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>System Information.exe.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

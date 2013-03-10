@@ -1,0 +1,6 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\WPFLocalizeExtension.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb

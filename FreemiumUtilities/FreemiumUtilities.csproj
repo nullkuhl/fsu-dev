@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C08966C-3E47-478A-8DCA-231910305743}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreemiumUtilities</RootNamespace>
+    <AssemblyName>FreemiumUtilities</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\FSU-Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\FSUIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C29A786B714F8A2D13EA188757D7BEDCE9A6D61E</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\FreemiumUtil.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\FreemiumUtilities.Infrastructure.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.RegCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\FreemiumUtilities.RegCleaner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.ShortcutFixer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\FreemiumUtilities.ShortcutFixer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.Spyware, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\FreemiumUtilities.Spyware.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.StartupManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\FreemiumUtilities.StartupManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.TempCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\FreemiumUtilities.TempCleaner.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FreemiumUtilities.TracksEraser">
+      <HintPath>Applications\FreemiumUtilities.TracksEraser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Win32.TaskScheduler, Version=1.7.4273.24968, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\Microsoft.Win32.TaskScheduler.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscriptable, Version=1.0.2462.23865, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\mscriptable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Tuples, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\System.Tuples.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="TracksEraser, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Applications\TracksEraser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFLocalizeExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libraries\WPFLocalizeExtension.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="FormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOptions.Designer.cs">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRestorePoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRestorePoint.designer.cs">
+      <DependentUpon>FormRestorePoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaskManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaskManager.designer.cs">
+      <DependentUpon>FormTaskManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\OneClickAppModel.cs" />
+    <Compile Include="Properties\Resources.de.Designer.cs">
+      <DependentUpon>Resources.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AboutBox.xaml.cs">
+      <DependentUpon>AboutBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Routine\Converters\AnyPropertyEqualsToVisibilityConverter.cs" />
+    <Compile Include="Routine\messagePipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routine\messagePipe.designer.cs">
+      <DependentUpon>messagePipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routine\Script.cs" />
+    <Compile Include="Routine\StringLib\OskarFormatter.cs" />
+    <Compile Include="Routine\TaskManager.cs" />
+    <Compile Include="Routine\Converters\TypeNotEqualsToVisibilityConverter.cs" />
+    <Compile Include="Routine\Converters\TypeEqualsToVisibilityConverter.cs" />
+    <Compile Include="Routine\Converters\PropertyNotEqualsToVisibilityConverter.cs" />
+    <Compile Include="Routine\Converters\PropertyEqualsToVisibilityConverter.cs" />
+    <Compile Include="Routine\Converters\ProgressPercentageConverter.cs" />
+    <Compile Include="Routine\Converters\ImageConverter.cs" />
+    <Compile Include="Routine\NoiseGenerator.cs" />
+    <Compile Include="Routine\SimpleCommand.cs" />
+    <Compile Include="Routine\VisibilityAnimation.cs" />
+    <Compile Include="ViewModels\OneClickAppViewModel.cs" />
+    <Compile Include="ViewModels\OneClickAppsViewModel.cs" />
+    <Page Include="CommonStyles\ControlStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="CommonStyles\WindowStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MSCodesigning.pfx" />
+    <None Include="Themes\Blue\Theme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Themes\Green\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Themes\Red\Theme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="AboutBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="FormOptions.resx">
+      <DependentUpon>FormOptions.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRestorePoint.resx">
+      <DependentUpon>FormRestorePoint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaskManager.resx">
+      <DependentUpon>FormTaskManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routine\messagePipe.resx">
+      <DependentUpon>messagePipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <BlendEmbeddedFont Include="Fonts\HelveticaNeueCE-Bold.otf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\HelveticaNeueCE-Medium.otf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\HelveticaNeueCE-Roman.otf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-Bold.otf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\MyriadPro-Light.otf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Content Include="23-1-44-733.vbs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\FreemiumUtilities.RegCleaner.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\FreemiumUtilities.ShortcutFixer.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\FreemiumUtilities.StartupManager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\FreemiumUtilities.TempCleaner.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\FreemiumUtilities.TracksEraser.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Applications\TracksEraser.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\bg-logo-flame.png" />
+    <Resource Include="Images\bg-logo-small.png" />
+    <Resource Include="Images\desktop_icon.ico" />
+    <Resource Include="Images\icon-regtools.png" />
+    <Resource Include="Images\icon-empty-folders-finder.png" />
+    <Resource Include="Images\icon-dupicon.png" />
+    <Resource Include="Images\icon-ignore-list.png" />
+    <Resource Include="Images\icon-options.png" />
+    <Resource Include="Images\icon-restore-center.png" />
+    <Resource Include="Images\icon-system-info.png" />
+    <Resource Include="Images\icon-feedback.png" />
+    <Resource Include="Images\icon-app.png" />
+    <Resource Include="Images\FSUIcon.ico" />
+    <Resource Include="Images\help.png" />
+    <Resource Include="Images\facebook.png" />
+    <Resource Include="Images\google.png" />
+    <Resource Include="Images\tw.png" />
+    <Resource Include="Images\tw_bg.png" />
+    <Content Include="Libraries\de\TracksEraser.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\en\TracksEraser.resources.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\FreemiumUtil.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\SQLite.Interop.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\System.Data.SQLite.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Common Tools.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\FreemiumUtilities.Infrastructure.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Interop.IWshRuntimeLibrary.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\Microsoft.Win32.TaskScheduler.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\mscriptable.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\UrlHistoryLibrary.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\WPFLocalizeExtension.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Icon.ico" />
+    <None Include="Resources\desktop_icon.ico" />
+    <Content Include="Resources\spyware_toberemoved.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="freemium.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Startup_ToBeRemoved.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-browser-manager.png" />
+    <Resource Include="Images\icon-context-menu-manager.png" />
+    <Resource Include="Images\icon-disc-analysis.png" />
+    <Resource Include="Images\icon-disc-cleaner.png" />
+    <Resource Include="Images\icon-shortcuts-fixer.png" />
+    <Resource Include="Images\icon-uninstall-manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-oneclick.png" />
+    <Resource Include="Images\icon-performance.png" />
+    <Resource Include="Images\icon-security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-encrypt.png" />
+    <Resource Include="Images\icon-file-eraser.png" />
+    <Resource Include="Images\icon-file-undelete.png" />
+    <Resource Include="Images\icon-split.png" />
+    <Resource Include="Images\icon-spyware-remover.png" />
+    <Resource Include="Images\icon-tracks-eraser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-cleanup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-memory-optimizer.png" />
+    <Resource Include="Images\icon-process-manager.png" />
+    <Resource Include="Images\icon-registry-cleaner.png" />
+    <Resource Include="Images\icon-registry-compactor.png" />
+    <Resource Include="Images\icon-startup-manager.png" />
+    <Resource Include="Images\icon-windows-tools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-noise.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icon-lamp.png" />
+    <Resource Include="Images\icon-scan.png" />
+    <Resource Include="Images\icon-schedule.png" />
+    <Content Include="Applications\FreemiumUtilities.Spyware.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Libraries\System.Tuples.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Libraries\System.Tuples.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts\HelveticaNeueCE-Bold.otf" />
+    <Resource Include="Fonts\HelveticaNeueCE-Medium.otf" />
+    <Resource Include="Fonts\HelveticaNeueCE-Roman.otf" />
+    <Resource Include="Fonts\MyriadPro-Bold.otf" />
+    <Resource Include="Fonts\MyriadPro-Light.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FreemiumUtilities.Context\FreemiumUtilities.Context.csproj">
+      <Project>{2AF3F14E-A183-44D4-A994-C8795A33E874}</Project>
+      <Name>FreemiumUtilities.Context</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Context Menu Manager\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Disk Analysis\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Empty Folder Finder\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Shortcuts Fixer\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Clean Up And Manage\Uninstall Manager\" /Y /S /I /R
+
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Memory Optimizer\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Process Manager\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Startup Manager\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Improve Performance\Windows Standard Tools\" /Y /S /I /R
+
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\BrowserAssistant\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\EncryptDecrypt\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\File Eraser\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\File Splitter and Joiner\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\File Undelete\" /Y /S /I /R
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\Security And Privacy\TracksEraser\" /Y /S /I /R
+
+xcopy "$(ProjectDir)freemium.cfg" "$(SolutionDir)Knots\System Information\" /Y /S /I /R</PostBuildEvent>
+  </PropertyGroup>
+  <!-- <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\.NETFramework\v4.0\Microsoft.Expression.Blend.WPF.targets" />
+  To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

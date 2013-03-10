@@ -1,0 +1,17 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\SQLite.Interop.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\System.Data.SQLite.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\UrlHistoryLibrary.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll.config
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\WPFLocalizeExtension.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackOptions.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackSelector.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csproj.GenerateResource.Cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csprojResolveAssemblyReference.cache

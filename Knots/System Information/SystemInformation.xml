@@ -1,0 +1,958 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SystemInformation</name>
+    </assembly>
+    <members>
+        <member name="T:SystemInformation.TaskPanelBase">
+            <summary>
+            Designer for TaskPanelBase.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.TaskPanelBase.#ctor">
+            <summary>
+            Debug code for TaskPanelBase.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.TaskPanelBase.Dispose(System.Boolean)">
+            <summary>
+            UserControl overrides dispose to clean up the component list.
+            </summary>
+        </member>
+        <member name="F:SystemInformation.MainForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.MainForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:SystemInformation.MainForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.Introduction.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.Network.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="T:SystemInformation.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:SystemInformation.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:SystemInformation.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.Power.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.VisualStyles.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Video.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.InformationClass.GetOSProductKey">
+            <summary>
+            Read the value of:
+            HKLM\SOFTWARE\MICROSOFT\Windows NT\CurrentVersion\DigitalProductId
+            and decode the Windows CD Key.
+            </summary>
+            <returns>
+            Returns the Windows CD Key if successful.
+            Returns "Unknown" upon failure.
+            </returns>
+        </member>
+        <member name="M:SystemInformation.InformationClass.Initialize(SystemInformation.InformationClass.Initializers)">
+            <summary>
+            Initialize according to property setting.
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.UserIsAdministrator">
+            <summary>
+            "Administrator Status of Current User"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.UserCustomerName">
+            <summary>
+            "Customer Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.UserCustomerOrganization">
+            <summary>
+            "Customer Organization"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSBuild">
+            <summary>
+            "Build"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuNumberOfCpus">
+            <summary>
+            "Number of Processors"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MemAvailVirtual">
+            <summary>
+            "Available Virtual Memory"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MemAvailPhysical">
+            <summary>
+            "Available Physical Memory"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSCodeName">
+            <summary>
+            "Operating System Code Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.FrameworkVersion">
+            <summary>
+            ".NET Framework Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.FrameworkMajorVersion">
+            <summary>
+            ".NET Framework Major Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.FrameworkMinorVersion">
+            <summary>
+            ".NET Framwork Minor Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.FrameworkServicePack">
+            <summary>
+            ".NET Framework Service Pack"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSMachineName">
+            <summary>
+            "Machine Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSVersion">
+            <summary>
+            "Operating System Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSFullName">
+            <summary>
+            "Operating System Full Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSPlatform">
+            <summary>
+            "Operating System Platform"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSMinorVersion">
+            <summary>
+            "Operating System Minor Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSMajorVersion">
+            <summary>
+            "Operating System Major Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSServicePack">
+            <summary>
+            "Operating System Service Pack"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MemTotalVirtual">
+            <summary>
+            "Total Virtual Memory"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MemTotalPhysical">
+            <summary>
+            "Total Physical Memory"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSUserName">
+            <summary>
+            "Logon User Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSProductKey">
+            <summary>
+            "OS Product Key"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppBuild">
+            <summary>
+            "Application Build"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppCompanyName">
+            <summary>
+            "Application Company (Manufacturer)"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppCopyright">
+            <summary>
+            "Application Copyright"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppDescription">
+            <summary>
+            "Application Copyright"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppMajorRevision">
+            <summary>
+            "Application Major Revision"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppMajorVersion">
+            <summary>
+            "Application Major Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppMinorRevision">
+            <summary>
+            "Application Minor Revision"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppMinorVersion">
+            <summary>
+            "Application Minor Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppProductName">
+            <summary>
+            "Application Product Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppRevision">
+            <summary>
+            "Application Revision"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppShortVersion">
+            <summary>
+            "Application Major and Minor Version Separated by a Decimal"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppTitle">
+            <summary>
+            "Application Title"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppTrademark">
+            <summary>
+            "Application Trademark"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppVersion">
+            <summary>
+            "Application Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.AppDirectory">
+            <summary>
+            "Application Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.FrameworkShortVersion">
+            <summary>
+            ".NET Framework Major and Minor Version Separated by a Decimal"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeIsFloppyReady">
+            <summary>
+            "Returns Ready Status of Floppy Drive (A:)"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetIsNetworkConfigured">
+            <summary>
+            "Indicates if Network is Configured"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSShortVersion">
+            <summary>
+            "Operating System Major and Minor Version Separated by a Decimal"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidController">
+            <summary>
+            "Installed Video Controllers"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidCurrentScreenDimensions">
+            <summary>
+            "Currently Configured Video Dimensions"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidCurrentScreenWorkingArea">
+            <summary>
+            "Screen Dimensions Currently Available to Applications"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidNumberOfControllers">
+            <summary>
+            "Number of Video Controllers"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidRam">
+            <summary>
+            "Video Controllers RAM"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidRefreshRate">
+            <summary>
+            "Video Controllers Refresh Rate"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VidScreenColors">
+            <summary>
+            "Video Controllers Colors"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSUpTime">
+            <summary>
+            "Formatted Time Since Last Start"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeLetter">
+            <summary>
+            "Volume Letters"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeType">
+            <summary>
+            "Volume Types"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeFileSystem">
+            <summary>
+            "Volume File Systems"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeReady">
+            <summary>
+            "Volume Ready Status"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeLabel">
+            <summary>
+            "Volume Label"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeTotalSize">
+            <summary>
+            "Volume Total Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeFreeSpace">
+            <summary>
+            "Volume Free Space"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeUsedSpace">
+            <summary>
+            "Volume Used Space"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumePercentFreeSpace">
+            <summary>
+            "Volume Percent Free Space"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VolumeSerialNumber">
+            <summary>
+            "Volume Serial Number"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuAddressWidth">
+            <summary>
+            "CPU Address Width"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuDescription">
+            <summary>
+            "CPU Description"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuFsbSpeed">
+            <summary>
+            "CPU Front Side Bus (FSB) Speed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuL2CacheSize">
+            <summary>
+            "CPU Level 2 Cache Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuL2CacheSpeed">
+            <summary>
+            "CPU Level 2 Cache Speed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuLoadPercentage">
+            <summary>
+            "CPU Load Percentage"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuManufacturer">
+            <summary>
+            "CPU Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuName">
+            <summary>
+            "CPU Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuSocket">
+            <summary>
+            "CPU Socket"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CpuSpeed">
+            <summary>
+            "CPU Speed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosManufacturer">
+            <summary>
+            "BIOS Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosName">
+            <summary>
+            "BIOS Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosVersion">
+            <summary>
+            "BIOS Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosReleaseDate">
+            <summary>
+            "BIOS Release Date"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosFeatures">
+            <summary>
+            "BIOS Features"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosSMBiosPresent">
+            <summary>
+            "SMBIOS Present"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.BiosSMBiosVersion">
+            <summary>
+            "SMBIOS Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.SndController">
+            <summary>
+            "Sound Controller Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.SndManufacturer">
+            <summary>
+            "Sound Controller Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.SndDmaBufferSize">
+            <summary>
+            "Sound Controller DMA Buffer Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.SndNumberOfControllers">
+            <summary>
+            "Number of Sound Controllers"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetAdapterType">
+            <summary>
+            "Network Interface Type"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetAutoSense">
+            <summary>
+            "Network Interface Auto Sense Capability"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetMacAddress">
+            <summary>
+            "Network Interface Media Access Control (MAC) Address"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetManufacturer">
+            <summary>
+            "Network Interface Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetMaxSpeed">
+            <summary>
+            "Network Interface Maximum Speed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetConnectionId">
+            <summary>
+            "Network Interface Connection ID"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetConnectionStatus">
+            <summary>
+            "Network Interface Connection Status"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetIPEnabled">
+            <summary>
+            "Network Interface Internet Protocol (IP) Enabled Status"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetNumberOfAdapters">
+            <summary>
+            "Number of Network Interfaces"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetProductName">
+            <summary>
+            "Network Interface Product Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetSpeed">
+            <summary>
+            "Network Interface Speed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDefaultTtl">
+            <summary>
+            "Network Interface Default Time-To-Live (TTL)"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDhcpEnabled">
+            <summary>
+            "Network Interface Dynamic Host Configuration Protocol (DHCP) Enabled Status"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDhcpLeaseObtained">
+            <summary>
+            "Date Network Interface Dynamic Host Configuration Protocol (DHCP) Lease Obtained"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDhcpLeaseExpires">
+            <summary>
+            "Network Interface Date Network Interface Dynamic Host Configuration Protocol (DHCP) Lease Expires"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDhcpServer">
+            <summary>
+            "Network Interface Date Network Interface Dynamic Host Configuration Protocol (DHCP) Server"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetMtu">
+            <summary>
+            "Network Interface Maximum Transmission Unit (MTU)"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetTcpNumConnections">
+            <summary>
+            "Number of Network Interface Transmission Control Protocol (TCP) Connections"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetTcpWindowSize">
+            <summary>
+            "Network Interface Transmission Control Protocol (TCP) Window Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetIPAddress">
+            <summary>
+            "Network Interface Internet Protocol (IP) Address"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetDomain">
+            <summary>
+            "Network Interface Network Domain"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.NetHostName">
+            <summary>
+            "Network Interface Network Host Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MainBoardManufacturer">
+            <summary>
+            "Mainboard (or Chipset) Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.MainBoardModel">
+            <summary>
+            "Mainboard (or Chipset) Model"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.DriveCapacity">
+            <summary>
+            "Drive Capacity"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.DriveInterface">
+            <summary>
+            "Drive Interface"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.DriveModelNo">
+            <summary>
+            "Drive Model Number"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CDDrive">
+            <summary>
+            "CD Drive"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CDManufacturer">
+            <summary>
+            "CD Drive Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CDModel">
+            <summary>
+            "CD Drive Model"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CDMediaSize">
+            <summary>
+            "CD Drive Media Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CDRevisionLevel">
+            <summary>
+            "CD Drive Revision Level"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CompAutomaticResetCapability">
+            <summary>
+            "Computer Has Automatic Reset Capability"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSBootupState">
+            <summary>
+            "Operating System Bootup State"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CompDescription">
+            <summary>
+            "Computer Description"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSDomain">
+            <summary>
+            "Operating System Domain"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CompManufacturer">
+            <summary>
+            "Computer Manufacturer"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CompModel">
+            <summary>
+            "Computer Model"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.OSPartOfDomain">
+            <summary>
+            "Operating System Part of Domain"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.CompSystemType">
+            <summary>
+            "Computer System Type"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstAuthor">
+            <summary>
+            "Visual Style Author"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstColorScheme">
+            <summary>
+            "Visual Style ColorScheme"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstCompany">
+            <summary>
+            "Visual Style Company"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstControlHighlightHot">
+            <summary>
+            "(Drawing.Color) Visual Style Control Highlight Hot"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstCopyright">
+            <summary>
+            "Visual Style Copyright"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstDescription">
+            <summary>
+            "Visual Style Description"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstDisplayName">
+            <summary>
+            "Visual Style Display Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstIsEnabledByUser">
+            <summary>
+            "Visual Style Enabled by User"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstIsSupportedByOS">
+            <summary>
+            "Visual Style Supported by Operating System"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstMinimumColorDepth">
+            <summary>
+            "Visual Style Minimum Color Depth"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstSize">
+            <summary>
+            "Visual Style Size"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstSupportsFlatMenus">
+            <summary>
+            "Visual Style Supports Flat Menus"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstTextControlBorder">
+            <summary>
+            "(Drawing.Color) Visual Style Text Control Border"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstUrl">
+            <summary>
+            "Visual Style URL"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.VstVersion">
+            <summary>
+            "Visual Style Version"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeCurrentTimeZone">
+            <summary>
+            "Current Time Zone"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeDaylightSavingsInEffect">
+            <summary>
+            "Daylight Savings in Effect"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeDaylightSavingsName">
+            <summary>
+            "Daylight Savings Name"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeDaylightSavingsOffset">
+            <summary>
+            "Daylight Savings Offset"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeLocalDaylightEndDate">
+            <summary>
+            "(Date) Local Daylight Saving End Date"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeLocalDaylightEndTime">
+            <summary>
+            "(Date) Local Daylight Saving End Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeLocalDaylightStartDate">
+            <summary>
+            "(Date) Local Daylight Saving Start Date"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeLocalDaylightStartTime">
+            <summary>
+            "(Date) Local Daylight Saving Start Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeLocalDateTime">
+            <summary>
+            "(Date) Local Date and Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalDateTime">
+            <summary>
+            "(Date) Universal Date and Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalDaylightEndDate">
+            <summary>
+            "(Date) Universal Daylight Saving End Date"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalDaylightEndTime">
+            <summary>
+            "(Date) Universal Daylight Saving End Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalDaylightStartDate">
+            <summary>
+            "(Date) Universal Daylight Saving Start Date"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalDaylightStartTime">
+            <summary>
+            "(Date) Universal Daylight Saving Start Time"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.TimeUniversalTimeOffset">
+            <summary>
+            "Universal Time Offset"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.PwrCanHibernate">
+            <summary>
+            "Hibernation Allowed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.PwrCanShutdown">
+            <summary>
+            "Shutdown Allowed"
+            </summary>
+        </member>
+        <member name="P:SystemInformation.InformationClass.PwrCanSuspend">
+            <summary>
+            "Suspend Allowed"
+            </summary>
+        </member>
+        <member name="M:SystemInformation.SpecialFolders.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="F:SystemInformation.WaitForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.WaitForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="P:SystemInformation.WaitForm.Default">
+            <summary>
+            Added to support default instance behavour in C#
+            </summary>
+        </member>
+        <member name="M:SystemInformation.Cpu.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Computer.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Sound.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Bios.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.DateAndTime.CreateInstance">
+            Get a global instance of this panel
+        </member>
+        <member name="M:SystemInformation.OperatingSystem.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="M:SystemInformation.Drives.CreateInstance">
+            <summary>
+            Create a global instance of this panel
+            </summary>>
+        </member>
+        <member name="F:SystemInformation.General.Info">
+            <summary>
+            Declaring a global instance of the InformationClass speeds up the application tremendously
+            because of the overhead of gathering information that occurs whenever the class is initialized.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.NativeMethods.IsPwrHibernateAllowed">
+            <summary>
+            These functions quickly determine the computer power state capabilities.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.NativeMethods.CanHibernate">
+            <summary>
+            Calls API function to determine if hibernation is allowed.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.NativeMethods.CanShutdown">
+            <summary>
+            Calls API function to determine if shutdown is allowed.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.NativeMethods.CanSuspend">
+            <summary>
+            Calls API function to determine if suspend is allowed.
+            </summary>
+        </member>
+        <member name="M:SystemInformation.NativeMethods.GetVolumeSerialNumber(System.String)">
+            <summary>
+            Returns hexadecimal volume serial number.
+            </summary>
+            <param name="volume">volume "drive letter"</param>
+        </member>
+    </members>
+</doc>

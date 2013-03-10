@@ -1,0 +1,11 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\bin\Debug\RegistryCleanerCore.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\bin\Debug\RegistryCleanerCore.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\bin\Debug\de\RegistryCleanerCore.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\Knots.Performance.RegistryCleanerCore.csprojResolveAssemblyReference.cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\RegistryCleanerCore.Properties.Resources.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\RegistryCleanerCore.Properties.Resources.de.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\Knots.Performance.RegistryCleanerCore.csproj.GenerateResource.Cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\de\RegistryCleanerCore.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\RegistryCleanerCore.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Improve Performance\Registry Cleaner Core\obj\Debug\RegistryCleanerCore.pdb

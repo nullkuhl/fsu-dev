@@ -1,0 +1,268 @@
+<SmartAssemblyProject ProjectId="{5f482848-e538-4a68-879e-5c44c5aba862}" Version="2.0">
+    <MainAssemblyFileName>.\FreemiumUtilities\bin\Release\FreemiumUtilities.exe</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <Options>
+            <ExceptionReporting Template="res:{SmartExceptions}.1033.dll" />
+            <FeatureUsageReporting Template="res:SmartUsageWithUIConsentFirstRun1033.dll" />
+            <StringsEncoding />
+            <StrongNameSigning />
+            <OtherOptimizations />
+            <Obfuscation ChangeMethodParent="1" FieldsNameMangling="3" NameMangling="3" />
+            <OtherProtections />
+            <Debugging />
+        </Options>
+        <ApplicationName />
+        <Destination DestinationFileName=".\obfuscated\FreemiumUtilities.exe" />
+        <Assemblies>
+            <Assembly AssemblyName="FreemiumUtilities, Culture=neutral, PublicKeyToken=null">
+                <Embedding />
+                <Merging>
+                    <ResourcesCompression />
+                    <MemberRefsProxy />
+                    <Pruning>
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion>
+                            <Token Table="WholeType">
+                                <Assembly>FreemiumUtilities</Assembly>
+                                <Module>FreemiumUtilities.exe</Module>
+                                <ItemType>Class</ItemType>
+                                <Namespace>FreemiumUtilities.Properties</Namespace>
+                                <Name>Resources</Name>
+                            </Token>
+                            <Token Table="WholeType">
+                                <Assembly>FreemiumUtilities</Assembly>
+                                <Module>FreemiumUtilities.exe</Module>
+                                <ItemType>Enum</ItemType>
+                                <Namespace>FreemiumUtilities.Models</Namespace>
+                                <Name>OneClickAppStatus</Name>
+                            </Token>
+                        </Exclusion>
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
+                </Merging>
+            </Assembly>
+            <Assembly AssemblyName="TracksEraser, Culture=neutral, PublicKeyToken=null" MandatoryPath=".\FreemiumUtilities\bin\Release\Applications\TracksEraser.dll">
+                <Embedding />
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Microsoft.Win32.TaskScheduler, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\Microsoft.Win32.TaskScheduler.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.Infrastructure, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.Infrastructure.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="WPFLocalizeExtension, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\WPFLocalizeExtension.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="System.Tuples, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\System.Tuples.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="mscriptable, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\mscriptable.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.ShortcutFixer, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.ShortcutFixer.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Interop.IWshRuntimeLibrary, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\Interop.IWshRuntimeLibrary.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.Spyware, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.Spyware.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.TempCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.TempCleaner.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="UrlHistoryLibrary, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\UrlHistoryLibrary.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="System.Data.SQLite, Culture=neutral, PublicKeyToken=db937bc2d44ff139" HintPath=".\FreemiumUtilities\bin\Release\Libraries\System.Data.SQLite.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.RegCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.RegCleaner.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="VTRegScan, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\VTRegScan.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.StartupManager, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.StartupManager.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="mscorlib, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PresentationFramework, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="WindowsBase, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Xml, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PresentationCore, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="UIAutomationProvider, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Deployment, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PresentationUI, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Printing, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="ReachFramework, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="UIAutomationTypes, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Data, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="Accessibility, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Configuration, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Security, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Data.SqlXml, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="Microsoft.VisualC, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PresentationCFFRasterizer, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Runtime.Serialization.Formatters.Soap, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.DirectoryServices, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Transactions, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.EnterpriseServices, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Runtime.Remoting, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Web, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Web.Services, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.DirectoryServices.Protocols, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Design, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.ServiceProcess, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Web.RegularExpressions, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Drawing.Design, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Data.OracleClient, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Configuration.Install, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Core, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Runtime.Serialization, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="SMDiagnostics, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.ServiceModel, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.IdentityModel, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Messaging, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.IdentityModel.Selectors, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="Microsoft.Transactions.Bridge, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PoweredBySmartAssembly, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="DoNotDistribute, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="SmartAssembly.License, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging>
+                    <Obfuscation>
+                        <Exclusion />
+                    </Obfuscation>
+                </Merging>
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.resources, Culture=de, PublicKeyToken=null">
+                <Merging>
+                    <Pruning />
+                    <Obfuscation />
+                </Merging>
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.TracksEraser, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.TracksEraser.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="RegistryCleanerCore, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\RegistryCleanerCore.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+        </Assemblies>
+    </Configuration>
+</SmartAssemblyProject>

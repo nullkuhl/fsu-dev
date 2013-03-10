@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pcbChrome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 268</value>
+  </data>
+  <data name="pcbChrome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pcbChrome.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;pcbChrome.Name" xml:space="preserve">
+    <value>pcbChrome</value>
+  </data>
+  <data name="&gt;&gt;pcbChrome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbChrome.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;pcbChrome.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pcbFF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 207</value>
+  </data>
+  <data name="pcbFF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pcbFF.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;pcbFF.Name" xml:space="preserve">
+    <value>pcbFF</value>
+  </data>
+  <data name="&gt;&gt;pcbFF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbFF.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;pcbFF.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pcbIE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 149</value>
+  </data>
+  <data name="pcbIE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pcbIE.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;pcbIE.Name" xml:space="preserve">
+    <value>pcbIE</value>
+  </data>
+  <data name="&gt;&gt;pcbIE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbIE.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;pcbIE.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="pcbWinTmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 88</value>
+  </data>
+  <data name="pcbWinTmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pcbWinTmp.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;pcbWinTmp.Name" xml:space="preserve">
+    <value>pcbWinTmp</value>
+  </data>
+  <data name="&gt;&gt;pcbWinTmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbWinTmp.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;pcbWinTmp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pcbTmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 29</value>
+  </data>
+  <data name="pcbTmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 32</value>
+  </data>
+  <data name="pcbTmp.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;pcbTmp.Name" xml:space="preserve">
+    <value>pcbTmp</value>
+  </data>
+  <data name="&gt;&gt;pcbTmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pcbTmp.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;pcbTmp.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblLineFourth.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLineFourth.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 244</value>
+  </data>
+  <data name="lblLineFourth.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="lblLineFourth.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 0</value>
+  </data>
+  <data name="lblLineFourth.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 1</value>
+  </data>
+  <data name="lblLineFourth.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="lblLineFourth.Text" xml:space="preserve">
+    <value>ss</value>
+  </data>
+  <data name="&gt;&gt;lblLineFourth.Name" xml:space="preserve">
+    <value>lblLineFourth</value>
+  </data>
+  <data name="&gt;&gt;lblLineFourth.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLineFourth.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblLineFourth.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblLineThird.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLineThird.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 185</value>
+  </data>
+  <data name="lblLineThird.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="lblLineThird.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 0</value>
+  </data>
+  <data name="lblLineThird.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 1</value>
+  </data>
+  <data name="lblLineThird.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="lblLineThird.Text" xml:space="preserve">
+    <value>ss</value>
+  </data>
+  <data name="&gt;&gt;lblLineThird.Name" xml:space="preserve">
+    <value>lblLineThird</value>
+  </data>
+  <data name="&gt;&gt;lblLineThird.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLineThird.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblLineThird.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblLineSecond.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLineSecond.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 125</value>
+  </data>
+  <data name="lblLineSecond.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="lblLineSecond.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 0</value>
+  </data>
+  <data name="lblLineSecond.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 1</value>
+  </data>
+  <data name="lblLineSecond.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="lblLineSecond.Text" xml:space="preserve">
+    <value>ss</value>
+  </data>
+  <data name="&gt;&gt;lblLineSecond.Name" xml:space="preserve">
+    <value>lblLineSecond</value>
+  </data>
+  <data name="&gt;&gt;lblLineSecond.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLineSecond.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblLineSecond.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="lblLineFirst.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblLineFirst.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 66</value>
+  </data>
+  <data name="lblLineFirst.MaximumSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1</value>
+  </data>
+  <data name="lblLineFirst.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>435, 0</value>
+  </data>
+  <data name="lblLineFirst.Size" type="System.Drawing.Size, System.Drawing">
+    <value>435, 1</value>
+  </data>
+  <data name="lblLineFirst.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="lblLineFirst.Text" xml:space="preserve">
+    <value>ss</value>
+  </data>
+  <data name="&gt;&gt;lblLineFirst.Name" xml:space="preserve">
+    <value>lblLineFirst</value>
+  </data>
+  <data name="&gt;&gt;lblLineFirst.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblLineFirst.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblLineFirst.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="lblChrome.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblChrome.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="lblChrome.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 246</value>
+  </data>
+  <data name="lblChrome.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 13</value>
+  </data>
+  <data name="lblChrome.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="lblChrome.Text" xml:space="preserve">
+    <value>Chrome Cache</value>
+  </data>
+  <data name="&gt;&gt;lblChrome.Name" xml:space="preserve">
+    <value>lblChrome</value>
+  </data>
+  <data name="&gt;&gt;lblChrome.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblChrome.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblChrome.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="lblFF.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblFF.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="lblFF.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 187</value>
+  </data>
+  <data name="lblFF.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 13</value>
+  </data>
+  <data name="lblFF.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="lblFF.Text" xml:space="preserve">
+    <value>Firefox Cache</value>
+  </data>
+  <data name="&gt;&gt;lblFF.Name" xml:space="preserve">
+    <value>lblFF</value>
+  </data>
+  <data name="&gt;&gt;lblFF.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblFF.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblFF.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="lblIE.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblIE.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="lblIE.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 129</value>
+  </data>
+  <data name="lblIE.Size" type="System.Drawing.Size, System.Drawing">
+    <value>192, 13</value>
+  </data>
+  <data name="lblIE.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="lblIE.Text" xml:space="preserve">
+    <value>Internet Explorer Temprary Files</value>
+  </data>
+  <data name="&gt;&gt;lblIE.Name" xml:space="preserve">
+    <value>lblIE</value>
+  </data>
+  <data name="&gt;&gt;lblIE.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblIE.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblIE.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="lblWinTmp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblWinTmp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="lblWinTmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 68</value>
+  </data>
+  <data name="lblWinTmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 13</value>
+  </data>
+  <data name="lblWinTmp.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lblWinTmp.Text" xml:space="preserve">
+    <value>Windows Temporary Files</value>
+  </data>
+  <data name="&gt;&gt;lblWinTmp.Name" xml:space="preserve">
+    <value>lblWinTmp</value>
+  </data>
+  <data name="&gt;&gt;lblWinTmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblWinTmp.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblWinTmp.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="lblTmp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTmp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Tahoma, 8pt, style=Bold</value>
+  </data>
+  <data name="lblTmp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="lblTmp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 13</value>
+  </data>
+  <data name="lblTmp.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblTmp.Text" xml:space="preserve">
+    <value>.tmp Files</value>
+  </data>
+  <data name="&gt;&gt;lblTmp.Name" xml:space="preserve">
+    <value>lblTmp</value>
+  </data>
+  <data name="&gt;&gt;lblTmp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblTmp.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;lblTmp.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="chromeDetailsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 268</value>
+  </data>
+  <data name="chromeDetailsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="chromeDetailsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;chromeDetailsLbl.Name" xml:space="preserve">
+    <value>chromeDetailsLbl</value>
+  </data>
+  <data name="&gt;&gt;chromeDetailsLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chromeDetailsLbl.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;chromeDetailsLbl.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="ffDetailsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 207</value>
+  </data>
+  <data name="ffDetailsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="ffDetailsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ffDetailsLbl.Name" xml:space="preserve">
+    <value>ffDetailsLbl</value>
+  </data>
+  <data name="&gt;&gt;ffDetailsLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ffDetailsLbl.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;ffDetailsLbl.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ieDetailsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 149</value>
+  </data>
+  <data name="ieDetailsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="ieDetailsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ieDetailsLbl.Name" xml:space="preserve">
+    <value>ieDetailsLbl</value>
+  </data>
+  <data name="&gt;&gt;ieDetailsLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ieDetailsLbl.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;ieDetailsLbl.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="winDetailsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 88</value>
+  </data>
+  <data name="winDetailsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="winDetailsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;winDetailsLbl.Name" xml:space="preserve">
+    <value>winDetailsLbl</value>
+  </data>
+  <data name="&gt;&gt;winDetailsLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;winDetailsLbl.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;winDetailsLbl.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="tmpDetailsLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>58, 29</value>
+  </data>
+  <data name="tmpDetailsLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>274, 32</value>
+  </data>
+  <data name="tmpDetailsLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;tmpDetailsLbl.Name" xml:space="preserve">
+    <value>tmpDetailsLbl</value>
+  </data>
+  <data name="&gt;&gt;tmpDetailsLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tmpDetailsLbl.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;tmpDetailsLbl.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="chromeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 268</value>
+  </data>
+  <data name="chromeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 27</value>
+  </data>
+  <data name="chromeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="chromeBtn.Text" xml:space="preserve">
+    <value>View Files</value>
+  </data>
+  <data name="&gt;&gt;chromeBtn.Name" xml:space="preserve">
+    <value>chromeBtn</value>
+  </data>
+  <data name="&gt;&gt;chromeBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chromeBtn.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;chromeBtn.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="ffBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 207</value>
+  </data>
+  <data name="ffBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 27</value>
+  </data>
+  <data name="ffBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ffBtn.Text" xml:space="preserve">
+    <value>View Files</value>
+  </data>
+  <data name="&gt;&gt;ffBtn.Name" xml:space="preserve">
+    <value>ffBtn</value>
+  </data>
+  <data name="&gt;&gt;ffBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ffBtn.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;ffBtn.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="ieBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 149</value>
+  </data>
+  <data name="ieBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 27</value>
+  </data>
+  <data name="ieBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ieBtn.Text" xml:space="preserve">
+    <value>View Files</value>
+  </data>
+  <data name="&gt;&gt;ieBtn.Name" xml:space="preserve">
+    <value>ieBtn</value>
+  </data>
+  <data name="&gt;&gt;ieBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ieBtn.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;ieBtn.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="winBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>332, 88</value>
+  </data>
+  <data name="winBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 27</value>
+  </data>
+  <data name="winBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="winBtn.Text" xml:space="preserve">
+    <value>View Files</value>
+  </data>
+  <data name="&gt;&gt;winBtn.Name" xml:space="preserve">
+    <value>winBtn</value>
+  </data>
+  <data name="&gt;&gt;winBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;winBtn.Parent" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;winBtn.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="mainPnl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="mainPnl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="mainPnl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>458, 312</value>
+  </data>
+  <data name="mainPnl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;mainPnl.Name" xml:space="preserve">
+    <value>mainPnl</value>
+  </data>
+  <data name="&gt;&gt;mainPnl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;mainPnl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;mainPnl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>458, 312</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Temporary Files Cleaner</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmTempCleaner</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

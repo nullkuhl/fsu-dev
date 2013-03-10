@@ -1,0 +1,76 @@
+﻿<Window x:Class="DiskAnalysis.ScanWindow2"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:props="clr-namespace:DiskAnalysis.Properties"
+		Title="{x:Static props:Resources.SelectDrives}"
+		Height="360"
+		Width="600"
+		xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+		Background="#FFF0F0F0"
+		ResizeMode="NoResize"
+		WindowStartupLocation="CenterScreen"
+		Icon="/DiskAnalysis;component/Images/desktop_icon.png"
+		Loaded="Window_Loaded" WindowStyle="SingleBorderWindow" ShowActivated="False">
+	<Grid>
+		<StackPanel Margin="5">
+			<StackPanel Orientation="Horizontal"
+						Height="60">
+				<StackPanel Width="200">
+					<RadioButton GroupName="rbDrives"
+								 Content="{x:Static props:Resources.AllLocalDrives}"
+								 Height="16"
+								 Name="rbAllDrives"
+								 Margin="10,10,0,0"
+								 Checked="rbAllDrives_Checked" />
+					<RadioButton GroupName="rbDrives"
+								 Content="{x:Static props:Resources.IndividualDrives}"
+								 Height="16"
+								 Name="rbDrives"
+								 Margin="10,10,0,0"
+								 Checked="rbDrives_Checked" />
+				</StackPanel>
+				<StackPanel HorizontalAlignment="Right"
+							Width="370">
+					<Button Content="{x:Static props:Resources.Ok}"
+							Height="23"
+							Name="btnOK"
+							Margin="0,0,0,0"
+							Width="90"
+							Click="btnOK_Click"
+							HorizontalAlignment="Right" />
+					<Button Content="{x:Static props:Resources.Cancel}"
+							Height="23"
+							Margin="0,10,0,0"
+							Name="btnCancel"
+							Width="90"
+							Click="btnCancel_Click"
+							HorizontalAlignment="Right" />
+				</StackPanel>
+			</StackPanel>
+            <ListView Height="191" Name="listView1" Width="553">
+                <ListViewItem Width="10" />
+                <ListViewItem Content="Name" />
+            </ListView>
+            <RadioButton GroupName="rbDrives"
+						 Content="{x:Static props:Resources.AFolder}"
+						 Height="16"
+						 Name="rbFolder"
+						 Margin="10,10,0,0"
+						 Checked="rbFolder_Checked" />
+			<StackPanel Orientation="Horizontal"
+						Margin="10,5,0,0">
+				<TextBox Height="23"
+						 Name="tbFolder"
+						 Width="470"
+						 Margin="4,0,6,0"
+						 TextChanged="tbFolder_TextChanged" />
+				<Button Content="{x:Static props:Resources.Browse}"
+						Height="23"
+						Name="btnBrowse"
+						Width="75"
+						Click="btnBrowse_Click" />
+			</StackPanel>
+        </StackPanel>
+
+	</Grid>
+</Window>

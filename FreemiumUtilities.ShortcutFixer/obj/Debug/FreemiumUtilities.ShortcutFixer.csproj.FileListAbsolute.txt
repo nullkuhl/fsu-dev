@@ -1,0 +1,17 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\Libraries\Interop.IWshRuntimeLibrary.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\FreemiumUtilities.ShortcutFixer.dll.config
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\FreemiumUtilities.ShortcutFixer.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\FreemiumUtilities.ShortcutFixer.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\de\FreemiumUtilities.ShortcutFixer.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\WPFLocalizeExtension.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.csprojResolveAssemblyReference.cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.FrmShortcutFixer.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.FrmShortcutFixer.de.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.csproj.GenerateResource.Cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\de\FreemiumUtilities.ShortcutFixer.resources.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.dll
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.ShortcutFixer\obj\Debug\FreemiumUtilities.ShortcutFixer.pdb

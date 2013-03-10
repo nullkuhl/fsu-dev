@@ -1,0 +1,394 @@
+﻿<Window x:Class="BrowserAssistant.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:WinCtr="clr-namespace:BrowserAssistant"
+		xmlns:props="clr-namespace:BrowserAssistant.Properties"
+		Loaded="Window_Loaded"
+		Title="{x:Static props:Resources.BrowserAssistant}"
+		Height="600"
+		Width="600"
+		ResizeMode="NoResize"
+		Background="#FFF0F0F0"
+		Icon="/BrowserAssistant;component/icons/FSUIcon.ico"
+		WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="488*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="470*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!--<Image Name="Logo" Grid.ColumnSpan="2"  Margin="-11,0,-15,0" RenderOptions.BitmapScalingMode="NearestNeighbor" Stretch="Fill" Height="88" Width="605" HorizontalAlignment="Center" VerticalAlignment="Top" SnapsToDevicePixels="True" Source="/BrowserAssistant;component/Images/freem_browser.png" />-->
+        <WindowsFormsHost  Height="64"
+						   Width="Auto"
+						   Grid.Row="0"
+						   Grid.ColumnSpan="2">
+            <WinCtr:TopControl x:Name="header"
+							   Text="{x:Static props:Resources.BrowserAssistant}" />
+        </WindowsFormsHost>
+        <TabControl Name="TabList"
+					Margin="4,0,4,4"
+					Grid.Row="1"
+					Grid.ColumnSpan="2">
+
+            <TabItem Name="WelcomeTab"
+					 TabIndex="4">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\info.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor"
+							   Margin="0,0.2,0,0"
+							   Width="16"
+							   Height="16" />
+                        <TextBlock Text="{x:Static props:Resources.Welcome}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <TextBlock TextWrapping="Wrap"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Text="{x:Static props:Resources.WelcomeMessage}" />
+            </TabItem>
+
+            <TabItem Name="FfExtTab"
+					 GotFocus="FfExtTab_Focused"
+					 TabIndex="3">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\firefox.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.FirefoxExtentions}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <WinCtr:ExtensionList x:Name="FfExtList"
+									  SaveClicked="FfExtList_SaveClicked" />
+            </TabItem>
+
+            <TabItem Name="ChExtTab"
+					 GotFocus="ChExtTab_Focused"
+					 TabIndex="2">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\chrome.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.ChromeExtensions}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <WinCtr:ExtensionList x:Name="ChExtList"
+									  SaveClicked="ChExtList_SaveClicked" />
+            </TabItem>
+
+            <TabItem Name="IeHijackTab"
+					 GotFocus="HijackTab_Focused"
+					 TabIndex="5">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\hijack.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor"
+							   Width="16"
+							   Height="16" />
+                        <TextBlock Text="{x:Static props:Resources.HijackRestore}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <WinCtr:HijackRestore x:Name="HijackList" />
+            </TabItem>
+
+            <TabItem Name="IeAxTab"
+					 GotFocus="IeAxTab_Focused"
+					 DataContext="{Binding}"
+					 TabIndex="0">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\ie.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.InternetExplorerActiveX}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ListView Name="IeAxList"
+							  SelectionMode="Single"
+							  Foreground="Black"
+							  IsSynchronizedWithCurrentItem="True"
+							  WinCtr:GridViewSort.AutoSort="True"
+							  WinCtr:GridViewSort.ShowSortGlyph="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="{x:Static props:Resources.Enabled}"
+												Width="50"
+												WinCtr:GridViewSort.PropertyName="IsEnabled">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsEnabled}"
+													  Margin="10"
+													  Click="IeAxReBind" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="{x:Static props:Resources.Name}"
+												Width="278"
+												DisplayMemberBinding="{Binding Path=Name}"
+												WinCtr:GridViewSort.PropertyName="Name" />
+                                <GridViewColumn Header="{x:Static props:Resources.Path}"
+												Width="220"
+												DisplayMemberBinding="{Binding Path=Path}"
+												WinCtr:GridViewSort.PropertyName="{x:Static props:Resources.Path}" />
+                                <!--<GridViewColumn Header="Flags">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBox Text="{Binding Path=Flags}" Width="60" LostFocus="IeAxReBind" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>-->
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <StackPanel Orientation="Horizontal"
+								Grid.Row="2"
+								HorizontalAlignment="Right">
+                        <Button Name="IeAxSaveBtn"
+								Content="{x:Static props:Resources.SaveIeActiveX}"
+								Margin="0,4,8,4"
+								Padding="20,2"
+								IsEnabled="False"
+								Click="IeAxSaveBtn_Click" />
+                        <Button Name="IeAxCloseBtn"
+								Content="{x:Static props:Resources.Close}"
+								Margin="0,4"
+								Padding="20, 2"
+								Click="CloseBtn_Click" />
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Name="IeExtTab"
+					 GotFocus="IeExtTab_Focused">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\ie.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.InternetExplorerExtensions}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ListView Name="IeExtList"
+							  SelectionMode="Single"
+							  Foreground="Black"
+							  IsSynchronizedWithCurrentItem="True"
+							  WinCtr:GridViewSort.AutoSort="True"
+							  WinCtr:GridViewSort.ShowSortGlyph="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="{x:Static props:Resources.Enabled}"
+												Width="50"
+												WinCtr:GridViewSort.PropertyName="IsEnabled">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsEnabled}"
+													  Margin="10"
+													  Click="IeExtCheckBox_Click" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="{x:Static props:Resources.Name}"
+												Width="278"
+												DisplayMemberBinding="{Binding Path=Name}"
+												WinCtr:GridViewSort.PropertyName="Name" />
+                                <GridViewColumn Header="{x:Static props:Resources.Path}"
+												Width="220"
+												DisplayMemberBinding="{Binding Path=Path}"
+												WinCtr:GridViewSort.PropertyName="Path" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <StackPanel Orientation="Horizontal"
+								Grid.Row="2"
+								HorizontalAlignment="Right">
+                        <Button Name="IeExtSaveBtn"
+								Content="{x:Static props:Resources.SaveIeExtensions}"
+								Margin="0,4,8,4"
+								Padding="20,2"
+								IsEnabled="False"
+								Click="IeExtSaveBtn_Click" />
+                        <Button Name="IeExtCloseBtn"
+								Content="{x:Static props:Resources.Close}"
+								Margin="0,4"
+								Padding="20, 2"
+								Click="CloseBtn_Click" />
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Name="IeBhoTab"
+					 GotFocus="IeBhoTab_Focused"
+					 TabIndex="6">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\ie.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.InternetExplorerBHOs}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ListView Name="IeBhoList"
+							  SelectionMode="Single"
+							  Foreground="Black"
+							  IsSynchronizedWithCurrentItem="True"
+							  WinCtr:GridViewSort.AutoSort="True"
+							  WinCtr:GridViewSort.ShowSortGlyph="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="{x:Static props:Resources.Enabled}"
+												Width="50"
+												WinCtr:GridViewSort.PropertyName="IsEnabled">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsEnabled}"
+													  Margin="10"
+													  Click="IeBhoCheckBox_Click" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="{x:Static props:Resources.Name}"
+												Width="278"
+												DisplayMemberBinding="{Binding Path=Name}"
+												WinCtr:GridViewSort.PropertyName="Name" />
+                                <GridViewColumn Header="{x:Static props:Resources.Path}"
+												Width="220"
+												DisplayMemberBinding="{Binding Path=Path}"
+												WinCtr:GridViewSort.PropertyName="Path" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <StackPanel Orientation="Horizontal"
+								Grid.Row="2"
+								HorizontalAlignment="Right">
+                        <Button Name="IeBhoSaveBtn"
+								Content="{x:Static props:Resources.SaveIeBHOs}"
+								Margin="0,4,8,4"
+								Padding="20,2"
+								IsEnabled="False"
+								Click="IeBhoSaveBtn_Click" />
+                        <Button Name="IeBhoCloseBtn"
+								Content="{x:Static props:Resources.Close}"
+								Margin="0,4"
+								Padding="20, 2"
+								Click="CloseBtn_Click" />
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+            <TabItem Name="IeToolbarTab"
+					 GotFocus="IeToolbarTab_Focused"
+					 TabIndex="6">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="icons\ie.png"
+							   RenderOptions.BitmapScalingMode="NearestNeighbor" />
+                        <TextBlock Text="{x:Static props:Resources.InternetExplorerToolbars}"
+								   Margin="8,0,0,0" />
+                    </StackPanel>
+                </TabItem.Header>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <ListView Name="IeToolbarList"
+							  SelectionMode="Single"
+							  Foreground="Black"
+							  IsSynchronizedWithCurrentItem="True"
+							  WinCtr:GridViewSort.AutoSort="True"
+							  WinCtr:GridViewSort.ShowSortGlyph="True">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="{x:Static props:Resources.Enabled}"
+												Width="50"
+												WinCtr:GridViewSort.PropertyName="IsEnabled">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <CheckBox IsChecked="{Binding Path=IsEnabled}"
+													  Margin="10"
+													  Click="IeToolbarCheckBox_Click" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Header="{x:Static props:Resources.Name}"
+												Width="278"
+												DisplayMemberBinding="{Binding Path=Name}"
+												WinCtr:GridViewSort.PropertyName="Name" />
+                                <GridViewColumn Header="{x:Static props:Resources.Path}"
+												Width="220"
+												DisplayMemberBinding="{Binding Path=Path}"
+												WinCtr:GridViewSort.PropertyName="Path" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <StackPanel Orientation="Horizontal"
+								Grid.Row="2"
+								HorizontalAlignment="Right">
+                        <Button Name="IeToolbarSaveBtn"
+								Content="{x:Static props:Resources.SaveIeToolbars}"
+								Margin="0,4,8,4"
+								Padding="20,2"
+								IsEnabled="False"
+								Click="IeToolbarSaveBtn_Click" />
+                        <Button Name="IeToolbarCloseBtn"
+								Content="{x:Static props:Resources.Close}"
+								Margin="0,4"
+								Padding="20, 2"
+								Click="CloseBtn_Click" />
+                    </StackPanel>
+
+                </Grid>
+            </TabItem>
+
+
+        </TabControl>
+        <WindowsFormsHost  Height="31"
+						   Width="auto"
+						   Grid.Row="2"
+						   Grid.ColumnSpan="2">
+            <WinCtr:BottomControl x:Name="footer" />
+        </WindowsFormsHost>
+    </Grid>
+</Window>

@@ -1,0 +1,47 @@
+<SmartAssemblyProject ProjectId="{8cc3e095-baae-47ed-b36a-20d2c6211a26}" Version="2.0">
+    <MainAssemblyFileName>.\FreemiumUtilities\bin\Release\memopti.exe</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <Options>
+            <ExceptionReporting Template="res:{SmartExceptions}.1033.dll" />
+            <FeatureUsageReporting Template="res:SmartUsageWithUIConsentFirstRun1033.dll" />
+            <StringsEncoding />
+            <StrongNameSigning />
+            <OtherOptimizations />
+            <Obfuscation ChangeMethodParent="1" FieldsNameMangling="3" NameMangling="3" />
+            <OtherProtections />
+            <Debugging />
+        </Options>
+        <ApplicationName />
+        <Destination DestinationFileName=".\obfuscated\memopti.exe" />
+        <Assemblies>
+            <Assembly AssemblyName="my02, Culture=neutral, PublicKeyToken=null">
+                <Merging>
+                    <ResourcesCompression />
+                    <MemberRefsProxy />
+                    <Pruning />
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
+                </Merging>
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="mscorlib, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="PoweredBySmartAssembly, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="DoNotDistribute, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="SmartAssembly.LicenseNoUI, Culture=neutral, PublicKeyToken=null">
+                <Merging>
+                    <Obfuscation>
+                        <Exclusion />
+                    </Obfuscation>
+                </Merging>
+            </Assembly>
+        </Assemblies>
+    </Configuration>
+</SmartAssemblyProject>

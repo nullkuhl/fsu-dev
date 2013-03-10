@@ -1,0 +1,2098 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tcMain.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="textBoxFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="pnlClient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 64</value>
+  </data>
+  <data name="&gt;&gt;buttomControl1.Type" xml:space="preserve">
+    <value>FileUndelete.BottomControl, FileUndelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;imlMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="trvExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="isRecoverableColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="panelClient.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;clhTag.Name" xml:space="preserve">
+    <value>clhTag</value>
+  </data>
+  <data name="&gt;&gt;drivesCombo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvFiles.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;filesGrid.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>672, 410</value>
+  </data>
+  <data name="&gt;&gt;isRecoverableColumn.Name" xml:space="preserve">
+    <value>isRecoverableColumn</value>
+  </data>
+  <data name="&gt;&gt;tbpTypes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttomControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="chkPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnBrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxPreview.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="columnHeader1.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="&gt;&gt;panelClient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trvFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dtcSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonRestore.Text" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="btnRestore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>672, 410</value>
+  </data>
+  <data name="&gt;&gt;stsMain.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="filesGrid.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 220</value>
+  </data>
+  <data name="&gt;&gt;tbpFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;checkBoxPreview.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;trvExt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tabPageFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 330</value>
+  </data>
+  <data name="cboDrives.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxAll.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="usBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnScan.Name" xml:space="preserve">
+    <value>btnScan</value>
+  </data>
+  <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 356</value>
+  </data>
+  <data name="&gt;&gt;sizeColumn.Name" xml:space="preserve">
+    <value>sizeColumn</value>
+  </data>
+  <data name="columnHeader3.Text" xml:space="preserve">
+    <value>Original Path</value>
+  </data>
+  <data name="&gt;&gt;filesGrid.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="treeViewExt.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnFilter.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;stsMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.StatusStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtFilter.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cboDrives.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="buttonBrowse.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="tabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;tabPageTypes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;dgvFiles.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;topControl1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tbpTypes.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;usBottom.Name" xml:space="preserve">
+    <value>usBottom</value>
+  </data>
+  <data name="&gt;&gt;drivesCombo.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="textBoxFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 12</value>
+  </data>
+  <data name="&gt;&gt;checkBoxPreview.Name" xml:space="preserve">
+    <value>checkBoxPreview</value>
+  </data>
+  <data name="&gt;&gt;buttomControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>File Undelete</value>
+  </data>
+  <data name="&gt;&gt;chkPreview.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;imlMain.Name" xml:space="preserve">
+    <value>imlMain</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Name" xml:space="preserve">
+    <value>imageList1</value>
+  </data>
+  <data name="columnHeader2.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="treeViewExt.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="checkBoxPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>672, 10</value>
+  </data>
+  <data name="tcMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 48</value>
+  </data>
+  <data name="&gt;&gt;fbdMain.Name" xml:space="preserve">
+    <value>fbdMain</value>
+  </data>
+  <data name="&gt;&gt;tmrScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="treeViewFolders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;buttonRestore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;imageList2.Name" xml:space="preserve">
+    <value>imageList2</value>
+  </data>
+  <data name="&gt;&gt;treeViewFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="dccIsRecoverable.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="panelPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 186</value>
+  </data>
+  <data name="treeViewExt.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="treeViewFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 324</value>
+  </data>
+  <data name="&gt;&gt;chkAll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="panelPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 218</value>
+  </data>
+  <data name="&gt;&gt;cboDrives.Name" xml:space="preserve">
+    <value>cboDrives</value>
+  </data>
+  <data name="toolStripStatusLabelResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>519, 17</value>
+  </data>
+  <data name="&gt;&gt;stsMain.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="columnHeader4.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;checkBoxPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;pnlPreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Name" xml:space="preserve">
+    <value>buttonBrowse</value>
+  </data>
+  <data name="&gt;&gt;treeViewExt.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkAll.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="chkAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 414</value>
+  </data>
+  <data name="checkBoxPreview.Text" xml:space="preserve">
+    <value>Quick Panel</value>
+  </data>
+  <data name="&gt;&gt;usBottom.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="treeViewExt.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;trvExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="checkBoxAll.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 414</value>
+  </data>
+  <data name="tabPageFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;filesGrid.Name" xml:space="preserve">
+    <value>filesGrid</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;dgvFiles.Name" xml:space="preserve">
+    <value>dgvFiles</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startScanBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 10</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="buttonFilter.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="&gt;&gt;iml.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 218</value>
+  </data>
+  <data name="&gt;&gt;tslFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dbcRestoreButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="fileIdColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;stsMain.Name" xml:space="preserve">
+    <value>stsMain</value>
+  </data>
+  <data name="&gt;&gt;txcFileId.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlClient.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;chkAll.Name" xml:space="preserve">
+    <value>chkAll</value>
+  </data>
+  <data name="tabPageTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="btnScan.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="imlMain.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        CAAAAk1TRnQBSQFMAwEBAAHoAQEBWAECARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BABD/MAAC/wT0BvMC9AL/
+        MAAB/wHtARQB6gFDAREBFAESARUBFAEVARIB6gESAewB/zAAAfQB7QHqAesBEAEPARUBEwERAUMBEQHq
+        AesBcgHsAfQwAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMwAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9DAA
+        Af8BBwHrBPECvAPxAfIBEwHtAf8wAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/zAAAf8B8AHvA/MBBwHv
+        AQcB9wHyAvMB9wG8Af8wAAH/AfIBbQEHAfQB9wEHAbwB8AHzAv8B7AEUAfEB/zAAAf8B9AEHAUMB7AEH
+        Au8B8QH0AfAB7AEQAW0B9AH/MAAC/wHtAQ4CAAETAW0B7AHqAQABDgH3AfAC/zAAAv8B6wEAAg4BAAEU
+        AbwB9wHsApEBkgL/MAAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8wAAL/AbwBbQQAAW0C9wGRARIBBwL/
+        MAAC/wHzAfEBvAIHArwBBwK8AfAB8gL/MAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGA
+        FwAD/5cACw==
+</value>
+  </data>
+  <data name="&gt;&gt;fileIdColumn.Name" xml:space="preserve">
+    <value>fileIdColumn</value>
+  </data>
+  <data name="statusStrip.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 509</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelResults.Name" xml:space="preserve">
+    <value>toolStripStatusLabelResults</value>
+  </data>
+  <data name="drivesCombo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="&gt;&gt;btnScan.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tslFilter.Name" xml:space="preserve">
+    <value>tslFilter</value>
+  </data>
+  <data name="&gt;&gt;fileIdColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader1.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="dgvFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="imageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        CAAAAk1TRnQBSQFMAwEBAAFoAQEBkAECARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BABD/MAAC/wT0BvMC9AL/
+        MAAB/wHtARQB6gFDAREBFAESARUBFAEVARIB6gESAewB/zAAAfQB7QHqAesBEAEPARUBEwERAUMBEQHq
+        AesBcgHsAfQwAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMwAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9DAA
+        Af8BBwHrBPECvAPxAfIBEwHtAf8wAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/zAAAf8B8AHvA/MBBwHv
+        AQcB9wHyAvMB9wG8Af8wAAH/AfIBbQEHAfQB9wEHAbwB8AHzAv8B7AEUAfEB/zAAAf8B9AEHAUMB7AEH
+        Au8B8QH0AfAB7AEQAW0B9AH/MAAC/wHtAQ4CAAETAW0B7AHqAQABDgH3AfAC/zAAAv8B6wEAAg4BAAEU
+        AbwB9wHsApEBkgL/MAAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8wAAL/AbwBbQQAAW0C9wGRARIBBwL/
+        MAAC/wHzAfEBvAIHArwBBwK8AfAB8gL/MAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGA
+        FwAD/5cACw==
+</value>
+  </data>
+  <data name="&gt;&gt;btnBrowse.Name" xml:space="preserve">
+    <value>btnBrowse</value>
+  </data>
+  <data name="restoreButtonColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;treeViewFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="textBoxFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="isRecoverableColumn.HeaderText" xml:space="preserve">
+    <value>Recoverable</value>
+  </data>
+  <data name="&gt;&gt;cboDrives.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;imlFiles.Name" xml:space="preserve">
+    <value>imlFiles</value>
+  </data>
+  <data name="&gt;&gt;clhOriginalPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbpFolders.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="&gt;&gt;treeViewFolders.Name" xml:space="preserve">
+    <value>treeViewFolders</value>
+  </data>
+  <data name="startScanBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;dtcSize.Name" xml:space="preserve">
+    <value>dtcSize</value>
+  </data>
+  <data name="&gt;&gt;clhState.Name" xml:space="preserve">
+    <value>clhState</value>
+  </data>
+  <data name="&gt;&gt;topControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;imlFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPageTypes.Text" xml:space="preserve">
+    <value>File Types</value>
+  </data>
+  <data name="columnHeader5.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="iml.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        CAAAAk1TRnQBSQFMAwEBAAHoAQEBXAECARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BABD/MAAC/wT0BvMC9AL/
+        MAAB/wHtARQB6gFDAREBFAESARUBFAEVARIB6gESAewB/zAAAfQB7QHqAesBEAEPARUBEwERAUMBEQHq
+        AesBcgHsAfQwAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMwAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9DAA
+        Af8BBwHrBPECvAPxAfIBEwHtAf8wAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/zAAAf8B8AHvA/MBBwHv
+        AQcB9wHyAvMB9wG8Af8wAAH/AfIBbQEHAfQB9wEHAbwB8AHzAv8B7AEUAfEB/zAAAf8B9AEHAUMB7AEH
+        Au8B8QH0AfAB7AEQAW0B9AH/MAAC/wHtAQ4CAAETAW0B7AHqAQABDgH3AfAC/zAAAv8B6wEAAg4BAAEU
+        AbwB9wHsApEBkgL/MAAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8wAAL/AbwBbQQAAW0C9wGRARIBBwL/
+        MAAC/wHzAfEBvAIHArwBBwK8AfAB8gL/MAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGA
+        FwAD/5cACw==
+</value>
+  </data>
+  <data name="&gt;&gt;listViewFiles.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="&gt;&gt;clhState.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>586, 340</value>
+  </data>
+  <data name="checkBoxAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;trvExt.Name" xml:space="preserve">
+    <value>trvExt</value>
+  </data>
+  <data name="&gt;&gt;tabPageTypes.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="btnRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="ucBottom.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPageFolders.Name" xml:space="preserve">
+    <value>tabPageFolders</value>
+  </data>
+  <data name="&gt;&gt;cboDrives.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="filesGrid.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="txcFileId.HeaderText" xml:space="preserve">
+    <value>File Id</value>
+  </data>
+  <data name="&gt;&gt;listViewFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPageFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;btnBrowse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="trvFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Name" xml:space="preserve">
+    <value>statusStrip</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="fileIdColumn.HeaderText" xml:space="preserve">
+    <value>File Id</value>
+  </data>
+  <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;tslResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clhSize.Name" xml:space="preserve">
+    <value>clhSize</value>
+  </data>
+  <data name="&gt;&gt;buttonRestore.Name" xml:space="preserve">
+    <value>buttonRestore</value>
+  </data>
+  <data name="&gt;&gt;txtFilter.Name" xml:space="preserve">
+    <value>txtFilter</value>
+  </data>
+  <data name="&gt;&gt;ucTop.Type" xml:space="preserve">
+    <value>FileUndelete.TopControl, FileUndelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;isRecoverableColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageFolders.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tcMain.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="tbpTypes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelFilter.Name" xml:space="preserve">
+    <value>toolStripStatusLabelFilter</value>
+  </data>
+  <data name="&gt;&gt;clhName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;imlFolders.Name" xml:space="preserve">
+    <value>imlFolders</value>
+  </data>
+  <data name="&gt;&gt;filesGrid.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="&gt;&gt;startScanBtn.Name" xml:space="preserve">
+    <value>startScanBtn</value>
+  </data>
+  <data name="columnHeader5.Text" xml:space="preserve">
+    <value>tag</value>
+  </data>
+  <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 48</value>
+  </data>
+  <data name="pnlPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tbpFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dgvFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 48</value>
+  </data>
+  <data name="pnlClient.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;trvFolders.Name" xml:space="preserve">
+    <value>trvFolders</value>
+  </data>
+  <data name="&gt;&gt;listViewFiles.Name" xml:space="preserve">
+    <value>listViewFiles</value>
+  </data>
+  <data name="filePathColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="&gt;&gt;dccIsRecoverable.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewCheckBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvFiles.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;clhOriginalPath.Name" xml:space="preserve">
+    <value>clhOriginalPath</value>
+  </data>
+  <data name="&gt;&gt;txcFilePath.Name" xml:space="preserve">
+    <value>txcFilePath</value>
+  </data>
+  <data name="&gt;&gt;pnlPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="buttonFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>672, 10</value>
+  </data>
+  <data name="&gt;&gt;pnlPreview.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="treeViewFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnScan.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;txtFilter.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="tbpFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="trvExt.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;fbdMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FolderBrowserDialog, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAD///8B////Af///wH///8BAizFBwIyxGcCML6/Ai224wIrstsCLLCxAi6xV////wH///8B////Af//
+        /wH///8B////Af///wH///8BA0LaKwI91dUiUNH/gpnc/ztbvv9BZMn/eY3J/xY+rv8CMrG9AjWxEf//
+        /wH///8B////Af///wH///8BA0veEQNH29sDQ9j/WYLk///////Ay+n/z9jw//////9FasX/Aji1/wI6
+        tb3///8B////Af///wH///8B////AQNR4H8NVd//vczs/5Gr5P//////////////////////iaHV/6u8
+        3/8DPrH/AkS7Sf///wH///8B////Af///wEDW+PJSojq////////////7vP8/1GG5f9RhuX/7/T9////
+        ////////OW/G/wNMv5v///8B////Af///wH///8BAmfn9wJk5f9Kjef//////4ar4v8CW97/Alvd/5S6
+        8f//////Km3J/wJXyf8CV8XB////Af///wH///8B////AQJy6cdOm+3/9fj8///////f6fb/InPV/yd6
+        3//j7vz//////+3y+f8yfM7/AmPOmf///wH///8B////Af///wECfex/Eoju/9js/P+cz/j/////////
+        /////////////6LP9f/Z6/v/BHTa/wJw10////8B////Af///wH///8BB4XsFwSQ8PUCkfD/ULP1////
+        ///H5fj/2O/9//////8qlOD/Aovw/wKF6d3///8B////Af///wH///8B////Af///wEVpvWbBqT1/yu1
+        9v+g4Pv/P7rz/1DC9/+e3fv/JKv1/wGa8/8BlvNl////Af///wH///8B////Af///wH///8BJrz4RSbB
+        +f8Lvfj/Abz4/wG8+P8Bufj/ArP3+QGu9/8Bqfb/AqH2Of///wH///8B////Af///wH///8B////ATjR
+        +0E61fz/Otn8/yfX/P8L0fv/Acz7/wHF+sUCufmLAbf5/wSt+Sv///8B////Af///wH///8B////Af//
+        /wFO4/1RTOP++0nj/WFK6P2DTen+/0Pl/v822/2h////AQqz+RMJsvkJ////Af///wH///8B////Af//
+        /wH///8BWOT+IVLd/h3///8BUuf+HV70/v9e8f7/WOX+V////wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wFt+f//a/T/zf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BePr/w3b6/xH///8B////Af///wH///8B////Af//
+        /wH///8BAAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
+</value>
+  </data>
+  <data name="&gt;&gt;lvFiles.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="sizeColumn.HeaderText" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="restoreButtonColumn.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="&gt;&gt;imageList2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clhTag.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPageTypes.Name" xml:space="preserve">
+    <value>tabPageTypes</value>
+  </data>
+  <data name="toolStripStatusLabelFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="buttonRestore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;imlFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;topControl1.Type" xml:space="preserve">
+    <value>FileUndelete.TopControl, FileUndelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Name" xml:space="preserve">
+    <value>textBoxFilter</value>
+  </data>
+  <data name="&gt;&gt;drivesCombo.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="chkAll.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;textBoxFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader2.Name" xml:space="preserve">
+    <value>columnHeader2</value>
+  </data>
+  <data name="&gt;&gt;btnScan.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="buttomControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="topControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="toolStripStatusLabelFilter.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="checkBoxPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="tabPageTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 330</value>
+  </data>
+  <data name="&gt;&gt;trvExt.Parent" xml:space="preserve">
+    <value>tbpTypes</value>
+  </data>
+  <data name="&gt;&gt;pnlClient.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;listViewFiles.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;buttonFilter.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="trvFolders.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxPreview.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lvFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sizeColumn.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;treeViewFolders.Parent" xml:space="preserve">
+    <value>tbpFolders</value>
+  </data>
+  <data name="&gt;&gt;restoreButtonColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewButtonColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ucTop.Name" xml:space="preserve">
+    <value>ucTop</value>
+  </data>
+  <data name="txcFilePath.HeaderText" xml:space="preserve">
+    <value>File Path</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
+    <value>tabControl</value>
+  </data>
+  <data name="buttonBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 23</value>
+  </data>
+  <data name="restoreButtonColumn.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="ucTop.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="txtFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="topControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;ucBottom.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;filePathColumn.Name" xml:space="preserve">
+    <value>filePathColumn</value>
+  </data>
+  <data name="txtFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>566, 12</value>
+  </data>
+  <data name="topControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPageFolders.Parent" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="dbcRestoreButton.Width" type="System.Int32, mscorlib">
+    <value>60</value>
+  </data>
+  <data name="&gt;&gt;cboDrives.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;panelClient.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormMain</value>
+  </data>
+  <data name="checkBoxAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;restoreButtonColumn.Name" xml:space="preserve">
+    <value>restoreButtonColumn</value>
+  </data>
+  <data name="dbcRestoreButton.HeaderText" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="&gt;&gt;statusStrip.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="filesGrid.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;clhSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="stsMain.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="imageList2.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAQ
+        CwAAAk1TRnQBSQFMAgEBAwEAAXABAQGYAQIBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wIADe8CABD/AQAB9Ajx
+        AfQB/xUAAe8B/wH0Cf8B7wIAAv8E9AbzAvQC/wEAAfEI/wEHAfQB/xQAAe8B/wHvAfMEGQPzAf8B7wIA
+        Af8B7QEUAeoBQwERARQBEgEVARQBFQESAeoBEgHsAf8BAAHxAfMB9AX/AfQB8AEHAfQB/xMAAe8C/wHz
+        B/QB/wHvAgAB9AHtAeoB6wEQAQ8BFQETAREBQwERAeoB6wFyAewB9AEAAfEB8wH0AfAC8gLzAfEBBwH0
+        AQcB9AH/EgAB7wH/Ae8I8wH/Ae8CAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMBAAHxAfMB9Ab/AfMB8AHx
+        AQcB9BIAAe8C/wj0Af8B7wIAAf8BBwLsAf8B8wHyAfEE8gHsAW0BBwH0AQAB8QH/AfQB8QLyAfMB8gPx
+        AfIB/wHxEgAB7wH/Ae8B9AfzAf8B7wIAAf8BBwHrBPECvAPxAfIBEwHtAf8BAAHxAfMC9An/AfESAAHv
+        Av8G9AP/Ae8CAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/wEAAfEB8wH0AfEB8AHxA/IC8QHyAf8B8RIA
+        Ae8B/wHvAfQH8wH/Ae8CAAH/AfAB7wPzAQcB7wEHAfcB8gLzAfcBvAH/AQAB8QHzA/QI/wHxEgAB7wL/
+        BPQF/wHvAgAB/wHyAW0BBwH0AfcBBwG8AfAB8wL/AewBFAHxAf8BAAHxAvQF8QHwAfIB9AL/AfESAAHv
+        Af8B7wH0B/MB/wHvAgAB/wH0AQcBQwHsAQcC7wHxAfQB8AHsARABbQH0Af8BAAHxAfQB8wX0Bf8B8RIA
+        Ae8C/wH0CP8B7wIAAv8B7QEOAgABEwFtAewB6gEAAQ4B9wHwAv8BAAHxAfIB8wG8AvEB8gHxAvIB8QHy
+        Af8B8RIAAe8B/wHvAf8H8wH/Ae8CAAL/AesBAAIOAQABFAG8AfcB7AKRAZIC/wEAAfEB8gTzBvQB/wHx
+        EgAB7wH/AfMJ/wHvAgAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8BAAHxAfMB8gPwAfEBvAHwAfEB8gH0
+        Af8B8RIAAe8L/wHvAgAC/wG8AW0EAAFtAvcBkQESAQcC/wEAAfEB/wr0Af8B8RIADe8CAAL/AfMB8QG8
+        AgcCvAEHArwB8AHyAv8BAAH0DPEB9BEAAUIBTQE+BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcA
+        A/8BAAGAAQMCAAGAAQ8CAAGAAQMCAAGAAQcCAAGAAQMCAAGAAQMCAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQEYAAs=
+</value>
+  </data>
+  <data name="&gt;&gt;pnlPreview.Name" xml:space="preserve">
+    <value>pnlPreview</value>
+  </data>
+  <data name="&gt;&gt;buttonRestore.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="startScanBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;usBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ucBottom.Type" xml:space="preserve">
+    <value>FileUndelete.BottomControl, FileUndelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;dccIsRecoverable.Name" xml:space="preserve">
+    <value>dccIsRecoverable</value>
+  </data>
+  <data name="btnScan.Location" type="System.Drawing.Point, System.Drawing">
+    <value>460, 10</value>
+  </data>
+  <data name="&gt;&gt;startScanBtn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="drivesCombo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="panelPreview.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;imageList1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 10</value>
+  </data>
+  <data name="&gt;&gt;tbpTypes.Name" xml:space="preserve">
+    <value>tbpTypes</value>
+  </data>
+  <data name="&gt;&gt;buttonRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lvFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 48</value>
+  </data>
+  <data name="tabPageTypes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader4.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="topControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 64</value>
+  </data>
+  <data name="&gt;&gt;iml.Name" xml:space="preserve">
+    <value>iml</value>
+  </data>
+  <data name="&gt;&gt;buttonFilter.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="statusStrip.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 22</value>
+  </data>
+  <data name="&gt;&gt;ucTop.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;treeViewExt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttomControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 31</value>
+  </data>
+  <data name="treeViewFolders.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttomControl1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelClient.Name" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="toolStripStatusLabelFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="statusStrip.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;startScanBtn.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="dtcSize.HeaderText" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="&gt;&gt;trvFolders.Parent" xml:space="preserve">
+    <value>tbpFolders</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Name" xml:space="preserve">
+    <value>columnHeader1</value>
+  </data>
+  <data name="&gt;&gt;startScanBtn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sizeColumn.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;tslResults.Name" xml:space="preserve">
+    <value>tslResults</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Name" xml:space="preserve">
+    <value>panelPreview</value>
+  </data>
+  <data name="toolStripStatusLabelResults.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="checkBoxAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="&gt;&gt;topControl1.Name" xml:space="preserve">
+    <value>topControl1</value>
+  </data>
+  <data name="&gt;&gt;toolStripStatusLabelResults.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ucTop.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="drivesCombo.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="treeViewExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 324</value>
+  </data>
+  <data name="&gt;&gt;ucBottom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAll.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="dtcSize.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;sizeColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="drivesCombo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>395, 21</value>
+  </data>
+  <data name="&gt;&gt;chkAll.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trvFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="usBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 531</value>
+  </data>
+  <data name="tabPageFolders.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="checkBoxPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 414</value>
+  </data>
+  <data name="treeViewFolders.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="listViewFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlClient.Name" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="listViewFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dccIsRecoverable.HeaderText" xml:space="preserve">
+    <value>Recoverable</value>
+  </data>
+  <data name="&gt;&gt;clhName.Name" xml:space="preserve">
+    <value>clhName</value>
+  </data>
+  <data name="&gt;&gt;tabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPageTypes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startScanBtn.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;lvFiles.Name" xml:space="preserve">
+    <value>lvFiles</value>
+  </data>
+  <data name="&gt;&gt;buttomControl1.Name" xml:space="preserve">
+    <value>buttomControl1</value>
+  </data>
+  <data name="filesGrid.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 48</value>
+  </data>
+  <data name="buttomControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 531</value>
+  </data>
+  <data name="&gt;&gt;tcMain.Name" xml:space="preserve">
+    <value>tcMain</value>
+  </data>
+  <data name="tabPageFolders.Text" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="&gt;&gt;panelPreview.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;treeViewExt.Parent" xml:space="preserve">
+    <value>tbpTypes</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Name" xml:space="preserve">
+    <value>columnHeader4</value>
+  </data>
+  <data name="panelPreview.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;tmrScan.Name" xml:space="preserve">
+    <value>tmrScan</value>
+  </data>
+  <data name="panelPreview.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;tabPageFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="tabPageTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;columnHeader1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbpTypes.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="columnHeader2.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="tslResults.Size" type="System.Drawing.Size, System.Drawing">
+    <value>519, 17</value>
+  </data>
+  <data name="&gt;&gt;filePathColumn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="chkPreview.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 414</value>
+  </data>
+  <data name="&gt;&gt;ucBottom.Name" xml:space="preserve">
+    <value>ucBottom</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>784, 562</value>
+  </data>
+  <data name="btnFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;scanTimer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;treeViewExt.Name" xml:space="preserve">
+    <value>treeViewExt</value>
+  </data>
+  <data name="&gt;&gt;dbcRestoreButton.Name" xml:space="preserve">
+    <value>dbcRestoreButton</value>
+  </data>
+  <data name="btnBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="listViewFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 356</value>
+  </data>
+  <data name="&gt;&gt;btnBrowse.Parent" xml:space="preserve">
+    <value>pnlClient</value>
+  </data>
+  <data name="&gt;&gt;txtFilter.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="textBoxFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="buttonFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tbpTypes.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="filePathColumn.HeaderText" xml:space="preserve">
+    <value>File Path</value>
+  </data>
+  <data name="isRecoverableColumn.Width" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="checkBoxAll.Text" xml:space="preserve">
+    <value>Check All</value>
+  </data>
+  <data name="&gt;&gt;folderBrowserDialog.Name" xml:space="preserve">
+    <value>folderBrowserDialog</value>
+  </data>
+  <data name="&gt;&gt;pnlClient.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="panelClient.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="checkBoxPreview.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="&gt;&gt;txcFilePath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;columnHeader5.Name" xml:space="preserve">
+    <value>columnHeader5</value>
+  </data>
+  <data name="panelClient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 445</value>
+  </data>
+  <data name="&gt;&gt;btnFilter.Name" xml:space="preserve">
+    <value>btnFilter</value>
+  </data>
+  <data name="buttonBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>413, 10</value>
+  </data>
+  <data name="listViewFiles.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 48</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAll.Parent" xml:space="preserve">
+    <value>panelClient</value>
+  </data>
+  <data name="ucBottom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 531</value>
+  </data>
+  <data name="treeViewFolders.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="imlFolders.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        CAAAAk1TRnQBSQFMAwEBAAHoAQEBUAECARABAAEQAQAE/wEJARAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BABD/MAAC/wT0BvMC9AL/
+        MAAB/wHtARQB6gFDAREBFAESARUBFAEVARIB6gESAewB/zAAAfQB7QHqAesBEAEPARUBEwERAUMBEQHq
+        AesBcgHsAfQwAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMwAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9DAA
+        Af8BBwHrBPECvAPxAfIBEwHtAf8wAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/zAAAf8B8AHvA/MBBwHv
+        AQcB9wHyAvMB9wG8Af8wAAH/AfIBbQEHAfQB9wEHAbwB8AHzAv8B7AEUAfEB/zAAAf8B9AEHAUMB7AEH
+        Au8B8QH0AfAB7AEQAW0B9AH/MAAC/wHtAQ4CAAETAW0B7AHqAQABDgH3AfAC/zAAAv8B6wEAAg4BAAEU
+        AbwB9wHsApEBkgL/MAAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8wAAL/AbwBbQQAAW0C9wGRARIBBwL/
+        MAAC/wHzAfEBvAIHArwBBwK8AfAB8gL/MAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGA
+        FwAD/5cACw==
+</value>
+  </data>
+  <data name="textBoxFilter.Text" xml:space="preserve">
+    <value>No Filters</value>
+  </data>
+  <data name="&gt;&gt;dgvFiles.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;buttonFilter.Name" xml:space="preserve">
+    <value>buttonFilter</value>
+  </data>
+  <data name="&gt;&gt;btnFilter.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;chkPreview.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;ucTop.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;columnHeader4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbpFolders.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="columnHeader4.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="lvFiles.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="treeViewExt.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbpFolders.Name" xml:space="preserve">
+    <value>tbpFolders</value>
+  </data>
+  <data name="&gt;&gt;tabControl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="buttomControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="&gt;&gt;checkBoxAll.Name" xml:space="preserve">
+    <value>checkBoxAll</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ColumnHeader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="buttonFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="imlFiles.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAQ
+        CwAAAk1TRnQBSQFMAgEBAwEAAfABAQFUAQIBEAEAARABAAT/AQkBEAj/AUIBTQE2AQQGAAE2AQQCAAEo
+        AwABQAMAARADAAEBAQABCAYAAQQYAAGAAgABgAMAAoABAAGAAwABgAEAAYABAAKAAgADwAEAAcAB3AHA
+        AQAB8AHKAaYBAAEzBQABMwEAATMBAAEzAQACMwIAAxYBAAMcAQADIgEAAykBAANVAQADTQEAA0IBAAM5
+        AQABgAF8Af8BAAJQAf8BAAGTAQAB1gEAAf8B7AHMAQABxgHWAe8BAAHWAucBAAGQAakBrQIAAf8BMwMA
+        AWYDAAGZAwABzAIAATMDAAIzAgABMwFmAgABMwGZAgABMwHMAgABMwH/AgABZgMAAWYBMwIAAmYCAAFm
+        AZkCAAFmAcwCAAFmAf8CAAGZAwABmQEzAgABmQFmAgACmQIAAZkBzAIAAZkB/wIAAcwDAAHMATMCAAHM
+        AWYCAAHMAZkCAALMAgABzAH/AgAB/wFmAgAB/wGZAgAB/wHMAQABMwH/AgAB/wEAATMBAAEzAQABZgEA
+        ATMBAAGZAQABMwEAAcwBAAEzAQAB/wEAAf8BMwIAAzMBAAIzAWYBAAIzAZkBAAIzAcwBAAIzAf8BAAEz
+        AWYCAAEzAWYBMwEAATMCZgEAATMBZgGZAQABMwFmAcwBAAEzAWYB/wEAATMBmQIAATMBmQEzAQABMwGZ
+        AWYBAAEzApkBAAEzAZkBzAEAATMBmQH/AQABMwHMAgABMwHMATMBAAEzAcwBZgEAATMBzAGZAQABMwLM
+        AQABMwHMAf8BAAEzAf8BMwEAATMB/wFmAQABMwH/AZkBAAEzAf8BzAEAATMC/wEAAWYDAAFmAQABMwEA
+        AWYBAAFmAQABZgEAAZkBAAFmAQABzAEAAWYBAAH/AQABZgEzAgABZgIzAQABZgEzAWYBAAFmATMBmQEA
+        AWYBMwHMAQABZgEzAf8BAAJmAgACZgEzAQADZgEAAmYBmQEAAmYBzAEAAWYBmQIAAWYBmQEzAQABZgGZ
+        AWYBAAFmApkBAAFmAZkBzAEAAWYBmQH/AQABZgHMAgABZgHMATMBAAFmAcwBmQEAAWYCzAEAAWYBzAH/
+        AQABZgH/AgABZgH/ATMBAAFmAf8BmQEAAWYB/wHMAQABzAEAAf8BAAH/AQABzAEAApkCAAGZATMBmQEA
+        AZkBAAGZAQABmQEAAcwBAAGZAwABmQIzAQABmQEAAWYBAAGZATMBzAEAAZkBAAH/AQABmQFmAgABmQFm
+        ATMBAAGZATMBZgEAAZkBZgGZAQABmQFmAcwBAAGZATMB/wEAApkBMwEAApkBZgEAA5kBAAKZAcwBAAKZ
+        Af8BAAGZAcwCAAGZAcwBMwEAAWYBzAFmAQABmQHMAZkBAAGZAswBAAGZAcwB/wEAAZkB/wIAAZkB/wEz
+        AQABmQHMAWYBAAGZAf8BmQEAAZkB/wHMAQABmQL/AQABzAMAAZkBAAEzAQABzAEAAWYBAAHMAQABmQEA
+        AcwBAAHMAQABmQEzAgABzAIzAQABzAEzAWYBAAHMATMBmQEAAcwBMwHMAQABzAEzAf8BAAHMAWYCAAHM
+        AWYBMwEAAZkCZgEAAcwBZgGZAQABzAFmAcwBAAGZAWYB/wEAAcwBmQIAAcwBmQEzAQABzAGZAWYBAAHM
+        ApkBAAHMAZkBzAEAAcwBmQH/AQACzAIAAswBMwEAAswBZgEAAswBmQEAA8wBAALMAf8BAAHMAf8CAAHM
+        Af8BMwEAAZkB/wFmAQABzAH/AZkBAAHMAf8BzAEAAcwC/wEAAcwBAAEzAQAB/wEAAWYBAAH/AQABmQEA
+        AcwBMwIAAf8CMwEAAf8BMwFmAQAB/wEzAZkBAAH/ATMBzAEAAf8BMwH/AQAB/wFmAgAB/wFmATMBAAHM
+        AmYBAAH/AWYBmQEAAf8BZgHMAQABzAFmAf8BAAH/AZkCAAH/AZkBMwEAAf8BmQFmAQAB/wKZAQAB/wGZ
+        AcwBAAH/AZkB/wEAAf8BzAIAAf8BzAEzAQAB/wHMAWYBAAH/AcwBmQEAAf8CzAEAAf8BzAH/AQAC/wEz
+        AQABzAH/AWYBAAL/AZkBAAL/AcwBAAJmAf8BAAFmAf8BZgEAAWYC/wEAAf8CZgEAAf8BZgH/AQAC/wFm
+        AQABIQEAAaUBAANfAQADdwEAA4YBAAOWAQADywEAA7IBAAPXAQAD3QEAA+MBAAPqAQAD8QEAA/gBAAHw
+        AfsB/wEAAaQCoAEAA4ADAAH/AgAB/wMAAv8BAAH/AwAB/wEAAf8BAAL/AgAD/wIADe8CABD/AQAB9Ajx
+        AfQB/xUAAe8B/wH0Cf8B7wIAAv8E9AbzAvQC/wEAAfEI/wEHAfQB/xQAAe8B/wHvAfMEGQPzAf8B7wIA
+        Af8B7QEUAeoBQwERARQBEgEVARQBFQESAeoBEgHsAf8BAAHxAfMB9AX/AfQB8AEHAfQB/xMAAe8C/wHz
+        B/QB/wHvAgAB9AHtAeoB6wEQAQ8BFQETAREBQwERAeoB6wFyAewB9AEAAfEB8wH0AfAC8gLzAfEBBwH0
+        AQcB9AH/EgAB7wH/Ae8I8wH/Ae8CAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMBAAHxAfMB9Ab/AfMB8AHx
+        AQcB9BIAAe8C/wj0Af8B7wIAAf8BBwLsAf8B8wHyAfEE8gHsAW0BBwH0AQAB8QH/AfQB8QLyAfMB8gPx
+        AfIB/wHxEgAB7wH/Ae8B9AfzAf8B7wIAAf8BBwHrBPECvAPxAfIBEwHtAf8BAAHxAfMC9An/AfESAAHv
+        Av8G9AP/Ae8CAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/wEAAfEB8wH0AfEB8AHxA/IC8QHyAf8B8RIA
+        Ae8B/wHvAfQH8wH/Ae8CAAH/AfAB7wPzAQcB7wEHAfcB8gLzAfcBvAH/AQAB8QHzA/QI/wHxEgAB7wL/
+        BPQF/wHvAgAB/wHyAW0BBwH0AfcBBwG8AfAB8wL/AewBFAHxAf8BAAHxAvQF8QHwAfIB9AL/AfESAAHv
+        Af8B7wH0B/MB/wHvAgAB/wH0AQcBQwHsAQcC7wHxAfQB8AHsARABbQH0Af8BAAHxAfQB8wX0Bf8B8RIA
+        Ae8C/wH0CP8B7wIAAv8B7QEOAgABEwFtAewB6gEAAQ4B9wHwAv8BAAHxAfIB8wG8AvEB8gHxAvIB8QHy
+        Af8B8RIAAe8B/wHvAf8H8wH/Ae8CAAL/AesBAAIOAQABFAG8AfcB7AKRAZIC/wEAAfEB8gTzBvQB/wHx
+        EgAB7wH/AfMJ/wHvAgAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8BAAHxAfMB8gPwAfEBvAHwAfEB8gH0
+        Af8B8RIAAe8L/wHvAgAC/wG8AW0EAAFtAvcBkQESAQcC/wEAAfEB/wr0Af8B8RIADe8CAAL/AfMB8QG8
+        AgcCvAEHArwB8AHyAv8BAAH0DPEB9BEAAUIBTQE+BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcA
+        A/8BAAGAAQMCAAGAAQ8CAAGAAQMCAAGAAQcCAAGAAQMCAAGAAQMCAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGAAQECAAGAAQMCAAGA
+        AQECAAGAAQMCAAGAAQEYAAs=
+</value>
+  </data>
+  <data name="panelClient.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 64</value>
+  </data>
+  <data name="&gt;&gt;btnRestore.Name" xml:space="preserve">
+    <value>btnRestore</value>
+  </data>
+  <data name="txtFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;scanTimer.Name" xml:space="preserve">
+    <value>scanTimer</value>
+  </data>
+  <data name="buttonRestore.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;drivesCombo.Name" xml:space="preserve">
+    <value>drivesCombo</value>
+  </data>
+  <data name="columnHeader3.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="&gt;&gt;chkPreview.Name" xml:space="preserve">
+    <value>chkPreview</value>
+  </data>
+  <data name="stsMain.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 509</value>
+  </data>
+  <data name="&gt;&gt;columnHeader3.Name" xml:space="preserve">
+    <value>columnHeader3</value>
+  </data>
+  <data name="tslFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 17</value>
+  </data>
+  <data name="&gt;&gt;usBottom.Type" xml:space="preserve">
+    <value>FileUndelete.BottomControl, FileUndelete, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;panelClient.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txcFileId.Name" xml:space="preserve">
+    <value>txcFileId</value>
+  </data>
+  <data name="startScanBtn.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="statusStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="imlFolders.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>396, 17</value>
+  </data>
+  <data name="sizeColumn.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
+    <value>en</value>
+  </data>
+  <data name="dtcSize.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="iml.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>396, 17</value>
+  </data>
+  <data name="stsMain.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>124, 17</value>
+  </data>
+  <data name="txcFileId.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="isRecoverableColumn.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="imlFiles.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>506, 17</value>
+  </data>
+  <data name="imageList2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>506, 17</value>
+  </data>
+  <data name="scanTimer.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="imageList1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>396, 17</value>
+  </data>
+  <data name="fileIdColumn.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="dbcRestoreButton.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="fbdMain.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>233, 17</value>
+  </data>
+  <data name="txcFilePath.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="folderBrowserDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>233, 17</value>
+  </data>
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="imlMain.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>396, 17</value>
+  </data>
+  <data name="dccIsRecoverable.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="restoreButtonColumn.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="filePathColumn.UserAddedColumn" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="tmrScan.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnBrowse.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>41, 23</value>
+  </data>
+  <data name="btnBrowse.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="btnFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnFilter.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="btnFilter.Text" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="btnRestore.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnRestore.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnRestore.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="btnRestore.Text" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="btnScan.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="btnScan.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnScan.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="btnScan.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="cboDrives.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="cboDrives.Size" type="System.Drawing.Size, System.Drawing">
+    <value>395, 21</value>
+  </data>
+  <data name="chkAll.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="chkAll.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkAll.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkAll.Size" type="System.Drawing.Size, System.Drawing">
+    <value>71, 17</value>
+  </data>
+  <data name="chkAll.Text" xml:space="preserve">
+    <value>Check All</value>
+  </data>
+  <data name="chkPreview.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="chkPreview.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="chkPreview.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="chkPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 17</value>
+  </data>
+  <data name="chkPreview.Text" xml:space="preserve">
+    <value>Quick Panel</value>
+  </data>
+  <data name="clhName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="clhName.Width" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="clhOriginalPath.Text" xml:space="preserve">
+    <value>Original Path</value>
+  </data>
+  <data name="clhOriginalPath.Width" type="System.Int32, mscorlib">
+    <value>300</value>
+  </data>
+  <data name="clhSize.Text" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="clhSize.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="clhSize.Width" type="System.Int32, mscorlib">
+    <value>120</value>
+  </data>
+  <data name="clhState.Text" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="clhState.Width" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="clhTag.Text" xml:space="preserve">
+    <value>tag</value>
+  </data>
+  <data name="clhTag.Width" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="dbcRestoreButton.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="dccIsRecoverable.MinimumWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="dgvFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 220</value>
+  </data>
+  <data name="dgvFiles.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="dtcSize.MinimumWidth" type="System.Int32, mscorlib">
+    <value>40</value>
+  </data>
+  <data name="imlFiles.ImageStream1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAAO
+        CwAAAk1TRnQBSQFMAgEBAwIAAQIBAAECARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8CAA3vAgAQ/wEAAfQI8QH0
+        Af8VAAHvAf8B9An/Ae8CAAL/BPQG8wL0Av8BAAHxCP8BBwH0Af8UAAHvAf8B7wHzBBkD8wH/Ae8CAAH/
+        Ae0BFAHqAUMBEQEUARIBFQEUARUBEgHqARIB7AH/AQAB8QHzAfQF/wH0AfABBwH0Af8TAAHvAv8B8wf0
+        Af8B7wIAAfQB7QHqAesBEAEPARUBEwERAUMBEQHqAesBcgHsAfQBAAHxAfMB9AHwAvIC8wHxAQcB9AEH
+        AfQB/xIAAe8B/wHvCPMB/wHvAgAB9AHvApIC7AHtAZID7AGSAfcC7wHzAQAB8QHzAfQG/wHzAfAB8QEH
+        AfQSAAHvAv8I9AH/Ae8CAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9AEAAfEB/wH0AfEC8gHzAfID8QHy
+        Af8B8RIAAe8B/wHvAfQH8wH/Ae8CAAH/AQcB6wTxArwD8QHyARMB7QH/AQAB8QHzAvQJ/wHxEgAB7wL/
+        BvQD/wHvAgAB/wG8Af8D8gHvAuwB7QLyAfMBvAHvAf8BAAHxAfMB9AHxAfAB8QPyAvEB8gH/AfESAAHv
+        Af8B7wH0B/MB/wHvAgAB/wHwAe8D8wEHAe8BBwH3AfIC8wH3AbwB/wEAAfEB8wP0CP8B8RIAAe8C/wT0
+        Bf8B7wIAAf8B8gFtAQcB9AH3AQcBvAHwAfMC/wHsARQB8QH/AQAB8QL0BfEB8AHyAfQC/wHxEgAB7wH/
+        Ae8B9AfzAf8B7wIAAf8B9AEHAUMB7AEHAu8B8QH0AfAB7AEQAW0B9AH/AQAB8QH0AfMF9AX/AfESAAHv
+        Av8B9Aj/Ae8CAAL/Ae0BDgIAARMBbQHsAeoBAAEOAfcB8AL/AQAB8QHyAfMBvALxAfIB8QLyAfEB8gH/
+        AfESAAHvAf8B7wH/B/MB/wHvAgAC/wHrAQACDgEAARQBvAH3AewCkQGSAv8BAAHxAfIE8wb0Af8B8RIA
+        Ae8B/wHzCf8B7wIAAv8B7QEAA0MBDwHrAewBkQG7AZEB9wL/AQAB8QHzAfID8AHxAbwB8AHxAfIB9AH/
+        AfESAAHvC/8B7wIAAv8BvAFtBAABbQL3AZEBEgEHAv8BAAHxAf8K9AH/AfESAA3vAgAC/wHzAfEBvAIH
+        ArwBBwK8AfAB8gL/AQAB9AzxAfQRAAFCAU0BPgcAAT4DAAEoAwABQAMAARADAAEBAQABAQUAAYAXAAP/
+        AQABgAEDAgABgAEPAgABgAEDAgABgAEHAgABgAEDAgABgAEDAgABgAEDAgABgAEBAgABgAEDAgABgAEB
+        AgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEB
+        AgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEBAgABgAEDAgABgAEB
+        AgABgAEDAgABgAEBAgAL
+</value>
+  </data>
+  <data name="imlFolders.ImageStream1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAABy
+        CAAAAk1TRnQBSQFMAwEBAAH4AQEB+AEBARABAAEQAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        AUADAAEQAwABAQEAAQgGAAEEGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
+        AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
+        AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
+        AwABmQMAAcwCAAEzAwACMwIAATMBZgIAATMBmQIAATMBzAIAATMB/wIAAWYDAAFmATMCAAJmAgABZgGZ
+        AgABZgHMAgABZgH/AgABmQMAAZkBMwIAAZkBZgIAApkCAAGZAcwCAAGZAf8CAAHMAwABzAEzAgABzAFm
+        AgABzAGZAgACzAIAAcwB/wIAAf8BZgIAAf8BmQIAAf8BzAEAATMB/wIAAf8BAAEzAQABMwEAAWYBAAEz
+        AQABmQEAATMBAAHMAQABMwEAAf8BAAH/ATMCAAMzAQACMwFmAQACMwGZAQACMwHMAQACMwH/AQABMwFm
+        AgABMwFmATMBAAEzAmYBAAEzAWYBmQEAATMBZgHMAQABMwFmAf8BAAEzAZkCAAEzAZkBMwEAATMBmQFm
+        AQABMwKZAQABMwGZAcwBAAEzAZkB/wEAATMBzAIAATMBzAEzAQABMwHMAWYBAAEzAcwBmQEAATMCzAEA
+        ATMBzAH/AQABMwH/ATMBAAEzAf8BZgEAATMB/wGZAQABMwH/AcwBAAEzAv8BAAFmAwABZgEAATMBAAFm
+        AQABZgEAAWYBAAGZAQABZgEAAcwBAAFmAQAB/wEAAWYBMwIAAWYCMwEAAWYBMwFmAQABZgEzAZkBAAFm
+        ATMBzAEAAWYBMwH/AQACZgIAAmYBMwEAA2YBAAJmAZkBAAJmAcwBAAFmAZkCAAFmAZkBMwEAAWYBmQFm
+        AQABZgKZAQABZgGZAcwBAAFmAZkB/wEAAWYBzAIAAWYBzAEzAQABZgHMAZkBAAFmAswBAAFmAcwB/wEA
+        AWYB/wIAAWYB/wEzAQABZgH/AZkBAAFmAf8BzAEAAcwBAAH/AQAB/wEAAcwBAAKZAgABmQEzAZkBAAGZ
+        AQABmQEAAZkBAAHMAQABmQMAAZkCMwEAAZkBAAFmAQABmQEzAcwBAAGZAQAB/wEAAZkBZgIAAZkBZgEz
+        AQABmQEzAWYBAAGZAWYBmQEAAZkBZgHMAQABmQEzAf8BAAKZATMBAAKZAWYBAAOZAQACmQHMAQACmQH/
+        AQABmQHMAgABmQHMATMBAAFmAcwBZgEAAZkBzAGZAQABmQLMAQABmQHMAf8BAAGZAf8CAAGZAf8BMwEA
+        AZkBzAFmAQABmQH/AZkBAAGZAf8BzAEAAZkC/wEAAcwDAAGZAQABMwEAAcwBAAFmAQABzAEAAZkBAAHM
+        AQABzAEAAZkBMwIAAcwCMwEAAcwBMwFmAQABzAEzAZkBAAHMATMBzAEAAcwBMwH/AQABzAFmAgABzAFm
+        ATMBAAGZAmYBAAHMAWYBmQEAAcwBZgHMAQABmQFmAf8BAAHMAZkCAAHMAZkBMwEAAcwBmQFmAQABzAKZ
+        AQABzAGZAcwBAAHMAZkB/wEAAswCAALMATMBAALMAWYBAALMAZkBAAPMAQACzAH/AQABzAH/AgABzAH/
+        ATMBAAGZAf8BZgEAAcwB/wGZAQABzAH/AcwBAAHMAv8BAAHMAQABMwEAAf8BAAFmAQAB/wEAAZkBAAHM
+        ATMCAAH/AjMBAAH/ATMBZgEAAf8BMwGZAQAB/wEzAcwBAAH/ATMB/wEAAf8BZgIAAf8BZgEzAQABzAJm
+        AQAB/wFmAZkBAAH/AWYBzAEAAcwBZgH/AQAB/wGZAgAB/wGZATMBAAH/AZkBZgEAAf8CmQEAAf8BmQHM
+        AQAB/wGZAf8BAAH/AcwCAAH/AcwBMwEAAf8BzAFmAQAB/wHMAZkBAAH/AswBAAH/AcwB/wEAAv8BMwEA
+        AcwB/wFmAQAC/wGZAQAC/wHMAQACZgH/AQABZgH/AWYBAAFmAv8BAAH/AmYBAAH/AWYB/wEAAv8BZgEA
+        ASEBAAGlAQADXwEAA3cBAAOGAQADlgEAA8sBAAOyAQAD1wEAA90BAAPjAQAD6gEAA/EBAAP4AQAB8AH7
+        Af8BAAGkAqABAAOAAwAB/wIAAf8DAAL/AQAB/wMAAf8BAAH/AQAC/wIAA/8BABD/MAAC/wT0BvMC9AL/
+        MAAB/wHtARQB6gFDAREBFAESARUBFAEVARIB6gESAewB/zAAAfQB7QHqAesBEAEPARUBEwERAUMBEQHq
+        AesBcgHsAfQwAAH0Ae8CkgLsAe0BkgPsAZIB9wLvAfMwAAH/AQcC7AH/AfMB8gHxBPIB7AFtAQcB9DAA
+        Af8BBwHrBPECvAPxAfIBEwHtAf8wAAH/AbwB/wPyAe8C7AHtAvIB8wG8Ae8B/zAAAf8B8AHvA/MBBwHv
+        AQcB9wHyAvMB9wG8Af8wAAH/AfIBbQEHAfQB9wEHAbwB8AHzAv8B7AEUAfEB/zAAAf8B9AEHAUMB7AEH
+        Au8B8QH0AfAB7AEQAW0B9AH/MAAC/wHtAQ4CAAETAW0B7AHqAQABDgH3AfAC/zAAAv8B6wEAAg4BAAEU
+        AbwB9wHsApEBkgL/MAAC/wHtAQADQwEPAesB7AGRAbsBkQH3Av8wAAL/AbwBbQQAAW0C9wGRARIBBwL/
+        MAAC/wHzAfEBvAIHArwBBwK8AfAB8gL/MAABQgFNAT4HAAE+AwABKAMAAUADAAEQAwABAQEAAQEFAAGA
+        FwAD/4EACw==
+</value>
+  </data>
+  <data name="lvFiles.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="lvFiles.Size" type="System.Drawing.Size, System.Drawing">
+    <value>504, 356</value>
+  </data>
+  <data name="pnlClient.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="pnlClient.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 445</value>
+  </data>
+  <data name="pnlPreview.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="pnlPreview.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 186</value>
+  </data>
+  <data name="pnlPreview.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="stsMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 22</value>
+  </data>
+  <data name="tbpFolders.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbpFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 330</value>
+  </data>
+  <data name="tbpFolders.Text" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="tbpTypes.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tbpTypes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>242, 330</value>
+  </data>
+  <data name="tbpTypes.Text" xml:space="preserve">
+    <value>File Types</value>
+  </data>
+  <data name="tcMain.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="tcMain.Size" type="System.Drawing.Size, System.Drawing">
+    <value>250, 356</value>
+  </data>
+  <data name="trvExt.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="trvExt.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="trvExt.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="trvExt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 324</value>
+  </data>
+  <data name="trvFolders.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="trvFolders.ImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="trvFolders.SelectedImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="trvFolders.Size" type="System.Drawing.Size, System.Drawing">
+    <value>236, 324</value>
+  </data>
+  <data name="tslFilter.AutoSize" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="tslFilter.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="tslResults.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="txcFileId.MinimumWidth" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="txcFilePath.MinimumWidth" type="System.Int32, mscorlib">
+    <value>150</value>
+  </data>
+  <data name="txtFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="txtFilter.Text" xml:space="preserve">
+    <value>No Filters</value>
+  </data>
+  <data name="ucBottom.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Bottom</value>
+  </data>
+  <data name="ucBottom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="ucBottom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 31</value>
+  </data>
+  <data name="ucTop.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="ucTop.Size" type="System.Drawing.Size, System.Drawing">
+    <value>784, 64</value>
+  </data>
+</root>

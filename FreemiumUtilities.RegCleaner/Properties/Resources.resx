@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="desktop_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\desktop_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RegistryCleaner" xml:space="preserve">
+    <value>Registry Cleaner</value>
+  </data>
+  <data name="AttemptedDeletionOfValue" xml:space="preserve">
+    <value>Attempted deletion of value:</value>
+  </data>
+  <data name="CancelScan" xml:space="preserve">
+    <value>Cancel Scan</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categories</value>
+  </data>
+  <data name="ControlScanTitle" xml:space="preserve">
+    <value>Control Scan</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="DeepScanTitle" xml:space="preserve">
+    <value>Deep System Scan</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>failed.</value>
+  </data>
+  <data name="FontScanTitle" xml:space="preserve">
+    <value>System Fonts</value>
+  </data>
+  <data name="HelpScanTitle" xml:space="preserve">
+    <value>System Help Files</value>
+  </data>
+  <data name="HistoryScanTitle" xml:space="preserve">
+    <value>History and Start Menu</value>
+  </data>
+  <data name="InvalidSelection" xml:space="preserve">
+    <value>Invalid Selection!</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="LastCleanTime" xml:space="preserve">
+    <value>Last time you cleaned registry was {0:hh:mm dd-MM-yy}</value>
+  </data>
+  <data name="LibraryScanTitle" xml:space="preserve">
+    <value>Shared Libraries</value>
+  </data>
+  <data name="MRUScanTitle" xml:space="preserve">
+    <value>MRU Lists</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>No Items Selected</value>
+  </data>
+  <data name="NotStartedHeader" xml:space="preserve">
+    <value>Check registry categories and press scan</value>
+  </data>
+  <data name="RegistryScanCanceled" xml:space="preserve">
+    <value>Registry Scan Canceled</value>
+  </data>
+  <data name="RemoveSuccess" xml:space="preserve">
+    <value>Items removal action completed successfully.</value>
+  </data>
+  <data name="RestoreDisabled" xml:space="preserve">
+    <value>Restore Disabled!</value>
+  </data>
+  <data name="ScanAborted" xml:space="preserve">
+    <value>Scan Aborted, No Segments selected.</value>
+  </data>
+  <data name="ScanAbortedByUser" xml:space="preserve">
+    <value>Scan Aborted by User.</value>
+  </data>
+  <data name="ScanAgain" xml:space="preserve">
+    <value>Scan Again</value>
+  </data>
+  <data name="ScanningRegistry" xml:space="preserve">
+    <value>Scanning Registry</value>
+  </data>
+  <data name="ScanNow" xml:space="preserve">
+    <value>Scan Now</value>
+  </data>
+  <data name="ScanResultsReset" xml:space="preserve">
+    <value>Scan Results were Reset.</value>
+  </data>
+  <data name="ScanStarted" xml:space="preserve">
+    <value>Scan Started...</value>
+  </data>
+  <data name="SelectAtLeastOneItem" xml:space="preserve">
+    <value>You do not have any scan segments selected, please check at least one</value>
+  </data>
+  <data name="SelectItemsToRemove" xml:space="preserve">
+    <value>You haven't selected any items for removal. To Reset the Scan Results, select Cancel</value>
+  </data>
+  <data name="SetUpSystemRestore" xml:space="preserve">
+    <value>Do you wish to set up System Restore before proceeding? Without System Restore, changes to your system can Not be Undone</value>
+  </data>
+  <data name="SoftwareScanTitle" xml:space="preserve">
+    <value>System Software</value>
+  </data>
+  <data name="StartClearing" xml:space="preserve">
+    <value>Start Cleaning</value>
+  </data>
+  <data name="StartupScanTitle" xml:space="preserve">
+    <value>Startup Entries</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>successful.</value>
+  </data>
+  <data name="SystemRestore" xml:space="preserve">
+    <value>System Restore</value>
+  </data>
+  <data name="SystemRestoreDeactivated" xml:space="preserve">
+    <value>System Restore deemed unavailable or deactivated. Option disabled.</value>
+  </data>
+  <data name="SystemRestoreUnavailable" xml:space="preserve">
+    <value>System Restore is either disabled or unavailable on this computer. </value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="UninstallScanTitle" xml:space="preserve">
+    <value>Installation Strings</value>
+  </data>
+  <data name="UserScanTitle" xml:space="preserve">
+    <value>User Scan</value>
+  </data>
+  <data name="VdmScanTitle" xml:space="preserve">
+    <value>Virtual Devices</value>
+  </data>
+  <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
+    <value>Would you like to create a System Restore Point before proceeding? The Restore process may take several minutes to complete.</value>
+  </data>
+  <data name="NowScanning" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="ProblemsFound" xml:space="preserve">
+    <value>problems were found. To scan again is recommended to find more problems.</value>
+  </data>
+  <data name="ProblemsFoundClickClear" xml:space="preserve">
+    <value>problems were found. Select ones you want to remove and press Start Clearing.</value>
+  </data>
+  <data name="ItemsCleared" xml:space="preserve">
+    <value>items cleared</value>
+  </data>
+  <data name="RegistryCleaningCompleted" xml:space="preserve">
+    <value>Registry Cleaning Completed</value>
+  </data>
+  <data name="RegistryScanCompleted" xml:space="preserve">
+    <value>Registry Scan Completed</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Scanning:</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>System Restore is turned off, Would you like to continue at your own risk?</value>
+  </data>
+  <data name="CreatingRestorePoint" xml:space="preserve">
+    <value>Creating Restore Point ...</value>
+  </data>
+  <data name="frame0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame0.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame1.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame3.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame4.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame5.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame6.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frame7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\frame7.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

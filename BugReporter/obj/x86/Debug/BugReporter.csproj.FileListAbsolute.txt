@@ -1,0 +1,8 @@
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\bin\Debug\BugReporter.exe.config
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\bin\Debug\BugReporter.exe
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\bin\Debug\BugReporter.pdb
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\obj\x86\Debug\BugReporter.FormMain.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\obj\x86\Debug\BugReporter.Properties.Resources.resources
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\obj\x86\Debug\BugReporter.csproj.GenerateResource.Cache
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\obj\x86\Debug\BugReporter.exe
+E:\Alex\Work\Freelance\Null Kuhl\System Utils\BugReporter\obj\x86\Debug\BugReporter.pdb

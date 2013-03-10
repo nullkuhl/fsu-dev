@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FreemiumUtilities.Infrastructure</RootNamespace>
+    <AssemblyName>FreemiumUtilities.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WPFLocalizeExtension">
+      <HintPath>..\FreemiumUtilities\Libraries\WPFLocalizeExtension.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CancelCompleteDelegate.cs" />
+    <Compile Include="IOUtils.cs" />
+    <Compile Include="ScanCompleteDelegate.cs" />
+    <Compile Include="FileRW.cs" />
+    <Compile Include="OneClickApp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProgressUpdateDelegate.cs" />
+    <Compile Include="WPFLocalizeExtensionHelpers.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\Libraries\" /Y</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
