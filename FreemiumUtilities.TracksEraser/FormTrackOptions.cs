@@ -87,23 +87,23 @@ namespace FreemiumUtilities.TracksEraser
 
 			if (dr == DialogResult.Yes)
 			{
-				for (int i = 0; i < lsvIECookies.Items.Count; i++)
-				{
-					Application.DoEvents();
-					if (lsvIECookies.Items[i].Checked)
-					{
-						try
-						{
-							var fileInfo = new FileInfo(lsvIECookies.Items[i].Tag.ToString());
-							fileInfo.Delete();
-							//listView1.Items[i].Remove();
-						}
-						catch
-						{
-							//  MessageBox.Show(ex.Message);
-						}
-					}
-				}
+                for (int i = 0; i < lsvIECookies.Items.Count; i++)
+                {
+                    Application.DoEvents();
+                    if (lsvIECookies.Items[i].Checked)
+                    {
+                        try
+                        {
+                            var fileInfo = new FileInfo(lsvIECookies.Items[i].Tag.ToString());
+                            fileInfo.Delete();
+                            //listView1.Items[i].Remove();
+                        }
+                        catch
+                        {
+                            //  MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
 				FrmOptions_Load(null, null);
 			}
 		}

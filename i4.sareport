@@ -1,0 +1,346 @@
+<UnhandledExceptionReport AssemblyID="{885D0FD0-0622-476A-8121-BCFC19DCB2A0}" BuildDateTime="2013-01-02T21:57:03" BuildVersion="2.1.4750.39227" DateTime="2013-02-04T12:10:56" ExceptionMessage="Object reference not set to an instance of an object." ExceptionType="System.NullReferenceException" MethodName="private void MoveToCurrentUser(int32 index);" NETVersion="2.0.50727.5466" OSFullName="Windows 7 Service Pack 1" OSVersion="Version 6.1.7601.65536" Path="C:\Program Files\Freemium\Free System Utilities\StartupManager.exe" TypeName="[StartupManager]StartupManager.FormMain" UserHostAddress="{75f0b0fe-9e0b-d38f-ec53-d921a3543c8d}" UserID="{00000000-0000-0000-0000-000000000000}">
+    <Assemblies>
+        <Assembly CodeBase="file:///C:/Windows/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll" Name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/Freemium/Free System Utilities/StartupManager.exe" Name="StartupManager, Version=2.1.4750.39227, Culture=neutral, PublicKeyToken=null" This="1" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_MSIL/System/2.0.0.0__b77a5c561934e089/System.dll" Name="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/Freemium/Free System Utilities/FreemiumUtil.DLL" Name="FreemiumUtil, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_MSIL/System.Windows.Forms/2.0.0.0__b77a5c561934e089/System.Windows.Forms.dll" Name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_MSIL/System.Drawing/2.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll" Name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <Assembly CodeBase="file:///C:/Program Files/Freemium/Free System Utilities/en/StartupManager.resources.DLL" Name="StartupManager.resources, Version=2.1.4750.39227, Culture=en, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/JustCloud/MPCBIconOverlays.DLL" Name="MPCBIconOverlays, Version=1.0.0.0, Culture=neutral, PublicKeyToken=afe9546112c28796" />
+        <Assembly CodeBase="file:///C:/Program Files/JustCloud/LogicNP.EZShellExtensions.DLL" Name="LogicNP.EZShellExtensions, Version=5.2.0.0, Culture=neutral, PublicKeyToken=5b7b54a6f88ee2d7" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_32/System.Data/2.0.0.0__b77a5c561934e089/System.Data.dll" Name="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_MSIL/System.Configuration/2.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll" Name="System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_MSIL/System.Xml/2.0.0.0__b77a5c561934e089/System.Xml.dll" Name="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/JustCloud/x86/System.Data.SQLite.dll" Name="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_32/System.Transactions/2.0.0.0__b77a5c561934e089/System.Transactions.dll" Name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/JustCloud/AWSSDK.DLL" Name="AWSSDK, Version=1.4.13.0, Culture=neutral, PublicKeyToken=cd2d24cd2bace800" />
+        <Assembly CodeBase="file:///C:/Windows/assembly/GAC_32/System.EnterpriseServices/2.0.0.0__b03f5f7f11d50a3a/System.EnterpriseServices.dll" Name="System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    </Assemblies>
+    <CustomProperties />
+    <StackTrace>
+        <Exception ExceptionStackTrace="at &#x1;.&#x6;.&#x1;(Int32 &#x2;, &#x1; )&#xD;&#xA;   at &#x3;.&#x1;.&#x14;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)&#xD;&#xA;   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)&#xD;&#xA;   at System.Windows.Forms.Control.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ScrollableControl.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)" ID="0" Message="Object reference not set to an instance of an object." Type="System.NullReferenceException" />
+        <StackFrame DocumentURL="c:\TeamCity\buildAgent\work\6c0148f3b3b64261\Knots\Improve Performance\Startup Manager\FormMain.cs" ExceptionStackDepth="1" LineNumber="2708" Method="private void MoveToCurrentUser(int32 index);" Type="[StartupManager]StartupManager.FormMain">
+            <Local ID="1" Name="rk" Type="class [mscorlib]Microsoft.Win32.RegistryKey" />
+            <Local Name="name" ReportedType="System.String" Type="System.String" Value="&quot;VProtect Application&quot;" />
+            <Local Name="command" Null="1" Type="System.String" />
+            <Local Name="filePath" Null="1" Type="System.String" />
+            <Local Name="newFilePath" Null="1" Type="System.String" />
+            <Local Name="text" ReportedType="System.String" Type="System.String" Value="&quot;Registry: All Users&quot;" />
+            <Local Name="ex" Null="1" Type="class [mscorlib]System.UnauthorizedAccessException" />
+            <Local Name="exc" Null="1" Type="class [mscorlib]System.ArgumentException" />
+            <Local Name="excep" Null="1" Type="class [mscorlib]System.Security.SecurityException" />
+            <Local Name="CS$0$0000" Null="1" Type="System.String[]" />
+            <Local Name="CS$0$0001" Null="1" Type="System.String[]" />
+            <Local Name="CS$0$0002" Null="1" Type="System.String[]" />
+            <This ID="2" Name="this" />
+            <Parameter Name="index" ReportedType="System.Int32" Value="2 (0x2)" />
+        </StackFrame>
+        <StackFrame DocumentURL="c:\TeamCity\buildAgent\work\6c0148f3b3b64261\Knots\Improve Performance\Startup Manager\FormMain.cs" ExceptionStackDepth="2" LineNumber="511" Method="private void toolStripButtonMoveToCurrentUser_Click(object sender, EventArgs e);" Type="[StartupManager]StartupManager.FormMain">
+            <This ID="2" Name="this" />
+            <Parameter ID="3" Name="sender" />
+            <Parameter ID="4" Name="e" />
+        </StackFrame>
+    </StackTrace>
+    <Objects>
+        <ObjectDef ID="0" Type="System.NullReferenceException" Value="&quot;System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at &#x1;.&#x6;.&#x1;(Int32 &#x2;, &#x1; )&#xD;&#xA;   at &#x3;.&#x1;.&#x14;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)&#xD;&#xA;   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)&#xD;&#xA;   at System.Windows.Forms.Control.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ScrollableControl.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)&quot;">
+            <Field ID="5" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="1" Type="Microsoft.Win32.RegistryKey">
+            <Field Name="hkey" Null="1" Type="Microsoft.Win32.SafeHandles.SafeRegistryHandle" />
+            <Field Name="state" Type="System.Int32" Value="4 (0x4)" />
+            <Field Name="keyName" Type="System.String" Value="&quot;HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run&quot;" />
+            <Field Name="remoteKey" Type="System.Boolean" Value="false" />
+            <Field Name="checkMode" Type="Microsoft.Win32.RegistryKeyPermissionCheck" Value="Default" />
+            <Field ID="6" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="2" Type="[StartupManager]StartupManager.FormMain" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field Name="count" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="strRegPath" Type="System.String" Value="&quot;_Disabled&quot;" />
+            <Field ID="7" Name="resourceManager" Type="System.Resources.ResourceManager" />
+            <Field ID="8" Name="native" Type="[StartupManager]StartupManager.NativeMethods" />
+            <Field ID="9" Name="HLM" Type="Microsoft.Win32.RegistryKey" />
+            <Field Name="allUsersStartup" Type="System.String" Value="&quot;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\&quot;" />
+            <Field Name="currentUserStartup" Type="System.String" Value="&quot;C:\Users\darkfay\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\&quot;" />
+            <Field Name="admin" Type="System.Boolean" Value="true" />
+            <Field Name="_Ascending" Type="System.Boolean" Value="false" />
+            <Field Name="currentIndex" Type="System.Int32" Value="2 (0x2)" />
+            <Field Name="is64Bit" Type="System.Boolean" Value="false" />
+            <Field Name="i" Type="System.Int32" Value="6 (0x6)" />
+            <Field ID="10" Name="components" Type="[System]System.ComponentModel.IContainer" />
+            <Field ID="11" Name="rm" Type="System.Resources.ResourceManager" />
+            <Field ID="12" Name="toolStripStartupManager" Type="[System.Windows.Forms]System.Windows.Forms.ToolStrip" />
+            <Field ID="13" Name="panelDetails" Type="[System.Windows.Forms]System.Windows.Forms.Panel" />
+            <Field ID="14" Name="contextMenuStripStartupManager" Type="[System.Windows.Forms]System.Windows.Forms.ContextMenuStrip" />
+            <Field ID="15" Name="toolStripMenuItemDisable" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="16" Name="toolStripMenuItemEnable" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="17" Name="toolStripMenuItemDelete" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="18" Name="toolStripMenuItemOpen" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="19" Name="toolStripMenuItemExecute" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="20" Name="imageListStartupManager" Type="[System.Windows.Forms]System.Windows.Forms.ImageList" />
+            <Field ID="21" Name="listviewStartup" Type="[System.Windows.Forms]System.Windows.Forms.ListView" />
+            <Field ID="22" Name="ItemName" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" />
+            <Field ID="23" Name="FileName" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" />
+            <Field ID="24" Name="Type" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" />
+            <Field ID="25" Name="Status" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" />
+            <Field ID="26" Name="pictureBoxPanel" Type="[System.Windows.Forms]System.Windows.Forms.PictureBox" />
+            <Field ID="27" Name="labelDetails" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="28" Name="labelArguments" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="29" Name="labelProductNameDesc" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="30" Name="labelProductName" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="31" Name="labelCommandDesc" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="32" Name="labelFileVersionDesc" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="33" Name="labelDescriptionDesc" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="34" Name="labelCompanyDesc" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="35" Name="labelCommand" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="36" Name="labelFileVersion" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="37" Name="labelDescription" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="38" Name="labelCompany" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="39" Name="toolStripSeparator1" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripSeparator" />
+            <Field ID="40" Name="toolStripMenuItemMoveToCurrentUser" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="41" Name="toolStripMenuItemMoveToAllUsers" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" />
+            <Field ID="42" Name="toolStripButtonDisable" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="43" Name="toolStripButtonEnable" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="44" Name="toolTipStartupManager" Type="[System.Windows.Forms]System.Windows.Forms.ToolTip" />
+            <Field ID="45" Name="toolStripButtonDelete" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="46" Name="toolStripButtonOpen" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="47" Name="toolStripButtonExecute" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="3" Name="toolStripButtonMoveToCurrentUser" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="48" Name="toolStripButtonMoveToAllUsers" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="49" Name="toolStripButtonRefresh" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" />
+            <Field ID="50" Name="firstCover" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="51" Name="ucTop" Type="[StartupManager]StartupManager.TopControl" />
+            <Field ID="52" Name="ucBottom" Type="[StartupManager]StartupManager.BottomControl" />
+            <Field ID="53" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="3" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Move to User&quot;">
+            <Field Name="checkState" Type="[System.Windows.Forms]System.Windows.Forms.CheckState" Value="Unchecked" />
+            <Field Name="checkOnClick" Type="System.Boolean" Value="false" />
+            <Field ID="54" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="4" Type="System.EventArgs">
+            <Field ID="55" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="5" Type="System.SystemException" Value="&quot;System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at &#x1;.&#x6;.&#x1;(Int32 &#x2;, &#x1; )&#xD;&#xA;   at &#x3;.&#x1;.&#x14;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)&#xD;&#xA;   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)&#xD;&#xA;   at System.Windows.Forms.Control.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ScrollableControl.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)&quot;">
+            <Field ID="56" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="6" Type="System.MarshalByRefObject">
+            <Field Name="__identity" Null="1" Type="System.Object" />
+            <Field ID="57" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="7" Type="System.Resources.ResourceManager" />
+        <ObjectDef ID="8" Type="[StartupManager]StartupManager.NativeMethods" />
+        <ObjectDef ID="9" Type="Microsoft.Win32.RegistryKey" Value="&quot;HKEY_LOCAL_MACHINE\Software\Microsoft\Shared Tools\MSConfig\startupreg&quot;" />
+        <ObjectDef ID="10" Type="[System]System.ComponentModel.Container" />
+        <ObjectDef ID="11" Type="System.Resources.ResourceManager" />
+        <ObjectDef ID="12" Type="[System.Windows.Forms]System.Windows.Forms.ToolStrip" Value="&quot;System.Windows.Forms.ToolStrip, Name: toolStripStartupManager, Items: 8&quot;" />
+        <ObjectDef ID="13" Type="[System.Windows.Forms]System.Windows.Forms.Panel" Value="&quot;System.Windows.Forms.Panel, BorderStyle: System.Windows.Forms.BorderStyle.None&quot;" />
+        <ObjectDef ID="14" Type="[System.Windows.Forms]System.Windows.Forms.ContextMenuStrip" Value="&quot; [System.Windows.Forms.ContextMenuStrip], Name: ContextMenuStrip, Items: 8&quot;" />
+        <ObjectDef ID="15" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;&amp;Disable&quot;" />
+        <ObjectDef ID="16" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;&amp;Enable&quot;" />
+        <ObjectDef ID="17" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;Delete&quot;" />
+        <ObjectDef ID="18" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;&amp;Open file folder&quot;" />
+        <ObjectDef ID="19" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;Execute command&quot;" />
+        <ObjectDef ID="20" Type="[System.Windows.Forms]System.Windows.Forms.ImageList" Value="&quot; [System.Windows.Forms.ImageList] Images.Count: 6, ImageSize: {Width=16, Height=16}&quot;" />
+        <ObjectDef ID="21" Type="[System.Windows.Forms]System.Windows.Forms.ListView" Value="&quot;System.Windows.Forms.ListView, Items.Count: 6, Items[0]: ListViewItem: {Sidebar}&quot;" />
+        <ObjectDef ID="22" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" Value="&quot;ColumnHeader: Text: Item name&quot;" />
+        <ObjectDef ID="23" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" Value="&quot;ColumnHeader: Text: Filename&quot;" />
+        <ObjectDef ID="24" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" Value="&quot;ColumnHeader: Text: Location&quot;" />
+        <ObjectDef ID="25" Type="[System.Windows.Forms]System.Windows.Forms.ColumnHeader" Value="&quot;ColumnHeader: Text: Status&quot;" />
+        <ObjectDef ID="26" Type="[System.Windows.Forms]System.Windows.Forms.PictureBox" Value="&quot;System.Windows.Forms.PictureBox, SizeMode: Normal&quot;" />
+        <ObjectDef ID="27" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Details&quot;" />
+        <ObjectDef ID="28" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="29" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Product:&quot;" />
+        <ObjectDef ID="30" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="31" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Command:&quot;" />
+        <ObjectDef ID="32" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: File version:&quot;" />
+        <ObjectDef ID="33" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Description:&quot;" />
+        <ObjectDef ID="34" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Company:&quot;" />
+        <ObjectDef ID="35" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="36" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="37" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="38" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="39" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripSeparator" />
+        <ObjectDef ID="40" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;Move to Current &amp;user&quot;" />
+        <ObjectDef ID="41" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripMenuItem" Value="&quot;Move to &amp;All users&quot;" />
+        <ObjectDef ID="42" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Disable&quot;" />
+        <ObjectDef ID="43" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Enable&quot;" />
+        <ObjectDef ID="44" Type="[System.Windows.Forms]System.Windows.Forms.ToolTip" Value="&quot; [System.Windows.Forms.ToolTip] InitialDelay: 500, ShowAlways: False&quot;" />
+        <ObjectDef ID="45" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Delete&quot;" />
+        <ObjectDef ID="46" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Open folder&quot;" />
+        <ObjectDef ID="47" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Execute&quot;" />
+        <ObjectDef ID="48" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Move to All&quot;" />
+        <ObjectDef ID="49" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripButton" Value="&quot;Refresh&quot;" />
+        <ObjectDef ID="50" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: &quot;" />
+        <ObjectDef ID="51" Type="[StartupManager]StartupManager.TopControl" />
+        <ObjectDef ID="52" Type="[StartupManager]StartupManager.BottomControl" />
+        <ObjectDef ID="53" Type="[System.Windows.Forms]System.Windows.Forms.Form" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field Name="formState" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{01000100000100000000100000110110}&quot;" />
+            <Field Name="formStateEx" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000001001110000000}&quot;" />
+            <Field ID="58" Name="icon" Type="[System.Drawing]System.Drawing.Icon" />
+            <Field ID="59" Name="smallIcon" Type="[System.Drawing]System.Drawing.Icon" />
+            <Field Name="autoScaleBaseSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="minAutoSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="restoredWindowBounds" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=-1,Y=-1,Width=-1,Height=-1}&quot;" />
+            <Field Name="restoredWindowBoundsSpecified" Type="[System.Windows.Forms]System.Windows.Forms.BoundsSpecified" Value="None" />
+            <Field Name="dialogResult" Type="[System.Windows.Forms]System.Windows.Forms.DialogResult" Value="None" />
+            <Field Name="ctlClient" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.MdiClient" />
+            <Field Name="ownerWindow" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.NativeWindow" />
+            <Field Name="userWindowText" Type="System.String" Value="&quot;Manage startup&quot;" />
+            <Field Name="securityZone" Null="1" Type="System.String" />
+            <Field Name="securitySite" Null="1" Type="System.String" />
+            <Field Name="rightToLeftLayout" Type="System.Boolean" Value="false" />
+            <Field Name="restoreBounds" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=0,Y=0,Width=935,Height=550}&quot;" />
+            <Field Name="closeReason" Type="[System.Windows.Forms]System.Windows.Forms.CloseReason" Value="None" />
+            <Field Name="sizeGripRenderer" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.VisualStyles.VisualStyleRenderer" />
+            <Field ID="60" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="54" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItem" Value="&quot;Move to User&quot;">
+            <Field Name="bounds" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=369,Y=1,Width=99,Height=22}&quot;" />
+            <Field ID="61" Name="propertyStore" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+            <Field Name="alignment" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemAlignment" Value="Left" />
+            <Field ID="12" Name="parent" Type="[System.Windows.Forms]System.Windows.Forms.ToolStrip" />
+            <Field ID="12" Name="owner" Type="[System.Windows.Forms]System.Windows.Forms.ToolStrip" />
+            <Field Name="overflow" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemOverflow" Value="AsNeeded" />
+            <Field Name="placement" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemPlacement" Value="Main" />
+            <Field Name="imageAlign" Type="[System.Drawing]System.Drawing.ContentAlignment" Value="MiddleCenter" />
+            <Field Name="textAlign" Type="[System.Drawing]System.Drawing.ContentAlignment" Value="MiddleCenter" />
+            <Field Name="textImageRelation" Type="[System.Windows.Forms]System.Windows.Forms.TextImageRelation" Value="ImageBeforeText" />
+            <Field ID="62" Name="imageIndexer" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemImageIndexer" />
+            <Field ID="63" Name="toolStripItemInternalLayout" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemInternalLayout" />
+            <Field Name="state" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000010111010101000010110}&quot;" />
+            <Field Name="toolTipText" Type="System.String" Value="&quot;Move Item to Current user&quot;" />
+            <Field Name="imageTransparentColor" Type="[System.Drawing]System.Drawing.Color" Value="&quot;Color [Magenta]&quot;" />
+            <Field Name="imageScaling" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemImageScaling" Value="SizeToFit" />
+            <Field Name="cachedTextSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="displayStyle" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemDisplayStyle" Value="ImageAndText" />
+            <Field Name="lastClickTime" Type="System.Int64" Value="0 (0x0)" />
+            <Field ID="64" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="55" Type="System.Object" Value="&quot;System.EventArgs&quot;" />
+        <ObjectDef ID="56" Type="System.Exception" Value="&quot;System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at &#x1;.&#x6;.&#x1;(Int32 &#x2;, &#x1; )&#xD;&#xA;   at &#x3;.&#x1;.&#x14;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)&#xD;&#xA;   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)&#xD;&#xA;   at System.Windows.Forms.Control.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ScrollableControl.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)&quot;">
+            <Field Name="_className" Type="System.String" Value="&quot;System.NullReferenceException&quot;" />
+            <Field Name="_exceptionMethod" Null="1" Type="System.Reflection.MethodBase" />
+            <Field Name="_exceptionMethodString" Null="1" Type="System.String" />
+            <Field Name="_message" Type="System.String" Value="&quot;Object reference not set to an instance of an object.&quot;" />
+            <Field ID="65" Name="_data" Type="System.Collections.IDictionary" />
+            <Field Name="_innerException" Null="1" Type="System.Exception" />
+            <Field Name="_helpURL" Null="1" Type="System.String" />
+            <Field ID="66" Name="_stackTrace" Type="System.Object" />
+            <Field Name="_stackTraceString" Null="1" Type="System.String" />
+            <Field Name="_remoteStackTraceString" Null="1" Type="System.String" />
+            <Field Name="_remoteStackIndex" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="_dynamicMethods" Null="1" Type="System.Object" />
+            <Field Name="_HResult" Type="System.Int32" Value="-2147467261 (0x80004003)" />
+            <Field Name="_source" Null="1" Type="System.String" />
+            <Field Name="_xptrs" Type="System.IntPtr" Value="1631648 (0x18e5a0)" />
+            <Field Name="_xcode" Type="System.Int32" Value="-1073741819 (0xc0000005)" />
+            <Field ID="67" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="57" Type="System.Object" />
+        <ObjectDef ID="58" Type="[System.Drawing]System.Drawing.Icon" Value="&quot;(Icon)&quot;" />
+        <ObjectDef ID="59" Type="[System.Drawing]System.Drawing.Icon" Value="&quot;(Icon)&quot;" />
+        <ObjectDef ID="60" Type="[System.Windows.Forms]System.Windows.Forms.ContainerControl" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field ID="21" Name="activeControl" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field ID="21" Name="focusedControl" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="unvalidatedControl" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="autoValidate" Type="[System.Windows.Forms]System.Windows.Forms.AutoValidate" Value="Inherit" />
+            <Field Name="autoValidateChanged" Null="1" Type="System.EventHandler" />
+            <Field Name="autoScaleDimensions" Type="[System.Drawing]System.Drawing.SizeF" Value="&quot;{Width=7, Height=15}&quot;" />
+            <Field Name="currentAutoScaleDimensions" Type="[System.Drawing]System.Drawing.SizeF" Value="&quot;{Width=7, Height=15}&quot;" />
+            <Field Name="autoScaleMode" Type="[System.Windows.Forms]System.Windows.Forms.AutoScaleMode" Value="Font" />
+            <Field Name="state" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000000000000000000}&quot;" />
+            <Field ID="68" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="61" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+        <ObjectDef ID="62" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemImageIndexer" />
+        <ObjectDef ID="63" Type="[System.Windows.Forms]System.Windows.Forms.ToolStripItemInternalLayout" />
+        <ObjectDef ID="64" Type="[System]System.ComponentModel.Component" Value="&quot;Move to User&quot;">
+            <Field Name="site" Null="1" Type="[System]System.ComponentModel.ISite" />
+            <Field ID="69" Name="events" Type="[System]System.ComponentModel.EventHandlerList" />
+            <Field ID="70" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="65" Type="System.Collections.ListDictionaryInternal" />
+        <ObjectDef ID="66" Length="384" Rank="1" Type="System.SByte">
+            <Object Type="System.SByte" Value="16 (0x10)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="-104 (0x98)" />
+            <Object Type="System.SByte" Value="74 (0x4a)" />
+            <Object Type="System.SByte" Value="57 (0x39)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="7 (0x7)" />
+            <Object Type="System.SByte" Value="-102 (0x9a)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+        </ObjectDef>
+        <ObjectDef ID="67" Type="System.Object" Value="&quot;System.NullReferenceException: Object reference not set to an instance of an object.&#xD;&#xA;   at &#x1;.&#x6;.&#x1;(Int32 &#x2;, &#x1; )&#xD;&#xA;   at &#x3;.&#x1;.&#x14;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripButton.OnClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)&#xD;&#xA;   at System.Windows.Forms.Control.WmMouseUp(Message&amp; m, MouseButtons button, Int32 clicks)&#xD;&#xA;   at System.Windows.Forms.Control.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ScrollableControl.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.ToolStrip.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message&amp; m)&#xD;&#xA;   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)&quot;" />
+        <ObjectDef ID="68" Type="[System.Windows.Forms]System.Windows.Forms.ScrollableControl" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field Name="userAutoScrollMinSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="displayRect" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=0,Y=0,Width=929,Height=522}&quot;" />
+            <Field Name="scrollMargin" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="requestedScrollMargin" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="scrollPosition" Type="[System.Drawing]System.Drawing.Point" Value="&quot;{X=0,Y=0}&quot;" />
+            <Field Name="dockPadding" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.ScrollableControl/DockPaddingEdges" />
+            <Field Name="scrollState" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="71" Name="verticalScroll" Type="[System.Windows.Forms]System.Windows.Forms.VScrollProperties" />
+            <Field ID="72" Name="horizontalScroll" Type="[System.Windows.Forms]System.Windows.Forms.HScrollProperties" />
+            <Field Name="resetRTLHScrollValue" Type="System.Boolean" Value="false" />
+            <Field ID="73" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="69" Type="[System]System.ComponentModel.EventHandlerList" />
+        <ObjectDef ID="70" Type="System.MarshalByRefObject" Value="&quot;Move to User&quot;">
+            <Field Name="__identity" Null="1" Type="System.Object" />
+            <Field ID="74" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="71" Type="[System.Windows.Forms]System.Windows.Forms.VScrollProperties" />
+        <ObjectDef ID="72" Type="[System.Windows.Forms]System.Windows.Forms.HScrollProperties" />
+        <ObjectDef ID="73" Type="[System.Windows.Forms]System.Windows.Forms.Control" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field ID="75" Name="window" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+            <Field Name="parent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="reflectParent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field ID="76" Name="createParams" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" />
+            <Field Name="x" Type="System.Int32" Value="44 (0x2c)" />
+            <Field Name="y" Type="System.Int32" Value="89 (0x59)" />
+            <Field Name="width" Type="System.Int32" Value="935 (0x3a7)" />
+            <Field Name="height" Type="System.Int32" Value="550 (0x226)" />
+            <Field Name="clientWidth" Type="System.Int32" Value="929 (0x3a1)" />
+            <Field Name="clientHeight" Type="System.Int32" Value="522 (0x20a)" />
+            <Field Name="state" Type="System.Int32" Value="17432591 (0x10a000f)" />
+            <Field Name="state2" Type="System.Int32" Value="2124 (0x84c)" />
+            <Field Name="controlStyle" Type="[System.Windows.Forms]System.Windows.Forms.ControlStyles" Value="ContainerControl, UserPaint, StandardClick, Selectable, StandardDoubleClick, UseTextForAccessibility" />
+            <Field Name="tabIndex" Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Field Name="text" Null="1" Type="System.String" />
+            <Field Name="layoutSuspendCount" Type="System.Byte" Value="0 (0x0)" />
+            <Field Name="requiredScaling" Type="System.Byte" Value="0 (0x0)" />
+            <Field ID="77" Name="propertyStore" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+            <Field ID="78" Name="trackMouseEvent" Type="[System.Windows.Forms]System.Windows.Forms.NativeMethods/TRACKMOUSEEVENT" />
+            <Field Name="updateCount" Type="System.Int16" Value="0 (0x0)" />
+            <Field Name="cachedLayoutEventArgs" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.LayoutEventArgs" />
+            <Field ID="79" Name="threadCallbackList" Type="System.Collections.Queue" />
+            <Field Name="uiCuesState" Type="System.Int32" Value="17 (0x11)" />
+            <Field ID="80" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="74" Type="System.Object" Value="&quot;Move to User&quot;" />
+        <ObjectDef ID="75" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+        <ObjectDef ID="76" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" Value="&quot;CreateParams {'', '', 0x2c80000, 0x50001, {44, 89, 935, 550}}&quot;" />
+        <ObjectDef ID="77" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+        <ObjectDef ID="78" Type="[System.Windows.Forms]System.Windows.Forms.NativeMethods/TRACKMOUSEEVENT" />
+        <ObjectDef ID="79" Type="System.Collections.Queue" />
+        <ObjectDef ID="80" Type="[System]System.ComponentModel.Component" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field Name="site" Null="1" Type="[System]System.ComponentModel.ISite" />
+            <Field ID="81" Name="events" Type="[System]System.ComponentModel.EventHandlerList" />
+            <Field ID="82" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="81" Type="[System]System.ComponentModel.EventHandlerList" />
+        <ObjectDef ID="82" Type="System.MarshalByRefObject" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;">
+            <Field Name="__identity" Null="1" Type="System.Object" />
+            <Field ID="83" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="83" Type="System.Object" Value="&quot;&#x3;.&#x1;, Text: Manage startup&quot;" />
+    </Objects>
+</UnhandledExceptionReport>

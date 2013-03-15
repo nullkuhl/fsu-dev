@@ -42,14 +42,12 @@ namespace DiskAnalysis
 
 		void Application_Startup(object sender, StartupEventArgs e)
 		{
+            // AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
 			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
 			if (!created)
 			{
 				Current.Shutdown();
-			}
-			// AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-			//Uri uri = new Uri("/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml", UriKind.Relative);
-			//Resources.MergedDictionaries.Add(Application.LoadComponent(uri) as ResourceDictionary);
+			}			
 			for (int i = 0; i != e.Args.Length; ++i)
 			{
 				if (PassedDir)

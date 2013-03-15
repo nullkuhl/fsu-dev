@@ -451,4 +451,7 @@ once they are deleted, however the previous data in them has been reset.</value>
   <data name="ie_running" xml:space="preserve">
     <value>Internet Explorer is running. Please close the Internet Explorer browser to delete cookies.</value>
   </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>This operation requires Internet Explorer to be closed. Are you sure Internet Explorer is closed?</value>
+  </data>
 </root>

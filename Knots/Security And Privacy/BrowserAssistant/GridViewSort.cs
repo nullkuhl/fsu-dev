@@ -8,35 +8,35 @@ using System.Windows.Documents;
 
 namespace BrowserAssistant
 {
-	/// <summary>
-	/// <c>GridView</c> sorting helper
-	/// </summary>
+    /// <summary>
+    /// <c>GridView</c> sorting helper
+    /// </summary>
     public class GridViewSort
     {
         #region Public attached properties
 
-		/// <summary>
-		/// Gets the command
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets the command
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static ICommand GetCommand(DependencyObject obj)
         {
             return (ICommand)obj.GetValue(CommandProperty);
         }
 
-		/// <summary>
-		/// Sets the command
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <param name="value"></param>
+        /// <summary>
+        /// Sets the command
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
         public static void SetCommand(DependencyObject obj, ICommand value)
         {
             obj.SetValue(CommandProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for Command. This enables animation, styling, binding, etc
+        /// Using a DependencyProperty as the backing store for Command. This enables animation, styling, binding, etc
         /// </summary>
         public static readonly DependencyProperty CommandProperty =
             DependencyProperty.RegisterAttached(
@@ -47,7 +47,7 @@ namespace BrowserAssistant
                     null,
                     (o, e) =>
                     {
-                        var listView = o as ItemsControl;
+                        ItemsControl listView = o as ItemsControl;
                         if (listView != null)
                         {
                             if (!GetAutoSort(listView)) // Don't change click handler if AutoSort enabled
@@ -66,28 +66,28 @@ namespace BrowserAssistant
                 )
             );
 
-		/// <summary>
-		/// Checks if <see cref="AutoSortProperty"/> exists
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Checks if <see cref="AutoSortProperty"/> exists
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static bool GetAutoSort(DependencyObject obj)
         {
             return (bool)obj.GetValue(AutoSortProperty);
         }
 
-		/// <summary>
-		/// Sets the <see cref="AutoSortProperty"/>
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <param name="value"></param>
+        /// <summary>
+        /// Sets the <see cref="AutoSortProperty"/>
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
         public static void SetAutoSort(DependencyObject obj, bool value)
         {
             obj.SetValue(AutoSortProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for AutoSort. This enables animation, styling, binding, etc
+        /// Using a DependencyProperty as the backing store for AutoSort. This enables animation, styling, binding, etc
         /// </summary>
         public static readonly DependencyProperty AutoSortProperty =
             DependencyProperty.RegisterAttached(
@@ -98,13 +98,13 @@ namespace BrowserAssistant
                     false,
                     (o, e) =>
                     {
-                        var listView = o as ListView;
+                        ListView listView = o as ListView;
                         if (listView != null)
                         {
                             if (GetCommand(listView) == null) // Don't change click handler if a command is set
                             {
-                                var oldValue = (bool)e.OldValue;
-                                var newValue = (bool)e.NewValue;
+                                bool oldValue = (bool)e.OldValue;
+                                bool newValue = (bool)e.NewValue;
                                 if (oldValue && !newValue)
                                 {
                                     listView.RemoveHandler(ButtonBase.ClickEvent, new RoutedEventHandler(ColumnHeader_Click));
@@ -119,28 +119,28 @@ namespace BrowserAssistant
                 )
             );
 
-		/// <summary>
-		/// Gets property name
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets property name
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static string GetPropertyName(DependencyObject obj)
         {
             return (string)obj.GetValue(PropertyNameProperty);
         }
 
-		/// <summary>
-		/// Sets property name
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <param name="value"></param>
+        /// <summary>
+        /// Sets property name
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
         public static void SetPropertyName(DependencyObject obj, string value)
         {
             obj.SetValue(PropertyNameProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for PropertyName. This enables animation, styling, binding, etc...
+        /// Using a DependencyProperty as the backing store for PropertyName. This enables animation, styling, binding, etc...
         /// </summary>
         public static readonly DependencyProperty PropertyNameProperty =
             DependencyProperty.RegisterAttached(
@@ -150,80 +150,80 @@ namespace BrowserAssistant
                 new UIPropertyMetadata(null)
             );
 
-		/// <summary>
-		/// Gets ShowSortGlyph
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets ShowSortGlyph
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static bool GetShowSortGlyph(DependencyObject obj)
         {
             return (bool)obj.GetValue(ShowSortGlyphProperty);
         }
 
-		/// <summary>
-		/// Sets ShowSortGlyph
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <param name="value"></param>
+        /// <summary>
+        /// Sets ShowSortGlyph
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <param name="value"></param>
         public static void SetShowSortGlyph(DependencyObject obj, bool value)
         {
             obj.SetValue(ShowSortGlyphProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for ShowSortGlyph. This enables animation, styling, binding, etc
+        /// Using a DependencyProperty as the backing store for ShowSortGlyph. This enables animation, styling, binding, etc
         /// </summary>
         public static readonly DependencyProperty ShowSortGlyphProperty =
             DependencyProperty.RegisterAttached("ShowSortGlyph", typeof(bool), typeof(GridViewSort), new UIPropertyMetadata(true));
 
-		/// <summary>
-		/// Gets SortGlyphAscending
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets SortGlyphAscending
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static ImageSource GetSortGlyphAscending(DependencyObject obj)
         {
             return (ImageSource)obj.GetValue(SortGlyphAscendingProperty);
         }
 
-		/// <summary>
-		/// Sets SortGlyphAscending
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Sets SortGlyphAscending
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static void SetSortGlyphAscending(DependencyObject obj, ImageSource value)
         {
             obj.SetValue(SortGlyphAscendingProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for SortGlyphAscending. This enables animation, styling, binding, etc
+        /// Using a DependencyProperty as the backing store for SortGlyphAscending. This enables animation, styling, binding, etc
         /// </summary>
         public static readonly DependencyProperty SortGlyphAscendingProperty =
             DependencyProperty.RegisterAttached("SortGlyphAscending", typeof(ImageSource), typeof(GridViewSort), new UIPropertyMetadata(null));
 
-		/// <summary>
-		/// Gets SortGlyphDescending
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets SortGlyphDescending
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static ImageSource GetSortGlyphDescending(DependencyObject obj)
         {
             return (ImageSource)obj.GetValue(SortGlyphDescendingProperty);
         }
 
-		/// <summary>
-		/// Sets SortGlyphDescending
-		/// </summary>
-		/// <param name="obj"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Sets SortGlyphDescending
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public static void SetSortGlyphDescending(DependencyObject obj, ImageSource value)
         {
             obj.SetValue(SortGlyphDescendingProperty, value);
         }
 
         /// <summary>
-		/// Using a DependencyProperty as the backing store for SortGlyphDescending. This enables animation, styling, binding, etc
+        /// Using a DependencyProperty as the backing store for SortGlyphDescending. This enables animation, styling, binding, etc
         /// </summary>
         public static readonly DependencyProperty SortGlyphDescendingProperty =
             DependencyProperty.RegisterAttached("SortGlyphDescending", typeof(ImageSource), typeof(GridViewSort), new UIPropertyMetadata(null));
@@ -252,13 +252,13 @@ namespace BrowserAssistant
 
         static void ColumnHeader_Click(object sender, RoutedEventArgs e)
         {
-            var headerClicked = e.OriginalSource as GridViewColumnHeader;
+            GridViewColumnHeader headerClicked = e.OriginalSource as GridViewColumnHeader;
             if (headerClicked != null && headerClicked.Column != null)
             {
                 string propertyName = GetPropertyName(headerClicked.Column);
                 if (!string.IsNullOrEmpty(propertyName))
                 {
-                    var listView = GetAncestor<ListView>(headerClicked);
+                    ListView listView = GetAncestor<ListView>(headerClicked);
                     if (listView != null)
                     {
                         ICommand command = GetCommand(listView);
@@ -282,12 +282,12 @@ namespace BrowserAssistant
 
         #region Helper methods
 
-		/// <summary>
-		/// Gets ancestor
-		/// </summary>
-		/// <typeparam name="T"></typeparam>
-		/// <param name="reference"></param>
-		/// <returns></returns>
+        /// <summary>
+        /// Gets ancestor
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="reference"></param>
+        /// <returns></returns>
         public static T GetAncestor<T>(DependencyObject reference) where T : DependencyObject
         {
             DependencyObject parent = VisualTreeHelper.GetParent(reference);
@@ -298,13 +298,13 @@ namespace BrowserAssistant
             return (T)parent;
         }
 
-		/// <summary>
-		/// Applies sort
-		/// </summary>
-		/// <param name="view"></param>
-		/// <param name="propertyName"></param>
-		/// <param name="listView"></param>
-		/// <param name="sortedColumnHeader"></param>
+        /// <summary>
+        /// Applies sort
+        /// </summary>
+        /// <param name="view"></param>
+        /// <param name="propertyName"></param>
+        /// <param name="listView"></param>
+        /// <param name="sortedColumnHeader"></param>
         public static void ApplySort(ICollectionView view, string propertyName, ListView listView, GridViewColumnHeader sortedColumnHeader)
         {
             ListSortDirection direction = ListSortDirection.Ascending;
@@ -364,21 +364,21 @@ namespace BrowserAssistant
 
         #region SortGlyphAdorner nested class
 
-		/// <summary>
-		/// SortGlyph adorner
-		/// </summary>
+        /// <summary>
+        /// SortGlyph adorner
+        /// </summary>
         class SortGlyphAdorner : Adorner
         {
             GridViewColumnHeader _columnHeader;
             ListSortDirection _direction;
             ImageSource _sortGlyph;
 
-			/// <summary>
-			/// <see cref="SortGlyphAdorner"/> constructor
-			/// </summary>
-			/// <param name="columnHeader"></param>
-			/// <param name="direction"></param>
-			/// <param name="sortGlyph"></param>
+            /// <summary>
+            /// <see cref="SortGlyphAdorner"/> constructor
+            /// </summary>
+            /// <param name="columnHeader"></param>
+            /// <param name="direction"></param>
+            /// <param name="sortGlyph"></param>
             public SortGlyphAdorner(GridViewColumnHeader columnHeader, ListSortDirection direction, ImageSource sortGlyph)
                 : base(columnHeader)
             {
@@ -402,20 +402,20 @@ namespace BrowserAssistant
                     y2 = tmp;
                 }
 
-                var pathSegmentCollection = new PathSegmentCollection
+                PathSegmentCollection pathSegmentCollection = new PathSegmentCollection
                                             	{
                                             		new LineSegment(new Point(x2, y1), true),
                                             		new LineSegment(new Point(x3, y2), true)
                                             	};
 
-            	var pathFigure = new PathFigure(
+                PathFigure pathFigure = new PathFigure(
                     new Point(x1, y1),
                     pathSegmentCollection,
                     true);
 
-                var pathFigureCollection = new PathFigureCollection {pathFigure};
+                PathFigureCollection pathFigureCollection = new PathFigureCollection { pathFigure };
 
-            	var pathGeometry = new PathGeometry(pathFigureCollection);
+                PathGeometry pathGeometry = new PathGeometry(pathFigureCollection);
                 return pathGeometry;
             }
 
@@ -427,7 +427,7 @@ namespace BrowserAssistant
                 {
                     double x = _columnHeader.ActualWidth - 13;
                     double y = _columnHeader.ActualHeight / 2 - 5;
-                    var rect = new Rect(x, y, 10, 10);
+                    Rect rect = new Rect(x, y, 10, 10);
                     drawingContext.DrawImage(_sortGlyph, rect);
                 }
                 else

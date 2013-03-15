@@ -200,7 +200,7 @@ namespace FreemiumUtilities.TempCleaner
 			string ffCachePath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) +
 			                     "\\Mozilla\\Firefox\\Profiles";
 			string windir = Environment.GetEnvironmentVariable("WINDIR");
-			var process = new Process();
+            Process process = new Process();
 			process.StartInfo.FileName = windir + @"\explorer.exe";
 			process.StartInfo.Arguments = ffCachePath;
 			process.Start();
@@ -216,7 +216,7 @@ namespace FreemiumUtilities.TempCleaner
 			string chromeCachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) +
 			                         "\\Google\\Chrome\\User Data\\Default";
 			string windir = Environment.GetEnvironmentVariable("WINDIR");
-			var process = new Process();
+            Process process = new Process();
 			process.StartInfo.FileName = windir + @"\explorer.exe";
 			process.StartInfo.Arguments = chromeCachePath;
 			process.Start();

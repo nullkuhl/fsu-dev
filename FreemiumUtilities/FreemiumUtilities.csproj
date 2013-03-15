@@ -202,7 +202,7 @@
       <DependentUpon>messagePipe.cs</DependentUpon>
     </Compile>
     <Compile Include="Routine\Script.cs" />
-    <Compile Include="Routine\StringLib\OskarFormatter.cs" />
+    <Compile Include="Routine\StringLib\StringInjectExtension.cs" />
     <Compile Include="Routine\TaskManager.cs" />
     <Compile Include="Routine\Converters\TypeNotEqualsToVisibilityConverter.cs" />
     <Compile Include="Routine\Converters\TypeEqualsToVisibilityConverter.cs" />

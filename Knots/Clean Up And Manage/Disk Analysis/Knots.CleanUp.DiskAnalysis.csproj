@@ -76,17 +76,9 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Windows.Controls.Input.Toolkit">
-      <HintPath>..\..\..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Windows.Controls.Layout.Toolkit">
-      <HintPath>..\..\..\packages\WPFToolkit.3.5.50211.1\lib\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
-    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml" />
     <Reference Include="Telerik.Windows.Controls, Version=2011.1.419.35, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\Telerik.Windows.Controls.dll</HintPath>
@@ -124,13 +116,9 @@
     <Compile Include="ButtomControl.designer.cs">
       <DependentUpon>BottomControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="ScanWindow2.xaml.cs">
-      <DependentUpon>ScanWindow2.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Entities\AppFile.cs" />
     <Compile Include="Entities\AppFileType.cs" />
     <Compile Include="Entities\DriveData.cs" />
-    <Compile Include="LogClass.cs" />
     <Compile Include="Properties\Resources.de.Designer.cs">
       <DependentUpon>Resources.de.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -146,10 +134,6 @@
     <Compile Include="TopControl.designer.cs">
       <DependentUpon>TopControl.cs</DependentUpon>
     </Compile>
-    <Page Include="ScanWindow2.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

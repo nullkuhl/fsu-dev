@@ -102,7 +102,7 @@ namespace Disk_Cleaner
 		{
 			foreach (int index in checks.Keys)
 			{
-				var deleteFile = lvMain.Items[index].Tag as DeleteFile;
+                DeleteFile deleteFile = lvMain.Items[index].Tag as DeleteFile;
 				if (deleteFile != null && deleteFile.Delete != checks[index])
 					(lvMain.Items[index].Tag as DeleteFile).Delete = checks[index];
 			}
@@ -149,20 +149,18 @@ namespace Disk_Cleaner
 		{
 			var resourceManager = new ResourceManager("Disk_Cleaner.Resources", typeof (FormMain).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
-
-			//this.label1.Text = "";
 			lblSelectPath.Text = resourceManager.GetString("select_files_to_delete");
 			clhName.Text = resourceManager.GetString("name");
 			clhPath.Text = resourceManager.GetString("path");
 			clhSize.Text = resourceManager.GetString("size");
 			clhType.Text = resourceManager.GetString("file_type");
 			grbMain.Text = resourceManager.GetString("details");
-			labelAccess.Text = "";
-			labelModified.Text = "";
-			labelCreated.Text = "";
-			labelSize.Text = "";
-			labelExt.Text = "";
-			labelName.Text = "";
+            labelAccess.Text = string.Empty;
+            labelModified.Text = string.Empty;
+            labelCreated.Text = string.Empty;
+            labelSize.Text = string.Empty;
+            labelExt.Text = string.Empty;
+			labelName.Text = string.Empty;
 			buttonOK.Text = resourceManager.GetString("ok");
 			buttonCancel.Text = resourceManager.GetString("cancel");
 			Text = resourceManager.GetString("details");

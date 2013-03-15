@@ -24,9 +24,20 @@ namespace FreemiumUtilities.TracksEraser
         /// Empty Recycle Bin flags
         /// </summary>
         const int SHERB_NOCONFIRMATION = 0x00000001;
-
         const int SHERB_NOPROGRESSUI = 0x00000002;
         const int SHERB_NOSOUND = 0x00000004;
+
+        /// <summary>
+        /// Shell query for the Windows Recycle Bin
+        /// </summary>
+        /// <param name="pszRootPath"></param>
+        /// <param name="pSHQueryRBInfo"></param>
+        /// <returns></returns>
+        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+        private static extern int SHQueryRecycleBin(string pszRootPath, ref SHQUERYRBINFO pSHQueryRBInfo);
+
+        [DllImport("shell32.dll")]
+        private static extern int SHEmptyRecycleBin(IntPtr hWnd, string pszRootPath, uint dwFlags);
 
         /// <summary>
         /// URL history wrapper
@@ -42,10 +53,10 @@ namespace FreemiumUtilities.TracksEraser
 
         List<string> filesToDelete;
         List<string> foldersToDelete;
+        List<string> regValuesToDelete;
 
         ulong recycleBinCount;
         ulong recycleBinSize;
-        List<string> regValuesToDelete;
 
         //Now the Win32 API
 
@@ -56,18 +67,6 @@ namespace FreemiumUtilities.TracksEraser
         {
             InitializeComponent();
         }
-
-        /// <summary>
-        /// Shell query for the Windows Recycle Bin
-        /// </summary>
-        /// <param name="pszRootPath"></param>
-        /// <param name="pSHQueryRBInfo"></param>
-        /// <returns></returns>
-        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-        public static extern int SHQueryRecycleBin(string pszRootPath, ref SHQUERYRBINFO pSHQueryRBInfo);
-
-        [DllImport("shell32.dll")]
-        public static extern int SHEmptyRecycleBin(IntPtr hWnd, string pszRootPath, uint dwFlags);
 
         /// <summary>
         /// load the form
@@ -88,13 +87,10 @@ namespace FreemiumUtilities.TracksEraser
                 UrlHistory = new UrlHistoryWrapperClass();
                 Enumerator = UrlHistory.GetEnumerator();
 
-                //TreeNode node = new TreeNode("Win");
-                //this.treeView1.Nodes.Add(node);
-
                 trvTracks.ExpandAll();
                 trvTracks.SelectedNode = trvTracks.Nodes[0];
 
-                GetInstalledApps();
+                CheckNotInstalledApps();
 
                 Process[] pname = Process.GetProcessesByName("firefox");
                 if (pname.Length > 0)
@@ -124,6 +120,7 @@ namespace FreemiumUtilities.TracksEraser
             }
         }
 
+        #region SetCulture
         /// <summary>
         /// change current language
         /// </summary>
@@ -189,13 +186,11 @@ namespace FreemiumUtilities.TracksEraser
             lblResults.Text = rm.GetString("results");
             RunEraser.Text = rm.GetString("run_eraser");
             btnAnalyse.Text = rm.GetString("analyse");
-            //this.statusStrip1.Text = rm.GetString("status_strip");
-            //this.toolStripStatusLabel1.Text = rm.GetString("track_eraser");
             Text = rm.GetString("tracks_eraser");
             ucTop.Text = rm.GetString("tracks_eraser");
-
-            //Language.Text = rm.GetString("Language");
         }
+
+        #endregion
 
         /// <summary>
         /// handle click event to analyse system
@@ -209,7 +204,7 @@ namespace FreemiumUtilities.TracksEraser
             foldersToDelete = new List<string>();
             UrlHistory = new UrlHistoryWrapperClass();
             Enumerator = UrlHistory.GetEnumerator();
-            GetInstalledApps();
+            CheckNotInstalledApps();
 
             btnAnalyse.Enabled = false;
             tsbAnalyse.Enabled = false;
@@ -221,7 +216,7 @@ namespace FreemiumUtilities.TracksEraser
             Scanninglbl.Visible = true;
             Scanninglbl.Text = rm.GetString("scanning_tracks");
             pcbScanning.Visible = true;
-            var worker = new BackgroundWorker();
+            BackgroundWorker worker = new BackgroundWorker();
             worker.ProgressChanged += ProgressChanged;
             worker.DoWork += DoWork;
             worker.RunWorkerCompleted += WorkerCompleted;
@@ -245,7 +240,7 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            var bgWorker = new BackgroundWorker();
+            BackgroundWorker bgWorker = new BackgroundWorker();
             bgWorker.DoWork += bgWorker_DoWork;
             bgWorker.RunWorkerCompleted += bgWorker_RunWorkerCompleted;
             bgWorker.RunWorkerAsync();
@@ -270,40 +265,6 @@ namespace FreemiumUtilities.TracksEraser
 
             pcbScanning.Visible = false;
             Scanninglbl.Visible = false;
-        }
-
-        /// <summary>
-        /// get list of files to be deleted
-        /// </summary>
-        /// <param name="files"></param>
-        /// <returns></returns>
-        List<string> GetFilesAvailableForDrop(IEnumerable<string> files)
-        {
-            var processedFiles = new List<string>();
-            foreach (string file in files)
-            {
-                try
-                {
-                    if (file.Substring(1, 2) != @":\")
-                    {
-                        processedFiles.Add(file);
-                        continue;
-                    }
-
-                    var rights = new UserFileAccessRights(file);
-                    if (rights.CanDelete())
-                    {
-                        FileStream fileStream = GetStream(FileAccess.ReadWrite, file);
-                        processedFiles.Add(file);
-                        fileStream.Close();
-                    }
-                }
-                catch
-                {
-                }
-            }
-
-            return processedFiles;
         }
 
         /// <summary>
@@ -332,9 +293,9 @@ namespace FreemiumUtilities.TracksEraser
                     return;
                 }
 
-                filesToDelete = GetFilesAvailableForDrop(filesToDelete);
+                filesToDelete = Helper.GetFilesAvailableForDrop(filesToDelete);
 
-                string sizeGained = FormatSize(CalcFilesToDelSize() + recycleBinSize);
+                string sizeGained = Helper.FormatSize(Helper.CalcFilesToDelSize(filesToDelete) + recycleBinSize);
                 ClearResultBox();
                 AppendLineToResult(rm.GetString("analysis_report"));
                 AppendLineToResult("------------------------------------------------------------------------------------------");
@@ -355,7 +316,7 @@ namespace FreemiumUtilities.TracksEraser
                     AppendLineToResult("");
                 }
 
-                String filestodelete_str = "";
+                String filestodelete_str = string.Empty;
                 if (filesToDelete.Count > 0)
                 {
                     AppendLineToResult(rm.GetString("details_files_tobe_del") + ":");
@@ -441,21 +402,10 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        var d = new DirectoryInfo(
+                        DirectoryInfo d = new DirectoryInfo(
                             Environment.GetFolderPath(Environment.SpecialFolder.Recent));
 
-                        DirectoryInfo[] dires = d.GetDirectories("*", SearchOption.AllDirectories);
-                        FileInfo[] files = d.GetFiles();
-
-                        foreach (DirectoryInfo dir in dires)
-                        {
-                            foldersToDelete.Add(dir.FullName);
-                            filesToDelete.Add(dir.FullName);
-                        }
-                        foreach (FileInfo f in files)
-                        {
-                            filesToDelete.Add(f.FullName);
-                        }
+                        MarkDirToDelete(d);
                     }
                     catch
                     {
@@ -536,9 +486,6 @@ namespace FreemiumUtilities.TracksEraser
                 #endregion
 
                 #region Windows Clipboard
-
-                //Clipboard.SetText("Hello");
-                //Clipboard.Clear();
                 try
                 {
                     if (trvTracks.InvokeRequired)
@@ -576,33 +523,16 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        //string sWinTempFilesAddress = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString();
-                        string sWinTempFilesAddress = Environment.GetEnvironmentVariable("temp"); //sWinTempFilesAddress + "\\Temp";
+                        string sWinTempFilesAddress = Environment.GetEnvironmentVariable("temp");
 
-                        var dirWindowsTempFiles = new DirectoryInfo(sWinTempFilesAddress);
-                        FileSystemInfo[] fileSysInfoWinTemp = dirWindowsTempFiles.GetFiles("*", SearchOption.AllDirectories);
-                        foreach (FileInfo f in fileSysInfoWinTemp)
-                        {
-                            filesToDelete.Add(f.FullName);
-                        }
-                        foreach (DirectoryInfo di in dirWindowsTempFiles.GetDirectories())
-                        {
-                            foldersToDelete.Add(di.FullName);
-                        }
+                        DirectoryInfo dirWindowsTempFiles = new DirectoryInfo(sWinTempFilesAddress);
+                        MarkDirToDelete(dirWindowsTempFiles);
 
                         sWinTempFilesAddress = Environment.GetEnvironmentVariable("windir");
                         sWinTempFilesAddress = sWinTempFilesAddress + "\\temp";
 
                         dirWindowsTempFiles = new DirectoryInfo(sWinTempFilesAddress);
-                        fileSysInfoWinTemp = dirWindowsTempFiles.GetFiles("*", SearchOption.AllDirectories);
-                        foreach (FileInfo f in fileSysInfoWinTemp)
-                        {
-                            filesToDelete.Add(f.FullName);
-                        }
-                        foreach (DirectoryInfo di in dirWindowsTempFiles.GetDirectories())
-                        {
-                            foldersToDelete.Add(di.FullName);
-                        }
+                        MarkDirToDelete(dirWindowsTempFiles);
 
                         string windir = Environment.GetEnvironmentVariable("windir");
 
@@ -610,10 +540,14 @@ namespace FreemiumUtilities.TracksEraser
 
                         try
                         {
-                            foreach (string f in Directory.GetFiles(windir, "*.log", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
+                            filesToDelete.AddRange(Directory.GetFiles(windir, "*.log", SearchOption.AllDirectories));
+                        }
+                        catch
+                        {
+                        }
+                        try
+                        {
+                            filesToDelete.AddRange(Directory.GetFiles(windir + @"\minidump", "*", SearchOption.AllDirectories));
                         }
                         catch
                         {
@@ -621,109 +555,50 @@ namespace FreemiumUtilities.TracksEraser
 
                         try
                         {
-                            foreach (string f in Directory.GetFiles(windir + @"\minidump", "*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                        }
-                        catch
-                        {
-                        }
+                            DirectoryInfo d = new DirectoryInfo(
+                             Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
 
-                        try
-                        {
-                            foreach (
-                                string f in
-                                    Directory.GetFiles(
-                                        Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive", "*",
-                                        SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                            var folders =
-                                new DirectoryInfo(Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
-                            foreach (DirectoryInfo di in folders.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            MarkDirToDelete(d);
                         }
                         catch
                         {
                         }
                         try
                         {
-                            foreach (
-                                string f in
-                                    Directory.GetFiles(
-                                        Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue", "*",
-                                        SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                            var folders =
-                                new DirectoryInfo(Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
-                            foreach (DirectoryInfo di in folders.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo d = new DirectoryInfo(
+                             Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
+
+                            MarkDirToDelete(d);
                         }
                         catch
                         {
                         }
                         try
                         {
-                            foreach (
-                                string f in
-                                    Directory.GetFiles(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\ElevatedDiagnostics", "*",
-                                                       SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                            var folders = new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\ElevatedDiagnostics");
-                            foreach (DirectoryInfo di in folders.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo d = new DirectoryInfo(
+                                Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\ElevatedDiagnostics");
+
+                            MarkDirToDelete(d);
                         }
                         catch
                         {
                         }
                         try
                         {
-                            foreach (
-                                string f in
-                                    Directory.GetFiles(
-                                        Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue", "*",
-                                        SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                            var folders =
-                                new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
-                            foreach (DirectoryInfo di in folders.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo d = new DirectoryInfo(
+                                Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
+
+                            MarkDirToDelete(d);
                         }
                         catch
                         {
                         }
                         try
                         {
-                            foreach (
-                                string f in
-                                    Directory.GetFiles(
-                                        Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive", "*",
-                                        SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(f);
-                            }
-                            var folders =
-                                new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
-                            foreach (DirectoryInfo di in folders.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo d = new DirectoryInfo(
+                                Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
+
+                            MarkDirToDelete(d);
                         }
                         catch
                         {
@@ -751,7 +626,7 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        var sqrbi = new SHQUERYRBINFO();
+                        SHQUERYRBINFO sqrbi = new SHQUERYRBINFO();
                         sqrbi.cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO));
                         int result = SHQueryRecycleBin(string.Empty, ref sqrbi);
                         if (result == 0)
@@ -830,11 +705,9 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        var dirInfoStartMenu = new DirectoryInfo(
+                        DirectoryInfo dirInfoStartMenu = new DirectoryInfo(
                             Environment.GetFolderPath(Environment.SpecialFolder.StartMenu));
-
-                        DirectoryInfo[] dirStartMenu = dirInfoStartMenu.GetDirectories("*", SearchOption.AllDirectories);
-                        FileInfo[] filesStartMenu = dirInfoStartMenu.GetFiles();
+                        MarkDirToDelete(dirInfoStartMenu);
                     }
                     catch
                     {
@@ -887,29 +760,15 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        var ieHistory1 =
+                        DirectoryInfo ieHistory1 =
                             new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) +
                                               @"\Microsoft\Windows\History");
-                        foreach (FileInfo fi in ieHistory1.GetFiles("*", SearchOption.AllDirectories))
-                        {
-                            filesToDelete.Add(fi.FullName);
-                        }
-                        foreach (DirectoryInfo di in ieHistory1.GetDirectories())
-                        {
-                            foldersToDelete.Add(di.FullName);
-                        }
+                        MarkDirToDelete(ieHistory1);
 
-                        var ieHistory2 =
+                        DirectoryInfo ieHistory2 =
                             new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) +
                                               @"\Microsoft\Internet Explorer\Recovery");
-                        foreach (FileInfo fi in ieHistory2.GetFiles("*", SearchOption.AllDirectories))
-                        {
-                            filesToDelete.Add(fi.FullName);
-                        }
-                        foreach (DirectoryInfo di in ieHistory2.GetDirectories())
-                        {
-                            foldersToDelete.Add(di.FullName);
-                        }
+                        MarkDirToDelete(ieHistory2);
                     }
                     catch
                     {
@@ -933,20 +792,10 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        var dIECookies = new DirectoryInfo(
+                        DirectoryInfo dIECookies = new DirectoryInfo(
                             Environment.GetFolderPath(Environment.SpecialFolder.Cookies));
 
-                        DirectoryInfo[] dirCookies = dIECookies.GetDirectories("*", SearchOption.AllDirectories);
-                        FileInfo[] filesCookies = dIECookies.GetFiles("*", SearchOption.AllDirectories);
-
-                        foreach (DirectoryInfo dir in dirCookies)
-                        {
-                            foldersToDelete.Add(dir.FullName);
-                        }
-                        foreach (FileInfo f in filesCookies)
-                        {
-                            filesToDelete.Add(f.FullName);
-                        }
+                        MarkDirToDelete(dIECookies);
                     }
                     catch
                     {
@@ -1004,36 +853,11 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        string tempDir = Environment.GetFolderPath(Environment.SpecialFolder.InternetCache);
-                        var diInfoIECache = new DirectoryInfo(tempDir);
-                        foreach (FileInfo fi in diInfoIECache.GetFiles("*", SearchOption.AllDirectories))
-                        {
-                            filesToDelete.Add(fi.FullName);
-                        }
+                        DirectoryInfo diInfoIECache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.InternetCache));
+                        MarkDirToDelete(diInfoIECache);
 
-                        foreach (string dir in Directory.GetDirectories(tempDir))
-                        {
-                            foldersToDelete.Add(dir);
-                        }
-
-                        tempDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Microsoft\Feeds Cache";
-
-                        diInfoIECache = new DirectoryInfo(tempDir);
-                        foreach (FileInfo fi in diInfoIECache.GetFiles("*", SearchOption.AllDirectories))
-                        {
-                            filesToDelete.Add(fi.FullName);
-                        }
-
-                        foreach (string dir in Directory.GetDirectories(tempDir))
-                        {
-                            foldersToDelete.Add(dir);
-                        }
-                        //tempDir = Environment.GetFolderPath(Environment.SpecialFolder.Cookies);
-                        //diInfoIECache = new DirectoryInfo(tempDir);
-                        //foreach (FileInfo fi in diInfoIECache.GetFiles("*", SearchOption.AllDirectories))
-                        //{
-                        //    filesToDelete.Add(fi.FullName);
-                        //}
+                        diInfoIECache = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Microsoft\Feeds Cache");
+                        MarkDirToDelete(diInfoIECache);
                     }
                     catch
                     {
@@ -1058,32 +882,24 @@ namespace FreemiumUtilities.TracksEraser
                     try
                     {
                         string sIndexDat = Environment.GetFolderPath(Environment.SpecialFolder.Cookies);
-                        var diInfoIEIndexDatCookies = new DirectoryInfo(sIndexDat);
+                        DirectoryInfo diInfoIEIndexDatCookies = new DirectoryInfo(sIndexDat);
                         FileInfo[] fileInfoIndexDatCookies = diInfoIEIndexDatCookies.GetFiles("index.dat");
                         filesToDelete.Add(fileInfoIndexDatCookies[0].FullName);
 
                         sIndexDat = Environment.GetFolderPath(Environment.SpecialFolder.History);
-                        var diInfoIEIndexDatHistory = new DirectoryInfo(sIndexDat);
+                        DirectoryInfo diInfoIEIndexDatHistory = new DirectoryInfo(sIndexDat);
                         FileSystemInfo[] fileSysInfoHistory = diInfoIEIndexDatHistory.GetDirectories();
                         foreach (DirectoryInfo diNext in fileSysInfoHistory)
                         {
-                            FileInfo[] datfiles = diNext.GetFiles("index.dat");
-                            foreach (FileInfo f in datfiles)
-                            {
-                                filesToDelete.Add(f.FullName);
-                            }
+                            MarkFilesToDelete(diNext, "index.dat");
                         }
 
                         sIndexDat = Environment.GetFolderPath(Environment.SpecialFolder.InternetCache);
-                        var diInfoIEIndexDatCache = new DirectoryInfo(sIndexDat);
+                        DirectoryInfo diInfoIEIndexDatCache = new DirectoryInfo(sIndexDat);
                         FileSystemInfo[] fileSysInfoCache = diInfoIEIndexDatCache.GetDirectories();
                         foreach (DirectoryInfo diNext in fileSysInfoCache)
                         {
-                            FileInfo[] datfiles = diNext.GetFiles("index.dat");
-                            foreach (FileInfo f in datfiles)
-                            {
-                                filesToDelete.Add(f.FullName);
-                            }
+                            MarkFilesToDelete(diNext, "index.dat");
                         }
                     }
                     catch
@@ -1113,19 +929,12 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var mediaPlayerDir = new DirectoryInfo(localData + "\\Microsoft\\Media Player");
+                            DirectoryInfo mediaPlayerDir = new DirectoryInfo(localData + "\\Microsoft\\Media Player");
                             foreach (DirectoryInfo d in mediaPlayerDir.GetDirectories())
                             {
                                 if (d.Name.ToLower().Contains("cache"))
                                 {
-                                    foreach (FileInfo fi in d.GetFiles("*", SearchOption.AllDirectories))
-                                    {
-                                        filesToDelete.Add(fi.FullName);
-                                    }
-                                    foreach (DirectoryInfo di in d.GetDirectories())
-                                    {
-                                        foldersToDelete.Add(di.FullName);
-                                    }
+                                    MarkDirToDelete(d);
                                 }
                             }
                         }
@@ -1143,15 +952,8 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var quickTimeDir = new DirectoryInfo(localLowData + "\\Apple Computer\\quicktime\\downloads");
-                            foreach (FileInfo fi in quickTimeDir.GetFiles("*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(fi.FullName);
-                            }
-                            foreach (DirectoryInfo di in quickTimeDir.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo quickTimeDir = new DirectoryInfo(localLowData + "\\Apple Computer\\quicktime\\downloads");
+                            MarkDirToDelete(quickTimeDir);
                         }
                     }
                     catch
@@ -1167,15 +969,8 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var macromediaFlashDir = new DirectoryInfo(roamingData + "\\Macromedia\\Flash Player");
-                            foreach (FileInfo fi in macromediaFlashDir.GetFiles("*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(fi.FullName);
-                            }
-                            foreach (DirectoryInfo di in macromediaFlashDir.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo macromediaFlashDir = new DirectoryInfo(roamingData + "\\Macromedia\\Flash Player");
+                            MarkDirToDelete(macromediaFlashDir);
                         }
                     }
                     catch
@@ -1191,15 +986,8 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var officeDir = new DirectoryInfo(roamingData + "\\Microsoft\\Office");
-                            foreach (FileInfo fi in officeDir.GetFiles("*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(fi.FullName);
-                            }
-                            foreach (DirectoryInfo di in officeDir.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo officeDir = new DirectoryInfo(roamingData + "\\Microsoft\\Office");
+                            MarkDirToDelete(officeDir);
                         }
                     }
                     catch
@@ -1332,15 +1120,8 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var javaDir = new DirectoryInfo(localData + "\\Sun\\Java\\Deployment\\cache");
-                            foreach (FileInfo fi in javaDir.GetFiles("*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(fi.FullName);
-                            }
-                            foreach (DirectoryInfo di in javaDir.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo javaDir = new DirectoryInfo(localData + "\\Sun\\Java\\Deployment\\cache");
+                            MarkDirToDelete(javaDir);
                         }
                     }
                     catch
@@ -1356,15 +1137,8 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         if (res)
                         {
-                            var officeDir = new DirectoryInfo(programData + "\\Microsoft\\Windows Defender\\Scans\\History\\Results\\Quick");
-                            foreach (FileInfo fi in officeDir.GetFiles("*", SearchOption.AllDirectories))
-                            {
-                                filesToDelete.Add(fi.FullName);
-                            }
-                            foreach (DirectoryInfo di in officeDir.GetDirectories())
-                            {
-                                foldersToDelete.Add(di.FullName);
-                            }
+                            DirectoryInfo officeDir = new DirectoryInfo(programData + "\\Microsoft\\Windows Defender\\Scans\\History\\Results\\Quick");
+                            MarkDirToDelete(officeDir);
                         }
                     }
                     catch
@@ -1401,22 +1175,13 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxHistory = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxHistory = new DirectoryInfo(sMozillaHistory);
                                 DirectoryInfo[] fileSysFirefoxHistory = diInfoFirefoxHistory.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxHistory)
                                 {
-                                    foreach (FileInfo f in diNext.GetFiles("places.sqlite"))
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
-                                    foreach (FileInfo f in diNext.GetFiles("session*"))
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
-                                    foreach (FileInfo f in diNext.GetFiles("history.dat"))
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "places.sqlite");
+                                    MarkFilesToDelete(diNext, "session");
+                                    MarkFilesToDelete(diNext, "history.dat");
                                 }
                             }
                             catch
@@ -1444,15 +1209,11 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxCookies = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxCookies = new DirectoryInfo(sMozillaHistory);
                                 FileSystemInfo[] fileSysFirefoxCookies = diInfoFirefoxCookies.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxCookies)
                                 {
-                                    FileInfo[] datfiles = diNext.GetFiles("cookies.sqlite");
-                                    foreach (FileInfo f in datfiles)
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "cookies.sqlite");
                                 }
                             }
                             catch
@@ -1480,27 +1241,15 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxCookies = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxCookies = new DirectoryInfo(sMozillaHistory);
                                 FileSystemInfo[] fileSysFirefoxCookies = diInfoFirefoxCookies.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxCookies)
                                 {
                                     DirectoryInfo cacheFolder1 = diNext.GetDirectories("OfflineCache").FirstOrDefault();
-                                    if (cacheFolder1 != null)
-                                    {
-                                        foreach (FileInfo file in cacheFolder1.GetFiles("*", SearchOption.AllDirectories))
-                                        {
-                                            filesToDelete.Add(file.FullName);
-                                        }
-                                    }
+                                    MarkFilesToDelete(cacheFolder1);
 
                                     DirectoryInfo cacheFolder2 = diNext.GetDirectories("Cache").FirstOrDefault();
-                                    if (cacheFolder2 != null)
-                                    {
-                                        foreach (FileInfo file in cacheFolder2.GetFiles("*", SearchOption.AllDirectories))
-                                        {
-                                            filesToDelete.Add(file.FullName);
-                                        }
-                                    }
+                                    MarkFilesToDelete(cacheFolder2);
                                 }
                             }
                             catch
@@ -1528,15 +1277,11 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxformHistory = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxformHistory = new DirectoryInfo(sMozillaHistory);
                                 FileSystemInfo[] fileSysFirefoxformHistory = diInfoFirefoxformHistory.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxformHistory)
                                 {
-                                    FileInfo[] datfiles = diNext.GetFiles("formhistory.sqlite");
-                                    foreach (FileInfo f in datfiles)
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "formhistory.sqlite");
                                 }
                             }
                             catch
@@ -1564,15 +1309,11 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxformPwd = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxformPwd = new DirectoryInfo(sMozillaHistory);
                                 FileSystemInfo[] fileSysFirefoxformPwd = diInfoFirefoxformPwd.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxformPwd)
                                 {
-                                    FileInfo[] datfiles = diNext.GetFiles("key3.db");
-                                    foreach (FileInfo f in datfiles)
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "key3.db");
                                 }
                             }
                             catch
@@ -1599,15 +1340,11 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoFirefoxformDownload = new DirectoryInfo(sMozillaHistory);
+                                DirectoryInfo diInfoFirefoxformDownload = new DirectoryInfo(sMozillaHistory);
                                 FileSystemInfo[] fileSysFirefoxformDownload = diInfoFirefoxformDownload.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxformDownload)
                                 {
-                                    FileInfo[] datfiles = diNext.GetFiles("downloads.sqlite");
-                                    foreach (FileInfo f in datfiles)
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "downloads.sqlite");
                                 }
                             }
                             catch
@@ -1639,11 +1376,7 @@ namespace FreemiumUtilities.TracksEraser
                                 FileSystemInfo[] fileSysFirefoxformSearch = diInfoFirefoxformSearch.GetDirectories();
                                 foreach (DirectoryInfo diNext in fileSysFirefoxformSearch)
                                 {
-                                    FileInfo[] datfiles = diNext.GetFiles("search.sqlite");
-                                    foreach (FileInfo f in datfiles)
-                                    {
-                                        filesToDelete.Add(f.FullName);
-                                    }
+                                    MarkFilesToDelete(diNext, "search.sqlite");
                                 }
                             }
                             catch
@@ -1688,26 +1421,13 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
+                                DirectoryInfo diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
-
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
-                                    FileSystemInfo[] fileSysChromeHistory = dir.GetFiles("*history*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
-                                    fileSysChromeHistory = dir.GetFiles("*Visited Links*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
-                                    fileSysChromeHistory = dir.GetFiles("*Current Tabs*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
+                                    MarkFilesToDelete(dir, "*history*");
+                                    MarkFilesToDelete(dir, "*Visited Links*");
+                                    MarkFilesToDelete(dir, "*Current Tabs*");
                                 }
                             }
                             catch
@@ -1739,11 +1459,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
-                                    FileSystemInfo[] fileSysChromeHistory = dir.GetFiles("*Cookies*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
+                                    MarkFilesToDelete(dir, "*Cookies*");
                                 }
                             }
                             catch
@@ -1775,14 +1491,7 @@ namespace FreemiumUtilities.TracksEraser
                             foreach (DirectoryInfo dir in profileDirs)
                             {
                                 DirectoryInfo cache = dir.GetDirectories("Cache").FirstOrDefault();
-                                if (cache != null)
-                                {
-                                    FileInfo[] files = cache.GetFiles();
-                                    foreach (FileInfo diNext in files)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
-                                }
+                                MarkFilesToDelete(cache, "*");
                             }
                         }
                         catch
@@ -1809,16 +1518,12 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
+                                DirectoryInfo diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
 
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
-                                    FileSystemInfo[] fileSysChromeHistory = dir.GetFiles("*Web Data*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        filesToDelete.Add(diNext.FullName);
-                                    }
+                                    MarkFilesToDelete(dir, "*Web Data*");
                                 }
                             }
                             catch
@@ -1850,7 +1555,7 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
+                                DirectoryInfo diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
 
                                 foreach (DirectoryInfo dir in profileDirs)
@@ -1921,60 +1626,7 @@ namespace FreemiumUtilities.TracksEraser
             }
         }
 
-        /// <summary>
-        /// calculate size of files to be deleted
-        /// </summary>
-        /// <returns></returns>
-        ulong CalcFilesToDelSize()
-        {
-            ulong totalBytes = 0UL;
 
-            foreach (string filename in filesToDelete)
-            {
-                try
-                {
-                    totalBytes += (ulong)(new FileInfo(filename).Length);
-                }
-                catch
-                {
-                }
-            }
-
-            return totalBytes;
-        }
-
-        /// <summary>
-        /// formats size for display
-        /// </summary>
-        /// <param name="bytes"></param>
-        /// <returns></returns>
-        string FormatSize(ulong bytes)
-        {
-            double size = bytes;
-            string unit = " Bytes";
-            if ((int)(size / 1024) > 0)
-            {
-                size /= 1024.0;
-                unit = " KB";
-            }
-            if ((int)(size / 1024) > 0)
-            {
-                size /= 1024.0;
-                unit = " MB";
-            }
-            if ((int)(size / 1024) > 0)
-            {
-                size /= 1024.0;
-                unit = " MB";
-            }
-            if ((int)(size / 1024) > 0)
-            {
-                size /= 1024.0;
-                unit = " TB";
-            }
-
-            return size.ToString("0.##") + unit;
-        }
 
         /// <summary>
         /// append new line character to result
@@ -2018,13 +1670,12 @@ namespace FreemiumUtilities.TracksEraser
             {
                 txtResults.Invoke(new MethodInvoker(delegate
                                                         {
-                                                            txtResults.Text = "";
+                                                            txtResults.Text = string.Empty;
                                                             txtResults.SelectionStart = txtResults.Text.Length;
                                                             txtResults.ScrollToCaret();
                                                             txtResults.Refresh();
                                                         }));
             }
-            //resultsTxt.Text += line + "\r\n";
         }
 
         /// <summary>
@@ -2032,7 +1683,7 @@ namespace FreemiumUtilities.TracksEraser
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        void tsbErase_Click_1(object sender, EventArgs e)
+        void tsbErase_Click(object sender, EventArgs e)
         {
             int tracksCount = 0;
             foreach (TreeNode n1 in trvTracks.Nodes)
@@ -2044,6 +1695,17 @@ namespace FreemiumUtilities.TracksEraser
                         if (n2.Checked)
                         {
                             tracksCount++;
+                            if (n2.Text.ToLower().Contains("internet explorer"))
+                            {
+                                Process[] p = Process.GetProcessesByName("iexplore");
+                                if (p.Length > 0)
+                                {
+                                    MessageBox.Show(rm.GetString("close_ie_to_erase"), rm.GetString("tracks_eraser"), MessageBoxButtons.OK,
+                                                    MessageBoxIcon.Warning);
+                                    return;
+                                }
+                            }
+
                             if (n2.Text.ToLower().Contains("chrome"))
                             {
                                 Process[] p = Process.GetProcessesByName("chrome");
@@ -2242,7 +1904,7 @@ namespace FreemiumUtilities.TracksEraser
         {
             UrlHistory = new UrlHistoryWrapperClass();
             Enumerator = UrlHistory.GetEnumerator();
-            var frmOptions = new frmOptions();
+            frmOptions frmOptions = new frmOptions();
             frmOptions.ShowDialog();
         }
 
@@ -2253,13 +1915,7 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void tmiCheckAll_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < trvTracks.Nodes.Count; i++)
-            {
-                //if (treeView1.Nodes[i].ForeColor != Color.DarkGray)
-                //{
-                trvTracks.Nodes[i].Checked = true;
-                //}
-            }
+            CheckUncheckAllNodes(true);
         }
 
         /// <summary>
@@ -2269,20 +1925,29 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void tmiUncheckAll_Click(object sender, EventArgs e)
         {
+            CheckUncheckAllNodes(false);
+        }
+
+        /// <summary>
+        /// Checks or unchecks all nodes in treeview
+        /// </summary>
+        /// <param name="isChecked">true if we need to check, false for unchecking</param>
+        void CheckUncheckAllNodes(bool isChecked)
+        {
             for (int i = 0; i < trvTracks.Nodes.Count; i++)
             {
-                trvTracks.Nodes[i].Checked = false;
+                trvTracks.Nodes[i].Checked = isChecked;
             }
         }
 
         /// <summary>
-        /// update installed apps in form
+        /// Mark not installed apps in form
         /// </summary>
-        public void GetInstalledApps()
+        public void CheckNotInstalledApps()
         {
             try
             {
-                if (IsApplictionInstalled("firefox") == false)
+                if (!Helper.IsApplictionInstalled("firefox"))
                 {
                     trvTracks.Nodes[3].ForeColor = Color.DarkGray;
                     for (int i = 0; i < trvTracks.Nodes[3].Nodes.Count; i++)
@@ -2292,7 +1957,7 @@ namespace FreemiumUtilities.TracksEraser
                     }
                 }
 
-                if (IsApplictionInstalled("google chrome") == false && IsBrowserInstalled("chrome") == false)
+                if (!Helper.IsApplictionInstalled("google chrome") && !Helper.IsBrowserInstalled("chrome"))
                 {
                     trvTracks.Nodes[4].ForeColor = Color.DarkGray;
                     for (int i = 0; i < trvTracks.Nodes[4].Nodes.Count; i++)
@@ -2302,31 +1967,31 @@ namespace FreemiumUtilities.TracksEraser
                     }
                 }
 
-                if (IsApplictionInstalled("quicktime") == false)
+                if (!Helper.IsApplictionInstalled("quicktime"))
                 {
                     trvTracks.Nodes[2].Nodes[1].ForeColor = Color.DarkGray;
                     trvTracks.Nodes[2].Nodes[1].ImageIndex = 7;
                 }
 
-                if (IsApplictionInstalled("adobe flash player") == false)
+                if (!Helper.IsApplictionInstalled("adobe flash player"))
                 {
                     trvTracks.Nodes[2].Nodes[2].ForeColor = Color.DarkGray;
                     trvTracks.Nodes[2].Nodes[2].ImageIndex = 7;
                 }
 
-                if (IsMSOfficeInstalled() == false)
+                if (!Helper.IsMSOfficeInstalled())
                 {
                     trvTracks.Nodes[2].Nodes[3].ForeColor = Color.DarkGray;
                     trvTracks.Nodes[2].Nodes[3].ImageIndex = 7;
                 }
 
-                if (IsApplictionInstalled("winrar") == false)
+                if (!Helper.IsApplictionInstalled("winrar"))
                 {
                     trvTracks.Nodes[2].Nodes[7].ForeColor = Color.DarkGray;
                     trvTracks.Nodes[2].Nodes[7].ImageIndex = 7;
                 }
 
-                if (IsApplictionInstalled("java ") == false)
+                if (!Helper.IsApplictionInstalled("java "))
                 {
                     trvTracks.Nodes[2].Nodes[8].ForeColor = Color.DarkGray;
                     trvTracks.Nodes[2].Nodes[8].ImageIndex = 7;
@@ -2338,176 +2003,6 @@ namespace FreemiumUtilities.TracksEraser
             }
         }
 
-        /// <summary>
-        /// check if specific app is installed
-        /// </summary>
-        /// <param name="name"></param>
-        /// <param name="subname"></param>
-        /// <returns></returns>
-        bool IsApplictionInstalled(string name, string subname = null)
-        {
-            try
-            {
-                // search in: CurrentUser
-                RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall");
-                string displayName;
-                if (key != null)
-                    foreach (string keyName in key.GetSubKeyNames())
-                    {
-                        RegistryKey subkey = key.OpenSubKey(keyName);
-                        displayName = subkey != null && subkey.GetValue("DisplayName") != null
-                                        ? subkey.GetValue("DisplayName").ToString()
-                                        : "";
-                        if (displayName.ToLower().Contains(name))
-                        {
-                            if (subname == null || (displayName.ToLower().Contains(subname)))
-                                return true;
-                        }
-                    }
-
-                // search in: LocalMachine_32
-                key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall");
-                if (key != null)
-                    foreach (String keyName in key.GetSubKeyNames())
-                    {
-                        RegistryKey subkey = key.OpenSubKey(keyName);
-                        displayName = subkey != null && subkey.GetValue("DisplayName") != null
-                                        ? subkey.GetValue("DisplayName").ToString()
-                                        : "";
-                        if (displayName.ToLower().Contains(name))
-                        {
-                            if (subname == null || (displayName.ToLower().Contains(subname)))
-                                return true;
-                        }
-                    }
-
-                // search in: LocalMachine_64
-                key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall");
-                if (key != null)
-                {
-                    foreach (String keyName in key.GetSubKeyNames())
-                    {
-                        RegistryKey subkey = key.OpenSubKey(keyName);
-                        displayName = subkey != null && subkey.GetValue("DisplayName") != null
-                                        ? subkey.GetValue("DisplayName").ToString()
-                                        : "";
-                        if (displayName.ToLower().Contains(name))
-                        {
-                            if (subname == null || (displayName.ToLower().Contains(subname)))
-                                return true;
-                        }
-                    }
-                }
-                var roamingData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
-                foreach (DirectoryInfo d in roamingData.GetDirectories())
-                {
-                    if (d.Name.ToLower() == name)
-                    {
-                        return true;
-                    }
-                }
-                var localData = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData));
-                foreach (DirectoryInfo d in localData.GetDirectories())
-                {
-                    if (d.Name.ToLower() == name)
-                    {
-                        return true;
-                    }
-                }
-            }
-            catch
-            {
-            }
-
-            // NOT FOUND
-            return false;
-        }
-
-        /// <summary>
-        /// check if ms office is installed
-        /// </summary>
-        /// <returns></returns>
-        static bool IsMSOfficeInstalled()
-        {
-            string sPlugins = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-
-            bool res = true;
-            var diInfoPlugins = new DirectoryInfo(sPlugins);
-            FileSystemInfo[] fileSysInfoPlugins = diInfoPlugins.GetDirectories("*", SearchOption.TopDirectoryOnly);
-            foreach (DirectoryInfo diNext in fileSysInfoPlugins)
-            {
-                /*if (treeView1.InvokeRequired)
-                {
-                    treeView1.Invoke(new MethodInvoker(delegate { res = this.treeView1.Nodes[2].Nodes[3].Checked; }));
-                }
-                else
-                {
-                    res = this.treeView1.Nodes[2].Nodes[3].Checked;
-                }
-                */
-                if (res)
-                {
-                    if (diNext.Name == "Microsoft")
-                    {
-                        try
-                        {
-                            string sPathMirosoft = diNext.FullName;
-                            sPathMirosoft = sPathMirosoft + "\\Office\\Recent";
-
-                            var diInfoMicrosoft = new DirectoryInfo(sPathMirosoft);
-                            FileSystemInfo[] fileSysInfoMicrosoft = diInfoMicrosoft.GetFiles();
-
-                            return fileSysInfoMicrosoft.Count() > -1;
-                        }
-                        catch
-                        {
-                        }
-                    }
-                }
-            }
-
-            return false;
-        }
-
-        /// <summary>
-        /// check if specific browser is installed
-        /// </summary>
-        /// <param name="browser"></param>
-        /// <returns></returns>
-        bool IsBrowserInstalled(string browser)
-        {
-            try
-            {
-                RegistryKey openSubKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Clients\StartMenuInternet");
-                if (openSubKey != null)
-                {
-                    string[] s1 = openSubKey.GetSubKeyNames();
-                    if (s1.Any(s => s.ToLower().Contains(browser)))
-                    {
-                        return true;
-                    }
-                }
-            }
-            catch
-            {
-            }
-            try
-            {
-                RegistryKey openSubKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Clients\StartMenuInternet");
-                if (openSubKey != null)
-                {
-                    string[] s1 = openSubKey.GetSubKeyNames();
-                    if (s1.Any(s => s.ToLower().Contains(browser)))
-                    {
-                        return true;
-                    }
-                }
-            }
-            catch
-            {
-            }
-            return false;
-        }
 
         /// <summary>
         /// handle after check event to uncheck running apps
@@ -2583,49 +2078,52 @@ namespace FreemiumUtilities.TracksEraser
             }
         }
 
-        #region Checking file access
-
-        const int NumberOfTries = 3;
-        const int TimeIntervalBetweenTries = 100;
+        /// <summary>
+        /// Marks all files and directories in directory to delete
+        /// </summary>
+        /// <param name="dir">Directory</param>
+        private void MarkDirToDelete(DirectoryInfo dir)
+        {
+            foreach (FileInfo fi in dir.GetFiles("*", SearchOption.AllDirectories))
+            {
+                filesToDelete.Add(fi.FullName);
+            }
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                foldersToDelete.Add(di.FullName);
+            }
+        }
 
         /// <summary>
-        /// try to access specific file
+        /// Marks all files in directory to delete
         /// </summary>
-        /// <param name="fileAccess"></param>
-        /// <param name="fileName"></param>
-        /// <returns></returns>
-        FileStream GetStream(FileAccess fileAccess, string fileName)
+        /// <param name="di">Directory</param>
+        private void MarkFilesToDelete(DirectoryInfo di)
         {
-            int tries = 0;
-            while (true)
+            if (di != null)
             {
-                try
+                foreach (FileInfo file in di.GetFiles("*", SearchOption.AllDirectories))
                 {
-                    return File.Open(fileName, FileMode.Open, fileAccess, FileShare.None);
-                }
-                catch (IOException e)
-                {
-                    if (!IsFileLocked(e))
-                        throw;
-                    if (++tries > NumberOfTries)
-                        throw new Exception("The file is locked too long: " + e.Message, e);
-                    Thread.Sleep(TimeIntervalBetweenTries);
+                    filesToDelete.Add(file.FullName);
                 }
             }
         }
 
         /// <summary>
-        /// check if specific file is locked
+        /// Marks files match of specific pattern in directory to delete
         /// </summary>
-        /// <param name="exception"></param>
-        /// <returns></returns>
-        static bool IsFileLocked(Exception exception)
+        /// <param name="di">Directory</param>
+        /// <param name="pattern">Patern</param>
+        private void MarkFilesToDelete(DirectoryInfo di, string pattern)
         {
-            int errorCode = Marshal.GetHRForException(exception) & ((1 << 16) - 1);
-            return errorCode == 32 || errorCode == 33;
+            if (di != null)
+            {
+                foreach (FileInfo file in di.GetFiles(pattern))
+                {
+                    filesToDelete.Add(file.FullName);
+                }
+            }
         }
-
-        #endregion
     }
 
     //First the SHQUERYRBINFO struct

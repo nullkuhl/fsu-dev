@@ -103,6 +103,7 @@
     <Compile Include="cCookieView.cs" />
     <Compile Include="ChromeCookieManager.cs" />
     <Compile Include="FFHistoryManager.cs" />
+    <Compile Include="Helper.cs" />
     <Compile Include="TriStateTreeView.cs">
       <SubType>Component</SubType>
     </Compile>

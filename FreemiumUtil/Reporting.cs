@@ -9,8 +9,7 @@ namespace FreemiumUtil
 	public static class Reporting
 	{
 		// The path for bug reporter executable
-		static string bugReporterPath = "BugReporter.exe";
-
+		static string bugReporterPath = "BugReporter.exe";        
 		public static string BugReporterPath
 		{
 			get { return bugReporterPath; }
@@ -24,8 +23,7 @@ namespace FreemiumUtil
 		public static void Report(Exception ex)
 		{
 			string version = CfgFile.Get("Version");
-
-			var procInfo = new ProcessStartInfo
+            ProcessStartInfo procInfo = new ProcessStartInfo
 			               	{
 			               		FileName = BugReporterPath,
 			               		Arguments = version +

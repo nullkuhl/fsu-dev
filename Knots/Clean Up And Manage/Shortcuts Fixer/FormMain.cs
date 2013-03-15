@@ -39,10 +39,9 @@ namespace ShortcutsFixer
 		public FormMain()
 		{
 			InitializeComponent();
-			fileLabel.Text = "";
-			lblStatus.Text = "";
-			Shown += FormMain_Shown;
-			//getDrives();
+			fileLabel.Text = string.Empty;
+			lblStatus.Text = string.Empty;
+			Shown += FormMain_Shown;		
 		}
 
 		void InitializeShortcutItems()
@@ -89,7 +88,7 @@ namespace ShortcutsFixer
 			}
 			catch
 			{
-				return "";
+				return string.Empty;
 			}
 		}
 
@@ -98,8 +97,7 @@ namespace ShortcutsFixer
 		/// </summary>
 		public void SearchDesktop()
 		{
-			Abort.Visible = true;
-			//ListBox objList = new ListBox();
+			Abort.Visible = true;			
 			btnFixShortCut.Enabled = false;
 			btnDelete.Enabled = false;
 			btnOpenFolder.Enabled = false;
@@ -120,6 +118,7 @@ namespace ShortcutsFixer
 				places.Add(root + @"Documents and Settings\" + user + @"\Desktop");
 				places.Add(root + @"Documents and Settings\" + user + @"\Start Menu");
 			}
+
 			places.Add(root + @"ProgramData\Desktop");
 			places.Add(root + @"ProgramData\Microsoft\Windows\Start Menu");
 			places.Add(root + @"ProgramData\Start Menu");
@@ -161,14 +160,14 @@ namespace ShortcutsFixer
 			}
 
 			prbMain.Visible = false;
-			lblStatus.Text = "";
+			lblStatus.Text = String.Empty;
 			Abort.Visible = false;
 			btnFixShortCut.Enabled = true;
 			btnDelete.Enabled = true;
 			btnOpenFolder.Enabled = true;
 			btnProperties.Enabled = true;
 			tsbCheck.Enabled = true;
-			fileLabel.Text = "";
+			fileLabel.Text = String.Empty;
 		}
 
 		/// <summary>
@@ -229,7 +228,7 @@ namespace ShortcutsFixer
                     // ToDo: send exception details via SmartAssembly bug reporting!
                 }
 				iCurrentStage++;
-			} //ScanningFiles(objList.Items[0].ToString());
+			}
 
 			try
 			{
@@ -239,14 +238,14 @@ namespace ShortcutsFixer
 			{
 			}
 
-			lblStatus.Text = "";
+			lblStatus.Text = String.Empty;
 			Abort.Visible = false;
 			btnFixShortCut.Enabled = true;
 			btnDelete.Enabled = true;
 			btnOpenFolder.Enabled = true;
 			btnProperties.Enabled = true;
 			tsbCheck.Enabled = true;
-			fileLabel.Text = "";
+			fileLabel.Text = String.Empty;
 		}
 
 		/// <summary>
@@ -279,17 +278,12 @@ namespace ShortcutsFixer
 				{
 					fileLabel.Text = shortcutfile.FullName;
 				}
-
-				//System.IO.FileInfo f = new System.IO.FileInfo(shortcutfile.ToString());
-				//Obj = new WshShellClass();
-
+				
 				obj.TheLink = null;
 
 				if (shortcutfile.Name.EndsWith(".lnk"))
 				{
 					obj.TheLink = (IWshShortcut)obj.Obj.CreateShortcut(shortcutfile.FullName);
-
-					////theLink.Load(shortcutfile.ToString());
 
 					string linkTarget = obj.TheLink.TargetPath;
 					string linkfile = linkTarget;
@@ -317,7 +311,6 @@ namespace ShortcutsFixer
 							obj.MyTab.Rows.Add(true, shortcutfile.Name, obj.TheLink.TargetPath, shortcutfile.FullName);
 					}
 				}
-				//MessageBox.Show(shortcutfile.FullName);                 
 			}
 
 			Application.DoEvents();
@@ -325,7 +318,6 @@ namespace ShortcutsFixer
 
 			foreach (DirectoryInfo dirInfo in path.GetDirectories())
 			{
-				//MessageBox.Show(dirInfo.FullName);
 				try
 				{
 					if (bIsDrive)
@@ -339,9 +331,8 @@ namespace ShortcutsFixer
 
 					if (obj.CloseScanWindow)
 					{
-						//this.Close();
 						prbMain.Value = 0;
-						fileLabel.Text = "";
+						fileLabel.Text = String.Empty;
 						prbMain.Visible = false;
 						return;
 					}
@@ -414,7 +405,7 @@ namespace ShortcutsFixer
 					dgwMain.DataSource = shortcutItems;
 
 					dgwMain.Columns[0].Width = 30;
-					dgwMain.Columns[0].HeaderText = "";
+					dgwMain.Columns[0].HeaderText = String.Empty;
 
 					dgwMain.Columns[1].Width = 230;
 					dgwMain.Columns[1].HeaderText = rm.GetString("name");
@@ -484,7 +475,7 @@ namespace ShortcutsFixer
 				}
 				return shortcutFilename;
 			}
-			return ""; // not found 
+			return String.Empty; // not found 
 		}
 
 		/// <summary>
@@ -501,7 +492,7 @@ namespace ShortcutsFixer
 
 				var flInfo = new FileInfo(path);
 
-				if (((flInfo)).Extension != "")
+				if (((flInfo)).Extension != String.Empty)
 				{
 					var fd = new OpenFileDialog { Title = rm.GetString("choose_correct_shortcut") };
 
@@ -510,7 +501,7 @@ namespace ShortcutsFixer
 						ShortcutSet(fd.FileName);
 					}
 				}
-				else if (((flInfo)).Extension == "")
+				else if (((flInfo)).Extension == String.Empty)
 				{
 					var fd = new FolderBrowserDialog
 								{
@@ -556,7 +547,7 @@ namespace ShortcutsFixer
 
 				if (dialogResult == DialogResult.Yes)
 				{
-					var myTable = new DataTable("dataTable");
+                    DataTable myTable = new DataTable("dataTable");
 
 					try
 					{
@@ -645,7 +636,7 @@ namespace ShortcutsFixer
 			try
 			{
 				string path = dgwMain.SelectedRows[0].Cells[3].Value.ToString();
-				var objfile = new FileInfo(path);
+                FileInfo objfile = new FileInfo(path);
 				if (objfile.DirectoryName != null) Process.Start(objfile.DirectoryName);
 			}
 			catch
@@ -734,14 +725,11 @@ namespace ShortcutsFixer
 		void checkAllToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			BindingContext[dgwMain.DataSource].EndCurrentEdit();
-			//string path = null;
 			for (int i = 0; i < dgwMain.Rows.Count; i++)
 			{
 				dgwMain.Rows[i].Cells[0].Value = true;
 			}
 			if (dgwMain.CurrentRow != null) dgwMain.CurrentRow.Cells[0].Value = true;
-			//SendKeys.Send("{ENTER}");
-
 			btnFixShortCut.Enabled = true;
 			btnDelete.Enabled = true;
 			btnOpenFolder.Enabled = true;
@@ -754,29 +742,13 @@ namespace ShortcutsFixer
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
 		void checkNoneToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			//DataGridViewSelectedRowCollection selectedRowCollection = this.dataGridView1.SelectedRows;
-			//int selectedRowIndex = 0;
-
+		{			
 			BindingContext[dgwMain.DataSource].EndCurrentEdit();
-
-
-			//foreach (DataGridViewRow row in this.dataGridView1.SelectedRows)
-			//{
-			//    selectedRowIndex = row.Index;
-			//    row.Selected = false;
-			//}
-			//dataGridView1.Rows[selectedRowIndex + 1].Selected = true;
-			//this.dataGridView1.Visible = false;
 			for (int i = 0; i < dgwMain.Rows.Count; i++)
 			{
 				dgwMain.Rows[i].Cells[0].Value = false;
-				//ShortcutItems[i].IsChecked = false;
 			}
-			if (dgwMain.CurrentRow != null) dgwMain.CurrentRow.Cells[0].Value = false;
-			//SendKeys.Send("{ENTER}");
-			//this.dataGridView1.Visible = true;
-
+			if (dgwMain.CurrentRow != null) dgwMain.CurrentRow.Cells[0].Value = false;			
 			btnFixShortCut.Enabled = false;
 			btnDelete.Enabled = false;
 			btnOpenFolder.Enabled = false;

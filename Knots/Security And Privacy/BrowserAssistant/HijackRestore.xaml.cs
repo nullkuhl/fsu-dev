@@ -7,103 +7,103 @@ using Res = BrowserAssistant.Properties.Resources;
 
 namespace BrowserAssistant
 {
-	/// <summary>
-	/// Interaction logic for IeHijackRestore.xaml
-	/// </summary>
-	public partial class HijackRestore
-	{
-		/// <summary>
-		/// constructor for HijackRestore
-		/// </summary>
-		public HijackRestore()
-		{
-			InitializeComponent();
-		}
+    /// <summary>
+    /// Interaction logic for IeHijackRestore.xaml
+    /// </summary>
+    public partial class HijackRestore
+    {
+        /// <summary>
+        /// constructor for HijackRestore
+        /// </summary>
+        public HijackRestore()
+        {
+            InitializeComponent();
+        }
 
-		/// <summary>
-		/// update hijack list
-		/// </summary>
-		public void Bind()
-		{
-			if (SettingsList.ItemsSource != null) return;
+        /// <summary>
+        /// update hijack list
+        /// </summary>
+        public void Bind()
+        {
+            if (SettingsList.ItemsSource != null) return;
 
-			try
-			{
-				SettingsList.ItemsSource = List();
-			}
-			catch
-			{
-			}
-		}
+            try
+            {
+                SettingsList.ItemsSource = List();
+            }
+            catch
+            {
+            }
+        }
 
-		/// <summary>
-		/// handle Click event to check hijack item
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void CheckBox_Click(object sender, RoutedEventArgs e)
-		{
-			RestoreBtn.IsEnabled = SettingsList.ItemsSource.Cast<IHijackSetting>().Any(s => s.Restore);
-		}
+        /// <summary>
+        /// handle Click event to check hijack item
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void CheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            RestoreBtn.IsEnabled = SettingsList.ItemsSource.Cast<IHijackSetting>().Any(s => s.Restore);
+        }
 
-		/// <summary>
-		/// handle Click event to restore hijack items
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void RestoreBtn_Click(object sender, RoutedEventArgs e)
-		{
-			try
-			{
-				foreach (IHijackSetting setting in SettingsList.ItemsSource.Cast<IHijackSetting>().Where(s => s.Restore))
-					setting.DoRestore();
+        /// <summary>
+        /// handle Click event to restore hijack items
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void RestoreBtn_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                foreach (IHijackSetting setting in SettingsList.ItemsSource.Cast<IHijackSetting>().Where(s => s.Restore))
+                    setting.DoRestore();
 
-				FfHijackSetting.Save();
-				ChHijackSetting.Save();
+                FfHijackSetting.Save();
+                ChHijackSetting.Save();
 
-				MessageBox.Show(Res.Done);
-				RestoreBtn.IsEnabled = false;
+                MessageBox.Show(Res.Done);
+                RestoreBtn.IsEnabled = false;
 
-				SettingsList.ItemsSource = List();
-			}
-			catch
-			{
-			}
-		}
+                SettingsList.ItemsSource = List();
+            }
+            catch
+            {
+            }
+        }
 
-		/// <summary>
-		/// get a list of all hijack items
-		/// </summary>
-		/// <returns></returns>
-		public static IEnumerable<IHijackSetting> List()
-		{
-			IEnumerable<IHijackSetting> result = ListIe();
-			try
-			{
-				if (result != null) result = result.Union(ListFf());
-			}
-			catch
-			{
-			}
-			try
-			{
-				if (result != null) result = result.Union(ListCh());
-			}
-			catch
-			{
-			}
+        /// <summary>
+        /// get a list of all hijack items
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<IHijackSetting> List()
+        {
+            IEnumerable<IHijackSetting> result = ListIe();
+            try
+            {
+                if (result != null) result = result.Union(ListFf());
+            }
+            catch
+            {
+            }
+            try
+            {
+                if (result != null) result = result.Union(ListCh());
+            }
+            catch
+            {
+            }
 
-			if (result != null) return result;
-			return null;
-		}
+            if (result != null) return result;
+            return null;
+        }
 
-		/// <summary>
-		/// get a list of internet explorer hijack items
-		/// </summary>
-		/// <returns></returns>
-		public static IEnumerable<IHijackSetting> ListIe()
-		{
-			return new[]
+        /// <summary>
+        /// get a list of internet explorer hijack items
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<IHijackSetting> ListIe()
+        {
+            return new[]
 					{
 						new IeHijackSetting("IE: " + Res.StartPage, "http://www.msn.com",
 											@"HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\Main", "Start Page"),
@@ -170,15 +170,15 @@ namespace BrowserAssistant
 						new IeHijackSetting("IE " + Res.AboutURL + ": " + Res.SecurityRisk, "res://ieframe.dll/securityatrisk.htm",
 											@"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Internet Explorer\AboutURLs", "SecurityRisk")
 					};
-		}
+        }
 
-		/// <summary>
-		/// get a list of firefox hijack items
-		/// </summary>
-		/// <returns></returns>
-		public static IEnumerable<IHijackSetting> ListFf()
-		{
-			return new[]
+        /// <summary>
+        /// get a list of firefox hijack items
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<IHijackSetting> ListFf()
+        {
+            return new[]
 					{
 						new FfHijackSetting("Firefox: " + Res.HomePage, new[] {"browser.startup.homepage"},
 											new[] {"http://www.google.com/firefox"}),
@@ -188,15 +188,15 @@ namespace BrowserAssistant
 						new FfHijackSetting("Firefox: Keyword Search URL", new[] {"keyword.URL"},
 											new[] {"http://www.google.com/search?&q="})
 					};
-		}
+        }
 
-		/// <summary>
-		/// get a list of chrome hijack items
-		/// </summary>
-		/// <returns></returns>
-		public static IEnumerable<IHijackSetting> ListCh()
-		{
-			return new[]
+        /// <summary>
+        /// get a list of chrome hijack items
+        /// </summary>
+        /// <returns></returns>
+        public static IEnumerable<IHijackSetting> ListCh()
+        {
+            return new[]
 					{
 						new ChHijackSetting("Chrome: " + Res.HomePage, "homepage", null, "\"http://www.google.com\""),
 						new ChHijackSetting("Chrome: " + Res.SearchProvider, "default_search_provider", "keyword",
@@ -213,16 +213,16 @@ namespace BrowserAssistant
 					  ""suggest_url"": ""{google:baseSuggestURL}search?client=chrome&hl={language}&q={searchTerms}""
 				   }")
 					};
-		}
+        }
 
-		/// <summary>
-		/// handle Click event to close form
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void CloseBtn_Click(object sender, RoutedEventArgs e)
-		{
-			Process.GetCurrentProcess().Kill();
-		}
-	}
+        /// <summary>
+        /// handle Click event to close form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+    }
 }

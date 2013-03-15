@@ -30,7 +30,7 @@ namespace FreemiumUtilities.ShortcutFixer
 
 				foreach (Shortcut shortcut in value)
 				{
-					var listItem = new ListViewItem(new[]
+                    ListViewItem listItem = new ListViewItem(new[]
 					                                	{
 					                                		shortcut.Name,
 					                                		shortcut.Target,
@@ -51,7 +51,7 @@ namespace FreemiumUtilities.ShortcutFixer
 		{
 			get
 			{
-				var problemList = new List<ListViewItem>();
+                List<ListViewItem> problemList = new List<ListViewItem>();
 				foreach (ListViewItem item in shortcutsLst.Items)
 				{
 					problemList.Add(item);

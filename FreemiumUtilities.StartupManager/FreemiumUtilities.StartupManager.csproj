@@ -51,12 +51,13 @@
     <Compile Include="FormDetails.designer.cs">
       <DependentUpon>FormDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormStartupMan.cs">
+    <Compile Include="FormStartupManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormStartupMan.designer.cs">
-      <DependentUpon>FormStartupMan.cs</DependentUpon>
+    <Compile Include="FormStartupManager.designer.cs">
+      <DependentUpon>FormStartupManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="ListViewItemComparer.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="Problem.cs" />
@@ -73,8 +74,8 @@
     <EmbeddedResource Include="FormDetails.resx">
       <DependentUpon>FormDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormStartupMan.resx">
-      <DependentUpon>FormStartupMan.cs</DependentUpon>
+    <EmbeddedResource Include="FormStartupManager.resx">
+      <DependentUpon>FormStartupManager.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

@@ -83,7 +83,7 @@ namespace SystemInformation
 
 		void Introduction_Load(object sender, EventArgs e)
 		{
-			var rm = new ResourceManager("SystemInformation.Resources", Assembly.GetExecutingAssembly());
+            ResourceManager rm = new ResourceManager("SystemInformation.Resources", Assembly.GetExecutingAssembly());
 
 			labelTitle.Text = rm.GetString("root");
 			labelDirections.Text = rm.GetString("root_note");

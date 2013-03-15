@@ -26,9 +26,7 @@ namespace Disk_Cleaner
 		public static void GetRecycleBinSize(out ulong count, out ulong size)
 		{
 			count = size = 0;
-			var query = new SHQUERYRBINFO {cbSize = Marshal.SizeOf(typeof (SHQUERYRBINFO))};
-			//List<string> info = new List<string>();
-
+            SHQUERYRBINFO query = new SHQUERYRBINFO { cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO)) };			
 			try
 			{
 				var result = SHQueryRecycleBin(null, ref query);
@@ -36,17 +34,12 @@ namespace Disk_Cleaner
 				if (result == 0)
 				{
 					count = query.i64NumItems;
-					size = query.i64Size;
-					//info.Add(query.i64NumItems.ToString());
-					//info.Add(string.Format("{0}", (Convert.ToDouble(query.i64Size) / Convert.ToDouble(1024) / Convert.ToDouble(1024)).ToString("#,###.##")));
-
-					//return info;
+					size = query.i64Size;				
 				}
 			}
 			catch
 			{
-			}
-			//return null;
+			}			
 		}
 
 		[DllImport("Shell32.dll", CharSet = CharSet.Unicode)]

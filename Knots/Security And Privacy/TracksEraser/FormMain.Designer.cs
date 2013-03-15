@@ -185,7 +185,7 @@ namespace FreemiumUtilities.TracksEraser
             this.tsbErase.Name = "tsbErase";
             this.tsbErase.Size = new System.Drawing.Size(135, 22);
             this.tsbErase.Text = "Erase checked tracks";
-            this.tsbErase.Click += new System.EventHandler(this.tsbErase_Click_1);
+            this.tsbErase.Click += new System.EventHandler(this.tsbErase_Click);
             // 
             // tssFirst
             // 
@@ -536,7 +536,7 @@ namespace FreemiumUtilities.TracksEraser
             this.RunEraser.TabIndex = 3;
             this.RunEraser.Text = "Run Eraser";
             this.RunEraser.UseVisualStyleBackColor = true;
-            this.RunEraser.Click += new System.EventHandler(this.tsbErase_Click_1);
+            this.RunEraser.Click += new System.EventHandler(this.tsbErase_Click);
             // 
             // ucBottom
             // 

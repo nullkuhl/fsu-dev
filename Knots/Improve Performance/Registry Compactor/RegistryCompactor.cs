@@ -424,16 +424,16 @@ namespace RegistryCompactor
 		/// <returns>File Size</returns>
 		long GetFileSize(string filePath)
 		{
+            long result = 0;
 			try
 			{
-				var fi = new FileInfo(filePath);
-
-				return fi.Length;
+                FileInfo fi = new FileInfo(filePath);
+                result = fi.Length;
 			}
 			catch (Exception)
 			{
-				return 0;
 			}
+            return result;
 		}
 
 		/// <summary>

@@ -39,8 +39,6 @@ namespace FreemiumUtilities.ViewModels
         /// </summary>
         public static void UpdateOneClickAppsRunningQueue(OneClickAppViewModel unckeckedOneClickApp)
         {
-            //OneClickAppsRunningQueue.Remove(unckeckedOneClickApp);
-
             if (!OneClickAppsRunningQueue.Any() ||
                 (OneClickAppsRunningQueue.Any(a => a.Status == OneClickAppStatus.ScanFinishedOK) &&
                     OneClickAppsRunningQueue.All(a => a.Status != OneClickAppStatus.ScanFinishedError)))
@@ -216,7 +214,6 @@ namespace FreemiumUtilities.ViewModels
             set
             {
                 currentApp = value;
-                //Instance.Status = CurrentApp.Status;
                 OnPropertyChanged("CurrentApp");
             }
         }
@@ -434,12 +431,6 @@ namespace FreemiumUtilities.ViewModels
         {
             ProgressValue = 0;
             IEnumerable<OneClickAppViewModel> selectedApps = OneClickApps.Where(a => a.Selected);
-            //foreach (
-            //    OneClickAppViewModel oneClickApp in
-            //        selectedApps.Where(oneClickApp => OneClickAppsRunningQueue.IndexOf(oneClickApp) == -1))
-            //{
-            //    OneClickAppsRunningQueue.Add(oneClickApp);
-            //}
             OneClickAppsRunningQueue.Clear();
             foreach (OneClickAppViewModel oneClickApp in selectedApps)
             {
@@ -576,18 +567,8 @@ namespace FreemiumUtilities.ViewModels
 
         void ChangeSchedule()
         {
-            var taskManager = new FormTaskManager();
+            FormTaskManager taskManager = new FormTaskManager();
             taskManager.ShowDialog();
-            //string taskDescription = TaskManager.GetTaskDescription("Freemium1ClickMaint");
-            //now can we make a check here , to see if checkbox is empty or not, 
-            // and if its empty it disabled the task in task scheduler ??
-            //SchedulerText = taskDescription;
-            /*
-            if (taskDescription.IndexOf(", starting") > 0)
-                SchedulerText = taskDescription.Substring(0, (taskDescription.Length - taskDescription.IndexOf(", starting")) + 1);
-            else
-                SchedulerText = taskDescription;
-            */
         }
 
         #endregion
@@ -596,7 +577,7 @@ namespace FreemiumUtilities.ViewModels
 
         void SpywareScanFinished(bool fixAfterScan)
         {
-            var spywareRemover = ((SpywareRemoverApp)CurrentApp.Instance);
+            SpywareRemoverApp spywareRemover = ((SpywareRemoverApp)CurrentApp.Instance);
             frmSpyware = new FrmSpyware { SpywareFound = spywareRemover.SpywareFound };
             CurrentAppScanFinished(CurrentApp.Instance.ProblemsCount.ToString(), CurrentApp.Instance.ProblemsCount == 0,
                                     fixAfterScan);
@@ -608,7 +589,7 @@ namespace FreemiumUtilities.ViewModels
 
         void ShortcutFixerScanFinished(bool fixAfterScan)
         {
-            var shortcutFixer = ((ShortcutFixerApp)CurrentApp.Instance);
+            ShortcutFixerApp shortcutFixer = ((ShortcutFixerApp)CurrentApp.Instance);
             frmShortcut = new FrmShortcutFixer { BrokenShortcuts = shortcutFixer.BrokenShortcuts };
             CurrentAppScanFinished(CurrentApp.Instance.ProblemsCount.ToString(), CurrentApp.Instance.ProblemsCount == 0,
                                     fixAfterScan);
@@ -642,8 +623,7 @@ namespace FreemiumUtilities.ViewModels
         {
             try
             {
-                var trackEraser = (TracksEraserApp)CurrentApp.Instance;
-                //CurrentAppScanFinished(trackEraser.FrmTrackSel.FilesToDeletedCount.ToString(CultureInfo.InvariantCulture), trackEraser.FrmTrackSel.FilesToDeletedCount == 0, fixAfterScan);
+                TracksEraserApp trackEraser = (TracksEraserApp)CurrentApp.Instance;
                 CurrentAppScanFinished(trackEraser.FrmTrackSel.ItemsToDeleteAvailable.ToString(CultureInfo.InvariantCulture),
                                         trackEraser.FrmTrackSel.ItemsToDeleteAvailable == 0, fixAfterScan);
             }
@@ -658,7 +638,7 @@ namespace FreemiumUtilities.ViewModels
 
         void TempCleanerScanFinished(bool fixAfterScan)
         {
-            var tempCleaner = ((TempCleanerApp)CurrentApp.Instance);
+            TempCleanerApp tempCleaner = ((TempCleanerApp)CurrentApp.Instance);
             frmTempCleaner = new FrmTempCleaner
                                 {
                                     TmpSize = (ulong)tempCleaner.TmpSize,
@@ -790,13 +770,8 @@ namespace FreemiumUtilities.ViewModels
                     StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("IssuesFound");
                     StatusTitleKey = "IssuesFound";
                     StatusText = String.Empty;
-
-                    // Start fix after scan completes if there is such option
                     if (fixAfterScan)
                     {
-                        //CurrentApp.Status = OneClickAppStatus.FixStarted;
-                        //CurrentApp.Instance.StartFix(new ProgressUpdate(UpdateProgressBar));
-                        //StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("NowFixing;
                         RunFix();
                     }
                 }
@@ -926,33 +901,26 @@ namespace FreemiumUtilities.ViewModels
         /// <param name="fileName"></param>
         public void UpdateProgressBar(int progressPercentage, string fileName)
         {
-            //DispatcherOperation op = currentDispatcher.BeginInvoke((Action)(() =>
-            //{
-                try
-                {
-                    if (progressPercentage > 0)
-                        ProgressValue = progressPercentage;
+            try
+            {
+                if (progressPercentage > 0)
+                    ProgressValue = progressPercentage;
 
-                    if (fileName.IndexOf("\\") != -1 && fileName.Length > 25)
-                    {
-                        int index1 = fileName.IndexOf("\\");
-                        index1 = fileName.IndexOf("\\", index1 + 1);
-                        int index2 = fileName.LastIndexOf("\\");
-                        StatusText = fileName.Substring(0, index1 + 1) + "..." + fileName.Substring(index2, fileName.Length - index2);
-                    }
-                    else
-                    {
-                        StatusText = fileName;
-                    }
+                int index1 = fileName.IndexOf("\\");
+                if (index1 != -1 && fileName.Length > 25)
+                {                    
+                    index1 = fileName.IndexOf("\\", index1 + 1);
+                    int index2 = fileName.LastIndexOf("\\");
+                    StatusText = fileName.Substring(0, index1 + 1) + "..." + fileName.Substring(index2, fileName.Length - index2);
                 }
-                catch
+                else
                 {
+                    StatusText = fileName;
                 }
-            //}), DispatcherPriority.Normal);
-            //while (op.Status != DispatcherOperationStatus.Completed)
-            //{
-            //    DoEvents();
-            //}
+            }
+            catch
+            {
+            }
         }
 
         static void DoEvents()

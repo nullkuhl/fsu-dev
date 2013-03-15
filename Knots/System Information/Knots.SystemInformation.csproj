@@ -44,10 +44,8 @@
       <HintPath>bin\FreemiumUtil.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Windows.Forms" />
@@ -440,7 +438,6 @@
     <Content Include="Resources\Users_16x16.png" />
     <Content Include="Resources\Users_48x48.png" />
     <Content Include="Resources\User_16x16.png" />
-    <Content Include="System Information.ico" />
   </ItemGroup>
   <PropertyGroup>
     <PreBuildEvent>

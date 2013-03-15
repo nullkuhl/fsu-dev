@@ -21,6 +21,8 @@ namespace ProcessManager
     /// </summary>
     public partial class FormProcessManager : Form
     {
+        public enum ListCol { Name, ID, Priority, NoOfThreads, CPUTime, Memory, StartTime, FilePath, User };
+
         const int SW_SHOW = 5;
         const uint SEE_MASK_INVOKEIDLIST = 12;
         /// <summary>
@@ -95,8 +97,8 @@ namespace ProcessManager
         /// <summary>
         /// Is details form alive
         /// </summary>
-        public static bool IsFormShowDetailsAlive;        
-        bool loading;                
+        public static bool IsFormShowDetailsAlive;
+        bool loading;
         /// <summary>
         /// Is error occured
         /// </summary>
@@ -133,26 +135,17 @@ namespace ProcessManager
                 {
                     //The list view item
                     string[] items;
+                    string fileName = string.Empty;
                     try
                     {
-                        items = new[]
-						        	{
-						        		t3.ProcessName,
-						        		t3.Id.ToString(),
-						        		rm.GetString(t3.PriorityClass.ToString()),
-						        		t3.Threads.Count.ToString(),
-						        		t3.TotalProcessorTime.Duration().Hours.ToString() + ":" +
-						        		t3.TotalProcessorTime.Duration().Minutes.ToString() + ":" +
-						        		t3.TotalProcessorTime.Duration().Seconds.ToString(),
-						        		(t3.WorkingSet64/1024).ToString() + "k",
-						        		t3.StartTime.ToShortDateString() + " " + t3.StartTime.ToShortTimeString(),
-						        		t3.MainModule.FileName.TrimStart("\\??\\".ToCharArray()),
-                                        ProcessExtension.GetProcessOwner(t3.Id)
-						        	};
+                        fileName = t3.MainModule.FileName.TrimStart("\\??\\".ToCharArray());
                     }
                     catch
                     {
-                        items = new[]
+                        fileName = "";
+                    }
+
+                    items = new[]
 						        	{
 						        		t3.ProcessName,
 						        		t3.Id.ToString(),
@@ -163,16 +156,15 @@ namespace ProcessManager
 						        		t3.TotalProcessorTime.Duration().Seconds.ToString(),
 						        		(t3.WorkingSet64/1024).ToString() + "k",
 						        		t3.StartTime.ToShortDateString() + " " + t3.StartTime.ToShortTimeString(),
-						        		"",
+						        		fileName,
                                         ProcessExtension.GetProcessOwner(t3.Id)
 						        	};
-                    }
-                    var lvi = new ListViewItem(items);
+
+                    ListViewItem lvi = new ListViewItem(items);
                     try
                     {
-                        Icon icon = GetSmallIcon(t3.MainModule.FileName);                       
+                        Icon icon = GetSmallIcon(t3.MainModule.FileName);
                         procImageList.Images.Add(t3.Id.ToString(), icon);
-                        //lvi.ImageKey = processes[i].Id.ToString();
                         lvi.ImageIndex = procImageList.Images.Count - 1;
                     }
                     catch
@@ -216,16 +208,9 @@ namespace ProcessManager
 
             try
             {
-
                 //List of all running processes
-                //List<Process> processes = new List<Process>();
-
                 //Get the processes
                 Process[] processes = Process.GetProcesses(Mcname);
-                //int threadscount = 0;
-                //int memory = 0;
-                //int cpu = 0;
-
                 Application.DoEvents();
 
                 foreach (Process t3 in processes)
@@ -238,7 +223,7 @@ namespace ProcessManager
                     foreach (ListViewItem l in lvprocesslist.Items)
                     {
                         //Match the process id
-                        if (int.Parse(l.SubItems[1].Text) == t3.Id)
+                        if (int.Parse(l.SubItems[(int)ListCol.ID].Text) == t3.Id)
                         {
                             lvi = l;
                             break;
@@ -261,7 +246,7 @@ namespace ProcessManager
                         for (int j = 0; j < 7; j++)
                             lvi.SubItems.Add(string.Empty);
 
-                        lvi.SubItems[1].Text = t3.Id.ToString();
+                        lvi.SubItems[(int)ListCol.ID].Text = t3.Id.ToString();
 
                         lvprocesslist.Items.Add(lvi);
                     }
@@ -295,36 +280,36 @@ namespace ProcessManager
 
                     try
                     {
-                        if (lvi.SubItems[2].Text != rm.GetString(t3.PriorityClass.ToString()))
-                            lvi.SubItems[2].Text = rm.GetString(t3.PriorityClass.ToString());
+                        if (lvi.SubItems[(int)ListCol.Priority].Text != rm.GetString(t3.PriorityClass.ToString()))
+                            lvi.SubItems[(int)ListCol.Priority].Text = rm.GetString(t3.PriorityClass.ToString());
                     }
                     catch
                     {
-                        lvi.SubItems[2].Text = string.Empty;
+                        lvi.SubItems[(int)ListCol.Priority].Text = string.Empty;
                     }
 
-                    if (lvi.SubItems[3].Text != t3.Threads.Count.ToString())
-                        lvi.SubItems[3].Text = t3.Threads.Count.ToString();
+                    if (lvi.SubItems[(int)ListCol.NoOfThreads].Text != t3.Threads.Count.ToString())
+                        lvi.SubItems[(int)ListCol.NoOfThreads].Text = t3.Threads.Count.ToString();
                     try
                     {
-                        if (lvi.SubItems[4].Text !=
+                        if (lvi.SubItems[(int)ListCol.CPUTime].Text !=
                             t3.TotalProcessorTime.Duration().Hours.ToString() + ":" +
                             t3.TotalProcessorTime.Duration().Minutes.ToString() + ":" +
                             t3.TotalProcessorTime.Duration().Seconds.ToString())
-                            lvi.SubItems[4].Text = t3.TotalProcessorTime.Duration().Hours.ToString() + ":" +
+                            lvi.SubItems[(int)ListCol.CPUTime].Text = t3.TotalProcessorTime.Duration().Hours.ToString() + ":" +
                                                    t3.TotalProcessorTime.Duration().Minutes.ToString() + ":" +
                                                    t3.TotalProcessorTime.Duration().Seconds.ToString();
                     }
                     catch
                     {
                     }
-                    if (lvi.SubItems[5].Text != (t3.WorkingSet / 1024).ToString() + "k")
-                        lvi.SubItems[5].Text = (t3.WorkingSet / 1024).ToString() + "k";
+                    if (lvi.SubItems[(int)ListCol.Memory].Text != (t3.WorkingSet / 1024).ToString() + "k")
+                        lvi.SubItems[(int)ListCol.Memory].Text = (t3.WorkingSet / 1024).ToString() + "k";
                     try
                     {
-                        if (lvi.SubItems[6].Text !=
+                        if (lvi.SubItems[(int)ListCol.StartTime].Text !=
                             t3.StartTime.ToShortDateString() + " " + t3.StartTime.ToShortTimeString())
-                            lvi.SubItems[6].Text = t3.StartTime.ToShortDateString() + " " +
+                            lvi.SubItems[(int)ListCol.StartTime].Text = t3.StartTime.ToShortDateString() + " " +
                                                    t3.StartTime.ToShortTimeString();
                     }
                     catch
@@ -332,30 +317,21 @@ namespace ProcessManager
                     }
                     try
                     {
-                        if (lvi.SubItems[7].Text != t3.MainModule.FileName)
-                            lvi.SubItems[7].Text = t3.MainModule.FileName.TrimStart("\\??\\".ToCharArray());
+                        if (lvi.SubItems[(int)ListCol.FilePath].Text != t3.MainModule.FileName)
+                            lvi.SubItems[(int)ListCol.FilePath].Text = t3.MainModule.FileName.TrimStart("\\??\\".ToCharArray());
                     }
                     catch
                     {
-                        /*if (File.Exists(Environment.GetEnvironmentVariable("windir") + "\\" + processes[i].ProcessName + ".exe"))
-                            lvi.SubItems[7].Text = Environment.GetEnvironmentVariable("windir") + "\\" + processes[i].ProcessName + ".exe";
-                        else if (File.Exists(Environment.GetEnvironmentVariable("windir") + "\\System32\\" + processes[i].ProcessName + ".exe"))
-                            lvi.SubItems[7].Text = Environment.GetEnvironmentVariable("windir") + "\\System32\\" + processes[i].ProcessName + ".exe";
-                        else if (File.Exists(Environment.GetEnvironmentVariable("windir") + "\\SysWOW64\\" + processes[i].ProcessName + ".exe"))
-                            lvi.SubItems[7].Text = Environment.GetEnvironmentVariable("windir") + "\\SysWOW64\\" + processes[i].ProcessName + ".exe";
-                         * */
                     }
                     try
                     {
                         string processOwner = ProcessExtension.GetProcessOwner(t3.Id);
-                        if (lvi.SubItems[8].Text != processOwner)
-                            lvi.SubItems[8].Text = processOwner;
+                        if (lvi.SubItems[(int)ListCol.User].Text != processOwner)
+                            lvi.SubItems[(int)ListCol.User].Text = processOwner;
                     }
                     catch
                     {
                     }
-                    //Remove the processed process
-                    //processes.RemoveAt(0);
                 }
                 //Now check for items we need to remove from the list
                 var remove = new List<ListViewItem>();
@@ -377,7 +353,7 @@ namespace ProcessManager
                     try
                     {
                         if (lvi.ImageIndex != -1)
-                            procImageList.Images.RemoveAt(procImageList.Images.IndexOfKey(lvi.SubItems[1].Text));
+                            procImageList.Images.RemoveAt(procImageList.Images.IndexOfKey(lvi.SubItems[(int)ListCol.ID].Text));
                     }
                     catch { }
                 }
@@ -412,17 +388,7 @@ namespace ProcessManager
                 {
                     try
                     {
-                        words = new string[]{};
-                        var sr = new StreamReader("BlockedProcesses.txt");
-                        string str = sr.ReadLine();
-                        sr.Close();
-                        if (str != null)
-                        {
-                            const string delimStr = "~";
-                            char[] delimiter = delimStr.ToCharArray();
-
-                            words = str.Split(delimiter);
-                        }
+                        words = BlockedProcessesManager.GetBlockedProcesses();
                         IsBlockProcessAdded = false;
                     }
                     catch
@@ -455,52 +421,11 @@ namespace ProcessManager
             }
         }
 
-        //Process[] processes = null;
-        //try
-        //{
-        //    processes = Process.GetProcesses(mcname);
-        //}
-        //catch (Exception ex)
-        //{
-        //    MessageBox.Show(ex.Message);
-        //    Application.Exit();
-        //    return;
-        //}
-        //int threadscount = 0;
-        //int memory = 0;
-        //int cpu = 0;
-        //if (iProcessCount != processes.Length)
-        //{
-        //    lvprocesslist.Items.Clear();
-
-        //    this.SuspendLayout();
-        //    this.lvprocesslist.BeginUpdate();
-        //    foreach (Process p in processes)
-        //    {
-        //        try
-        //        {                        
-        //            string[] prcdetails = new string[] { p.ProcessName,p.Id.ToString(), "", "", p.PriorityClass.ToString(), p.Threads.Count.ToString(), "", p.TotalProcessorTime.Duration().Hours.ToString() + ":" + p.TotalProcessorTime.Duration().Minutes.ToString() + ":" + p.TotalProcessorTime.Duration().Seconds.ToString(), (p.WorkingSet / 1024).ToString() + "k", "", p.StartTime.ToShortDateString() + " " +p.StartTime.ToShortTimeString() };
-        //            ListViewItem proc = new ListViewItem(prcdetails);
-        //            lvprocesslist.Items.Add(proc);
-        //            threadscount += p.Threads.Count;
-        //            memory += (p.WorkingSet / 1024);
-        //            cpu += System.Convert.ToInt32(p.TotalProcessorTime.Duration().Minutes);
-        //        }
-        //        catch { }
-        //    }
-        //    this.lvprocesslist.EndUpdate();
-        //    this.ResumeLayout();
-        //    iProcessCount = processes.Length;
-        //    statusBar1.Panels[0].Text = "Processes : " + processes.Length.ToString();
-        //    statusBar1.Panels[1].Text = "Threads : " + (threadscount + 1).ToString();
-        //    statusBar1.Panels[2].Text = "CPU : " + cpu.ToString();
-        //    statusBar1.Panels[3].Text = "Memory : " + memory.ToString();
-        //}
         void SetProcessPriority(ToolStripMenuItem item)
         {
             try
             {
-                int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[1].Text);
+                int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.ID].Text);
                 Process selectedprocess = Process.GetProcessById(selectedpid, Mcname);
                 if (item.Text.ToUpper() == "HIGH")
                     selectedprocess.PriorityClass = ProcessPriorityClass.High;
@@ -720,7 +645,7 @@ namespace ProcessManager
         public static extern IntPtr SHGetFileInfo(string pszPath, uint dwFileAttributes, ref SHFILEINFO psfi,
                                                   uint cbSizeFileInfo, uint uFlags);
 
-        void lvprocesslist_SelectedIndexChanged_1(object sender, EventArgs e)
+        void lvprocesslist_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -733,14 +658,14 @@ namespace ProcessManager
                     if (tlsMain.Enabled == false)
                         tlsMain.Enabled = true;
 
-                    SelectedProcessID = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[1].Text);
-                    FilePath = lvprocesslist.SelectedItems[0].SubItems[7].Text;
+                    SelectedProcessID = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.ID].Text);
+                    FilePath = lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.FilePath].Text;
                     toolStripBtnProperties.Enabled = ButtonEnable;
                     toolStripBtnShowDetails.Enabled = ButtonEnable;
                     toolStripBtnBlockProcess.Enabled = ButtonEnable;
                     toolStripBtnEndProcess.Enabled = ButtonEnable;
                     toolStripBtnGoogleIt.Enabled = ButtonEnable;
-                }               
+                }
             }
             catch
             {
@@ -807,8 +732,8 @@ namespace ProcessManager
             {
                 try
                 {
-                    int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[1].Text);
-                    string processName = lvprocesslist.SelectedItems[0].Text;
+                    int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.ID].Text);
+                    string processName = lvprocesslist.SelectedItems[(int)ListCol.Name].Text;
                     if (processName == Process.GetCurrentProcess().ProcessName)
                     {
                         MessageBox.Show(rm.GetString("cant_end_processmanager"), rm.GetString("warning"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -877,7 +802,7 @@ namespace ProcessManager
         {
             try
             {
-                int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[1].Text);
+                int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.ID].Text);
                 Process selectedprocess = Process.GetProcessById(selectedpid, Mcname);
                 string priority = rm.GetString(selectedprocess.PriorityClass.ToString());
                 foreach (ToolStripMenuItem mnuitem in mitSetPriority.DropDownItems)
@@ -940,7 +865,7 @@ namespace ProcessManager
             {
                 try
                 {
-                    int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[1].Text);
+                    int selectedpid = Convert.ToInt32(lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.ID].Text);
                     string processName = lvprocesslist.SelectedItems[0].Text;
                     if (processName == Process.GetCurrentProcess().ProcessName)
                     {
@@ -964,16 +889,9 @@ namespace ProcessManager
                             }
                         }
                     }
-                    var sr = new StreamReader("BlockedProcesses.txt");
-                    string str = sr.ReadLine();
-                    sr.Close();
-
-                    var sw = new StreamWriter("BlockedProcesses.txt");
-                    sw.WriteLine(str + processName + "~");
-                    sw.Close();
-
+                    //Add process to the blocking list
+                    BlockedProcessesManager.AddBlockedProcess(processName);
                     IsBlockProcessAdded = true;
-
                     Process.GetProcessById(selectedpid, Mcname).Kill();
                     toolStripBtnBlockProcess.Enabled = false;
                     toolStripBtnEndProcess.Enabled = false;
@@ -991,13 +909,13 @@ namespace ProcessManager
         void toolStripBtnGoogleIt_Click(object sender, EventArgs e)
         {
             //Create a new process.
-            var proc = new Process { EnableRaisingEvents = false };
+            Process proc = new Process { EnableRaisingEvents = false };
 
             //Here you can also specify a html page on local machine
             //such as C:\Test\default.html
             if (lvprocesslist.SelectedItems.Count >= 1)
             {
-                string sSearchItem = lvprocesslist.SelectedItems[0].SubItems[7].Text;
+                string sSearchItem = lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.FilePath].Text;
                 string[] processdata = sSearchItem.Split('\\');
                 sSearchItem = processdata[processdata.Length - 1];
                 proc.StartInfo.FileName = "http://www.google.com/search?q=" + sSearchItem + " process";
@@ -1019,15 +937,11 @@ namespace ProcessManager
             frmShowDetails.ShowDialog();
         }
 
-
         void toolStripBtnProperties_Click(object sender, EventArgs e)
         {
             if (lvprocesslist.SelectedItems.Count >= 1)
             {
-                //if(XP)
-                string processFilePath = lvprocesslist.SelectedItems[0].SubItems[7].Text;
-                // else
-                //     processFilePath = GetExecutablePathAboveVista(int.Parse(lvprocesslist.SelectedItems[0].SubItems[1].Text));
+                string processFilePath = lvprocesslist.SelectedItems[0].SubItems[(int)ListCol.FilePath].Text;
                 ShowFileProperties(processFilePath);
             }
         }

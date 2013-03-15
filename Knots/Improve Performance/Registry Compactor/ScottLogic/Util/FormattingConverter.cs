@@ -21,7 +21,7 @@ namespace ScottLogic.Util
         public object Convert(object value, Type targetType,
             object parameter, CultureInfo culture)
         {
-            var formatString = parameter as string;
+            string formatString = parameter as string;
             return formatString != null ? string.Format(culture, formatString, value) : value.ToString();
         }
 

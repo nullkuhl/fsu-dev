@@ -98,7 +98,7 @@ namespace FreemiumUtilities
 		/// <returns>System restore points composed in a <c>Hashtable</c></returns>
 		public Hashtable GetRestorePoints()
 		{
-			var result = new Hashtable();
+            Hashtable result = new Hashtable();
 			try
 			{
 				scriptManager.setScript(myScript.GetRestorePoints);

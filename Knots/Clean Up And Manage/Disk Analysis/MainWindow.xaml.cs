@@ -9,7 +9,6 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Threading;
 using DiskAnalysis.Entities;
 using DiskAnalysis.Helper;
 using Telerik.Windows.Controls;
@@ -24,7 +23,6 @@ namespace DiskAnalysis
     public partial class MainWindow
     {
         // Global variables
-
         readonly BackgroundWorker bwDiskScanner; //Background worker for Scanning
         private BackgroundWorker backgroundWorker;
         int currentD;
@@ -76,7 +74,7 @@ namespace DiskAnalysis
 
                 try
                 {
-                    foreach (var t in tempFiles)
+                    foreach (FileInfo t in tempFiles)
                     {
                         t.Delete();
                     }
@@ -87,8 +85,14 @@ namespace DiskAnalysis
             }
             catch (DirectoryNotFoundException)
             {
-                var curDir = new DirectoryInfo(Environment.CurrentDirectory);
-                curDir.CreateSubdirectory("Icons");
+                try
+                {
+                    DirectoryInfo curDir = new DirectoryInfo(Environment.CurrentDirectory);
+                    curDir.CreateSubdirectory("Icons");
+                }
+                catch
+                {
+                }
             }
 
             StyleManager.ApplicationTheme = new Windows7Theme();
@@ -102,7 +106,6 @@ namespace DiskAnalysis
             bwDiskScanner.WorkerSupportsCancellation = true;
 
             // Set Widths & Heights
-            //rtvFolderList.Width = (Width * 3 / 5) - 6;
             lnkAbort.Visibility = Visibility.Hidden;
             rtvFolderList.DataLoadMode = DataLoadMode.Synchronous;
 
@@ -114,24 +117,18 @@ namespace DiskAnalysis
             scannedFileSize = 0;
 
             //Event handlers
-            //Loaded += MainWindow_Loaded;
             this.ContentRendered += new EventHandler(MainWindow_ContentRendered);
         }
 
+        /// <summary>
+        /// Handles ContentRendered event of Window
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void MainWindow_ContentRendered(object sender, EventArgs e)
         {
-            //MenuItem btn = this.Toolbar.Items[0] as MenuItem;
-            //btn.RaiseEvent(new RoutedEventArgs(MenuItem.ClickEvent));
-
             scanDialog = new ScanWindow(true);
             bool? result = scanDialog.ShowDialog();
-            if (result.HasValue)
-            {
-                LogClass.AddInfoToLog(LogClass.LogInfo.Info, result.ToString());
-            }
-            else
-                LogClass.AddInfoToLog(LogClass.LogInfo.Info, "result DON'T HAVE Value");
-
             if (result.HasValue && result == true)
             {
                 isNewScanStarted = true;
@@ -140,36 +137,13 @@ namespace DiskAnalysis
         }
 
         /// <summary>
-        /// Loaded Event Handler for Main Window
-        /// Calls the Scan Window as modal dialog, and calls the Scan method on return from dailog
+        /// Scans selected drives or folders
         /// </summary>
-        void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-            //LogClass.AddInfoToLog(LogClass.LogInfo.Start, "MainWindow_Loaded");
-            //scanDialog = new ScanWindow();
-            //bool? result = scanDialog.ShowDialog();
-            //if (result.HasValue)
-            //{
-            //    LogClass.AddInfoToLog(LogClass.LogInfo.Info, result.ToString());
-            //}
-            //else
-            //    LogClass.AddInfoToLog(LogClass.LogInfo.Info, "result DON'T HAVE Value");
-
-            //if (result.HasValue && result == true)
-            //{
-            //    isNewScanStarted = true;
-            //    ScanSelectedDrivesOrFolders(true);
-            //}
-            //LogClass.AddInfoToLog(LogClass.LogInfo.End, "MainWindow_Loaded");
-        }
-
+        /// <param name="result"></param>
         void ScanSelectedDrivesOrFolders(bool? result)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "ScanSelectedDrivesOrFolders");
             if (result.HasValue && result == true)
             {
-                LogClass.AddInfoToLog(LogClass.LogInfo.Info, "Scan Begins");
                 Refresh.IsEnabled = false;
                 progressBar1.Value = 0;
                 totalFileSizeToScan = 0;
@@ -179,52 +153,24 @@ namespace DiskAnalysis
                 directories = new ObservableCollection<AppFolder>();
                 scanDirs = new List<DirectoryInfo>();
 
-                var bw = new BackgroundWorker();
+                BackgroundWorker bw = new BackgroundWorker();
                 bw.DoWork += bwCalculateFileSize_DoWork;
                 bw.RunWorkerCompleted += bwCalculateFileSize_RunWorkerCompleted;
 
-                //DriveInfo di = new DriveInfo("C");
-                //var driveData = new DriveData(di);
-
-                //scanDirs.Add(driveData.RootPath);
-                //totalFileSizeToScan += driveData.LUsedSizeValue;
-                //d = scanDirs[0];
-                //txtStatus.Text = Resx.Scanning;
-                //progressBar1.Visibility = Visibility.Visible;
-                //progressBar1.IsIndeterminate = true;
-                //StartWork();
-
-                if (scanDialog.rbAllDrives.IsChecked == true)
+                if (scanDialog.rbAllDrives.IsChecked == true || scanDialog.rbDrives.IsChecked == true)
                 {
                     foreach (DriveData drive in scanDialog.DriveData)
                     {
-                        scanDirs.Add(drive.RootPath);
-                        totalFileSizeToScan += drive.LUsedSizeValue;
-                    }
-                    d = scanDirs[0];
-
-                    txtStatus.Text = Resx.Scanning;
-                    progressBar1.Visibility = Visibility.Visible;
-                    progressBar1.IsIndeterminate = true;
-                    StartWork();
-                }
-                else if (scanDialog.rbDrives.IsChecked == true)
-                {
-                    foreach (DriveData drive in scanDialog.DriveData)
-                    {
-                        if (drive.IsChecked)
+                        if (scanDialog.rbAllDrives.IsChecked == true || (scanDialog.rbDrives.IsChecked == true && drive.IsChecked))
                         {
                             scanDirs.Add(drive.RootPath);
-
                             totalFileSizeToScan += drive.LUsedSizeValue;
                         }
                     }
                     d = scanDirs[0];
-
                     txtStatus.Text = Resx.Scanning;
                     progressBar1.Visibility = Visibility.Visible;
                     progressBar1.IsIndeterminate = true;
-
                     StartWork();
                 }
                 else // Individual folder
@@ -240,19 +186,19 @@ namespace DiskAnalysis
                     }
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "ScanSelectedDrivesOrFolders");
         }
 
+        /// <summary>
+        /// Starts analyzing work
+        /// </summary>
         void StartWork()
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "StartWork");
             Analyze.IsEnabled = false;
             if (d != null)
             {
                 // Initialize the Root folders and files
                 // And then call background worker
-
-                var f = new AppFolder { Name = d.Name, FullPath = d.FullName, IsRootDirectory = true };
+                AppFolder f = new AppFolder { Name = d.Name, FullPath = d.FullName, IsRootDirectory = true };
                 directories.Add(f);
 
                 FileSystemInfo[] filesNFolders = new FileSystemInfo[] { };
@@ -260,9 +206,8 @@ namespace DiskAnalysis
                 {
                     filesNFolders = d.GetFileSystemInfos();
                 }
-                catch (Exception ex)
+                catch
                 {
-                    LogClass.AddErrorToLog(" Method - ControlSortingAbility - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
 
                 foreach (FileSystemInfo fileInfo in filesNFolders)
@@ -275,7 +220,7 @@ namespace DiskAnalysis
 
                     if (t == typeof(DirectoryInfo))
                     {
-                        var dir = fileInfo as DirectoryInfo;
+                        DirectoryInfo dir = fileInfo as DirectoryInfo;
                         if (dir != null)
                             f.SubFolders.Add(new AppFolder
                                                 {
@@ -285,10 +230,10 @@ namespace DiskAnalysis
                     }
                     else if (t == typeof(FileInfo))
                     {
-                        var file = fileInfo as FileInfo;
+                        FileInfo file = fileInfo as FileInfo;
                         if (file != null)
                         {
-                            var af = new AppFile
+                            AppFile af = new AppFile
                                         {
                                             FileName = file.Name,
                                             FolderPath = file.DirectoryName,
@@ -309,7 +254,6 @@ namespace DiskAnalysis
                 lnkAbort.Visibility = Visibility.Visible;
                 bwDiskScanner.RunWorkerAsync();
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "StartWork");
         }
 
         /// <summary>
@@ -319,77 +263,36 @@ namespace DiskAnalysis
         /// </summary>
         void ControlSortingAbility()
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "ControlSortingAbility");
-            if (directories != null)
-            {
-                if (directories.Count <= 0)
-                {
-                    try
-                    {
-                        collFileType.CanUserSort = false;
-                        collPercent.CanUserSort = false;
-                        collSize.CanUserSort = false;
-                        collFiles.CanUserSort = false;
-                        collFolderFileName.CanUserSort = false;
-                        collFolderAttribute.CanUserSort = false;
-                        collFolderFolder.CanUserSort = false;
-                        collFolderModified.CanUserSort = false;
-                        collFolderSize.CanUserSort = false;
-                    }
-                    catch (Exception ex)
-                    {
-                        LogClass.AddErrorToLog(" Method - ControlSortingAbility - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
-                    }
-                }
-                else
-                {
-                    try
-                    {
-                        collFileType.CanUserSort = true;
-                        collPercent.CanUserSort = true;
-                        collSize.CanUserSort = true;
-                        collFiles.CanUserSort = true;
-                        collFolderFileName.CanUserSort = true;
-                        collFolderAttribute.CanUserSort = true;
-                        collFolderFolder.CanUserSort = true;
-                        collFolderModified.CanUserSort = true;
-                        collFolderSize.CanUserSort = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        LogClass.AddErrorToLog(" Method - ControlSortingAbility - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
-                    }
-                }
-            }
-            else
-            {
-                try
-                {
-                    collFileType.CanUserSort = false;
-                    collPercent.CanUserSort = false;
-                    collSize.CanUserSort = false;
-                    collFiles.CanUserSort = false;
-                    collFolderFileName.CanUserSort = false;
-                    collFolderAttribute.CanUserSort = false;
-                    collFolderFolder.CanUserSort = false;
-                    collFolderModified.CanUserSort = false;
-                    collFolderSize.CanUserSort = false;
-                }
-                catch (Exception ex)
-                {
-                    LogClass.AddErrorToLog(" Method - ControlSortingAbility - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
-                }
-            }
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "ControlSortingAbility");
+            bool enableUserSort = false;
+            if (directories != null && directories.Count > 0)
+                enableUserSort = true;
+
+            collFileType.CanUserSort = enableUserSort;
+            collPercent.CanUserSort = enableUserSort;
+            collSize.CanUserSort = enableUserSort;
+            collFiles.CanUserSort = enableUserSort;
+            collFolderFileName.CanUserSort = enableUserSort;
+            collFolderAttribute.CanUserSort = enableUserSort;
+            collFolderFolder.CanUserSort = enableUserSort;
+            collFolderModified.CanUserSort = enableUserSort;
+            collFolderSize.CanUserSort = enableUserSort;
         }
 
+        /// <summary>
+        /// BackgroundWorker Completed event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void bwCalculateFileSize_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwCalculateFileSize_RunWorkerCompleted");
             StartWork();
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwCalculateFileSize_RunWorkerCompleted");
         }
 
+        /// <summary>
+        /// BackgroundWorker job
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void bwCalculateFileSize_DoWork(object sender, DoWorkEventArgs e)
         {
             try
@@ -402,15 +305,13 @@ namespace DiskAnalysis
                     {
                         totalFileSizeToScan += f.Length;
                     }
-                    catch (Exception ex)
+                    catch
                     {
-                        LogClass.AddErrorToLog(" Method - bwCalculateFileSize_DoWork - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                     }
                 }
             }
-            catch(Exception ex) 
+            catch
             {
-                LogClass.AddErrorToLog(" Method - bwCalculateFileSize_DoWork - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
         }
 
@@ -422,7 +323,6 @@ namespace DiskAnalysis
         /// </summary>
         void bwDiskScanner_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwDiskScanner_RunWorkerCompleted");
             backgroundWorker = new BackgroundWorker();
             backgroundWorker.DoWork += backgroundWorker_DoWork;
             backgroundWorker.RunWorkerCompleted += backgroundWorker_RunWorkerCompleted;
@@ -433,12 +333,15 @@ namespace DiskAnalysis
             txtStatus.Text = Resx.processing;
             txtFileLabel.Text = "";
             backgroundWorker.RunWorkerAsync();
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_RunWorkerCompleted");
         }
 
+        /// <summary>
+        /// Handles BackgroundWorker Completed event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void backgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "backgroundWorker_RunWorkerCompleted");
             rtvFolderList.ItemsSource = directories.OrderByDescending(folder => folder.LSize);
             dgFileListByFolder.ItemsSource = directories[0].Files.OrderByDescending(f => f.LFileSize);
             dgFileTypeList.ItemsSource = fileTypeList.OrderByDescending(f => f.lTotalFileSize);
@@ -453,7 +356,6 @@ namespace DiskAnalysis
             {
                 txtStatus.Text = Resx.Aborted;
                 isAborted = false;
-
                 isNewScanStarted = false;
                 lnkAbort.Visibility = Visibility.Hidden;
                 bwDiskScanner.Dispose();
@@ -465,7 +367,6 @@ namespace DiskAnalysis
             else
             {
                 txtStatus.Text = Resx.Completed;
-
                 if (++currentD < scanDirs.Count)
                 {
                     d = scanDirs[currentD];
@@ -474,7 +375,6 @@ namespace DiskAnalysis
                 else
                 {
                     currentD = 0;
-
                     isNewScanStarted = false;
                     lnkAbort.Visibility = Visibility.Hidden;
                     bwDiskScanner.Dispose();
@@ -485,19 +385,26 @@ namespace DiskAnalysis
                 }
             }
             Analyze.IsEnabled = true;
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "backgroundWorker_RunWorkerCompleted");
         }
 
+        /// <summary>
+        /// BackgroundWorker job
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void backgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "backgroundWorker_DoWork");
             FinalWork();
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "backgroundWorker_DoWork");
         }
 
+        /// <summary>
+        /// Handles ProgressChanged event of BackgroundWorker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void backgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            var folderState = e.UserState as DiskAnalysis.Entities.AppFileType;
+            AppFileType folderState = e.UserState as DiskAnalysis.Entities.AppFileType;
             if (folderState != null)
             {
                 txtFileLabel.Text = folderState.FileType;
@@ -505,9 +412,11 @@ namespace DiskAnalysis
             progressBar1.Value = e.ProgressPercentage;
         }
 
+        /// <summary>
+        /// Does final work after the Analyzing Background completes its job
+        /// </summary>
         public void FinalWork()
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "FinalWork");
             if (isNewScanStarted)
             {
                 fileTypeList = new ObservableCollection<AppFileType>();
@@ -515,8 +424,6 @@ namespace DiskAnalysis
             }
 
             GetFileTypeData(directories[ind]);
-
-            //new Telerik.Windows.Controls.GridView.
             // Calculate Totals for File Type
             long fileSizesByType = fileTypeList.Sum(fileType => fileType.lTotalFileSize);
 
@@ -527,32 +434,45 @@ namespace DiskAnalysis
                     decimal d = Convert.ToDecimal(fileType.lTotalFileSize * 100.0);
                     fileType.dPercentage = decimal.Round(d / fileSizesByType, 2);
                 }
-                catch (Exception ex)
+                catch
                 {
-                    LogClass.AddErrorToLog(" Method - FinalWork - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
             }
 
             // Calculate Totals for Folders
             directories[currentD].DPercent = 100;
-
             foreach (AppFolder fol in directories[currentD].SubFolders)
             {
                 GetPercentage(fol, directories[currentD].LSize);
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "FinalWork");
         }
 
+        /// <summary>
+        /// Gets percentage 
+        /// </summary>
+        /// <param name="fol"></param>
+        /// <param name="totalSize"></param>
         void GetPercentage(AppFolder fol, long totalSize)
         {
-            decimal d = Convert.ToDecimal(fol.LSize * 100.0);
-            fol.DPercent = totalSize == 0 ? 100 : decimal.Round(d / totalSize, 2);
+            try
+            {
+                decimal d = Convert.ToDecimal(fol.LSize * 100.0);
+                fol.DPercent = totalSize == 0 ? 100 : decimal.Round(d / totalSize, 2);
+            }
+            catch
+            {
+            }
+
             foreach (AppFolder fol1 in fol.SubFolders)
             {
                 GetPercentage(fol1, totalSize);
             }
         }
 
+        /// <summary>
+        /// Gets file type data
+        /// </summary>
+        /// <param name="f"></param>
         void GetFileTypeData(AppFolder f)
         {
             foreach (AppFile file in f.Files)
@@ -567,12 +487,12 @@ namespace DiskAnalysis
                 }
                 else
                 {
-                    var fileType = new AppFileType(file.FileType);
+                    AppFileType fileType = new AppFileType(file.FileType);
                     fileType.Add(file);
-
                     fileTypeList.Add(fileType);
                 }
             }
+
             foreach (AppFolder folder in f.SubFolders)
             {
                 GetFileTypeData(folder);
@@ -586,7 +506,7 @@ namespace DiskAnalysis
         /// <param name="e">e.UserState contains the progress information</param>
         void bwDiskScanner_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            var folderState = e.UserState as BwFolderState;
+            BwFolderState folderState = e.UserState as BwFolderState;
             if (folderState != null)
             {
                 folderState.CurrentFolder.SubFolders.Add(folderState.SubFolder);
@@ -601,17 +521,11 @@ namespace DiskAnalysis
         /// </summary>
         void bwDiskScanner_DoWork(object sender, DoWorkEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwDiskScanner_DoWork");
-            //  foreach (AppFolder d in directories)
-            // {
             ind++;
-
             foreach (AppFolder f in directories[ind].SubFolders)
             {
                 GetFilesAndFolders(f);
             }
-            //  }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_DoWork");
         }
 
         /// <summary>
@@ -624,100 +538,100 @@ namespace DiskAnalysis
         /// </param>
         void GetFilesAndFolders(AppFolder folder)
         {
-            var searchDir = new DirectoryInfo(folder.FullPath);
-            FileSystemInfo[] filesAndFolders = null;
             try
             {
-                if ((searchDir.Attributes & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
+                DirectoryInfo searchDir = new DirectoryInfo(folder.FullPath);
+                FileSystemInfo[] filesAndFolders = null;
+                try
                 {
-                    filesAndFolders = searchDir.GetFileSystemInfos();
+                    if ((searchDir.Attributes & FileAttributes.ReparsePoint) != FileAttributes.ReparsePoint)
+                    {
+                        filesAndFolders = searchDir.GetFileSystemInfos();
+                    }
                 }
-            }
-            catch
-            {
-                // Avoid Access Denied exceptions        
-            }
-            if (filesAndFolders != null)
-            {
-                foreach (FileSystemInfo fileInfo in filesAndFolders)
+                catch
                 {
-                    if ((fileInfo.Attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
+                    // Avoid Access Denied exceptions
+                }
+                if (filesAndFolders != null)
+                {
+                    foreach (FileSystemInfo fileInfo in filesAndFolders)
                     {
-                        continue;
-                    }
-                    BwFolderState folderStateData = null;
-                    Type t = fileInfo.GetType();
+                        if ((fileInfo.Attributes & FileAttributes.ReparsePoint) == FileAttributes.ReparsePoint)
+                            continue;
 
-                    if (t == typeof(DirectoryInfo))
-                    {
-                        var dir = fileInfo as DirectoryInfo;
-                        var subFolder = new AppFolder { Name = dir.Name, FullPath = dir.FullName };
-                        folderStateData = new BwFolderState
-                                            {
-                                                CurrentFolder = folder,
-                                                SubFolder = subFolder
-                                            };
-                        if (!bwDiskScanner.CancellationPending)
+                        BwFolderState folderStateData = null;
+                        Type t = fileInfo.GetType();
+                        if (t == typeof(DirectoryInfo))
                         {
-                            int prog;
-
-                            prog = totalFileSizeToScan != 0 ? Convert.ToInt32((scannedFileSize * 100) / totalFileSizeToScan) : 1;
-
-                            bwDiskScanner.ReportProgress(prog, folderStateData);
-
-                            GetFilesAndFolders(subFolder);
+                            DirectoryInfo dir = fileInfo as DirectoryInfo;
+                            AppFolder subFolder = new AppFolder { Name = dir.Name, FullPath = dir.FullName };
+                            folderStateData = new BwFolderState
+                                                {
+                                                    CurrentFolder = folder,
+                                                    SubFolder = subFolder
+                                                };
+                            if (!bwDiskScanner.CancellationPending)
+                            {
+                                int prog;
+                                prog = totalFileSizeToScan != 0 ? Convert.ToInt32((scannedFileSize * 100) / totalFileSizeToScan) : 1;
+                                bwDiskScanner.ReportProgress(prog, folderStateData);
+                                GetFilesAndFolders(subFolder);
+                            }
                         }
-                    }
-                    else if (t == typeof(FileInfo))
-                    {
-                        var file = fileInfo as FileInfo;
-                        AppFile af = null;
-                        try
+                        else if (t == typeof(FileInfo))
                         {
-                            if (file != null)
-                                af = new AppFile
-                                        {
-                                            FileName = file.Name,
-                                            FolderPath = file.DirectoryName,
-                                            LFileSize = file.Length,
-                                            ModifiedDate = file.LastWriteTime,
-                                            FileType = file.Extension.ToLower(),
-                                            Attributes = file.Attributes.ToString()
-                                        };
-                        }
-                        catch (Exception ex)
-                        {
-                            LogClass.AddErrorToLog(" Method - GetFilesAndFolders - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
+                            FileInfo file = fileInfo as FileInfo;
+                            AppFile af = null;
                             try
                             {
                                 if (file != null)
                                     af = new AppFile
-                                             {
-                                                 FileName = file.Name,
-                                                 FolderPath = file.DirectoryName,
-                                                 LFileSize = file.Length,
-                                                 FileType = file.Extension.ToLower(),
-                                                 Attributes = file.Attributes.ToString()
-                                             };
+                                            {
+                                                FileName = file.Name,
+                                                FolderPath = file.DirectoryName,
+                                                LFileSize = file.Length,
+                                                ModifiedDate = file.LastWriteTime,
+                                                FileType = file.Extension.ToLower(),
+                                                Attributes = file.Attributes.ToString()
+                                            };
                             }
-                            catch (Exception ex2)
+                            catch (Exception ex)
                             {
-                                LogClass.AddErrorToLog(" Method - GetFilesAndFolders - Exeption [" + ex2.GetType().Name + "] - " + ex2.Message);
+                                try
+                                {
+                                    if (file != null)
+                                        af = new AppFile
+                                                 {
+                                                     FileName = file.Name,
+                                                     FolderPath = file.DirectoryName,
+                                                     LFileSize = file.Length,
+                                                     FileType = file.Extension.ToLower(),
+                                                     Attributes = file.Attributes.ToString()
+                                                 };
+                                }
+                                catch
+                                {
+                                }
+
                             }
+                            try
+                            {
+                                if (af != null)
+                                    folder.Files.Add(af);
 
-                        }
-                        try
-                        {
-                            if (af != null) folder.Files.Add(af);
-
-                            if (file != null) scannedFileSize += file.Length;
-                        }
-                        catch (Exception ex)
-                        {
-                            LogClass.AddErrorToLog(" Method - GetFilesAndFolders - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
+                                if (file != null)
+                                    scannedFileSize += file.Length;
+                            }
+                            catch
+                            {
+                            }
                         }
                     }
                 }
+            }
+            catch
+            {
             }
         }
 
@@ -726,8 +640,7 @@ namespace DiskAnalysis
         /// </summary>
         void rtvFolderList_DataLoaded(object sender, EventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwDiskScanner_DoWork");
-            var source = rtvFolderList.ItemsSource as ICollection;
+            ICollection source = rtvFolderList.ItemsSource as ICollection;
             if (source != null)
             {
                 if (rtvFolderList.Items.Count == source.Count)
@@ -742,7 +655,6 @@ namespace DiskAnalysis
                     rtvFolderList.DataLoaded -= rtvFolderList_DataLoaded;
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_DoWork");
         }
 
         /// <summary>
@@ -761,7 +673,6 @@ namespace DiskAnalysis
         {
             if (e.Key == Key.Escape)
             {
-                LogClass.AddInfoToLog(LogClass.LogInfo.Info, "Aborted");
                 bwDiskScanner.CancelAsync();
                 isAborted = true;
             }
@@ -773,16 +684,13 @@ namespace DiskAnalysis
         /// </summary>
         void Analyze_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Analyze_Click");
             scanDialog = new ScanWindow(false);
             bool? result = scanDialog.ShowDialog();
             if (result.HasValue && result == true)
             {
-                LogClass.AddInfoToLog(LogClass.LogInfo.Info, "RESULT = TRUE");
                 isNewScanStarted = true;
                 ScanSelectedDrivesOrFolders(true);
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Analyze_Click");
         }
 
         /// <summary>
@@ -790,10 +698,8 @@ namespace DiskAnalysis
         /// </summary>
         void Refresh_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Refresh_Click");
             isNewScanStarted = true;
             ScanSelectedDrivesOrFolders(true);
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Refresh_Click");
         }
 
         /// <summary>
@@ -801,9 +707,8 @@ namespace DiskAnalysis
         /// </summary>
         void Explorer_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Explorer_Click");
-            var selectedFile = dgFileListByFolder.SelectedItem as AppFile;
-            var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
+            AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
+            AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
 
             if (lastFocusedList == dgFileListByFolder && selectedFile != null)
             {
@@ -827,14 +732,17 @@ namespace DiskAnalysis
                     Process.Start("explorer.exe");
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Explorer_Click");
         }
 
+        /// <summary>
+        /// Handles click event of CommandPrompt button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void CommandPrompt_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "CommandPrompt_Click");
-            var selectedFile = dgFileListByFolder.SelectedItem as AppFile;
-            var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
+            AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
+            AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
 
             if (lastFocusedList == dgFileListByFolder && selectedFile != null)
             {
@@ -858,14 +766,17 @@ namespace DiskAnalysis
                     Process.Start("CMD.exe");
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "CommandPrompt_Click");
         }
 
+        /// <summary>
+        /// Handles Click event of Properties button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Properties_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Properties_Click");
-            var selectedFile = dgFileListByFolder.SelectedItem as AppFile;
-            var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
+            AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
+            AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
 
             if (lastFocusedList == dgFileListByFolder && selectedFile != null)
             {
@@ -876,9 +787,8 @@ namespace DiskAnalysis
 
                     Utility.ShowFileProperties(filePath);
                 }
-                catch (Exception ex)
+                catch
                 {
-                    LogClass.AddErrorToLog(" Method - Properties_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
             }
             else if (lastFocusedList == rtvFolderList && selectedFolder != null)
@@ -890,9 +800,8 @@ namespace DiskAnalysis
 
                     Utility.ShowFileProperties(folderPath);
                 }
-                catch (Exception ex)
+                catch
                 {
-                    LogClass.AddErrorToLog(" Method - Properties_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
             }
             else
@@ -906,168 +815,163 @@ namespace DiskAnalysis
 
                         Utility.ShowFileProperties(filePath);
                     }
-                    catch (Exception ex)
+                    catch
                     {
-                        LogClass.AddErrorToLog(" Method - Properties_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                     }
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Properties_Click");
         }
 
+        /// <summary>
+        /// Handles click event of delete button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Delete_Click(object sender, RoutedEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Delete_Click");
-            if (lastFocusedList == rtvFolderList && rtvFolderList.SelectedItem != null)
+            try
             {
-                var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
-                var d = new DirectoryInfo(selectedFolder.FullPath);
-                MessageBoxResult result = MessageBox.Show(Resx.DeleteFolderConfirmation.Replace("{1}", d.Name), Resx.DeleteFolder,
-                                                          MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.Yes)
+                if (lastFocusedList == rtvFolderList && rtvFolderList.SelectedItem != null)
                 {
+                    AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
                     try
                     {
-                        d.Delete(true);
-                        FindAndDeleteDirectory(d, directories);
-                        dgFileListByFolder.UpdateLayout();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(Resx.NoRightsToDelete, Resx.DiskAnalysis, MessageBoxButton.OK, MessageBoxImage.Error);
-                        LogClass.AddErrorToLog(" Method - Delete_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
-                    }
-                }
-            }
-            else if (lastFocusedList == dgFileListByFolder && dgFileListByFolder.SelectedItem != null)
-            {
-                var selectedFile = dgFileListByFolder.SelectedItem as AppFile;
-                if (selectedFile != null)
-                {
-                    var f = new FileInfo(selectedFile.FilePath);
-
-                    MessageBoxResult result = MessageBox.Show(Resx.DeleteFileConfirmation.Replace("{1}", selectedFile.FileName),
-                                                              Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    string tmp = f.Attributes.ToString();
-
-                    MessageBoxResult qSystem;
-                    MessageBoxResult qHidden;
-
-                    if (f.Attributes.ToString().Contains("System"))
-                    {
-                        qSystem = MessageBox.Show(Resx.DeleteSystemFile,
-                                                               Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                    }
-                    else
-                    {
-                        qSystem = MessageBoxResult.Yes;
-                    }
-                    if ((result == MessageBoxResult.Yes) && f.Attributes.ToString().Contains("Hidden"))
-                    {
-                        qHidden = MessageBox.Show(Resx.DeleteHiddenFile,
-                                                               Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                    }
-                    else
-                    {
-                        qHidden = MessageBoxResult.Yes;
-                    }
-
-                    //MessageBoxResult result = MessageBox.Show(Resx.DeleteFileConfirmation + " " + selectedFile.FileName + "?",
-                    //                                        Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    if ((result == MessageBoxResult.Yes) && (qSystem == MessageBoxResult.Yes) && (qHidden == MessageBoxResult.Yes))
-                    {
-
-                        int fileIndex = GetFileIndex(f);
-                        if (fileIndex != -1)
+                        DirectoryInfo d = new DirectoryInfo(selectedFolder.FullPath);
+                        MessageBoxResult result = MessageBox.Show(Resx.DeleteFolderConfirmation.Replace("{1}", d.Name), Resx.DeleteFolder,
+                                                                  MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        if (result == MessageBoxResult.Yes)
                         {
                             try
                             {
-                                var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
-                                f.Delete();
-                                if (selectedFolder != null)
-                                {
-                                    AppFile fileToRemove = selectedFolder.Files.Where(fl => fl.FileName == f.Name).FirstOrDefault();
-                                    // Delete the file from rtvFolderList itemsource
-                                    selectedFolder.Files.Remove(fileToRemove);
-                                }
-
-                                if (selectedFolder != null) dgFileListByFolder.ItemsSource = selectedFolder.Files;
+                                d.Delete(true);
+                                FindAndDeleteDirectory(d, directories);
                                 dgFileListByFolder.UpdateLayout();
-
-
-
-
-                                //    AppFolder fol = directories.Where(dir=>dir.FullPath == f.DirectoryName).FirstOrDefault();
-                                //     string tmp = fol.FilesCount +"";
-
-                                //need to delete from directories, the same file being deleted in the rest of the lists
-                                // the file is  f  , directories is the obsev collection
-                                // filepath is full path
-                                string filePath = f.DirectoryName;
-                                var currentDir = new AppFolder { SubFolders = directories };
-
-                                while (currentDir != null && currentDir.FullPath != filePath)
-                                {
-                                    currentDir = currentDir.SubFolders.FirstOrDefault(s => filePath != null && filePath.StartsWith(s.FullPath));
-                                }
-
-                                if (currentDir != null)
-                                {
-                                    AppFile tobeRem = currentDir.Files.Where(file => file.FileName == f.Name).FirstOrDefault();
-                                    currentDir.Files.Remove(tobeRem);
-                                }
-                                rtvFolderList.ItemsSource = directories;
-                                rtvFolderList.UpdateLayout();
-
-                                // currentDir here contains the file 
-
-                                //dgFileListByFolder.ItemsSource = selectedFolder.Files.OrderByDescending(files => files.lFileSize);
-                                //dgFileListByFolder.UpdateLayout();
-
-                                AppFileType extensionList = fileTypeList.Where(ext => ext.FileType == f.Extension.ToLower()).FirstOrDefault();
-                                if (extensionList != null)
-                                {
-                                    List<AppFile> extensionFiles = extensionList.Files;
-                                    AppFile fileToRemoveExt =
-                                        extensionFiles.Where(fl => fl.FolderPath == f.DirectoryName && fl.FileName == f.Name).FirstOrDefault();
-                                    extensionFiles.Remove(fileToRemoveExt);
-                                }
-
-
-                                //dgFileTypeList.UnselectAll();
-                                //remove it from the below grid
-                                if (rtvFolderList.SelectedItem == null)
-                                {
-                                    if (extensionList != null)
-                                        dgFileListByFolder.ItemsSource = extensionList.Files.OrderByDescending(file => file.LFileSize);
-                                    dgFileListByFolder.UpdateLayout();
-                                }
-                                dgFileTypeList.ItemsSource = fileTypeList.OrderByDescending(files => files.lTotalFileSize);
-                                dgFileTypeList.UpdateLayout();
-
-                                // TODO: Refreshing the info from correspondent element
                             }
-                            catch (UnauthorizedAccessException)
+                            catch
                             {
                                 MessageBox.Show(Resx.NoRightsToDelete, Resx.DiskAnalysis, MessageBoxButton.OK, MessageBoxImage.Error);
                             }
+                        }
+                    }
+                    catch
+                    {
+                    }
+                }
+                else if (lastFocusedList == dgFileListByFolder && dgFileListByFolder.SelectedItem != null)
+                {
+                    AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
+                    if (selectedFile != null)
+                    {
+                        FileInfo f = new FileInfo(selectedFile.FilePath);
 
-                            catch (System.IO.IOException exception)
+                        MessageBoxResult result = MessageBox.Show(Resx.DeleteFileConfirmation.Replace("{1}", selectedFile.FileName),
+                                                                  Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Question);
+                        string tmp = f.Attributes.ToString();
+
+                        MessageBoxResult qSystem;
+                        MessageBoxResult qHidden;
+
+                        if (f.Attributes.ToString().Contains("System"))
+                        {
+                            qSystem = MessageBox.Show(Resx.DeleteSystemFile,
+                                                                   Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                        }
+                        else
+                        {
+                            qSystem = MessageBoxResult.Yes;
+                        }
+                        if ((result == MessageBoxResult.Yes) && f.Attributes.ToString().Contains("Hidden"))
+                        {
+                            qHidden = MessageBox.Show(Resx.DeleteHiddenFile,
+                                                                   Resx.DeleteFile, MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                        }
+                        else
+                        {
+                            qHidden = MessageBoxResult.Yes;
+                        }
+
+                        if ((result == MessageBoxResult.Yes) && (qSystem == MessageBoxResult.Yes) && (qHidden == MessageBoxResult.Yes))
+                        {
+                            int fileIndex = GetFileIndex(f);
+                            if (fileIndex != -1)
                             {
-                                MessageBox.Show(Resx.FileInUse, Resx.DiskAnalysis, MessageBoxButton.OK, MessageBoxImage.Error);
-                                LogClass.AddErrorToLog(" Method - Delete_Click - Exeption [" + exception.GetType().Name + "] - " + exception.Message);
-                            }
-                            catch (Exception ex)
-                            {
-                                LogClass.AddErrorToLog(" Method - Delete_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
+                                try
+                                {
+                                    AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
+                                    f.Delete();
+                                    if (selectedFolder != null)
+                                    {
+                                        AppFile fileToRemove = selectedFolder.Files.Where(fl => fl.FileName == f.Name).FirstOrDefault();
+                                        // Delete the file from rtvFolderList itemsource
+                                        selectedFolder.Files.Remove(fileToRemove);
+                                    }
+
+                                    if (selectedFolder != null) dgFileListByFolder.ItemsSource = selectedFolder.Files;
+                                    dgFileListByFolder.UpdateLayout();
+                                    string filePath = f.DirectoryName;
+                                    AppFolder currentDir = new AppFolder { SubFolders = directories };
+
+                                    while (currentDir != null && currentDir.FullPath != filePath)
+                                    {
+                                        currentDir = currentDir.SubFolders.FirstOrDefault(s => filePath != null && filePath.StartsWith(s.FullPath));
+                                    }
+                                    if (currentDir != null)
+                                    {
+                                        AppFile tobeRem = currentDir.Files.Where(file => file.FileName == f.Name).FirstOrDefault();
+                                        currentDir.Files.Remove(tobeRem);
+                                    }
+                                    rtvFolderList.ItemsSource = directories;
+                                    rtvFolderList.UpdateLayout();
+
+                                    // currentDir here contains the file 
+
+                                    AppFileType extensionList = fileTypeList.Where(ext => ext.FileType == f.Extension.ToLower()).FirstOrDefault();
+                                    if (extensionList != null)
+                                    {
+                                        List<AppFile> extensionFiles = extensionList.Files;
+                                        AppFile fileToRemoveExt =
+                                            extensionFiles.Where(fl => fl.FolderPath == f.DirectoryName && fl.FileName == f.Name).FirstOrDefault();
+                                        extensionFiles.Remove(fileToRemoveExt);
+                                    }
+                                    //remove it from the below grid
+                                    if (rtvFolderList.SelectedItem == null)
+                                    {
+                                        if (extensionList != null)
+                                            dgFileListByFolder.ItemsSource = extensionList.Files.OrderByDescending(file => file.LFileSize);
+                                        dgFileListByFolder.UpdateLayout();
+                                    }
+                                    dgFileTypeList.ItemsSource = fileTypeList.OrderByDescending(files => files.lTotalFileSize);
+                                    dgFileTypeList.UpdateLayout();
+
+                                    // TODO: Refreshing the info from correspondent element
+                                }
+                                catch (UnauthorizedAccessException)
+                                {
+                                    MessageBox.Show(Resx.NoRightsToDelete, Resx.DiskAnalysis, MessageBoxButton.OK, MessageBoxImage.Error);
+                                }
+
+                                catch (System.IO.IOException exception)
+                                {
+                                    MessageBox.Show(Resx.FileInUse, Resx.DiskAnalysis, MessageBoxButton.OK, MessageBoxImage.Error);
+                                }
+                                catch
+                                {
+                                }
                             }
                         }
                     }
                 }
             }
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Delete_Click");
+            catch
+            {
+            }
         }
 
+        /// <summary>
+        /// Finds and deletes directory
+        /// </summary>
+        /// <param name="d"></param>
+        /// <param name="context"></param>
         void FindAndDeleteDirectory(DirectoryInfo d, ObservableCollection<AppFolder> context)
         {
             foreach (AppFolder item in context)
@@ -1084,9 +988,14 @@ namespace DiskAnalysis
             }
         }
 
+        /// <summary>
+        /// Gets file index
+        /// </summary>
+        /// <param name="f"></param>
+        /// <returns></returns>
         int GetFileIndex(FileInfo f)
         {
-            var i = 0;
+            int i = 0;
             foreach (AppFile item in dgFileListByFolder.Items)
             {
                 if (item.FilePath == f.FullName)
@@ -1096,18 +1005,26 @@ namespace DiskAnalysis
             return -1;
         }
 
+        /// <summary>
+        /// Handles Window Closing event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void Window_Closing(object sender, CancelEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "Window_Closing");
             scanDialog = null;
             directories = null;
             rtvFolderList.ItemsSource = null;
             dgFileListByFolder.ItemsSource = null;
             isAborted = true;
             bwDiskScanner.CancelAsync();
-            LogClass.AddInfoToLog(LogClass.LogInfo.End, "Window_Closing");
         }
 
+        /// <summary>
+        /// Handles GotFocus event of datagrid of File list
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void dgFileListByFolder_GotFocus(object sender, RoutedEventArgs e)
         {
             lastFocusedList = sender as FrameworkElement;
@@ -1122,7 +1039,7 @@ namespace DiskAnalysis
 
             lastFocusedList = sender as FrameworkElement;
 
-            var selectedFolder = rtvFolderList.SelectedItem as AppFolder;
+            AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
             if (selectedFolder != null)
                 dgFileListByFolder.ItemsSource = selectedFolder.Files.OrderByDescending(f => f.LFileSize);
             dgFileListByFolder.UpdateLayout();
@@ -1134,51 +1051,53 @@ namespace DiskAnalysis
         void dgFileTypeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             rtvFolderList.UnselectAll();
-
             lastFocusedList = sender as FrameworkElement;
 
             try
             {
-                var selectedFileType = dgFileTypeList.SelectedItem as AppFileType;
+                AppFileType selectedFileType = dgFileTypeList.SelectedItem as AppFileType;
                 dgFileListByFolder.ItemsSource = selectedFileType.Files.OrderByDescending(f => f.LFileSize);
                 dgFileListByFolder.UpdateLayout();
             }
-            catch (Exception ex)
+            catch
             {
-                LogClass.AddErrorToLog(" Method - dgFileTypeList_SelectionChanged - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
         }
 
+        /// <summary>
+        /// Handles GotFocus event of datagrid of File Types
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void dgFileTypeList_GotFocus(object sender, RoutedEventArgs e)
         {
             rtvFolderList.UnselectAll();
         }
 
+        /// <summary>
+        /// Handles GotFocus event of Folder List column
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void rtvFolderList_GotFocus(object sender, RoutedEventArgs e)
         {
             dgFileTypeList.UnselectAll();
         }
 
-        void rtvFolderList_MouseEnter(object sender, MouseEventArgs e)
-        {
-            //	rtvFolderList.Focus();
-        }
-
-        void dgFileListByFolder_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
+        /// <summary>
+        /// Handles MouseDoubleClick event of file list datagrid
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void dgFileListByFolder_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "dgFileListByFolder_MouseDoubleClick");
-            var selectedFile = dgFileListByFolder.SelectedItem as AppFile;
+            AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
             try
             {
                 if (selectedFile != null) Process.Start(selectedFile.FilePath);
             }
-            catch (Exception ex)
+            catch
             {
-                LogClass.AddErrorToLog(" Method - SetSelectionInGrid - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
         }
     }

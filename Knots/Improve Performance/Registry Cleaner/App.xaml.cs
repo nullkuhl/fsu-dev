@@ -48,17 +48,15 @@ namespace RegistryCleaner
 				WindowsIdentity user = WindowsIdentity.GetCurrent();
 				if (user != null)
 				{
-					var principal = new WindowsPrincipal(user);
+                    WindowsPrincipal principal = new WindowsPrincipal(user);
 					isAdmin = principal.IsInRole(WindowsBuiltInRole.Administrator);
 				}
 			}
 			catch (UnauthorizedAccessException)
 			{
-				isAdmin = false;
 			}
 			catch (Exception)
 			{
-				isAdmin = false;
 			}
 			return isAdmin;
 		}

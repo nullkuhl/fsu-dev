@@ -28,11 +28,7 @@ namespace ShortcutsFixer
 		{
 			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
 			if (created)
-			{
-				//AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
-				//Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-				//Application.ThreadException += Application_ThreadException;
-
+			{				
 				Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
 
 				Application.EnableVisualStyles();

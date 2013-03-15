@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
-using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 using IWshRuntimeLibrary;
 using File = System.IO.File;
@@ -87,7 +86,7 @@ namespace FreemiumUtilities.ShortcutFixer
 			}
 			catch
 			{
-				return "";
+				return string.Empty;
 			}
 		}
 
@@ -170,8 +169,8 @@ namespace FreemiumUtilities.ShortcutFixer
 
 				try
 				{
-					var wshShellClass = new WshShellClass();
-					var shortcutInfo = (IWshShortcut)wshShellClass.CreateShortcut(shortcut.FullName);
+                    WshShellClass wshShellClass = new WshShellClass();
+                    IWshShortcut shortcutInfo = (IWshShortcut)wshShellClass.CreateShortcut(shortcut.FullName);
 					string linkTarget = shortcutInfo.TargetPath;
 					string linkfile = linkTarget;
 					if (linkTarget.Contains("\\"))
@@ -189,13 +188,13 @@ namespace FreemiumUtilities.ShortcutFixer
 					}
 					if (shortcutInfo.TargetPath.Contains("Program Files"))
 					{
-						var shortcutInfox86 = (IWshShortcut)wshShellClass.CreateShortcut(shortcut.FullName);
-						shortcutInfox86.TargetPath = shortcutInfox86.TargetPath.Replace(" (x86)", "");
+                        IWshShortcut shortcutInfox86 = (IWshShortcut)wshShellClass.CreateShortcut(shortcut.FullName);
+						shortcutInfox86.TargetPath = shortcutInfox86.TargetPath.Replace(" (x86)", string.Empty);
 
 						if (!File.Exists(shortcutInfo.TargetPath) && !Directory.Exists(shortcutInfo.TargetPath)
-							&& !File.Exists(shortcutInfox86.TargetPath.Replace(" (x86)", "")) && !Directory.Exists(shortcutInfox86.TargetPath.Replace(" (x86)", "")))
+							&& !File.Exists(shortcutInfox86.TargetPath.Replace(" (x86)", string.Empty)) && !Directory.Exists(shortcutInfox86.TargetPath.Replace(" (x86)", string.Empty)))
 						{
-							var brokenShortcut = new Shortcut
+							Shortcut brokenShortcut = new Shortcut
 													{
 														Name = shortcut.Name,
 														Target = shortcutInfox86.TargetPath,

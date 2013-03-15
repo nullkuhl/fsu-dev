@@ -6,46 +6,37 @@ using FileEraser.Properties;
 
 namespace FileEraser
 {
-	/// <summary>
-	/// Bottom control
-	/// </summary>
-	public partial class BottomControl : UserControl
-	{
-		/// <summary>
-		/// constructor for BottomControl
-		/// </summary>
-		public BottomControl()
-		{
-			InitializeComponent();
-			SetImage();
-		}
+    /// <summary>
+    /// Bottom control
+    /// </summary>
+    public partial class BottomControl : UserControl
+    {
+        /// <summary>
+        /// constructor for BottomControl
+        /// </summary>
+        public BottomControl()
+        {
+            InitializeComponent();
+            SetImage();
+        }
 
-		/// <summary>
-		/// change image for BottomControl
-		/// </summary>
-		void SetImage()
-		{
-			Image image;
-			try
-			{
-				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
-				image = ImageResources.bottomBar;
-				if (File.Exists(path))
-				{
-					image = Image.FromFile(path);
-				}
-			}
-			catch (Exception)
-			{
-				image = ImageResources.bottomBar;
-			}
+        /// <summary>
+        /// change image for BottomControl
+        /// </summary>
+        void SetImage()
+        {
+            Image image = ImageResources.bottomBar; ;
+            try
+            {
+                string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
+                if (File.Exists(path))
+                    image = Image.FromFile(path);
+            }
+            catch (Exception)
+            {
+            }
 
-			if (image == null)
-			{
-				image = ImageResources.bottomBar;
-			}
-
-			lblMain.Image = image;
-		}
-	}
+            lblMain.Image = image;
+        }
+    }
 }

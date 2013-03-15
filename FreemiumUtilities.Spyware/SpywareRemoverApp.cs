@@ -85,17 +85,17 @@ namespace FreemiumUtilities.Spyware
             {
                 SpywareFound.Clear();
 
-                var directoriesToScan = new List<DirectoryInfo>();
+                List<DirectoryInfo> directoriesToScan = new List<DirectoryInfo>();
 
                 // Windows directory
-                var winDirPath = Environment.GetEnvironmentVariable("windir");
-                if (winDirPath != null)
+                string winDirPath = Environment.GetEnvironmentVariable("windir");
+                if (!string.IsNullOrEmpty(winDirPath))
                 {
-                    var winDirInfo = new DirectoryInfo(winDirPath);
+                    DirectoryInfo winDirInfo = new DirectoryInfo(winDirPath);
 
                     // SysWOW64
                     string sysWow64Path = winDirPath + "\\SysWOW64";
-                    var sysWow64Info = new DirectoryInfo(sysWow64Path);
+                    DirectoryInfo sysWow64Info = new DirectoryInfo(sysWow64Path);
                     if (sysWow64Info.Exists)
                         directoriesToScan.Add(sysWow64Info);
 
@@ -187,7 +187,7 @@ namespace FreemiumUtilities.Spyware
 					{
 						if (spywareLst.Contains(file.Name))
 						{
-							var spyware = new SpywareInfo
+                            SpywareInfo spyware = new SpywareInfo
 											{
 												Spyware = file.Name,
 												FilePath = file.FullName
@@ -196,7 +196,7 @@ namespace FreemiumUtilities.Spyware
 							ProblemsCount++;
 						}
 
-						var progressPercentage = (int)((double)sizeScanned / progressMax * 100);
+						int progressPercentage = (int)((double)sizeScanned / progressMax * 100);
 
 						scanBackgroundWorker.ReportProgress(progressPercentage, file.FullName); //reports a percentage between 0 and 100
 					}
@@ -245,7 +245,7 @@ namespace FreemiumUtilities.Spyware
                         return;
                     }
                     SpywareInfo spyware = SpywareFound[i];
-                    var progressPercentage = (int)((double)(i + 1) / SpywareFoundCount * 100);
+                    int progressPercentage = (int)((double)(i + 1) / SpywareFoundCount * 100);
                     fixBackgroundWorker.ReportProgress(progressPercentage, spyware.FilePath); //reports a percentage between 0 and 100
                     if (File.Exists(spyware.FilePath))
                     {
@@ -315,12 +315,7 @@ namespace FreemiumUtilities.Spyware
 		/// <param name="callback">The callback method to update progress</param>
 		public override void StartScan(ProgressUpdate callback, ScanComplete complete, CancelComplete cancelComplete,
 									   bool fixAfterScan)
-		{
-			// Get Windows partition
-			//var winPartition = Environment.GetEnvironmentVariable("SystemDrive");
-			//var winDriveInfo = new DriveInfo(winPartition);
-			//winPartitionUsedSpace = winDriveInfo.TotalSize - winDriveInfo.TotalFreeSpace;
-
+		{			
 			this.callback = callback;
 			this.complete = complete;
 			this.cancelComplete = cancelComplete;

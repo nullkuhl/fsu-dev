@@ -28,7 +28,7 @@ namespace FreemiumUtilities.Spyware
 				spywareLst.BeginUpdate();
 				foreach (SpywareInfo spyware in value)
 				{
-					var listItem = new ListViewItem(new[]
+                    ListViewItem listItem = new ListViewItem(new[]
 					                                	{
 					                                		spyware.Spyware,
 					                                		spyware.FilePath
@@ -46,7 +46,7 @@ namespace FreemiumUtilities.Spyware
 		{
 			get
 			{
-				var problemList = new List<ListViewItem>();
+                List<ListViewItem> problemList = new List<ListViewItem>();               
 				foreach (ListViewItem item in spywareLst.Items)
 				{
 					problemList.Add(item);

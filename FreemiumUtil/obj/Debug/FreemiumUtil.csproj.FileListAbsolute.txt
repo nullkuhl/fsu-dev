@@ -3,3 +3,9 @@ E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\bin\Debug\FreemiumUti
 E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
 E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.dll
 E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.pdb
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\bin\Debug\FreemiumUtil.dll.config
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\bin\Debug\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\obj\Debug\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\obj\Debug\FreemiumUtil.pdb
+E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtil\obj\Debug\FreemiumUtil.csprojResolveAssemblyReference.cache

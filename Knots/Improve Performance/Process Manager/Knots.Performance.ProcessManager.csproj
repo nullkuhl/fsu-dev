@@ -82,6 +82,7 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlockedProcessesManager.cs" />
     <Compile Include="BottomControl.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -28,10 +28,6 @@ namespace Uninstall_Manager
 			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
 			if (created)
 			{
-				//  AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-				// Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-				// Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
-
 				Properties.Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
 
 				Application.EnableVisualStyles();

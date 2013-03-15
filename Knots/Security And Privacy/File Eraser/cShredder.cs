@@ -547,15 +547,6 @@ namespace FileEraser
         #endregion
 
         #region Events
-        //public delegate void ProgressMaxDelegate(Int32 Max);
-        //public event ProgressMaxDelegate ProgressMax;
-
-        //public delegate void ProgressTickDelegate();
-        //public event ProgressTickDelegate ProgressTick;
-
-        //public delegate void CompleteDelegate();
-        //public event CompleteDelegate Complete;
-
 		/// <summary>
 		/// Error delegate
 		/// </summary>
@@ -719,7 +710,6 @@ namespace FileEraser
         /// <returns>Boolean</returns>
         public Boolean startShredder()
         {
-            //Boolean bC = false;
             // reset collections
             new ArrayList();
             new ArrayList();
@@ -754,15 +744,12 @@ namespace FileEraser
                     if (CloseInstance)
                         closeProcess(FilePath);
                     // relay processing status
-                    //Status(0, rm.GetString("processing_file")+" " + FilePath);
                     if (shredFile(UNICODE_PREFIX + FilePath))
                     {
-                        //Status(0, rm.GetString("file")+" " + FilePath + rm.GetString("deleted"));
                         return true;
                     }
                     else
                     {
-                        //Status(0, rm.GetString("could_not_delete")+" " + FilePath);
                         adjustToken(false, tkRights);
                         return false;
                     }
@@ -1053,8 +1040,6 @@ namespace FileEraser
                 NewState.Privileges.pLuid = tLuid;
                 NewState.Privileges.Attributes = (Enable ? SE_PRIVILEGE_ENABLED : 0);
                 // Adjust the token privilege
-                //IntPtr pState = IntPtr.Zero;
-                //Marshal.StructureToPtr(NewState, pState, true);
                 return (AdjustTokenPrivileges(hToken, false, ref NewState, (uint)Marshal.SizeOf(NewState), IntPtr.Zero, IntPtr.Zero));
             }
             finally
@@ -1289,56 +1274,5 @@ namespace FileEraser
             return true;
         }
         #endregion
-
-        #region Directory
-        /// <summary>
-        /// Create a list of files to be deleted
-        /// </summary>
-        /// <param name="sPath">string - directory path</param>
-        /// <param name="bRecurse">Boolean recurse subfolders</param>
-        //void preLoader(string sPath, Boolean bRecurse)
-        //{
-        //    IntPtr hFile = IntPtr.Zero;
-
-        //    try
-        //    {
-        //        hFile = FindFirstFileW(sPath + "*.*", out W32);
-        //        if (hFile.ToInt32() != -1)
-        //        {
-        //            do
-        //            {
-        //                if ((W32.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0)
-        //                {
-        //                    if (W32.cFileName != "." && W32.cFileName != "..")
-        //                    {
-        //                        if (bRecurse)
-        //                        {
-        //                            // recurse directory
-        //                            if (DeleteFolders)
-        //                                DirectoryList.Add(sPath + W32.cFileName + @"\");
-        //                            preLoader(sPath + W32.cFileName + @"\", true);
-        //                        }
-        //                    }
-        //                }
-        //                else
-        //                {
-        //                    //add files
-        //                    FileList.Add(sPath + W32.cFileName);
-        //                }
-        //            } while (FindNextFileW(hFile, out W32));
-        //            FindClose(hFile);
-        //        }
-        //    }
-        //    finally
-        //    {
-        //        if (hFile != IntPtr.Zero)
-        //            FindClose(hFile);
-        //    }
-        //    return;
-        //}
-        #endregion
-
     }
 }
-
-

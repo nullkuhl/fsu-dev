@@ -41,7 +41,7 @@ namespace ClickMaint
 			lblProcID.Text = string.Format("This process ID: {0}", Process.GetCurrentProcess().Id);
 			try
 			{
-				var processes = Process.GetProcessesByName("FreemiumUtilities");
+                Process[] processes = Process.GetProcessesByName("FreemiumUtilities");
 
 				string[] args = Environment.GetCommandLineArgs();
 
@@ -52,12 +52,10 @@ namespace ClickMaint
 				}
 				else
 				{
-					/*  MessageBox.Show("No other running applications found.");*/
-					var p = new Process
+                    Process p = new Process
 								{
 									StartInfo = { FileName = Environment.CurrentDirectory + "\\FreemiumUtilities.exe", Arguments = "StartHidden" }
 								};
-					//MessageBox.Show(p.StartInfo.FileName);
 					p.Start();
 					Thread.Sleep(3000);
 
@@ -151,11 +149,8 @@ namespace ClickMaint
 		[MTAThread]
 		static void Main()
 		{
-			//Application.Exit();
 			new frmMain();
 			Environment.Exit(0);
-			//Application.EnableVisualStyles();
-			//Application.Run(new Form1());
 		}
 
 		/// <summary>

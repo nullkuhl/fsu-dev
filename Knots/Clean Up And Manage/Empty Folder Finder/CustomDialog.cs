@@ -76,7 +76,7 @@ namespace EmptyFolderFinder
 		/// <param name="culture"></param>
 		void SetCulture(CultureInfo culture)
 		{
-			var rm = new ResourceManager("EmptyFolderFinder.Resources", typeof (CustomDialog).Assembly);
+            ResourceManager rm = new ResourceManager("EmptyFolderFinder.Resources", typeof(CustomDialog).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
 
 			btnAbort.Text = rm.GetString("abort_button");
@@ -125,7 +125,7 @@ namespace EmptyFolderFinder
 		/// <param name="e"></param>
 		void CustomDialog_Load(object sender, EventArgs e)
 		{
-			var culture = new CultureInfo(CfgFile.Get("Lang"));
+            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
 			SetCulture(culture);
 		}
 	}

@@ -163,8 +163,7 @@ namespace Disk_Cleaner
             this.lblWait.Size = new System.Drawing.Size(356, 37);
             this.lblWait.TabIndex = 3;
             this.lblWait.Tag = "2";
-            this.lblWait.Text = "Please wait until Disk Cleaner finishes scanning the selected drives.";
-            this.lblWait.Click += new System.EventHandler(this.lblWait_Click);
+            this.lblWait.Text = "Please wait until Disk Cleaner finishes scanning the selected drives.";            
             // 
             // lblSelectDrives
             // 

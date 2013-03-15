@@ -48,10 +48,10 @@ namespace RegistryCompactor
 				MessageBoxResult.OK)
 				return;
 
-			var secureDesktop = new SecureDesktop();
+            SecureDesktop secureDesktop = new SecureDesktop();
 			secureDesktop.Show();
 
-			var progressWindow = new AnalyzingProgress();
+            AnalyzingProgress progressWindow = new AnalyzingProgress();
 			progressWindow.ShowDialog();
 
 			secureDesktop.Close();
@@ -85,6 +85,9 @@ namespace RegistryCompactor
 
 		#region methods Analyzing Results
 
+        /// <summary>
+        /// Window Initialization
+        /// </summary>
 		void Init()
 		{
 			double oldRegistrySize = Utilites.GetOldRegistrySize(), newRegistrySize = Utilites.GetNewRegistrySize();
@@ -103,7 +106,7 @@ namespace RegistryCompactor
 			                         			diffRegistrySizeMB)
 			                         	};
 
-			var logo = new BitmapImage();
+            BitmapImage logo = new BitmapImage();
 
 			if ((100 - ((newRegistrySize / oldRegistrySize) * 100)) >= 5)
 			{
@@ -125,6 +128,11 @@ namespace RegistryCompactor
 			CurrentStep.Content = String.Format(Properties.Resources.StepXofY, 2, 3);
 		}
 
+        /// <summary>
+        /// Handles click event of Compact button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void buttonCompact_Click(object sender, RoutedEventArgs e)
 		{
 			if (
@@ -133,10 +141,10 @@ namespace RegistryCompactor
 				MessageBoxResult.No)
 				return;
 
-			var secureDesktop = new SecureDesktop();
+            SecureDesktop secureDesktop = new SecureDesktop();
 			secureDesktop.Show();
 
-			var compactingProgress = new CompactingProgress();
+            CompactingProgress compactingProgress = new CompactingProgress();
 			compactingProgress.ShowDialog();
 
 			secureDesktop.Close();
@@ -151,6 +159,11 @@ namespace RegistryCompactor
 			Close();
 		}
 
+        /// <summary>
+        /// Handles click event of Cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void buttonCancel_Click(object sender, RoutedEventArgs e)
 		{
 			gridAnalyzingResults.Visibility = Visibility.Collapsed;

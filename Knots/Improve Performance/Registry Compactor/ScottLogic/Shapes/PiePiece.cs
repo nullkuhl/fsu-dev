@@ -175,7 +175,7 @@ namespace ScottLogic.Shapes
             get
             {
                 // Create a StreamGeometry for describing the shape
-            	var geometry = new StreamGeometry {FillRule = FillRule.EvenOdd};
+                StreamGeometry geometry = new StreamGeometry { FillRule = FillRule.EvenOdd };
 
             	using (StreamGeometryContext context = geometry.Open())
                 {
@@ -218,8 +218,8 @@ namespace ScottLogic.Shapes
 
             }
 
-            var outerArcSize = new Size(Radius, Radius);
-            var innerArcSize = new Size(InnerRadius, InnerRadius);
+            Size outerArcSize = new Size(Radius, Radius);
+            Size innerArcSize = new Size(InnerRadius, InnerRadius);
 
             context.BeginFigure(innerArcStartPoint, true, true);
             context.LineTo(outerArcStartPoint, true, true);
@@ -228,5 +228,4 @@ namespace ScottLogic.Shapes
             context.ArcTo(innerArcStartPoint, innerArcSize, 0, largeArc, SweepDirection.Counterclockwise, true, true);
         }
     }
-
 }

@@ -24,7 +24,7 @@ namespace RegistryCompactor
 			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
 			if (created)
 			{
-				var app = new App();
+                App app = new App();
 				Permissions.SetPrivileges(true);
 				app.InitializeComponent();
 				app.Run();
@@ -36,28 +36,32 @@ namespace RegistryCompactor
 		{
 			RegistryKey hives;
 			Compactor.RegistryHives = new ObservableCollection<Hive>();
+            try
+            {
+                using (hives = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\hivelist"))
+                {
+                    if (hives == null)
+                        throw new ApplicationException(RegistryCompactor.Properties.Resources.HiveListError);
 
-			using (hives = Registry.LocalMachine.OpenSubKey(@"SYSTEM\CurrentControlSet\Control\hivelist"))
-			{
-				if (hives == null)
-					throw new ApplicationException(RegistryCompactor.Properties.Resources.HiveListError);
+                    foreach (string valueName in hives.GetValueNames())
+                    {
+                        // Don't touch these hives because they are critical for Windows
+                        if (valueName.Contains("BCD") || valueName.Contains("HARDWARE"))
+                            continue;
 
-				foreach (string valueName in hives.GetValueNames())
-				{
-					// Don't touch these hives because they are critical for Windows
-					if (valueName.Contains("BCD") || valueName.Contains("HARDWARE"))
-						continue;
+                        string hivePath = hives.GetValue(valueName) as string;
 
-					var hivePath = hives.GetValue(valueName) as string;
+                        if (hivePath != null && hivePath[hivePath.Length - 1] == 0)
+                            hivePath = hivePath.Substring(0, hivePath.Length - 1);
 
-					if (hivePath != null && hivePath[hivePath.Length - 1] == 0)
-						hivePath = hivePath.Substring(0, hivePath.Length - 1);
-
-					if (!string.IsNullOrEmpty(valueName) && !string.IsNullOrEmpty(hivePath))
-						Compactor.RegistryHives.Add(new Hive(valueName, hivePath));
-				}
-			}
-
+                        if (!string.IsNullOrEmpty(valueName) && !string.IsNullOrEmpty(hivePath))
+                            Compactor.RegistryHives.Add(new Hive(valueName, hivePath));
+                    }
+                }
+            }
+            catch
+            {
+            }
 			RegistryCompactor.Properties.Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
 		}
 	}

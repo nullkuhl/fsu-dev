@@ -56,24 +56,19 @@ namespace ProcessManager
 		/// </summary>
 		void SetImage()
 		{
-			Image image;
+            Image image =  Resources.thinBar;
 			try
 			{
-				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\thinblue.png";
-				image = Resources.thinBar;
+				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\thinblue.png";				
 				if (File.Exists(path))
-				{
 					image = Image.FromFile(path);
-				}
 			}
 			catch (Exception)
 			{
-				image = Resources.thinBar;
 			}
 
 			if (image == null)
 			{
-				image = Resources.thinBar;
 			}
 
 			lblBar.Image = image;

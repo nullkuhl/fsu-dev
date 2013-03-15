@@ -450,4 +450,7 @@ werden, sobald sie gelöscht werden. Die bisherigen Daten darin wurden jedoch zu
   <data name="ie_running" xml:space="preserve">
     <value>Internet Explorer läuft. Bitte schließen Sie den Browser Internet Explorer, um Cookies zu löschen.</value>
   </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer bereits ausgeführt wird, schließen Sie es bitte führen Sie dann erneut zu scannen.</value>
+  </data>
 </root>

@@ -405,7 +405,7 @@ namespace FreemiumUtilities.TracksEraser
                     return;
                 }
                 //Update progress bar
-                worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), string.Empty);
+                worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "");
 
                 if (resultsTxt.InvokeRequired)
                 {
@@ -972,7 +972,7 @@ namespace FreemiumUtilities.TracksEraser
 
                         var sqrbi = new SHQUERYRBINFO();
                         sqrbi.cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO));
-                        int result = SHQueryRecycleBin(string.Empty, ref sqrbi);
+                        int result = SHQueryRecycleBin("", ref sqrbi);
                         if (result == 0)
                         {
                             recycleBinCount = sqrbi.i64NumItems;
@@ -3357,7 +3357,7 @@ namespace FreemiumUtilities.TracksEraser
                     bool clearRecycleBin = trvMain.Nodes[0].Nodes[5].Checked;
                     if (clearRecycleBin)
                     {
-                        SHEmptyRecycleBin(IntPtr.Zero, string.Empty, SHERB_NOCONFIRMATION | SHERB_NOPROGRESSUI | SHERB_NOSOUND);
+                        SHEmptyRecycleBin(IntPtr.Zero, "", SHERB_NOCONFIRMATION | SHERB_NOPROGRESSUI | SHERB_NOSOUND);
                     }
                 }
                 catch

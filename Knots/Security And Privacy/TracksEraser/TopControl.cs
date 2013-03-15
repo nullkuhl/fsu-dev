@@ -6,57 +6,57 @@ using FreemiumUtilities.TracksEraser.Properties;
 
 namespace FreemiumUtilities.TracksEraser
 {
-	/// <summary>
-	/// Top control
-	/// </summary>
-	public partial class TopControl : UserControl
-	{
-		/// <summary>
-		/// constructor for TopControl
-		/// </summary>
-		public TopControl()
-		{
-			InitializeComponent();
-		}
+    /// <summary>
+    /// Top control
+    /// </summary>
+    public partial class TopControl : UserControl
+    {
+        /// <summary>
+        /// constructor for TopControl
+        /// </summary>
+        public TopControl()
+        {
+            InitializeComponent();
+        }
 
-		/// <summary>
-		/// Top control text
-		/// </summary>
-		public override string Text
-		{
-			get { return lblText.Text; }
-			set { lblText.Text = value; }
-		}
+        /// <summary>
+        /// Top control text
+        /// </summary>
+        public override string Text
+        {
+            get { return lblText.Text; }
+            set { lblText.Text = value; }
+        }
 
-		/// <summary>
-		/// handle mouse enter event to change help icon
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void lblHelp_MouseEnter(object sender, EventArgs e)
-		{
-			lblHelp.Image = Resources.help_on;
-		}
+        /// <summary>
+        /// handle mouse enter event to change help icon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void lblHelp_MouseEnter(object sender, EventArgs e)
+        {
+            lblHelp.Image = Resources.help_on;
+        }
 
-		/// <summary>
-		/// handle mouse leave event to change help icon
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void lblHelp_MouseLeave(object sender, EventArgs e)
-		{
-			lblHelp.Image = Resources.help_off;
-		}
+        /// <summary>
+        /// handle mouse leave event to change help icon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void lblHelp_MouseLeave(object sender, EventArgs e)
+        {
+            lblHelp.Image = Resources.help_off;
+        }
 
-		/// <summary>
-		/// handle click event to open help url
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void lblHelp_Click(object sender, EventArgs e)
-		{
-			var resourceManager = new ResourceManager("TracksEraser.Resources", typeof (TopControl).Assembly);
-			Process.Start(new ProcessStartInfo(resourceManager.GetString("HelpUrl")));
-		}
-	}
+        /// <summary>
+        /// handle click event to open help url
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void lblHelp_Click(object sender, EventArgs e)
+        {
+            ResourceManager resourceManager = new ResourceManager("TracksEraser.Resources", typeof(TopControl).Assembly);
+            Process.Start(new ProcessStartInfo(resourceManager.GetString("HelpUrl")));
+        }
+    }
 }

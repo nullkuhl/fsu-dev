@@ -797,7 +797,7 @@ namespace FreemiumUtilities
 				        		day = GetWeeklyStatus(),
 				        		week = nudWeeks.Value > 1 ? nudWeeks.Value + " " + WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeeks") : WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeek")
 				        	};
-				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleWeeklyText").OskarFormat(o);
+				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleWeeklyText").Inject(o);
 
 				pnlDay.Visible = false;
 				pnlWeek.Visible = true;
@@ -812,7 +812,7 @@ namespace FreemiumUtilities
 				        		time = timePicker.Value.ToString(WPFLocalizeExtensionHelpers.GetUIString("TimeFormat"), System.Globalization.DateTimeFormatInfo.InvariantInfo),
 				        		day = GetMonthlyStatus()
 				        	};
-				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleMonthlyText").OskarFormat(o);
+				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleMonthlyText").Inject(o);
 
 				pnlDay.Visible = false;
 				pnlWeek.Visible = false;
@@ -828,7 +828,7 @@ namespace FreemiumUtilities
 				        		time = timePicker.Value.ToString(WPFLocalizeExtensionHelpers.GetUIString("TimeFormat"), System.Globalization.DateTimeFormatInfo.InvariantInfo),
 				        		date = timePickerOnce.Value.Date.ToShortDateString()
 				        	};
-				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleOnceText").OskarFormat(o);
+				scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleOnceText").Inject(o);
 
 				pnlDay.Visible = false;
 				pnlWeek.Visible = false;

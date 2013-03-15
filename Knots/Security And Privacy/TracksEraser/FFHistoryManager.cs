@@ -14,7 +14,7 @@ namespace FreemiumUtilities.TracksEraser
             string x = Environment.GetFolderPath(
                 Environment.SpecialFolder.ApplicationData);
             x += @"\Mozilla\Firefox\Profiles\";
-            var di = new DirectoryInfo(x);
+            DirectoryInfo di = new DirectoryInfo(x);
             DirectoryInfo[] dir = di.GetDirectories("*.default");
             if (dir.Length != 1)
                 return string.Empty;
@@ -30,28 +30,31 @@ namespace FreemiumUtilities.TracksEraser
 
         public static void ClearHistory()
         {
-            try
+            if (!string.IsNullOrEmpty(GetFFHistoryPath()))
             {
-                using (var conn = new SQLiteConnection("Data Source=" + GetFFHistoryPath()))
+                try
                 {
-                    using (SQLiteCommand cmd = conn.CreateCommand())
+                    using (var conn = new SQLiteConnection("Data Source=" + GetFFHistoryPath()))
                     {
-                        try
+                        using (SQLiteCommand cmd = conn.CreateCommand())
                         {
-                            cmd.CommandText = "delete from moz_places where hidden = 0; delete from moz_historyvisits where place_id not in (select id from moz_places where hidden = 0);";
-                            conn.Open();
-                            int res = cmd.ExecuteNonQuery();
-                        }
-                        finally
-                        {
-                            cmd.Dispose();
-                            conn.Close();
+                            try
+                            {
+                                cmd.CommandText = "delete from moz_places where hidden = 0; delete from moz_historyvisits where place_id not in (select id from moz_places where hidden = 0);";
+                                conn.Open();
+                                int res = cmd.ExecuteNonQuery();
+                            }
+                            finally
+                            {
+                                cmd.Dispose();
+                                conn.Close();
+                            }
                         }
                     }
                 }
+                catch
+                { }
             }
-            catch
-            { }
         }
     }
 }

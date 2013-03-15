@@ -1,0 +1,383 @@
+﻿<Window x:Class="DiskAnalysis.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:props="clr-namespace:DiskAnalysis.Properties"
+		Title="{x:Static props:Resources.DiskAnalysis}"
+		ResizeMode="NoResize"
+		Width="890"
+		Height="729"
+		xmlns:WinCtr="clr-namespace:DiskAnalysis"
+		xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+		WindowStartupLocation="CenterScreen"
+		WindowState="Normal"
+		KeyUp="Window_KeyUp"
+		xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit"
+		Background="#FFF0F0F0"
+		Closing="Window_Closing"
+		Icon="/DiskAnalysis;component/Images/FSUIcon.ico">
+	<Window.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="/PresentationFramework.Aero;component/themes/Aero.NormalColor.xaml" />
+				<ResourceDictionary Source="pack://application:,,,/WPFToolkit;component/Themes/Aero.NormalColor.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Window.Resources>
+	<Grid x:Name="LayoutGrid"
+		  Height="700">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="64" />
+			<RowDefinition Height="22" />
+			<RowDefinition Height=".3*" />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height=".2*" />
+			<RowDefinition Height="25" />
+			<RowDefinition Height="31" />
+		</Grid.RowDefinitions>
+		<WindowsFormsHost  Height="64"
+						   Width="Auto"
+						   Grid.Row="0" HorizontalAlignment="Stretch">
+			<WinCtr:TopControl x:Name="header"
+							   Text="{x:Static props:Resources.DiskAnalysis}" />
+		</WindowsFormsHost>
+		<Menu x:Name="Toolbar"
+			  Background="Transparent"
+			  VerticalContentAlignment="Center"
+			  Height="20"
+			  VerticalAlignment="Center"
+			  Grid.Row="1"
+			  Width="875"
+			  Margin="5,1,-12,1"
+			  HorizontalAlignment="Center">
+			<MenuItem x:Name="Analyze"
+					  Header="{x:Static props:Resources.Analyze}"
+					  Click="Analyze_Click"
+					  Padding="0,2,8,0">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Analyze.ico"
+						   Margin="0,2,0,0"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem x:Name="Refresh"
+					  Header="{x:Static props:Resources.Refresh}"
+					  Padding="0,2,8,0"
+					  Click="Refresh_Click"
+					  IsEnabled="False">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Refresh.ico"
+						   Margin="0,2,0,0"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem x:Name="Explorer"
+					  Header="{x:Static props:Resources.Explorer}"
+					  Padding="0,2,8,0"
+					  Click="Explorer_Click">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Folder.ico"
+						   Margin="0,2,0,0"
+						   HorizontalAlignment="Center"
+						   VerticalAlignment="Center"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem x:Name="CommandPrompt"
+					  Header="{x:Static props:Resources.CommandPrompt}"
+					  Padding="0,2,8,0"
+					  Click="CommandPrompt_Click">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Cmd.ico"
+						   Margin="0,2,0,0"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem x:Name="Properties"
+					  Header="{x:Static props:Resources.Properties}"
+					  Padding="0,2,8,0"
+					  Click="Properties_Click">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Properties.ico"
+						   Margin="0,2,0,0"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem x:Name="Delete"
+					  Header="{x:Static props:Resources.Delete}"
+					  Padding="0,2,8,0"
+					  Click="Delete_Click">
+				<MenuItem.Icon>
+					<Image Source="/DiskAnalysis;component/Images/Delete.ico"
+						   Margin="0,2,0,0"
+						   Width="16"
+						   Height="16" />
+				</MenuItem.Icon>
+			</MenuItem>
+		</Menu>
+
+		<Grid Grid.Row="2"
+			  MaxWidth="885"
+			  MinWidth="885"
+			  VerticalAlignment="Stretch">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width=".58*" />
+				<ColumnDefinition Width="Auto" />
+				<ColumnDefinition Width=".42*" />
+				<!--<ColumnDefinition Width="Auto" />-->
+			</Grid.ColumnDefinitions>
+			<telerik:RadTreeListView Grid.Column="0"
+									 Name="rtvFolderList"
+									 VerticalAlignment="Stretch"
+									 ItemsSource="{Binding}"
+									 Style="{StaticResource ResourceKey=TreeListViewStyle}"
+									 DataLoaded="rtvFolderList_DataLoaded"
+									 CanUserSortColumns="True"
+									 SelectionChanged="rtvFolderList_SelectionChanged"
+									 GotFocus="rtvFolderList_GotFocus"
+									 MouseEnter="rtvFolderList_MouseEnter">
+				<telerik:RadTreeListView.ChildTableDefinitions>
+					<telerik:TreeListViewTableDefinition ItemsSource="{Binding SubFolders}" />
+				</telerik:RadTreeListView.ChildTableDefinitions>
+				<telerik:RadTreeListView.Columns>
+					<telerik:GridViewDataColumn DataType="{x:Null}"
+												Header="{x:Static props:Resources.Name}"
+												SortMemberPath="Name"
+												HeaderCellStyle="{StaticResource ResourceKey=GridHeaderCellStyle}"
+												Width=".36*">
+						<telerik:GridViewColumn.CellStyle>
+							<Style TargetType="{x:Type telerik:GridViewCell}">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type telerik:GridViewCell}">
+											<StackPanel Orientation="Horizontal">
+												<Image Source="/DiskAnalysis;component/Images/Folder.ico" />
+												<TextBlock Text="{Binding Path=Name}"
+														   Margin="2,0" />
+											</StackPanel>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</telerik:GridViewColumn.CellStyle>
+					</telerik:GridViewDataColumn>
+
+					<telerik:GridViewDataColumn DataType="{x:Null}"
+												Name="PercentColumHeader"
+												Header="{x:Static props:Resources.Percent}"
+												SortMemberPath="dPercent"
+												HeaderCellStyle="{StaticResource ResourceKey=GridHeaderCellStyle}"
+												Width=".24*">
+						<telerik:GridViewColumn.CellStyle>
+							<Style TargetType="{x:Type telerik:GridViewCell}">
+								<Setter Property="Template">
+									<Setter.Value>
+										<ControlTemplate TargetType="{x:Type telerik:GridViewCell}">
+											<StackPanel Orientation="Horizontal">
+												<Border BorderThickness="1"
+														BorderBrush="Gray"
+														Width="50"
+														Height="10">
+													<Rectangle Width="{Binding Path=DisplayPercent}"
+															   HorizontalAlignment="Left"
+															   Height="8"
+															   VerticalAlignment="Center"
+															   Fill="Gray" />
+												</Border>
+												<TextBlock Text="{Binding Path=Percent}"
+														   Margin="2,0" />
+											</StackPanel>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+						</telerik:GridViewColumn.CellStyle>
+					</telerik:GridViewDataColumn>
+
+					<telerik:GridViewDataColumn Header="{x:Static props:Resources.Size}"
+												DataMemberBinding="{Binding Path=Size}"
+												Width=".16*"
+												SortMemberPath="lSize"
+												HeaderCellStyle="{StaticResource ResourceKey=GridHeaderCellStyle}" />
+					<telerik:GridViewDataColumn Header="{x:Static props:Resources.Files}"
+												DataMemberBinding="{Binding Path=FinalFileCount}"
+												Width=".13*"
+												HeaderCellStyle="{StaticResource ResourceKey=GridHeaderCellStyle}" />
+					<telerik:GridViewDataColumn Header="{x:Static props:Resources.Folders}"
+												DataMemberBinding="{Binding Path=FinalFolderCount}"
+												Width=".12*"
+												HeaderCellStyle="{StaticResource ResourceKey=GridHeaderCellStyle}" />
+				</telerik:RadTreeListView.Columns>
+			</telerik:RadTreeListView>
+
+			<GridSplitter Width="5"
+						  Grid.Column="1"
+						  HorizontalAlignment="Stretch"
+						  VerticalAlignment="Stretch"></GridSplitter>
+			<my:DataGrid Grid.Column="2"
+						 HorizontalAlignment="Stretch"
+						 VerticalAlignment="Stretch"
+						 ColumnWidth="*"
+						 Style="{StaticResource ResourceKey=DataGridStyle}"
+						 ItemsSource="{Binding}"
+						 Name="dgFileTypeList"
+						 VerticalScrollBarVisibility="Auto"
+						 SelectionChanged="dgFileTypeList_SelectionChanged"
+						 SelectionMode="Single"
+						 EnableColumnVirtualization="True"
+						 GotFocus="dgFileTypeList_GotFocus">
+				<my:DataGrid.Columns>
+					<my:DataGridTemplateColumn x:Name="collFileType"
+											   Header="{x:Static props:Resources.FileType}"
+											   Width=".25*"
+											   SortMemberPath="FileType">
+						<!-- SortMemberPath="FileType" -->
+
+						<my:DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Image Source="{Binding Path=IconLocation}"
+										   Margin="5,0" />
+									<TextBlock Text="{Binding Path=FileType}" />
+								</StackPanel>
+							</DataTemplate>
+						</my:DataGridTemplateColumn.CellTemplate>
+					</my:DataGridTemplateColumn>
+					<my:DataGridTemplateColumn x:Name="collPercent"
+											   Header="{x:Static props:Resources.Percent}"
+											   SortMemberPath="dPercentage"
+											   Width=".32*">
+						<my:DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<StackPanel Orientation="Horizontal">
+									<Border BorderThickness="1"
+											BorderBrush="Gray"
+											Width="50"
+											Height="10">
+										<Rectangle Width="{Binding Path=DisplayPercent}"
+												   HorizontalAlignment="Left"
+												   Height="8"
+												   VerticalAlignment="Center"
+												   Fill="Gray" />
+									</Border>
+									<TextBlock Text="{Binding Path=Percentage}"
+											   Margin="2,0" />
+								</StackPanel>
+							</DataTemplate>
+						</my:DataGridTemplateColumn.CellTemplate>
+					</my:DataGridTemplateColumn>
+					<my:DataGridTextColumn x:Name="collSize"
+										   Header="{x:Static props:Resources.Size}"
+										   Binding="{Binding Path=TotalFileSize}"
+										   SortMemberPath="lTotalFileSize"
+										   Width=".25*" />
+					<my:DataGridTextColumn x:Name="collFiles"
+										   Header="{x:Static props:Resources.Files}"
+										   Binding="{Binding Path=lTotalFileCount}"
+										   Width=".18*" />
+					<!--<my:DataGridTextColumn Header="Description" Binding="{Binding Path=Description}" />-->
+				</my:DataGrid.Columns>
+			</my:DataGrid>
+
+			<!--<GridSplitter Width="5" Grid.Column="4" HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch" ></GridSplitter>-->
+		</Grid>
+		<GridSplitter Height="5"
+					  Grid.Row="3"
+					  HorizontalAlignment="Stretch"
+					  VerticalAlignment="Stretch"></GridSplitter>
+		<my:DataGrid MinHeight="200"
+					 VerticalAlignment="Stretch"
+					 Grid.Row="4"
+					 Width="885"
+					 ColumnWidth="*"
+					 Style="{StaticResource ResourceKey=DataGridStyle}"
+					 ItemsSource="{Binding}"
+					 Name="dgFileListByFolder"
+					 GotFocus="dgFileListByFolder_GotFocus"
+					 SelectionMode="Single" SelectionChanged="dgFileListByFolder_SelectionChanged" MouseDoubleClick="dgFileListByFolder_MouseDoubleClick">
+			<my:DataGrid.Columns>
+				<my:DataGridTemplateColumn x:Name="collFolderFileName"
+										   Header="{x:Static props:Resources.FileName}"
+										   SortMemberPath="FileName">
+					<my:DataGridTemplateColumn.CellTemplate>
+						<DataTemplate>
+							<StackPanel Orientation="Horizontal"
+										Width="220"
+										HorizontalAlignment="Left">
+								<Image Source="{Binding Path=IconLocation}"
+									   Margin="5,0" />
+								<TextBlock Text="{Binding Path=FileName}" />
+							</StackPanel>
+						</DataTemplate>
+					</my:DataGridTemplateColumn.CellTemplate>
+				</my:DataGridTemplateColumn>
+				<my:DataGridTextColumn x:Name="collFolderSize"
+									   Header="{x:Static props:Resources.Size}"
+									   Binding="{Binding Path=FileSize}"
+									   SortMemberPath="lFileSize"
+									   CellStyle="{StaticResource ResourceKey=AlignRightStyle}"
+									   Width="80" />
+				<my:DataGridTextColumn x:Name="collFolderFolder"
+									   Header="{x:Static props:Resources.Folder}"
+									   Binding="{Binding Path=FolderPath}"
+									   SortMemberPath="FolderPath"
+									   Width="220" />
+				<my:DataGridTextColumn x:Name="collFolderModified"
+									   Header="{x:Static props:Resources.Modified}"
+									   Binding="{Binding Path=ModifiedDate}"
+									   SortMemberPath="ModifiedDate"
+									   Width="150"
+									   CellStyle="{StaticResource ResourceKey=AlignRightStyle}" />
+				<my:DataGridTextColumn x:Name="collFolderAttribute"
+									   Header="{x:Static props:Resources.Attribute}"
+									   Binding="{Binding Path=Attributes}" />
+			</my:DataGrid.Columns>
+		</my:DataGrid>
+		<StatusBar Name="statusBar1"
+				   Grid.Row="5"
+				   Margin="0,1,-17,-6">
+			<Grid Width="875"
+				  Height="Auto">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="120" />
+					<ColumnDefinition Width="106" />
+					<ColumnDefinition Width="*" />
+					<ColumnDefinition Width="50" />
+				</Grid.ColumnDefinitions>
+
+				<TextBlock Height="23"
+						   Name="txtStatus"
+						   Text="{x:Static props:Resources.Scanning}" />
+				<TextBlock Height="23"
+						   Name="txtFileLabel"
+						   Text="fileLabel"
+						   Grid.Column="2" />
+				<TextBlock Name="lnkAbort"
+						   Text="{x:Static props:Resources.Abort}"
+						   Cursor="Hand"
+						   Foreground="Blue"
+						   TextDecorations="Underline"
+						   MouseLeftButtonUp="lnkAbort_MouseLeftButtonUp"
+						   Grid.Column="3"
+						   TextAlignment="Right" />
+				<ProgressBar Height="17"
+							 HorizontalAlignment="Left"
+							 Name="progressBar1"
+							 VerticalAlignment="Top"
+							 Width="100"
+							 Grid.Column="1" />
+			</Grid>
+		</StatusBar>
+		<WindowsFormsHost  Height="31"
+						   Width="auto"
+						   Grid.Row="6">
+			<WinCtr:BottomControl x:Name="footer" />
+		</WindowsFormsHost>
+	</Grid>
+
+</Window>
