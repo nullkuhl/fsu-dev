@@ -12,3 +12,10 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Knots.Security.Decrypter.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.FormDecrypter.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Knots.Security.Decrypter.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.pdb

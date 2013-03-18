@@ -22,3 +22,11 @@ E:\Work\Freelance\Null Khul\System Utils_current\BugReporter\obj\Debug\BugReport
 E:\Work\Freelance\Null Khul\System Utils_current\BugReporter\obj\Debug\BugReporter.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils_current\BugReporter\obj\Debug\BugReporter.exe
 E:\Work\Freelance\Null Khul\System Utils_current\BugReporter\obj\Debug\BugReporter.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\bin\Debug\BugReporter.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\bin\Debug\BugReporter.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\bin\Debug\BugReporter.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\obj\Debug\BugReporter.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\obj\Debug\BugReporter.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\obj\Debug\BugReporter.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\obj\Debug\BugReporter.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\BugReporter\obj\Debug\BugReporter.pdb

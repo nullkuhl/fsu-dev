@@ -38,3 +38,23 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Eraser\obj\Debug\en\FileEraser.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\de\FileEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\bin\Debug\en\FileEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\Knots.Security.FileEraser.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Properties.ImageResources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\Knots.Security.FileEraser.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\de\FileEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\en\FileEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.pdb

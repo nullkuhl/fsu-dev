@@ -70,3 +70,27 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\Trac
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.pdb
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\TracksEraser\bin\Debug\de\TracksEraser.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\TracksEraser\bin\Debug\en\TracksEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\SQLite.Interop.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\System.Data.SQLite.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\UrlHistoryLibrary.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\de\TracksEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\bin\Debug\en\TracksEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\Knots.Security.TracksEraser.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmOptions.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\Knots.Security.TracksEraser.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\de\TracksEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\en\TracksEraser.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.pdb

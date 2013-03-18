@@ -12,3 +12,10 @@ E:\Work\Freelance\Null Khul\System Utils_current\1ClickMessageSender\obj\Debug\C
 E:\Work\Freelance\Null Khul\System Utils_current\1ClickMessageSender\obj\Debug\1ClickMessageSender.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils_current\1ClickMessageSender\obj\Debug\1Click.exe
 E:\Work\Freelance\Null Khul\System Utils_current\1ClickMessageSender\obj\Debug\1Click.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\bin\Debug\1Click.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\bin\Debug\1Click.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\bin\Debug\1Click.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\ClickMaint.NamespaceDoc.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1ClickMessageSender.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1Click.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1Click.pdb

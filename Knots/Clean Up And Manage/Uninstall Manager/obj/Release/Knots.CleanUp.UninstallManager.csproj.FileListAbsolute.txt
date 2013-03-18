@@ -56,3 +56,23 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Unins
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\de\UninstallManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\UninstallManager.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\UninstallManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\Libraries\WPFToolkit.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\Resources\TAFactory.IconPack.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\UninstallManager.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\UninstallManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\UninstallManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\bin\Release\de\UninstallManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Knots.CleanUp.UninstallManager.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.Resource.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.UninstallManager.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Uninstall_Manager.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\Knots.CleanUp.UninstallManager.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\de\UninstallManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\UninstallManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Uninstall Manager\obj\Release\UninstallManager.pdb

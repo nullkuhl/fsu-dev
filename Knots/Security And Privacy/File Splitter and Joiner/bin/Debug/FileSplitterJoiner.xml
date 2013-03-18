@@ -4,38 +4,6 @@
         <name>FileSplitterJoiner</name>
     </assembly>
     <members>
-        <member name="T:FileSplitterAndJoiner.BottomControl">
-            <summary>
-            Bottom styling control
-            </summary>
-        </member>
-        <member name="F:FileSplitterAndJoiner.BottomControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.BottomControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.BottomControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.BottomControl.#ctor">
-            <summary>
-            Contains bottom styling image
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.BottomControl.SetImage">
-            <summary>
-            Sets BotomBar.Image property to filename correspondent image object from resources
-            </summary>
-        </member>
         <member name="T:FileSplitterAndJoiner.FormPieceSizeDialog">
             <summary>
             Form that contains a UI for entering a piece size
@@ -100,84 +68,9 @@
             the contents of this method with the code editor.
             </summary>
         </member>
-        <member name="T:FileSplitterAndJoiner.TopControl">
-            <summary>
-            Top styling control
-            </summary>
-        </member>
-        <member name="F:FileSplitterAndJoiner.TopControl.components">
-            <summary> 
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.Dispose(System.Boolean)">
-            <summary> 
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.InitializeComponent">
-            <summary> 
-            Required method for Designer support - do not modify 
-            the contents of this method with the code editor.
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.#ctor">
-            <summary>
-            TopControl constructor
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_MouseEnter(System.Object,System.EventArgs)">
-            <summary>
-            Sets the hover state image for a help label at mouse enter event
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_MouseLeave(System.Object,System.EventArgs)">
-            <summary>
-            Sets the normal state image for a help label at mouse leave event
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_Click(System.Object,System.EventArgs)">
-            <summary>
-            Goes to the help webpage referenced in a <c>HelpUrl</c> constant
-            </summary>
-            <param name="sender"></param>
-            <param name="e"></param>
-        </member>
-        <member name="P:FileSplitterAndJoiner.TopControl.Text">
-            <summary>
-            Gets or sets the header text
-            </summary>
-        </member>
         <member name="T:FileSplitterAndJoiner.FormMain">
             <summary>
             File splitter and joiner main form
-            </summary>
-        </member>
-        <member name="F:FileSplitterAndJoiner.FormMain.components">
-            <summary>
-            Required designer variable.
-            </summary>
-        </member>
-        <member name="F:FileSplitterAndJoiner.FormMain.rm">
-            <summary>
-            ResourceManager instance
-            </summary>
-        </member>
-        <member name="M:FileSplitterAndJoiner.FormMain.Dispose(System.Boolean)">
-            <summary>
-            Clean up any resources being used.
-            </summary>
-            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.FormMain.InitializeComponent">
-            <summary>
-            Required method for Designer support - do not modify
-            the contents of this method with the code editor.
             </summary>
         </member>
         <member name="M:FileSplitterAndJoiner.FormMain.#ctor">
@@ -346,30 +239,6 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:FileSplitterAndJoiner.FormMain.VerifyMinFilesCount(System.String)">
-            <summary>
-            Verify that at least 2 part files (result of splitting operation) exist before joining
-            </summary>
-            <param name="filename"></param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.FormMain.IsEnoughSpace(System.String,System.String,System.Int16)">
-            <summary>
-             Verify that we have enough space on driver before joining
-            </summary>
-            <param name="destFolder"></param>
-            <param name="sourceFileName"></param>
-            <param name="pieceCount"></param>
-            <returns></returns>
-        </member>
-        <member name="M:FileSplitterAndJoiner.FormMain.IsEnoughSpace(System.String,System.String)">
-            <summary>
-             Verify that we have enough space on driver before splitting
-            </summary>
-            <param name="destFolder"></param>
-            <param name="sourceFileName"></param>
-            <param name="pieceCount"></param>
-            <returns></returns>
-        </member>
         <member name="M:FileSplitterAndJoiner.FormMain.btnJoinFile_Click(System.Object,System.EventArgs)">
             <summary>
             Execute file joining
@@ -519,6 +388,60 @@
             </summary>
             <param name="culture"></param>
         </member>
+        <member name="F:FileSplitterAndJoiner.FormMain.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="F:FileSplitterAndJoiner.FormMain.rm">
+            <summary>
+            ResourceManager instance
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.FormMain.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.FormMain.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FileSplitterAndJoiner.BottomControl">
+            <summary>
+            Bottom styling control
+            </summary>
+        </member>
+        <member name="F:FileSplitterAndJoiner.BottomControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.BottomControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.BottomControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.BottomControl.#ctor">
+            <summary>
+            Contains bottom styling image
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.BottomControl.SetImage">
+            <summary>
+            Sets BotomBar.Image property to filename correspondent image object from resources
+            </summary>
+        </member>
         <member name="T:FileSplitterAndJoiner.NamespaceDoc">
             <summary>
             The <see cref="N:FileSplitterAndJoiner"/> namespace defines a File Splitter and Joiner knot
@@ -542,6 +465,83 @@
             </summary>
             <param name="sender"></param>
             <param name="e"></param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.VerifyMinFilesCount(System.String)">
+            <summary>
+            Verify that at least 2 part files (result of splitting operation) exist before joining
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String,System.Int16)">
+            <summary>
+             Verify that we have enough space on driver before joining
+            </summary>
+            <param name="destFolder"></param>
+            <param name="sourceFileName"></param>
+            <param name="pieceCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String)">
+            <summary>
+             Verify that we have enough space on driver before splitting
+            </summary>
+            <param name="destFolder"></param>
+            <param name="sourceFileName"></param>
+            <param name="pieceCount"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FileSplitterAndJoiner.TopControl">
+            <summary>
+            Top styling control
+            </summary>
+        </member>
+        <member name="F:FileSplitterAndJoiner.TopControl.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.#ctor">
+            <summary>
+            TopControl constructor
+            </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_MouseEnter(System.Object,System.EventArgs)">
+            <summary>
+            Sets the hover state image for a help label at mouse enter event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_MouseLeave(System.Object,System.EventArgs)">
+            <summary>
+            Sets the normal state image for a help label at mouse leave event
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.TopControl.lblHelp_Click(System.Object,System.EventArgs)">
+            <summary>
+            Goes to the help webpage referenced in a <c>HelpUrl</c> constant
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:FileSplitterAndJoiner.TopControl.Text">
+            <summary>
+            Gets or sets the header text
+            </summary>
         </member>
         <member name="T:FileSplitterAndJoiner.Properties.Resources">
             <summary>

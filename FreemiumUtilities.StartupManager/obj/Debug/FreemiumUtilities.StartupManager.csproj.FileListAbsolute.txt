@@ -42,3 +42,18 @@ E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.StartupManage
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.StartupManager\bin\Debug\WPFLocalizeExtension.dll
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.Infrastructure.pdb
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\WPFLocalizeExtension.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmDetails.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmStartupMan.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.pdb

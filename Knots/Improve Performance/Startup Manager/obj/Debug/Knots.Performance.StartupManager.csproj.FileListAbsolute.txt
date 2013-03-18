@@ -61,3 +61,24 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Start
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Startup Manager\obj\Debug\en\StartupManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\de\StartupManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\bin\Debug\en\StartupManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\Knots.Performance.StartupManager.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\Knots.Performance.StartupManager.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\de\StartupManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\en\StartupManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.pdb

@@ -36,3 +36,22 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Windo
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\en\WindowsTools.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsTools.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsTools.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\WindowsTools.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\WindowsTools.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\WindowsTools.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\de\WindowsTools.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\bin\Debug\en\WindowsTools.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\Knots.Performance.WindowsStandardTools.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsStandardTools.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\Knots.Performance.WindowsStandardTools.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\de\WindowsTools.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\en\WindowsTools.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsTools.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Windows Standard Tools\obj\x86\Debug\WindowsTools.pdb

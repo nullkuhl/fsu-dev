@@ -58,3 +58,33 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\Brow
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.Properties.Resources.de.resources
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\Knots.Security.BrowserAssistant.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\de\BrowserAssistant.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\BrowsersDlls\Newtonsoft.Json.Net35.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\BrowsersDlls\System.Data.SQLite.DLL
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\BrowserAssistant.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\BrowserAssistant.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\BrowserAssistant.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\de\BrowserAssistant.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\bin\Debug\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\Knots.Security.BrowserAssistant.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\ExtensionList.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\HijackRestore.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\MainWindow.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\App.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant_Content.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant_MarkupCompile.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant_MarkupCompile.lref
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\ExtensionList.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\HijackRestore.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\MainWindow.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.g.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.Properties.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\Knots.Security.BrowserAssistant.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\de\BrowserAssistant.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\BrowserAssistant\obj\x86\Debug\BrowserAssistant.pdb

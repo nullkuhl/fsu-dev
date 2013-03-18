@@ -32,3 +32,20 @@ E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.TracksEraser\
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.dll
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\SQLite.Interop.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\System.Data.SQLite.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\UrlHistoryLibrary.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\WPFLocalizeExtension.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackOptions.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackSelector.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.pdb

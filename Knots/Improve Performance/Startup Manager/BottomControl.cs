@@ -24,24 +24,15 @@ namespace StartupManager
         /// </summary>
         void SetImage()
         {
-            Image image;
+            Image image = Properties.Resources.bottomBar;
             try
             {
                 string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
-                image = Properties.Resources.bottomBar;
                 if (File.Exists(path))
-                {
                     image = Image.FromFile(path);
-                }
             }
             catch (Exception)
             {
-                image = Properties.Resources.bottomBar;
-            }
-
-            if (image == null)
-            {
-                image = Properties.Resources.bottomBar;
             }
 
             lblMain.Image = image;

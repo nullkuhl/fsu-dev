@@ -25,7 +25,7 @@ namespace FileEraser
         /// </summary>
         void SetImage()
         {
-            Image image = ImageResources.bottomBar; ;
+            Image image = ImageResources.bottomBar;
             try
             {
                 string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";

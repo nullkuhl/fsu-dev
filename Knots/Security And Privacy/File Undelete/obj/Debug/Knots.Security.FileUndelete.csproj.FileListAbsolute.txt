@@ -50,3 +50,29 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Undelete\obj\Debug\en\FileUndelete.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\Libraries\Undelete.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\FileUndelete.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\FileUndelete.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\FileUndelete.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\de\FileUndelete.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\bin\Debug\en\FileUndelete.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\Knots.Security.FileUndelete.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.g.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.frmFilter.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.FormProgress.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.FormResults.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.FormBusy.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.RecoverPathDialog.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\Knots.Security.FileUndelete.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\de\FileUndelete.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\en\FileUndelete.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Undelete\obj\Debug\FileUndelete.pdb

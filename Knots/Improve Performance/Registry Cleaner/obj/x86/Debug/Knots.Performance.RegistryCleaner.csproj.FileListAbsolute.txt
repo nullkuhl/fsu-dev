@@ -52,3 +52,30 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Regis
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleaner.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleaner.pdb
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Cleaner\bin\Debug\de\RegistryCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\Libraries\RegistryCleanerCore.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleaner.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleaner.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleaner.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\de\RegistryCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\Knots.Performance.RegistryCleaner.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\App.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\MainWindow.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\App.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner_Content.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner_MarkupCompile.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner_MarkupCompile.lref
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\MainWindow.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.g.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.FrmBusy.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.Properties.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\Knots.Performance.RegistryCleaner.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\de\RegistryCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.pdb

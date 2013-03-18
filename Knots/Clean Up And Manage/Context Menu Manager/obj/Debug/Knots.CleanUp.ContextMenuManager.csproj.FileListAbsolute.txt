@@ -34,3 +34,21 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Conte
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\en\ContextMenuManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\de\ContextMenuManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\en\ContextMenuManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Knots.CleanUp.ContextMenuManager.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Knots.CleanUp.ContextMenuManager.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\de\ContextMenuManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\en\ContextMenuManager.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.pdb

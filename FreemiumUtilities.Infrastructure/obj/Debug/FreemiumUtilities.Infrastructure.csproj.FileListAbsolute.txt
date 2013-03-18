@@ -10,3 +10,8 @@ E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.Infrastructur
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.csprojResolveAssemblyReference.cache
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
 E:\Work\Freelance\Null Khul\System Utils_current\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\WPFLocalizeExtension.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb

@@ -76,3 +76,29 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Disk 
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\en\DiskCleaner.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\DiskCleaner.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\DiskCleaner.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\configuration.xml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\DiskCleaner.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\DiskCleaner.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\DiskCleaner.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\de\DiskCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\bin\Debug\en\DiskCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Knots.CleanUp.DiskCleaner.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormAddExtension.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormAddFolder.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormMain.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormPreferences.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormRestore.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.frmView.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.FormProcessing.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Disk_Cleaner.Resources.en.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\Knots.CleanUp.DiskCleaner.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\de\DiskCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\en\DiskCleaner.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\DiskCleaner.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Disk Cleaner\obj\Debug\DiskCleaner.pdb
