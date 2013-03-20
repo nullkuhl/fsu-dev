@@ -127,7 +127,7 @@
     <value>? Ein beliebiges Zeichen</value>
   </data>
   <data name="all_or_part_of_filename3" xml:space="preserve">
-    <value>* beliebig viele Zeichen</value>
+    <value>* Beliebig viele Zeichen</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Durchsuchen</value>

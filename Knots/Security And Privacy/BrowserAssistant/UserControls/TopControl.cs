@@ -54,7 +54,13 @@ namespace BrowserAssistant
         /// <param name="e"></param>
         void lblHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(new ProcessStartInfo(Resources.HelpUrl));
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + Resources.HelpUrl);
+                Process.Start(psi);
+            }
+            catch (Exception)
+            { }
         }
     }
 }

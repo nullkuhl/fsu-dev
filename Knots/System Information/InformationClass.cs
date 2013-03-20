@@ -376,7 +376,7 @@ namespace SystemInformation
                     retValue = "PCI is supported";
                     break;
                 case 8:
-                    retValue = "PC Card(PCMCIA) Is supported";
+                    retValue = "PC Card(PCMCIA) is supported";
                     break;
                 case 9:
                     retValue = "Plug and Play is supported";
@@ -388,22 +388,22 @@ namespace SystemInformation
                     retValue = "BIOS is Upgradable (Flash)";
                     break;
                 case 12:
-                    retValue = "BIOS shadowing Is allowed";
+                    retValue = "BIOS shadowing is allowed";
                     break;
                 case 13:
-                    retValue = "VL-VESA Is supported";
+                    retValue = "VL-VESA is supported";
                     break;
                 case 14:
-                    retValue = "ESCD support Is available";
+                    retValue = "ESCD support is available";
                     break;
                 case 15:
                     retValue = "Boot from CD is supported";
                     break;
                 case 16:
-                    retValue = "Selectable Boot Is supported";
+                    retValue = "Selectable Boot is supported";
                     break;
                 case 17:
-                    retValue = "BIOS ROM Is socketed";
+                    retValue = "BIOS ROM is socketed";
                     break;
                 case 18:
                     retValue = "Boot From PC Card (PCMCIA) is supported";
@@ -451,13 +451,13 @@ namespace SystemInformation
                     retValue = "ACPI supported";
                     break;
                 case 33:
-                    retValue = "USB Legacy Is supported";
+                    retValue = "USB Legacy is supported";
                     break;
                 case 34:
                     retValue = "AGP is supported";
                     break;
                 case 35:
-                    retValue = "I2O boot Is supported";
+                    retValue = "I2O boot is supported";
                     break;
                 case 36:
                     retValue = "LS-120 boot is supported";

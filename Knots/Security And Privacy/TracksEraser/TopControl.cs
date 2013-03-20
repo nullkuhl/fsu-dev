@@ -55,8 +55,15 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void lblHelp_Click(object sender, EventArgs e)
         {
-            ResourceManager resourceManager = new ResourceManager("TracksEraser.Resources", typeof(TopControl).Assembly);
-            Process.Start(new ProcessStartInfo(resourceManager.GetString("HelpUrl")));
+            try
+            {
+                ResourceManager resourceManager = new ResourceManager("TracksEraser.Resources", typeof(TopControl).Assembly);
+                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
+                Process.Start(psi);
+
+            }
+            catch (Exception)
+            { }
         }
     }
 }

@@ -79,3 +79,6 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Pe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\de\RegistryCleaner.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\obj\x86\Debug\RegistryCleaner.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleanerCore.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\RegistryCleanerCore.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Cleaner\bin\Debug\de\RegistryCleanerCore.resources.dll

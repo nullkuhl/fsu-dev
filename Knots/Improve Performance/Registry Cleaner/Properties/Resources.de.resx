@@ -149,7 +149,7 @@
     <value>Kategorien</value>
   </data>
   <data name="ControlScanTitle" xml:space="preserve">
-    <value>System-scan</value>
+    <value>System-Scan</value>
   </data>
   <data name="Data" xml:space="preserve">
     <value>Daten</value>
@@ -287,7 +287,7 @@
     <value>Installationsstrings</value>
   </data>
   <data name="UserScanTitle" xml:space="preserve">
-    <value>Benutzerscan</value>
+    <value>Benutzer-Scan</value>
   </data>
   <data name="VdmScanTitle" xml:space="preserve">
     <value>Virtuelle Geräte</value>

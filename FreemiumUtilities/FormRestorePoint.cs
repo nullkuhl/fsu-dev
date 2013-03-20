@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
+using RegistryCleanerCore;
 
 namespace FreemiumUtilities
 {
@@ -117,12 +118,14 @@ namespace FreemiumUtilities
         {
             try
             {
-                myUtil.CreateRestorePoint();
-                Application.DoEvents();
+                long lSeqNum;
+                SysRestore.StartRestore("Free System Utilities " + DateTime.Now, out lSeqNum);
 
-                Hashtable result = myUtil.GetRestorePoints();
                 MessageBox.Show(WPFLocalizeExtensionHelpers.GetUIString("RestorePointCreated"),
                                 WPFLocalizeExtensionHelpers.GetUIString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                Hashtable result = myUtil.GetRestorePoints();
                 FillRestorePoints(result);
             }
             catch

@@ -4,6 +4,7 @@
  */
 
 using System.IO;
+using System;
 
 namespace FreemiumUtil
 {
@@ -20,12 +21,9 @@ namespace FreemiumUtil
     /// </summary>
     public static class CfgFile
     {
-        static string cfgFilePath = /*GetInstallPath() +*/ "freemium.cfg";
-        public static string CfgFilePath
-        {
-            get { return cfgFilePath; }
-            set { cfgFilePath = value; }
-        }
+        // We use the common application folder to store the config file.
+        private static readonly string cfgFilePath = Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\FreeSystemUtilities\\";
+        private static readonly string cfgFileName = cfgFilePath + "freemium.cfg";
 
         /// <summary>
         /// Reads the given key from the config file and returns its value.
@@ -40,17 +38,23 @@ namespace FreemiumUtil
 
         static string Get(string key, out int lineNum)
         {
-            if (File.Exists(CfgFilePath))
+            if (CheckCfgFile())
             {
-                using (StreamReader reader = new StreamReader(CfgFilePath))
+                try
                 {
-                    string line;
-                    for (lineNum = 0; (line = reader.ReadLine()) != null; lineNum++)
+                    using (StreamReader reader = new StreamReader(cfgFileName))
                     {
-                        string[] entry = line.Split(new[] { ' ', '=' });
-                        if (entry.Length > 1 && entry[0] == key)
-                            return entry[entry.Length - 1];
+                        string line;
+                        for (lineNum = 0; (line = reader.ReadLine()) != null; lineNum++)
+                        {
+                            string[] entry = line.Split(new[] { ' ', '=' });
+                            if (entry.Length > 1 && entry[0] == key)
+                                return entry[entry.Length - 1];
+                        }
                     }
+                }
+                catch
+                {
                 }
             }
 
@@ -68,35 +72,116 @@ namespace FreemiumUtil
             int lineNum;
             if (Get(key, out lineNum) == null)
             {
-                using (StreamWriter writer = File.AppendText(CfgFilePath))
+                try
                 {
-                    writer.WriteLine(key + "=" + value);
-                    writer.Close();
+                    using (StreamWriter writer = File.AppendText(cfgFileName))
+                    {
+                        writer.WriteLine(key + "=" + value);
+                        writer.Close();
+                    }
+                }
+                catch
+                {
                 }
             }
             else
             {
                 string cfg = string.Empty;
-                using (StreamReader reader = new StreamReader(CfgFilePath))
+                bool hasError = false;
+                try
                 {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
+                    using (StreamReader reader = new StreamReader(cfgFileName))
                     {
-                        var entry = line.Split(new[] { ' ', '=' });
-                        if (entry[0] == key)
-                            cfg += key + "=" + value + "\r\n";
-                        else
-                            cfg += line + "\r\n";
+
+                        string line;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            string[] entry = line.Split(new[] { ' ', '=' });
+                            if (entry[0] == key)
+                                cfg += key + "=" + value + "\r\n";
+                            else
+                                cfg += line + "\r\n";
+                        }
                     }
-                    reader.Close();
+                }
+                catch (Exception)
+                {
+                    hasError = true;
                 }
 
-                using (StreamWriter writer = new StreamWriter(CfgFilePath))
+                if (!hasError)
                 {
-                    writer.Write(cfg);
-                    writer.Close();
+                    try
+                    {
+                        using (StreamWriter writer = new StreamWriter(cfgFileName))
+                        {
+                            writer.Write(cfg);
+                        }
+                    }
+                    catch (Exception)
+                    {
+                    }
                 }
             }
+        }
+
+        private static bool CheckCfgFile()
+        {
+            bool configFileValid = true;
+            if (!File.Exists(cfgFileName)) configFileValid = false;
+
+            if (configFileValid)
+            {
+                try
+                {
+                    FileInfo f = new FileInfo(cfgFileName);
+                    if (f.Length == 0) configFileValid = false;
+                }
+                catch (Exception)
+                {
+                    configFileValid = false;
+                }
+            }
+
+            if (!configFileValid)
+            {
+                // If the config file does not exist or is empty, we try to create a new one.
+                if (!Directory.Exists(cfgFilePath))
+                {
+                    try
+                    {
+                        Directory.CreateDirectory(cfgFilePath);
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
+
+                try
+                {
+                    using (StreamWriter writer = File.CreateText(cfgFileName))
+                    {
+                        writer.WriteLine("[Freemiun Config File]");
+                        writer.WriteLine("Version=1.4");
+                        writer.WriteLine("Lang=de");
+                        writer.WriteLine("FirstRun=1");
+                        writer.WriteLine("Theme=Blue");
+                        writer.WriteLine("MinimizeToTray=0");
+                        writer.WriteLine("ShowBaloon=0");
+                        writer.WriteLine("ShowContextMenuAnalyze=1");
+                        writer.WriteLine("ShowContextMenuDecrypt=1");
+                        writer.WriteLine("ShowContextMenuEncrypt=1");
+                        writer.WriteLine("ShowContextMenuFindEmptyFolders=1");
+                        writer.WriteLine("ShowContextMenuSplit=1");
+                        writer.WriteLine("ShowContextMenuWipe=1");
+                    }
+                    configFileValid = true;
+                }
+                catch (Exception)
+                {
+                }
+            }
+            return configFileValid;
         }
     }
 }

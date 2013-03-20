@@ -136,7 +136,7 @@
     <value>Schließen</value>
   </data>
   <data name="CloseBrowserError" xml:space="preserve">
-    <value>Sie müssen {0} schließen, um dessen Erweiterungen anzeigen zu können. Bitte schließen Sie {0}, bevor Sie erneut auf dessen Tab klicken</value>
+    <value>Sie müssen {0} schließen, um dessen Erweiterungen anzeigen zu können. Bitte schließen Sie {0}, bevor Sie erneut auf dessen Tab klicken.</value>
   </data>
   <data name="CurrentSetting" xml:space="preserve">
     <value>Aktuelle Einstellung</value>
@@ -272,6 +272,6 @@
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>                                      Willkommen im Browser-Assistenten!
-Wählen Sie den Reiter mit dem Namen des Browsers den Sie ändern möchten</value>
+Wählen Sie den Reiter mit dem Namen des Browsers, den Sie ändern möchten.</value>
   </data>
 </root>

@@ -105,7 +105,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle Click event to save firefox extentions
+        /// handle Click event to save firefox extensions
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -159,7 +159,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle Click event to save chrome extentions
+        /// handle Click event to save chrome extensions
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -229,7 +229,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle GotFocus event to open internet explorer extentions tab
+        /// handle GotFocus event to open internet explorer extensions tab
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -246,7 +246,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle Click event to check internet explorer extention
+        /// handle Click event to check internet explorer extension
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -256,7 +256,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle Click event to save internet explorer extentions
+        /// handle Click event to save internet explorer extensions
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

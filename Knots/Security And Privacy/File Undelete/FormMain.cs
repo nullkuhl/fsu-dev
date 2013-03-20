@@ -404,8 +404,9 @@ namespace FileUndelete
 
             if (scanMgr.InnerException != null)
             {
-                MessageBox.Show(rm.GetString("scan_finished_no_data_collected") + ".", rm.GetString("scan_finished"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                // ToDo: display a localized message to the user that the program could not be started!
+                //MessageBox.Show(rm.GetString("scan_finished_no_data_collected") + ".", rm.GetString("scan_finished"),
+                //                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             lvFiles.Items.Clear();
             lvFiles.BeginUpdate();

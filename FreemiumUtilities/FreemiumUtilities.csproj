@@ -38,7 +38,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -48,7 +48,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <PlatformTarget>x86</PlatformTarget>
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -83,16 +83,6 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libraries\FreemiumUtil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.Infrastructure, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libraries\FreemiumUtilities.Infrastructure.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="FreemiumUtilities.RegCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Applications\FreemiumUtilities.RegCleaner.dll</HintPath>
@@ -106,11 +96,6 @@
     <Reference Include="FreemiumUtilities.Spyware, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Applications\FreemiumUtilities.Spyware.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.StartupManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\FreemiumUtilities.StartupManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="FreemiumUtilities.TempCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -162,6 +147,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BusyWindow.xaml.cs">
+      <DependentUpon>BusyWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FormOptions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -215,6 +203,10 @@
     <Compile Include="Routine\VisibilityAnimation.cs" />
     <Compile Include="ViewModels\OneClickAppViewModel.cs" />
     <Compile Include="ViewModels\OneClickAppsViewModel.cs" />
+    <Page Include="BusyWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="CommonStyles\ControlStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -275,15 +267,12 @@
     </Compile>
     <EmbeddedResource Include="FormOptions.resx">
       <DependentUpon>FormOptions.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRestorePoint.resx">
       <DependentUpon>FormRestorePoint.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaskManager.resx">
       <DependentUpon>FormTaskManager.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.de.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -395,6 +384,14 @@
     <Resource Include="Images\google.png" />
     <Resource Include="Images\tw.png" />
     <Resource Include="Images\tw_bg.png" />
+    <Resource Include="Images\frame0.png" />
+    <Resource Include="Images\frame7.png" />
+    <Resource Include="Images\frame1.png" />
+    <Resource Include="Images\frame2.png" />
+    <Resource Include="Images\frame3.png" />
+    <Resource Include="Images\frame4.png" />
+    <Resource Include="Images\frame5.png" />
+    <Resource Include="Images\frame6.png" />
     <Content Include="Libraries\de\TracksEraser.resources.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -527,6 +524,22 @@
       <Project>{2AF3F14E-A183-44D4-A994-C8795A33E874}</Project>
       <Name>FreemiumUtilities.Context</Name>
       <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.Infrastructure\FreemiumUtilities.Infrastructure.csproj">
+      <Project>{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}</Project>
+      <Name>FreemiumUtilities.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.StartupManager\FreemiumUtilities.StartupManager.csproj">
+      <Project>{375A58EF-E2A8-41A1-94DD-4FE644219FD1}</Project>
+      <Name>FreemiumUtilities.StartupManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtil\FreemiumUtil.csproj">
+      <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
+      <Name>FreemiumUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Knots\Improve Performance\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj">
+      <Project>{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}</Project>
+      <Name>Knots.Performance.RegistryCleanerCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -37,6 +37,8 @@ namespace RegistryCleaner
         #endregion
 
         static readonly cRestore _Restore = new cRestore();
+        static SysRestore sysRestore = new SysRestore();
+        static long lSeqNum;
         static DispatcherTimer _aRestoreTimer;
         static bool _bRestoreComplete;
         static bool _bRestoreSucess;
@@ -671,7 +673,6 @@ namespace RegistryCleaner
             FrmBusy formBusy = new FrmBusy();
             formBusy.Show();
 
-            _dTime = DateTime.Now;
             _bRestoreComplete = false;
             _aRestoreTimer.IsEnabled = true;
             // launch restore on a new thread
@@ -679,7 +680,7 @@ namespace RegistryCleaner
             _oProcessAsyncBackgroundWorker.DoWork += _oProcessAsyncBackgroundWorker_DoWork;
             _oProcessAsyncBackgroundWorker.RunWorkerCompleted += _oProcessAsyncBackgroundWorker_RunWorkerCompleted;
             _oProcessAsyncBackgroundWorker.RunWorkerAsync();
-
+            _dTime = DateTime.Now;
             do
             {
                 DoEvents();
@@ -704,6 +705,8 @@ namespace RegistryCleaner
         void _oProcessAsyncBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             _bRestoreComplete = true;
+            SysRestore.EndRestore(lSeqNum);
+            Thread.EndCriticalRegion();
         }
 
         /// <summary>
@@ -714,7 +717,11 @@ namespace RegistryCleaner
         void _oProcessAsyncBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
         {
             _bRestoreComplete = false;
-            _bRestoreSucess = _Restore.StartRestore("Registry Cleaner Restore Point");
+            Thread.BeginCriticalRegion();
+            SysRestore.StartRestore("Free System Utilities " + DateTime.Now, out lSeqNum);
+
+            // ToDO: only set this to true if it really was successful!
+            _bRestoreSucess = true;
         }
 
         /// <summary>

@@ -1,5 +1,12 @@
+using System.Drawing;
 using System.Windows.Forms;
+using System.Collections;
+using Microsoft.VisualBasic;
+using System.Diagnostics;
+using System;
 using System.Resources;
+using System.Globalization;
+using System.Threading;
 
 namespace SystemInformation
 {
@@ -95,7 +102,7 @@ namespace SystemInformation
             // picturePanel
             // 
             this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.CPU_48x48;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.processor48;
             this.picturePanel.Location = new System.Drawing.Point(16, 16);
             this.picturePanel.Name = "picturePanel";
             this.picturePanel.Size = new System.Drawing.Size(48, 48);

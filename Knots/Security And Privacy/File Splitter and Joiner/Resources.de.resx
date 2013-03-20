@@ -196,7 +196,7 @@
     <value>Keine .join-Datei</value>
   </data>
   <data name="num_of_files" xml:space="preserve">
-    <value>Anzahl an gewünschten Dateiteilen</value>
+    <value>Anzahl an Dateiteilen</value>
   </data>
   <data name="num_of_pieces" xml:space="preserve">
     <value>Teileanzahl</value>

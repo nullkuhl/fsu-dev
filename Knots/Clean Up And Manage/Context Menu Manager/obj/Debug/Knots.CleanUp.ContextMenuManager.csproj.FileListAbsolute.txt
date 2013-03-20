@@ -40,7 +40,6 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.pdb
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\de\ContextMenuManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\en\ContextMenuManager.resources.dll
-E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Knots.CleanUp.ContextMenuManager.csprojResolveAssemblyReference.cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.BottomControl.resources
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.FormMain.resources
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Properties.Resources.resources

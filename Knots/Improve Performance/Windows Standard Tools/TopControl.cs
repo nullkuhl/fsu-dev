@@ -56,17 +56,24 @@ namespace WindowsStandardTools
         /// </summary>
         void SetImage()
         {
-            Image image = Resources.thinBar;
+            Image image;
             try
             {
                 string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\thinblue.png";
+                image = Resources.thinBar;
                 if (File.Exists(path))
                 {
                     image = Image.FromFile(path);
                 }
             }
-            catch
+            catch (Exception)
             {
+                image = Resources.thinBar;
+            }
+
+            if (image == null)
+            {
+                image = Resources.thinBar;
             }
 
             lblBar.Image = image;
@@ -79,8 +86,14 @@ namespace WindowsStandardTools
         /// <param name="e"></param>
         void lblHelp_Click(object sender, EventArgs e)
         {
-            ResourceManager resourceManager = new ResourceManager("WindowsStandardTools.Resources", typeof(TopControl).Assembly);
-            Process.Start(new ProcessStartInfo(resourceManager.GetString("HelpUrl")));
+            try
+            {
+                ResourceManager resourceManager = new ResourceManager("WindowsStandardTools.Resources", typeof(TopControl).Assembly);
+                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
+                Process.Start(psi);
+            }
+            catch (Exception)
+            { }
         }
     }
 }

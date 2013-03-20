@@ -225,3 +225,15 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\obj\x86\Debug\de\FreemiumUtilities.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\obj\x86\Debug\FreemiumUtilities.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\obj\x86\Debug\FreemiumUtilities.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\obj\x86\Debug\BusyWindow.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\obj\x86\Debug\BusyWindow.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtilities.Infrastructure.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtilities.StartupManager.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\RegistryCleanerCore.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtilities.StartupManager.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\FreemiumUtil.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\RegistryCleanerCore.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities\bin\Debug\de\RegistryCleanerCore.resources.dll

@@ -5,6 +5,8 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
 using FreemiumUtil;
+using System.IO;
+using System.Reflection;
 
 namespace BrowserAssistant
 {
@@ -39,7 +41,24 @@ namespace BrowserAssistant
             {
                 Current.Shutdown();
             }
+            // As all first run initialization is done in the main project,
+            // we need to make sure the user does not start a different knot first.
+            if (CfgFile.Get("FirstRun") != "0")
+            {
+                try
+                {
+                    var process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+                    Process.Start(process);
+                }
+                catch (Exception)
+                {
+                }
+
+                Application.Current.Shutdown();
+                return;
+            }
         }
+
 
         void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {

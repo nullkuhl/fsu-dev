@@ -124,7 +124,7 @@
     <value>All or part of the file name. You can use wildcards, eg. *.doc.</value>
   </data>
   <data name="all_or_part_of_filename2" xml:space="preserve">
-    <value>? Match one char acter of anything</value>
+    <value>? Match one character of anything</value>
   </data>
   <data name="all_or_part_of_filename3" xml:space="preserve">
     <value>* Match any number of anything</value>
@@ -226,7 +226,7 @@
     <value>Scan Finished</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>Scan is finished, however it seems that no files were retrievable from the data collected off your hard disk</value>
+    <value>Scan is finished, however it seems that no files were retrievable from the data collected off your hard disk.</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Search</value>

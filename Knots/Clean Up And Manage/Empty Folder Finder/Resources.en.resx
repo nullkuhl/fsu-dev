@@ -200,7 +200,7 @@
     <value>Select a drive or folder to scan</value>
   </data>
   <data name="select_folder" xml:space="preserve">
-    <value>Select folder(s) to be deleted</value>
+    <value>Please select folder(s) to be deleted first.</value>
   </data>
   <data name="error_deleting_file" xml:space="preserve">
     <value>Error Deleting File</value>

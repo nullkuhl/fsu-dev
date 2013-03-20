@@ -55,31 +55,22 @@ namespace FreemiumUtilities
         /// </summary>
         public MainWindow()
         {
-            string culture;
-
             InitializeComponent();
-            if (CfgFile.Get("FirstRun") == "0")
-            {
-                culture = CfgFile.Get("Lang");
-                LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
-                Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
-            }
-            else
+
+            string culture = CfgFile.Get("Lang");
+            LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
+
+            if (CfgFile.Get("FirstRun") != "0")
             {
                 CfgFile.Set("FirstRun", "0");
-                string currentUICulture = CultureInfo.CurrentUICulture.Name.Split('-')[0];
-                culture = Array.IndexOf(languages, currentUICulture) != -1 ? currentUICulture : "en";
-                CfgFile.Set("Lang", culture);
-                LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
-                Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
-
                 FirstRun();
             }
 
-            string path = String.Format(@"Themes/{0}/Theme.xaml", CfgFile.Get("Theme"));
+            string path = String.Format(@"Themes\{0}\Theme.xaml", CfgFile.Get("Theme"));
             try
             {
-                using (FileStream fs = new FileStream(path, FileMode.Open))
+                using (FileStream fs = new FileStream(FileRW.GetAssemblyDirectory() + path, FileMode.Open))
                 {
                     var dic = (ResourceDictionary)XamlReader.Load(fs);
                     Application.Current.MainWindow.Resources.MergedDictionaries.Clear();
@@ -91,8 +82,9 @@ namespace FreemiumUtilities
                 MessageBox.Show(WPFLocalizeExtensionHelpers.GetUIString("AdminRightsNeeded"), "Error", MessageBoxButton.OK,
                                 MessageBoxImage.Error);
             }
-            catch
+            catch (Exception)
             {
+                // ToDo: send exception details via SmartAssembly bug reporting!
             }
 
             InitModel();
@@ -117,28 +109,31 @@ namespace FreemiumUtilities
         {
             try
             {
-                RegistryKey contextMenuKey = root.CreateSubKey(titleNode);
-                if (contextMenuKey != null)
+                using (RegistryKey contextMenuKey = root.CreateSubKey(titleNode))
                 {
-                    contextMenuKey.SetValue("", title);
-                    // Remove all existing subkeys (including the ones at another language)
-                    foreach (string subkey in contextMenuKey.GetSubKeyNames())
+                    if (contextMenuKey != null)
                     {
-                        contextMenuKey.DeleteSubKey(subkey);
+                        contextMenuKey.SetValue("", title);
+                        // Remove all existing subkeys (including the ones at another language)
+                        foreach (string subkey in contextMenuKey.GetSubKeyNames())
+                        {
+                            contextMenuKey.DeleteSubKey(subkey);
+                        }
+                        using (RegistryKey registryKey = contextMenuKey.CreateSubKey("command"))
+                        {
+                            if (registryKey != null)
+                                registryKey
+                                    .SetValue(
+                                        "",
+                                        String.Format(
+                                            @"{0}\freemiumContext.exe {1} %1",
+                                            Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath),
+                                            knotCodeName
+                                            )
+                                    );
+                        }
+                        contextMenuKey.Close();
                     }
-                    RegistryKey registryKey = contextMenuKey
-                        .CreateSubKey("command");
-                    if (registryKey != null)
-                        registryKey
-                            .SetValue(
-                                "",
-                                String.Format(
-                                    @"{0}\freemiumContext.exe {1} %1",
-                                    Path.GetDirectoryName(System.Windows.Forms.Application.ExecutablePath),
-                                    knotCodeName
-                                    )
-                            );
-                    contextMenuKey.Close();
                 }
             }
             catch (UnauthorizedAccessException)
@@ -355,7 +350,7 @@ namespace FreemiumUtilities
             {
                 FormRestorePoint frmRestorePoint = new FormRestorePoint();
                 frmRestorePoint.ShowDialog();
-            }            
+            }
             if (context.SelectedIndex == 2)
             {
                 OpenUrl(WPFLocalizeExtensionHelpers.GetUIString("FeedbackUrl"), e);

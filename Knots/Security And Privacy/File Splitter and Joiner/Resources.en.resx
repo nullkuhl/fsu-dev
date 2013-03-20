@@ -196,7 +196,7 @@
     <value>Not a .Join file</value>
   </data>
   <data name="num_of_files" xml:space="preserve">
-    <value>Number of files to split your file into</value>
+    <value>Number of file parts</value>
   </data>
   <data name="num_of_pieces" xml:space="preserve">
     <value>Number of pieces</value>

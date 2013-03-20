@@ -197,10 +197,10 @@
     <value>Jetzt überprüfen</value>
   </data>
   <data name="select_drive_folder" xml:space="preserve">
-    <value>Wählen Sie ein Laufwerk oder einen Ordner zur Überprüfung aus</value>
+    <value>Wählen Sie ein Laufwerk/Ordner zur Überprüfung</value>
   </data>
   <data name="select_folder" xml:space="preserve">
-    <value>Wählen Sie die zu löschenden Ordner aus</value>
+    <value>Bitte wählen Sie zunächst die zu löschenden Ordner aus.</value>
   </data>
   <data name="error_deleting_file" xml:space="preserve">
     <value>Fehler beim Löschen der Datei</value>

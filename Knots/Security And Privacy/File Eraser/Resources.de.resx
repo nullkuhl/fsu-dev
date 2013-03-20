@@ -283,6 +283,6 @@
     <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="eliminate_folders" xml:space="preserve">
-    <value>Beseitigung Ordner</value>
+    <value>Auch Ordner löschen</value>
   </data>
 </root>

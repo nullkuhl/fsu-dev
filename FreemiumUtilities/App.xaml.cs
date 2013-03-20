@@ -28,6 +28,8 @@ namespace FreemiumUtilities
         public static bool Click1;
         NotifyIcon notifyIcon;
 
+        readonly string[] languages = { "en", "de" };
+
         /// <summary>
         /// startup application
         /// </summary>
@@ -44,8 +46,22 @@ namespace FreemiumUtilities
                 new FrameworkPropertyMetadata { DefaultValue = 10 }
                 );
 
-            CfgFile.CfgFilePath = "freemium.cfg";
-            LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(CfgFile.Get("Lang"));
+
+            string culture;
+
+            if (CfgFile.Get("FirstRun") == "0")
+            {
+                culture = CfgFile.Get("Lang");
+            }
+            else
+            {
+                string currentUICulture = CultureInfo.CurrentUICulture.Name.Split('-')[0];
+                culture = Array.IndexOf(languages, currentUICulture) != -1 ? currentUICulture : "en";
+                CfgFile.Set("Lang", culture);
+            }
+
+            LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
+            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
 
             if (!IsAdmin())
             {

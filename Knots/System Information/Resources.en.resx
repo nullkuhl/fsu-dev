@@ -277,7 +277,7 @@
     <value>Local Date and Time</value>
   </data>
   <data name="datetime_offset" xml:space="preserve">
-    <value>Offset from Univeral Time</value>
+    <value>Offset from Universal Time</value>
   </data>
   <data name="datetime_offset_from_today" xml:space="preserve">
     <value>Offset from Today</value>
@@ -700,7 +700,7 @@
     <value>System Information</value>
   </data>
   <data name="root_note" xml:space="preserve">
-    <value>Click a topic at the left for specific system information.</value>
+    <value>Click a topic on the left for specific system information.</value>
   </data>
   <data name="services_description" xml:space="preserve">
     <value>Windows and Third-Party Services</value>

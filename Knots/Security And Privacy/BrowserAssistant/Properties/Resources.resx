@@ -158,7 +158,7 @@
     <value>all users</value>
   </data>
   <data name="FirefoxExtentions" xml:space="preserve">
-    <value>Firefox Extentions</value>
+    <value>Firefox Extensions</value>
   </data>
   <data name="DefaultPageURL" xml:space="preserve">
     <value>Default Page URL</value>
@@ -179,12 +179,12 @@
     <value>Version</value>
   </data>
   <data name="PostNotCached" xml:space="preserve">
-    <value>Post Not Cached</value>
+    <value>Post not Cached</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
     <value>                                      Welcome to Browser Manager!
 
-Choose the Tab that corresponds to the Browser Configuration you want to change</value>
+Choose the tab that corresponds to the browser configuration you want to change.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Welcome</value>
@@ -217,7 +217,7 @@ Choose the Tab that corresponds to the Browser Configuration you want to change<
     <value>IE Extensions</value>
   </data>
   <data name="SettingName" xml:space="preserve">
-    <value>SettingName</value>
+    <value>Setting Name</value>
   </data>
   <data name="AboutURL" xml:space="preserve">
     <value>About URL</value>

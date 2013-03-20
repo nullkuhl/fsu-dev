@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using DiskAnalysis.Properties;
-using System.Resources;
 
 namespace DiskAnalysis
 {
@@ -39,7 +38,7 @@ namespace DiskAnalysis
         }
 
         /// <summary>
-        /// handle MouseLeave event to change help icon
+        /// handle MouseLeave event to chanfe help icon
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -48,14 +47,15 @@ namespace DiskAnalysis
             lblHelp.Image = Resources.help_off;
         }
 
-        /// <summary>
-        /// Handles Click event for help
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void lblHelp_Click(object sender, EventArgs e)
         {
-            Process.Start(new ProcessStartInfo(DiskAnalysis.Properties.Resources.HelpUrl));
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + DiskAnalysis.Properties.Resources.HelpUrl);
+                Process.Start(psi);
+            }
+            catch (Exception)
+            { }
         }
     }
 }

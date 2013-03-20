@@ -3,53 +3,69 @@ using System.Diagnostics;
 using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
+using System.IO;
+using System.Reflection;
 
 namespace EmptyFolderFinder
 {
-	/// <summary>
-	/// The <see cref="EmptyFolderFinder"/> namespace defines an Empty folder finder knot
-	/// </summary>
+    /// <summary>
+    /// The <see cref="EmptyFolderFinder"/> namespace defines an Empty folder finder knot
+    /// </summary>
 
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc { }
 
-	internal static class Program
-	{
-		static Mutex mutex;
-		static bool created;
+    internal static class Program
+    {
+        static Mutex mutex;
+        static bool created;
 
-		/// <summary>
-		/// The main entry point for the application.
-		/// </summary>
-		[STAThread]
-		static void Main()
-		{
-			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
-			if (created)
-			{
-				//Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-				//Application.ThreadException += Application_ThreadException;
-				//AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
+            if (created)
+            {
+                //Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+                //Application.ThreadException += Application_ThreadException;
+                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
-				//EmptyFolderFinder.Properties.Resources.Culture = new System.Globalization.CultureInfo(CfgFile.Get("Lang"));
-				//Thread
+                // As all first run initialization is done in the main project,
+                // we need to make sure the user does not start a different knot first.
+                if (CfgFile.Get("FirstRun") != "0")
+                {
+                    try
+                    {
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+                        Process.Start(process);
+                    }
+                    catch (Exception)
+                    {
+                    }
 
-				Application.EnableVisualStyles();
-				Application.SetCompatibleTextRenderingDefault(false);
-				Application.Run(new FormEmptyFolderFinder());
-			}
-		}
+                    Application.Exit();
+                    return;
+                }
 
-		static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
-		{
-			Reporting.Report(e.Exception);
-			Process.GetCurrentProcess().Kill();
-		}
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FormEmptyFolderFinder());
+            }
+        }
 
-		static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-		{
-			Reporting.Report((Exception)(e.ExceptionObject));
-			Process.GetCurrentProcess().Kill();
-		}
-	}
+        static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            Reporting.Report(e.Exception);
+            Process.GetCurrentProcess().Kill();
+        }
+
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Reporting.Report((Exception)(e.ExceptionObject));
+            Process.GetCurrentProcess().Kill();
+        }
+    }
 }

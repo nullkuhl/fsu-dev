@@ -264,8 +264,8 @@ namespace FreemiumUtilities
         void cboThemes_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboThemes.SelectedIndex == -1) return;
-            string path = String.Format(@"Themes/{0}/Theme.xaml", cboThemes.Text);
-            using (FileStream fs = new FileStream(path, FileMode.Open))
+            string path = String.Format(@"Themes\{0}\Theme.xaml", cboThemes.Text);
+            using (var fs = new FileStream(FileRW.GetAssemblyDirectory() + path, FileMode.Open))
             {
                 ResourceDictionary dic = (ResourceDictionary)XamlReader.Load(fs);
                 Application.Current.MainWindow.Resources.MergedDictionaries.Clear();
@@ -493,7 +493,7 @@ namespace FreemiumUtilities
             {
                 using (RegistryKey openSubKey = root.OpenSubKey(subkey, true))
                 {
-                    if (openSubKey != null) 
+                    if (openSubKey != null)
                         openSubKey.DeleteValue(valueName);
                 }
             }

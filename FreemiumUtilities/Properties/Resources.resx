@@ -902,7 +902,7 @@ and optionally stop them</value>
     <value>Clean up the registry to improve your system's performance</value>
   </data>
   <data name="RegistryCleanerOneClickDesc" xml:space="preserve">
-    <value>Fix invalid or incorect registry entries</value>
+    <value>Fix invalid or incorrect registry entries</value>
   </data>
   <data name="RegistryCleaningCompleted" xml:space="preserve">
     <value>Registry Cleaning Completed</value>
@@ -1088,7 +1088,7 @@ and optionally stop them</value>
     <value>day(s)</value>
   </data>
   <data name="ScheduleTaskMonth" xml:space="preserve">
-    <value>of the month(s)</value>
+    <value>of the month</value>
   </data>
   <data name="ScheduleTaskMonthly" xml:space="preserve">
     <value>Schedule Task Monthly</value>
@@ -1124,7 +1124,7 @@ and optionally stop them</value>
     <value>Select items to scan</value>
   </data>
   <data name="SelectItemsToStartScanText" xml:space="preserve">
-    <value>You must select at least 1 item to proceed.</value>
+    <value>You must select at least one item to proceed.</value>
   </data>
   <data name="SelectRestorePoint" xml:space="preserve">
     <value>Please select a restore point you'd like to restore to, and then click 'Restore' button.</value>
@@ -1317,16 +1317,16 @@ managable parts and rejoin them</value>
     <value>Erase Tracks</value>
   </data>
   <data name="TracksEraserDesc" xml:space="preserve">
-    <value>Erases your activity histrory and internet traces</value>
+    <value>Erases your activity history and internet traces</value>
   </data>
   <data name="TracksEraserDetailed" xml:space="preserve">
     <value>Erase tracks</value>
   </data>
   <data name="TracksEraserDetailedDesc" xml:space="preserve">
-    <value>Erase all the traces, evidence, cookies, Internet History and more</value>
+    <value>Erase all the traces, evidence, cookies, internet history and more</value>
   </data>
   <data name="TracksEraserOneClickDesc" xml:space="preserve">
-    <value>Erase all internet traces and the histrory</value>
+    <value>Erase all internet traces and the history</value>
   </data>
   <data name="tracks_eraser" xml:space="preserve">
     <value>Erase tracks</value>
@@ -1401,7 +1401,7 @@ managable parts and rejoin them</value>
     <value>When Idle</value>
   </data>
   <data name="WhenSystemIdle" xml:space="preserve">
-    <value>When the system has been idle for:</value>
+    <value>When the system has been idle for</value>
   </data>
   <data name="win" xml:space="preserve">
     <value>Windows</value>
@@ -1456,5 +1456,11 @@ managable parts and rejoin them</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>Entry points to</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>System Restore is turned off, Would you like to continue at your own risk?</value>
+  </data>
+  <data name="CreatingRestorePoint" xml:space="preserve">
+    <value>Creating Restore Point...</value>
   </data>
 </root>

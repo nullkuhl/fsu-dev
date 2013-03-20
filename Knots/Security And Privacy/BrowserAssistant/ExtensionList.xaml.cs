@@ -36,7 +36,7 @@ namespace BrowserAssistant
         }
 
         /// <summary>
-        /// handle Click event to save extention
+        /// handle Click event to save extension
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

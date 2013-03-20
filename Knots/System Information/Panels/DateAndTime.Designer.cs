@@ -260,7 +260,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDate.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDate.Location = new System.Drawing.Point(360, 314);
+            this.labelSelectedDate.Location = new System.Drawing.Point(399, 314);
             this.labelSelectedDate.Name = "labelSelectedDate";
             this.labelSelectedDate.Size = new System.Drawing.Size(142, 15);
             this.labelSelectedDate.TabIndex = 76;
@@ -269,7 +269,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDayOfYear.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDayOfYear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDayOfYear.Location = new System.Drawing.Point(320, 334);
+            this.labelSelectedDayOfYear.Location = new System.Drawing.Point(359, 334);
             this.labelSelectedDayOfYear.Name = "labelSelectedDayOfYear";
             this.labelSelectedDayOfYear.Size = new System.Drawing.Size(28, 15);
             this.labelSelectedDayOfYear.TabIndex = 75;
@@ -279,7 +279,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDaysLeft.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDaysLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDaysLeft.Location = new System.Drawing.Point(320, 354);
+            this.labelSelectedDaysLeft.Location = new System.Drawing.Point(359, 354);
             this.labelSelectedDaysLeft.Name = "labelSelectedDaysLeft";
             this.labelSelectedDaysLeft.Size = new System.Drawing.Size(28, 15);
             this.labelSelectedDaysLeft.TabIndex = 74;
@@ -289,7 +289,7 @@ namespace SystemInformation
             // 
             this.labelOffsetFromToday.BackColor = System.Drawing.Color.Transparent;
             this.labelOffsetFromToday.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelOffsetFromToday.Location = new System.Drawing.Point(360, 374);
+            this.labelOffsetFromToday.Location = new System.Drawing.Point(399, 374);
             this.labelOffsetFromToday.Name = "labelOffsetFromToday";
             this.labelOffsetFromToday.Size = new System.Drawing.Size(142, 15);
             this.labelOffsetFromToday.TabIndex = 73;
@@ -298,7 +298,7 @@ namespace SystemInformation
             // 
             this.labelSelectedHoliday.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedHoliday.ForeColor = System.Drawing.Color.DarkGreen;
-            this.labelSelectedHoliday.Location = new System.Drawing.Point(282, 394);
+            this.labelSelectedHoliday.Location = new System.Drawing.Point(321, 394);
             this.labelSelectedHoliday.Name = "labelSelectedHoliday";
             this.labelSelectedHoliday.Size = new System.Drawing.Size(220, 15);
             this.labelSelectedHoliday.TabIndex = 72;
@@ -307,7 +307,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDayOfYearDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDayOfYearDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDayOfYearDesc.Location = new System.Drawing.Point(208, 334);
+            this.labelSelectedDayOfYearDesc.Location = new System.Drawing.Point(247, 334);
             this.labelSelectedDayOfYearDesc.Name = "labelSelectedDayOfYearDesc";
             this.labelSelectedDayOfYearDesc.Size = new System.Drawing.Size(104, 15);
             this.labelSelectedDayOfYearDesc.TabIndex = 70;
@@ -317,7 +317,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDaysLeftDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDaysLeftDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDaysLeftDesc.Location = new System.Drawing.Point(208, 354);
+            this.labelSelectedDaysLeftDesc.Location = new System.Drawing.Point(247, 354);
             this.labelSelectedDaysLeftDesc.Name = "labelSelectedDaysLeftDesc";
             this.labelSelectedDaysLeftDesc.Size = new System.Drawing.Size(104, 15);
             this.labelSelectedDaysLeftDesc.TabIndex = 69;
@@ -327,7 +327,7 @@ namespace SystemInformation
             // 
             this.labelOffsetFromTodayDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelOffsetFromTodayDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelOffsetFromTodayDesc.Location = new System.Drawing.Point(208, 374);
+            this.labelOffsetFromTodayDesc.Location = new System.Drawing.Point(247, 374);
             this.labelOffsetFromTodayDesc.Name = "labelOffsetFromTodayDesc";
             this.labelOffsetFromTodayDesc.Size = new System.Drawing.Size(152, 15);
             this.labelOffsetFromTodayDesc.TabIndex = 68;
@@ -337,7 +337,7 @@ namespace SystemInformation
             // 
             this.labelSelectedDateDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedDateDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedDateDesc.Location = new System.Drawing.Point(208, 314);
+            this.labelSelectedDateDesc.Location = new System.Drawing.Point(247, 314);
             this.labelSelectedDateDesc.Name = "labelSelectedDateDesc";
             this.labelSelectedDateDesc.Size = new System.Drawing.Size(108, 15);
             this.labelSelectedDateDesc.TabIndex = 67;
@@ -347,7 +347,7 @@ namespace SystemInformation
             // 
             this.labelTCurrentDateDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelTCurrentDateDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelTCurrentDateDesc.Location = new System.Drawing.Point(208, 224);
+            this.labelTCurrentDateDesc.Location = new System.Drawing.Point(247, 224);
             this.labelTCurrentDateDesc.Name = "labelTCurrentDateDesc";
             this.labelTCurrentDateDesc.Size = new System.Drawing.Size(108, 15);
             this.labelTCurrentDateDesc.TabIndex = 66;
@@ -357,7 +357,7 @@ namespace SystemInformation
             // 
             this.labelCurrentDayOfYear.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDayOfYear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentDayOfYear.Location = new System.Drawing.Point(320, 244);
+            this.labelCurrentDayOfYear.Location = new System.Drawing.Point(359, 244);
             this.labelCurrentDayOfYear.Name = "labelCurrentDayOfYear";
             this.labelCurrentDayOfYear.Size = new System.Drawing.Size(28, 15);
             this.labelCurrentDayOfYear.TabIndex = 65;
@@ -367,7 +367,7 @@ namespace SystemInformation
             // 
             this.labelCurrentDaysLeft.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDaysLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentDaysLeft.Location = new System.Drawing.Point(320, 264);
+            this.labelCurrentDaysLeft.Location = new System.Drawing.Point(359, 264);
             this.labelCurrentDaysLeft.Name = "labelCurrentDaysLeft";
             this.labelCurrentDaysLeft.Size = new System.Drawing.Size(28, 15);
             this.labelCurrentDaysLeft.TabIndex = 64;
@@ -377,7 +377,7 @@ namespace SystemInformation
             // 
             this.labelCurrentHoliday.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentHoliday.ForeColor = System.Drawing.Color.DarkGreen;
-            this.labelCurrentHoliday.Location = new System.Drawing.Point(282, 284);
+            this.labelCurrentHoliday.Location = new System.Drawing.Point(321, 284);
             this.labelCurrentHoliday.Name = "labelCurrentHoliday";
             this.labelCurrentHoliday.Size = new System.Drawing.Size(220, 15);
             this.labelCurrentHoliday.TabIndex = 63;
@@ -386,7 +386,7 @@ namespace SystemInformation
             // 
             this.labelCurrentDayOfYearDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDayOfYearDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentDayOfYearDesc.Location = new System.Drawing.Point(208, 244);
+            this.labelCurrentDayOfYearDesc.Location = new System.Drawing.Point(247, 244);
             this.labelCurrentDayOfYearDesc.Name = "labelCurrentDayOfYearDesc";
             this.labelCurrentDayOfYearDesc.Size = new System.Drawing.Size(104, 15);
             this.labelCurrentDayOfYearDesc.TabIndex = 61;
@@ -396,7 +396,7 @@ namespace SystemInformation
             // 
             this.labelCurrentDaysLeftDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDaysLeftDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentDaysLeftDesc.Location = new System.Drawing.Point(208, 264);
+            this.labelCurrentDaysLeftDesc.Location = new System.Drawing.Point(247, 264);
             this.labelCurrentDaysLeftDesc.Name = "labelCurrentDaysLeftDesc";
             this.labelCurrentDaysLeftDesc.Size = new System.Drawing.Size(104, 15);
             this.labelCurrentDaysLeftDesc.TabIndex = 60;
@@ -406,7 +406,7 @@ namespace SystemInformation
             // 
             this.labelCurrentDate.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentDate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentDate.Location = new System.Drawing.Point(360, 224);
+            this.labelCurrentDate.Location = new System.Drawing.Point(399, 224);
             this.labelCurrentDate.Name = "labelCurrentDate";
             this.labelCurrentDate.Size = new System.Drawing.Size(142, 15);
             this.labelCurrentDate.TabIndex = 59;
@@ -415,7 +415,7 @@ namespace SystemInformation
             // 
             this.labelCurrentWeekOfYear.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentWeekOfYear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentWeekOfYear.Location = new System.Drawing.Point(472, 244);
+            this.labelCurrentWeekOfYear.Location = new System.Drawing.Point(511, 244);
             this.labelCurrentWeekOfYear.Name = "labelCurrentWeekOfYear";
             this.labelCurrentWeekOfYear.Size = new System.Drawing.Size(24, 15);
             this.labelCurrentWeekOfYear.TabIndex = 80;
@@ -425,7 +425,7 @@ namespace SystemInformation
             // 
             this.labelCurrentWeeksLeft.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentWeeksLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentWeeksLeft.Location = new System.Drawing.Point(472, 264);
+            this.labelCurrentWeeksLeft.Location = new System.Drawing.Point(511, 264);
             this.labelCurrentWeeksLeft.Name = "labelCurrentWeeksLeft";
             this.labelCurrentWeeksLeft.Size = new System.Drawing.Size(24, 15);
             this.labelCurrentWeeksLeft.TabIndex = 79;
@@ -435,7 +435,7 @@ namespace SystemInformation
             // 
             this.labelCurrentWeekOfYearDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentWeekOfYearDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentWeekOfYearDesc.Location = new System.Drawing.Point(360, 244);
+            this.labelCurrentWeekOfYearDesc.Location = new System.Drawing.Point(399, 244);
             this.labelCurrentWeekOfYearDesc.Name = "labelCurrentWeekOfYearDesc";
             this.labelCurrentWeekOfYearDesc.Size = new System.Drawing.Size(112, 15);
             this.labelCurrentWeekOfYearDesc.TabIndex = 78;
@@ -445,7 +445,7 @@ namespace SystemInformation
             // 
             this.labelCurrentWeeksLeftDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelCurrentWeeksLeftDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelCurrentWeeksLeftDesc.Location = new System.Drawing.Point(360, 264);
+            this.labelCurrentWeeksLeftDesc.Location = new System.Drawing.Point(399, 264);
             this.labelCurrentWeeksLeftDesc.Name = "labelCurrentWeeksLeftDesc";
             this.labelCurrentWeeksLeftDesc.Size = new System.Drawing.Size(112, 15);
             this.labelCurrentWeeksLeftDesc.TabIndex = 77;
@@ -455,7 +455,7 @@ namespace SystemInformation
             // 
             this.labelSelectedWeekOfYear.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedWeekOfYear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedWeekOfYear.Location = new System.Drawing.Point(473, 334);
+            this.labelSelectedWeekOfYear.Location = new System.Drawing.Point(512, 334);
             this.labelSelectedWeekOfYear.Name = "labelSelectedWeekOfYear";
             this.labelSelectedWeekOfYear.Size = new System.Drawing.Size(24, 15);
             this.labelSelectedWeekOfYear.TabIndex = 84;
@@ -465,7 +465,7 @@ namespace SystemInformation
             // 
             this.labelSelectedWeeksLeft.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedWeeksLeft.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedWeeksLeft.Location = new System.Drawing.Point(473, 354);
+            this.labelSelectedWeeksLeft.Location = new System.Drawing.Point(512, 354);
             this.labelSelectedWeeksLeft.Name = "labelSelectedWeeksLeft";
             this.labelSelectedWeeksLeft.Size = new System.Drawing.Size(24, 15);
             this.labelSelectedWeeksLeft.TabIndex = 83;
@@ -475,7 +475,7 @@ namespace SystemInformation
             // 
             this.labelSelectedWeekOfYearDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedWeekOfYearDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedWeekOfYearDesc.Location = new System.Drawing.Point(361, 334);
+            this.labelSelectedWeekOfYearDesc.Location = new System.Drawing.Point(400, 334);
             this.labelSelectedWeekOfYearDesc.Name = "labelSelectedWeekOfYearDesc";
             this.labelSelectedWeekOfYearDesc.Size = new System.Drawing.Size(111, 15);
             this.labelSelectedWeekOfYearDesc.TabIndex = 82;
@@ -485,7 +485,7 @@ namespace SystemInformation
             // 
             this.labelSelectedWeeksLeftDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelSelectedWeeksLeftDesc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.labelSelectedWeeksLeftDesc.Location = new System.Drawing.Point(361, 354);
+            this.labelSelectedWeeksLeftDesc.Location = new System.Drawing.Point(400, 354);
             this.labelSelectedWeeksLeftDesc.Name = "labelSelectedWeeksLeftDesc";
             this.labelSelectedWeeksLeftDesc.Size = new System.Drawing.Size(111, 15);
             this.labelSelectedWeeksLeftDesc.TabIndex = 81;
@@ -535,6 +535,7 @@ namespace SystemInformation
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.picturePanel);
             this.Name = "DateAndTime";
+            this.Size = new System.Drawing.Size(558, 425);
             this.Load += new System.EventHandler(this.DateAndTime_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).EndInit();
             this.ResumeLayout(false);

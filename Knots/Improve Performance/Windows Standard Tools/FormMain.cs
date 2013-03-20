@@ -77,19 +77,19 @@ namespace WindowsStandardTools
             ResourceManager rm = new ResourceManager("WindowsStandardTools.Resources", typeof(FormMain).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
 
-			CheckDisk.Text = rm.GetString("checkdisk");
-			CheckDiskNote.Text = rm.GetString("checkdisk_note") + ".";
-			DiskDefrag.Text = rm.GetString("disk_defragmenter");
-			DiskDefragNote.Text = rm.GetString("disk_defragmenter_note") + ".";
-			SysRestore.Text = rm.GetString("system_restore");
-			SysRestoreNote.Text = rm.GetString("system_restore_note") + ".";
-			SysFileChecker.Text = rm.GetString("system_file_checker");
-			SysFileCheckerNote.Text = rm.GetString("system_file_checker_note") + ".";
-			;
-			Backup.Text = rm.GetString("backup");
-			BackupNote.Text = rm.GetString("backup_note") + ".";
-			Text = rm.GetString("window_title");
-			ucTop.Text = rm.GetString("window_title");
+            CheckDisk.Text = rm.GetString("checkdisk");
+            CheckDiskNote.Text = rm.GetString("checkdisk_note");
+            DiskDefrag.Text = rm.GetString("disk_defragmenter");
+            DiskDefragNote.Text = rm.GetString("disk_defragmenter_note");
+            SysRestore.Text = rm.GetString("system_restore");
+            SysRestoreNote.Text = rm.GetString("system_restore_note");
+            SysFileChecker.Text = rm.GetString("system_file_checker");
+            SysFileCheckerNote.Text = rm.GetString("system_file_checker_note");
+
+            Backup.Text = rm.GetString("backup");
+            BackupNote.Text = rm.GetString("backup_note");
+            Text = rm.GetString("window_title");
+            ucTop.Text = rm.GetString("window_title");
 		}
 
 		/// <summary>

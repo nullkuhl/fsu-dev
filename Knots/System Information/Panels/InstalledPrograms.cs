@@ -376,6 +376,8 @@ namespace SystemInformation
 						catch { }
 						//} // Only display entries that are not system components.
 					} // Iterate through all of the values
+                    // Process UI events.
+                    Application.DoEvents();
 				} // Get all installed programs.
 
 				// Close the sub key.

@@ -31,9 +31,6 @@ namespace FreemiumUtilities.RegCleaner
         CancelComplete cancelComplete;
         ScanComplete complete;
         bool fixAfterScan;
-        BusyWindow busyWindow;
-        Thread busyThread;
-
         /// <summary>
         /// RegCleaner main form
         /// </summary>
@@ -69,14 +66,12 @@ namespace FreemiumUtilities.RegCleaner
                 this.complete = complete;
                 this.cancelComplete = cancelComplete;
                 this.fixAfterScan = fixAfterScan;
-
                 Reset();
                 ABORT = false;
                 ScanStart();
             }
             else
             {
-
                 MessageBox.Show(Resources.SelectAtLeastOneItem,
                                 Resources.InvalidSelection,
                                 MessageBoxButton.OK, MessageBoxImage.Exclamation);
@@ -104,7 +99,9 @@ namespace FreemiumUtilities.RegCleaner
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(CfgFile.Get("Lang"));
             this.callback = callback;
+
             CheckItems(true);
+
             RemoveItems();
             IsResetPending = true;
         }
@@ -133,8 +130,6 @@ namespace FreemiumUtilities.RegCleaner
 
         static readonly cRestore _Restore = new cRestore();
         static DispatcherTimer _aRestoreTimer;
-        static bool _bRestoreComplete;
-        static bool _bRestoreSucess;
         static int _iRestoreCounter;
         static int _iKeyCounter;
         static int lastResultsCounter;
@@ -142,16 +137,15 @@ namespace FreemiumUtilities.RegCleaner
         static int _iSegmentCounter;
         static int _iProgressMax;
         static int removedItemsCount;
-        static string _sLabel = string.Empty;
-        static string _sPhase = string.Empty;
-        static string _sMatch = string.Empty;
-        static string _sPath = string.Empty;
-        static string _sHive = string.Empty;
-        static string _sSegment = string.Empty;
+        static string _sLabel = "";
+        static string _sPhase = "";
+        static string _sMatch = "";
+        static string _sPath = "";
+        static string _sHive = "";
+        static string _sSegment = "";
         static int[] _aSubScan;
         static int[] SubCategoryItemCounts;
         static DateTime _dTime;
-        static TimeSpan _tTimeElapsed;
 
         readonly string ControlScanTitle = Resources.ControlScanTitle;
         readonly string DeepScanTitle = Resources.DeepScanTitle;
@@ -168,7 +162,6 @@ namespace FreemiumUtilities.RegCleaner
 
         cRegScan _RegScan;
         DispatcherTimer _aUpdateTimer;
-        BackgroundWorker _oProcessAsyncBackgroundWorker;
         int progressBarValue;
 
         /// <summary>
@@ -260,14 +253,10 @@ namespace FreemiumUtilities.RegCleaner
 
         void RegScan_SubScanComplete(string id)
         {
+            //SubProgressCounter(id);
             SubCategoryScanned(id);
         }
 
-        /// <summary>
-        /// Handles tick event of restore timer
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void _aRestoreTimer_Tick(object sender, EventArgs e)
         {
             _iRestoreCounter += 1;
@@ -280,21 +269,24 @@ namespace FreemiumUtilities.RegCleaner
         void _aUpdateTimer_Tick(object sender, EventArgs e)
         {
             progressBarValue = (int)Math.Round((float)_iSegmentCounter / _iProgressMax * 100, 0);
-            callback(progressBarValue, progressBarValue != 100 ? _sPath : string.Empty);
+
+            callback(progressBarValue, progressBarValue != 100 ? _sPath : "");
+
+            SubProgressUpdate();
+
             if (IsTimerOn == false)
             {
-                callback(100, string.Empty);
+                callback(100, "");
+
                 ScanStop();
             }
         }
 
         #endregion
 
+
         #region Helpers
 
-        /// <summary>
-        /// Initializing registry categories
-        /// </summary>
         void InitRegistryCategories()
         {
             RegistryCategories.Add(new RegistryCategory(ControlScanTitle));
@@ -327,18 +319,15 @@ namespace FreemiumUtilities.RegCleaner
             DispatcherFrame frame = new DispatcherFrame(true);
             Dispatcher.CurrentDispatcher.BeginInvoke(
                 DispatcherPriority.Background, (SendOrPostCallback)delegate(object arg)
-                                                                        {
-                                                                            DispatcherFrame f = arg as DispatcherFrame;
-                                                                            f.Continue = false;
-                                                                        },
+                {
+                    DispatcherFrame f = arg as DispatcherFrame;
+                    f.Continue = false;
+                },
                 frame
                 );
             Dispatcher.PushFrame(frame);
         }
 
-        /// <summary>
-        /// Initializing fields
-        /// </summary>
         void InitFields()
         {
             _RegScan = new cRegScan();
@@ -372,95 +361,24 @@ namespace FreemiumUtilities.RegCleaner
                                      cSecurity.AccessTypes.Access_Allowed, flags);
         }
 
-        /// <summary>
-        /// Shows Processing form
-        /// </summary>
-        public void ShowProcessing()
-        {
-            busyThread = new Thread(() =>
-            {
-                busyWindow = new BusyWindow();
-                busyWindow.Show();
-                busyWindow.Closed += (s, e) => busyWindow.Dispatcher.InvokeShutdown();
-                Dispatcher.Run();
-            });
-            busyThread.SetApartmentState(ApartmentState.STA);
-            busyThread.Start();
-        }
-
-        /// <summary>
-        /// Hides Processing form
-        /// </summary>
-        public void HideProcessing()
-        {
-            busyThread.Abort();
-        }
-
-        /// <summary>
-        /// Removes items
-        /// </summary>
         void RemoveItems()
         {
             ABORT = false;
-
             bool result = false;
-
-            //set a restore point
-            bool isSystemRestoreNeeded = Settings.Default.SettingRestore;
-
             try
             {
-                if (isSystemRestoreNeeded)
-                {
-                    MessageBoxResult chc = MessageBox.Show(Resources.WouldYouLikeToCreateRestorePoint,
-                                                           Resources.SystemRestore, MessageBoxButton.YesNo, MessageBoxImage.Question);
-                    if (chc == MessageBoxResult.Yes)
-                    {
-                        try
-                        {
-                            // restore visual
-                            RestoreProgressStart();
-                            if (!_bRestoreSucess)
-                            {
-                                RestoreProgressStop();
-                                isSystemRestoreNeeded = false;
-
-                                // Simplified code for a message box that just say: sys restore disabled, please, enable it
-                                MessageBoxResult msg = MessageBox.Show(
-                                    Resources.SystemRestoreUnavailableRunFixAnyway,
-                                    Resources.RestoreDisabled,
-                                    MessageBoxButton.YesNo);
-                                if (msg == MessageBoxResult.No)
-                                {
-                                    ABORT = true;
-                                    return;
-                                }
-                            }
-                            else
-                            {
-                                RestoreProgressStop();
-                            }
-                        }
-                        catch { }
-                    }
-                }
-
                 cLightning lightning = new cLightning();
-
                 // iterate through and remove
                 ObservableCollection<ScanData> itemsToDelete = new ObservableCollection<ScanData>();
-
                 int i = 0;
                 foreach (ScanData o in RegistrySubCategories)
                 {
                     i++;
-
                     if (ABORT)
                     {
                         cancelComplete();
                         return;
                     }
-
                     if (o.Check)
                     {
                         switch (o.Id)
@@ -492,7 +410,9 @@ namespace FreemiumUtilities.RegCleaner
                             case 27:
                                 {
                                     if (o.Value == "Default")
+                                    {
                                         o.Value = string.Empty;
+                                    }
 
                                     result = lightning.DeleteValue(o.Root, o.Key, o.Value);
                                     if (result == false)
@@ -550,30 +470,14 @@ namespace FreemiumUtilities.RegCleaner
 
                 removedItemsCount = itemsToDelete.Count;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
-            }
-
-            // finalize restore
-            if (isSystemRestoreNeeded)
-            {
-                try
-                {
-                    _Restore.EndRestore(false);
-                }
-                catch (Exception)
-                {
-                    // ToDo: send exception details via SmartAssembly bug reporting!
-                }
             }
 
             complete(fixAfterScan);
         }
 
-        /// <summary>
-        /// Reset process
-        /// </summary>
         void Reset()
         {
             ResetEngine();
@@ -583,9 +487,6 @@ namespace FreemiumUtilities.RegCleaner
             ResetProgressBars();
         }
 
-        /// <summary>
-        /// Resets context
-        /// </summary>
         void ResetContext()
         {
             SubCategoryItemCounts = new int[12];
@@ -633,9 +534,6 @@ namespace FreemiumUtilities.RegCleaner
             _aUpdateTimer.IsEnabled = false;
         }
 
-        /// <summary>
-        /// Cancelling scan
-        /// </summary>
         void ScanCancel()
         {
             Reset();
@@ -653,9 +551,6 @@ namespace FreemiumUtilities.RegCleaner
             return RegistryCategories.Count(rc => rc.IsChecked);
         }
 
-        /// <summary>
-        /// Setup scan
-        /// </summary>
         void ScanSetup()
         {
             ControlScan = RegistryCategories.First(rc => rc.Title == ControlScanTitle).IsChecked;
@@ -696,9 +591,6 @@ namespace FreemiumUtilities.RegCleaner
             _RegScan.ScanMru = MRUScan;
         }
 
-        /// <summary>
-        /// Starts scanning
-        /// </summary>
         void ScanStart()
         {
             ProblemsCount = 0;
@@ -710,9 +602,6 @@ namespace FreemiumUtilities.RegCleaner
             _RegScan.AsyncScan();
         }
 
-        /// <summary>
-        /// Stops scanning
-        /// </summary>
         void ScanStop()
         {
             _aUpdateTimer.IsEnabled = false;
@@ -733,6 +622,10 @@ namespace FreemiumUtilities.RegCleaner
 
             ResetData();
             FrmRegCleaner.Problems = RegistrySubCategories;
+        }
+
+        static void SubProgressUpdate()
+        {
         }
 
         void SubCategoryScanned(string id)
@@ -856,8 +749,8 @@ namespace FreemiumUtilities.RegCleaner
             //4-_pnlHelp
             if (IsScanLoaded)
             {
+                //ResetContext();
             }
-            // toggle visible panel
             switch (name)
             {
                 case "btnRegscan":
@@ -879,58 +772,6 @@ namespace FreemiumUtilities.RegCleaner
                     break;
             }
         }
-
-        #region System Restore
-
-        void RestoreProgressStart()
-        {
-            try
-            {
-                ShowProcessing();
-                _dTime = DateTime.Now;
-                _bRestoreComplete = false;
-                _aRestoreTimer.IsEnabled = true;
-                // launch restore on a new thread
-                _oProcessAsyncBackgroundWorker = new BackgroundWorker { WorkerSupportsCancellation = true };
-                _oProcessAsyncBackgroundWorker.DoWork += _oProcessAsyncBackgroundWorker_DoWork;
-                _oProcessAsyncBackgroundWorker.RunWorkerCompleted += _oProcessAsyncBackgroundWorker_RunWorkerCompleted;
-                _oProcessAsyncBackgroundWorker.RunWorkerAsync();
-
-                while (_bRestoreComplete == false)
-                {
-                    DoEvents();
-                    _tTimeElapsed = DateTime.Now.Subtract(_dTime);
-                    double safe = _tTimeElapsed.TotalSeconds;
-                    // break at 5 minutes, something has gone wrong
-                    if (safe > 300)
-                    {
-                        break;
-                    }
-                }
-                HideProcessing();
-            }
-            catch { }
-        }
-
-        static void RestoreProgressStop()
-        {
-            _aRestoreTimer.IsEnabled = false;
-            _iRestoreCounter = 0;
-        }
-
-        static void _oProcessAsyncBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            _bRestoreComplete = true;
-        }
-
-        static void _oProcessAsyncBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            _bRestoreComplete = false;
-            _bRestoreSucess = _Restore.StartRestore("Registry Cleaner Restore Point");
-        }
-
-        #endregion
-
         #endregion
     }
 }

@@ -466,30 +466,6 @@
             <param name="sender"></param>
             <param name="e"></param>
         </member>
-        <member name="M:FileSplitterAndJoiner.Helper.VerifyMinFilesCount(System.String)">
-            <summary>
-            Verify that at least 2 part files (result of splitting operation) exist before joining
-            </summary>
-            <param name="filename"></param>
-        </member>
-        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String,System.Int16)">
-            <summary>
-             Verify that we have enough space on driver before joining
-            </summary>
-            <param name="destFolder"></param>
-            <param name="sourceFileName"></param>
-            <param name="pieceCount"></param>
-            <returns></returns>
-        </member>
-        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String)">
-            <summary>
-             Verify that we have enough space on driver before splitting
-            </summary>
-            <param name="destFolder"></param>
-            <param name="sourceFileName"></param>
-            <param name="pieceCount"></param>
-            <returns></returns>
-        </member>
         <member name="T:FileSplitterAndJoiner.TopControl">
             <summary>
             Top styling control
@@ -558,6 +534,30 @@
               Overrides the current thread'StreamReader CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
             </summary>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.VerifyMinFilesCount(System.String)">
+            <summary>
+            Verify that at least 2 part files (result of splitting operation) exist before joining
+            </summary>
+            <param name="filename"></param>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String,System.Int16)">
+            <summary>
+             Verify that we have enough space on driver before joining
+            </summary>
+            <param name="destFolder"></param>
+            <param name="sourceFileName"></param>
+            <param name="pieceCount"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FileSplitterAndJoiner.Helper.IsEnoughSpace(System.String,System.String)">
+            <summary>
+             Verify that we have enough space on driver before splitting
+            </summary>
+            <param name="destFolder"></param>
+            <param name="sourceFileName"></param>
+            <param name="pieceCount"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

@@ -29,7 +29,12 @@ namespace FreemiumUtilities
         /// </summary>
         public void AnimateInnerBox()
         {
-            DoubleAnimation animFadeIn = new DoubleAnimation { From = 0, To = 1, Duration = new Duration(TimeSpan.FromMilliseconds(800)) };
+            DoubleAnimation animFadeIn = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = new Duration(TimeSpan.FromMilliseconds(800))
+            };
             Inner.BeginAnimation(OpacityProperty, animFadeIn);
         }
 
@@ -41,7 +46,12 @@ namespace FreemiumUtilities
         void Close(object sender, RoutedEventArgs e)
         {
             Storyboard sb = new Storyboard();
-            DoubleAnimation animFadeIn = new DoubleAnimation { From = 1, To = 0, Duration = new Duration(TimeSpan.FromMilliseconds(300)) };
+            DoubleAnimation animFadeIn = new DoubleAnimation
+            {
+                From = 1,
+                To = 0,
+                Duration = new Duration(TimeSpan.FromMilliseconds(300))
+            };
             sb.Children.Add(animFadeIn);
             Storyboard.SetTarget(animFadeIn, this);
             Storyboard.SetTargetProperty(animFadeIn, new PropertyPath(OpacityProperty));

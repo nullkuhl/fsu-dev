@@ -74,3 +74,41 @@ E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Regis
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\de\RegistryOptimizer.resources.dll
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer.exe
 E:\Work\Freelance\Null Khul\System Utils_current\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\freemium.cfg
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\Libraries\FreemiumUtil.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\RegistryOptimizer.exe.config
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\RegistryOptimizer.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\RegistryOptimizer.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\bin\Debug\de\RegistryOptimizer.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Knots.Performance.RegistryCompactor.csprojResolveAssemblyReference.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\App.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\SecureDesktop.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\App.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\MainWindow.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\Legend.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\PieChartLayout.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\PiePlotter.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\AnalyzingProgress.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\CompactingProgress.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\RegistryInfo.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\SecureDesktop.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer_Content.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\GeneratedInternalTypeHelper.g.cs
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer_MarkupCompile.cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer_MarkupCompile.lref
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\MainWindow.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\Legend.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\PieChartLayout.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\ScottLogic\PieChart\PiePlotter.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\AnalyzingProgress.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\CompactingProgress.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Views\RegistryInfo.baml
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer.g.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryCompactor.Properties.Resources.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryCompactor.BottomControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryCompactor.TopControl.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryCompactor.Properties.Resources.de.resources
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\Knots.Performance.RegistryCompactor.csproj.GenerateResource.Cache
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\de\RegistryOptimizer.resources.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer.exe
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Registry Compactor\obj\x86\Debug\RegistryOptimizer.pdb

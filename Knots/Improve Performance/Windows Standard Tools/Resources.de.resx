@@ -121,13 +121,13 @@
     <value>Backup</value>
   </data>
   <data name="backup_note" xml:space="preserve">
-    <value>Das Backup-Programm hilft Ihnen, Ihre wichtigen Daten vor dem versehentlichen oder ungewollten Verlust zu schützen, beispielsweise wenn Sie einen Datei- oder Speicherfehler haben</value>
+    <value>Das Backup-Programm hilft Ihnen, Ihre wichtigen Daten vor dem versehentlichen oder ungewollten Verlust zu schützen, beispielsweise wenn Sie einen Datei- oder Speicherfehler haben.</value>
   </data>
   <data name="checkdisk" xml:space="preserve">
     <value>Festplatte überprüfen</value>
   </data>
   <data name="checkdisk_note" xml:space="preserve">
-    <value>Ein Kommandozeilen-Tool, das Datenträger auf Probleme überprüft und diese behebt. Beispielsweise werden fehlerhafte Sektoren, verlorene Cluster, vernetzte Dateien und Verzeichnisfehler repariert</value>
+    <value>Ein Kommandozeilen-Tool, das Datenträger auf Probleme überprüft und diese behebt. Beispielsweise werden fehlerhafte Sektoren, verlorene Cluster, vernetzte Dateien und Verzeichnisfehler repariert.</value>
   </data>
   <data name="critical_warning" xml:space="preserve">
     <value>Kritische Warnung</value>
@@ -136,7 +136,7 @@
     <value>Defragmentierung</value>
   </data>
   <data name="disk_defragmenter_note" xml:space="preserve">
-    <value>Wenn Sie ein Programm auf Ihrem Computer installieren, wird dieses eventuell über weite Teile der Festplatte gestreut. Dies nennt man Fragmentierung. Wenn die Fragmentierung zu groß wird, kann die Leistung der Festplatte darunter leiden und die Programme auf dem Computer werden langsamer ausgeführt. Das Defragmentierungsprogramm optimiert die Leistung Ihres Computers und reorganisiert die Dateien auf Ihrer Festplatte in zusammenhängende Blöcke</value>
+    <value>Wenn Sie ein Programm auf Ihrem Computer installieren, wird dieses eventuell über weite Teile der Festplatte gestreut. Dies nennt man Fragmentierung. Wenn die Fragmentierung zu groß wird, kann die Leistung der Festplatte darunter leiden und die Programme auf dem Computer werden langsamer ausgeführt. Das Defragmentierungsprogramm optimiert die Leistung Ihres Computers und reorganisiert die Dateien auf Ihrer Festplatte in zusammenhängende Blöcke.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>

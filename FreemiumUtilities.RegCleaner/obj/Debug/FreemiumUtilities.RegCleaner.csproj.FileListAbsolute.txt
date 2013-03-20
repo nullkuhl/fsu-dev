@@ -82,8 +82,6 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\WPFLocalizeExtension.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.Infrastructure.pdb
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.csprojResolveAssemblyReference.cache
-E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\BusyWindow.baml
-E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\BusyWindow.g.cs
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner_MarkupCompile.cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner_MarkupCompile.lref
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\WindowStyles.baml
@@ -95,3 +93,6 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\de\FreemiumUtilities.RegCleaner.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.dll
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.pdb
+E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\de\RegistryCleanerCore.resources.dll
