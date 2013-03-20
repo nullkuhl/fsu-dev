@@ -390,6 +390,8 @@
     <None Include="Resources\help_off.png" />
     <None Include="Resources\help_on.png" />
     <None Include="Resources\FSUIcon.ico" />
+    <Content Include="Resources\processor16.png" />
+    <Content Include="Resources\processor48.png" />
     <Content Include="SystemInformation.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -438,6 +440,7 @@
     <Content Include="Resources\Users_16x16.png" />
     <Content Include="Resources\Users_48x48.png" />
     <Content Include="Resources\User_16x16.png" />
+    <Content Include="System Information.ico" />
   </ItemGroup>
   <PropertyGroup>
     <PreBuildEvent>
@@ -468,11 +471,12 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <OutputPath>bin\Debug\</OutputPath>
+    <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <PlatformTarget>x86</PlatformTarget>
     <OutputPath>bin\Release\</OutputPath>
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
