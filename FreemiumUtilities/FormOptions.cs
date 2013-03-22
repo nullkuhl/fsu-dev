@@ -25,7 +25,7 @@ namespace FreemiumUtilities
     /// </summary>
     public partial class FormOptions : Form
     {
-        readonly Dictionary<string, int> langIndex = new Dictionary<string, int> { { "en", 0 }, { "de", 1 } };
+		readonly Dictionary<string, int> langIndex = new Dictionary<string, int> { { "en", 0 }, { "de", 1 }, { "es", 2 }, { "pt", 3 }, { "it", 4 }, { "fr", 5 } };
 
         readonly Dictionary<string, int> themeIndex = new Dictionary<string, int> { { "Blue", 0 }, { "Green", 1 }, { "Red", 1 } };
 
@@ -92,12 +92,36 @@ namespace FreemiumUtilities
                 UpdateUILocalization();
                 CfgFile.Set("Lang", "en");
             }
-            if (Languages.SelectedIndex == 1)
-            {
-                LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("de");
-                UpdateUILocalization();
-                CfgFile.Set("Lang", "de");
-            }
+			if (Languages.SelectedIndex == 1)
+			{
+				LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("de");
+				UpdateUILocalization();
+				CfgFile.Set("Lang", "de");
+			}
+			if (Languages.SelectedIndex == 2)
+			{
+				LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("es");
+				UpdateUILocalization();
+				CfgFile.Set("Lang", "es");
+			}
+			if (Languages.SelectedIndex == 3)
+			{
+				LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("pt");
+				UpdateUILocalization();
+				CfgFile.Set("Lang", "pt");
+			}
+			if (Languages.SelectedIndex == 4)
+			{
+				LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("it");
+				UpdateUILocalization();
+				CfgFile.Set("Lang", "it");
+			}
+			if (Languages.SelectedIndex == 5)
+			{
+				LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo("fr");
+				UpdateUILocalization();
+				CfgFile.Set("Lang", "fr");
+			}
 
             OneClickAppsViewModel oneClickAppsViewModel = (OneClickAppsViewModel)Application.Current.MainWindow.DataContext;
             foreach (OneClickAppViewModel item in oneClickAppsViewModel.OneClickApps)

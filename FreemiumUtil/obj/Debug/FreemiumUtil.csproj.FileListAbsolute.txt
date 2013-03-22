@@ -14,3 +14,9 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtil\bin
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\FreemiumUtil.pdb

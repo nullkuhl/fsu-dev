@@ -15,3 +15,9 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\bin\Debug\WPFLocalizeExtension.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb

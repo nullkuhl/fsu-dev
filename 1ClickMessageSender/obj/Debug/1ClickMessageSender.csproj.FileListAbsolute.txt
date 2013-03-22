@@ -19,3 +19,12 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSen
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1ClickMessageSender.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1Click.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\1ClickMessageSender\obj\Debug\1Click.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ClickMaint.NamespaceDoc.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\1Click.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\1Click.pdb

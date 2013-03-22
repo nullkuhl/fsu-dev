@@ -121,6 +121,10 @@
       <DependentUpon>BottomControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources.es.resx" />
+    <EmbeddedResource Include="Resources.fr.resx" />
+    <EmbeddedResource Include="Resources.it.resx" />
+    <EmbeddedResource Include="Resources.pt.resx" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

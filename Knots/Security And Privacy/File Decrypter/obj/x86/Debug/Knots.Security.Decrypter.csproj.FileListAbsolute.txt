@@ -19,3 +19,12 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Knots.Security.Decrypter.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.FormDecrypter.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.pdb

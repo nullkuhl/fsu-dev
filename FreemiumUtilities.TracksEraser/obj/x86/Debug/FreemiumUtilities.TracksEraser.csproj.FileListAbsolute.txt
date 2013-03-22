@@ -49,3 +49,21 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\SQLite.Interop.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\System.Data.SQLite.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\Libraries\UrlHistoryLibrary.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.TracksEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackOptions.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmTrackSelector.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.pdb

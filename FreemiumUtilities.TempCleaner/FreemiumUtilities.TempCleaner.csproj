@@ -75,6 +75,10 @@
     <EmbeddedResource Include="FormTempCleaner.resx">
       <DependentUpon>FormTempCleaner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TextResources.es.resx" />
+    <EmbeddedResource Include="TextResources.fr.resx" />
+    <EmbeddedResource Include="TextResources.it.resx" />
+    <EmbeddedResource Include="TextResources.pt.resx" />
     <EmbeddedResource Include="TextResources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>TextResources.Designer.cs</LastGenOutput>

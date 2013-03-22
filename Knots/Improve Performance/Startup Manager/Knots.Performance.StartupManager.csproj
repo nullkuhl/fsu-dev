@@ -132,6 +132,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Resources.es.resx" />
+    <EmbeddedResource Include="Resources.fr.resx" />
+    <EmbeddedResource Include="Resources.it.resx" />
+    <EmbeddedResource Include="Resources.pt.resx" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

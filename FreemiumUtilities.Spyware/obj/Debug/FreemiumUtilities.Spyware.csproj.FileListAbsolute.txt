@@ -46,3 +46,20 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Spyware\obj\Debug\de\FreemiumUtilities.Spyware.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Spyware.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\de\FreemiumUtilities.Spyware.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.FrmSpyware.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.FrmSpyware.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\de\FreemiumUtilities.Spyware.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.Spyware\obj\Debug\FreemiumUtilities.Spyware.pdb

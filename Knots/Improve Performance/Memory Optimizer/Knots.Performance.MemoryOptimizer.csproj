@@ -140,6 +140,10 @@
       <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources.es.resx" />
+    <EmbeddedResource Include="Resources.fr.resx" />
+    <EmbeddedResource Include="Resources.it.resx" />
+    <EmbeddedResource Include="Resources.pt.resx" />
     <EmbeddedResource Include="TopControl.resx">
       <DependentUpon>TopControl.cs</DependentUpon>
     </EmbeddedResource>

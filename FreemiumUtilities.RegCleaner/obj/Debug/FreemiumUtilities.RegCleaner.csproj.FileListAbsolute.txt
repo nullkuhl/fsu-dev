@@ -96,3 +96,45 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.pdb
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.RegCleaner\bin\Debug\de\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\Libraries\RegistryCleanerCore.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.RegCleaner.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.RegCleaner.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.RegCleaner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\de\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\es\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\fr\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\it\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\pt\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\RegistryCleanerCore.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\de\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\es\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\fr\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\it\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\bin\Debug\pt\RegistryCleanerCore.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner_MarkupCompile.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner_MarkupCompile.lref
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\WindowStyles.baml
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.g.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.FormRegCleaner.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.Properties.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\de\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\es\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\fr\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\it\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\pt\FreemiumUtilities.RegCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.RegCleaner\obj\Debug\FreemiumUtilities.RegCleaner.pdb

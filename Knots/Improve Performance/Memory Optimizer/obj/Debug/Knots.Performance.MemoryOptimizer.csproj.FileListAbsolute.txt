@@ -82,3 +82,37 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Pe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Memory Optimizer\obj\Debug\en\MemoryOptimizer.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\Libraries\System.Windows.Forms.DataVisualization.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\freemium.cfg
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\memopti.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\MemoryOptimizer.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\MemoryOptimizer.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\MemoryOptimizer.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\de\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\en\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\es\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\fr\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\it\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\bin\Debug\pt\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\de\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\en\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\es\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\fr\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\it\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\pt\MemoryOptimizer.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Memory Optimizer\obj\Debug\MemoryOptimizer.pdb

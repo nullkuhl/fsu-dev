@@ -82,3 +82,37 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Pe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\en\StartupManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\freemium.cfg
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\StartupManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\de\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\en\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\es\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\fr\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\it\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\bin\Debug\pt\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.FormMain.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\de\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\en\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\es\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\fr\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\it\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\pt\StartupManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Startup Manager\obj\Debug\StartupManager.pdb

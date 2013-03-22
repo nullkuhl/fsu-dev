@@ -62,3 +62,38 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterJoiner.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterJoiner.pdb
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\Knots.Security.FileSplitterAndJoiner.csprojResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\Joiner.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\freemium.cfg
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\FileSplitterJoiner.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\FileSplitterJoiner.xml
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\FileSplitterJoiner.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\FileSplitterJoiner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\de\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\en\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\es\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\fr\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\it\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\bin\Debug\pt\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.FormPieceSizeDialog.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterAndJoiner.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\de\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\en\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\es\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\fr\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\it\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\pt\FileSplitterJoiner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterJoiner.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Splitter and Joiner\obj\Debug\FileSplitterJoiner.pdb

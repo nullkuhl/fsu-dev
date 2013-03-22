@@ -51,3 +51,34 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TempCleaner\obj\Debug\de\FreemiumUtilities.TempCleaner.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\FreemiumUtilities.TempCleaner.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\FreemiumUtilities.TempCleaner.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\FreemiumUtilities.TempCleaner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\de\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\es\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\fr\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\it\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\pt\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.ImageResources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.FrmTempCleaner.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.FrmTempCleaner.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\de\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\es\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\fr\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\it\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\pt\FreemiumUtilities.TempCleaner.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.pdb

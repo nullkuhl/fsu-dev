@@ -58,3 +58,36 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\en\FileEraser.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\freemium.cfg
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\FileEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\es\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\fr\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\it\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\pt\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\de\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\bin\Debug\en\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Properties.ImageResources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.Resources.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\es\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\fr\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\it\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\pt\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\de\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\en\FileEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Eraser\obj\Debug\FileEraser.pdb

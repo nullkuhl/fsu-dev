@@ -94,3 +94,40 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\en\TracksEraser.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\SQLite.Interop.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\System.Data.SQLite.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\DLL\UrlHistoryLibrary.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\freemium.cfg
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\TracksEraser.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\es\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\fr\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\it\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\pt\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\de\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\bin\Debug\en\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.frmOptions.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\FreemiumUtilities.TracksEraser.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.Resources.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\es\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\fr\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\it\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\pt\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\de\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\en\TracksEraser.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\TracksEraser\obj\x86\Debug\TracksEraser.pdb

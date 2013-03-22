@@ -57,3 +57,19 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilitie
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\Libraries\FreemiumUtilites.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll.config
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.Infrastructure.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\WPFLocalizeExtension.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.Infrastructure.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmDetails.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmStartupMan.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.pdb

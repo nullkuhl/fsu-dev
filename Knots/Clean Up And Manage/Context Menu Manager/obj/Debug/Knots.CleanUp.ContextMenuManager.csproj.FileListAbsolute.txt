@@ -51,3 +51,34 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\en\ContextMenuManager.resources.dll
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\Libraries\FreemiumUtil.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\ContextMenuManager.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\de\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\en\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\es\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\fr\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\it\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\bin\Debug\pt\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.BottomControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.TopControl.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.en.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.es.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.fr.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.it.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\Context_Menu_Manager.Resources.pt.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\de\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\en\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\es\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\fr\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\it\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\pt\ContextMenuManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Clean Up And Manage\Context Menu Manager\obj\Debug\ContextMenuManager.pdb

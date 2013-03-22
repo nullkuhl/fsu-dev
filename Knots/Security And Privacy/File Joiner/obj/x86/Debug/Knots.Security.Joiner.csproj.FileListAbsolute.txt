@@ -30,3 +30,13 @@ E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security A
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Knots.Security.Joiner.csproj.GenerateResource.Cache
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.exe
 E:\Work\Freelance\Null Khul\System Utils _original\System Utils\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\bin\Debug\Joiner.exe.config
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\bin\Debug\Joiner.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\bin\Debug\Joiner.pdb
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.FormMain.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.Properties.Resources.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\ResGen.read.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\ResGen.write.1.tlog
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.exe
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Security And Privacy\File Joiner\obj\x86\Debug\Joiner.pdb
