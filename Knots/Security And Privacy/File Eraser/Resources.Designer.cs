@@ -205,6 +205,15 @@ namespace FileEraser {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Delete folders, too.
+        /// </summary>
+        internal static string eliminate_folders {
+            get {
+                return ResourceManager.GetString("eliminate_folders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Emptying file contents failed.
         /// </summary>
         internal static string emptying_content_failed {

@@ -204,9 +204,6 @@
   <data name="num_of_pieces" xml:space="preserve">
     <value>Número de partes</value>
   </data>
-  <data name="num_of_pieces1" xml:space="preserve">
-    <value>Número de partes</value>
-  </data>
   <data name="num_pieces" xml:space="preserve">
     <value>Nº de partes</value>
   </data>
@@ -223,9 +220,6 @@
     <value>Parte nº</value>
   </data>
   <data name="pause" xml:space="preserve">
-    <value>Pausa</value>
-  </data>
-  <data name="pause1" xml:space="preserve">
     <value>Pausa</value>
   </data>
   <data name="paused" xml:space="preserve">
@@ -302,5 +296,26 @@
   </data>
   <data name="too_large" xml:space="preserve">
     <value>O tamanho da parte especificada é demasiado grande para divisão. Especifique um tamanho de parte mais pequeno</value>
+  </data>
+  <data name="access_denied" xml:space="preserve">
+    <value>Você não tem permissão para escrever para determinado destino. Por favor, escolha outra pasta de destino.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Juntando interrompida. Não pode continuar!</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Pelo menos dois arquivos de peças para se juntarem</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Não há espaço suficiente em disco. Por favor, especifique outra pasta.</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Um arquivo com o mesmo nome do arquivo se juntou já existe. Tem certeza de que deseja substituir esse arquivo?</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Dividir interrompida. Não pode continuar!</value>
   </data>
 </root>

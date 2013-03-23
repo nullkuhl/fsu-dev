@@ -279,4 +279,10 @@
   <data name="visit_us" xml:space="preserve">
     <value>Visite-nos</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Eliminar carpetas, también</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
 </root>

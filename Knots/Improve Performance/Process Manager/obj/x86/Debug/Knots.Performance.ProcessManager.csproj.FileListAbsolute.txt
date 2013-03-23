@@ -101,11 +101,11 @@ C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\b
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\ProcessManager.exe.config
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\ProcessManager.exe
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\ProcessManager.pdb
-C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\it\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\de\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\en\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\es\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\fr\ProcessManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\it\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\bin\Debug\pt\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.BottomControl.resources
@@ -115,7 +115,6 @@ C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\o
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.FormShowDetails.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Properties.Resources.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.TopControl.resources
-C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Resource.it.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Resources.de.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Resources.en.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Resources.es.resources
@@ -124,11 +123,11 @@ C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\o
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.Resources.pt.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ResGen.read.1.tlog
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ResGen.write.1.tlog
-C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\it\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\de\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\en\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\es\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\fr\ProcessManager.resources.dll
+C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\it\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\pt\ProcessManager.resources.dll
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.exe
 C:\Users\cm\Documents\GitHub\fsu-dev\Knots\Improve Performance\Process Manager\obj\x86\Debug\ProcessManager.pdb

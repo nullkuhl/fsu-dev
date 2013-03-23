@@ -138,6 +138,9 @@
   <data name="disk_defragmenter_note" xml:space="preserve">
     <value>Quand vous installez un programme sur votre ordinateur, il est possible que ses fichiers se dispersent progressivement sur l’ensemble du disque dur. C’est ce qu’on appelle la fragmentation. Quand la fragmentation est excessive, elle peut faire baisser la performance du disque dur et ralentir l’exécution des programmes. L’outil de défragmentation optimise la performance de votre PC et reclasse les fichiers de votre disque dur en blocs cohérents.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="system_file_checker" xml:space="preserve">
     <value>Vérifier les fichiers système</value>
   </data>

@@ -396,4 +396,13 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Os ficheiros com zero-bytes não têm dados e geralmente podem ser eliminados</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing ...</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Arquivos dentro da pasta Temp do Windows são sempre considerados como resíduos</value>
+  </data>
 </root>

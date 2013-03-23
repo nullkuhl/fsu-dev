@@ -434,4 +434,28 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   <data name="win_temp_files" xml:space="preserve">
     <value>Ficheiros Temporários do Windows</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Isso requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome já está em execução, feche-o em seguida, execute o Scan novamente.</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox já está em execução, feche-o em seguida, execute o Scan novamente.</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Esta operação requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Esta operação requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer está sendo executado. Por favor, feche o navegador Internet Explorer para apagar cookies.</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Ver apenas disponíveis faixas eraseable</value>
+  </data>
 </root>

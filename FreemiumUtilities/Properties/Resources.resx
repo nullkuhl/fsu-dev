@@ -1463,4 +1463,7 @@ managable parts and rejoin them</value>
   <data name="CreatingRestorePoint" xml:space="preserve">
     <value>Creating Restore Point...</value>
   </data>
+  <data name="FileShredder" xml:space="preserve">
+    <value>Delete files safely</value>
+  </data>
 </root>

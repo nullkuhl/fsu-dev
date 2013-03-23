@@ -984,4 +984,10 @@
   <data name="yes" xml:space="preserve">
     <value>Sim</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>processamento</value>
+  </data>
 </root>

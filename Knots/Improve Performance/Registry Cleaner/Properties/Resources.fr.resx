@@ -282,4 +282,10 @@
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Souhaitez-vous créer un point de restauration système avant de continuer ? Cela peut durer plusieurs minutes.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="Root" xml:space="preserve">
+    <value>racine</value>
+  </data>
 </root>

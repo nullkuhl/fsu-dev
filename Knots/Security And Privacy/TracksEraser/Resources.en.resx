@@ -454,4 +454,10 @@ once they are deleted, however the previous data in them has been reset.</value>
   <data name="close_ie_to_erase" xml:space="preserve">
     <value>This operation requires Internet Explorer to be closed. Are you sure Internet Explorer is closed?</value>
   </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>This operation requires Internet Explorer to be closed. Are you sure Internet Explorer is closed?</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Show only available eraseable tracks</value>
+  </data>
 </root>

@@ -246,4 +246,7 @@
   <data name="file_open_failed" xml:space="preserve">
     <value>Die entschlüsselte Datei konnte nicht geöffnet werden.</value>
   </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Splitting unterbrochen. Kann nicht fortgesetzt werden!</value>
+  </data>
 </root>

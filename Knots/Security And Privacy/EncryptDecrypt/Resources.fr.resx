@@ -231,4 +231,22 @@
   <data name="wrong_pass" xml:space="preserve">
     <value>Mot de passe incorrect</value>
   </data>
+  <data name="file_open_failed" xml:space="preserve">
+    <value>Le fichier décrypté peut pas être ouvert.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="original_delete" xml:space="preserve">
+    <value>Si le fichier original est supprimé, vous ne pouvez pas y accéder plus dans le cas où vous avez oublié votre mot de passe. Voulez-vous continuer?</value>
+  </data>
+  <data name="output_exists_message" xml:space="preserve">
+    <value>Le fichier de sortie «% 1» existe déjà. Voulez-vous remplacer le fichier?</value>
+  </data>
+  <data name="output_exists_title" xml:space="preserve">
+    <value>Le fichier de sortie existe déjà</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Processus de scission interrompu. Ne peut pas continuer!</value>
+  </data>
 </root>

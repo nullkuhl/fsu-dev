@@ -129,11 +129,17 @@
   <data name="entries_removed" xml:space="preserve">
     <value>entradas se han eliminado correctamente.</value>
   </data>
+  <data name="error" xml:space="preserve">
+    <value>error</value>
+  </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Error</value>
   </data>
   <data name="file_imported" xml:space="preserve">
     <value>El archivo ha sido importado</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
   <data name="image" xml:space="preserve">
     <value>Imagen</value>
@@ -209,6 +215,9 @@
   </data>
   <data name="uninstall_programs" xml:space="preserve">
     <value>Desinstalar programas</value>
+  </data>
+  <data name="unistaller_not_found" xml:space="preserve">
+    <value>Desinstalar los archivos no se pudo encontrar para {0}, ¿Usted desea eliminarlo de la lista?</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Versión</value>

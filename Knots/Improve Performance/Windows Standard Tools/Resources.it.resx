@@ -138,6 +138,9 @@
   <data name="disk_defragmenter_note" xml:space="preserve">
     <value>Quando installi un programma sul computer, i relativi file potrebbero venire sparpagliati per il disco rigido. Tale operazione è detta frammentazione. Se la frammentazione diventa eccessiva, la prestazioni del disco rigido potrebbero degradarsi e i programmi potrebbero funzionare più lentamente. Lo strumento di deframmentazione ottimizza la prestazioni del tuo PC e riorganizza i file presenti sul disco rigido in blocchi contigui</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="system_file_checker" xml:space="preserve">
     <value>System File Checker</value>
   </data>

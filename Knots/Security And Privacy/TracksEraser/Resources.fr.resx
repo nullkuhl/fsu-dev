@@ -433,4 +433,28 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   <data name="win_temp_files" xml:space="preserve">
     <value>Windows - Fichiers temporaires</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Cela nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome est déjà en cours, s'il vous plaît fermez puis exécutez de nouveau sur SCAN.</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox est déjà en cours, s'il vous plaît fermez puis exécutez de nouveau sur SCAN.</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer est en cours d'exécution. S'il vous plaît fermer le navigateur Internet Explorer pour supprimer les cookies.</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Afficher seulement disponibles pistes effaçables</value>
+  </data>
 </root>

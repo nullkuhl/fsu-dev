@@ -138,6 +138,9 @@
   <data name="disk_defragmenter_note" xml:space="preserve">
     <value>Quando instala um programa no computador, os seus ficheiros podem ficar separados pelo disco rígido. Dá-se o nome de fragmentação. Se a fragmentação for excessiva, o desempenho do disco rígido pode diminuir e a execução dos programas pode ser mais lenta. A ferramenta de desfragmentação otimiza o desempenho do PC e reorganiza os ficheiros no disco rígido em blocos contíguos</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="system_file_checker" xml:space="preserve">
     <value>Verificador do Ficheiro do Sistema</value>
   </data>

@@ -450,7 +450,13 @@ werden, sobald sie gelöscht werden. Die bisherigen Daten darin wurden jedoch zu
   <data name="ie_running" xml:space="preserve">
     <value>Internet Explorer läuft. Bitte schließen Sie den Browser Internet Explorer, um Cookies zu löschen.</value>
   </data>
-  <data name="close_ie_to_erase1" xml:space="preserve">
-    <value>Internet Explorer bereits ausgeführt wird, schließen Sie es bitte führen Sie dann erneut zu scannen.</value>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Dieser Vorgang erfordert Internet Explorer geschlossen werden. Sind Sie sicher, Internet Explorer geschlossen ist?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Dieser Vorgang erfordert Internet Explorer geschlossen werden. Sind Sie sicher, Internet Explorer geschlossen ist?</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Nur verfügbare löschbaren Titeln</value>
   </data>
 </root>

@@ -201,9 +201,6 @@
   <data name="num_of_pieces" xml:space="preserve">
     <value>Teileanzahl</value>
   </data>
-  <data name="num_of_pieces1" xml:space="preserve">
-    <value>Teileanzahl</value>
-  </data>
   <data name="num_pieces" xml:space="preserve">
     <value>Teileanzahl</value>
   </data>

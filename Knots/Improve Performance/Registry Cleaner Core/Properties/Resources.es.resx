@@ -243,4 +243,67 @@
   <data name="VirtualDevices" xml:space="preserve">
     <value>Dispositivos virtuales</value>
   </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Clase tecla de edición Strings</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Clase Strings abrir la clave</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>inscripciones Clsid</value>
+  </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Profundos Strings usuario del software</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Ayuda Rutas de archivos</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>Archivos de ayuda</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>Historia y menú Inicio</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>Cadenas de Historia Americana</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Historia Strings Enlace</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Cuerdas del menú de Historial</value>
+  </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>Caminos Historia Start</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Caminos Icono</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>cadenas de montaje</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>Interfaz Proxy IDs</value>
+  </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>Las listas MRU</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>ProcServer subclaves</value>
+  </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>entradas de inicio</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>sistema de escaneado</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>Software del sistema</value>
+  </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>Manual Scan</value>
+  </data>
+  <data name="Win32HelpFiles" xml:space="preserve">
+    <value>Archivos de Ayuda de Win32</value>
+  </data>
 </root>

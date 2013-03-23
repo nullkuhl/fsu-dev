@@ -228,4 +228,7 @@
   <data name="target" xml:space="preserve">
     <value>Destination</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
 </root>

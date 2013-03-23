@@ -1380,4 +1380,82 @@ e gestibili, per poi riunirli</value>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Vuoi creare un punto di ripristino del sistema prima di continuare? Il processo di ripristino può richiedere vari minuti prima di essere completato.</value>
   </data>
+  <data name="CreatingRestorePoint" xml:space="preserve">
+    <value>Creazione punto di ripristino ...</value>
+  </data>
+  <data name="CleaningClipboard" xml:space="preserve">
+    <value>Pulizia appunti ...</value>
+  </data>
+  <data name="CleaningRecycleBin" xml:space="preserve">
+    <value>Pulizia Cestino ...</value>
+  </data>
+  <data name="CleaningRegistry" xml:space="preserve">
+    <value>Pulizia del Registro di sistema ...</value>
+  </data>
+  <data name="CleaningUrlHistory" xml:space="preserve">
+    <value>Pulizia storia url ...</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome è in esecuzione, si prega di salvare il lavoro quindi fare clic su OK.</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox è in esecuzione, si prega di salvare il lavoro quindi fare clic su OK.</value>
+  </data>
+  <data name="DeletingFiles" xml:space="preserve">
+    <value>Eliminazione di file ...</value>
+  </data>
+  <data name="DeletingFolders" xml:space="preserve">
+    <value>Eliminazione di cartelle ...</value>
+  </data>
+  <data name="EntryPointsTo" xml:space="preserve">
+    <value>Punti di entrata per</value>
+  </data>
+  <data name="FacebookLike" xml:space="preserve">
+    <value>come</value>
+  </data>
+  <data name="FBUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/facebook</value>
+  </data>
+  <data name="FeedbackUrl" xml:space="preserve">
+    <value>http://freemium.com/contact/fsu/</value>
+  </data>
+  <data name="GettingTracks" xml:space="preserve">
+    <value>Come le tracce ...</value>
+  </data>
+  <data name="GooglePlusUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/googleplus</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="notice" xml:space="preserve">
+    <value>notare</value>
+  </data>
+  <data name="RootUrl" xml:space="preserve">
+    <value>http://freemium.com/fsu/</value>
+  </data>
+  <data name="running_tray" xml:space="preserve">
+    <value>L'applicazione è già in esecuzione nella barra delle applicazioni</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>Ripristino configurazione di sistema è disattivato, Ti piacerebbe continuare a proprio rischio?</value>
+  </data>
+  <data name="TaskSchedulingFailedMessage" xml:space="preserve">
+    <value>La pianificazione attività non riuscita. Si prega di verificare se il servizio Utilità di pianificazione sia in esecuzione correttamente sul proprio sistema.</value>
+  </data>
+  <data name="TaskSchedulingFailedTitle" xml:space="preserve">
+    <value>Pianificazione attività non riuscita</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Tweet</value>
+  </data>
+  <data name="TwitterUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/twitter</value>
+  </data>
+  <data name="UrlCannotBeOpenedMessage" xml:space="preserve">
+    <value>Link non può essere aperto automaticamente. Si prega di aprire questo link nel vostro browser preferito:</value>
+  </data>
+  <data name="UrlCannotBeOpenedTitle" xml:space="preserve">
+    <value>Link non può essere aperto automaticamente</value>
+  </data>
 </root>

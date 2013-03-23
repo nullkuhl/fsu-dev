@@ -138,6 +138,9 @@
   <data name="disk_defragmenter_note" xml:space="preserve">
     <value>Cuando se instala un programa en el ordenador, sus archivos pueden acabar desperdigados por el disco duro. Es lo que se denomina fragmentación. Si este fenómeno es excesivo, puede reducirse el rendimiento del disco duro y es posible que los programas se ejecuten con mayor lentitud. La herramienta de desfragmentación optimiza el rendimiento del PC y reorganiza los archivos del disco duro en bloques contiguos.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="system_file_checker" xml:space="preserve">
     <value>Comprobador de archivos de sistema</value>
   </data>

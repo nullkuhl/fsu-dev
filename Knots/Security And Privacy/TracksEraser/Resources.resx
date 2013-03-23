@@ -438,4 +438,25 @@ once they are deleted, however the previous data in them has been reset.</value>
   <data name="ie_running" xml:space="preserve">
     <value>Internet Explorer is running. Please close the Internet Explorer browser to delete cookies.</value>
   </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome is already running, please close it then run scan again.</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox is already running, please close it then run scan again.</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>This operation requires Internet Explorer to be closed. Are you sure Internet Explorer is closed?</value>
+  </data>
+  <data name="files_and" xml:space="preserve">
+    <value>file(s) and</value>
+  </data>
+  <data name="files_from" xml:space="preserve">
+    <value>file(s) from</value>
+  </data>
+  <data name="registries_from" xml:space="preserve">
+    <value>registries from</value>
+  </data>
+  <data name="scanning_tracks" xml:space="preserve">
+    <value>Analysing selected tracks</value>
+  </data>
 </root>

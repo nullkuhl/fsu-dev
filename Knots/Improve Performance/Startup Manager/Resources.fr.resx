@@ -306,4 +306,7 @@
   <data name="WHKLM" xml:space="preserve">
     <value>Enregistrement : x86 Tous les utilisateurs</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
 </root>

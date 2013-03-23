@@ -69,6 +69,7 @@ C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\Fre
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.FrmTempCleaner.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.FrmTempCleaner.de.resources
+C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.de.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.es.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.fr.resources
 C:\Users\cm\Documents\GitHub\fsu-dev\FreemiumUtilities.TempCleaner\obj\Debug\FreemiumUtilities.TempCleaner.TextResources.it.resources

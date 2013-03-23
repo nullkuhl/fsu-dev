@@ -396,4 +396,13 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Les fichiers 0 octets ne contiennent pas de données et ils sont en principe supprimés.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Traitement en cours ...</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Les fichiers dans le dossier temporaire de Windows sont toujours considérés comme des déchets</value>
+  </data>
 </root>

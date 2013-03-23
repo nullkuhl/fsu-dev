@@ -273,4 +273,7 @@
   <data name="yes" xml:space="preserve">
     <value>Sí</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
 </root>

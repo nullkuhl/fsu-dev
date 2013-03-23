@@ -327,4 +327,46 @@
   <data name="window_title" xml:space="preserve">
     <value>Gestione dei processi</value>
   </data>
+  <data name="cant_block_processmanager" xml:space="preserve">
+    <value>Non è possibile bloccare Process Manager Freemium.</value>
+  </data>
+  <data name="cant_end_processmanager" xml:space="preserve">
+    <value>Non è possibile terminare Process Manager Freemium.</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>errore</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processes_successfully_unblocked" xml:space="preserve">
+    <value>Tutti i processi sono stati correttamente sbloccato.</value>
+  </data>
+  <data name="process_manager" xml:space="preserve">
+    <value>Process Manager</value>
+  </data>
+  <data name="system_process_block" xml:space="preserve">
+    <value>Bloccando i processi di sistema può essere pericoloso. Vuoi interrompere il processo in ogni caso?</value>
+  </data>
+  <data name="system_process_end" xml:space="preserve">
+    <value>Terminare i processi di sistema può essere pericoloso. Vuoi interrompere il processo in ogni caso?</value>
+  </data>
+  <data name="unblock" xml:space="preserve">
+    <value>sbloccare</value>
+  </data>
+  <data name="unblock_all" xml:space="preserve">
+    <value>Sblocca tutto</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>utente</value>
+  </data>
+  <data name="want_block_process" xml:space="preserve">
+    <value>Sei sicuro di voler bloccare {0}?</value>
+  </data>
+  <data name="want_end_process" xml:space="preserve">
+    <value>Sei sicuro di voler terminare {0}?</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Attenzione</value>
+  </data>
 </root>

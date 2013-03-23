@@ -165,6 +165,9 @@
   <data name="FirefoxExtentions" xml:space="preserve">
     <value>Firefox-Erweiterungen</value>
   </data>
+  <data name="FirstStart" xml:space="preserve">
+    <value>Bitte starten Sie Firefox mindestens einmal, bevor Sie diese Funktion.</value>
+  </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>

@@ -204,9 +204,6 @@
   <data name="num_of_pieces" xml:space="preserve">
     <value>Nombre de fragments</value>
   </data>
-  <data name="num_of_pieces1" xml:space="preserve">
-    <value>Nombre de fragments</value>
-  </data>
   <data name="num_pieces" xml:space="preserve">
     <value>Nombre de fragments</value>
   </data>
@@ -223,9 +220,6 @@
     <value>Numéro des fragments</value>
   </data>
   <data name="pause" xml:space="preserve">
-    <value>Pause</value>
-  </data>
-  <data name="pause1" xml:space="preserve">
     <value>Pause</value>
   </data>
   <data name="paused" xml:space="preserve">
@@ -302,5 +296,26 @@
   </data>
   <data name="too_large" xml:space="preserve">
     <value>Une division avec la taille des fragments indiquée n’est pas possible. Saisissez une taille de fragments inférieure.</value>
+  </data>
+  <data name="access_denied" xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à écrire dans une destination donnée. S'il vous plaît choisir un autre dossier de destination.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Rejoindre interrompu. Ne peut pas continuer!</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Au moins 2 des fichiers de pièces à joindre</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Pas assez d'espace disque. S'il vous plaît spécifier un autre dossier.</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Un fichier portant le même nom que le fichier existe déjà rejoint. Êtes-vous sûr de vouloir écraser ce fichier?</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Fractionnement interrompu. Ne peut pas continuer!</value>
   </data>
 </root>

@@ -307,4 +307,7 @@
   <data name="Root" xml:space="preserve">
     <value>Wurzel</value>
   </data>
+  <data name="AttemptedDeletionOfValue" xml:space="preserve">
+    <value>Versuchte Löschung Wert:</value>
+  </data>
 </root>

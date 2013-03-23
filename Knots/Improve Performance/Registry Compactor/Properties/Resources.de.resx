@@ -343,4 +343,7 @@
   <data name="RegHive" xml:space="preserve">
     <value>Registry-Einheit</value>
   </data>
+  <data name="Analyze" xml:space="preserve">
+    <value>Analyse</value>
+  </data>
 </root>

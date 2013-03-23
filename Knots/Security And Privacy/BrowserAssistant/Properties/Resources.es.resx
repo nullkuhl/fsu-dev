@@ -168,6 +168,9 @@
   <data name="FirstStart" xml:space="preserve">
     <value>Inicie Firefox al menos una vez antes de utilizar esta característica.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="HijackRestore" xml:space="preserve">
     <value>Restauración de configuración secuestrada</value>
   </data>
@@ -185,6 +188,9 @@
   </data>
   <data name="InternetExplorerExtensions" xml:space="preserve">
     <value>Extensiones de Internet Explorer</value>
+  </data>
+  <data name="InternetExplorerToolbars" xml:space="preserve">
+    <value>Las barras de herramientas de IE</value>
   </data>
   <data name="LocalPage" xml:space="preserve">
     <value>Página local</value>
@@ -233,6 +239,9 @@
   </data>
   <data name="SaveIeExtensions" xml:space="preserve">
     <value>Guardar extensiones de IE</value>
+  </data>
+  <data name="SaveIeToolbars" xml:space="preserve">
+    <value>Guardar barras de herramientas de IE</value>
   </data>
   <data name="SearchAssistant" xml:space="preserve">
     <value>Asistente de búsqueda</value>

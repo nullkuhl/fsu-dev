@@ -225,4 +225,22 @@
   <data name="UsedOverTotal" xml:space="preserve">
     <value>Utilizado/Total</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>fechar</value>
+  </data>
+  <data name="DeleteHiddenFile" xml:space="preserve">
+    <value>Este arquivo é um arquivo oculto. Você quer apagar de qualquer forma?</value>
+  </data>
+  <data name="DeleteSystemFile" xml:space="preserve">
+    <value>Este arquivo é um arquivo de sistema. Você quer apagar de qualquer forma?</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>O arquivo está em uso e não pode ser excluída.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing ...</value>
+  </data>
 </root>

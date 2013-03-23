@@ -120,6 +120,12 @@
   <data name="all_files" xml:space="preserve">
     <value>Tous les fichiers (*)</value>
   </data>
+  <data name="all_filesystem_objects" xml:space="preserve">
+    <value>AllFilesystemObjects</value>
+  </data>
+  <data name="background" xml:space="preserve">
+    <value>fond</value>
+  </data>
   <data name="click_check_mark" xml:space="preserve">
     <value>Cliquez sur la case située devant l’entrée pour l’activer ou la désactiver. Cliquez sur le bouton « Supprimer » situé en-dessous pour la supprimer définitivement.</value>
   </data>
@@ -147,6 +153,12 @@
   <data name="directory" xml:space="preserve">
     <value>Répertoire</value>
   </data>
+  <data name="directory_background" xml:space="preserve">
+    <value>Directory \ Background</value>
+  </data>
+  <data name="directory_shell" xml:space="preserve">
+    <value>Directory \ shell</value>
+  </data>
   <data name="drive" xml:space="preserve">
     <value>Lecteur</value>
   </data>
@@ -162,8 +174,14 @@
   <data name="folder" xml:space="preserve">
     <value>Dossier</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="internal_name" xml:space="preserve">
     <value>Nom interne</value>
+  </data>
+  <data name="lnkfile" xml:space="preserve">
+    <value>raccourci</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Nouveau</value>

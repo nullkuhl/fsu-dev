@@ -129,9 +129,6 @@
   <data name="AnalyzeRegistry" xml:space="preserve">
     <value>Analyser la base de registre</value>
   </data>
-  <data name="AnalyzeRegistry1" xml:space="preserve">
-    <value>Analyser la base de registre</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>Analyse en cours...</value>
   </data>
@@ -320,5 +317,17 @@
   </data>
   <data name="WindowsRegistryInformation" xml:space="preserve">
     <value>Informations sur la base de registre Windows</value>
+  </data>
+  <data name="Analyse" xml:space="preserve">
+    <value>Analyser</value>
+  </data>
+  <data name="AnalyseRegistry" xml:space="preserve">
+    <value>Analyser la base de registre</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="RegHive" xml:space="preserve">
+    <value>unité de registre</value>
   </data>
 </root>

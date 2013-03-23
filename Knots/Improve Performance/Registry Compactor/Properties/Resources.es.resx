@@ -321,4 +321,13 @@
   <data name="WindowsRegistryInformation" xml:space="preserve">
     <value>Información sobre el registro de Windows</value>
   </data>
+  <data name="Analyze" xml:space="preserve">
+    <value>Analizar</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="RegHive" xml:space="preserve">
+    <value>unidad de Registro</value>
+  </data>
 </root>

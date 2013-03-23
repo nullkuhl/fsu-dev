@@ -243,4 +243,67 @@
   <data name="VirtualDevices" xml:space="preserve">
     <value>Appareils virtuels</value>
   </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Classe clés Strings Modifier</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Classe Open Strings clés</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>Inscriptions CLSID</value>
+  </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Profondes Strings Software utilisateur</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Aide chemins d'accès</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>Help Files</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>Histoire et menu Démarrer</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>Strings Explorateur d'histoire</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Strings Lien Histoire</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Strings Menu Histoire</value>
+  </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>Chemins de démarrage Histoire</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Chemins icône</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>Strings installation</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>Interface Proxy ID</value>
+  </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>listes MRU</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>Les sous-clés ProcServer</value>
+  </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>Entrées de démarrage</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>système de numérisation</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>System Software</value>
+  </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>utilisateur de numérisation</value>
+  </data>
+  <data name="Win32HelpFiles" xml:space="preserve">
+    <value>Fichiers d'aide Win32</value>
+  </data>
 </root>

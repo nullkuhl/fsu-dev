@@ -138,6 +138,9 @@
   <data name="exit" xml:space="preserve">
     <value>Esci</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="increase_free_memory" xml:space="preserve">
     <value>Aumenta la memoria disponibile fino a</value>
   </data>
@@ -151,7 +154,7 @@
     <value>Quantità di memoria</value>
   </data>
   <data name="memory_freed" xml:space="preserve">
-    <value />
+    <value>c'erano</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Ottimizzazione memoria</value>

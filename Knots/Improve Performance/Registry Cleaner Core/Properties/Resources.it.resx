@@ -243,4 +243,67 @@
   <data name="VirtualDevices" xml:space="preserve">
     <value>Dispositivi virtuali</value>
   </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Classe tasto EDIT Strings</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Classe Strings tasto Apri</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>Registrazioni clsid</value>
+  </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Profonde utente Software Strings</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Guida dei percorsi dei file</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>file della Guida</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>Storia e menu di avvio</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>Storia Explorer Strings</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Storia di collegamento stringhe</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Storia Menu Strings</value>
+  </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>Storia di avvio Percorsi</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Icon Percorsi</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>installazione Strings</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>Interfaccia Proxy ID</value>
+  </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>Liste MRU</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>ProcServer sottochiavi</value>
+  </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>voci di avvio</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>sistema di scansione</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>Software di sistema</value>
+  </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>utente Scan</value>
+  </data>
+  <data name="Win32HelpFiles" xml:space="preserve">
+    <value>File della Guida Win32</value>
+  </data>
 </root>

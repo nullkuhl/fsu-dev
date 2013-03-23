@@ -396,4 +396,13 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Los archivos de cero bytes no albergan datos y normalmente se pueden eliminar</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Procesamiento de ...</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Los archivos dentro de la carpeta temporal de Windows siempre se consideran como residuos</value>
+  </data>
 </root>
