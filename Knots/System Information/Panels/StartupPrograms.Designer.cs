@@ -54,16 +54,11 @@ namespace SystemInformation
         void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.picturePanel = new System.Windows.Forms.PictureBox();
-            this.labelStartupDescription = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
-            this.listviewStartup = new System.Windows.Forms.ListView();
-            this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.StartupImageList = new System.Windows.Forms.ImageList(this.components);
+            this.labelArguments = new System.Windows.Forms.Label();
+            this.labelArgumentsDesc = new System.Windows.Forms.Label();
+            this.labelProductNameDesc = new System.Windows.Forms.Label();
+            this.labelProductName = new System.Windows.Forms.Label();
             this.labelCommandDesc = new System.Windows.Forms.Label();
             this.labelFileVersionDesc = new System.Windows.Forms.Label();
             this.labelDescriptionDesc = new System.Windows.Forms.Label();
@@ -74,54 +69,156 @@ namespace SystemInformation
             this.labelCompany = new System.Windows.Forms.Label();
             this.labelDetails = new System.Windows.Forms.Label();
             this.labelSeparator2 = new System.Windows.Forms.Label();
-            this.labelProductNameDesc = new System.Windows.Forms.Label();
-            this.labelProductName = new System.Windows.Forms.Label();
-            this.labelArgumentsDesc = new System.Windows.Forms.Label();
-            this.labelArguments = new System.Windows.Forms.Label();
+            this.listviewStartup = new System.Windows.Forms.ListView();
+            this.ItemName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FileName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelStartupDescription = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.picturePanel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelTitle
+            // StartupImageList
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(80, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 25);
-            this.labelTitle.TabIndex = 7;
+            this.StartupImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
+            this.StartupImageList.ImageSize = new System.Drawing.Size(16, 16);
+            this.StartupImageList.TransparentColor = System.Drawing.Color.Transparent;
             // 
-            // picturePanel
+            // labelArguments
             // 
-            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Startup_48x48;
-            this.picturePanel.Location = new System.Drawing.Point(16, 16);
-            this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(48, 48);
-            this.picturePanel.TabIndex = 6;
-            this.picturePanel.TabStop = false;
+            this.labelArguments.BackColor = System.Drawing.Color.Transparent;
+            this.labelArguments.ForeColor = System.Drawing.Color.Black;
+            this.labelArguments.Location = new System.Drawing.Point(153, 404);
+            this.labelArguments.Name = "labelArguments";
+            this.labelArguments.Size = new System.Drawing.Size(341, 15);
+            this.labelArguments.TabIndex = 75;
+            this.labelArguments.Visible = false;
             // 
-            // labelStartupDescription
+            // labelArgumentsDesc
             // 
-            this.labelStartupDescription.AutoSize = true;
-            this.labelStartupDescription.BackColor = System.Drawing.Color.Transparent;
-            this.labelStartupDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelStartupDescription.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelStartupDescription.Location = new System.Drawing.Point(16, 76);
-            this.labelStartupDescription.Name = "labelStartupDescription";
-            this.labelStartupDescription.Size = new System.Drawing.Size(0, 17);
-            this.labelStartupDescription.TabIndex = 13;
+            this.labelArgumentsDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelArgumentsDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelArgumentsDesc.Location = new System.Drawing.Point(19, 404);
+            this.labelArgumentsDesc.Name = "labelArgumentsDesc";
+            this.labelArgumentsDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelArgumentsDesc.TabIndex = 74;
+            this.labelArgumentsDesc.Visible = false;
             // 
-            // labelSeparator
+            // labelProductNameDesc
             // 
-            this.labelSeparator.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator.Location = new System.Drawing.Point(16, 98);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
-            this.labelSeparator.TabIndex = 12;
+            this.labelProductNameDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelProductNameDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelProductNameDesc.Location = new System.Drawing.Point(19, 324);
+            this.labelProductNameDesc.Name = "labelProductNameDesc";
+            this.labelProductNameDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelProductNameDesc.TabIndex = 73;
+            this.labelProductNameDesc.Click += new System.EventHandler(this.labelProductNameDesc_Click);
+            // 
+            // labelProductName
+            // 
+            this.labelProductName.BackColor = System.Drawing.Color.Transparent;
+            this.labelProductName.ForeColor = System.Drawing.Color.Black;
+            this.labelProductName.Location = new System.Drawing.Point(153, 324);
+            this.labelProductName.Name = "labelProductName";
+            this.labelProductName.Size = new System.Drawing.Size(341, 15);
+            this.labelProductName.TabIndex = 72;
+            // 
+            // labelCommandDesc
+            // 
+            this.labelCommandDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelCommandDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelCommandDesc.Location = new System.Drawing.Point(19, 384);
+            this.labelCommandDesc.Name = "labelCommandDesc";
+            this.labelCommandDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelCommandDesc.TabIndex = 71;
+            // 
+            // labelFileVersionDesc
+            // 
+            this.labelFileVersionDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelFileVersionDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelFileVersionDesc.Location = new System.Drawing.Point(19, 364);
+            this.labelFileVersionDesc.Name = "labelFileVersionDesc";
+            this.labelFileVersionDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelFileVersionDesc.TabIndex = 70;
+            // 
+            // labelDescriptionDesc
+            // 
+            this.labelDescriptionDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelDescriptionDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelDescriptionDesc.Location = new System.Drawing.Point(19, 344);
+            this.labelDescriptionDesc.Name = "labelDescriptionDesc";
+            this.labelDescriptionDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelDescriptionDesc.TabIndex = 69;
+            // 
+            // labelCompanyDesc
+            // 
+            this.labelCompanyDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelCompanyDesc.ForeColor = System.Drawing.Color.Black;
+            this.labelCompanyDesc.Location = new System.Drawing.Point(19, 304);
+            this.labelCompanyDesc.Name = "labelCompanyDesc";
+            this.labelCompanyDesc.Size = new System.Drawing.Size(128, 15);
+            this.labelCompanyDesc.TabIndex = 68;
+            this.labelCompanyDesc.Click += new System.EventHandler(this.labelCompanyDesc_Click);
+            // 
+            // labelCommand
+            // 
+            this.labelCommand.BackColor = System.Drawing.Color.Transparent;
+            this.labelCommand.ForeColor = System.Drawing.Color.Black;
+            this.labelCommand.Location = new System.Drawing.Point(153, 383);
+            this.labelCommand.Name = "labelCommand";
+            this.labelCommand.Size = new System.Drawing.Size(341, 36);
+            this.labelCommand.TabIndex = 67;
+            // 
+            // labelFileVersion
+            // 
+            this.labelFileVersion.BackColor = System.Drawing.Color.Transparent;
+            this.labelFileVersion.ForeColor = System.Drawing.Color.Black;
+            this.labelFileVersion.Location = new System.Drawing.Point(153, 364);
+            this.labelFileVersion.Name = "labelFileVersion";
+            this.labelFileVersion.Size = new System.Drawing.Size(341, 15);
+            this.labelFileVersion.TabIndex = 66;
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.BackColor = System.Drawing.Color.Transparent;
+            this.labelDescription.ForeColor = System.Drawing.Color.Black;
+            this.labelDescription.Location = new System.Drawing.Point(153, 344);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(341, 15);
+            this.labelDescription.TabIndex = 65;
+            // 
+            // labelCompany
+            // 
+            this.labelCompany.BackColor = System.Drawing.Color.Transparent;
+            this.labelCompany.ForeColor = System.Drawing.Color.Black;
+            this.labelCompany.Location = new System.Drawing.Point(153, 304);
+            this.labelCompany.Name = "labelCompany";
+            this.labelCompany.Size = new System.Drawing.Size(341, 15);
+            this.labelCompany.TabIndex = 64;
+            // 
+            // labelDetails
+            // 
+            this.labelDetails.AutoSize = true;
+            this.labelDetails.BackColor = System.Drawing.Color.Transparent;
+            this.labelDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDetails.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelDetails.Location = new System.Drawing.Point(16, 275);
+            this.labelDetails.Name = "labelDetails";
+            this.labelDetails.Size = new System.Drawing.Size(0, 17);
+            this.labelDetails.TabIndex = 63;
+            // 
+            // labelSeparator2
+            // 
+            this.labelSeparator2.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator2.Location = new System.Drawing.Point(16, 296);
+            this.labelSeparator2.Name = "labelSeparator2";
+            this.labelSeparator2.Size = new System.Drawing.Size(482, 3);
+            this.labelSeparator2.TabIndex = 62;
             // 
             // listviewStartup
             // 
@@ -158,142 +255,47 @@ namespace SystemInformation
             // 
             this.Type.Width = 117;
             // 
-            // StartupImageList
+            // labelStartupDescription
             // 
-            this.StartupImageList.ColorDepth = System.Windows.Forms.ColorDepth.Depth32Bit;
-            this.StartupImageList.ImageSize = new System.Drawing.Size(16, 16);
-            this.StartupImageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.labelStartupDescription.AutoSize = true;
+            this.labelStartupDescription.BackColor = System.Drawing.Color.Transparent;
+            this.labelStartupDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelStartupDescription.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelStartupDescription.Location = new System.Drawing.Point(16, 76);
+            this.labelStartupDescription.Name = "labelStartupDescription";
+            this.labelStartupDescription.Size = new System.Drawing.Size(0, 17);
+            this.labelStartupDescription.TabIndex = 13;
             // 
-            // labelCommandDesc
+            // labelSeparator
             // 
-            this.labelCommandDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelCommandDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelCommandDesc.Location = new System.Drawing.Point(16, 384);
-            this.labelCommandDesc.Name = "labelCommandDesc";
-            this.labelCommandDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelCommandDesc.TabIndex = 71;
+            this.labelSeparator.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator.Location = new System.Drawing.Point(16, 98);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
+            this.labelSeparator.TabIndex = 12;
             // 
-            // labelFileVersionDesc
+            // labelTitle
             // 
-            this.labelFileVersionDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelFileVersionDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelFileVersionDesc.Location = new System.Drawing.Point(16, 364);
-            this.labelFileVersionDesc.Name = "labelFileVersionDesc";
-            this.labelFileVersionDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelFileVersionDesc.TabIndex = 70;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(80, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 25);
+            this.labelTitle.TabIndex = 7;
             // 
-            // labelDescriptionDesc
+            // picturePanel
             // 
-            this.labelDescriptionDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescriptionDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelDescriptionDesc.Location = new System.Drawing.Point(16, 344);
-            this.labelDescriptionDesc.Name = "labelDescriptionDesc";
-            this.labelDescriptionDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelDescriptionDesc.TabIndex = 69;
-            // 
-            // labelCompanyDesc
-            // 
-            this.labelCompanyDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelCompanyDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelCompanyDesc.Location = new System.Drawing.Point(16, 304);
-            this.labelCompanyDesc.Name = "labelCompanyDesc";
-            this.labelCompanyDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelCompanyDesc.TabIndex = 68;
-            // 
-            // labelCommand
-            // 
-            this.labelCommand.BackColor = System.Drawing.Color.Transparent;
-            this.labelCommand.ForeColor = System.Drawing.Color.Black;
-            this.labelCommand.Location = new System.Drawing.Point(101, 383);
-            this.labelCommand.Name = "labelCommand";
-            this.labelCommand.Size = new System.Drawing.Size(393, 36);
-            this.labelCommand.TabIndex = 67;
-            // 
-            // labelFileVersion
-            // 
-            this.labelFileVersion.BackColor = System.Drawing.Color.Transparent;
-            this.labelFileVersion.ForeColor = System.Drawing.Color.Black;
-            this.labelFileVersion.Location = new System.Drawing.Point(101, 364);
-            this.labelFileVersion.Name = "labelFileVersion";
-            this.labelFileVersion.Size = new System.Drawing.Size(393, 15);
-            this.labelFileVersion.TabIndex = 66;
-            // 
-            // labelDescription
-            // 
-            this.labelDescription.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescription.ForeColor = System.Drawing.Color.Black;
-            this.labelDescription.Location = new System.Drawing.Point(101, 344);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(393, 15);
-            this.labelDescription.TabIndex = 65;
-            // 
-            // labelCompany
-            // 
-            this.labelCompany.BackColor = System.Drawing.Color.Transparent;
-            this.labelCompany.ForeColor = System.Drawing.Color.Black;
-            this.labelCompany.Location = new System.Drawing.Point(101, 304);
-            this.labelCompany.Name = "labelCompany";
-            this.labelCompany.Size = new System.Drawing.Size(393, 15);
-            this.labelCompany.TabIndex = 64;
-            // 
-            // labelDetails
-            // 
-            this.labelDetails.AutoSize = true;
-            this.labelDetails.BackColor = System.Drawing.Color.Transparent;
-            this.labelDetails.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDetails.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelDetails.Location = new System.Drawing.Point(16, 275);
-            this.labelDetails.Name = "labelDetails";
-            this.labelDetails.Size = new System.Drawing.Size(0, 17);
-            this.labelDetails.TabIndex = 63;
-            // 
-            // labelSeparator2
-            // 
-            this.labelSeparator2.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator2.Location = new System.Drawing.Point(16, 296);
-            this.labelSeparator2.Name = "labelSeparator2";
-            this.labelSeparator2.Size = new System.Drawing.Size(482, 3);
-            this.labelSeparator2.TabIndex = 62;
-            // 
-            // labelProductNameDesc
-            // 
-            this.labelProductNameDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelProductNameDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelProductNameDesc.Location = new System.Drawing.Point(16, 324);
-            this.labelProductNameDesc.Name = "labelProductNameDesc";
-            this.labelProductNameDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelProductNameDesc.TabIndex = 73;
-            // 
-            // labelProductName
-            // 
-            this.labelProductName.BackColor = System.Drawing.Color.Transparent;
-            this.labelProductName.ForeColor = System.Drawing.Color.Black;
-            this.labelProductName.Location = new System.Drawing.Point(101, 324);
-            this.labelProductName.Name = "labelProductName";
-            this.labelProductName.Size = new System.Drawing.Size(393, 15);
-            this.labelProductName.TabIndex = 72;
-            // 
-            // labelArgumentsDesc
-            // 
-            this.labelArgumentsDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelArgumentsDesc.ForeColor = System.Drawing.Color.Black;
-            this.labelArgumentsDesc.Location = new System.Drawing.Point(16, 404);
-            this.labelArgumentsDesc.Name = "labelArgumentsDesc";
-            this.labelArgumentsDesc.Size = new System.Drawing.Size(82, 15);
-            this.labelArgumentsDesc.TabIndex = 74;
-            this.labelArgumentsDesc.Visible = false;
-            // 
-            // labelArguments
-            // 
-            this.labelArguments.BackColor = System.Drawing.Color.Transparent;
-            this.labelArguments.ForeColor = System.Drawing.Color.Black;
-            this.labelArguments.Location = new System.Drawing.Point(101, 404);
-            this.labelArguments.Name = "labelArguments";
-            this.labelArguments.Size = new System.Drawing.Size(393, 15);
-            this.labelArguments.TabIndex = 75;
-            this.labelArguments.Visible = false;
+            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Startup_48x48;
+            this.picturePanel.Location = new System.Drawing.Point(16, 16);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(48, 48);
+            this.picturePanel.TabIndex = 6;
+            this.picturePanel.TabStop = false;
             // 
             // StartupPrograms
             // 
@@ -318,6 +320,7 @@ namespace SystemInformation
             this.Controls.Add(this.labelTitle);
             this.Controls.Add(this.picturePanel);
             this.Name = "StartupPrograms";
+            this.Size = new System.Drawing.Size(525, 425);
             this.Load += new System.EventHandler(this.Startup_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).EndInit();
             this.ResumeLayout(false);

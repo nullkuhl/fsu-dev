@@ -128,7 +128,7 @@
 	</Style>
 
 	<Style x:Key="ScanForIssueButtonStyle" TargetType="{x:Type Button}">
-		<Setter Property="Width" Value="217" />
+		<Setter Property="Width" Value="235" />
 		<Setter Property="Height" Value="51" />
 		<Setter Property="Control.HorizontalAlignment" Value="Left" />
 		<Setter Property="Control.VerticalAlignment" Value="Top" />
@@ -1172,8 +1172,8 @@ StrokeThickness="0">
 		<Setter Property="TextElement.Foreground" Value="#FF4682B4" />
 		<Setter Property="Control.HorizontalContentAlignment" Value="Left" />
 		<Setter Property="Control.VerticalContentAlignment" Value="Top" />
-		<Setter Property="FrameworkElement.Width" Value="310" />
-		<Setter Property="FrameworkElement.Height" Value="74" />
+		<Setter Property="FrameworkElement.Width" Value="340" />
+		<Setter Property="FrameworkElement.Height" Value="80" />
 		<Setter Property="Control.Padding" Value="0" />
 		<Setter Property="Control.Margin" Value="10,0,10,0" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -1338,7 +1338,7 @@ StrokeThickness="0">
 	</Style>
 
 	<Style x:Key="ProgressBarOuther" TargetType="{x:Type Border}">
-		<Setter Property="Width" Value="404" />
+		<Setter Property="Width" Value="475" />
 		<Setter Property="Height" Value="22" />
 		<Setter Property="Margin" Value="0,11,0,0" />
 		<Setter Property="CornerRadius" Value="2" />
@@ -1347,7 +1347,7 @@ StrokeThickness="0">
 	</Style>
 
 	<Style x:Key="ProgressBarWrap" TargetType="{x:Type Border}">
-		<Setter Property="Width" Value="404" />
+		<Setter Property="Width" Value="475" />
 		<Setter Property="Height" Value="21" />
 		<Setter Property="CornerRadius" Value="2" />
 		<Setter Property="Background" Value="#D1DADB" />

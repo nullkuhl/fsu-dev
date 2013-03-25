@@ -414,7 +414,7 @@
 
 	<Style x:Key="PanelFooterBorder" TargetType="{x:Type Border}">
 		<Setter Property="CornerRadius" Value="0,0,6,6" />
-		<Setter Property="Width" Value="700" />
+		<Setter Property="Width" Value="784" />
 		<Setter Property="Height" Value="31" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />

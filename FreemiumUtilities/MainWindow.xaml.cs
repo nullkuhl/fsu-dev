@@ -652,10 +652,10 @@ namespace FreemiumUtilities
                    (PanelCleanUp.Opacity == 0 || PanelCleanUp.Opacity == 1) &&
                    (PanelImprovePerformance.Opacity == 0 || PanelImprovePerformance.Opacity == 1) &&
                    (PanelPrivacy.Opacity == 0 || PanelPrivacy.Opacity == 1) &&
-                   (PanelOneClick.Margin.Top == 0 || PanelOneClick.Margin.Top == -337) &&
-                   (PanelCleanUp.Margin.Top == 0 || PanelCleanUp.Margin.Top == -337) &&
-                   (PanelImprovePerformance.Margin.Top == 0 || PanelImprovePerformance.Margin.Top == -337) &&
-                   (PanelPrivacy.Margin.Top == 0 || PanelPrivacy.Margin.Top == -337);
+                   (PanelOneClick.Margin.Top == 0 || PanelOneClick.Margin.Top == -385) &&
+                   (PanelCleanUp.Margin.Top == 0 || PanelCleanUp.Margin.Top == -385) &&
+                   (PanelImprovePerformance.Margin.Top == 0 || PanelImprovePerformance.Margin.Top == -385) &&
+                   (PanelPrivacy.Margin.Top == 0 || PanelPrivacy.Margin.Top == -385);
         }
 
         /// <summary>
@@ -701,7 +701,7 @@ namespace FreemiumUtilities
             {
                 PanelOneClickShutter.Visibility = Visibility.Collapsed;
 
-                ThicknessAnimation scrollPanel = new ThicknessAnimation { Duration = TimeSpan.FromSeconds(0.5), To = new Thickness(0, -337, 0, 0) };
+                ThicknessAnimation scrollPanel = new ThicknessAnimation { Duration = TimeSpan.FromSeconds(0.5), To = new Thickness(0, -385, 0, 0) };
                 PanelCleanUp.BeginAnimation(MarginProperty, scrollPanel);
                 PanelImprovePerformance.BeginAnimation(MarginProperty, scrollPanel);
                 PanelPrivacy.BeginAnimation(MarginProperty, scrollPanel);

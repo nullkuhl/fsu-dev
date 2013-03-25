@@ -524,6 +524,14 @@ namespace SystemInformation
 
 		#endregion
 
-	}
+        private void labelCompanyDesc_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void labelProductNameDesc_Click(object sender, EventArgs e)
+        {
+
+        }
+	}
 }
