@@ -83,8 +83,6 @@ namespace StartupManager
             Path = 5
         }
 
-
-
         #endregion
 
         #region MainForm Events
@@ -162,6 +160,11 @@ namespace StartupManager
 
         #region ListView Events
 
+        /// <summary>
+        /// Handles listViewStartup ItemSelectionChanged event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void listviewStartup_ItemSelectionChanged(object sender,
                                                   ListViewItemSelectionChangedEventArgs e)
         {
@@ -544,6 +547,9 @@ namespace StartupManager
 
         #region Listview Methods
 
+        /// <summary>
+        /// Fills list view
+        /// </summary>
         void FillListview()
         {
             try
@@ -790,6 +796,10 @@ namespace StartupManager
 
         #region Display Registry Startup Entries Method
 
+        /// <summary>
+        /// Displays registry startup entries
+        /// </summary>
+        /// <param name="hive"></param>
         void DisplayRegistryStartupEntries(string hive)
         {
             bool disabled;
@@ -1045,6 +1055,10 @@ namespace StartupManager
 
         #region Display Startup Shortcuts Method
 
+        /// <summary>
+        /// Fills a list with shortcuts items
+        /// </summary>
+        /// <param name="type"></param>
         void DisplayStartupShortcuts(string type)
         {
             bool disabled;
@@ -1186,12 +1200,16 @@ namespace StartupManager
 
         #region Return FilePath Method
 
+        /// <summary>
+        /// Transforms value to the valid file path
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         string ReturnFilePath(string value)
         {
             try
             {
                 int p;
-
                 // Check for quotes, and if present, remove them.
                 if (value.Contains("\"")) // quote character 34, 22H
                 {
@@ -1273,6 +1291,12 @@ namespace StartupManager
 
         #region Enable Item Method
 
+        /// <summary>
+        /// Enables item in registry
+        /// </summary>
+        /// <param name="regDir"></param>
+        /// <param name="subKeyName"></param>
+        /// <returns></returns>
         bool EnableItemInReg(string regDir, string subKeyName)
         {
             bool result = false;
@@ -1335,6 +1359,12 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Enables item for user
+        /// </summary>
+        /// <param name="filePath">filepath where disable item located</param>
+        /// <param name="newFilePath">filepath where the item will be located after enabling</param>
+        /// <returns></returns>
         bool EnableItemForUser(string filePath, string newFilePath)
         {
             bool result = false;
@@ -1368,6 +1398,10 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Enables item
+        /// </summary>
+        /// <param name="index">ittem index in list</param>
         void EnableItem(int index)
         {
             string filePath = string.Empty;
@@ -1448,7 +1482,12 @@ namespace StartupManager
         #endregion
 
         #region Disable Item Method
-
+        /// <summary>
+        /// Disables item in registry
+        /// </summary>
+        /// <param name="regDir">registry directory name</param>
+        /// <param name="subKeyName">subkey to delete</param>
+        /// <returns>true - if success, false - otherwise</returns>
         bool DisableItemInReg(string regDir, string subKeyName)
         {
             bool result = false;
@@ -1519,6 +1558,12 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Deletes item for user
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="newFilePath"></param>
+        /// <returns>true - if success, false - otherwise</returns>
         bool DisableItemForUser(string filePath, string newFilePath)
         {
             bool result = false;
@@ -1567,6 +1612,10 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Disables item
+        /// </summary>
+        /// <param name="index">item index in list</param>
         void DisableItem(int index)
         {
 
@@ -1652,6 +1701,12 @@ namespace StartupManager
 
         #region Delete Item Method
 
+        /// <summary>
+        /// Deletes item in registry
+        /// </summary>
+        /// <param name="regDir">registry directory name</param>
+        /// <param name="subKeyName">subkey to delete</param>
+        /// <returns>true - if success, false - otherwise</returns>
         bool DeleteItemInReg(string regDir, string subKeyName)
         {
             bool result = false;
@@ -1681,6 +1736,7 @@ namespace StartupManager
                 }
                 // Attempt to delete the value.
                 regKey.DeleteValue(subKeyName);
+                result = true;
             }
             catch (Exception ex)
             {
@@ -1697,6 +1753,11 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Deletes item
+        /// </summary>
+        /// <param name="fileName">full path to file</param>
+        /// <returns>true - if success, false - otherwise</returns>
         bool DeleteItemForUser(string fileName)
         {
             bool result = false;
@@ -1719,6 +1780,10 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Deletes a startup item
+        /// </summary>
+        /// <param name="index"></param>
         void DeleteItem(int index)
         {
             string fileName;
@@ -1799,6 +1864,10 @@ namespace StartupManager
 
         #region Open Folder Method
 
+        /// <summary>
+        /// Opens folder where the current item is located in Windows Explorer
+        /// </summary>
+        /// <param name="index">index of item</param>
         void OpenFolder(int index)
         {
             try
@@ -1857,7 +1926,10 @@ namespace StartupManager
         #endregion
 
         #region Execute Command Method
-
+        /// <summary>
+        /// Runs current item
+        /// </summary>
+        /// <param name="index">item index in list</param>
         void ExecuteCommand(int index)
         {
             try
@@ -1946,6 +2018,12 @@ namespace StartupManager
 
         #region Move to All Users Method
 
+        /// <summary>
+        /// Moves an item in registry so that it will be available for 'All Users'
+        /// </summary>
+        /// <param name="regDir">current directory in registry where the item is located</param>
+        /// <param name="subKeyName">subKey name</param>
+        /// <returns>true if success, false - otherwise</returns>
         bool MoveToAllUsersInReg(string regDir, string subKeyName)
         {
             bool result = false;
@@ -1996,6 +2074,12 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Moves executable file for the item so that it will be available for 'All Users'
+        /// </summary>
+        /// <param name="filePath"></param>
+        /// <param name="newFilePath"></param>
+        /// <returns>true - if success, false - otherwise</returns>
         bool MoveToAllUsersForUser(string filePath, string newFilePath)
         {
             bool result = false;
@@ -2023,6 +2107,10 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Moves item to be available for 'All Users'
+        /// </summary>
+        /// <param name="index"></param>
         void MoveToAllUsers(int index)
         {
             try
@@ -2112,6 +2200,12 @@ namespace StartupManager
 
         #region Move to Current User Method
 
+        /// <summary>
+        /// Moves item in registry so that it will be available for 'Current User'
+        /// </summary>
+        /// <param name="regDir"></param>
+        /// <param name="subKeyName"></param>
+        /// <returns></returns>
         bool MoveToCurrentUserInReg(string regDir, string subKeyName)
         {
             bool result = false;
@@ -2160,6 +2254,7 @@ namespace StartupManager
             return result;
         }
 
+        /// Moves executable file for the item so that it will be available for 'Current User'
         bool MoveToCurrentUsersForUser(string filePath, string newFilePath)
         {
             bool result = false;
@@ -2186,6 +2281,10 @@ namespace StartupManager
             return result;
         }
 
+        /// <summary>
+        /// Moves item to be available for 'Current User'
+        /// </summary>
+        /// <param name="index"></param>
         void MoveToCurrentUser(int index)
         {
             try
@@ -2311,6 +2410,10 @@ namespace StartupManager
             return bmp;
         }
 
+        /// <summary>
+        /// Sets culture for the form
+        /// </summary>
+        /// <param name="culture"></param>
         void SetCulture(CultureInfo culture)
         {
             var resourceManager = new ResourceManager("StartupManager.Resources", typeof(FormMain).Assembly);
