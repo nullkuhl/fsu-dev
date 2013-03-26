@@ -630,7 +630,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 						</Grid.RowDefinitions>
 
 						<Border Style="{StaticResource PanelMainBorder}">
-							<Grid Width="717">
+							<Grid>
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="*" />
 									<ColumnDefinition Width="*" />
@@ -655,7 +655,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 										<Grid Style="{StaticResource FunctionalButtonContent}">
 											<Grid.ColumnDefinitions>
 												<ColumnDefinition Width="60" />
-												<ColumnDefinition Width="*" />
+												<ColumnDefinition Width="230" />
 											</Grid.ColumnDefinitions>
 											<Image Style="{StaticResource FunctionalButtonImage}" Source="Images/icon-disc-cleaner.png" />
 											<StackPanel Grid.Column="1">
@@ -784,7 +784,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
                        </Grid.RowDefinitions>
 
                         <Border Style="{StaticResource PanelMainBorder}">
-							<Grid Width="717">
+							<Grid>
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="*" />
 									<ColumnDefinition Width="*" />
@@ -935,7 +935,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 						</Grid.RowDefinitions>
 
 						<Border Style="{StaticResource PanelMainBorder}">
-							<Grid Width="717">
+							<Grid>
 								<Grid.ColumnDefinitions>
 									<ColumnDefinition Width="*" />
 									<ColumnDefinition Width="*" />
