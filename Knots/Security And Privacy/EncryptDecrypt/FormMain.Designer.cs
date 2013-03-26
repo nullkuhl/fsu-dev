@@ -51,9 +51,11 @@ namespace EncryptDecrypt
             this.Encrypt_btn = new System.Windows.Forms.Button();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.EncryptionTab = new System.Windows.Forms.TabPage();
+            this.prbEncrypting = new System.Windows.Forms.ProgressBar();
             this.chkCreateAuto = new System.Windows.Forms.CheckBox();
             this.chkDeleteAfterEncryption = new System.Windows.Forms.CheckBox();
             this.DecryptionTab = new System.Windows.Forms.TabPage();
+            this.prbDecrypting = new System.Windows.Forms.ProgressBar();
             this.chkOpenAfterDecryption = new System.Windows.Forms.CheckBox();
             this.chkDeleteAfterDecryption = new System.Windows.Forms.CheckBox();
             this.grbPasswordDecr = new System.Windows.Forms.GroupBox();
@@ -67,10 +69,8 @@ namespace EncryptDecrypt
             this.btnOpenFileToDecrypt = new System.Windows.Forms.Button();
             this.dcPath_textbox = new System.Windows.Forms.TextBox();
             this.Decrypt_btn = new System.Windows.Forms.Button();
-            this.prbEncrypting = new System.Windows.Forms.ProgressBar();
             this.ucBottom = new EncryptDecrypt.BottomControl();
             this.ucTop = new EncryptDecrypt.TopControl();
-            this.prbDecrypting = new System.Windows.Forms.ProgressBar();
             this.grbPath.SuspendLayout();
             this.grbPassword.SuspendLayout();
             this.tcMain.SuspendLayout();
@@ -163,7 +163,8 @@ namespace EncryptDecrypt
             // 
             // txtPasswdConfirm
             // 
-            this.txtPasswdConfirm.Location = new System.Drawing.Point(136, 57);
+            this.txtPasswdConfirm.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPasswdConfirm.Location = new System.Drawing.Point(166, 57);
             this.txtPasswdConfirm.Name = "txtPasswdConfirm";
             this.txtPasswdConfirm.PasswordChar = '*';
             this.txtPasswdConfirm.Size = new System.Drawing.Size(252, 20);
@@ -171,7 +172,8 @@ namespace EncryptDecrypt
             // 
             // txtPasswdEncrypt
             // 
-            this.txtPasswdEncrypt.Location = new System.Drawing.Point(136, 25);
+            this.txtPasswdEncrypt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPasswdEncrypt.Location = new System.Drawing.Point(166, 25);
             this.txtPasswdEncrypt.Name = "txtPasswdEncrypt";
             this.txtPasswdEncrypt.PasswordChar = '*';
             this.txtPasswdEncrypt.Size = new System.Drawing.Size(252, 20);
@@ -179,21 +181,21 @@ namespace EncryptDecrypt
             // 
             // lblPasswdEncrypt
             // 
-            this.lblPasswdEncrypt.AutoSize = true;
-            this.lblPasswdEncrypt.Location = new System.Drawing.Point(73, 28);
+            this.lblPasswdEncrypt.Location = new System.Drawing.Point(19, 28);
             this.lblPasswdEncrypt.Name = "lblPasswdEncrypt";
-            this.lblPasswdEncrypt.Size = new System.Drawing.Size(56, 13);
+            this.lblPasswdEncrypt.Size = new System.Drawing.Size(143, 13);
             this.lblPasswdEncrypt.TabIndex = 4;
             this.lblPasswdEncrypt.Text = "Password:";
+            this.lblPasswdEncrypt.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblPasswdConfirm
             // 
-            this.lblPasswdConfirm.AutoSize = true;
-            this.lblPasswdConfirm.Location = new System.Drawing.Point(32, 60);
+            this.lblPasswdConfirm.Location = new System.Drawing.Point(19, 60);
             this.lblPasswdConfirm.Name = "lblPasswdConfirm";
-            this.lblPasswdConfirm.Size = new System.Drawing.Size(94, 13);
+            this.lblPasswdConfirm.Size = new System.Drawing.Size(143, 13);
             this.lblPasswdConfirm.TabIndex = 3;
             this.lblPasswdConfirm.Text = "Confirm Password:";
+            this.lblPasswdConfirm.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Encrypt_btn
             // 
@@ -231,6 +233,13 @@ namespace EncryptDecrypt
             this.EncryptionTab.Text = "Encryption";
             this.EncryptionTab.UseVisualStyleBackColor = true;
             // 
+            // prbEncrypting
+            // 
+            this.prbEncrypting.Location = new System.Drawing.Point(16, 291);
+            this.prbEncrypting.Name = "prbEncrypting";
+            this.prbEncrypting.Size = new System.Drawing.Size(462, 12);
+            this.prbEncrypting.TabIndex = 21;
+            // 
             // chkCreateAuto
             // 
             this.chkCreateAuto.AutoSize = true;
@@ -267,6 +276,13 @@ namespace EncryptDecrypt
             this.DecryptionTab.Text = "Decryption";
             this.DecryptionTab.UseVisualStyleBackColor = true;
             // 
+            // prbDecrypting
+            // 
+            this.prbDecrypting.Location = new System.Drawing.Point(16, 288);
+            this.prbDecrypting.Name = "prbDecrypting";
+            this.prbDecrypting.Size = new System.Drawing.Size(462, 12);
+            this.prbDecrypting.TabIndex = 22;
+            // 
             // chkOpenAfterDecryption
             // 
             this.chkOpenAfterDecryption.AutoSize = true;
@@ -300,7 +316,7 @@ namespace EncryptDecrypt
             // 
             // txtPasswdDecrypt
             // 
-            this.txtPasswdDecrypt.Location = new System.Drawing.Point(138, 32);
+            this.txtPasswdDecrypt.Location = new System.Drawing.Point(144, 32);
             this.txtPasswdDecrypt.Name = "txtPasswdDecrypt";
             this.txtPasswdDecrypt.PasswordChar = '*';
             this.txtPasswdDecrypt.Size = new System.Drawing.Size(252, 20);
@@ -308,12 +324,12 @@ namespace EncryptDecrypt
             // 
             // lblPasswdDecr
             // 
-            this.lblPasswdDecr.AutoSize = true;
-            this.lblPasswdDecr.Location = new System.Drawing.Point(76, 35);
+            this.lblPasswdDecr.Location = new System.Drawing.Point(54, 35);
             this.lblPasswdDecr.Name = "lblPasswdDecr";
-            this.lblPasswdDecr.Size = new System.Drawing.Size(56, 13);
+            this.lblPasswdDecr.Size = new System.Drawing.Size(84, 13);
             this.lblPasswdDecr.TabIndex = 4;
             this.lblPasswdDecr.Text = "Password:";
+            this.lblPasswdDecr.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // grbPathDecr
             // 
@@ -393,13 +409,6 @@ namespace EncryptDecrypt
             this.Decrypt_btn.UseVisualStyleBackColor = true;
             this.Decrypt_btn.Click += new System.EventHandler(this.Decrypt_btn_Click);
             // 
-            // prbEncrypting
-            // 
-            this.prbEncrypting.Location = new System.Drawing.Point(16, 291);
-            this.prbEncrypting.Name = "prbEncrypting";
-            this.prbEncrypting.Size = new System.Drawing.Size(462, 12);
-            this.prbEncrypting.TabIndex = 21;
-            // 
             // ucBottom
             // 
             this.ucBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -420,13 +429,6 @@ namespace EncryptDecrypt
             this.ucTop.Name = "ucTop";
             this.ucTop.Size = new System.Drawing.Size(519, 64);
             this.ucTop.TabIndex = 10;
-            // 
-            // prbDecrypting
-            // 
-            this.prbDecrypting.Location = new System.Drawing.Point(16, 288);
-            this.prbDecrypting.Name = "prbDecrypting";
-            this.prbDecrypting.Size = new System.Drawing.Size(462, 12);
-            this.prbDecrypting.TabIndex = 22;
             // 
             // frmMain
             // 

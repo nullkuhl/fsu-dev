@@ -316,7 +316,7 @@ namespace Uninstall_Manager
 									row1[dtInstalledApps_InstallDate].ToString(),
 									row1[dtInstalledApps_Size].ToString(),
 									row1[dtInstalledApps_Version].ToString(),
-									row1["regKey"].ToString()
+									row1[regKey.HeaderText].ToString()
 								})));
                     }
                     catch

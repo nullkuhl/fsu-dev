@@ -44,6 +44,7 @@ namespace FileUndelete
         {
             Thread.CurrentThread.CurrentUICulture = culture;
             lblWait.Text = rm.GetString("processing");
+            this.Text = rm.GetString("processing");
         }
     }
 }

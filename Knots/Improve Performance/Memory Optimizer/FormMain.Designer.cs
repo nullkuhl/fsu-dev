@@ -60,7 +60,6 @@ namespace MemoryOptimizer
             this.chtMemory = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbl0 = new System.Windows.Forms.Label();
             this.lbl100 = new System.Windows.Forms.Label();
-            this.prbCPU = new MemoryOptimizer.VerticalProgressBar();
             this.grbClipboard = new System.Windows.Forms.GroupBox();
             this.lblClearClipboard = new System.Windows.Forms.Label();
             this.tbpOptions = new System.Windows.Forms.TabPage();
@@ -85,6 +84,7 @@ namespace MemoryOptimizer
             this.prsMain = new System.Diagnostics.Process();
             this.ucBottom = new MemoryOptimizer.BottomControl();
             this.ucTop = new MemoryOptimizer.TopControl();
+            this.prbCPU = new MemoryOptimizer.VerticalProgressBar();
             this.tcMain.SuspendLayout();
             this.tbpOptimization.SuspendLayout();
             this.grbMemory.SuspendLayout();
@@ -110,9 +110,9 @@ namespace MemoryOptimizer
             // 
             // btnClearClipboard
             // 
-            this.btnClearClipboard.Location = new System.Drawing.Point(290, 19);
+            this.btnClearClipboard.Location = new System.Drawing.Point(256, 14);
             this.btnClearClipboard.Name = "btnClearClipboard";
-            this.btnClearClipboard.Size = new System.Drawing.Size(133, 25);
+            this.btnClearClipboard.Size = new System.Drawing.Size(167, 30);
             this.btnClearClipboard.TabIndex = 1;
             this.btnClearClipboard.Text = "Clear clipboard";
             this.btnClearClipboard.UseVisualStyleBackColor = true;
@@ -366,13 +366,6 @@ namespace MemoryOptimizer
             this.lbl100.TabIndex = 6;
             this.lbl100.Text = "100 % -";
             // 
-            // prbCPU
-            // 
-            this.prbCPU.Location = new System.Drawing.Point(58, 46);
-            this.prbCPU.Name = "prbCPU";
-            this.prbCPU.Size = new System.Drawing.Size(47, 87);
-            this.prbCPU.TabIndex = 0;
-            // 
             // grbClipboard
             // 
             this.grbClipboard.Controls.Add(this.lblClearClipboard);
@@ -388,7 +381,7 @@ namespace MemoryOptimizer
             // 
             this.lblClearClipboard.Location = new System.Drawing.Point(10, 14);
             this.lblClearClipboard.Name = "lblClearClipboard";
-            this.lblClearClipboard.Size = new System.Drawing.Size(274, 35);
+            this.lblClearClipboard.Size = new System.Drawing.Size(240, 35);
             this.lblClearClipboard.TabIndex = 2;
             this.lblClearClipboard.Text = "Clear Clipboard so that the Copied things will be cleared.";
             this.lblClearClipboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -465,36 +458,37 @@ namespace MemoryOptimizer
             // 
             // lblOptimizeIf
             // 
-            this.lblOptimizeIf.Location = new System.Drawing.Point(63, 105);
+            this.lblOptimizeIf.Location = new System.Drawing.Point(9, 98);
+            this.lblOptimizeIf.MaximumSize = new System.Drawing.Size(320, 34);
             this.lblOptimizeIf.MinimumSize = new System.Drawing.Size(180, 0);
             this.lblOptimizeIf.Name = "lblOptimizeIf";
-            this.lblOptimizeIf.Size = new System.Drawing.Size(266, 18);
+            this.lblOptimizeIf.Size = new System.Drawing.Size(320, 34);
             this.lblOptimizeIf.TabIndex = 5;
             this.lblOptimizeIf.Text = "Only Optimize if CPU-Usage is below: (%)";
             this.lblOptimizeIf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblIncreaseMemory
             // 
-            this.lblIncreaseMemory.Location = new System.Drawing.Point(60, 66);
+            this.lblIncreaseMemory.Location = new System.Drawing.Point(21, 66);
             this.lblIncreaseMemory.Name = "lblIncreaseMemory";
-            this.lblIncreaseMemory.Size = new System.Drawing.Size(269, 18);
+            this.lblIncreaseMemory.Size = new System.Drawing.Size(308, 18);
             this.lblIncreaseMemory.TabIndex = 4;
             this.lblIncreaseMemory.Text = "Increase free memory to: (MB)";
             this.lblIncreaseMemory.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblOptimize
             // 
-            this.lblOptimize.Location = new System.Drawing.Point(60, 28);
+            this.lblOptimize.Location = new System.Drawing.Point(9, 29);
             this.lblOptimize.MinimumSize = new System.Drawing.Size(190, 0);
             this.lblOptimize.Name = "lblOptimize";
-            this.lblOptimize.Size = new System.Drawing.Size(269, 18);
+            this.lblOptimize.Size = new System.Drawing.Size(320, 20);
             this.lblOptimize.TabIndex = 3;
             this.lblOptimize.Text = "Optimize automatically when free memory at: (MB)";
             this.lblOptimize.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnRecommended
             // 
-            this.btnRecommended.Location = new System.Drawing.Point(273, 143);
+            this.btnRecommended.Location = new System.Drawing.Point(273, 151);
             this.btnRecommended.Name = "btnRecommended";
             this.btnRecommended.Size = new System.Drawing.Size(137, 23);
             this.btnRecommended.TabIndex = 2;
@@ -591,6 +585,13 @@ namespace MemoryOptimizer
             this.ucTop.Name = "ucTop";
             this.ucTop.Size = new System.Drawing.Size(450, 64);
             this.ucTop.TabIndex = 9;
+            // 
+            // prbCPU
+            // 
+            this.prbCPU.Location = new System.Drawing.Point(58, 46);
+            this.prbCPU.Name = "prbCPU";
+            this.prbCPU.Size = new System.Drawing.Size(47, 87);
+            this.prbCPU.TabIndex = 0;
             // 
             // FormMain
             // 

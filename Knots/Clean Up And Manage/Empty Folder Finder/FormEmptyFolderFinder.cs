@@ -713,5 +713,10 @@ namespace EmptyFolderFinder
         {
             ABORT = true;
         }
+
+        private void lvMain_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

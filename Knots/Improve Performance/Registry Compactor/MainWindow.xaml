@@ -6,7 +6,7 @@
 		xmlns:properties="clr-namespace:RegistryCompactor.Properties"
 		xmlns:WinCtr="clr-namespace:RegistryCompactor"
 		Title="{x:Static Member=properties:Resources.RegistryCompactor}"
-		Width="575"
+		Width="680"
 		Height="530"
 		Background="#FFFFFF"
 		Icon="Images\FSUIcon.ico"
@@ -139,7 +139,7 @@
 						   TextWrapping="Wrap" />
 				<DockPanel Margin="0,20">
 					<Button Name="Start"
-							Width="252"
+							Width="310"
 							Height="57"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Top"
@@ -165,7 +165,7 @@
 						</StackPanel>
 					</Button>
 					<Button Name="ViewSystemInfo"
-							Width="252"
+							Width="310"
 							Height="57"
 							HorizontalAlignment="Right"
 							HorizontalContentAlignment="Left"
