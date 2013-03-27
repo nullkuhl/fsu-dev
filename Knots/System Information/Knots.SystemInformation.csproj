@@ -10,7 +10,7 @@
     <StartupObject>
     </StartupObject>
     <RootNamespace>SystemInformation</RootNamespace>
-    <AssemblyName>SystemInfo</AssemblyName>
+    <AssemblyName>SysInfo</AssemblyName>
     <OptionStrict>On</OptionStrict>
     <ApplicationIcon>Resources\FSUIcon.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
