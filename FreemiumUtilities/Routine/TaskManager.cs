@@ -1,18 +1,12 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 using Microsoft.Win32.TaskScheduler;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.Routine"/> namespace contains a set of routine classes
+/// of the <see cref="FreemiumUtilities"/> project
+/// </summary>
 namespace FreemiumUtilities.Routine
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.Routine"/> namespace contains a set of routine classes
-    /// of the <see cref="FreemiumUtilities"/> project
-    /// </summary>
-    [CompilerGenerated]
-    internal class NamespaceDoc
-    {
-    }
-
     /// <summary>
     /// Provides a methods to operate with a Windows Task Manager
     /// </summary>

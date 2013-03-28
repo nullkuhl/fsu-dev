@@ -153,13 +153,13 @@ namespace EncryptDecrypt
             }
             catch
             {
-                MessageBox.Show(rm.GetString("select_destination_first") + ".");
+                MessageBox.Show(rm.GetString("select_destination_first"));
                 return;
             }
 
             if (!Directory.Exists(encryptToTxt.Text))
             {
-                MessageBox.Show(rm.GetString("select_destination_first") + ".");
+                MessageBox.Show(rm.GetString("select_destination_first"));
                 return;
             }
 
@@ -198,10 +198,10 @@ namespace EncryptDecrypt
                                 if (chkDeleteAfterEncryption.Checked)
                                     File.Delete(enpath);
 
-                                MessageBox.Show(rm.GetString("encrypted_succ") + "!", rm.GetString("succ"), MessageBoxButtons.OK,
+                                MessageBox.Show(rm.GetString("encrypted_succ"), rm.GetString("succ"), MessageBoxButtons.OK,
                                                 MessageBoxIcon.Information);
                                 if (chkCreateAuto.Checked)
-                                    MessageBox.Show(rm.GetString("auto_encrypt_created") + "!", rm.GetString("succ"), MessageBoxButtons.OK,
+                                    MessageBox.Show(rm.GetString("auto_encrypt_created"), rm.GetString("succ"), MessageBoxButtons.OK,
                                                     MessageBoxIcon.Information);
                                 txtPasswdEncrypt.Text = String.Empty;
                                 txtPasswdConfirm.Text = String.Empty;
@@ -213,7 +213,7 @@ namespace EncryptDecrypt
                         }
                         catch
                         {
-                            MessageBox.Show(rm.GetString("cannot_be_encrypted") + ".");
+                            MessageBox.Show(rm.GetString("cannot_be_encrypted"));
                         }
                     }
                 }
@@ -240,7 +240,7 @@ namespace EncryptDecrypt
 
                 if (!File.Exists(decrypterPath))
                 {
-                    MessageBox.Show(rm.GetString("cannot_find") + " " + decrypterPath + "; " + rm.GetString("cannot_create") + ".",
+                    MessageBox.Show(string.Format("{0} {1}; {2}", rm.GetString("cannot_find"), decrypterPath, rm.GetString("cannot_create")),
                                     rm.GetString("error"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
@@ -316,13 +316,13 @@ namespace EncryptDecrypt
             }
             catch
             {
-                MessageBox.Show(rm.GetString("select_destination_first") + ".");
+                MessageBox.Show(rm.GetString("select_destination_first"));
                 return;
             }
 
             if (!Directory.Exists(extrect_Textbox.Text))
             {
-                MessageBox.Show(rm.GetString("select_destination_first") + ".");
+                MessageBox.Show(rm.GetString("select_destination_first"));
                 return;
             }
 

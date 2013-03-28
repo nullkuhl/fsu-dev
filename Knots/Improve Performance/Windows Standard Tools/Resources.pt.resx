@@ -154,9 +154,12 @@
     <value>Sempre que instala uma nova aplicação no computador está a efetuar alterações. Por vezes, o PC fica instável devido às alterações. Com o Restauro do Sistema pode redefinir o estado do computador para um ponto anterior no tempo, quando funcionava adequadamente</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Esta ferramenta não se encontra na sua plataforma</value>
+    <value>Esta ferramenta não se encontra na sua plataforma.</value>
   </data>
   <data name="window_title" xml:space="preserve">
     <value>Gerir Windows</value>
+  </data>
+  <data name="xp_warning" xml:space="preserve">
+    <value>O Windows System File Checker pode perguntar para o seu disco de instalação do Windows para continuar, por favor, preparar o disco</value>
   </data>
 </root>

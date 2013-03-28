@@ -1,21 +1,12 @@
-﻿/*
- * This is a dll was designed mainly as a set of Utilities regarding bug reporting, and application paths,
- * that was designed mainly for the freemium system Utilities, and any of its derivatives 
- */
-
-using System.IO;
+﻿using System.IO;
 using System;
 
+/// <summary>
+/// The <see cref="FreemiumUtil"/> namespace contains a set of Utilities regarding bug reporting, and application paths, 
+/// that was designed mainly for the freemium system Utilities, and any of its derivatives 
+/// </summary>
 namespace FreemiumUtil
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtil"/> namespace contains a set of Utilities regarding bug reporting, and application paths, 
-    /// that was designed mainly for the freemium system Utilities, and any of its derivatives 
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Contains methods to operate with a txt config file
     /// </summary>
@@ -125,6 +116,10 @@ namespace FreemiumUtil
             }
         }
 
+        /// <summary>
+        /// Checks if the config file exists and it is valid. Creates new one if it is not valid or not exist.
+        /// </summary>
+        /// <returns>true - if it exists and it is valid, false - otherwise</returns>
         private static bool CheckCfgFile()
         {
             bool configFileValid = true;

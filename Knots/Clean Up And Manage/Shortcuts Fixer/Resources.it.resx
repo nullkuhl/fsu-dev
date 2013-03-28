@@ -231,4 +231,7 @@
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/company/faq/</value>
   </data>
+  <data name="unable_restore" xml:space="preserve">
+    <value>Restore non è un'opzione valida, non è possibile ripristinare il file.</value>
+  </data>
 </root>

@@ -105,10 +105,10 @@ namespace StartupManager
                 if (!admin)
                 {
                     // Display message if user is not an administrator.
-                    DialogResult result = MessageBox.Show(
-                        rm.GetString("run_as_admin") + ".\r\n" +
-                        rm.GetString("if_you_continue") + "\r\n" +
-                        rm.GetString("do_you_wish") + "?", rm.GetString("startup_manager"),
+                    DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}{4}",
+                        rm.GetString("run_as_admin"), Environment.NewLine,
+                        rm.GetString("if_you_continue"), Environment.NewLine,
+                        rm.GetString("do_you_wish")), rm.GetString("startup_manager"),
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     // Exit if user does not want to continue as a non-admin.
@@ -130,14 +130,14 @@ namespace StartupManager
             }
             catch (Win32Exception ex)
             {
-                MessageBox.Show(rm.GetString("error_occurred") + " " + rm.GetString("startup_manager") + "\r\n" +
-                                rm.GetString("description") + ": " + ex.Message,
+                MessageBox.Show(string.Format("{0} {1}{2}{3} {4}", rm.GetString("error_occurred"), rm.GetString("startup_manager"),
+                                                                   Environment.NewLine, rm.GetString("description"), ex.Message),
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException exc)
             {
-                MessageBox.Show(rm.GetString("error_occurred") + " " + rm.GetString("startup_manager") + "\r\n" +
-                                rm.GetString("description") + ": " + exc.Message,
+                MessageBox.Show(string.Format("{0} {1}{2}{3} {4}", rm.GetString("error_occurred"), rm.GetString("startup_manager"),
+                                                   Environment.NewLine, rm.GetString("description"), exc.Message),
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -355,24 +355,22 @@ namespace StartupManager
                         labelArguments.Text = String.Empty;
 
                         // Display a message to the user indicating that the file does not exist.
-                        MessageBox.Show(rm.GetString("file_invalid") + ".\r\n" +
-                                        rm.GetString("commands_disabled") + ".", rm.GetString("startup_manager"),
-                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(string.Format("{0}{1}{2}", rm.GetString("file_invalid"), Environment.NewLine, rm.GetString("commands_disabled")),
+                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (SecurityException ex)
             {
-                MessageBox.Show(rm.GetString("no_permission") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                rm.GetString("description") + ": " + ex.Message, rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4} {5}", rm.GetString("no_permission"), Environment.NewLine,
+                                               rm.GetString("system_returned"), Environment.NewLine, rm.GetString("description"), ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show(rm.GetString("file_not_found") + ".\n\r" +
-                                rm.GetString("file_path") + ": " + filePath + "\n\r" + rm.GetString("command") + ": " + command,
+
+                MessageBox.Show(string.Format("{0}{1}{2} {3}{4}{5}: {6}", rm.GetString("file_not_found"), Environment.NewLine,
+                                              rm.GetString("file_path"), filePath, Environment.NewLine, rm.GetString("command"), command),
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch (IOException exc)
@@ -381,8 +379,8 @@ namespace StartupManager
             }
             catch (ArgumentException excp)
             {
-                MessageBox.Show(excp.Message + "\n\r" +
-                                rm.GetString("file_path") + ": " + filePath + "\n\r" + rm.GetString("command") + ": " + command,
+                MessageBox.Show(string.Format("{0}{1}{2} {3}{4}{5}: {6}", excp.Message, Environment.NewLine,
+                                              rm.GetString("file_path"), filePath, Environment.NewLine, rm.GetString("command"), command),
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -425,11 +423,10 @@ namespace StartupManager
         void toolStripMenuItemDelete_Click(object sender, EventArgs e)
         {
             // Display a warning message before deleting an item.
-            DialogResult result = MessageBox.Show(
-                rm.GetString("warning") + "." + "\r\n" + "\r\n" +
-                rm.GetString("delete_selected_item") + "?", rm.GetString("startup_manager"),
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
+            DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}", rm.GetString("warning"), Environment.NewLine, Environment.NewLine,
+                                                                rm.GetString("delete_selected_item")),
+                                                  rm.GetString("startup_manager"), MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                                                  MessageBoxDefaultButton.Button2);
             if (result == DialogResult.No)
             {
                 return;
@@ -474,10 +471,10 @@ namespace StartupManager
         void toolStripButtonDelete_Click(object sender, EventArgs e)
         {
             // Display a warning message before deleting an item.
-            DialogResult result = MessageBox.Show(
-                rm.GetString("warning") + "." + "\r\n" + "\r\n" +
-                rm.GetString("delete_selected_item") + "?", rm.GetString("startup_manager"),
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}", rm.GetString("warning"), Environment.NewLine, Environment.NewLine,
+                                                                 rm.GetString("delete_selected_item")),
+                                                  rm.GetString("startup_manager"), MessageBoxButtons.YesNo, MessageBoxIcon.Question,
+                                                  MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.No)
             {
@@ -1272,16 +1269,16 @@ namespace StartupManager
             }
             catch (DirectoryNotFoundException e)
             {
-                MessageBox.Show(rm.GetString("folder_not_found") + "." + "\r\n" +
-                                rm.GetString("description") + ": " + e.Message + "\r\n" + rm.GetString("command") + ": " + value,
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}{5}: {6}", rm.GetString("folder_not_found"), Environment.NewLine,
+                                              rm.GetString("description"), e.Message, Environment.NewLine, rm.GetString("command"), value),
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
             catch (FileNotFoundException ex)
             {
-                MessageBox.Show(rm.GetString("file_not_found_warning") + "." + "\r\n" +
-                                rm.GetString("description") + ": " + ex.Message + "\r\n" + rm.GetString("command") + ": " + value,
-                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}{5}: {6}", rm.GetString("file_not_found_warning"), Environment.NewLine,
+                              rm.GetString("description"), ex.Message, Environment.NewLine, rm.GetString("command"), value),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return string.Empty;
             }
         }
@@ -1384,14 +1381,14 @@ namespace StartupManager
                 }
                 else
                 {
-                    MessageBox.Show(rm.GetString("file_appear_not_valid") + ".",
+                    MessageBox.Show(rm.GetString("file_appear_not_valid"),
                                     rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             else
             {
                 //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
@@ -1455,26 +1452,23 @@ namespace StartupManager
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_enable"), Environment.NewLine,
+                                rm.GetString("system_returned"), Environment.NewLine, ex.Message), rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_enable"), Environment.NewLine,
+                                rm.GetString("system_returned"), Environment.NewLine, exc.Message), rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_enable"), Environment.NewLine,
+                                rm.GetString("system_returned"), Environment.NewLine, excep.Message), rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
                 //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -1598,14 +1592,14 @@ namespace StartupManager
                 }
                 else
                 {
-                    MessageBox.Show(rm.GetString("file_appear_not_valid") + ".",
+                    MessageBox.Show(rm.GetString("file_appear_not_valid"),
                                     rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
             }
             else
             {
                 //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
@@ -1669,26 +1663,26 @@ namespace StartupManager
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_disable"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_disable"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_disable"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
                 //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (NullReferenceException exc)
@@ -1773,7 +1767,7 @@ namespace StartupManager
             }
             else
             {
-                MessageBox.Show(rm.GetString("file_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
 
@@ -1835,27 +1829,27 @@ namespace StartupManager
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_delete"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_delete"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_delete"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception except)
             {
-                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
-                                rm.GetString("system_returned") + ":" + "\r\n" +
-                                except.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_delete"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, except.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -1893,32 +1887,32 @@ namespace StartupManager
                 else
                 {
                     //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_open") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_open"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_open") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_open"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_open") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_open"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
                 //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -1985,31 +1979,31 @@ namespace StartupManager
                 else
                 {
                     //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_execute") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_execute"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unabble_to_execute") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_execute"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unabble_to_execute") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_execute"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -2100,7 +2094,7 @@ namespace StartupManager
             }
             else
             {
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
@@ -2167,26 +2161,25 @@ namespace StartupManager
             }
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
-                MessageBox.Show("test2");
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
@@ -2274,7 +2267,7 @@ namespace StartupManager
             }
             else
             {
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
@@ -2340,26 +2333,25 @@ namespace StartupManager
 
             catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (ArgumentException exc)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, exc.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SecurityException excep)
             {
-                MessageBox.Show(rm.GetString("unable_to_move") + "."
-                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
-                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
+                              rm.GetString("system_returned"), Environment.NewLine, excep.Message),
+                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Win32Exception)
             {
-                // MessageBox.Show("test 4");
-                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
@@ -2447,7 +2439,7 @@ namespace StartupManager
             Status.Text = resourceManager.GetString("status");
             labelCommandDesc.Text = resourceManager.GetString("command") + ":";
             labelFileVersionDesc.Text = resourceManager.GetString("full_version") + ":";
-            labelDescriptionDesc.Text = resourceManager.GetString("description") + ":";
+            labelDescriptionDesc.Text = resourceManager.GetString("description");
             labelCompanyDesc.Text = resourceManager.GetString("company") + ":";
             labelDetails.Text = resourceManager.GetString("details");
             Text = resourceManager.GetString("startup_manager");

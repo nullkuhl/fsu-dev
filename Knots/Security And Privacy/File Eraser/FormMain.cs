@@ -87,13 +87,13 @@ namespace FileEraser
             cWin32 oWin32 = new cWin32();
             if (!oWin32.VersionCheck())
             {
-                MessageBox.Show(rm.GetString("system_not_supported") + ".", rm.GetString("os_not_supported"),
+                MessageBox.Show(rm.GetString("system_not_supported"), rm.GetString("os_not_supported"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
             }
             if (!oShredder.IsAdmin())
             {
-                MessageBox.Show(rm.GetString("no_sufficient_access") + ".", rm.GetString("contact_admin"),
+                MessageBox.Show(rm.GetString("no_sufficient_access"), rm.GetString("contact_admin"),
                                 MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Application.Exit();
             }
@@ -178,10 +178,8 @@ namespace FileEraser
         void evtFileCount(Int32 count, ref Boolean cancel)
         {
             if (count > 10)
-                if (MessageBox.Show(
-                    rm.GetString("attempting") + " " + count.ToString() + " " + rm.GetString("files") + "." + rm.GetString("proceed") +
-                    "?", rm.GetString("deleting_files"),
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show(string.Format("{0} {1} {2}. {3}", rm.GetString("attempting"), count.ToString(), rm.GetString("files"), rm.GetString("proceed")),
+                    rm.GetString("deleting_files"), MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     cancel = false;
                 }
@@ -268,7 +266,7 @@ namespace FileEraser
             {
                 if (txtPath.Length == 0)
                 {
-                    MessageBox.Show(rm.GetString("select_file_folder") + ".", rm.GetString("invalid_path"),
+                    MessageBox.Show(rm.GetString("select_file_folder"), rm.GetString("invalid_path"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }

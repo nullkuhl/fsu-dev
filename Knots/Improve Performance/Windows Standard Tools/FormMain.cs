@@ -192,8 +192,7 @@ namespace WindowsStandardTools
             {
                 if (OSisXp())
                 {
-                    MessageBox.Show(
-                        "Windows System File Checker might ask for your windows installation disc to continue, please prepare your disc",
+                    MessageBox.Show(rm.GetString("xp_warning"),
                         "Warning",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
@@ -248,7 +247,7 @@ namespace WindowsStandardTools
                     }
                     else
                     {
-                        MessageBox.Show(rm.GetString("tool_not_found") + ".",
+                        MessageBox.Show(rm.GetString("tool_not_found"),
                                         rm.GetString("critical_warning"),
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);

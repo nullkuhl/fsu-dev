@@ -147,14 +147,8 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Beim Start von Windows laden</value>
   </data>
-  <data name="memory" xml:space="preserve">
-    <value>MB Arbeitsspeicher freigeräumt</value>
-  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Speicherumfang</value>
-  </data>
-  <data name="memory_freed" xml:space="preserve">
-    <value>Es wurden</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Speicheroptimierung</value>
@@ -178,7 +172,7 @@
     <value>Optimierung</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Optimierung erfolgreich</value>
+    <value>Optimierung erfolgreich: Es wurden {{1}} MB Arbeitsspeicher freigeräumt.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Optimieren</value>

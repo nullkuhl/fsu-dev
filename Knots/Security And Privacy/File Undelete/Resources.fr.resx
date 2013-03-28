@@ -244,7 +244,7 @@
     <value>Restauration en cours...</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>La restauration sur le même lecteur peut réduire la probabilité de succès. Souhaitez-vous vraiment continuer ?</value>
+    <value>La restauration sur le même lecteur peut réduire la probabilité de succès. Souhaitez-vous vraiment continuer?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Vérification terminée</value>

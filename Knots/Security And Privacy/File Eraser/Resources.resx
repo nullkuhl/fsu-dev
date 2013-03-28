@@ -205,7 +205,7 @@
     <value>Invalid Path</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>You do not have sufficient access privileges to run this program. You must be logged on as the system administrator</value>
+    <value>You do not have sufficient access privileges to run this program. You must be logged on as the system administrator.</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Open the file select or open folder dialog</value>
@@ -226,7 +226,7 @@
     <value>Prepared to shred</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>Do you want to proceed</value>
+    <value>Do you want to proceed?</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>Processing</value>
@@ -238,7 +238,7 @@
     <value>Select a File</value>
   </data>
   <data name="select_file_folder" xml:space="preserve">
-    <value>Please Select a file or folder</value>
+    <value>Please Select a file or folder.</value>
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Select a Folder</value>
@@ -256,7 +256,7 @@
     <value>Some files were not deleted</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Your Operating System is not supported. This application can be run on any NT based system (XP.Vista/2000/2003)</value>
+    <value>Your Operating System is not supported. This application can be run on any NT based system (XP.Vista/2000/2003).</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Terminate any running instance of the file pre-execution of the shredder</value>

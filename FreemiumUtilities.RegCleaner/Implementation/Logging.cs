@@ -1,15 +1,11 @@
 ﻿using System;
 using System.IO;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.RegCleaner.Implementation"/> namespace contains a Logging class
+/// </summary>
 namespace FreemiumUtilities.RegCleaner.Implementation
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.RegCleaner.Implementation"/> namespace contains a Logging class
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Provides a methods to create txt log files
     /// </summary>

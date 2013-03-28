@@ -325,10 +325,10 @@
     <value>analisar</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Selecione uma unidade da lista</value>
+    <value>Selecione uma unidade da lista.</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Selecione pelo menos um item da lista</value>
+    <value>Selecione pelo menos um item da lista.</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Selecione um conjunto de cópias de segurança que pretenda restaurar e clique em Restaurar</value>
@@ -355,7 +355,7 @@
     <value>Os ficheiros temporários são utilizados por programas como um espaço de armazenamento intermédio e geralmente são removidos após a utilização</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Esta ferramenta não se encontra na sua plataforma</value>
+    <value>Esta ferramenta não se encontra na sua plataforma.</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>

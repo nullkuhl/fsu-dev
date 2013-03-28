@@ -5,6 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using WindowsStandardTools.Properties;
 using System.Resources;
+using FreemiumUtil;
 
 namespace WindowsStandardTools
 {
@@ -89,8 +90,7 @@ namespace WindowsStandardTools
             try
             {
                 ResourceManager resourceManager = new ResourceManager("WindowsStandardTools.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

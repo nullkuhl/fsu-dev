@@ -325,10 +325,10 @@
     <value>analizando</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Seleccione una unidad de la lista</value>
+    <value>Seleccione una unidad de la lista.</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Seleccione al menos un elemento de la lista</value>
+    <value>Seleccione al menos un elemento de la lista.</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Seleccione un conjunto de copia de seguridad que quiera restaurar y haga clic en Restaurar</value>
@@ -355,7 +355,7 @@
     <value>Los programas utilizan los archivos temporales como un espacio de almacenamiento intermedio y normalmente se eliminan tras su uso</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>No se ha encontrado esta herramienta en su plataforma</value>
+    <value>No se ha encontrado esta herramienta en su plataforma.</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>

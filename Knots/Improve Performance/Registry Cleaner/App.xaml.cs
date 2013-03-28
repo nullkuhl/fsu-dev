@@ -84,14 +84,12 @@ namespace RegistryCleaner
 
         void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
 
         void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             e.Handled = true;
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
     }

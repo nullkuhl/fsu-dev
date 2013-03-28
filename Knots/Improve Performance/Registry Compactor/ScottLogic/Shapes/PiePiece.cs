@@ -1,18 +1,13 @@
 ﻿using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows;
-
 using ScottLogic.Util;
 
+/// <summary>
+/// The <see cref="ScottLogic.Shapes"/> namespace defines shapes used in the ScottLogic PieChart
+/// </summary>
 namespace ScottLogic.Shapes
 {
-	/// <summary>
-	/// The <see cref="ScottLogic.Shapes"/> namespace defines shapes used in the ScottLogic PieChart
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
     /// <summary>
     /// A pie piece shape
     /// </summary>

@@ -136,13 +136,13 @@
     <value>Supprimer</value>
   </data>
   <data name="delete_selected_item" xml:space="preserve">
-    <value>Souhaitez-vous toujours supprimer l’entrée sélectionnée ?</value>
+    <value>Souhaitez-vous toujours supprimer l’entrée sélectionnée?</value>
   </data>
   <data name="delete_startup_item" xml:space="preserve">
     <value>Supprimer l’entrée de l’AutoRun</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Description</value>
+    <value>Description:</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Détails</value>
@@ -157,7 +157,7 @@
     <value>Désactiver l’entrée de l’AutoRun</value>
   </data>
   <data name="do_you_wish" xml:space="preserve">
-    <value>Souhaitez-vous continuer ?</value>
+    <value>Souhaitez-vous continuer?</value>
   </data>
   <data name="enable" xml:space="preserve">
     <value>Activer</value>
@@ -199,7 +199,7 @@
     <value>Le fichier n’a pas été trouvé.</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>Chemin d’accès du fichier</value>
+    <value>Chemin d’accès du fichier:</value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
     <value>Le dossier n’a pas été trouvé.</value>
@@ -277,7 +277,7 @@
     <value>État</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>Le système a rapporté les informations suivantes :</value>
+    <value>Le système a rapporté les informations suivantes:</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
     <value>Cette entrée n’a pas pu être supprimée.</value>

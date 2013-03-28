@@ -8,15 +8,11 @@ using ShortcutsFixer.Properties;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="ShortcutsFixer"/> namespace defines a Shortcuts fixer knot
+/// </summary>
 namespace ShortcutsFixer
 {
-    /// <summary>
-    /// The <see cref="ShortcutsFixer"/> namespace defines a Shortcuts fixer knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     internal static class Program
     {
         static Mutex mutex;
@@ -62,13 +58,11 @@ namespace ShortcutsFixer
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
     }

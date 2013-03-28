@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using RegistryCompactor.Properties;
+using FreemiumUtil;
 
 namespace RegistryCompactor
 {
@@ -53,8 +54,7 @@ namespace RegistryCompactor
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + Resources.HelpUrl);
-                Process.Start(psi);
+                CommonOperations.OpenUrl(Resources.HelpUrl);
             }
             catch (Exception)
             { }

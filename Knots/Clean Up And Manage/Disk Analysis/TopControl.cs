@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using DiskAnalysis.Properties;
+using FreemiumUtil;
 
 namespace DiskAnalysis
 {
@@ -51,8 +52,7 @@ namespace DiskAnalysis
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + DiskAnalysis.Properties.Resources.HelpUrl);
-                Process.Start(psi);
+                CommonOperations.OpenUrl(DiskAnalysis.Properties.Resources.HelpUrl);
             }
             catch (Exception)
             { }

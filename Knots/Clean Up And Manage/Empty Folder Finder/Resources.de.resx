@@ -158,7 +158,7 @@
     <value>Ausschließen (dauerhaft)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Erfolgreich ausgeschlossen</value>
+    <value>Erfolgreich ausgeschlossen!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Ordnername</value>
@@ -182,7 +182,7 @@
     <value>Überprüfung läuft</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Überprüfung abgebrochen</value>
+    <value>Überprüfung abgebrochen.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Laufwerke überprüfen</value>

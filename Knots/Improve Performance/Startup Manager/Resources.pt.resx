@@ -127,7 +127,7 @@
     <value>Comando</value>
   </data>
   <data name="commands_disabled" xml:space="preserve">
-    <value>Todos os comandos exceto a eliminação estão desativados</value>
+    <value>Todos os comandos exceto a eliminação estão desativados.</value>
   </data>
   <data name="company" xml:space="preserve">
     <value>Empresa</value>
@@ -136,13 +136,13 @@
     <value>Eliminar</value>
   </data>
   <data name="delete_selected_item" xml:space="preserve">
-    <value>Pretende mesmo eliminar o item selecionado</value>
+    <value>Pretende mesmo eliminar o item selecionado?</value>
   </data>
   <data name="delete_startup_item" xml:space="preserve">
     <value>Eliminar item de arranque</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Descrição</value>
+    <value>Descrição:</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Detalhes</value>
@@ -178,31 +178,31 @@
     <value>Executar comando</value>
   </data>
   <data name="file_appear_not_valid" xml:space="preserve">
-    <value>O ficheiro não parece ser um atalho válido</value>
+    <value>O ficheiro não parece ser um atalho válido.</value>
   </data>
   <data name="file_folder_not_found" xml:space="preserve">
-    <value>Não é possível localizar o ficheiro e/ou pasta</value>
+    <value>Não é possível localizar o ficheiro e/ou pasta.</value>
   </data>
   <data name="file_invalid" xml:space="preserve">
-    <value>O ficheiro é inválido ou não existe</value>
+    <value>O ficheiro é inválido ou não existe.</value>
   </data>
   <data name="file_name" xml:space="preserve">
     <value>Nome de ficheiro</value>
   </data>
   <data name="file_not_found" xml:space="preserve">
-    <value>O ficheiro não foi localizado ou está oculto</value>
+    <value>O ficheiro não foi localizado ou está oculto.</value>
   </data>
   <data name="file_not_found1" xml:space="preserve">
     <value>Não foi possível localizar o ficheiro</value>
   </data>
   <data name="file_not_found_warning" xml:space="preserve">
-    <value>Não foi possível localizar o ficheiro</value>
+    <value>Não foi possível localizar o ficheiro.</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>Caminho do ficheiro</value>
+    <value>Caminho do ficheiro:</value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
-    <value>Não foi possível localizar a pasta</value>
+    <value>Não foi possível localizar a pasta.</value>
   </data>
   <data name="full_version" xml:space="preserve">
     <value>Versão do ficheiro</value>
@@ -241,7 +241,7 @@
     <value>Mover Item para Utilizador atual</value>
   </data>
   <data name="no_permission" xml:space="preserve">
-    <value>Não tem permissão para ver as propriedades deste ficheiro</value>
+    <value>Não tem permissão para ver as propriedades deste ficheiro.</value>
   </data>
   <data name="open_file_folder" xml:space="preserve">
     <value>Abrir pasta do ficheiro</value>
@@ -262,7 +262,7 @@
     <value>Atualizar apresentação</value>
   </data>
   <data name="run_as_admin" xml:space="preserve">
-    <value>Para conseguir alterar todos os itens de arranque, tem de executar este programa como administrador</value>
+    <value>Para conseguir alterar todos os itens de arranque, tem de executar este programa como administrador.</value>
   </data>
   <data name="StartupAllUsers" xml:space="preserve">
     <value>Pasta de Arranque: Todos os Utilizadores</value>
@@ -277,25 +277,25 @@
     <value>Estado</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>O sistema devolveu a seguinte informação</value>
+    <value>O sistema devolveu a seguinte informação:</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
-    <value>Não foi possível eliminar este item</value>
+    <value>Não foi possível eliminar este item.</value>
   </data>
   <data name="unable_to_disable" xml:space="preserve">
-    <value>Não foi possível desativar este item</value>
+    <value>Não foi possível desativar este item.</value>
   </data>
   <data name="unable_to_enable" xml:space="preserve">
-    <value>Não foi possível ativar este item</value>
+    <value>Não foi possível ativar este item.</value>
   </data>
   <data name="unable_to_execute" xml:space="preserve">
-    <value>Não foi possível executar este item</value>
+    <value>Não foi possível executar este item.</value>
   </data>
   <data name="unable_to_move" xml:space="preserve">
-    <value>Não foi possível mover este item</value>
+    <value>Não foi possível mover este item.</value>
   </data>
   <data name="unable_to_open" xml:space="preserve">
-    <value>Não foi possível abrir a pasta com este item</value>
+    <value>Não foi possível abrir a pasta com este item.</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Aviso: Não elimine os itens de arranque a menos que tenha 100% de certeza do que está a fazer.  Na maioria dos casos, recomenda-se que utilize a opção "Desativar" em vez de eliminar.</value>

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using ShortcutsFixer.Properties;
 using System.Resources;
+using FreemiumUtil;
 
 namespace ShortcutsFixer
 {
@@ -57,9 +58,8 @@ namespace ShortcutsFixer
         {
             try
             {
-                ResourceManager resourceManager = new ResourceManager("ShortcutsFixer.Resources", typeof(TopControl).Assembly);        
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                ResourceManager resourceManager = new ResourceManager("ShortcutsFixer.Resources", typeof(TopControl).Assembly);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

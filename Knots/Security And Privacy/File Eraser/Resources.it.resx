@@ -211,7 +211,7 @@
     <value>Percorso non valido</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>Non possiedi privilegi di accesso sufficienti per l'esecuzione di questo programma. Devi essere connetto come amministratore di sistema</value>
+    <value>Non possiedi privilegi di accesso sufficienti per l'esecuzione di questo programma. Devi essere connetto come amministratore di sistema.</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Apri la finestra di dialogo di selezione file o di apertura delle cartelle</value>
@@ -247,7 +247,7 @@
     <value>Seleziona un file</value>
   </data>
   <data name="select_file_folder" xml:space="preserve">
-    <value>Seleziona un file o una cartella</value>
+    <value>Seleziona un file o una cartella.</value>
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Seleziona una cartella</value>
@@ -265,7 +265,7 @@
     <value>Alcuni file non sono stati eliminati</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Il tuo sistema operativo non è supportato. Questa applicazione può essere eseguita soltanto su sistemi basati su NT (XP.Vista/2000/2003)</value>
+    <value>Il tuo sistema operativo non è supportato. Questa applicazione può essere eseguita soltanto su sistemi basati su NT (XP.Vista/2000/2003).</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Chiudi qualsiasi istanza in esecuzione del file prima di eseguire lo strumento di distruzione</value>

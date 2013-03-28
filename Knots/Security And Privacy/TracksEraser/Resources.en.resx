@@ -190,10 +190,10 @@
     <value>Error</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>like to erase using the checkbox to thte left of the track name</value>
+    <value>like to erase using the checkbox to thte left of the track name.</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Selected tracks have been erased successfully</value>
+    <value>Selected tracks have been erased successfully.</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>No tracks checked. To erase tracks, please check each track you would</value>
@@ -202,7 +202,7 @@
     <value>Error accessing Recycle Bin</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>You haven't selected any items to analyze</value>
+    <value>You haven't selected any items to analyze!</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Are you sure you want to erase</value>

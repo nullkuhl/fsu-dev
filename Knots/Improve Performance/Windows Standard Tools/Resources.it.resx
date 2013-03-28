@@ -154,9 +154,12 @@
     <value>Ogni volta che installi una nuova applicazione sul computer, stai apportando modifiche. A volte, il PC diventa instabile proprio per tale motivo. Con il Ripristino di sistema puoi ripristinare lo stato del computer a un punto precedente nel quale esso funzionava correttamente</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Questo strumento non è stato trovato sulla tua piattaforma</value>
+    <value>Questo strumento non è stato trovato sulla tua piattaforma.</value>
   </data>
   <data name="window_title" xml:space="preserve">
     <value>Gestione di Windows</value>
+  </data>
+  <data name="xp_warning" xml:space="preserve">
+    <value>Controllo file di sistema di Windows potrebbe chiedere per il disco di installazione di Windows per continuare, si prega di preparare il disco</value>
   </data>
 </root>

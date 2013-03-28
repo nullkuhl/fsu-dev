@@ -121,7 +121,7 @@
     <value>Créer un fichier EXE auto-assemblé</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>L’application est en suspens. Souhaitez-vous vraiment terminer ?</value>
+    <value>L’application est en suspens. Souhaitez-vous vraiment terminer?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(plus volumineux = plus rapide)</value>
@@ -133,7 +133,7 @@
     <value>Occupé</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Le répertoire n’existe pas. Souhaitez-vous créer le répertoire ?</value>
+    <value>Le répertoire n’existe pas. Souhaitez-vous créer le répertoire?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Défini par l’utilisateur</value>
@@ -184,7 +184,7 @@
     <value>Chemin d’accès invalide</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Assemblage effectué avec succès</value>
+    <value>Assemblage effectué avec succès!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informations (contenu du fichier .join)</value>
@@ -280,7 +280,7 @@
     <value>Saisissez la taille des fragments.</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Division effectuée avec succès.</value>
+    <value>Division effectuée avec succès!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Diviser le fichier</value>

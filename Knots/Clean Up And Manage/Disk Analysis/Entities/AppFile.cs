@@ -4,15 +4,11 @@ using System.Drawing.Drawing2D;
 using System.IO;
 using DiskAnalysis.Helper;
 
+/// <summary>
+/// The <see cref="DiskAnalysis.Entities"/> namespace defines an entity classes of the Disk Analysis knot
+/// </summary>
 namespace DiskAnalysis.Entities
 {
-    /// <summary>
-    /// The <see cref="DiskAnalysis.Entities"/> namespace defines an entity classes of the Disk Analysis knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Class to store File information
     /// </summary>

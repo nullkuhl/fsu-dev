@@ -115,15 +115,11 @@ using FreemiumUtil;
 /// -compare keys          - HKEY_USERS\... <-> HKEY_CURRENT_USER
 #endregion
 
+/// <summary>
+/// The <see cref="RegistryCleanerCore"/> namespace defines a Registry Cleaner app and knot core
+/// </summary>
 namespace RegistryCleanerCore
 {
-    /// <summary>
-    /// The <see cref="RegistryCleanerCore"/> namespace defines a Registry Cleaner app and knot core
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     #region ScanData
     /// <summary>
     /// Scan data

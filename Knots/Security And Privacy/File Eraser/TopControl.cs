@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using FileEraser.Properties;
 using System.Resources;
+using FreemiumUtil;
 
 namespace FileEraser
 {
@@ -58,8 +59,7 @@ namespace FileEraser
             try
             {
                 ResourceManager resourceManager = new ResourceManager("FileEraser.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

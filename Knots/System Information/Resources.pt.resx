@@ -367,16 +367,16 @@
     <value>Etiqueta do Volume</value>
   </data>
   <data name="error_description" xml:space="preserve">
-    <value>Descrição</value>
+    <value>Descrição:</value>
   </data>
   <data name="error_return" xml:space="preserve">
-    <value>O sistema devolveu a seguinte informação</value>
+    <value>O sistema devolveu a seguinte informação:</value>
   </data>
   <data name="error_source" xml:space="preserve">
     <value>Origem</value>
   </data>
   <data name="eula_notfound" xml:space="preserve">
-    <value>Não é possível localizar o ficheiro EULA.pdf</value>
+    <value>Não é possível localizar o ficheiro EULA.pdf.</value>
   </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>DOW é maior do que 6</value>
@@ -430,7 +430,7 @@
     <value>Fabricante</value>
   </data>
   <data name="installedprogs_unable_to_open_website" xml:space="preserve">
-    <value>Não é possível abrir o website</value>
+    <value>Não é possível abrir o website.</value>
   </data>
   <data name="installedprogs_version" xml:space="preserve">
     <value>Versão</value>
@@ -694,7 +694,7 @@
     <value>Win32S</value>
   </data>
   <data name="pdf_notfound" xml:space="preserve">
-    <value>Não é possível localizar o Adobe Reader</value>
+    <value>Não é possível localizar o Adobe Reader.</value>
   </data>
   <data name="root" xml:space="preserve">
     <value>Informação do Sistema</value>
@@ -841,7 +841,7 @@
     <value>Conta Bloqueada</value>
   </data>
   <data name="user_action_admin" xml:space="preserve">
-    <value>Esta ação necessita de direitos Administrativos</value>
+    <value>Esta ação necessita de direitos Administrativos.</value>
   </data>
   <data name="user_error_happen" xml:space="preserve">
     <value>Ocorreu um erro no painel de Utilizadores</value>
@@ -880,7 +880,7 @@
     <value>Guardar</value>
   </data>
   <data name="user_unable_save_info" xml:space="preserve">
-    <value>Não é possível guardar informação  </value>
+    <value>Não é possível guardar informação.</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Versão</value>

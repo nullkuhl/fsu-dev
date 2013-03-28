@@ -124,7 +124,7 @@
     <value>Selbstzusammenführende Datei erstellen</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>Anwendung ist pausiert. Möchten Sie wirklich beenden</value>
+    <value>Anwendung ist pausiert. Möchten Sie wirklich beenden?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(größer ist schneller)</value>
@@ -136,7 +136,7 @@
     <value>Beschäftigt</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Verzeichnis existiert nicht. Möchten Sie es erstellen</value>
+    <value>Verzeichnis existiert nicht. Möchten Sie es erstellen?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Eigen</value>
@@ -181,7 +181,7 @@
     <value>Ungültiger Pfad</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Zusammenführen erfolgreich</value>
+    <value>Zusammenführen erfolgreich!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informationen</value>
@@ -223,7 +223,7 @@
     <value>Pause Fortsetzen</value>
   </data>
   <data name="pieces_deleted" xml:space="preserve">
-    <value>Teile wurden gelöscht</value>
+    <value>Teile wurden gelöscht.</value>
   </data>
   <data name="piece_size" xml:space="preserve">
     <value>Teilgröße</value>
@@ -268,13 +268,13 @@
     <value>Selbstzusammenführende Datei wurde erstellt</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Geben Sie bitte die Anzahl der gewünschten Dateiteile ein</value>
+    <value>Geben Sie bitte die Anzahl der gewünschten Dateiteile ein.</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Geben Sie die Größe der Teile ein</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Aufteilung erfolgreich</value>
+    <value>Aufteilung erfolgreich!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Datei aufteilen</value>
@@ -289,7 +289,7 @@
     <value>Streamwriter nicht geschlossen</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>Eingegebene Teilegröße ist zu groß. Geben Sie bitte einen niedrigeren Wert ein</value>
+    <value>Eingegebene Teilegröße ist zu groß. Geben Sie bitte einen niedrigeren Wert ein.</value>
   </data>
   <data name="file_splitter_joiner_title" xml:space="preserve">
     <value>Aufteilen &amp;&amp; Zusammenführen</value>

@@ -4,15 +4,11 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
 
+/// <summary>
+/// The <see cref="ClickMaint"/> namespace contains classes for the 1ClickMessageSender
+/// </summary>
 namespace ClickMaint
 {
-	/// <summary>
-	/// The <see cref="ClickMaint"/> namespace contains classes for the 1ClickMessageSender
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
 	/// <summary>
 	/// 1ClickMessageSender main form
 	/// </summary>

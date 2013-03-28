@@ -163,7 +163,7 @@
     <value>Escludi (non trovare più)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Escluso con successo</value>
+    <value>Escluso con successo!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Nome cartella</value>
@@ -202,7 +202,7 @@
     <value>Scansione in corso</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Scansione annullata</value>
+    <value>Scansione annullata.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Scansiona unità</value>

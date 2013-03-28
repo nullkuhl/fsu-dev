@@ -220,7 +220,7 @@
     <value>Restoring</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>Restoring to the same drive can reduce the change of the successful recover are you sure you want to continue</value>
+    <value>Restoring to the same drive can reduce the change of the successful recover are you sure you want to continue?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Scan Finished</value>

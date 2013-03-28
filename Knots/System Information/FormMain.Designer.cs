@@ -4,39 +4,38 @@ using System.Threading;
 
 namespace SystemInformation
 {
+    partial class FormMain : System.Windows.Forms.Form
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        System.ComponentModel.IContainer components = null;
 
-	partial class FormMain : System.Windows.Forms.Form
-	{
-		/// <summary>
-		/// Required designer variable.
-		/// </summary>
-		System.ComponentModel.IContainer components = null;
+        public ResourceManager rm = new ResourceManager("SystemInformation.Resources",
+            System.Reflection.Assembly.GetExecutingAssembly());
 
-		public ResourceManager rm = new ResourceManager("SystemInformation.Resources",
-			System.Reflection.Assembly.GetExecutingAssembly());
+        public CultureInfo en = new CultureInfo("en");
+        public CultureInfo de = new CultureInfo("de");
 
-		public CultureInfo en = new CultureInfo("en");
-		public CultureInfo de = new CultureInfo("de");
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
-		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && (components != null))
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
-
-		/// <summary>
-		/// Required method for Designer support - do not modify
-		/// the contents of this method with the code editor.
-		/// </summary>
-		void InitializeComponent()
-		{
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        void InitializeComponent()
+        {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("BIOS", 2, 2);
             System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("CPU", 3, 3);
@@ -318,17 +317,17 @@ namespace SystemInformation
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
-		System.Windows.Forms.SplitContainer SplitContainer;
-		System.Windows.Forms.StatusStrip StatusStrip;
-		System.Windows.Forms.ToolStripStatusLabel tsslDateTime;
-		System.Windows.Forms.ImageList imagelistTree;
-		System.Windows.Forms.TreeView treeviewSystemInfo;
-		System.Windows.Forms.Timer timerTime;
-		System.Windows.Forms.ToolStripStatusLabel tsslUpTime;
-		System.Windows.Forms.Timer timerTimeUp;
-		TopControl ucTop;
-		BottomControl ucBottom;
-	}
+        System.Windows.Forms.SplitContainer SplitContainer;
+        System.Windows.Forms.StatusStrip StatusStrip;
+        System.Windows.Forms.ToolStripStatusLabel tsslDateTime;
+        System.Windows.Forms.ImageList imagelistTree;
+        System.Windows.Forms.TreeView treeviewSystemInfo;
+        System.Windows.Forms.Timer timerTime;
+        System.Windows.Forms.ToolStripStatusLabel tsslUpTime;
+        System.Windows.Forms.Timer timerTimeUp;
+        TopControl ucTop;
+        BottomControl ucBottom;
+    }
 }

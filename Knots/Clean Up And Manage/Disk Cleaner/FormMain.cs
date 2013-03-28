@@ -140,7 +140,7 @@ namespace Disk_Cleaner
                         }
                         else
                         {
-                            MessageBox.Show(rm.GetString("select_any_item") + ".",
+                            MessageBox.Show(rm.GetString("select_any_item"),
                                             rm.GetString("critical_warning"),
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Warning);
@@ -188,7 +188,7 @@ namespace Disk_Cleaner
             }
             else
             {
-                MessageBox.Show(rm.GetString("select_any_drive") + ".",
+                MessageBox.Show(rm.GetString("select_any_drive"),
                                 rm.GetString("critical_warning"),
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
@@ -1020,7 +1020,7 @@ namespace Disk_Cleaner
                 }
                 else
                 {
-                    MessageBox.Show(rm.GetString("tool_not_found") + ".",
+                    MessageBox.Show(rm.GetString("tool_not_found"),
                                     rm.GetString("critical_warning"),
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);

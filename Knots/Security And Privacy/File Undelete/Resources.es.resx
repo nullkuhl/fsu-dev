@@ -244,13 +244,13 @@
     <value>Restauración</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>Restaurar en la misma unidad puede reducir las probabilidades de conseguir una recuperación correcta. ¿Está seguro de que desea continuar</value>
+    <value>Restaurar en la misma unidad puede reducir las probabilidades de conseguir una recuperación correcta. ¿Está seguro de que desea continuar?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Análisis finalizado</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>El análisis ha finalizado, pero parece que no se han encontrado archivos recuperables en los datos recopilados de su disco duro</value>
+    <value>El análisis ha finalizado, pero parece que no se han encontrado archivos recuperables en los datos recopilados de su disco duro.</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Buscar</value>

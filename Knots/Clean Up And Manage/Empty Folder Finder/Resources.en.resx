@@ -154,7 +154,7 @@
     <value>Exclude (Never Find Again)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Excluded Successfully</value>
+    <value>Excluded Successfully!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Folder Name</value>
@@ -182,7 +182,7 @@
     <value>Scanning</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Scanning aborted</value>
+    <value>Scanning aborted.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Scan Drives</value>

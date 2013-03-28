@@ -647,7 +647,7 @@ namespace SystemInformation
 			catch
 			{
 				// cannot find file
-				MessageBox.Show(rm.GetString("installedprogs_unable_to_open_website") + ".", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(rm.GetString("installedprogs_unable_to_open_website"), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 
 		}

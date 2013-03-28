@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using MemoryOptimizer.Properties;
 using System.Resources;
+using FreemiumUtil;
 
 namespace MemoryOptimizer
 {
@@ -58,8 +59,7 @@ namespace MemoryOptimizer
             try
             {
                 ResourceManager resourceManager = new ResourceManager("MemoryOptimizer.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

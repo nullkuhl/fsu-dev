@@ -205,7 +205,7 @@
     <value>Ungültiger Pfad</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>Sie verfügen nicht über ausreichend Rechte um dieses Programm auszuführen. Sie müssen als Administrator angemeldet sein</value>
+    <value>Sie verfügen nicht über ausreichend Rechte um dieses Programm auszuführen. Sie müssen als Administrator angemeldet sein.</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Dateiauswahl oder Ordnerdialog öffnen</value>
@@ -256,7 +256,7 @@
     <value>Einige Dateien wurden nicht gelöscht</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Ihr Betriebssystem wird nicht unterstützt. Dieses Programm kann nur auf NT-basierten Systemen ausgeführt werden (XP, Vista, 2000, 2003 und 7)</value>
+    <value>Ihr Betriebssystem wird nicht unterstützt. Dieses Programm kann nur auf NT-basierten Systemen ausgeführt werden (XP, Vista, 2000, 2003 und 7).</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Vor der Ausführung des Schredders beenden Sie bitte alle laufenden Instanzen der Datei. </value>

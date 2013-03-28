@@ -1,15 +1,11 @@
 ﻿using System;
 using System.IO;
 
+/// <summary>
+/// The <see cref="RegistryCleaner.Implementation"/> namespace contains the methods for logging operations at the Registry Cleaner knot
+/// </summary>
 namespace RegistryCleaner.Implementation
 {
-	/// <summary>
-	/// The <see cref="RegistryCleaner.Implementation"/> namespace contains the methods for logging operations at the Registry Cleaner knot
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
 	/// <summary>
 	/// Provides methods for logging operations
 	/// </summary>

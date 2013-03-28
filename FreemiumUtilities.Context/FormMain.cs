@@ -3,39 +3,35 @@ using System.Diagnostics;
 using System.Reflection;
 using System.Windows.Forms;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.Context"/> namespace contains a set of classes to operate with Windows Explorer context menu
+/// </summary>
 namespace FreemiumUtilities.Context
 {
-	/// <summary>
-	/// The <see cref="FreemiumUtilities.Context"/> namespace contains a set of classes to operate with Windows Explorer context menu
-	/// </summary>
+    public partial class FormMain : Form
+    {
+        /// <summary>
+        /// constructor for FormMain
+        /// </summary>
+        public FormMain()
+        {
+            InitializeComponent();
+        }
 
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
-	public partial class FormMain : Form
-	{
-		/// <summary>
-		/// constructor for FormMain
-		/// </summary>
-		public FormMain()
-		{
-			InitializeComponent();
-		}
-
-		/// <summary>
-		/// initialize FormMain
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void FormMain_Load(object sender, EventArgs e)
-		{
-			try
-			{
+        /// <summary>
+        /// initialize FormMain
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void FormMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
                 Process process = new Process();
-				string location = Assembly.GetExecutingAssembly().Location;
-				string str = location.Substring(0, location.LastIndexOf(@"\"));
-				process.StartInfo.WorkingDirectory = str;
-				string[] commandLineArgs = Environment.GetCommandLineArgs();
+                string location = Assembly.GetExecutingAssembly().Location;
+                string str = location.Substring(0, location.LastIndexOf(@"\"));
+                process.StartInfo.WorkingDirectory = str;
+                string[] commandLineArgs = Environment.GetCommandLineArgs();
                 if (commandLineArgs.Length > 1)
                 {
                     bool flag = commandLineArgs[1] != "ENCRYPT";
@@ -91,11 +87,11 @@ namespace FreemiumUtilities.Context
                     }
                     process.Start();
                 }
-			}
-			catch
-			{
-			}
-			Application.Exit();
-		}
-	}
+            }
+            catch
+            {
+            }
+            Application.Exit();
+        }
+    }
 }

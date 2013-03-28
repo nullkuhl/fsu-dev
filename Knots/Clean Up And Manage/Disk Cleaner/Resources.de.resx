@@ -319,10 +319,10 @@
     <value>Überprüfung läuft</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Wählen Sie bitte ein Laufwerk aus der Liste</value>
+    <value>Wählen Sie bitte ein Laufwerk aus der Liste.</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Wählen Sie bitte wenigstens ein Element aus der Liste</value>
+    <value>Wählen Sie bitte wenigstens ein Element aus der Liste.</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Wählen Sie eine wiederherzustellende Sicherung und klicken Sie auf "Wiederherstellen"</value>
@@ -349,7 +349,7 @@
     <value>Temporäre Dateien werden von Programmen als Zwischenspeicher verwendet und normalerweise nach der Benutzung wieder gelöscht</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden</value>
+    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden.</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Insgesamt</value>

@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 using BrowserAssistant.Properties;
+using FreemiumUtil;
 
 namespace BrowserAssistant
 {
@@ -56,8 +56,7 @@ namespace BrowserAssistant
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + Resources.HelpUrl);
-                Process.Start(psi);
+                CommonOperations.OpenUrl(Resources.HelpUrl);
             }
             catch (Exception)
             { }

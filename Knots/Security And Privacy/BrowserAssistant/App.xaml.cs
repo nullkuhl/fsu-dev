@@ -8,15 +8,11 @@ using FreemiumUtil;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="BrowserAssistant"/> namespace defines a Browser Assistant knot
+/// </summary>
 namespace BrowserAssistant
 {
-    /// <summary>
-    /// The <see cref="BrowserAssistant"/> namespace defines a Browser Assistant knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
@@ -62,14 +58,12 @@ namespace BrowserAssistant
 
         void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
 
         void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             e.Handled = true;
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
     }

@@ -171,7 +171,6 @@ namespace ProcessManager
                     {
                     }
 
-                    //MessageBox.Show("process name:" + processes[i].MainModule.FileName + " process ID:" + processes[i].Id.ToString());
                     lvi.Tag = "_";
 
                     lvprocesslist.Items.Add(lvi);

@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Resources;
 using System.Windows.Forms;
 using FreemiumUtilities.TracksEraser.Properties;
+using FreemiumUtil;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -58,9 +59,7 @@ namespace FreemiumUtilities.TracksEraser
             try
             {
                 ResourceManager resourceManager = new ResourceManager("TracksEraser.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
-
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

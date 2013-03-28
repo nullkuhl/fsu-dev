@@ -12,15 +12,11 @@ using FreemiumUtilities.RegCleaner.Models;
 using FreemiumUtilities.RegCleaner.Properties;
 using RegistryCleanerCore;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.RegCleaner"/> namespace defines a RegCleaner 1 Click-Maintenance application
+/// </summary>
 namespace FreemiumUtilities.RegCleaner
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.RegCleaner"/> namespace defines a RegCleaner 1 Click-Maintenance application
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// RegCleaner 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
     /// </summary>

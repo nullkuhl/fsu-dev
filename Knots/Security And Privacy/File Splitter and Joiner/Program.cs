@@ -8,15 +8,11 @@ using FreemiumUtil;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="FileSplitterAndJoiner"/> namespace defines a File Splitter and Joiner knot
+/// </summary>
 namespace FileSplitterAndJoiner
 {
-    /// <summary>
-    /// The <see cref="FileSplitterAndJoiner"/> namespace defines a File Splitter and Joiner knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     internal static class Program
     {
         static Mutex mutex;
@@ -67,7 +63,6 @@ namespace FileSplitterAndJoiner
         /// <param name="e"></param>
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 
@@ -78,7 +73,6 @@ namespace FileSplitterAndJoiner
         /// <param name="e"></param>
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
     }

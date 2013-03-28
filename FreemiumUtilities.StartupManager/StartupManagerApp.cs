@@ -4,15 +4,11 @@ using System.Collections.ObjectModel;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.StartupManager"/> namespace defines a Startup Manager 1 Click-Maintenance application
+/// </summary>
 namespace FreemiumUtilities.StartupManager
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.StartupManager"/> namespace defines a Startup Manager 1 Click-Maintenance application
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Startup Manager 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
     /// </summary>

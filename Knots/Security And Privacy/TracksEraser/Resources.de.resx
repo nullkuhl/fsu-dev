@@ -190,10 +190,10 @@
     <value>Fehler</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>die Sie löschen wollen, indem Sie das Kästchen links neben dem Eintrag anwählen</value>
+    <value>die Sie löschen wollen, indem Sie das Kästchen links neben dem Eintrag anwählen.</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Die gewählten Spuren wurden erfolgreich gelöscht</value>
+    <value>Die gewählten Spuren wurden erfolgreich gelöscht.</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>Es wurden keine Einträge ausgewählt. Um Spuren zu verwischen wählen Sie bitte die entsprechenden Einträge</value>
@@ -202,7 +202,7 @@
     <value>Fehler beim Zugriff auf den Papierkorb</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Es wurden keine Elemente für die Analyse ausgewählt</value>
+    <value>Es wurden keine Elemente für die Analyse ausgewählt!</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Sind Sie sicher, dass Sie diese </value>

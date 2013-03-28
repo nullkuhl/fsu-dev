@@ -8,15 +8,11 @@ using FreemiumUtil;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="EncryptDecrypt"/> namespace defines a Encrypt and Decrypt knot
+/// </summary>
 namespace EncryptDecrypt
 {
-    /// <summary>
-    /// The <see cref="EncryptDecrypt"/> namespace defines a Encrypt and Decrypt knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     internal static class Program
     {
         static Mutex mutex;
@@ -62,13 +58,11 @@ namespace EncryptDecrypt
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
     }

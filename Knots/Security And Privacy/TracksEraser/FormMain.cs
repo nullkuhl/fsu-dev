@@ -287,7 +287,7 @@ namespace FreemiumUtilities.TracksEraser
 
                 if (!flag)
                 {
-                    MessageBox.Show(rm.GetString("error_select") + "!", rm.GetString("warning"), MessageBoxButtons.OK,
+                    MessageBox.Show(rm.GetString("error_select"), rm.GetString("warning"), MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
                     ClearResultBox();
                     return;
@@ -1737,8 +1737,8 @@ namespace FreemiumUtilities.TracksEraser
             }
             if (tracksCount == 0)
             {
-                MessageBox.Show(rm.GetString("error_no_tracks_checked") + "\r\n" +
-                                rm.GetString("error_check_tracks") + ".",
+                MessageBox.Show(String.Format("{0}{1}{2}", rm.GetString("error_no_tracks_checked"), Environment.NewLine, 
+                                rm.GetString("error_check_tracks")),
                                 rm.GetString("warning"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
@@ -1891,7 +1891,7 @@ namespace FreemiumUtilities.TracksEraser
 
             txtResults.Text = rm.GetString("after_scan_msg");
 
-            MessageBox.Show(rm.GetString("error_erased_succ") + ".", rm.GetString("info"),
+            MessageBox.Show(rm.GetString("error_erased_succ"), rm.GetString("info"),
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

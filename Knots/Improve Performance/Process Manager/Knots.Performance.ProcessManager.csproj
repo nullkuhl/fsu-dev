@@ -159,10 +159,18 @@
       <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources.es.resx" />
-    <EmbeddedResource Include="Resources.fr.resx" />
-    <EmbeddedResource Include="Resources.it.resx" />
-    <EmbeddedResource Include="Resources.pt.resx" />
+    <EmbeddedResource Include="Resources.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.it.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.pt.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="TopControl.resx">
       <DependentUpon>TopControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,9 +203,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BlockedProcesses.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Files\BlockedProcesses.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\thinBar.png" />

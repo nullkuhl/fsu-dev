@@ -325,10 +325,10 @@
     <value>scansione in corso</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Seleziona un'unità dall'elenco</value>
+    <value>Seleziona un'unità dall'elenco.</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Seleziona almeno un elemento dall'elenco</value>
+    <value>Seleziona almeno un elemento dall'elenco.</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Seleziona un set di backup che desideri ripristinare, dopodiché fai clic su Ripristina</value>
@@ -355,7 +355,7 @@
     <value>I file temporanei vengono utilizzati dai programmi come spazio di memoria intermedio e, solitamente, vengono rimossi dopo l'uso</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Questo strumento non è stato trovato sulla tua piattaforma</value>
+    <value>Questo strumento non è stato trovato sulla tua piattaforma.</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Totale</value>

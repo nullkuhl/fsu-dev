@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>Auto encrypt exe was created</value>
+    <value>Auto encrypt exe was created!</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Browse</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>File can not be Encrypted, please follow the proper instruction to Encrypt</value>
+    <value>File can not be Encrypted, please follow the proper instruction to Encrypt.</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>Cannot create executable decrypter</value>
+    <value>Cannot create executable decrypter.</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>Cannot find</value>
@@ -163,7 +163,7 @@
     <value>Encrypt</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>File Encrypted Successfully</value>
+    <value>File Encrypted Successfully!</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Encryption</value>
@@ -199,7 +199,7 @@
     <value>Save to</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Select a valid destination first</value>
+    <value>Select a valid destination first.</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Select an Encrypted file you want to Decrypt</value>

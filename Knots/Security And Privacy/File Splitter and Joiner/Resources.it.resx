@@ -184,7 +184,7 @@
     <value>Percorso non valido</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Unione riuscita</value>
+    <value>Unione riuscita!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informazioni di unione (contenuto file .Join)</value>
@@ -274,13 +274,13 @@
     <value>L'eseguibile self-join è stato creato</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Specifica in quante parti desideri dividerlo</value>
+    <value>Specifica in quante parti desideri dividerlo.</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Specifica dimensione pezzo</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Divisione riuscita</value>
+    <value>Divisione riuscita!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Dividi file</value>
@@ -295,7 +295,7 @@
     <value>scrittore di flusso non chiuso</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>La dimensione della parte specificata è troppo grande per la divisione. Specificare una dimensione più piccola per la parte</value>
+    <value>La dimensione della parte specificata è troppo grande per la divisione. Specificare una dimensione più piccola per la parte.</value>
   </data>
   <data name="access_denied" xml:space="preserve">
     <value>Non ti è permesso di scrivere determinata destinazione. Si prega di scegliere un'altra cartella di destinazione.</value>

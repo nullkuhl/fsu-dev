@@ -198,10 +198,10 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
     <value>Errore</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>Fai clic per cancellare utilizzando la casella di spunta a sinistra del nome della traccia</value>
+    <value>Fai clic per cancellare utilizzando la casella di spunta a sinistra del nome della traccia.</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Le tracce selezionate sono state cancellate con successo</value>
+    <value>Le tracce selezionate sono state cancellate con successo.</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>Nessuna traccia selezionata. Per cancellare le tracce, seleziona ogni traccia desiderata</value>
@@ -210,7 +210,7 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
     <value>Errore di accesso al Cestino</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Non hai selezionato alcun elemento da analizzare</value>
+    <value>Non hai selezionato alcun elemento da analizzare!</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Sei sicuro di voler cancellare</value>

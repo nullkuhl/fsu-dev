@@ -367,10 +367,10 @@
     <value>Désignation du support de données</value>
   </data>
   <data name="error_description" xml:space="preserve">
-    <value>Description</value>
+    <value>Description:</value>
   </data>
   <data name="error_return" xml:space="preserve">
-    <value>Le système a rapporté les informations suivantes :</value>
+    <value>Le système a rapporté les informations suivantes:</value>
   </data>
   <data name="error_source" xml:space="preserve">
     <value>Source</value>

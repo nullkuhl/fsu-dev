@@ -12,9 +12,6 @@ namespace DiskAnalysis.Helper
     /// The <see cref="DiskAnalysis.Helper"/> namespace defines an helper classes of the Disk Analysis knot
     /// </summary>
 
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Thread safe <c>ObservableCollection<T></c>
     /// </summary>

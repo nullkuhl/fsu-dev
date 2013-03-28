@@ -8,15 +8,11 @@ using System;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="DiskAnalysis"/> namespace defines a Disk Analysis knot
+/// </summary>
 namespace DiskAnalysis
 {
-    /// <summary>
-    /// The <see cref="DiskAnalysis"/> namespace defines a Disk Analysis knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>

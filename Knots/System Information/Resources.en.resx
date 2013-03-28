@@ -367,16 +367,16 @@
     <value>Volume Label</value>
   </data>
   <data name="error_description" xml:space="preserve">
-    <value>Description</value>
+    <value>Description:</value>
   </data>
   <data name="error_return" xml:space="preserve">
-    <value>The system returned the following information</value>
+    <value>The system returned the following information:</value>
   </data>
   <data name="error_source" xml:space="preserve">
     <value>Source</value>
   </data>
   <data name="eula_notfound" xml:space="preserve">
-    <value>The EULA.pdf file cannot be found</value>
+    <value>The EULA.pdf file cannot be found.</value>
   </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>DOW is greater than 6</value>
@@ -430,7 +430,7 @@
     <value>Publisher</value>
   </data>
   <data name="installedprogs_unable_to_open_website" xml:space="preserve">
-    <value>Unable to open website</value>
+    <value>Unable to open website.</value>
   </data>
   <data name="installedprogs_version" xml:space="preserve">
     <value>Version</value>
@@ -694,7 +694,7 @@
     <value>Win32S</value>
   </data>
   <data name="pdf_notfound" xml:space="preserve">
-    <value>Adobe Reader cannot be found</value>
+    <value>Adobe Reader cannot be found.</value>
   </data>
   <data name="root" xml:space="preserve">
     <value>System Information</value>
@@ -841,7 +841,7 @@
     <value>Account Locked</value>
   </data>
   <data name="user_action_admin" xml:space="preserve">
-    <value>This action requires Administrative rights</value>
+    <value>This action requires Administrative rights.</value>
   </data>
   <data name="user_error_happen" xml:space="preserve">
     <value>An error has occurred in the Users panel</value>
@@ -880,7 +880,7 @@
     <value>Save</value>
   </data>
   <data name="user_unable_save_info" xml:space="preserve">
-    <value>Unable to save information</value>
+    <value>Unable to save information.</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>

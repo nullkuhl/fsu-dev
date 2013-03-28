@@ -497,7 +497,8 @@ namespace Uninstall_Manager
                 }
                 catch
                 {
-                    if (MessageBox.Show(string.Format(rm.GetString("unistaller_not_found"), app), rm.GetString("error"), MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+                    if (MessageBox.Show(string.Format(rm.GetString("unistaller_not_found"), app),
+                                        rm.GetString("error"), MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
                     {
                         try
                         {
@@ -604,12 +605,12 @@ namespace Uninstall_Manager
             {
                 if (appsRemoved == 1)
                 {
-                    MessageBox.Show(rm.GetString("one_entry_removed") + ".", rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
+                    MessageBox.Show(rm.GetString("one_entry_removed"), rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(appsRemoved + " " + rm.GetString("entries_removed") + ".", rm.GetString("uninstall_manager"),
+                    MessageBox.Show(string.Format("{0} {1}", appsRemoved, rm.GetString("entries_removed")), rm.GetString("uninstall_manager"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }

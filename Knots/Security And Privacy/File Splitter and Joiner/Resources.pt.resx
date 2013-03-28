@@ -121,7 +121,7 @@
     <value>Adicionar um executável de junção automática</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>A aplicação está em pausa. Tem a certeza de que pretende sair</value>
+    <value>A aplicação está em pausa. Tem a certeza de que pretende sair?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(maior é mais rápido)</value>
@@ -133,7 +133,7 @@
     <value>Ocupado</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Diretório inexistente. Pretende criar o diretório</value>
+    <value>Diretório inexistente. Pretende criar o diretório?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Personalizar</value>
@@ -184,7 +184,7 @@
     <value>Caminho Inválido</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Junção com sucesso</value>
+    <value>Junção com sucesso!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informação da Junção (conteúdo do ficheiro .Join)</value>
@@ -229,7 +229,7 @@
     <value>Pausar Continuação</value>
   </data>
   <data name="pieces_deleted" xml:space="preserve">
-    <value>As partes foram eliminadas</value>
+    <value>As partes foram eliminadas.</value>
   </data>
   <data name="piece_size" xml:space="preserve">
     <value>Tamanho da parte</value>
@@ -274,13 +274,13 @@
     <value>O executável de junção automática foi criado</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Especifique quantas partes pretende dividir</value>
+    <value>Especifique quantas partes pretende dividir.</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Especificar tamanho da parte</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Divisão com sucesso</value>
+    <value>Divisão com sucesso!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Dividir ficheiro</value>
@@ -295,7 +295,7 @@
     <value>gravador da sequência não fechado</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>O tamanho da parte especificada é demasiado grande para divisão. Especifique um tamanho de parte mais pequeno</value>
+    <value>O tamanho da parte especificada é demasiado grande para divisão. Especifique um tamanho de parte mais pequeno.</value>
   </data>
   <data name="access_denied" xml:space="preserve">
     <value>Você não tem permissão para escrever para determinado destino. Por favor, escolha outra pasta de destino.</value>

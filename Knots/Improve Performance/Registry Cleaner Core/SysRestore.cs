@@ -2,7 +2,6 @@
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Management;
-//using RegistryCompactor.Properties;
 using System.Management;
 
 namespace RegistryCleanerCore

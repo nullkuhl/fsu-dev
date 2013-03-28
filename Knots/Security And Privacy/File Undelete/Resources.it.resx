@@ -250,7 +250,7 @@
     <value>Scansione completa</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>La scansione è completa, tuttavia sembra che non sia stato possibile recuperare alcun file dai dati raccolti dal tuo disco rigido</value>
+    <value>La scansione è completa, tuttavia sembra che non sia stato possibile recuperare alcun file dai dati raccolti dal tuo disco rigido.</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Cerca</value>

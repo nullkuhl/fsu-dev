@@ -127,7 +127,7 @@
     <value>Comando</value>
   </data>
   <data name="commands_disabled" xml:space="preserve">
-    <value>Tutti i comandi, eccetto Elimina, sono disabilitati</value>
+    <value>Tutti i comandi, eccetto Elimina, sono disabilitati.</value>
   </data>
   <data name="company" xml:space="preserve">
     <value>Società</value>
@@ -142,7 +142,7 @@
     <value>Elimina elemento di avvio</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Descrizione</value>
+    <value>Descrizione:</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Dettagli</value>
@@ -181,28 +181,28 @@
     <value>Il file non sembra essere un collegamento rapido valido</value>
   </data>
   <data name="file_folder_not_found" xml:space="preserve">
-    <value>Impossibile trovare il file e/o la cartella</value>
+    <value>Impossibile trovare il file e/o la cartella.</value>
   </data>
   <data name="file_invalid" xml:space="preserve">
-    <value>Il file non è valido oppure non esiste</value>
+    <value>Il file non è valido oppure non esiste.</value>
   </data>
   <data name="file_name" xml:space="preserve">
     <value>Nome file</value>
   </data>
   <data name="file_not_found" xml:space="preserve">
-    <value>Il file non è stato trovato oppure è nascosto</value>
+    <value>Il file non è stato trovato oppure è nascosto.</value>
   </data>
   <data name="file_not_found1" xml:space="preserve">
     <value>File non trovato</value>
   </data>
   <data name="file_not_found_warning" xml:space="preserve">
-    <value>File non trovato</value>
+    <value>File non trovato.</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>Percorso file</value>
+    <value>Percorso file: </value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
-    <value>Cartella non trovata</value>
+    <value>Cartella non trovata.</value>
   </data>
   <data name="full_version" xml:space="preserve">
     <value>Versione file</value>
@@ -241,7 +241,7 @@
     <value>Sposta l'elemento su Utente corrente</value>
   </data>
   <data name="no_permission" xml:space="preserve">
-    <value>Non possiedi l'autorizzazione per visualizzare le proprietà di questo file</value>
+    <value>Non possiedi l'autorizzazione per visualizzare le proprietà di questo file.</value>
   </data>
   <data name="open_file_folder" xml:space="preserve">
     <value>Apri la cartella del file</value>
@@ -262,7 +262,7 @@
     <value>Aggiorna visualizzazione</value>
   </data>
   <data name="run_as_admin" xml:space="preserve">
-    <value>Per poter modificare tutti gli elementi di avvio, è necessario eseguire questo programma come amministratore</value>
+    <value>Per poter modificare tutti gli elementi di avvio, è necessario eseguire questo programma come amministratore.</value>
   </data>
   <data name="StartupAllUsers" xml:space="preserve">
     <value>Cartella di avvio: tutti gli utenti</value>
@@ -277,25 +277,25 @@
     <value>Stato</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>Il sistema ha restituito le seguenti informazioni</value>
+    <value>Il sistema ha restituito le seguenti informazioni:</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
-    <value>Impossibile eliminare questo elemento</value>
+    <value>Impossibile eliminare questo elemento.</value>
   </data>
   <data name="unable_to_disable" xml:space="preserve">
-    <value>Impossibile disabilitare questo elemento</value>
+    <value>Impossibile disabilitare questo elemento.</value>
   </data>
   <data name="unable_to_enable" xml:space="preserve">
-    <value>Impossibile abilitare questo elemento</value>
+    <value>Impossibile abilitare questo elemento.</value>
   </data>
   <data name="unable_to_execute" xml:space="preserve">
-    <value>Impossibile eseguire questo elemento</value>
+    <value>Impossibile eseguire questo elemento.</value>
   </data>
   <data name="unable_to_move" xml:space="preserve">
-    <value>Impossibile spostare questo elemento</value>
+    <value>Impossibile spostare questo elemento.</value>
   </data>
   <data name="unable_to_open" xml:space="preserve">
-    <value>Impossibile aprire la cartella contenente questo elemento</value>
+    <value>Impossibile aprire la cartella contenente questo elemento.</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Avviso: non eliminare gli elementi di avvio a meno che tu non sia completamente sicuro di quello che stai facendo. Nella maggior parte dei casi, si consiglia di utilizzare piuttosto l'opzione "Disabilita".</value>

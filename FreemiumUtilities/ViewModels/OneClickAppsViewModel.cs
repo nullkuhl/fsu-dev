@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Windows;
 using System.Windows.Input;
@@ -28,10 +27,6 @@ namespace FreemiumUtilities.ViewModels
     /// The <see cref="FreemiumUtilities.ViewModels"/> namespace contains a set of viewmodel classes
     /// of the <see cref="FreemiumUtilities"/> project
     /// </summary>
-    [CompilerGenerated]
-    internal class NamespaceDoc
-    {
-    }
 
     internal class OneClickAppsViewModel : INotifyPropertyChanged
     {

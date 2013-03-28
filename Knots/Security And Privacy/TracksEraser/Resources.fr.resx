@@ -209,7 +209,7 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
     <value>Erreur lors de l’accès à la corbeille</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Aucun élément n’a été sélectionné pour l’analyse.</value>
+    <value>Aucun élément n’a été sélectionné pour l’analyse!</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Êtes-vous sûr(e) de vouloir</value>

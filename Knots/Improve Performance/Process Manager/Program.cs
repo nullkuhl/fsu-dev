@@ -6,15 +6,11 @@ using FreemiumUtil;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="ProcessManager"/> namespace defines a Process Manager knot
+/// </summary>
 namespace ProcessManager
 {
-    /// <summary>
-    /// The <see cref="ProcessManager"/> namespace defines a Process Manager knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     internal static class Program
     {
         static Mutex mutex;
@@ -58,13 +54,11 @@ namespace ProcessManager
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
     }

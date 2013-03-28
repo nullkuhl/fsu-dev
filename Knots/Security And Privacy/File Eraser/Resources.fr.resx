@@ -232,7 +232,7 @@
     <value>Prêt à être broyé</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>Souhaitez-vous continuer ?</value>
+    <value>Souhaitez-vous continuer?</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>Traitement en cours...</value>

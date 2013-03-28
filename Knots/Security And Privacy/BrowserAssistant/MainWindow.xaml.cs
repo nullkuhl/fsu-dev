@@ -80,7 +80,7 @@ namespace BrowserAssistant
                 }
                 else
                 {
-                    MessageBox.Show("Firefox " + Res.NotInstalledError, Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(string.Format("Firefox {0}", Res.NotInstalledError), Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                     FfExtTab.IsEnabled = false;
                     TabList.SelectedIndex = 0;
                 }
@@ -94,7 +94,7 @@ namespace BrowserAssistant
                 }
                 else
                 {
-                    MessageBox.Show("Firefox " + Res.NotInstalledError, Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show(string.Format("Firefox {0}", Res.NotInstalledError), Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                     FfExtTab.IsEnabled = false;
                     TabList.SelectedIndex = 0;
                 }
@@ -143,13 +143,13 @@ namespace BrowserAssistant
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("Chrome " + Res.NotInstalledError, Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format("Chrome {0}", Res.NotInstalledError), Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                 ChExtTab.IsEnabled = false;
                 TabList.SelectedIndex = 0;
             }
             catch (DirectoryNotFoundException)
             {
-                MessageBox.Show("Chrome " + Res.NotInstalledError, Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(string.Format("Chrome {0}", Res.NotInstalledError), Res.Error, MessageBoxButton.OK, MessageBoxImage.Error);
                 ChExtTab.IsEnabled = false;
                 TabList.SelectedIndex = 0;
             }

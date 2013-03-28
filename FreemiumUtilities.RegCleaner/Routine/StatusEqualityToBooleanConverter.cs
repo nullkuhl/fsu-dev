@@ -3,16 +3,12 @@ using System.Globalization;
 using System.Windows.Data;
 using FreemiumUtilities.RegCleaner.Models;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.RegCleaner.Routine"/> namespace contains a helper classes
+/// used in the <see cref="FreemiumUtilities.RegCleaner"/> project
+/// </summary>
 namespace FreemiumUtilities.RegCleaner.Routine
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.RegCleaner.Routine"/> namespace contains a helper classes
-    /// used in the <see cref="FreemiumUtilities.RegCleaner"/> project
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Returns true if the passed parameters are not equal
     /// </summary>

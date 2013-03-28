@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>Selbstentschlüsselnde Datei wurde erstellt</value>
+    <value>Selbstentschlüsselnde Datei wurde erstellt!</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Durchsuchen</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>Datei konnte nicht verschlüsselt werden. Folgen Sie den Anweisungen hierzu bitte genau</value>
+    <value>Datei konnte nicht verschlüsselt werden. Folgen Sie den Anweisungen hierzu bitte genau.</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>Selbstentschlüsselnde Datei konnte nicht erstellt werden</value>
+    <value>Selbstentschlüsselnde Datei konnte nicht erstellt werden.</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>Konnte nicht gefunden werden:</value>
@@ -163,7 +163,7 @@
     <value>Verschlüsseln</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>Datei erfolgreich verschlüsselt</value>
+    <value>Datei erfolgreich verschlüsselt!</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Verschlüsselung</value>
@@ -199,7 +199,7 @@
     <value>Speichern unter</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Wählen Sie zuerst einen gültigen Zielort aus</value>
+    <value>Wählen Sie zuerst einen gültigen Zielort aus.</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Wählen Sie eine verschlüsselte Datei zur Entschlüsselung</value>

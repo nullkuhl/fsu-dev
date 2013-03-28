@@ -8,15 +8,11 @@ using FreemiumUtil;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="Context_Menu_Manager"/> namespace defines a Context menu manager knot
+/// </summary>
 namespace Context_Menu_Manager
 {
-    /// <summary>
-    /// The <see cref="Context_Menu_Manager"/> namespace defines a Context menu manager knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     internal static class Program
     {
         static Mutex mutex;
@@ -62,13 +58,11 @@ namespace Context_Menu_Manager
 
         static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 
         static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
     }

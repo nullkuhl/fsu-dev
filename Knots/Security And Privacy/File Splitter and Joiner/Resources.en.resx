@@ -124,7 +124,7 @@
     <value>Add a self-joining executable</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>Application is now paused. Are you sure you want to quit</value>
+    <value>Application is now paused. Are you sure you want to quit?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(bigger is faster)</value>
@@ -136,7 +136,7 @@
     <value>Busy</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Inexistent directory. Would you like to create directory</value>
+    <value>Inexistent directory. Would you like to create directory?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Custom</value>
@@ -181,7 +181,7 @@
     <value>Invalid Path</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Join succeeded</value>
+    <value>Join succeeded!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Joining Info</value>
@@ -223,7 +223,7 @@
     <value>Pause Resume</value>
   </data>
   <data name="pieces_deleted" xml:space="preserve">
-    <value>Pieces were deleted</value>
+    <value>Pieces were deleted.</value>
   </data>
   <data name="piece_size" xml:space="preserve">
     <value>Piece size</value>
@@ -268,13 +268,13 @@
     <value>Self-joining executable has been created</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Please specify how many parts you want to split to</value>
+    <value>Please specify how many parts you want to split to.</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Specify piece size</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Split succeeded</value>
+    <value>Split succeeded!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Split file</value>
@@ -289,7 +289,7 @@
     <value>stream writer not closed</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>Specified part size is too large for splitting. Please specify a smaller part size</value>
+    <value>Specified part size is too large for splitting. Please specify a smaller part size.</value>
   </data>
   <data name="file_splitter_joiner_title" xml:space="preserve">
     <value>Split &amp;&amp; Join</value>

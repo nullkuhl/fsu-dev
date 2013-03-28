@@ -154,9 +154,12 @@
     <value>Every time you install a new application on your computer you're making changes to it. Sometimes your PC becomes unstable because of this. With the System Restore you can reset the state of your computer to a previous point in time, when it worked properly.</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>This tool is not found on your platform</value>
+    <value>This tool is not found on your platform.</value>
   </data>
   <data name="window_title" xml:space="preserve">
     <value>Manage Windows</value>
+  </data>
+  <data name="xp_warning" xml:space="preserve">
+    <value>Windows System File Checker might ask for your windows installation disc to continue, please prepare your disc</value>
   </data>
 </root>

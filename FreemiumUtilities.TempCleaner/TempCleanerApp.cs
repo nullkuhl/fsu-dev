@@ -5,15 +5,11 @@ using System.Linq;
 using System.Threading;
 using FreemiumUtilities.Infrastructure;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.TempCleaner"/> namespace defines a TempCleaner 1 Click-Maintenance application
+/// </summary>
 namespace FreemiumUtilities.TempCleaner
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities.TempCleaner"/> namespace defines a TempCleaner 1 Click-Maintenance application
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// TempCleaner 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
     /// </summary>

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Resources;
+using FreemiumUtil;
 
 namespace Uninstall_Manager
 {
@@ -57,8 +58,7 @@ namespace Uninstall_Manager
             try
             {
                 ResourceManager resourceManager = new ResourceManager("Uninstall_Manager.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));                
             }
             catch (Exception)
             { }

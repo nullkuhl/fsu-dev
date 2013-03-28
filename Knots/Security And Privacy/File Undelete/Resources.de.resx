@@ -220,7 +220,7 @@
     <value>Wiederherstellung läuft</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>Wiederherstellung auf dasselbe Laufwerk kann die Erfolgswahrscheinlichkeit reduzieren. Möchten Sie wirklich fortfahren</value>
+    <value>Wiederherstellung auf dasselbe Laufwerk kann die Erfolgswahrscheinlichkeit reduzieren. Möchten Sie wirklich fortfahren?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Überprüfung abgeschlossen</value>

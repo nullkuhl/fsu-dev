@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using Context_Menu_Manager.Properties;
 using System.Resources;
+using FreemiumUtil;
 
 namespace Context_Menu_Manager
 {
@@ -58,8 +59,7 @@ namespace Context_Menu_Manager
             try
             {
                 ResourceManager resourceManager = new ResourceManager("Context_Menu_Manager.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

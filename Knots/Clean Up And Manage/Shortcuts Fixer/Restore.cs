@@ -88,7 +88,7 @@ namespace ShortcutsFixer
 				}
 				catch (Exception)
 				{
-					MessageBox.Show("Restore isn't a valid option, can't restore this file.");
+					MessageBox.Show(rm.GetString("unable-restore"));
 				}
 			}
 

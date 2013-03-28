@@ -154,9 +154,12 @@
     <value>Cada vez que instala una nueva aplicación en el ordenador, se producen cambios en él. Debido a esto, a veces, el PC se vuelve inestable. Con Restaurar sistema, podrá restablecer un estado anterior en el ordenador, de un momento en el que éste funcionaba adecuadamente</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>No se encuentra esta herramienta en su plataforma</value>
+    <value>No se encuentra esta herramienta en su plataforma.</value>
   </data>
   <data name="window_title" xml:space="preserve">
     <value>Administrar Windows</value>
+  </data>
+  <data name="xp_warning" xml:space="preserve">
+    <value>Windows System File Checker puede pedir el disco de instalación de Windows para continuar, preparar el disco</value>
   </data>
 </root>

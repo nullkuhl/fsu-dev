@@ -8,32 +8,28 @@ using MemoryOptimizer.Properties;
 using System.IO;
 using System.Reflection;
 
+/// <summary>
+/// The <see cref="MemoryOptimizer"/> namespace defines a Memory Optimizer knot
+/// </summary>
 namespace MemoryOptimizer
 {
-	/// <summary>
-	/// The <see cref="MemoryOptimizer"/> namespace defines a Memory Optimizer knot
-	/// </summary>
+    internal static class Program
+    {
+        static Mutex mutex;
+        static bool created;
 
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
-	internal static class Program
-	{
-		static Mutex mutex;
-		static bool created;
-
-		/// <summary>
-		/// The main entry point for the application.
-		/// </summary>
-		[STAThread]
-		static void Main()
-		{
-			mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
-			if (created)
-			{
-				//Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-				//Application.ThreadException += Application_ThreadException;
-				//AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            mutex = new Mutex(true, Process.GetCurrentProcess().ProcessName, out created);
+            if (created)
+            {
+                //Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+                //Application.ThreadException += Application_ThreadException;
+                //AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
                 // As all first run initialization is done in the main project,
                 // we need to make sure the user does not start a different knot first.
@@ -54,22 +50,20 @@ namespace MemoryOptimizer
 
                 Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
 
-				Application.EnableVisualStyles();
-				Application.SetCompatibleTextRenderingDefault(false);
-				Application.Run(new FormMain());
-			}
-		}
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new FormMain());
+            }
+        }
 
-		static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
-		{
-			Reporting.Report(e.Exception);
-			Process.GetCurrentProcess().Kill();
-		}
+        static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
+        }
 
-		static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-		{
-			Reporting.Report((Exception)(e.ExceptionObject));
-			Process.GetCurrentProcess().Kill();
-		}
-	}
+        static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            Process.GetCurrentProcess().Kill();
+        }
+    }
 }

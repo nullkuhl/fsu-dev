@@ -127,7 +127,7 @@
     <value>Kommando</value>
   </data>
   <data name="commands_disabled" xml:space="preserve">
-    <value>Alle Kommandos, außer Löschen, sind deaktiviert</value>
+    <value>Alle Kommandos, außer Löschen, sind deaktiviert.</value>
   </data>
   <data name="company" xml:space="preserve">
     <value>Hersteller</value>
@@ -136,13 +136,13 @@
     <value>Löschen</value>
   </data>
   <data name="delete_selected_item" xml:space="preserve">
-    <value>Möchten Sie den gewählten Eintrag immer noch löschen</value>
+    <value>Möchten Sie den gewählten Eintrag immer noch löschen?</value>
   </data>
   <data name="delete_startup_item" xml:space="preserve">
     <value>Autostarteintrag löschen</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Beschreibung</value>
+    <value>Beschreibung:</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Details</value>
@@ -157,7 +157,7 @@
     <value>Autostarteintrag deaktivieren</value>
   </data>
   <data name="do_you_wish" xml:space="preserve">
-    <value>Möchten Sie fortfahren</value>
+    <value>Möchten Sie fortfahren?</value>
   </data>
   <data name="enable" xml:space="preserve">
     <value>Aktivieren</value>
@@ -178,31 +178,31 @@
     <value>Kommando ausführen</value>
   </data>
   <data name="file_appear_not_valid" xml:space="preserve">
-    <value>Die Datei scheint keine gültige Verknüpfung zu sein</value>
+    <value>Die Datei scheint keine gültige Verknüpfung zu sein.</value>
   </data>
   <data name="file_folder_not_found" xml:space="preserve">
-    <value>Die Datei und/oder der Ordner können nicht gefunden werden</value>
+    <value>Die Datei und/oder der Ordner können nicht gefunden werden.</value>
   </data>
   <data name="file_invalid" xml:space="preserve">
-    <value>Die Datei ist ungültig und existiert nicht</value>
+    <value>Die Datei ist ungültig und existiert nicht.</value>
   </data>
   <data name="file_name" xml:space="preserve">
     <value>Dateiname</value>
   </data>
   <data name="file_not_found" xml:space="preserve">
-    <value>Die Datei wurde nicht gefunden oder ist verborgen</value>
+    <value>Die Datei wurde nicht gefunden oder ist verborgen.</value>
   </data>
   <data name="file_not_found1" xml:space="preserve">
     <value>Die Datei wurde nicht gefunden</value>
   </data>
   <data name="file_not_found_warning" xml:space="preserve">
-    <value>Die Datei wurde nicht gefunden</value>
+    <value>Die Datei wurde nicht gefunden.</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>Dateipfad</value>
+    <value>Dateipfad:</value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
-    <value>Der Ordner wurde nicht gefunden</value>
+    <value>Der Ordner wurde nicht gefunden.</value>
   </data>
   <data name="full_version" xml:space="preserve">
     <value>Dateiversion</value>
@@ -265,25 +265,25 @@
     <value>Status</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>Das System hat die folgenden Informationen zurükgegeben</value>
+    <value>Das System hat die folgenden Informationen zurükgegeben:</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
-    <value>Dieser Eintrag konnte nicht gelöscht werden</value>
+    <value>Dieser Eintrag konnte nicht gelöscht werden.</value>
   </data>
   <data name="unable_to_disable" xml:space="preserve">
-    <value>Dieser Eintrag konnte nicht deaktiviert werden</value>
+    <value>Dieser Eintrag konnte nicht deaktiviert werden.</value>
   </data>
   <data name="unable_to_enable" xml:space="preserve">
-    <value>Dieser Eintrag konnte nicht aktiviert werden</value>
+    <value>Dieser Eintrag konnte nicht aktiviert werden.</value>
   </data>
   <data name="unable_to_execute" xml:space="preserve">
-    <value>Dieser Eintrag konnte nicht ausgeführt werden</value>
+    <value>Dieser Eintrag konnte nicht ausgeführt werden.</value>
   </data>
   <data name="unable_to_move" xml:space="preserve">
-    <value>Dieser Eintrag konnte nicht verschoben werden</value>
+    <value>Dieser Eintrag konnte nicht verschoben werden.</value>
   </data>
   <data name="unable_to_open" xml:space="preserve">
-    <value>Der Ordner dieses Eintrags konnte nicht geöffnet werden</value>
+    <value>Der Ordner dieses Eintrags konnte nicht geöffnet werden.</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Warnung: Löschen Sie keine Autostart-Einträge, wenn Sie nicht 100% sicher sind. In den meisten Fällen sollten Sie diese nur deaktivieren.</value>

@@ -477,7 +477,7 @@ namespace FileUndelete
                 {
                     trvExt.Nodes.Clear();
                     trvFolders.Nodes.Clear();
-                    MessageBox.Show(rm.GetString("scan_finished_no_data_collected") + ".", rm.GetString("scan_finished"),
+                    MessageBox.Show(rm.GetString("scan_finished_no_data_collected"), rm.GetString("scan_finished"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 Application.DoEvents();
@@ -755,7 +755,7 @@ namespace FileUndelete
         /// <param name="e"></param>
         void btnRestore_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(rm.GetString("LongOperationQuestion"), "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+            if (MessageBox.Show(rm.GetString("LongOperationQuestion"), string.Empty, MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                 DialogResult.No)
                 return;
 
@@ -765,7 +765,7 @@ namespace FileUndelete
 
             if (fbdMain.SelectedPath.IndexOf(currentDrive) == 0)
             {
-                if (MessageBox.Show(rm.GetString("restoring_same_drive") + "?",
+                if (MessageBox.Show(rm.GetString("restoring_same_drive"),
                                     Text, MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) != DialogResult.Yes) return;
             }
 
@@ -831,8 +831,9 @@ namespace FileUndelete
             frmProgress.progressBar.Value = 0;
             frmProgress.progressBar.Maximum = 100;
 
+
             MessageBox.Show(
-                string.Format("{0} " + rm.GetString("files_recovered") + ", {1} " + rm.GetString("failed") + ".", Recovered, Failed),
+                string.Format("{0} {1}, {2} {3}.", Recovered, rm.GetString("files_recovered"), Failed, rm.GetString("failed")),
                 Text,
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }

@@ -121,7 +121,7 @@
     <value>Agregar un ejecutable que se reconstruya automáticamente</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>La aplicación está en pausa. ¿Está seguro de que desea salir</value>
+    <value>La aplicación está en pausa. ¿Está seguro de que desea salir?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(cuanto más grande, más rápido)</value>
@@ -133,7 +133,7 @@
     <value>Ocupado</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Directorio no existente. ¿Desea crear el directorio</value>
+    <value>Directorio no existente. ¿Desea crear el directorio?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Personalizado</value>
@@ -184,7 +184,7 @@
     <value>Ruta no válida</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Unión correcta</value>
+    <value>Unión correcta!</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Información de unión (contenido de archivo .Join)</value>
@@ -229,7 +229,7 @@
     <value>Pausa Reanudar</value>
   </data>
   <data name="pieces_deleted" xml:space="preserve">
-    <value>Se eliminaron los fragmentos</value>
+    <value>Se eliminaron los fragmentos.</value>
   </data>
   <data name="piece_size" xml:space="preserve">
     <value>Tamaño de fragmento</value>
@@ -274,13 +274,13 @@
     <value>Se ha creado un ejecutable de unión automática</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Especifique el número de partes en que desea dividirlo</value>
+    <value>Especifique el número de partes en que desea dividirlo.</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Especificar tamaño de fragmento</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>División correcta</value>
+    <value>División correcta!</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Dividir archivo</value>
@@ -295,7 +295,7 @@
     <value>editor de secuencias no cerrado</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>El tamaño de parte especificado es demasiado grande para la división. Especifique un tamaño menor</value>
+    <value>El tamaño de parte especificado es demasiado grande para la división. Especifique un tamaño menor.</value>
   </data>
   <data name="access_denied" xml:space="preserve">
     <value>No está permitido escribir en destino determinado. Por favor, elija otra carpeta de destino.</value>

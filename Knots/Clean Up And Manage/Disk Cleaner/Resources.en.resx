@@ -319,10 +319,10 @@
     <value>scanning</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Please select a drive from the list</value>
+    <value>Please select a drive from the list.</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Please select at least one item fom the list</value>
+    <value>Please select at least one item fom the list.</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Please select a backup set you want to restore and click Restore</value>
@@ -349,7 +349,7 @@
     <value>Temporary files are used by programs as an intermediate storage space and usually removed after use</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>This tool was not found on your platform</value>
+    <value>This tool was not found on your platform.</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>

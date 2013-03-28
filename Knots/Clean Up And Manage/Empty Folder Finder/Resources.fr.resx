@@ -163,7 +163,7 @@
     <value>Exclure (durablement)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Exclu avec succès</value>
+    <value>Exclu avec succès!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Nom de dossier</value>
@@ -202,7 +202,7 @@
     <value>Vérification en cours...</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Vérification interrompue</value>
+    <value>Vérification interrompue.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Vérifier les lecteurs</value>

@@ -244,13 +244,13 @@
     <value>Restaurar</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>Restaurar para a mesma unidade pode reduzir a hipótese de uma recuperação com sucesso; tem a certeza de que pretende continuar</value>
+    <value>Restaurar para a mesma unidade pode reduzir a hipótese de uma recuperação com sucesso; tem a certeza de que pretende continuar?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Análise Concluída</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>A análise terminou, contudo não foi possível recuperar ficheiros dos dados recolhidos do disco rígido</value>
+    <value>A análise terminou, contudo não foi possível recuperar ficheiros dos dados recolhidos do disco rígido.</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Procurar</value>

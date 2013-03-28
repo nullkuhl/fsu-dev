@@ -159,4 +159,7 @@
   <data name="window_title" xml:space="preserve">
     <value>Gérer Windows</value>
   </data>
+  <data name="xp_warning" xml:space="preserve">
+    <value>Vérificateur des fichiers système Windows peut vous demander votre disque d'installation de Windows pour continuer, s'il vous plaît préparer votre disque</value>
+  </data>
 </root>

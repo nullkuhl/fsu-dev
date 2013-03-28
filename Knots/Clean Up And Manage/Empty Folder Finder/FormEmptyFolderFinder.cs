@@ -378,7 +378,7 @@ namespace EmptyFolderFinder
             tslStatus.Text = string.Empty;
             tslScan.Text = rm.GetString("aborted");
             Application.DoEvents();
-            MessageBox.Show(rm.GetString("scanning_aborted") + ".", Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            MessageBox.Show(rm.GetString("scanning_aborted"), Text, MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         /// <summary>
@@ -654,7 +654,7 @@ namespace EmptyFolderFinder
                         sw.Close();
                     }
 
-                    MessageBox.Show(rm.GetString("excluded") + " !", rm.GetString("operation_done"), MessageBoxButtons.OK,
+                    MessageBox.Show(rm.GetString("excluded"), rm.GetString("operation_done"), MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
                 }
             }

@@ -168,26 +168,12 @@ namespace FreemiumUtilities
 
         void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
-            Reporting.Report((Exception)(e.ExceptionObject));
             Process.GetCurrentProcess().Kill();
         }
 
         void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
             e.Handled = true;
-            /*MessageBox.Show("MSG" +
-                            e.Exception.Message
-                            + " \n SRC" +
-                            e.Exception.Source
-                            + " \n STKTRC" +
-                            e.Exception.StackTrace
-                            + " \n Trgetsite" +
-                            e.Exception.TargetSite
-                            + " \n Help" +
-                            e.Exception.HelpLink
-                            + " \n " +
-                            e.Exception);*/
-            Reporting.Report(e.Exception);
             Process.GetCurrentProcess().Kill();
         }
 

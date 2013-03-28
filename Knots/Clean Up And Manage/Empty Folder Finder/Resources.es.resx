@@ -163,7 +163,7 @@
     <value>Excluir (no buscar más)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Exclusión correcta</value>
+    <value>Exclusión correcta!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Nombre de carpeta</value>
@@ -202,7 +202,7 @@
     <value>Analizando</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Análisis anulado</value>
+    <value>Análisis anulado.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Analizar unidades</value>

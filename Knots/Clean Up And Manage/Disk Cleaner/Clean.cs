@@ -256,8 +256,6 @@ namespace Disk_Cleaner
             catch
             {
             }
-
-            // MessageBox.Show("Successfully Restored.");
         }
 
         /// <summary>

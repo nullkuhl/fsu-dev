@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>L'eseguibile per la codifica automatica è stato creato</value>
+    <value>L'eseguibile per la codifica automatica è stato creato!</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Sfoglia</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>Impossibile codificare il file; seguire le istruzioni corrette per effettuare la codifica</value>
+    <value>Impossibile codificare il file; seguire le istruzioni corrette per effettuare la codifica.</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>Impossibile creare uno strumento di decodifica eseguibile</value>
+    <value>Impossibile creare uno strumento di decodifica eseguibile.</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>Impossibile trovare</value>
@@ -163,7 +163,7 @@
     <value>Codifica</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>File codificato con successo</value>
+    <value>File codificato con successo!</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Codifica</value>
@@ -202,7 +202,7 @@
     <value>Salva in</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Seleziona prima una destinazione valida</value>
+    <value>Seleziona prima una destinazione valida.</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Seleziona un file codificato che desideri decodificare</value>

@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using System.Resources;
+using FreemiumUtil;
 
 namespace StartupManager
 {
@@ -57,8 +58,7 @@ namespace StartupManager
             try
             {
                 ResourceManager resourceManager = new ResourceManager("StartupManager.Resources", typeof(TopControl).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

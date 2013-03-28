@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Windows.Forms;
 using RegistryCleaner.Properties;
+using FreemiumUtil;
 
 namespace RegistryCleaner
 {
@@ -56,8 +57,7 @@ namespace RegistryCleaner
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + Resources.HelpUrl);
-                Process.Start(psi);
+                CommonOperations.OpenUrl(Resources.HelpUrl);
             }
             catch (Exception)
             { }

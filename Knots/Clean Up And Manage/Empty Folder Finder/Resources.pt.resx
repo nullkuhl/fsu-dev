@@ -163,7 +163,7 @@
     <value>Excluir (Nunca Mais Localizar)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Excluído com Sucesso</value>
+    <value>Excluído com Sucesso!</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Nome da Pasta</value>
@@ -202,7 +202,7 @@
     <value>Analisar</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Análise abortada</value>
+    <value>Análise abortada.</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Analisar Unidades</value>

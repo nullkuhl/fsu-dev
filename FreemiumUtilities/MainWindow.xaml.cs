@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows;
@@ -27,16 +26,11 @@ using Microsoft.Win32;
 using Microsoft.Win32.TaskScheduler;
 using WPFLocalizeExtension.Engine;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities"/> is a root namespace of the FreemiumUtilities project
+/// </summary>
 namespace FreemiumUtilities
 {
-    /// <summary>
-    /// The <see cref="FreemiumUtilities"/> is a root namespace of the FreemiumUtilities project
-    /// </summary>
-    [CompilerGenerated]
-    internal class NamespaceDoc
-    {
-    }
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -493,8 +487,7 @@ namespace FreemiumUtilities
         {
             try
             {
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + url);
-                Process.Start(psi);
+                CommonOperations.OpenUrl(url);
             }
             catch (Exception)
             {

@@ -127,7 +127,7 @@
     <value>Zurzeit installierte Programme</value>
   </data>
   <data name="entries_removed" xml:space="preserve">
-    <value>Einträge wurden erfolgreich entfernt</value>
+    <value>Einträge wurden erfolgreich entfernt.</value>
   </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Fehler aufgetreten</value>
@@ -157,7 +157,7 @@
     <value>Sie benötigen Administratorrechte, um diese Funktion verwenden zu können.</value>
   </data>
   <data name="one_entry_removed" xml:space="preserve">
-    <value>Eintrag wurde erfolgreich entfernt</value>
+    <value>Eintrag wurde erfolgreich entfernt.</value>
   </data>
   <data name="operation_cancelled" xml:space="preserve">
     <value>Vorgang abgebrochen</value>

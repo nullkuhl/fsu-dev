@@ -5,21 +5,16 @@ using System.Linq;
 using System.Threading;
 using System.Windows;
 using System.Windows.Threading;
-using RegistryCleaner.Implementation;
 using RegistryCleaner.Models;
 using RegistryCleaner.Properties;
 using RegistryCleanerCore;
 using System.Windows.Media.Imaging;
 
+/// <summary>
+/// The <see cref="RegistryCleaner"/> namespace defines a Registry Cleaner knot
+/// </summary>
 namespace RegistryCleaner
 {
-    /// <summary>
-    /// The <see cref="RegistryCleaner"/> namespace defines a Registry Cleaner knot
-    /// </summary>
-
-    [System.Runtime.CompilerServices.CompilerGenerated]
-    class NamespaceDoc { }
-
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>

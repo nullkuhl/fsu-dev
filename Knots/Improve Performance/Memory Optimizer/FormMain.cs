@@ -163,7 +163,7 @@ namespace MemoryOptimizer
         }
 
         void tmrMain_Tick(object sender, EventArgs e)
-        {            
+        {
             ulong memusage = 0;
             try
             {
@@ -175,12 +175,12 @@ namespace MemoryOptimizer
             }
 
             lblMemoryUsage.Text = memusage + " MB";
-           
+
             if (chtMemory.Series[0].Points.Count >= 39)
-            {           
+            {
                 chtMemory.Series[0].Points.RemoveAt(0);
             }
-           
+
             chtMemory.Series[0].Points.Add(memusage);
 
             CalcCPUUsage();
@@ -318,7 +318,7 @@ namespace MemoryOptimizer
         }
 
         void btnOptimize_Click(object sender, EventArgs e)
-        {            
+        {
             showed = false;
             btnOptimize.Enabled = false;
             initialMemUsage = CalcFreeRAM();
@@ -327,7 +327,7 @@ namespace MemoryOptimizer
             if (!ProcessExited) return;
 
             string args = string.Empty;
-        
+
             if (trackBarMemoryAmount.Value != trackBarMemoryAmount.Maximum)
                 args = trackBarMemoryAmount.Value.ToString();
 
@@ -398,7 +398,7 @@ namespace MemoryOptimizer
         }
 
         void FormMain_FormClosing(object sender, FormClosingEventArgs e)
-        {         
+        {
             if (!W1Done) e.Cancel = true;
         }
 
@@ -550,7 +550,7 @@ namespace MemoryOptimizer
 
         void bgwMemory_DoWork(object sender, DoWorkEventArgs e)
         {
-           // MEMORYSTATUS status = new MEMORYSTATUS();
+            // MEMORYSTATUS status = new MEMORYSTATUS();
 
             //GlobalMemoryStatus(status);
 
@@ -638,9 +638,8 @@ namespace MemoryOptimizer
                 finalMemUsage = CalcFreeRAM();
 
                 int gainedMemory = (finalMemUsage - initialMemUsage) > 0 ? (finalMemUsage - initialMemUsage) : 2;
-                MessageBox.Show(
-                    rm.GetString("optimization_complete") + ". " + rm.GetString("memory_freed") + " " + gainedMemory + " " +
-                    rm.GetString("memory") + ".", Text, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(String.Format(rm.GetString("optimization_complete"), gainedMemory.ToString()), Text, 
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
                 btnOptimize.Enabled = true;
             }
         }

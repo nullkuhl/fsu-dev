@@ -198,10 +198,10 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
     <value>Error</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>gustaría borrar utilizando la casilla que aparece a la izquierda del nombre de rastro</value>
+    <value>gustaría borrar utilizando la casilla que aparece a la izquierda del nombre de rastro.</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Se han borrado correctamente los rastros seleccionados</value>
+    <value>Se han borrado correctamente los rastros seleccionados.</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>No hay rastros seleccionados. Para eliminar rastros, seleccione aquellos que le</value>
@@ -210,7 +210,7 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
     <value>Error al acceder a la Papelera de reciclaje</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>No ha seleccionado ningún elemento para su análisis</value>
+    <value>No ha seleccionado ningún elemento para su análisis!</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>¿Está seguro de que desea borrar</value>

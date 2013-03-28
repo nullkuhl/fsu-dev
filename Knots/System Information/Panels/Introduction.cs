@@ -60,20 +60,20 @@ namespace SystemInformation
 				try
 				{
 					// Now display EULA
-					var startInfo = new ProcessStartInfo(AppDirectory + "\\EULA.pdf");
+                    ProcessStartInfo startInfo = new ProcessStartInfo(AppDirectory + "\\EULA.pdf");
 					startInfo.WindowStyle = ProcessWindowStyle.Normal;
 					Process.Start(startInfo);
 				}
 				catch (IOException)
 				{
 					// cannot find file
-					MessageBox.Show(rm.GetString("pdf_notfound") + ".", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+					MessageBox.Show(rm.GetString("pdf_notfound"), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 				}
 			}
 			else
 			{
 				// cannot find file
-				MessageBox.Show(rm.GetString("eula_notfound") + ".", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(rm.GetString("eula_notfound"), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 		}
 

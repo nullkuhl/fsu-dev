@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Resources;
 using System.Windows.Forms;
 using Disk_Cleaner.Properties;
+using FreemiumUtil;
 
 namespace Disk_Cleaner
 {
@@ -53,8 +54,7 @@ namespace Disk_Cleaner
             try
             {
                 ResourceManager resourceManager = new ResourceManager("Disk_Cleaner.Resources", typeof(FormPreferences).Assembly);
-                ProcessStartInfo psi = new ProcessStartInfo("iexplore", "-new " + resourceManager.GetString("HelpUrl"));
-                Process.Start(psi);
+                CommonOperations.OpenUrl(resourceManager.GetString("HelpUrl"));
             }
             catch (Exception)
             { }

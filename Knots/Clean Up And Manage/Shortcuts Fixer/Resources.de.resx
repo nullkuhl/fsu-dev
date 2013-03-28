@@ -231,4 +231,7 @@
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
+  <data name="unable_restore" xml:space="preserve">
+    <value>Restore ist keine gültige Option, nicht wiederherstellen können Sie diese Datei.</value>
+  </data>
 </root>

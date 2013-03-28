@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>Se ha creado un EXE de cifrado automático</value>
+    <value>Se ha creado un EXE de cifrado automático!</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Examinar</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>No se puede cifrar el archivo; siga las instrucciones adecuadas para hacerlo</value>
+    <value>No se puede cifrar el archivo; siga las instrucciones adecuadas para hacerlo.</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>No se puede crear un descifrador ejecutable</value>
+    <value>No se puede crear un descifrador ejecutable.</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>No se puede encontrar</value>
@@ -163,7 +163,7 @@
     <value>Cifrar</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>Archivo cifrado correctamente</value>
+    <value>Archivo cifrado correctamente!</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Cifrado</value>
@@ -202,7 +202,7 @@
     <value>Guardar en</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Seleccionar primero un destino válido</value>
+    <value>Seleccionar primero un destino válido.</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Seleccionar un archivo cifrado que se quiera descifrar</value>
