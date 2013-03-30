@@ -15,6 +15,7 @@ using FreemiumUtil;
 using FreemiumUtilities.Infrastructure;
 using Microsoft.Win32;
 using UrlHistoryLibrary;
+using Knots.Security.TracksEraserCore;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -3424,7 +3425,7 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     try
                     {
-                        FFHistoryManager.ClearHistory();
+                        Browser.ClearHistory(BrowserType.FireFox);
                     }
                     catch
                     {

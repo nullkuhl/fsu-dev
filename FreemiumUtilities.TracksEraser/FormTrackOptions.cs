@@ -6,6 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 using Microsoft.Win32;
+using Knots.Security.TracksEraserCore;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -245,7 +246,7 @@ namespace FreemiumUtilities.TracksEraser
 				{
 					if (IsBrowserInstalled("firefox") == false)
 						throw new Exception();
-					List<CookieData> cookies = FFCookieManager.GetCookies();
+					List<CookieData> cookies = Browser.GetCookies(BrowserType.FireFox);
 					ListViewFF.Items.Clear();
 					foreach (CookieData data in cookies)
 					{
@@ -280,7 +281,7 @@ namespace FreemiumUtilities.TracksEraser
 				{
 					if (IsBrowserInstalled("chrome") == false)
 						throw new Exception();
-					List<CookieData> cookies = ChromeCookieManager.GetChromeCookies();
+					List<CookieData> cookies = Browser.GetCookies(BrowserType.Chrome);
 					ListViewChrome.Items.Clear();
 					foreach (CookieData data in cookies)
 					{
@@ -358,7 +359,7 @@ namespace FreemiumUtilities.TracksEraser
                     foreach (ListViewItem item in ListViewFF.CheckedItems)
                     {
                         Application.DoEvents();
-                        FFCookieManager.DeleteCookie(item.Tag);
+                        Browser.DeleteCookie(BrowserType.FireFox, item.Tag);
                         ListViewFF.Items.Remove(item);
                     }
 
@@ -392,7 +393,7 @@ namespace FreemiumUtilities.TracksEraser
 						Application.DoEvents();
 						if (ListViewChrome.Items[i].Checked)
 						{
-							ChromeCookieManager.DeleteCookie(ListViewChrome.Items[i].Tag);
+							Browser.DeleteCookie(BrowserType.Chrome, ListViewChrome.Items[i].Tag);
 							ListViewChrome.Items[i].Remove();
 						}
 					}

@@ -78,6 +78,9 @@
     <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
+    <Reference Include="Knots.Security.TracksEraserCore">
+      <HintPath>..\Tracks Eraser Core\bin\Debug\Knots.Security.TracksEraserCore.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.76.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -100,9 +103,6 @@
     <Compile Include="ButtomControl.designer.cs">
       <DependentUpon>BottomControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="cCookieView.cs" />
-    <Compile Include="ChromeCookieManager.cs" />
-    <Compile Include="FFHistoryManager.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="TriStateTreeView.cs">
       <SubType>Component</SubType>
@@ -113,7 +113,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="FFCookieManager.cs" />
     <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>

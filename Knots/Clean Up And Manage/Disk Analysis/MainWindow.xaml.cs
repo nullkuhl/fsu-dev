@@ -70,7 +70,7 @@ namespace DiskAnalysis
             // Check and Clear Temp Data
             try
             {
-                FileInfo[] tempFiles = new DirectoryInfo(Environment.CurrentDirectory + "\\Icons").GetFiles();
+                FileInfo[] tempFiles = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\Icons").GetFiles();
 
                 try
                 {
@@ -87,7 +87,7 @@ namespace DiskAnalysis
             {
                 try
                 {
-                    DirectoryInfo curDir = new DirectoryInfo(Environment.CurrentDirectory);
+                    DirectoryInfo curDir = new DirectoryInfo(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\");
                     curDir.CreateSubdirectory("Icons");
                 }
                 catch

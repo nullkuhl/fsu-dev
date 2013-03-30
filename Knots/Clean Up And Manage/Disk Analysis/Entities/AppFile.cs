@@ -73,7 +73,7 @@ namespace DiskAnalysis.Entities
             {
                 if (string.IsNullOrEmpty(iconLocation))
                 {
-                    string path = Environment.CurrentDirectory + "\\Icons\\DA" + fileType + ".bmp";
+                    string path =  Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\Icons\\DA" + fileType + ".bmp";
                     FileInfo fileInfo = new FileInfo(path);
                     if (fileInfo.Exists)
                     {

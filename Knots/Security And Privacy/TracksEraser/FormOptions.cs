@@ -7,6 +7,7 @@ using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
 using Microsoft.Win32;
+using Knots.Security.TracksEraserCore;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -159,7 +160,7 @@ namespace FreemiumUtilities.TracksEraser
             foreach (string sFile in files)
             {
                 FileInfo fi = new FileInfo(sFile);
-                cCookieView cView = new cCookieView(sFile);
+                CCookieView cView = new CCookieView(sFile);
                 lvi = new ListViewItem();
                 lvi.Text = cView.Domain;
                 lvi.Tag = fi.FullName;
@@ -229,7 +230,7 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     if (Helper.IsBrowserInstalled("firefox") == false)
                         throw new Exception();
-                    List<CookieData> cookies = FFCookieManager.GetCookies();
+                    List<CookieData> cookies = Browser.GetCookies(BrowserType.FireFox);
                     ListViewFF.Items.Clear();
                     foreach (CookieData data in cookies)
                     {
@@ -264,7 +265,7 @@ namespace FreemiumUtilities.TracksEraser
                 {
                     if (Helper.IsBrowserInstalled("chrome") == false)
                         throw new Exception();
-                    List<CookieData> cookies = ChromeCookieManager.GetChromeCookies();
+                    List<CookieData> cookies = Browser.GetCookies(BrowserType.Chrome);
                     ListViewChrome.Items.Clear();
                     foreach (CookieData data in cookies)
                     {
@@ -303,7 +304,7 @@ namespace FreemiumUtilities.TracksEraser
                     foreach (ListViewItem item in ListViewFF.CheckedItems)
                     {
                         Application.DoEvents();
-                        FFCookieManager.DeleteCookie(item.Tag);
+                        Browser.DeleteCookie(BrowserType.FireFox, item.Tag);
                         ListViewFF.Items.Remove(item);
                     }
 
@@ -337,7 +338,7 @@ namespace FreemiumUtilities.TracksEraser
                         Application.DoEvents();
                         if (ListViewChrome.Items[i].Checked)
                         {
-                            ChromeCookieManager.DeleteCookie(ListViewChrome.Items[i].Tag);
+                            Browser.DeleteCookie(BrowserType.Chrome, ListViewChrome.Items[i].Tag);
                             ListViewChrome.Items[i].Remove();
                         }
                     }
