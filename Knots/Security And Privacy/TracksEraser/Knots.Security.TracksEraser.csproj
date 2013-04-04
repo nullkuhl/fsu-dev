@@ -78,9 +78,6 @@
     <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <Private>False</Private>
     </Reference>
-    <Reference Include="Knots.Security.TracksEraserCore">
-      <HintPath>..\Tracks Eraser Core\bin\Debug\Knots.Security.TracksEraserCore.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.76.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -240,6 +237,7 @@
     <Content Include="Libraries\FreemiumUtil.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Libraries\TracksEraserCore.dll" />
     <None Include="Resources\FSUIcon.ico" />
     <None Include="Resources\help_on.png" />
     <None Include="Resources\help_off.png" />
@@ -270,7 +268,12 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj">
+      <Project>{374F6345-4849-4379-B200-B97051E6E5D1}</Project>
+      <Name>Knots.Security.TracksEraserCore</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy "$(ProjectDir)bin" "$(SolutionDir)FreemiumUtilities\bin\" /Y /S /I /R</PostBuildEvent>

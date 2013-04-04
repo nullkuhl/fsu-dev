@@ -8,8 +8,8 @@
     <ProjectGuid>{374F6345-4849-4379-B200-B97051E6E5D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Knots.Security.TracksEraserCore</RootNamespace>
-    <AssemblyName>Knots.Security.TracksEraserCore</AssemblyName>
+    <RootNamespace>TracksEraserCore</RootNamespace>
+    <AssemblyName>TracksEraserCore</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
