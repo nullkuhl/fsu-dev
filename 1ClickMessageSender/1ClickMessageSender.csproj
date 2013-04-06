@@ -131,8 +131,6 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent />
-    <PostBuildEvent>xcopy "$(TargetDir)1Click.exe" "$(SolutionDir)FreemiumUtilities\" /Y
-xcopy "$(TargetDir)1Click.exe" "$(SolutionDir)FreemiumUtilities\bin\Debug\" /Y
-xcopy "$(TargetDir)1Click.exe" "$(SolutionDir)FreemiumUtilities\bin\Release\" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)1Click.exe" "$(SolutionDir)FreemiumUtilities\$(OutDir)" /Y</PostBuildEvent>
   </PropertyGroup>
 </Project>
