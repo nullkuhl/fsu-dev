@@ -101,6 +101,7 @@
     <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Libraries\WPFToolkit.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>

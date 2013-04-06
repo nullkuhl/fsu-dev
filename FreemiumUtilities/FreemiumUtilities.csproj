@@ -515,10 +515,12 @@
     <ProjectReference Include="..\Knots\Improve Performance\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj">
       <Project>{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}</Project>
       <Name>Knots.Performance.RegistryCleanerCore</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Knots\Security And Privacy\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj">
       <Project>{374F6345-4849-4379-B200-B97051E6E5D1}</Project>
       <Name>Knots.Security.TracksEraserCore</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
