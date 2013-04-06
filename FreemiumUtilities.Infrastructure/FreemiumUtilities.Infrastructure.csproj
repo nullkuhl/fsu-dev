@@ -55,13 +55,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\Libraries\" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

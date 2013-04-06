@@ -103,37 +103,37 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.Spyware\Libraries" /Y /S /I /R
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)\Libraries" /Y /S /I /R
 xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)\Libraries" /Y /S /I /R
 
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Context Menu Manager\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Analysis\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Empty Folder Finder\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Shortcuts Fixer\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Uninstall Manager\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Context Menu Manager\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Analysis\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Empty Folder Finder\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Shortcuts Fixer\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Uninstall Manager\$(OutDir)\Libraries\" /Y /S /I /R
 
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Memory Optimizer\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Process Manager\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner Core\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Startup Manager\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Windows Standard Tools\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Memory Optimizer\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Process Manager\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner Core\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Startup Manager\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Windows Standard Tools\$(OutDir)\Libraries\" /Y /S /I /R
 
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\BrowserAssistant\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\EncryptDecrypt\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Eraser\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Splitter and Joiner\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Undelete\Libraries\" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\TracksEraser\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\BrowserAssistant\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\EncryptDecrypt\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Eraser\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Splitter and Joiner\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\File Undelete\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\TracksEraser\$(OutDir)\Libraries\" /Y /S /I /R
 
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\Libraries\" /Y /S /I /R</PostBuildEvent>
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

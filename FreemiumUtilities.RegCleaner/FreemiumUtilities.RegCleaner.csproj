@@ -40,11 +40,6 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libraries\FreemiumUtil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -92,17 +87,8 @@
     <Resource Include="Images\frame5.png" />
     <Resource Include="Images\frame6.png" />
     <Resource Include="Images\frame7.png" />
-    <Content Include="Libraries\RegistryCleanerCore.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Images\FSUIcon.ico" />
     <Resource Include="Images\desktop_icon.png" />
-    <Content Include="Libraries\FreemiumUtil.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Libraries\FreemiumUtilites.Infrastructure.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormRegCleaner.resx">
@@ -141,16 +127,22 @@
     <ProjectReference Include="..\FreemiumUtilities.Infrastructure\FreemiumUtilities.Infrastructure.csproj">
       <Project>{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}</Project>
       <Name>FreemiumUtilities.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtil\FreemiumUtil.csproj">
+      <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
+      <Name>FreemiumUtil</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Knots\Improve Performance\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj">
-      <Project>{ff431ef5-47e4-43a2-b7a9-ff0939c688e5}</Project>
+      <Project>{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}</Project>
       <Name>Knots.Performance.RegistryCleanerCore</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.RegCleaner.dll" "$(SolutionDir)FreemiumUtilities\Applications\" /Y
-xcopy "$(TargetDir)de\FreemiumUtilities.RegCleaner.resources.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)de\" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.RegCleaner.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

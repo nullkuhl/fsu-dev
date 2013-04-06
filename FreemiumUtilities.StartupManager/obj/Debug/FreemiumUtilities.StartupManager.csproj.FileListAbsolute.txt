@@ -1,0 +1,11 @@
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll.config
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\bin\Debug\FreemiumUtilities.StartupManager.pdb
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmDetails.resources
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.FrmStartupMan.resources
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.Properties.Resources.resources
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResGen.read.1.tlog
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\ResGen.write.1.tlog
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.StartupManager\obj\Debug\FreemiumUtilities.StartupManager.pdb

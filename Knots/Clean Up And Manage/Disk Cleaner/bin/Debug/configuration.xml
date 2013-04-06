@@ -1,0 +1,320 @@
+<DiskCleaner>
+	<Exclusions>
+		<Item>
+			<Value>PzpcUHJvZ3JhbSBGaWxlc1xDb21tb24gRmlsZXM=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>PzpcUHJvZ3JhbSBGaWxlc1xVbmluc3RhbGwgSW5mb3JtYXRpb24=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Pzpcd2luKlxzZWN1cml0eQ==</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxzZW5kdG8=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxpMzg2</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxyZXNvdXJjZXNcdGhlbWVz</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Klx0ZW1wb3JhcnkgaW50ZXJuZXQgZmlsZXM=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxtaWNyb3NvZnRcb2ZmaWNlXGRhdGE=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxtaWNyb3NvZnRcbW9uZXlcKlx3ZWJjYWNoZQ==</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxjaGFvczMy</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxwYXBycG9ydFxkYXRh</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxzeW1hbnRlYyBzaGFyZWRcdmlydXNkZWZz</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>PzpcX3Jlc3RvcmU=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>PzpccmVjeWNsZT8=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Klx0ZW1wXGluY3JlZGltYWls</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Klxub3J0b24gYW50aXZpcnVzXHF1YXJhbnRpbmU=</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxzeXN0ZW0zMlx1c210</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxzeXN0ZW0zMlxjYXRyb290Mg==</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxhcHBsaWNhdGlvbiBkYXRhXG1pY3Jvc29mdA==</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KlxhcHBsaWNhdGlvbiBkYXRhXGFpbQ==</Value>
+			<Description>
+			</Description>
+			<Checked>True</Checked>
+		</Item>
+	</Exclusions>
+	<Inclusions />
+	<Extensions>
+		<Item>
+			<Value>Ki50bXA=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki50ZW1w</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5uY2g=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4tLS0=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5+Kg==</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>fiouKg==</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4/PyQ=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5fX18=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5+bXA=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5fbXA=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4kZGI=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4/JD8=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4/P34=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4/fj8=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5kYiQ=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5e</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5fZGQ=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5fZGV0bXA=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki4kJCQ=</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>MCoubmNo</Value>
+			<Description>Temporary file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5vbGQ=</Value>
+			<Description>Temporary backup file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5iYWs=</Value>
+			<Description>Temporary backup file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5jaGs=</Value>
+			<Description>Saved disk error data from scandisk</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5naWQ=</Value>
+			<Description>Temporary help file search data</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>bXNjcmVhdGUuZGly</Value>
+			<Description>Temporary directory information</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki53Yms=</Value>
+			<Description>Office backup file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5mdHM=</Value>
+			<Description>Temporary help file search data</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5mdGc=</Value>
+			<Description>Windows help system temp file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>KmxvZy50eHQ=</Value>
+			<Description>Log file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5lcnI=</Value>
+			<Description>Error file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5kbXA=</Value>
+			<Description>Memory dump files</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5wcnY=</Value>
+			<Description>Outdated file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5pbGs=</Value>
+			<Description>Intermediate file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5hcHM=</Value>
+			<Description>Intermediate file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5uY2I=</Value>
+			<Description>Intermediate file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Ki5wY2g=</Value>
+			<Description>Intermediate file</Description>
+			<Checked>True</Checked>
+		</Item>
+		<Item>
+			<Value>Y2hrbGlzdC4q</Value>
+			<Description>Temporary file created during setup</Description>
+			<Checked>True</Checked>
+		</Item>
+	</Extensions>
+	<Options>
+		<ScanTemporaryFolder>True</ScanTemporaryFolder>
+		<FileSelectZero>True</FileSelectZero>
+		<CheckedNames>
+		</CheckedNames>
+		<BackupJunk>True</BackupJunk>
+		<BackupZero>True</BackupZero>
+	</Options>
+</DiskCleaner>

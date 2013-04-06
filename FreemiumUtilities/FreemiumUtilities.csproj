@@ -83,30 +83,6 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FreemiumUtilities.RegCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\FreemiumUtilities.RegCleaner.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.ShortcutFixer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\FreemiumUtilities.ShortcutFixer.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.Spyware, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\FreemiumUtilities.Spyware.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.TempCleaner, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\FreemiumUtilities.TempCleaner.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="FreemiumUtilities.TracksEraser">
-      <HintPath>Applications\FreemiumUtilities.TracksEraser.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.Win32.TaskScheduler, Version=1.7.4273.24968, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -128,11 +104,6 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
-    <Reference Include="TracksEraser, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Applications\TracksEraser.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -357,24 +328,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Content Include="Applications\FreemiumUtilities.RegCleaner.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Applications\FreemiumUtilities.ShortcutFixer.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Applications\FreemiumUtilities.StartupManager.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Applications\FreemiumUtilities.TempCleaner.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Applications\FreemiumUtilities.TracksEraser.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Applications\TracksEraser.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Images\bg-logo-flame.png" />
     <Resource Include="Images\bg-logo-small.png" />
     <Resource Include="Images\desktop_icon.ico" />
@@ -401,15 +354,6 @@
     <Resource Include="Images\frame4.png" />
     <Resource Include="Images\frame5.png" />
     <Resource Include="Images\frame6.png" />
-    <Content Include="Libraries\de\TracksEraser.resources.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Libraries\en\TracksEraser.resources.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Libraries\FreemiumUtil.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Libraries\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -417,9 +361,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Libraries\Common Tools.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Libraries\FreemiumUtilities.Infrastructure.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Libraries\Interop.IWshRuntimeLibrary.dll">
@@ -494,9 +435,6 @@
     <Resource Include="Images\icon-lamp.png" />
     <Resource Include="Images\icon-scan.png" />
     <Resource Include="Images\icon-schedule.png" />
-    <Content Include="Applications\FreemiumUtilities.Spyware.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Libraries\System.Tuples.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -532,23 +470,55 @@
     <ProjectReference Include="..\FreemiumUtilities.Context\FreemiumUtilities.Context.csproj">
       <Project>{2AF3F14E-A183-44D4-A994-C8795A33E874}</Project>
       <Name>FreemiumUtilities.Context</Name>
-      <Private>True</Private>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\FreemiumUtilities.Infrastructure\FreemiumUtilities.Infrastructure.csproj">
       <Project>{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}</Project>
       <Name>FreemiumUtilities.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.RegCleaner\FreemiumUtilities.RegCleaner.csproj">
+      <Project>{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}</Project>
+      <Name>FreemiumUtilities.RegCleaner</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.ShortcutFixer\FreemiumUtilities.ShortcutFixer.csproj">
+      <Project>{0F910AD6-D904-454C-AF1D-441723CA3F6C}</Project>
+      <Name>FreemiumUtilities.ShortcutFixer</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.Spyware\FreemiumUtilities.Spyware.csproj">
+      <Project>{DFFF70FD-037A-49A2-911D-CF0226D27921}</Project>
+      <Name>FreemiumUtilities.Spyware</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\FreemiumUtilities.StartupManager\FreemiumUtilities.StartupManager.csproj">
       <Project>{375A58EF-E2A8-41A1-94DD-4FE644219FD1}</Project>
       <Name>FreemiumUtilities.StartupManager</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.TempCleaner\FreemiumUtilities.TempCleaner.csproj">
+      <Project>{E4885A39-64CE-4952-AFD5-0C72240AB27C}</Project>
+      <Name>FreemiumUtilities.TempCleaner</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtilities.TracksEraser\FreemiumUtilities.TracksEraser.csproj">
+      <Project>{021ADA2C-1283-449B-BAF1-7D2864E4EF7C}</Project>
+      <Name>FreemiumUtilities.TracksEraser</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\FreemiumUtil\FreemiumUtil.csproj">
       <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
       <Name>FreemiumUtil</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Knots\Improve Performance\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj">
       <Project>{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}</Project>
       <Name>Knots.Performance.RegistryCleanerCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Knots\Security And Privacy\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj">
+      <Project>{374F6345-4849-4379-B200-B97051E6E5D1}</Project>
+      <Name>Knots.Security.TracksEraserCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

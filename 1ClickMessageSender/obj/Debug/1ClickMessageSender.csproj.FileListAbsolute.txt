@@ -1,0 +1,9 @@
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.exe.config
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.exe
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\bin\Debug\1Click.pdb
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ClickMaint.frmMain.resources
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResGen.read.1.tlog
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\ResGen.write.1.tlog
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\1Click.exe
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\1ClickMessageSender\obj\Debug\1Click.pdb

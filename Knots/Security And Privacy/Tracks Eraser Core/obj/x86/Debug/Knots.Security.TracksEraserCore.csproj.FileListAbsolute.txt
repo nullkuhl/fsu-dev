@@ -1,0 +1,9 @@
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\DLL\SQLite.Interop.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\DLL\System.Data.SQLite.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\DLL\UrlHistoryLibrary.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\TracksEraserCore.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\TracksEraserCore.pdb
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\bin\Debug\System.Data.SQLite.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\obj\x86\Debug\TracksEraserCore.dll
+C:\Users\nullkuhl\Documents\GitHub\fsu-dev\Knots\Security And Privacy\Tracks Eraser Core\obj\x86\Debug\TracksEraserCore.pdb

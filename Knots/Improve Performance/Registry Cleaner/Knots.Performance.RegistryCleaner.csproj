@@ -63,10 +63,6 @@
     <StartupObject>RegistryCleaner.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libraries\FreemiumUtil.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
@@ -185,9 +181,6 @@
     <Resource Include="Images\cleaning_done.png" />
     <Resource Include="Images\scan_cancelled.png" />
     <Resource Include="Images\last_scan.png" />
-    <Content Include="Libraries\RegistryCleanerCore.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\help_on.png" />
     <None Include="Resources\help_off.png" />
     <Resource Include="Images\gear.png" />
@@ -228,9 +221,6 @@
     <Resource Include="Images\HelpButton.png" />
     <Resource Include="Images\HelpButton_On.png" />
     <Resource Include="Images\thinBar.png" />
-    <Content Include="Libraries\FreemiumUtil.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -240,9 +230,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\FreemiumUtil\FreemiumUtil.csproj">
+      <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
+      <Name>FreemiumUtil</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj">
-      <Project>{ff431ef5-47e4-43a2-b7a9-ff0939c688e5}</Project>
+      <Project>{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}</Project>
       <Name>Knots.Performance.RegistryCleanerCore</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -75,11 +75,6 @@
     </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FreemiumUtil, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Libraries\FreemiumUtil.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SQLite, Version=1.0.76.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
@@ -138,19 +133,12 @@
   <ItemGroup>
     <Content Include="Images\bullet_white.png" />
     <Content Include="Images\icon-error.png" />
-    <Content Include="Libraries\FreemiumUtil.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Libraries\FreemiumUtilites.Infrastructure.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Libraries\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Libraries\System.Data.SQLite.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Libraries\TracksEraserCore.dll" />
     <Content Include="Libraries\UrlHistoryLibrary.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -187,15 +175,22 @@
     <ProjectReference Include="..\FreemiumUtilities.Infrastructure\FreemiumUtilities.Infrastructure.csproj">
       <Project>{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}</Project>
       <Name>FreemiumUtilities.Infrastructure</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FreemiumUtil\FreemiumUtil.csproj">
+      <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
+      <Name>FreemiumUtil</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Knots\Security And Privacy\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj">
       <Project>{374F6345-4849-4379-B200-B97051E6E5D1}</Project>
       <Name>Knots.Security.TracksEraserCore</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.TracksEraser.dll" "$(SolutionDir)FreemiumUtilities\Applications\" /Y</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.TracksEraser.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
