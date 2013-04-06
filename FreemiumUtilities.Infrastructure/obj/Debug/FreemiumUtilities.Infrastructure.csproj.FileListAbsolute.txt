@@ -1,6 +1,0 @@
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.dll
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\FreemiumUtilities.Infrastructure.pdb
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\bin\Debug\WPFLocalizeExtension.dll
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.dll
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtilities.Infrastructure\obj\Debug\FreemiumUtilities.Infrastructure.pdb

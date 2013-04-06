@@ -1,6 +1,0 @@
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.dll.config
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.dll
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\ResolveAssemblyReference.cache
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\FreemiumUtil.dll
-C:\Users\nullkuhl\Documents\GitHub\fsu-dev\FreemiumUtil\obj\Debug\FreemiumUtil.pdb
