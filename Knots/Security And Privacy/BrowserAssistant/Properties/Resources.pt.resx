@@ -169,10 +169,10 @@
     <value>Antes de utilizar esta funcionalidade, inicie o firefox, pelo menos, uma vez.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="HijackRestore" xml:space="preserve">
-    <value>Apropriação do Restauro </value>
+    <value>Apropriação do Restauro</value>
   </data>
   <data name="HomePage" xml:space="preserve">
     <value>Página Inicial</value>
@@ -190,7 +190,7 @@
     <value>Extensões do Internet Explorer</value>
   </data>
   <data name="InternetExplorerToolbars" xml:space="preserve">
-    <value>Barras de ferramentas do IE</value>
+    <value>IE-Toolbars</value>
   </data>
   <data name="LocalPage" xml:space="preserve">
     <value>Página Local</value>
@@ -241,7 +241,7 @@
     <value>Guardar Extensões do IE</value>
   </data>
   <data name="SaveIeToolbars" xml:space="preserve">
-    <value>Salve IE Toolbars</value>
+    <value>Guardar IE-Toolbars</value>
   </data>
   <data name="SearchAssistant" xml:space="preserve">
     <value>Assistente de Procura</value>
@@ -274,7 +274,7 @@
     <value>Bem-vindo</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      Bem-vindo ao Browser Manager!
+    <value>Bem-vindo ao Browser Manager!
 Escolha o Separador que corresponde à Configuração do Browser que pretende alterar</value>
   </data>
 </root>

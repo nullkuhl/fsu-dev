@@ -571,8 +571,7 @@ namespace BrowserAssistant.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to                                       Welcome to Browser Manager!
-        ///
+        ///   Looks up a localized string similar to Welcome to Browser Manager!
         ///Choose the tab that corresponds to the browser configuration you want to change..
         /// </summary>
         public static string WelcomeMessage {

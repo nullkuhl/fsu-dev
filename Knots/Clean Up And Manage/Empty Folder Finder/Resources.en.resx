@@ -117,11 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="header" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>resources\freem_emptyfolder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="abort" xml:space="preserve">
     <value>Abort</value>
   </data>
   <data name="aborted" xml:space="preserve">
     <value>Aborted</value>
+  </data>
+  <data name="abort_button" xml:space="preserve">
+    <value>Abort</value>
   </data>
   <data name="cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -144,17 +151,29 @@
   <data name="delete_checked_folders" xml:space="preserve">
     <value>Delete Checked Folders</value>
   </data>
+  <data name="del_folder" xml:space="preserve">
+    <value>Delete Folder</value>
+  </data>
   <data name="drives" xml:space="preserve">
     <value>Drives</value>
   </data>
   <data name="empty_folder_finder" xml:space="preserve">
     <value>Find empty folders</value>
   </data>
+  <data name="error_deleting_file" xml:space="preserve">
+    <value>Error Deleting File</value>
+  </data>
   <data name="exclude" xml:space="preserve">
     <value>Exclude (Never Find Again)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Excluded Successfully!</value>
+    <value>Excluded Successfully</value>
+  </data>
+  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
+    <value>The selected folder cannot be opened! Maybe it exists no longer.</value>
+  </data>
+  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
+    <value>Folder cannot be opened</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Folder Name</value>
@@ -162,12 +181,23 @@
   <data name="folder_path" xml:space="preserve">
     <value>Folder Path</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="header" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>resources\freem_emptyfolder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="ignore" xml:space="preserve">
+    <value>Ignore</value>
+  </data>
+  <data name="ignore_all" xml:space="preserve">
+    <value>Ignore All</value>
+  </data>
+  <data name="ManyFoldersToOpen" xml:space="preserve">
+    <value>You are trying to open {0} folders at once. This could cause the Windows Explorer to crash. Do you want to continue?</value>
   </data>
   <data name="no_drives_selected" xml:space="preserve">
     <value>You have to select atleast 1 item for scan</value>
+  </data>
+  <data name="OpeningFolders" xml:space="preserve">
+    <value>Opening empty folders</value>
   </data>
   <data name="open_folder" xml:space="preserve">
     <value>Open Folder</value>
@@ -178,11 +208,14 @@
   <data name="processing" xml:space="preserve">
     <value>Processing</value>
   </data>
+  <data name="retry" xml:space="preserve">
+    <value>Retry</value>
+  </data>
   <data name="scanning" xml:space="preserve">
     <value>Scanning</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Scanning aborted.</value>
+    <value>Scanning aborted</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Scan Drives</value>
@@ -201,38 +234,5 @@
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Please select folder(s) to be deleted first.</value>
-  </data>
-  <data name="error_deleting_file" xml:space="preserve">
-    <value>Error Deleting File</value>
-  </data>
-  <data name="abort_button" xml:space="preserve">
-    <value>Abort</value>
-  </data>
-  <data name="ignore" xml:space="preserve">
-    <value>Ignore</value>
-  </data>
-  <data name="ignore_all" xml:space="preserve">
-    <value>Ignore All</value>
-  </data>
-  <data name="retry" xml:space="preserve">
-    <value>Retry</value>
-  </data>
-  <data name="del_folder" xml:space="preserve">
-    <value>Delete Folder</value>
-  </data>
-  <data name="ManyFoldersToOpen" xml:space="preserve">
-    <value>You are trying to open {0} folders at once. This could cause the Windows Explorer to crash. Do you want to continue?</value>
-  </data>
-  <data name="OpeningFolders" xml:space="preserve">
-    <value>Opening empty folders</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
-    <value>The selected folder cannot be opened! Maybe it exists no longer.</value>
-  </data>
-  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
-    <value>Folder cannot be opened</value>
   </data>
 </root>

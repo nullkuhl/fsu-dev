@@ -237,6 +237,9 @@
   <data name="help" xml:space="preserve">
     <value>Ayuda</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>Si no está seguro de estas opciones, se recomienda dejarlas en su configuración predeterminada</value>
   </data>
@@ -297,6 +300,9 @@
   <data name="pending" xml:space="preserve">
     <value>pendiente</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Procesando...</value>
+  </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Procesando archivos basura</value>
   </data>
@@ -325,10 +331,10 @@
     <value>analizando</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Seleccione una unidad de la lista.</value>
+    <value>Seleccione una unidad de la lista</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Seleccione al menos un elemento de la lista.</value>
+    <value>Seleccione al menos un elemento de la lista</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Seleccione un conjunto de copia de seguridad que quiera restaurar y haga clic en Restaurar</value>
@@ -355,7 +361,7 @@
     <value>Los programas utilizan los archivos temporales como un espacio de almacenamiento intermedio y normalmente se eliminan tras su uso</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>No se ha encontrado esta herramienta en su plataforma.</value>
+    <value>No se ha encontrado esta herramienta en su plataforma</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>
@@ -374,6 +380,9 @@
   </data>
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Espere a que haya finalizado el análisis de las unidades seleccionadas</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Los archivos existentes en el directorio temporal ("Temp") de Windows siempre se consideran superfluos.</value>
   </data>
   <data name="windows_components" xml:space="preserve">
     <value>Componentes de Windows</value>
@@ -395,14 +404,5 @@
   </data>
   <data name="zero_files_def" xml:space="preserve">
     <value>Los archivos de cero bytes no albergan datos y normalmente se pueden eliminar</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Procesamiento de ...</value>
-  </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Los archivos dentro de la carpeta temporal de Windows siempre se consideran como residuos</value>
   </data>
 </root>

@@ -164,11 +164,32 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   <data name="closed_google" xml:space="preserve">
     <value>Tem de fechar o Chrome para esta operação. Tem a certeza de que o Chrome está fechado</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Isso requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
+  </data>
+  <data name="CloseIE1" xml:space="preserve">
+    <value>Para este procedimento o Internet Explorer tem de estar fechado. Tem a certeza que o Internet Explorer está fechado?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome está a ser executado, feche-o e faça scann novamente.</value>
+  </data>
   <data name="close_ff" xml:space="preserve">
     <value>Feche o Firefox e tente novamente</value>
   </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox já está em execução, feche-o em seguida, execute o Scan novamente.</value>
+  </data>
   <data name="close_google" xml:space="preserve">
     <value>Feche o Chrome e tente novamente</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Esta operação requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Para este procedimento o Internet Explorer tem de estar fechado. Tem a certeza que o Internet Explorer está fechado?</value>
+  </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer está a ser executado, feche-o e faça scann novamente.</value>
   </data>
   <data name="cookies" xml:space="preserve">
     <value>Cookies</value>
@@ -198,10 +219,10 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
     <value>Erro</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>gostaria de apagar utilizando a caixa de verificação à esquerda do nome do registo.</value>
+    <value>gostaria de apagar utilizando a caixa de verificação à esquerda do nome do registo</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Os registos selecionados foram apagados com sucesso.</value>
+    <value>Os registos selecionados foram apagados com sucesso</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>Não existem registos selecionados. Para apagar registos, selecionado cada registo que</value>
@@ -210,7 +231,7 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
     <value>Erro ao aceder à Reciclagem</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Não selecionou quaisquer itens a analisar!</value>
+    <value>Não selecionou quaisquer itens a analisar</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Tem a certeza de que pretende apagar</value>
@@ -281,6 +302,9 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   <data name="google_saved_info" xml:space="preserve">
     <value>Google Chrome - Guardado a partir da Informação</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
   <data name="ie" xml:space="preserve">
     <value>Internet Explorer</value>
   </data>
@@ -295,6 +319,9 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   </data>
   <data name="ie_history_item" xml:space="preserve">
     <value>Item do Histórico do IE:</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer é executado. Por favor feche o Internet Explorer para eliminar cookies.</value>
   </data>
   <data name="ie_typed_urls" xml:space="preserve">
     <value>URLs do Tipo IE</value>
@@ -368,6 +395,9 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   <data name="scan_started" xml:space="preserve">
     <value>Análise iniciada.</value>
   </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Apenas faixas apagáveis</value>
+  </data>
   <data name="start_menu_history" xml:space="preserve">
     <value>Histórico de Cliques do Menu de Início</value>
   </data>
@@ -433,29 +463,5 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   </data>
   <data name="win_temp_files" xml:space="preserve">
     <value>Ficheiros Temporários do Windows</value>
-  </data>
-  <data name="CloseIE" xml:space="preserve">
-    <value>Isso requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
-  </data>
-  <data name="close_chrome_to_erase" xml:space="preserve">
-    <value>Google Chrome já está em execução, feche-o em seguida, execute o Scan novamente.</value>
-  </data>
-  <data name="close_firefox_to_erase" xml:space="preserve">
-    <value>Mozilla Firefox já está em execução, feche-o em seguida, execute o Scan novamente.</value>
-  </data>
-  <data name="close_iexplore_to_erase" xml:space="preserve">
-    <value>Esta operação requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
-  </data>
-  <data name="close_ie_to_erase" xml:space="preserve">
-    <value>Esta operação requer o Internet Explorer para ser fechado. Você tem certeza que o Internet Explorer é fechado?</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="ie_running" xml:space="preserve">
-    <value>Internet Explorer está sendo executado. Por favor, feche o navegador Internet Explorer para apagar cookies.</value>
-  </data>
-  <data name="show_av_er_tracks" xml:space="preserve">
-    <value>Ver apenas disponíveis faixas eraseable</value>
   </data>
 </root>

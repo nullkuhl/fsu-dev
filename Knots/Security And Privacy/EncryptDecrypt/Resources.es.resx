@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>Se ha creado un EXE de cifrado automático!</value>
+    <value>Se ha creado un EXE de cifrado automático</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Examinar</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>No se puede cifrar el archivo; siga las instrucciones adecuadas para hacerlo.</value>
+    <value>No se puede cifrar el archivo; siga las instrucciones adecuadas para hacerlo</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>No se puede crear un descifrador ejecutable.</value>
+    <value>No se puede crear un descifrador ejecutable</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>No se puede encontrar</value>
@@ -163,7 +163,7 @@
     <value>Cifrar</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>Archivo cifrado correctamente!</value>
+    <value>Archivo cifrado correctamente</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Cifrado</value>
@@ -186,8 +186,23 @@
   <data name="file_encrypter_decrypter_title" xml:space="preserve">
     <value>Cifrar y descifrar</value>
   </data>
+  <data name="file_open_failed" xml:space="preserve">
+    <value>No se ha podido abrir el archivo descifrado.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="open_file_decrypt" xml:space="preserve">
     <value>Abrir el archivo después de descifrarlo correctamente</value>
+  </data>
+  <data name="original_delete" xml:space="preserve">
+    <value>Si ha olvidado su contraseña y elimina el archivo original, ya no podrá acceder al mismo. ¿Aún así desea continuar?</value>
+  </data>
+  <data name="output_exists_message" xml:space="preserve">
+    <value>El archivo de salida "%1" ya existe. ¿Desea sobrescribirlo?</value>
+  </data>
+  <data name="output_exists_title" xml:space="preserve">
+    <value>El archivo de salida ya existe.</value>
   </data>
   <data name="pass" xml:space="preserve">
     <value>Contraseña</value>
@@ -202,7 +217,7 @@
     <value>Guardar en</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Seleccionar primero un destino válido.</value>
+    <value>Seleccionar primero un destino válido</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Seleccionar un archivo cifrado que se quiera descifrar</value>
@@ -225,28 +240,13 @@
   <data name="select_path_decrypt" xml:space="preserve">
     <value>Seleccionar la ruta del archivo descifrado</value>
   </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>División interrumpida. El proceso no puede continuar.</value>
+  </data>
   <data name="succ" xml:space="preserve">
     <value>Correcto</value>
   </data>
   <data name="wrong_pass" xml:space="preserve">
     <value>Contraseña incorrecta</value>
-  </data>
-  <data name="file_open_failed" xml:space="preserve">
-    <value>El archivo descifrado no se pudo abrir.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="original_delete" xml:space="preserve">
-    <value>Si el archivo original es borrado no se puede acceder a él nunca más en caso de que olvide su contraseña. ¿Desea continuar de todos modos?</value>
-  </data>
-  <data name="output_exists_message" xml:space="preserve">
-    <value>El archivo de salida "% 1" ya existe. ¿Desea reemplazar el archivo?</value>
-  </data>
-  <data name="output_exists_title" xml:space="preserve">
-    <value>El archivo de salida ya existe</value>
-  </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Proceso de separación interrumpido. No se puede continuar!</value>
   </data>
 </root>

@@ -214,7 +214,7 @@ namespace Uninstall_Manager {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Programs installed on your computer (Total .
+        ///   Looks up a localized string similar to Programs installed on your computer (Total.
         /// </summary>
         internal static string programs_installed_total {
             get {

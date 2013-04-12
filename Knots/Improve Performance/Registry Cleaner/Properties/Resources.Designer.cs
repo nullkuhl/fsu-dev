@@ -553,7 +553,7 @@ namespace RegistryCleaner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to System Restore is either disabled or unavailable on this computer. .
+        ///   Looks up a localized string similar to System Restore is either disabled or unavailable on this computer..
         /// </summary>
         public static string SystemRestoreUnavailable {
             get {

@@ -154,12 +154,9 @@
     <value>Jedes Mal, wenn Sie ein neues Programm installieren, verändern Sie Ihren Computer. Manchmal wird durch diese Änderungen Ihr Computer instabil. Mit der Systemwiederherstellung können Sie Ihr System auf den Zustand zu einem früheren Zeitpunkt zurücksetzen.</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden.</value>
+    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden</value>
   </data>
   <data name="window_title" xml:space="preserve">
     <value>Windows verwalten</value>
-  </data>
-  <data name="xp_warning" xml:space="preserve">
-    <value>Windows System File Checker könnte für Ihre Windows Installations-CD zu bitten, weiterhin, bereiten Sie bitte Ihre Disc</value>
   </data>
 </root>

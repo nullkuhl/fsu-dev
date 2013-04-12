@@ -375,7 +375,7 @@ namespace DiskAnalysis.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You need administrative rights to use this functionality..
+        ///   Looks up a localized string similar to http://freemium.com/company/faq/.
         /// </summary>
         public static string NoRightsToDelete {
             get {

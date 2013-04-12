@@ -165,6 +165,9 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Le répertoire a été détruit.</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Eliminar también las carpetas</value>
+  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>La suppression du contenu du fichier a échoué.</value>
   </data>
@@ -207,6 +210,9 @@
   <data name="file_shredder" xml:space="preserve">
     <value>Supprimer les fichiers de manière sûre</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Chemin d’accès invalide</value>
   </data>
@@ -232,7 +238,7 @@
     <value>Prêt à être broyé</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>Souhaitez-vous continuer?</value>
+    <value>Souhaitez-vous continuer ?</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>Traitement en cours...</value>
@@ -278,11 +284,5 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Venez nous rendre visite</value>
-  </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Supprimez les dossiers, trop</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

@@ -121,7 +121,7 @@
     <value>Todos os ficheiros (*)</value>
   </data>
   <data name="all_filesystem_objects" xml:space="preserve">
-    <value>AllFilesystemObjects</value>
+    <value>Todos os objetos do sistema de arquivos</value>
   </data>
   <data name="background" xml:space="preserve">
     <value>fundo</value>
@@ -154,10 +154,10 @@
     <value>Diretório</value>
   </data>
   <data name="directory_background" xml:space="preserve">
-    <value>Diretório \ Background</value>
+    <value>diretório\fundo</value>
   </data>
   <data name="directory_shell" xml:space="preserve">
-    <value>Directory \ shell</value>
+    <value>diretório\entrada</value>
   </data>
   <data name="drive" xml:space="preserve">
     <value>Unidade</value>
@@ -175,13 +175,13 @@
     <value>Pasta</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="internal_name" xml:space="preserve">
     <value>Nome Interno</value>
   </data>
   <data name="lnkfile" xml:space="preserve">
-    <value>atalho</value>
+    <value>link</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Novo</value>

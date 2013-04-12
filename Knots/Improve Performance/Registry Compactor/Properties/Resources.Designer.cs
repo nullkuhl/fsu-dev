@@ -95,7 +95,7 @@ namespace RegistryCompactor.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Analyse.
+        ///   Looks up a localized string similar to Analyze.
         /// </summary>
         public static string Analyze {
             get {

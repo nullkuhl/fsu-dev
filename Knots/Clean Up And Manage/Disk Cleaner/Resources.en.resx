@@ -216,6 +216,9 @@
   <data name="files1" xml:space="preserve">
     <value>files</value>
   </data>
+  <data name="FilesRestored" xml:space="preserve">
+    <value>Files successfully restored</value>
+  </data>
   <data name="file_type" xml:space="preserve">
     <value>Filetype</value>
   </data>
@@ -234,11 +237,17 @@
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>If you are unsure of these options, it is recommended to leave them at their default</value>
   </data>
   <data name="include" xml:space="preserve">
     <value>Include</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="last_access" xml:space="preserve">
     <value>Last access</value>
@@ -291,6 +300,9 @@
   <data name="pending" xml:space="preserve">
     <value>pending</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Processing junk files</value>
   </data>
@@ -319,10 +331,10 @@
     <value>scanning</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Please select a drive from the list.</value>
+    <value>Please select a drive from the list</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Please select at least one item fom the list.</value>
+    <value>Please select at least one item fom the list</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Please select a backup set you want to restore and click Restore</value>
@@ -349,7 +361,7 @@
     <value>Temporary files are used by programs as an intermediate storage space and usually removed after use</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>This tool was not found on your platform.</value>
+    <value>This tool was not found on your platform</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>
@@ -368,6 +380,9 @@
   </data>
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Please wait until scanning the selected drives has been finished</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Files inside the Windows temp folder are always considered as waste</value>
   </data>
   <data name="windows_components" xml:space="preserve">
     <value>Windows components</value>
@@ -389,20 +404,5 @@
   </data>
   <data name="zero_files_def" xml:space="preserve">
     <value>Zero-byte files don't hold any data and can usually be deleted</value>
-  </data>
-  <data name="FilesRestored" xml:space="preserve">
-    <value>Files successfully restored</value>
-  </data>
-  <data name="info" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Files inside the Windows temp folder are always considered as waste</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
   </data>
 </root>

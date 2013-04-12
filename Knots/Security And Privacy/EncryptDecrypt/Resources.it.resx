@@ -118,16 +118,16 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="auto_encrypt_created" xml:space="preserve">
-    <value>L'eseguibile per la codifica automatica è stato creato!</value>
+    <value>L'eseguibile per la codifica automatica è stato creato</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Sfoglia</value>
   </data>
   <data name="cannot_be_encrypted" xml:space="preserve">
-    <value>Impossibile codificare il file; seguire le istruzioni corrette per effettuare la codifica.</value>
+    <value>Impossibile codificare il file; seguire le istruzioni corrette per effettuare la codifica</value>
   </data>
   <data name="cannot_create" xml:space="preserve">
-    <value>Impossibile creare uno strumento di decodifica eseguibile.</value>
+    <value>Impossibile creare uno strumento di decodifica eseguibile</value>
   </data>
   <data name="cannot_find" xml:space="preserve">
     <value>Impossibile trovare</value>
@@ -163,7 +163,7 @@
     <value>Codifica</value>
   </data>
   <data name="encrypted_succ" xml:space="preserve">
-    <value>File codificato con successo!</value>
+    <value>File codificato con successo</value>
   </data>
   <data name="encryption" xml:space="preserve">
     <value>Codifica</value>
@@ -186,8 +186,23 @@
   <data name="file_encrypter_decrypter_title" xml:space="preserve">
     <value>Codifica e decodifica</value>
   </data>
+  <data name="file_open_failed" xml:space="preserve">
+    <value>Non è stato possibile aprire il file decodificato.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="open_file_decrypt" xml:space="preserve">
     <value>Apri file dopo decodifica riuscita</value>
+  </data>
+  <data name="original_delete" xml:space="preserve">
+    <value>In caso di cancellazione del file originale, non è più possibile accedervi se si è dimenticata la password. Continuare comunque?</value>
+  </data>
+  <data name="output_exists_message" xml:space="preserve">
+    <value>Il file di output "%1" esiste già. Sovrascrivere il file?</value>
+  </data>
+  <data name="output_exists_title" xml:space="preserve">
+    <value>Il file di output esiste già</value>
   </data>
   <data name="pass" xml:space="preserve">
     <value>Password</value>
@@ -202,7 +217,7 @@
     <value>Salva in</value>
   </data>
   <data name="select_destination_first" xml:space="preserve">
-    <value>Seleziona prima una destinazione valida.</value>
+    <value>Seleziona prima una destinazione valida</value>
   </data>
   <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
     <value>Seleziona un file codificato che desideri decodificare</value>
@@ -225,28 +240,13 @@
   <data name="select_path_decrypt" xml:space="preserve">
     <value>Seleziona percorso per il file decodificato</value>
   </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Separazione interrotta. Impossibile continuare il processo.</value>
+  </data>
   <data name="succ" xml:space="preserve">
     <value>Operazione riuscita</value>
   </data>
   <data name="wrong_pass" xml:space="preserve">
     <value>Password errata</value>
-  </data>
-  <data name="file_open_failed" xml:space="preserve">
-    <value>Il file decodificato non può essere aperto.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="original_delete" xml:space="preserve">
-    <value>Se il file originale viene eliminato non è possibile accedere a più nel caso in cui si dimentichi la password. Si desidera continuare comunque?</value>
-  </data>
-  <data name="output_exists_message" xml:space="preserve">
-    <value>Il file di output "% 1" esiste già. Vuoi sovrascrivere il file?</value>
-  </data>
-  <data name="output_exists_title" xml:space="preserve">
-    <value>File di output esiste già</value>
-  </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Processo di scissione interrotto. Non può continuare!</value>
   </data>
 </root>

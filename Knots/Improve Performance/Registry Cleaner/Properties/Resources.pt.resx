@@ -153,6 +153,9 @@
   <data name="HelpScanTitle" xml:space="preserve">
     <value>Ficheiros de ajuda</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Menu Iniciar e Histórico</value>
   </data>
@@ -210,8 +213,11 @@
   <data name="RestoreDisabled" xml:space="preserve">
     <value>O restauro está desativado.</value>
   </data>
+  <data name="Root" xml:space="preserve">
+    <value>Raiz</value>
+  </data>
   <data name="ScanAborted" xml:space="preserve">
-    <value>Primeiro selecione alguns módulos. </value>
+    <value>Primeiro selecione alguns módulos.</value>
   </data>
   <data name="ScanAbortedByUser" xml:space="preserve">
     <value>A análise foi abortada pelo utilizador.</value>
@@ -262,7 +268,7 @@
     <value>O Restauro do Sistema está indisponível ou desativado. A opção estava desativada.</value>
   </data>
   <data name="SystemRestoreUnavailable" xml:space="preserve">
-    <value>Restaurar Sistema está desativado ou indisponível neste computador. </value>
+    <value>Restaurar Sistema está desativado ou indisponível neste computador.</value>
   </data>
   <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
     <value>Restauro do Sistema está desativado nesta máquina, pretende continuar à sua responsabilidade?</value>
@@ -281,11 +287,5 @@
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Pretende criar um ponto de restauro do sistema antes de continuar? Este processo pode demorar alguns minutos a terminar.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="Root" xml:space="preserve">
-    <value>raiz</value>
   </data>
 </root>

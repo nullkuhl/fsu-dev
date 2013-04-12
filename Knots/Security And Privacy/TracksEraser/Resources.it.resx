@@ -164,11 +164,32 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   <data name="closed_google" xml:space="preserve">
     <value>Questa operazione richiede la chiusura di Chrome. Sei sicuro che Chrome sia chiuso?</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Ciò richiede Internet Explorer per essere chiuso. Sei sicuro di Internet Explorer è chiuso?</value>
+  </data>
+  <data name="CloseIE1" xml:space="preserve">
+    <value>Per questo processo Internet Explorer deve essere chiuso. Internet Explorer è chiuso?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome è in esecuzione, chiuderlo e rieseguire lo scan.</value>
+  </data>
   <data name="close_ff" xml:space="preserve">
     <value>Chiudi Firefox e riprova</value>
   </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
   <data name="close_google" xml:space="preserve">
     <value>Chiudi Chrome e riprova</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Questa operazione richiede Internet Explorer per essere chiuso. Sei sicuro di Internet Explorer è chiuso?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Per questo processo Internet Explorer deve essere chiuso. Internet Explorer è chiuso?</value>
+  </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer è in esecuzione, chiuderlo e rieseguire lo scan.</value>
   </data>
   <data name="cookies" xml:space="preserve">
     <value>Cookie</value>
@@ -198,10 +219,10 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
     <value>Errore</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>Fai clic per cancellare utilizzando la casella di spunta a sinistra del nome della traccia.</value>
+    <value>Fai clic per cancellare utilizzando la casella di spunta a sinistra del nome della traccia</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Le tracce selezionate sono state cancellate con successo.</value>
+    <value>Le tracce selezionate sono state cancellate con successo</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>Nessuna traccia selezionata. Per cancellare le tracce, seleziona ogni traccia desiderata</value>
@@ -210,7 +231,7 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
     <value>Errore di accesso al Cestino</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Non hai selezionato alcun elemento da analizzare!</value>
+    <value>Non hai selezionato alcun elemento da analizzare</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Sei sicuro di voler cancellare</value>
@@ -281,6 +302,9 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   <data name="google_saved_info" xml:space="preserve">
     <value>Google Chrome - Informazioni sul modulo salvato</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="ie" xml:space="preserve">
     <value>Internet Explorer</value>
   </data>
@@ -295,6 +319,9 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   </data>
   <data name="ie_history_item" xml:space="preserve">
     <value>Elemento cronologia IE:</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer è in esecuzione. Chiudere Internet Explorer per cancellare i cookie.</value>
   </data>
   <data name="ie_typed_urls" xml:space="preserve">
     <value>URL scritti di IE</value>
@@ -368,6 +395,9 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   <data name="scan_started" xml:space="preserve">
     <value>Scansione avviata.</value>
   </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Solo tracce cancellabili</value>
+  </data>
   <data name="start_menu_history" xml:space="preserve">
     <value>Avvia cronologia clic di menu</value>
   </data>
@@ -433,29 +463,5 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   </data>
   <data name="win_temp_files" xml:space="preserve">
     <value>File temporanei Windows</value>
-  </data>
-  <data name="CloseIE" xml:space="preserve">
-    <value>Ciò richiede Internet Explorer per essere chiuso. Sei sicuro di Internet Explorer è chiuso?</value>
-  </data>
-  <data name="close_chrome_to_erase" xml:space="preserve">
-    <value>Google Chrome è già in esecuzione, chiudere poi eseguire la scansione di nuovo.</value>
-  </data>
-  <data name="close_firefox_to_erase" xml:space="preserve">
-    <value>Mozilla Firefox è già in esecuzione, chiudere poi eseguire la scansione di nuovo.</value>
-  </data>
-  <data name="close_iexplore_to_erase" xml:space="preserve">
-    <value>Questa operazione richiede Internet Explorer per essere chiuso. Sei sicuro di Internet Explorer è chiuso?</value>
-  </data>
-  <data name="close_ie_to_erase" xml:space="preserve">
-    <value>Questa operazione richiede Internet Explorer per essere chiuso. Sei sicuro di Internet Explorer è chiuso?</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="ie_running" xml:space="preserve">
-    <value>Internet Explorer è in esecuzione. Si prega di chiudere il browser Internet Explorer per eliminare i cookie.</value>
-  </data>
-  <data name="show_av_er_tracks" xml:space="preserve">
-    <value>Mostra tracce cancellabili tramite solo</value>
   </data>
 </root>

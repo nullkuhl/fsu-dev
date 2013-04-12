@@ -189,6 +189,9 @@
   <data name="found" xml:space="preserve">
     <value>Encontrados: {0}</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="include_non_recoverable" xml:space="preserve">
     <value>Incluir también archivos no recuperables</value>
   </data>
@@ -244,13 +247,13 @@
     <value>Restauración</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>Restaurar en la misma unidad puede reducir las probabilidades de conseguir una recuperación correcta. ¿Está seguro de que desea continuar?</value>
+    <value>Restaurar en la misma unidad puede reducir las probabilidades de conseguir una recuperación correcta. ¿Está seguro de que desea continuar</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Análisis finalizado</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>El análisis ha finalizado, pero parece que no se han encontrado archivos recuperables en los datos recopilados de su disco duro.</value>
+    <value>El análisis ha finalizado, pero parece que no se han encontrado archivos recuperables en los datos recopilados de su disco duro</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Buscar</value>
@@ -272,8 +275,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Sí</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

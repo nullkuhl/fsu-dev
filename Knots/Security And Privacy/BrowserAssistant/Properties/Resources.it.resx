@@ -169,7 +169,7 @@
     <value>Avvia Firefox almeno una volta prima di utilizzare questa funzionalità.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://it.freemium.com/company/faq/</value>
   </data>
   <data name="HijackRestore" xml:space="preserve">
     <value>Ripristino hijack</value>
@@ -190,7 +190,7 @@
     <value>Estensioni di Internet Explorer</value>
   </data>
   <data name="InternetExplorerToolbars" xml:space="preserve">
-    <value>Barre degli strumenti di IE</value>
+    <value>Toolbar IE</value>
   </data>
   <data name="LocalPage" xml:space="preserve">
     <value>Pagina locale</value>
@@ -241,7 +241,7 @@
     <value>Salva estensioni di IE</value>
   </data>
   <data name="SaveIeToolbars" xml:space="preserve">
-    <value>Salva IE Barre degli strumenti</value>
+    <value>Salva toolbar IE</value>
   </data>
   <data name="SearchAssistant" xml:space="preserve">
     <value>Assistente di ricerca</value>
@@ -274,7 +274,7 @@
     <value>Benvenuto</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      Benvenuto nella Gestione del browser!
+    <value>Benvenuto nella Gestione del browser!
 Scegli la scheda corrispondente alla configurazione del browser che desideri modificare</value>
   </data>
 </root>

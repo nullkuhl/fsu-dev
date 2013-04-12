@@ -141,6 +141,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Annuler</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
   <data name="CommandPrompt" xml:space="preserve">
     <value>Invite de saisie</value>
   </data>
@@ -162,11 +165,20 @@
   <data name="DeleteFolderConfirmation" xml:space="preserve">
     <value>Souhaitez-vous vraiment supprimer ce dossier ?</value>
   </data>
+  <data name="DeleteHiddenFile" xml:space="preserve">
+    <value>Le fichier est un fichier caché. Souhaitez-vous quand même supprimer ce fichier ?</value>
+  </data>
+  <data name="DeleteSystemFile" xml:space="preserve">
+    <value>Le fichier est un fichier système. Souhaitez-vous quand même supprimer ce fichier ?</value>
+  </data>
   <data name="DiskAnalysis" xml:space="preserve">
     <value>Analyser le support de données</value>
   </data>
   <data name="Explorer" xml:space="preserve">
     <value>Explorer</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>Le fichier est en cours d’utilisation et ne peut pas être supprimé.</value>
   </data>
   <data name="FileName" xml:space="preserve">
     <value>Nom du fichier</value>
@@ -186,6 +198,9 @@
   <data name="FreeSpace" xml:space="preserve">
     <value>Espace de stockage libre</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="IndividualDrives" xml:space="preserve">
     <value>Lecteurs isolés</value>
   </data>
@@ -196,13 +211,16 @@
     <value>Nom</value>
   </data>
   <data name="NoRightsToDelete" xml:space="preserve">
-    <value>Vous avez besoin des droits d’administrateur pour utiliser cette fonction.</value>
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Percent" xml:space="preserve">
     <value>Pourcent</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Traitement en cours...</value>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Propriétés</value>
@@ -224,23 +242,5 @@
   </data>
   <data name="UsedOverTotal" xml:space="preserve">
     <value>Utilisé/Au total</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>fermer</value>
-  </data>
-  <data name="DeleteHiddenFile" xml:space="preserve">
-    <value>Ce fichier est un fichier caché. Voulez-vous le supprimer de toute façon?</value>
-  </data>
-  <data name="DeleteSystemFile" xml:space="preserve">
-    <value>Ce fichier est un fichier système. Voulez-vous le supprimer de toute façon?</value>
-  </data>
-  <data name="FileInUse" xml:space="preserve">
-    <value>Le fichier est en cours d'utilisation et ne peut pas être supprimé.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Traitement en cours ...</value>
   </data>
 </root>

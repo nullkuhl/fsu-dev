@@ -252,6 +252,18 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   <data name="CleanerProblemsFoundClickClear" xml:space="preserve">
     <value>problemas encontrados. Selecione os problemas que pretende remover e prima Iniciar Limpeza.</value>
   </data>
+  <data name="CleaningClipboard" xml:space="preserve">
+    <value>Limpeza área de transferência...</value>
+  </data>
+  <data name="CleaningRecycleBin" xml:space="preserve">
+    <value>Limpeza reciclagem...</value>
+  </data>
+  <data name="CleaningRegistry" xml:space="preserve">
+    <value>Limpeza Registry...</value>
+  </data>
+  <data name="CleaningUrlHistory" xml:space="preserve">
+    <value>Limpeza historial url...</value>
+  </data>
   <data name="CleanUpAndManage" xml:space="preserve">
     <value>Limpar e Gerir</value>
   </data>
@@ -270,8 +282,14 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   <data name="CloseIE" xml:space="preserve">
     <value>O Internet Explorer tem de estar fechado. Tem a certeza de que o Internet Explorer está fechado?</value>
   </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome a decorrer, por favor guarde o seu trabalho e clique depois em ok.</value>
+  </data>
   <data name="close_ff" xml:space="preserve">
     <value>Feche o Firefox e tente novamente</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox a decorrer, por favor guarde o seu trabalho e clique depois em ok.</value>
   </data>
   <data name="close_google" xml:space="preserve">
     <value>Feche o Chrome e tente novamente</value>
@@ -322,13 +340,13 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
     <value>Gerir menu de contexto</value>
   </data>
   <data name="ContextMenuManagerDesc" xml:space="preserve">
-    <value>Gere os ficheiros e pastas das entradas do menu de contexto  </value>
+    <value>Gere os ficheiros e pastas das entradas do menu de contexto</value>
   </data>
   <data name="ContextMenuManagerDetailed" xml:space="preserve">
     <value>Gerir menu de contexto</value>
   </data>
   <data name="ContextMenuManagerDetailedDesc" xml:space="preserve">
-    <value>Gere os ficheiros, pastas e dispositivos das entradas do menu de contexto  </value>
+    <value>Gere os ficheiros, pastas e dispositivos das entradas do menu de contexto</value>
   </data>
   <data name="ControlScanTitle" xml:space="preserve">
     <value>Análise de Controlo</value>
@@ -344,6 +362,9 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   </data>
   <data name="CreateRestorePoint" xml:space="preserve">
     <value>Criar Ponto de Restauro</value>
+  </data>
+  <data name="CreatingRestorePoint" xml:space="preserve">
+    <value>Criar ponto de restabelecimento...</value>
   </data>
   <data name="CreationDateColumnHeader" xml:space="preserve">
     <value>Data da criação</value>
@@ -374,6 +395,12 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   </data>
   <data name="DeleteRestorePoint" xml:space="preserve">
     <value>Eliminar Ponto de Restauro</value>
+  </data>
+  <data name="DeletingFiles" xml:space="preserve">
+    <value>Apagar ficheiros...</value>
+  </data>
+  <data name="DeletingFolders" xml:space="preserve">
+    <value>Apagar pastas...</value>
   </data>
   <data name="del_cookies" xml:space="preserve">
     <value>Eliminar cookies selecionados agora</value>
@@ -417,6 +444,9 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   <data name="EncryptWithFreemiumTools" xml:space="preserve">
     <value>Encriptar com o System Utilities</value>
   </data>
+  <data name="EntryPointsTo" xml:space="preserve">
+    <value>Registo indica para</value>
+  </data>
   <data name="erase_check_track" xml:space="preserve">
     <value>Apagar registos selecionados</value>
   </data>
@@ -450,8 +480,17 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   <data name="Exit" xml:space="preserve">
     <value>Sair</value>
   </data>
+  <data name="FacebookLike" xml:space="preserve">
+    <value>Gosto</value>
+  </data>
   <data name="Failed" xml:space="preserve">
     <value>falhou.</value>
+  </data>
+  <data name="FBUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/facebook</value>
+  </data>
+  <data name="FeedbackUrl" xml:space="preserve">
+    <value>http://de.freemium.com/kontakt/fsu/</value>
   </data>
   <data name="FFNotInstalledOrRunning" xml:space="preserve">
     <value>Mozilla Firefox não instalado ou já em execução</value>
@@ -549,8 +588,14 @@ de forma rápida e eficaz</value>
   <data name="FridayFull" xml:space="preserve">
     <value>Sexta-feira</value>
   </data>
+  <data name="GettingTracks" xml:space="preserve">
+    <value>Primeiros vestígios...</value>
+  </data>
   <data name="google" xml:space="preserve">
     <value>Google Chrome</value>
+  </data>
+  <data name="GooglePlusUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/googleplus</value>
   </data>
   <data name="google_cache" xml:space="preserve">
     <value>Google Chrome - Cache da Internet</value>
@@ -594,6 +639,9 @@ dos ficheiros e pastas</value>
   </data>
   <data name="HelpScanTitle" xml:space="preserve">
     <value>Ficheiros de Ajuda do Sistema</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Menu Iniciar e Histórico</value>
@@ -754,6 +802,9 @@ dos ficheiros e pastas</value>
   <data name="NoProblemsFound" xml:space="preserve">
     <value>Não foram localizados problemas</value>
   </data>
+  <data name="notice" xml:space="preserve">
+    <value>Nota</value>
+  </data>
   <data name="NotStartedHeader" xml:space="preserve">
     <value>Selecione categorias de registo e prima Analisar</value>
   </data>
@@ -911,6 +962,9 @@ e interrompê-los opcionalmente</value>
   <data name="results" xml:space="preserve">
     <value>Resultados</value>
   </data>
+  <data name="RootUrl" xml:space="preserve">
+    <value>http://de.freemium.com/fsu/</value>
+  </data>
   <data name="RunAsAdmin" xml:space="preserve">
     <value>Para executar este programa tem de ter privilégios de administrador. Reinicie este programa como administrador.</value>
   </data>
@@ -943,6 +997,9 @@ e interrompê-los opcionalmente</value>
   </data>
   <data name="RunMontly" xml:space="preserve">
     <value>mensalmente</value>
+  </data>
+  <data name="running_tray" xml:space="preserve">
+    <value>Aplicação está a decorrer no System-Tray</value>
   </data>
   <data name="RunOf" xml:space="preserve">
     <value>de</value>
@@ -1098,7 +1155,7 @@ e interrompê-los opcionalmente</value>
     <value>Corrigir atalhos</value>
   </data>
   <data name="ShortcutsFixerDesc" xml:space="preserve">
-    <value>Corrigir erros nos atalhos do ambiente de trabalho e menu de início </value>
+    <value>Corrigir erros nos atalhos do ambiente de trabalho e menu de início</value>
   </data>
   <data name="ShowBaloonCheckBoxText" xml:space="preserve">
     <value>Mostrar balão ao minimizar para tabuleiro</value>
@@ -1198,7 +1255,10 @@ e juntá-las novamente</value>
     <value>O Restauro do Sistema está indisponível ou desativado. A opção estava desativada.</value>
   </data>
   <data name="SystemRestoreUnavailable" xml:space="preserve">
-    <value>Restaurar Sistema está desativado ou indisponível neste computador. </value>
+    <value>Restaurar Sistema está desativado ou indisponível neste computador.</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>O restabelecimento do sistema está desativado. Pretende continuar mesmo assim?</value>
   </data>
   <data name="SystemTools" xml:space="preserve">
     <value>Ferramentas do Sistema</value>
@@ -1208,6 +1268,12 @@ e juntá-las novamente</value>
   </data>
   <data name="TabScheduleText" xml:space="preserve">
     <value>Programar</value>
+  </data>
+  <data name="TaskSchedulingFailedMessage" xml:space="preserve">
+    <value>O planeamento das tarefas falhou. Por favor verifique, se o serviço de planeamento de tarefas no seu sistema está a ser executado corretamente.</value>
+  </data>
+  <data name="TaskSchedulingFailedTitle" xml:space="preserve">
+    <value>Planeamento de tarefas falhou</value>
   </data>
   <data name="TempDetailsFiles" xml:space="preserve">
     <value>ficheiros</value>
@@ -1287,6 +1353,12 @@ e juntá-las novamente</value>
   <data name="TuesdayFull" xml:space="preserve">
     <value>Terça-feira</value>
   </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twittern</value>
+  </data>
+  <data name="TwitterUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/twitter</value>
+  </data>
   <data name="Type" xml:space="preserve">
     <value>Tipo</value>
   </data>
@@ -1304,6 +1376,12 @@ e juntá-las novamente</value>
   </data>
   <data name="UninstallScanTitle" xml:space="preserve">
     <value>Cadeias de Texto de Instalação</value>
+  </data>
+  <data name="UrlCannotBeOpenedMessage" xml:space="preserve">
+    <value>A hiperligação não pode ser aberta automaticamente. Por favor abra a seguinte hiperligação no seu browser favorito:</value>
+  </data>
+  <data name="UrlCannotBeOpenedTitle" xml:space="preserve">
+    <value>Não é possível abrir automaticamente a hiperligação</value>
   </data>
   <data name="urls" xml:space="preserve">
     <value>URLs</value>
@@ -1379,83 +1457,5 @@ e juntá-las novamente</value>
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Pretende criar um Ponto de Restauro do Sistema antes de continuar? Este processo de Restauro pode demorar alguns minutos a terminar.</value>
-  </data>
-  <data name="CreatingRestorePoint" xml:space="preserve">
-    <value>Criar ponto de restauração ...</value>
-  </data>
-  <data name="CleaningClipboard" xml:space="preserve">
-    <value>Limpeza da área de transferência ...</value>
-  </data>
-  <data name="CleaningRecycleBin" xml:space="preserve">
-    <value>Limpeza Lixeira ...</value>
-  </data>
-  <data name="CleaningRegistry" xml:space="preserve">
-    <value>Limpeza do registro ...</value>
-  </data>
-  <data name="CleaningUrlHistory" xml:space="preserve">
-    <value>Limpeza história url ...</value>
-  </data>
-  <data name="close_chrome_to_erase" xml:space="preserve">
-    <value>Google Chrome está sendo executado, por favor, salve o seu trabalho em seguida, clique em OK.</value>
-  </data>
-  <data name="close_firefox_to_erase" xml:space="preserve">
-    <value>Mozilla Firefox está funcionando, por favor, salve o seu trabalho em seguida, clique em OK.</value>
-  </data>
-  <data name="DeletingFiles" xml:space="preserve">
-    <value>Exclusão de arquivos ...</value>
-  </data>
-  <data name="DeletingFolders" xml:space="preserve">
-    <value>Excluindo pastas ...</value>
-  </data>
-  <data name="EntryPointsTo" xml:space="preserve">
-    <value>Pontos de entrada</value>
-  </data>
-  <data name="FacebookLike" xml:space="preserve">
-    <value>como</value>
-  </data>
-  <data name="FBUrl" xml:space="preserve">
-    <value>http://www.freemium.com/fsu/facebook</value>
-  </data>
-  <data name="FeedbackUrl" xml:space="preserve">
-    <value>http://freemium.com/contact/fsu/</value>
-  </data>
-  <data name="GettingTracks" xml:space="preserve">
-    <value>Obtendo faixas ...</value>
-  </data>
-  <data name="GooglePlusUrl" xml:space="preserve">
-    <value>http://www.freemium.com/fsu/googleplus</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="notice" xml:space="preserve">
-    <value>notar</value>
-  </data>
-  <data name="RootUrl" xml:space="preserve">
-    <value>http://freemium.com/fsu/</value>
-  </data>
-  <data name="running_tray" xml:space="preserve">
-    <value>Aplicação já está em execução na bandeja do sistema</value>
-  </data>
-  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
-    <value>Restauração do sistema é desligado, Gostaria de continuar em seu próprio risco?</value>
-  </data>
-  <data name="TaskSchedulingFailedMessage" xml:space="preserve">
-    <value>O planejamento tarefa falhou. Por favor, verifique se o agendador de tarefas do serviço está sendo executado corretamente em seu sistema.</value>
-  </data>
-  <data name="TaskSchedulingFailedTitle" xml:space="preserve">
-    <value>Planejamento de tarefas não</value>
-  </data>
-  <data name="Twitter" xml:space="preserve">
-    <value>chilrear</value>
-  </data>
-  <data name="TwitterUrl" xml:space="preserve">
-    <value>http://www.freemium.com/fsu/twitter</value>
-  </data>
-  <data name="UrlCannotBeOpenedMessage" xml:space="preserve">
-    <value>Link não pode ser aberto automaticamente. Por favor, abra este link no seu navegador favorito:</value>
-  </data>
-  <data name="UrlCannotBeOpenedTitle" xml:space="preserve">
-    <value>Link não pode ser aberta automaticamente</value>
   </data>
 </root>

@@ -127,7 +127,10 @@
     <value>Zurzeit installierte Programme</value>
   </data>
   <data name="entries_removed" xml:space="preserve">
-    <value>Einträge wurden erfolgreich entfernt.</value>
+    <value>Einträge wurden erfolgreich entfernt</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Fehler</value>
   </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Fehler aufgetreten</value>
@@ -157,7 +160,7 @@
     <value>Sie benötigen Administratorrechte, um diese Funktion verwenden zu können.</value>
   </data>
   <data name="one_entry_removed" xml:space="preserve">
-    <value>Eintrag wurde erfolgreich entfernt.</value>
+    <value>Eintrag wurde erfolgreich entfernt</value>
   </data>
   <data name="operation_cancelled" xml:space="preserve">
     <value>Vorgang abgebrochen</value>
@@ -213,13 +216,10 @@
   <data name="uninstall_programs" xml:space="preserve">
     <value>Programme deinstallieren</value>
   </data>
+  <data name="unistaller_not_found" xml:space="preserve">
+    <value>Die Deinstallationsdateien für {0} konnten nicht gefunden werden. Soll das Programm aus der Liste entfernt werden?</value>
+  </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
-  </data>
-  <data name="error" xml:space="preserve">
-    <value>Fehler</value>
-  </data>
-  <data name="unistaller_not_found" xml:space="preserve">
-    <value>Uninstall-Dateien konnten nicht für {0} gefunden werden, Wollen Sie es aus der Liste zu entfernen?</value>
   </data>
 </root>

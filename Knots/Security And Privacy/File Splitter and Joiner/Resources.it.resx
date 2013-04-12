@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="access_denied" xml:space="preserve">
+    <value>Non ti è permesso di scrivere determinata destinazione. Si prega di scegliere un'altra cartella di destinazione.</value>
+  </data>
   <data name="add_self_joining" xml:space="preserve">
     <value>Aggiungi un eseguibile self-join</value>
   </data>
@@ -177,6 +180,9 @@
   <data name="file_splitter_joiner_title" xml:space="preserve">
     <value>Dividi e unisci</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="idle" xml:space="preserve">
     <value>Inattivo</value>
   </data>
@@ -184,7 +190,7 @@
     <value>Percorso non valido</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Unione riuscita!</value>
+    <value>Unione riuscita</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informazioni di unione (contenuto file .Join)</value>
@@ -192,8 +198,17 @@
   <data name="join_file" xml:space="preserve">
     <value>Unisci file</value>
   </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Collegamento interrotto. Impossibile continuare!</value>
+  </data>
   <data name="may_not_respond" xml:space="preserve">
     <value>(l'applicazione potrebbe non rispondere a lungo se il valore è troppo grande)</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Almeno 2 parti di file da riunire</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Spazio di memoria insufficiente. Utilizzare un'altra cartella.</value>
   </data>
   <data name="not_join_file" xml:space="preserve">
     <value>Non è un file .Join</value>
@@ -212,6 +227,9 @@
   </data>
   <data name="options" xml:space="preserve">
     <value>Opzioni</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Esiste già un file con lo stesso nome del file unito. Sovrascrivere definitivamente questo file?</value>
   </data>
   <data name="part_not_found" xml:space="preserve">
     <value>Manca una parte del file. Impossibile continuare!</value>
@@ -274,19 +292,22 @@
     <value>L'eseguibile self-join è stato creato</value>
   </data>
   <data name="specify_parts" xml:space="preserve">
-    <value>Specifica in quante parti desideri dividerlo.</value>
+    <value>Specifica in quante parti desideri dividerlo</value>
   </data>
   <data name="specify_piece_size" xml:space="preserve">
     <value>Specifica dimensione pezzo</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Divisione riuscita!</value>
+    <value>Divisione riuscita</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Dividi file</value>
   </data>
   <data name="split_info" xml:space="preserve">
     <value>Informazioni di divisione</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Separazione interrotta. Impossibile continuare!</value>
   </data>
   <data name="stream_reader" xml:space="preserve">
     <value>lettore di flusso non chiuso</value>
@@ -295,27 +316,6 @@
     <value>scrittore di flusso non chiuso</value>
   </data>
   <data name="too_large" xml:space="preserve">
-    <value>La dimensione della parte specificata è troppo grande per la divisione. Specificare una dimensione più piccola per la parte.</value>
-  </data>
-  <data name="access_denied" xml:space="preserve">
-    <value>Non ti è permesso di scrivere determinata destinazione. Si prega di scegliere un'altra cartella di destinazione.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="join_interrupted" xml:space="preserve">
-    <value>Partecipare interrotto. Non può continuare!</value>
-  </data>
-  <data name="min_parts_count" xml:space="preserve">
-    <value>Almeno 2 file di parti per iscriversi</value>
-  </data>
-  <data name="not_enough_disk_space" xml:space="preserve">
-    <value>Spazio su disco insufficiente. Si prega di specificare un'altra cartella.</value>
-  </data>
-  <data name="overwrite_confirm" xml:space="preserve">
-    <value>Un file con lo stesso nome del file esiste già aderito. Sei sicuro di voler sovrascrivere il file?</value>
-  </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Dividere interrotto. Non può continuare!</value>
+    <value>La dimensione della parte specificata è troppo grande per la divisione. Specificare una dimensione più piccola per la parte</value>
   </data>
 </root>

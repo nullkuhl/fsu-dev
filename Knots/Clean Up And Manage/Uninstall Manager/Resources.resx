@@ -129,6 +129,9 @@
   <data name="entries_removed" xml:space="preserve">
     <value>entries have been removed successfully.</value>
   </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Error occured</value>
   </data>
@@ -166,7 +169,7 @@
     <value>Programs</value>
   </data>
   <data name="programs_installed_total" xml:space="preserve">
-    <value>Programs installed on your computer (Total </value>
+    <value>Programs installed on your computer (Total</value>
   </data>
   <data name="publisher" xml:space="preserve">
     <value>Publisher</value>
@@ -213,13 +216,10 @@
   <data name="uninstall_programs" xml:space="preserve">
     <value>Uninstall programs</value>
   </data>
-  <data name="version" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="error" xml:space="preserve">
-    <value>Error</value>
-  </data>
   <data name="unistaller_not_found" xml:space="preserve">
     <value>Uninstall files could not be found for {0}, Do you want to remove it from the list?</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
   </data>
 </root>

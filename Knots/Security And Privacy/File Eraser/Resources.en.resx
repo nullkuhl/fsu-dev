@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="abort_it" xml:space="preserve">
+    <value>Abort</value>
+  </data>
   <data name="about_us" xml:space="preserve">
     <value>About Us</value>
   </data>
@@ -162,6 +165,9 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Directory Destroyed</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Delete folders, too</value>
+  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>Emptying file contents failed</value>
   </data>
@@ -198,14 +204,20 @@
   <data name="file_selection" xml:space="preserve">
     <value>File Selection</value>
   </data>
+  <data name="file_shredded" xml:space="preserve">
+    <value>{0} file(s) shredded successfully</value>
+  </data>
   <data name="file_shredder" xml:space="preserve">
     <value>Erase files securely</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Invalid Path</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>You do not have sufficient access privileges to run this program. You must be logged on as the system administrator.</value>
+    <value>You do not have sufficient access privileges to run this program. You must be logged on as the system administrator</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Open the file select or open folder dialog</value>
@@ -226,13 +238,16 @@
     <value>Prepared to shred</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>Do you want to proceed?</value>
+    <value>Do you want to proceed</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>Processing</value>
   </data>
   <data name="processing_file" xml:space="preserve">
     <value>Processing file</value>
+  </data>
+  <data name="scanning" xml:space="preserve">
+    <value>Scanning</value>
   </data>
   <data name="select_file" xml:space="preserve">
     <value>Select a File</value>
@@ -256,7 +271,7 @@
     <value>Some files were not deleted</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Your Operating System is not supported. This application can be run on any NT based system (XP.Vista/2000/2003).</value>
+    <value>Your Operating System is not supported. This application can be run on any NT based system (XP.Vista/2000/2003)</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Terminate any running instance of the file pre-execution of the shredder</value>
@@ -269,20 +284,5 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Visit Us</value>
-  </data>
-  <data name="file_shredded" xml:space="preserve">
-    <value>{0} file(s) shredded successfully</value>
-  </data>
-  <data name="scanning" xml:space="preserve">
-    <value>Scanning</value>
-  </data>
-  <data name="abort_it" xml:space="preserve">
-    <value>Abort</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Delete folders, too</value>
   </data>
 </root>

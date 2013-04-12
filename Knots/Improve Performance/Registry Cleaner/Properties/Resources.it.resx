@@ -153,6 +153,9 @@
   <data name="HelpScanTitle" xml:space="preserve">
     <value>File della guida</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Cronologia e menu di avvio</value>
   </data>
@@ -210,6 +213,9 @@
   <data name="RestoreDisabled" xml:space="preserve">
     <value>Ripristino disabilitato.</value>
   </data>
+  <data name="Root" xml:space="preserve">
+    <value>Base</value>
+  </data>
   <data name="ScanAborted" xml:space="preserve">
     <value>Seleziona prima alcuni moduli.</value>
   </data>
@@ -262,7 +268,7 @@
     <value>Ripristino di sistema non disponibile o disattivato. Opzione disabilitata.</value>
   </data>
   <data name="SystemRestoreUnavailable" xml:space="preserve">
-    <value>Il ripristino di sistema è stato disattivato o non è disponibile su questo computer. </value>
+    <value>Il ripristino di sistema è stato disattivato o non è disponibile su questo computer.</value>
   </data>
   <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
     <value>Il ripristino del sistema è disabilitato su questo computer, vuoi continuare a tuo rischio?</value>
@@ -281,11 +287,5 @@
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Vuoi creare un punto di ripristino del sistema prima di continuare? Questo processo può richiedere vari minuti prima di essere completato.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="Root" xml:space="preserve">
-    <value>radice</value>
   </data>
 </root>

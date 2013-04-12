@@ -153,6 +153,9 @@
   <data name="HelpScanTitle" xml:space="preserve">
     <value>Archivos de ayuda</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Historial y menú Inicio</value>
   </data>
@@ -210,6 +213,9 @@
   <data name="RestoreDisabled" xml:space="preserve">
     <value>La restauración está deshabilitada.</value>
   </data>
+  <data name="Root" xml:space="preserve">
+    <value>Tronco</value>
+  </data>
   <data name="ScanAborted" xml:space="preserve">
     <value>Seleccione primero algunos módulos.</value>
   </data>
@@ -262,7 +268,7 @@
     <value>Restaurar sistema no está disponible o está desactivado. Se ha deshabilitado la opción.</value>
   </data>
   <data name="SystemRestoreUnavailable" xml:space="preserve">
-    <value>Restaurar sistema está deshabilitado o no disponible en este ordenador. </value>
+    <value>Restaurar sistema está deshabilitado o no disponible en este ordenador.</value>
   </data>
   <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
     <value>Restaurar sistema está deshabilitado en este equipo, ¿desea continuar por su cuenta y riesgo?</value>
@@ -281,11 +287,5 @@
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>¿Desea crear un punto de restauración del sistema antes de continuar? Este proceso puede tardar varios minutos en completarse.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="Root" xml:space="preserve">
-    <value>raíz</value>
   </data>
 </root>

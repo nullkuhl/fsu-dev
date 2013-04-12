@@ -216,6 +216,9 @@
   <data name="files1" xml:space="preserve">
     <value>Dateien</value>
   </data>
+  <data name="FilesRestored" xml:space="preserve">
+    <value>Dateien erfolgreich wiederhergestellt</value>
+  </data>
   <data name="file_type" xml:space="preserve">
     <value>Dateityp</value>
   </data>
@@ -234,11 +237,17 @@
   <data name="help" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>Wenn Sie bei diesen Optionen unsicher sind, belassen Sie sie auf den Standardeinstellungen</value>
   </data>
   <data name="include" xml:space="preserve">
     <value>Einschließen</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="last_access" xml:space="preserve">
     <value>Letzter Zugriff</value>
@@ -291,6 +300,9 @@
   <data name="pending" xml:space="preserve">
     <value>ausstehend</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Verarbeitung läuft…</value>
+  </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Mülldateien werden verarbeitet</value>
   </data>
@@ -319,10 +331,10 @@
     <value>Überprüfung läuft</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Wählen Sie bitte ein Laufwerk aus der Liste.</value>
+    <value>Wählen Sie bitte ein Laufwerk aus der Liste</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Wählen Sie bitte wenigstens ein Element aus der Liste.</value>
+    <value>Wählen Sie bitte wenigstens ein Element aus der Liste</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Wählen Sie eine wiederherzustellende Sicherung und klicken Sie auf "Wiederherstellen"</value>
@@ -349,7 +361,7 @@
     <value>Temporäre Dateien werden von Programmen als Zwischenspeicher verwendet und normalerweise nach der Benutzung wieder gelöscht</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden.</value>
+    <value>Dieses Werkzeug wurde auf Ihrer Plattform nicht gefunden</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Insgesamt</value>
@@ -368,6 +380,9 @@
   </data>
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Bitte warten Sie, bis die Festplattenbereinigung die gewählten Laufwerke überprüft hat</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Dateien im Windows-Temp-Verzeichnis werden immer als überflüssig betrachtet.</value>
   </data>
   <data name="windows_components" xml:space="preserve">
     <value>Windowskomponenten</value>
@@ -389,20 +404,5 @@
   </data>
   <data name="zero_files_def" xml:space="preserve">
     <value>Null Byte-Dateien enthalten keine Daten und können normalerweise gelöscht werden</value>
-  </data>
-  <data name="FilesRestored" xml:space="preserve">
-    <value>Dateien erfolgreich wiederhergestellt</value>
-  </data>
-  <data name="info" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Dateien im Windows-Temp-Verzeichnis werden immer als überflüssig betrachtet.</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
   </data>
 </root>

@@ -117,153 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="NoAddonsInfo" xml:space="preserve">
-    <value>No Add-ons Info</value>
-  </data>
-  <data name="StartPage" xml:space="preserve">
-    <value>Start Page</value>
-  </data>
-  <data name="CurrentSetting" xml:space="preserve">
-    <value>Current Setting</value>
-  </data>
-  <data name="Restore" xml:space="preserve">
-    <value>Restore</value>
-  </data>
-  <data name="SaveIeExtensions" xml:space="preserve">
-    <value>Save IE Extensions</value>
-  </data>
-  <data name="NavigationFailure" xml:space="preserve">
-    <value>Navigation Failure</value>
-  </data>
-  <data name="Enabled" xml:space="preserve">
-    <value>Enabled</value>
-  </data>
-  <data name="NotInstalledError" xml:space="preserve">
-    <value>is not installed!</value>
-    <comment>browser name is concatinated at the beginning</comment>
-  </data>
-  <data name="SearchURL" xml:space="preserve">
-    <value>Search URL</value>
-  </data>
-  <data name="Path" xml:space="preserve">
-    <value>Path</value>
-  </data>
-  <data name="NoAddons" xml:space="preserve">
-    <value>No Add-ons</value>
-  </data>
-  <data name="NavigationCanceled" xml:space="preserve">
-    <value>Navigation Canceled</value>
-  </data>
-  <data name="AllUsers" xml:space="preserve">
-    <value>all users</value>
-  </data>
-  <data name="FirefoxExtentions" xml:space="preserve">
-    <value>Firefox Extensions</value>
-  </data>
-  <data name="DefaultPageURL" xml:space="preserve">
-    <value>Default Page URL</value>
-  </data>
-  <data name="InternetExplorerActiveX" xml:space="preserve">
-    <value>IE ActiveX</value>
-  </data>
-  <data name="Error" xml:space="preserve">
-    <value>Error</value>
-  </data>
-  <data name="LocalPage" xml:space="preserve">
-    <value>Local Page</value>
-  </data>
-  <data name="SearchAssistant" xml:space="preserve">
-    <value>Search Assistant</value>
-  </data>
-  <data name="Version" xml:space="preserve">
-    <value>Version</value>
-  </data>
-  <data name="PostNotCached" xml:space="preserve">
-    <value>Post not Cached</value>
-  </data>
-  <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      Welcome to Browser Manager!
-
-Choose the tab that corresponds to the browser configuration you want to change.</value>
-  </data>
-  <data name="Welcome" xml:space="preserve">
-    <value>Welcome</value>
-  </data>
-  <data name="SearchBar" xml:space="preserve">
-    <value>SearchBar</value>
-  </data>
-  <data name="Done" xml:space="preserve">
-    <value>Done!</value>
-  </data>
-  <data name="ChromeExtensions" xml:space="preserve">
-    <value>Chrome Extensions</value>
-  </data>
-  <data name="SearchProvider" xml:space="preserve">
-    <value>Search Provider</value>
-  </data>
-  <data name="SecurityRisk" xml:space="preserve">
-    <value>Security Risk</value>
-  </data>
-  <data name="DefaultSearchURL" xml:space="preserve">
-    <value>Default Search URL</value>
-  </data>
-  <data name="SearchPage" xml:space="preserve">
-    <value>Search Page</value>
-  </data>
-  <data name="Blank" xml:space="preserve">
-    <value>Blank</value>
-  </data>
-  <data name="InternetExplorerExtensions" xml:space="preserve">
-    <value>IE Extensions</value>
-  </data>
-  <data name="SettingName" xml:space="preserve">
-    <value>Setting Name</value>
-  </data>
-  <data name="AboutURL" xml:space="preserve">
-    <value>About URL</value>
-  </data>
-  <data name="OfflineInformation" xml:space="preserve">
-    <value>Offline Information</value>
-  </data>
-  <data name="SaveIeActiveX" xml:space="preserve">
-    <value>Save IE ActiveX</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
-  </data>
-  <data name="RestoreSettingTo" xml:space="preserve">
-    <value>Restore Setting To</value>
-  </data>
-  <data name="CloseBrowserError" xml:space="preserve">
-    <value>You have to close {0} to view it's extensions. Please close {0}, before clicking on its tab again.</value>
-  </data>
-  <data name="HijackRestore" xml:space="preserve">
-    <value>Hijack Restore</value>
-  </data>
-  <data name="InPrivate" xml:space="preserve">
-    <value>InPrivate</value>
-  </data>
-  <data name="HomePage" xml:space="preserve">
-    <value>Home Page</value>
-  </data>
-  <data name="Name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="InternetExplorerBHOs" xml:space="preserve">
-    <value>IE BHOs</value>
-  </data>
-  <data name="DesktopNavigation" xml:space="preserve">
-    <value>Desktop Navigation</value>
-  </data>
-  <data name="SaveExtensions" xml:space="preserve">
-    <value>Save Extensions</value>
-  </data>
-  <data name="CustomizeSearch" xml:space="preserve">
-    <value>Customize Search</value>
-  </data>
-  <data name="SaveIeBHOs" xml:space="preserve">
-    <value>Save IE BHOs</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="bottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\bottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -274,14 +127,8 @@ Choose the tab that corresponds to the browser configuration you want to change.
   <data name="thinBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\thinBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FirstStart" xml:space="preserve">
-    <value>Please start firefox at least once, before using this feature.</value>
-  </data>
   <data name="icon_browser_manager" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-browser-manager.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="BrowserAssistant" xml:space="preserve">
-    <value>Manage browsers</value>
   </data>
   <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -289,13 +136,164 @@ Choose the tab that corresponds to the browser configuration you want to change.
   <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AboutURL" xml:space="preserve">
+    <value>About URL</value>
+  </data>
+  <data name="AllUsers" xml:space="preserve">
+    <value>all users</value>
+  </data>
+  <data name="Blank" xml:space="preserve">
+    <value>Blank</value>
+  </data>
+  <data name="BrowserAssistant" xml:space="preserve">
+    <value>Manage browsers</value>
+  </data>
+  <data name="ChromeExtensions" xml:space="preserve">
+    <value>Chrome Extensions</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="CloseBrowserError" xml:space="preserve">
+    <value>You have to close {0} to view it's extensions. Please close {0}, before clicking on its tab again.</value>
+  </data>
+  <data name="CurrentSetting" xml:space="preserve">
+    <value>Current Setting</value>
+  </data>
+  <data name="CustomizeSearch" xml:space="preserve">
+    <value>Customize Search</value>
+  </data>
+  <data name="DefaultPageURL" xml:space="preserve">
+    <value>Default Page URL</value>
+  </data>
+  <data name="DefaultSearchURL" xml:space="preserve">
+    <value>Default Search URL</value>
+  </data>
+  <data name="DesktopNavigation" xml:space="preserve">
+    <value>Desktop Navigation</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done!</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Enabled</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FirefoxExtentions" xml:space="preserve">
+    <value>Firefox Extensions</value>
+  </data>
+  <data name="FirstStart" xml:space="preserve">
+    <value>Please start firefox at least once, before using this feature.</value>
+  </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="HijackRestore" xml:space="preserve">
+    <value>Hijack Restore</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Home Page</value>
+  </data>
+  <data name="InPrivate" xml:space="preserve">
+    <value>InPrivate</value>
+  </data>
+  <data name="InternetExplorerActiveX" xml:space="preserve">
+    <value>IE ActiveX</value>
+  </data>
+  <data name="InternetExplorerBHOs" xml:space="preserve">
+    <value>IE BHOs</value>
+  </data>
+  <data name="InternetExplorerExtensions" xml:space="preserve">
+    <value>IE Extensions</value>
+  </data>
+  <data name="InternetExplorerToolbars" xml:space="preserve">
+    <value>IE Toolbars</value>
+  </data>
+  <data name="LocalPage" xml:space="preserve">
+    <value>Local Page</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NavigationCanceled" xml:space="preserve">
+    <value>Navigation Canceled</value>
+  </data>
+  <data name="NavigationFailure" xml:space="preserve">
+    <value>Navigation Failure</value>
+  </data>
+  <data name="NoAddons" xml:space="preserve">
+    <value>No Add-ons</value>
+  </data>
+  <data name="NoAddonsInfo" xml:space="preserve">
+    <value>No Add-ons Info</value>
+  </data>
+  <data name="NotInstalledError" xml:space="preserve">
+    <value>is not installed!</value>
+  </data>
+  <data name="OfflineInformation" xml:space="preserve">
+    <value>Offline Information</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Path</value>
+  </data>
+  <data name="PostNotCached" xml:space="preserve">
+    <value>Post not Cached</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="RestoreSettingTo" xml:space="preserve">
+    <value>Restore Setting To</value>
+  </data>
+  <data name="SaveExtensions" xml:space="preserve">
+    <value>Save Extensions</value>
+  </data>
+  <data name="SaveIeActiveX" xml:space="preserve">
+    <value>Save IE ActiveX</value>
+  </data>
+  <data name="SaveIeBHOs" xml:space="preserve">
+    <value>Save IE BHOs</value>
+  </data>
+  <data name="SaveIeExtensions" xml:space="preserve">
+    <value>Save IE Extensions</value>
   </data>
   <data name="SaveIeToolbars" xml:space="preserve">
     <value>Save IE Toolbars</value>
   </data>
-  <data name="InternetExplorerToolbars" xml:space="preserve">
-    <value>IE Toolbars</value>
+  <data name="SearchAssistant" xml:space="preserve">
+    <value>Search Assistant</value>
+  </data>
+  <data name="SearchBar" xml:space="preserve">
+    <value>SearchBar</value>
+  </data>
+  <data name="SearchPage" xml:space="preserve">
+    <value>Search Page</value>
+  </data>
+  <data name="SearchProvider" xml:space="preserve">
+    <value>Search Provider</value>
+  </data>
+  <data name="SearchURL" xml:space="preserve">
+    <value>Search URL</value>
+  </data>
+  <data name="SecurityRisk" xml:space="preserve">
+    <value>Security Risk</value>
+  </data>
+  <data name="SettingName" xml:space="preserve">
+    <value>Setting Name</value>
+  </data>
+  <data name="StartPage" xml:space="preserve">
+    <value>Start Page</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome to Browser Manager!
+Choose the tab that corresponds to the browser configuration you want to change.</value>
   </data>
 </root>

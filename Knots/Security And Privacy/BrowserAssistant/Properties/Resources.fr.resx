@@ -169,7 +169,7 @@
     <value>Avant d’utiliser cette fonctionnalité, lancez Firefox au moins une fois.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="HijackRestore" xml:space="preserve">
     <value>Restaurer les paramètres</value>
@@ -190,7 +190,7 @@
     <value>Internet Explorer - Extensions</value>
   </data>
   <data name="InternetExplorerToolbars" xml:space="preserve">
-    <value>IE Barres d'outils</value>
+    <value>Barres d’outils d’IE</value>
   </data>
   <data name="LocalPage" xml:space="preserve">
     <value>Pages locales</value>
@@ -241,7 +241,7 @@
     <value>Enregistrer les extensions IE</value>
   </data>
   <data name="SaveIeToolbars" xml:space="preserve">
-    <value>Enregistrer IE Barres d'outils</value>
+    <value>Enregistrer les barres d’outils d’IE</value>
   </data>
   <data name="SearchAssistant" xml:space="preserve">
     <value>Assistant de recherche</value>
@@ -274,7 +274,7 @@
     <value>Bienvenue</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      Bienvenue dans l’assistant de navigateur Internet !
+    <value>Bienvenue dans l’assistant de navigateur Internet !
 Sélectionnez l’onglet portant le nom du navigateur Internet dont vous souhaitez modifier la configuration.</value>
   </data>
 </root>

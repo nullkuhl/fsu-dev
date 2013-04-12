@@ -189,6 +189,9 @@
   <data name="found" xml:space="preserve">
     <value>Trouvés :  {0}</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
   <data name="include_non_recoverable" xml:space="preserve">
     <value>Inclure les fichiers non restaurables</value>
   </data>
@@ -244,7 +247,7 @@
     <value>Restauration en cours...</value>
   </data>
   <data name="restoring_same_drive" xml:space="preserve">
-    <value>La restauration sur le même lecteur peut réduire la probabilité de succès. Souhaitez-vous vraiment continuer?</value>
+    <value>La restauration sur le même lecteur peut réduire la probabilité de succès. Souhaitez-vous vraiment continuer ?</value>
   </data>
   <data name="scan_finished" xml:space="preserve">
     <value>Vérification terminée</value>
@@ -272,8 +275,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Oui</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="access_denied" xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à écrire dans une destination donnée. S'il vous plaît choisir un autre dossier de destination.</value>
+  </data>
   <data name="add_self_joining" xml:space="preserve">
     <value>Créer un fichier EXE auto-assemblé</value>
   </data>
   <data name="application_paused" xml:space="preserve">
-    <value>L’application est en suspens. Souhaitez-vous vraiment terminer?</value>
+    <value>L’application est en suspens. Souhaitez-vous vraiment terminer ?</value>
   </data>
   <data name="bigger_faster" xml:space="preserve">
     <value>(plus volumineux = plus rapide)</value>
@@ -133,7 +136,7 @@
     <value>Occupé</value>
   </data>
   <data name="create_dictionary" xml:space="preserve">
-    <value>Le répertoire n’existe pas. Souhaitez-vous créer le répertoire?</value>
+    <value>Le répertoire n’existe pas. Souhaitez-vous créer le répertoire ?</value>
   </data>
   <data name="custom" xml:space="preserve">
     <value>Défini par l’utilisateur</value>
@@ -177,6 +180,9 @@
   <data name="file_splitter_joiner_title" xml:space="preserve">
     <value>Diviser &amp;et assembler</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
   <data name="idle" xml:space="preserve">
     <value>Quand l’ordinateur est inactif</value>
   </data>
@@ -184,7 +190,7 @@
     <value>Chemin d’accès invalide</value>
   </data>
   <data name="joined" xml:space="preserve">
-    <value>Assemblage effectué avec succès!</value>
+    <value>Assemblage effectué avec succès</value>
   </data>
   <data name="joining_info" xml:space="preserve">
     <value>Informations (contenu du fichier .join)</value>
@@ -192,8 +198,17 @@
   <data name="join_file" xml:space="preserve">
     <value>Assembler</value>
   </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Connexion interrompue Le processus ne peut pas être poursuivi !</value>
+  </data>
   <data name="may_not_respond" xml:space="preserve">
     <value>(L’application peut mettre un certain temps à réagir quand la valeur est trop élevée.)</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Au moins 2 parties de fichier à assembler</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Espace de stockage insuffisant Veuillez utiliser un autre répertoire.</value>
   </data>
   <data name="not_join_file" xml:space="preserve">
     <value>Pas de fichier .join</value>
@@ -212,6 +227,9 @@
   </data>
   <data name="options" xml:space="preserve">
     <value>Options</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Un fichier portant le même nom que le fichier joint existe déjà. Êtes-vous sûr(e) de vouloir écraser ce fichier ?</value>
   </data>
   <data name="part_not_found" xml:space="preserve">
     <value>Un fragment de fichier n’a pas été trouvé. Impossible de continuer.</value>
@@ -268,7 +286,7 @@
     <value>Sélectionner un fichier .join</value>
   </data>
   <data name="select_split" xml:space="preserve">
-    <value>Souhaitez-vous sélectionner un fichier à diviser ? </value>
+    <value>Souhaitez-vous sélectionner un fichier à diviser ?</value>
   </data>
   <data name="self_joining_created" xml:space="preserve">
     <value>Un fichier EXE auto-assemblé a été créé.</value>
@@ -280,13 +298,16 @@
     <value>Saisissez la taille des fragments.</value>
   </data>
   <data name="splitted" xml:space="preserve">
-    <value>Division effectuée avec succès!</value>
+    <value>Division effectuée avec succès.</value>
   </data>
   <data name="split_file" xml:space="preserve">
     <value>Diviser le fichier</value>
   </data>
   <data name="split_info" xml:space="preserve">
     <value>Information</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Fractionnement interrompu Le processus ne peut pas être poursuivi !</value>
   </data>
   <data name="stream_reader" xml:space="preserve">
     <value>StreamReader non fermé.</value>
@@ -296,26 +317,5 @@
   </data>
   <data name="too_large" xml:space="preserve">
     <value>Une division avec la taille des fragments indiquée n’est pas possible. Saisissez une taille de fragments inférieure.</value>
-  </data>
-  <data name="access_denied" xml:space="preserve">
-    <value>Vous n'êtes pas autorisé à écrire dans une destination donnée. S'il vous plaît choisir un autre dossier de destination.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="join_interrupted" xml:space="preserve">
-    <value>Rejoindre interrompu. Ne peut pas continuer!</value>
-  </data>
-  <data name="min_parts_count" xml:space="preserve">
-    <value>Au moins 2 des fichiers de pièces à joindre</value>
-  </data>
-  <data name="not_enough_disk_space" xml:space="preserve">
-    <value>Pas assez d'espace disque. S'il vous plaît spécifier un autre dossier.</value>
-  </data>
-  <data name="overwrite_confirm" xml:space="preserve">
-    <value>Un fichier portant le même nom que le fichier existe déjà rejoint. Êtes-vous sûr de vouloir écraser ce fichier?</value>
-  </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Fractionnement interrompu. Ne peut pas continuer!</value>
   </data>
 </root>

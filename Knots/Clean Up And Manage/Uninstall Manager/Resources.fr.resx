@@ -130,7 +130,7 @@
     <value>Les entrées ont été supprimés avec succès.</value>
   </data>
   <data name="error" xml:space="preserve">
-    <value>erreur</value>
+    <value>Erreur</value>
   </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Une erreur est survenue.</value>
@@ -139,7 +139,7 @@
     <value>Le fichier a été importé.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="image" xml:space="preserve">
     <value>Image</value>
@@ -169,7 +169,7 @@
     <value>Programmes</value>
   </data>
   <data name="programs_installed_total" xml:space="preserve">
-    <value>Programmes installés sur votre ordinateur (au total </value>
+    <value>Programmes installés sur votre ordinateur (au total</value>
   </data>
   <data name="publisher" xml:space="preserve">
     <value>Éditeur</value>
@@ -217,7 +217,7 @@
     <value>Désinstaller des programmes</value>
   </data>
   <data name="unistaller_not_found" xml:space="preserve">
-    <value>Désinstaller les fichiers n'ont pas pu être trouvé pour {0}, vous voulez le supprimer de la liste?</value>
+    <value>Les fichiers de désinstallation pour {0} n’ont pas pu être trouvés. Le programme doit-il être supprimé de la liste ?</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>

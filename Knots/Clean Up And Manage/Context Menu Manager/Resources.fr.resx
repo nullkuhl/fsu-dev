@@ -121,7 +121,7 @@
     <value>Tous les fichiers (*)</value>
   </data>
   <data name="all_filesystem_objects" xml:space="preserve">
-    <value>AllFilesystemObjects</value>
+    <value>Tous les objets du système de fichiers</value>
   </data>
   <data name="background" xml:space="preserve">
     <value>fond</value>
@@ -154,10 +154,10 @@
     <value>Répertoire</value>
   </data>
   <data name="directory_background" xml:space="preserve">
-    <value>Directory \ Background</value>
+    <value>annuaire\fond</value>
   </data>
   <data name="directory_shell" xml:space="preserve">
-    <value>Directory \ shell</value>
+    <value>annuaire\contribution</value>
   </data>
   <data name="drive" xml:space="preserve">
     <value>Lecteur</value>
@@ -175,13 +175,13 @@
     <value>Dossier</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="internal_name" xml:space="preserve">
     <value>Nom interne</value>
   </data>
   <data name="lnkfile" xml:space="preserve">
-    <value>raccourci</value>
+    <value>lien</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Nouveau</value>

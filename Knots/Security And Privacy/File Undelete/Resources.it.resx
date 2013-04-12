@@ -189,6 +189,9 @@
   <data name="found" xml:space="preserve">
     <value>Trovato/i:  {0}</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="include_non_recoverable" xml:space="preserve">
     <value>Includi anche i file non recuperabili</value>
   </data>
@@ -250,7 +253,7 @@
     <value>Scansione completa</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>La scansione è completa, tuttavia sembra che non sia stato possibile recuperare alcun file dai dati raccolti dal tuo disco rigido.</value>
+    <value>La scansione è completa, tuttavia sembra che non sia stato possibile recuperare alcun file dai dati raccolti dal tuo disco rigido</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Cerca</value>
@@ -272,8 +275,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Sì</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

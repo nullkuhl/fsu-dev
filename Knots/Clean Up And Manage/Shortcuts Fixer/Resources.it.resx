@@ -174,6 +174,9 @@
   <data name="following_restore_points" xml:space="preserve">
     <value>Fai due volte clic su un punto di ripristino del sistema per ripristinarlo.</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="location" xml:space="preserve">
     <value>Posizione</value>
   </data>
@@ -227,11 +230,5 @@
   </data>
   <data name="target" xml:space="preserve">
     <value>Destinazione</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="unable_restore" xml:space="preserve">
-    <value>Restore non è un'opzione valida, non è possibile ripristinare il file.</value>
   </data>
 </root>

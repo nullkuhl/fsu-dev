@@ -165,6 +165,9 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Diretório Destruído</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Cancella anche cartella</value>
+  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>Falha ao esvaziar conteúdo do ficheiro</value>
   </data>
@@ -193,7 +196,7 @@
     <value>Ficheiro Destruído</value>
   </data>
   <data name="file_not_renamed" xml:space="preserve">
-    <value>Não foi possível mudar o nome ao ficheiro </value>
+    <value>Não foi possível mudar o nome ao ficheiro</value>
   </data>
   <data name="file_path_invalid" xml:space="preserve">
     <value>O caminho do ficheiro é inválido</value>
@@ -207,11 +210,14 @@
   <data name="file_shredder" xml:space="preserve">
     <value>Apagar ficheiros com segurança</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Caminho Inválido</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>Não tem privilégios suficientes de acesso para executar este programa. Tem de ter sessão iniciada como administrador do sistema.</value>
+    <value>Não tem privilégios suficientes de acesso para executar este programa. Tem de ter sessão iniciada como administrador do sistema</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Abra a seleção do ficheiro ou abra a caixa de diálogo da pasta</value>
@@ -232,7 +238,7 @@
     <value>Preparado para destruição</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>Pretende continuar?</value>
+    <value>Pretende continuar</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>A Processar</value>
@@ -247,7 +253,7 @@
     <value>Selecionar um Ficheiro</value>
   </data>
   <data name="select_file_folder" xml:space="preserve">
-    <value>Selecione um ficheiro ou pasta.</value>
+    <value>Selecione um ficheiro ou pasta</value>
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Selecionar uma Pasta</value>
@@ -265,7 +271,7 @@
     <value>Alguns ficheiros não foram eliminados</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>O seu Sistema Operativo não é suportado. Não é possível executar esta aplicação em qualquer sistema com base em NT (XP.Vista/2000/2003).</value>
+    <value>O seu Sistema Operativo não é suportado. Não é possível executar esta aplicação em qualquer sistema com base em NT (XP.Vista/2000/2003)</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Terminar qualquer instância em execução da pré-execução do ficheiro da destruição</value>
@@ -278,11 +284,5 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Visite-nos</value>
-  </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Eliminar carpetas, también</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

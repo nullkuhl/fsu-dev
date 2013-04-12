@@ -127,7 +127,7 @@
     <value>Comando</value>
   </data>
   <data name="commands_disabled" xml:space="preserve">
-    <value>Están deshabilitados todos los comandos excepto Eliminar.</value>
+    <value>Están deshabilitados todos los comandos excepto Eliminar</value>
   </data>
   <data name="company" xml:space="preserve">
     <value>Compañía</value>
@@ -136,13 +136,13 @@
     <value>Eliminar</value>
   </data>
   <data name="delete_selected_item" xml:space="preserve">
-    <value>¿Todavía quiere eliminar el elemento seleccionado?</value>
+    <value>¿Todavía quiere eliminar el elemento seleccionado</value>
   </data>
   <data name="delete_startup_item" xml:space="preserve">
     <value>Eliminar elemento del inicio</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Descripción:</value>
+    <value>Descripción</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Detalles</value>
@@ -157,7 +157,7 @@
     <value>Deshabilitar elemento del inicio</value>
   </data>
   <data name="do_you_wish" xml:space="preserve">
-    <value>¿Desea continuar?</value>
+    <value>¿Desea continuar</value>
   </data>
   <data name="enable" xml:space="preserve">
     <value>Habilitar</value>
@@ -178,34 +178,37 @@
     <value>Ejecutar comando</value>
   </data>
   <data name="file_appear_not_valid" xml:space="preserve">
-    <value>El archivo parece no tener un acceso directo válido.</value>
+    <value>El archivo parece no tener un acceso directo válido</value>
   </data>
   <data name="file_folder_not_found" xml:space="preserve">
-    <value>No se puede encontrar el archivo y/o la carpeta.</value>
+    <value>No se puede encontrar el archivo y/o la carpeta</value>
   </data>
   <data name="file_invalid" xml:space="preserve">
-    <value>El archivo no es válido o no existe.</value>
+    <value>El archivo no es válido o no existe</value>
   </data>
   <data name="file_name" xml:space="preserve">
     <value>Nombre de archivo</value>
   </data>
   <data name="file_not_found" xml:space="preserve">
-    <value>No se puede encontrar el archivo o está oculto.</value>
+    <value>No se puede encontrar el archivo o está oculto</value>
   </data>
   <data name="file_not_found1" xml:space="preserve">
     <value>No se ha encontrado el archivo</value>
   </data>
   <data name="file_not_found_warning" xml:space="preserve">
-    <value>No se ha encontrado el archivo.</value>
+    <value>No se ha encontrado el archivo</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>Ruta de archivo:</value>
+    <value>Ruta de archivo</value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
-    <value>No se encontró la carpeta.</value>
+    <value>No se encontró la carpeta</value>
   </data>
   <data name="full_version" xml:space="preserve">
     <value>Versión del archivo</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
   </data>
   <data name="HKCU" xml:space="preserve">
     <value>Registro: Usuario actual</value>
@@ -241,7 +244,7 @@
     <value>Mover el elemento al usuario actual</value>
   </data>
   <data name="no_permission" xml:space="preserve">
-    <value>No dispone de permisos para ver las propiedades de este archivo.</value>
+    <value>No dispone de permisos para ver las propiedades de este archivo</value>
   </data>
   <data name="open_file_folder" xml:space="preserve">
     <value>Abrir carpeta de archivo</value>
@@ -262,7 +265,7 @@
     <value>Actualizar visualización</value>
   </data>
   <data name="run_as_admin" xml:space="preserve">
-    <value>Para poder cambiar todos los elementos del inicio, es necesario ejecutar este programa como administrador.</value>
+    <value>Para poder cambiar todos los elementos del inicio, es necesario ejecutar este programa como administrador</value>
   </data>
   <data name="StartupAllUsers" xml:space="preserve">
     <value>Carpeta de inicio: Todos los usuarios</value>
@@ -277,25 +280,25 @@
     <value>Estado</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>El sistema ha devuelto la siguiente información:</value>
+    <value>El sistema ha devuelto la siguiente información</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
-    <value>No se puede eliminar este elemento.</value>
+    <value>No se puede eliminar este elemento</value>
   </data>
   <data name="unable_to_disable" xml:space="preserve">
-    <value>No se puede deshabilitar este elemento.</value>
+    <value>No se puede deshabilitar este elemento</value>
   </data>
   <data name="unable_to_enable" xml:space="preserve">
-    <value>No se puede habilitar este elemento.</value>
+    <value>No se puede habilitar este elemento</value>
   </data>
   <data name="unable_to_execute" xml:space="preserve">
-    <value>No se puede ejecutar este elemento.</value>
+    <value>No se puede ejecutar este elemento</value>
   </data>
   <data name="unable_to_move" xml:space="preserve">
-    <value>No se puede mover este elemento.</value>
+    <value>No se puede mover este elemento</value>
   </data>
   <data name="unable_to_open" xml:space="preserve">
-    <value>No se puede abrir la carpeta que contiene este elemento.</value>
+    <value>No se puede abrir la carpeta que contiene este elemento</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Advertencia: No elimine elementos de inicio a no ser que esté seguro al 100 % de lo que hace. En la mayoría de los casos e recomienda utilizar la opción "Deshabilitar" en vez de esto.</value>
@@ -305,8 +308,5 @@
   </data>
   <data name="WHKLM" xml:space="preserve">
     <value>Registro: x86 Todos los usuarios</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

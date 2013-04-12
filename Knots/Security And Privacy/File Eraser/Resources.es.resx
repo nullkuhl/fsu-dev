@@ -165,6 +165,9 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Directorio destruido</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Delete folders, too</value>
+  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>Error al vaciar los contenidos de archivos</value>
   </data>
@@ -207,11 +210,14 @@
   <data name="file_shredder" xml:space="preserve">
     <value>Borrar archivos con seguridad</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Ruta no válida</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>No dispone de derechos de acceso suficientes para ejecutar este programa. Es necesario que haya iniciado sesión como administrador del sistema.</value>
+    <value>No dispone de derechos de acceso suficientes para ejecutar este programa. Es necesario que haya iniciado sesión como administrador del sistema</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Abrir la selección de archivos o el diálogo de carpetas</value>
@@ -232,7 +238,7 @@
     <value>Preparado para destruir</value>
   </data>
   <data name="proceed" xml:space="preserve">
-    <value>¿Desea continuar?</value>
+    <value>¿Desea continuar</value>
   </data>
   <data name="processing" xml:space="preserve">
     <value>Procesando</value>
@@ -265,7 +271,7 @@
     <value>No se eliminaron algunos archivos</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Su sistema operativo no está admitido. Esta aplicación se puede ejecutar en cualquier sistema basado en NT (XP.Vista/2000/2003).</value>
+    <value>Su sistema operativo no está admitido. Esta aplicación se puede ejecutar en cualquier sistema basado en NT (XP.Vista/2000/2003)</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Finalizar cualquier instancia en ejecución del archivo antes de ejecutar el destructor</value>
@@ -278,11 +284,5 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Visítenos</value>
-  </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Eliminar carpetas, también</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

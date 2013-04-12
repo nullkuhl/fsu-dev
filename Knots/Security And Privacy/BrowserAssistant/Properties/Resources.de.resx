@@ -166,7 +166,7 @@
     <value>Firefox-Erweiterungen</value>
   </data>
   <data name="FirstStart" xml:space="preserve">
-    <value>Bitte starten Sie Firefox mindestens einmal, bevor Sie diese Funktion.</value>
+    <value>Bitte starten Sie den Firefox</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
@@ -274,7 +274,7 @@
     <value>Willkommen</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      Willkommen im Browser-Assistenten!
+    <value>Willkommen im Browser-Assistenten!
 Wählen Sie den Reiter mit dem Namen des Browsers, den Sie ändern möchten.</value>
   </data>
 </root>

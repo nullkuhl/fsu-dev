@@ -139,7 +139,7 @@
     <value>Terminer</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="increase_free_memory" xml:space="preserve">
     <value>Augmenter l’espace de stockage libre de</value>
@@ -147,8 +147,14 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Charger lors du démarrage de Windows</value>
   </data>
+  <data name="memory" xml:space="preserve">
+    <value>Les mémoires vives Mo ont été libérées.</value>
+  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Taille de l’espace de stockage</value>
+  </data>
+  <data name="memory_freed" xml:space="preserve">
+    <value>Il y avait</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Optimisation de l’espace de stockage</value>
@@ -172,7 +178,7 @@
     <value>Optimisation</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Optimisation terminée: {{1}} Mo de RAM ont été libérés.</value>
+    <value>Optimisation réussie : %1 Mo de mémoire vive a été libéré.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Optimiser</value>

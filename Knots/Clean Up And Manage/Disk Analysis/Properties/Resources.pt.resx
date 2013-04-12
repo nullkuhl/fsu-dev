@@ -141,6 +141,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
   <data name="CommandPrompt" xml:space="preserve">
     <value>Linha de comandos</value>
   </data>
@@ -162,11 +165,20 @@
   <data name="DeleteFolderConfirmation" xml:space="preserve">
     <value>Tem a certeza de que pretende eliminar a pasta</value>
   </data>
+  <data name="DeleteHiddenFile" xml:space="preserve">
+    <value>O ficheiro é um ficheiro oculto. Pretende apagá-lo mesmo assim?</value>
+  </data>
+  <data name="DeleteSystemFile" xml:space="preserve">
+    <value>O ficheiro é um ficheiro de sistema Pretende apagá-lo mesmo assim?</value>
+  </data>
   <data name="DiskAnalysis" xml:space="preserve">
     <value>Analisar disco</value>
   </data>
   <data name="Explorer" xml:space="preserve">
     <value>Explorador</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>O ficheiro está a ser usado e não pode ser apagado.</value>
   </data>
   <data name="FileName" xml:space="preserve">
     <value>Nome de ficheiro</value>
@@ -186,6 +198,9 @@
   <data name="FreeSpace" xml:space="preserve">
     <value>Espaço livre</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="IndividualDrives" xml:space="preserve">
     <value>Unidades individuais</value>
   </data>
@@ -196,13 +211,16 @@
     <value>Nome</value>
   </data>
   <data name="NoRightsToDelete" xml:space="preserve">
-    <value>Necessita de direitos de administrador para utilizar esta funcionalidade.</value>
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Percent" xml:space="preserve">
     <value>Percentagem</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processamento...</value>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Propriedades</value>
@@ -224,23 +242,5 @@
   </data>
   <data name="UsedOverTotal" xml:space="preserve">
     <value>Utilizado/Total</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>fechar</value>
-  </data>
-  <data name="DeleteHiddenFile" xml:space="preserve">
-    <value>Este arquivo é um arquivo oculto. Você quer apagar de qualquer forma?</value>
-  </data>
-  <data name="DeleteSystemFile" xml:space="preserve">
-    <value>Este arquivo é um arquivo de sistema. Você quer apagar de qualquer forma?</value>
-  </data>
-  <data name="FileInUse" xml:space="preserve">
-    <value>O arquivo está em uso e não pode ser excluída.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing ...</value>
   </data>
 </root>

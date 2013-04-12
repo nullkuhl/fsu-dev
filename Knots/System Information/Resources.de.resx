@@ -367,16 +367,19 @@
     <value>Datenträgerbezeichnung</value>
   </data>
   <data name="error_description" xml:space="preserve">
-    <value>Beschreibung:</value>
+    <value>Beschreibung</value>
   </data>
   <data name="error_return" xml:space="preserve">
-    <value>Das System gab die folgenden Informationen zurück:</value>
+    <value>Das System gab die folgenden Informationen zurück</value>
   </data>
   <data name="error_source" xml:space="preserve">
     <value>Quelle</value>
   </data>
   <data name="eula_notfound" xml:space="preserve">
-    <value>Die Datei EULA.pdf konnte nicht gefunden werden.</value>
+    <value>Die Datei EULA.pdf konnte nicht gefunden werden</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>TDJ ist größer als 6</value>
@@ -694,7 +697,10 @@
     <value>Win32S</value>
   </data>
   <data name="pdf_notfound" xml:space="preserve">
-    <value>Adobe Reader konnte nicht gefunden werden.</value>
+    <value>Adobe Reader konnte nicht gefunden werden</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Verarbeitung</value>
   </data>
   <data name="root" xml:space="preserve">
     <value>Systeminformationen</value>
@@ -841,7 +847,7 @@
     <value>Konto gesperrt</value>
   </data>
   <data name="user_action_admin" xml:space="preserve">
-    <value>Diese Aktion benötigt Administratorrechte.</value>
+    <value>Diese Aktion benötigt Administratorrechte</value>
   </data>
   <data name="user_error_happen" xml:space="preserve">
     <value>Im Bereich Benutzer ist ein Fehler aufgetreten</value>
@@ -880,7 +886,7 @@
     <value>Speichern</value>
   </data>
   <data name="user_unable_save_info" xml:space="preserve">
-    <value>Informationen konnten nicht gespeichert werden.</value>
+    <value>Informationen konnten nicht gespeichert werden</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
@@ -983,11 +989,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Ja</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Verarbeitung</value>
   </data>
 </root>

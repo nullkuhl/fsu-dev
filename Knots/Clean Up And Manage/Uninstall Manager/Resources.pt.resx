@@ -130,7 +130,7 @@
     <value>entradas foram removidas com sucesso.</value>
   </data>
   <data name="error" xml:space="preserve">
-    <value>erro</value>
+    <value>Erro</value>
   </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Ocorreu um erro</value>
@@ -139,7 +139,7 @@
     <value>O ficheiro foi importado</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="image" xml:space="preserve">
     <value>Imagem</value>
@@ -169,7 +169,7 @@
     <value>Programas</value>
   </data>
   <data name="programs_installed_total" xml:space="preserve">
-    <value>Programas instalados no computador (Total </value>
+    <value>Programas instalados no computador (Total</value>
   </data>
   <data name="publisher" xml:space="preserve">
     <value>Fabricante</value>
@@ -217,7 +217,7 @@
     <value>Desinstalar programas</value>
   </data>
   <data name="unistaller_not_found" xml:space="preserve">
-    <value>Desinstalar arquivos não pôde ser encontrado para {0}, Você quer removê-lo da lista?</value>
+    <value>Não foi possível encontrar os ficheiros de desinstalação para {0}. O programa deve ser eliminado da lista?</value>
   </data>
   <data name="version" xml:space="preserve">
     <value>Versão</value>

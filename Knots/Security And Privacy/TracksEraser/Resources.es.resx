@@ -164,11 +164,32 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   <data name="closed_google" xml:space="preserve">
     <value>Para realizar esta operación es necesario que Chrome esté cerrado. ¿Está seguro de que es así</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Para ello es necesario que Internet Explorer se cierre. ¿Estás seguro de Internet Explorer está cerrado?</value>
+  </data>
+  <data name="CloseIE1" xml:space="preserve">
+    <value>Para poder ejecutar esta operación es necesario cerrar Internet Explorer. ¿Realmente está cerrado Internet Explorer?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome se está ejecutando. Ciérrelo y ejecute de nuevo el análisis.</value>
+  </data>
   <data name="close_ff" xml:space="preserve">
     <value>Cierre Firefox y vuélvalo a intentar</value>
   </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox se está ejecutando. Ciérrelo y ejecute de nuevo el análisis.</value>
+  </data>
   <data name="close_google" xml:space="preserve">
     <value>Cierre Chrome y vuélvalo a intentar</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Esta operación requiere Internet Explorer se cierre. ¿Estás seguro de Internet Explorer está cerrado?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Para poder ejecutar esta operación es necesario cerrar Internet Explorer. ¿Realmente está cerrado Internet Explorer?</value>
+  </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer se está ejecutando. Ciérrelo y ejecute de nuevo el análisis.</value>
   </data>
   <data name="cookies" xml:space="preserve">
     <value>Cookies</value>
@@ -198,10 +219,10 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
     <value>Error</value>
   </data>
   <data name="error_check_tracks" xml:space="preserve">
-    <value>gustaría borrar utilizando la casilla que aparece a la izquierda del nombre de rastro.</value>
+    <value>gustaría borrar utilizando la casilla que aparece a la izquierda del nombre de rastro</value>
   </data>
   <data name="error_erased_succ" xml:space="preserve">
-    <value>Se han borrado correctamente los rastros seleccionados.</value>
+    <value>Se han borrado correctamente los rastros seleccionados</value>
   </data>
   <data name="error_no_tracks_checked" xml:space="preserve">
     <value>No hay rastros seleccionados. Para eliminar rastros, seleccione aquellos que le</value>
@@ -210,7 +231,7 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
     <value>Error al acceder a la Papelera de reciclaje</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>No ha seleccionado ningún elemento para su análisis!</value>
+    <value>No ha seleccionado ningún elemento para su análisis</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>¿Está seguro de que desea borrar</value>
@@ -281,6 +302,9 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   <data name="google_saved_info" xml:space="preserve">
     <value>Google Chrome: información guardada de formularios</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
   <data name="ie" xml:space="preserve">
     <value>Internet Explorer</value>
   </data>
@@ -295,6 +319,9 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   </data>
   <data name="ie_history_item" xml:space="preserve">
     <value>Elemento de historial de IE:</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer se está ejecutando. Para poder eliminar los cookies es necesario cerrar Internet Explorer.</value>
   </data>
   <data name="ie_typed_urls" xml:space="preserve">
     <value>URL introducidas en IE</value>
@@ -368,6 +395,9 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   <data name="scan_started" xml:space="preserve">
     <value>Análisis iniciado.</value>
   </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Sólo las pistas borrables</value>
+  </data>
   <data name="start_menu_history" xml:space="preserve">
     <value>Historial de clics en el menú Inicio</value>
   </data>
@@ -433,29 +463,5 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   </data>
   <data name="win_temp_files" xml:space="preserve">
     <value>Archivos temporales de Windows</value>
-  </data>
-  <data name="CloseIE" xml:space="preserve">
-    <value>Para ello es necesario que Internet Explorer se cierre. ¿Estás seguro de Internet Explorer está cerrado?</value>
-  </data>
-  <data name="close_chrome_to_erase" xml:space="preserve">
-    <value>Google Chrome ya se está ejecutando, ciérrelo a continuación, ejecute de nuevo SCAN.</value>
-  </data>
-  <data name="close_firefox_to_erase" xml:space="preserve">
-    <value>Mozilla Firefox ya se está ejecutando, ciérrelo a continuación, ejecute de nuevo SCAN.</value>
-  </data>
-  <data name="close_iexplore_to_erase" xml:space="preserve">
-    <value>Esta operación requiere Internet Explorer se cierre. ¿Estás seguro de Internet Explorer está cerrado?</value>
-  </data>
-  <data name="close_ie_to_erase" xml:space="preserve">
-    <value>Esta operación requiere Internet Explorer se cierre. ¿Estás seguro de Internet Explorer está cerrado?</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="ie_running" xml:space="preserve">
-    <value>Internet Explorer se está ejecutando. Por favor, cierre el navegador Internet Explorer para eliminar las cookies.</value>
-  </data>
-  <data name="show_av_er_tracks" xml:space="preserve">
-    <value>Mostrar sólo borrables pistas disponibles</value>
   </data>
 </root>

@@ -163,13 +163,22 @@
     <value>Excluir (no buscar más)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Exclusión correcta!</value>
+    <value>Exclusión correcta</value>
+  </data>
+  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
+    <value>La carpeta seleccionada no se puede abrir. Puede que ya no exista.</value>
+  </data>
+  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
+    <value>La carpeta no se puede abrir.</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Nombre de carpeta</value>
   </data>
   <data name="folder_path" xml:space="preserve">
     <value>Ruta de carpeta</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="ignore" xml:space="preserve">
     <value>Omitir</value>
@@ -202,7 +211,7 @@
     <value>Analizando</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Análisis anulado.</value>
+    <value>Análisis anulado</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Analizar unidades</value>
@@ -221,14 +230,5 @@
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Seleccionar las carpetas que eliminar</value>
-  </data>
-  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
-    <value>La carpeta seleccionada no se puede abrir! A lo mejor ya no existe.</value>
-  </data>
-  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
-    <value>Carpeta no se puede abrir</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

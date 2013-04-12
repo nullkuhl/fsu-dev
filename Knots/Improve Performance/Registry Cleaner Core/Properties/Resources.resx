@@ -150,11 +150,20 @@
   <data name="CheckingVirtualDeviceRegistration" xml:space="preserve">
     <value>Testing for VDM bug...</value>
   </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Class Key Edit Strings</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Class Key Open Strings</value>
+  </data>
   <data name="ClassKeySubPaths" xml:space="preserve">
     <value>Class Key Sub Paths</value>
   </data>
   <data name="ClassNameRegistrations" xml:space="preserve">
     <value>Class Name Registrations</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>Clsid Registrations</value>
   </data>
   <data name="ComparingInternalID" xml:space="preserve">
     <value>Comparing internal ID strings...</value>
@@ -168,14 +177,47 @@
   <data name="DeepSystemScan" xml:space="preserve">
     <value>Deep System Scan</value>
   </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Deep User Software Strings</value>
+  </data>
   <data name="FontPaths" xml:space="preserve">
     <value>Font Paths</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Help File Paths</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>Help Files</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>History and Start Menu</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>History Explorer Strings</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Link-Verlauf</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Menu-Verlauf</value>
   </data>
   <data name="HistorySettings" xml:space="preserve">
     <value>History Settings</value>
   </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>History Start Paths</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Icon-Pfade</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>Installation Strings</value>
+  </data>
   <data name="InstalledSoftware" xml:space="preserve">
     <value>Installed Software</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>Interface Proxy IDs</value>
   </data>
   <data name="InterfaceTypes" xml:space="preserve">
     <value>Interface Types</value>
@@ -183,8 +225,14 @@
   <data name="MostRecentlyUsedLists" xml:space="preserve">
     <value>Most Recently Used Lists</value>
   </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>MRU Lists</value>
+  </data>
   <data name="MRUScan" xml:space="preserve">
     <value>MRU Scan</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>ProcServer-Unterschlüssel</value>
   </data>
   <data name="RegisteredHelpFiles" xml:space="preserve">
     <value>Registered Help Files</value>
@@ -201,6 +249,9 @@
   <data name="StartupApplicationPaths" xml:space="preserve">
     <value>Startup Application Paths</value>
   </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>Startup Entries</value>
+  </data>
   <data name="StartupOptions" xml:space="preserve">
     <value>Startup Options</value>
   </data>
@@ -212,6 +263,12 @@
   </data>
   <data name="SystemFonts" xml:space="preserve">
     <value>System Fonts</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>System Scan</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>System Software</value>
   </data>
   <data name="TestingClassInterfaces" xml:space="preserve">
     <value>Testing Class Interfaces...</value>
@@ -231,6 +288,9 @@
   <data name="UninstallExecutablePaths" xml:space="preserve">
     <value>Uninstall Executable Paths</value>
   </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>User Scan</value>
+  </data>
   <data name="UserSoftware" xml:space="preserve">
     <value>User Software</value>
   </data>
@@ -243,67 +303,7 @@
   <data name="VirtualDevices" xml:space="preserve">
     <value>Virtual Devices</value>
   </data>
-  <data name="ClassKeyEditStrings" xml:space="preserve">
-    <value>Class Key Edit Strings</value>
-  </data>
-  <data name="ClassKeyOpenStrings" xml:space="preserve">
-    <value>Class Key Open Strings</value>
-  </data>
-  <data name="ClsidRegistrations" xml:space="preserve">
-    <value>Clsid Registrations</value>
-  </data>
-  <data name="DeepUserSoftwareStrings" xml:space="preserve">
-    <value>Deep User Software Strings</value>
-  </data>
-  <data name="HelpFilePaths" xml:space="preserve">
-    <value>Help File Paths</value>
-  </data>
-  <data name="HistoryExplorerStrings" xml:space="preserve">
-    <value>History Explorer Strings</value>
-  </data>
-  <data name="HistoryLinkStrings" xml:space="preserve">
-    <value>History Link Strings</value>
-  </data>
-  <data name="HistoryMenuStrings" xml:space="preserve">
-    <value>History Menu Strings</value>
-  </data>
-  <data name="HistoryStartPaths" xml:space="preserve">
-    <value>History Start Paths</value>
-  </data>
-  <data name="IconPaths" xml:space="preserve">
-    <value>Icon Paths</value>
-  </data>
-  <data name="InterfaceProxyIDs" xml:space="preserve">
-    <value>Interface Proxy IDs</value>
-  </data>
-  <data name="ProcServerSubkeys" xml:space="preserve">
-    <value>ProcServer Subkeys</value>
-  </data>
   <data name="Win32HelpFiles" xml:space="preserve">
     <value>Win32 Help Files</value>
-  </data>
-  <data name="HelpFiles" xml:space="preserve">
-    <value>Help Files</value>
-  </data>
-  <data name="HistoryandStartMenu" xml:space="preserve">
-    <value>History and Start Menu</value>
-  </data>
-  <data name="InstallationStrings" xml:space="preserve">
-    <value>Installation Strings</value>
-  </data>
-  <data name="MRULists" xml:space="preserve">
-    <value>MRU Lists</value>
-  </data>
-  <data name="StartupEntries" xml:space="preserve">
-    <value>Startup Entries</value>
-  </data>
-  <data name="SystemScan" xml:space="preserve">
-    <value>System Scan</value>
-  </data>
-  <data name="SystemSoftware" xml:space="preserve">
-    <value>System Software</value>
-  </data>
-  <data name="UserScan" xml:space="preserve">
-    <value>User Scan</value>
   </data>
 </root>

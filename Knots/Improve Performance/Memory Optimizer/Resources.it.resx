@@ -139,7 +139,7 @@
     <value>Esci</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://it.freemium.com/company/faq/</value>
   </data>
   <data name="increase_free_memory" xml:space="preserve">
     <value>Aumenta la memoria disponibile fino a</value>
@@ -147,8 +147,14 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Carica all'avvio di Windows</value>
   </data>
+  <data name="memory" xml:space="preserve">
+    <value>MB di RAM liberate</value>
+  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Quantità di memoria</value>
+  </data>
+  <data name="memory_freed" xml:space="preserve">
+    <value>c'erano</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Ottimizzazione memoria</value>
@@ -172,7 +178,7 @@
     <value>Ottimizzazione</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Ottimizzazione completato: {{1}} MB di RAM sono stati liberati.</value>
+    <value>Ottimizzazione riuscita: liberazione di %1 MB di memoria di lavoro.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Ottimizza</value>

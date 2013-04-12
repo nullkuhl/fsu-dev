@@ -144,6 +144,12 @@
   <data name="browse" xml:space="preserve">
     <value>&amp;Rechercher</value>
   </data>
+  <data name="cant_block_processmanager" xml:space="preserve">
+    <value>Vous ne pouvez pas bloquer le processus Freemium.</value>
+  </data>
+  <data name="cant_end_processmanager" xml:space="preserve">
+    <value>Vous ne pouvez pas terminer les processus Freemium.</value>
+  </data>
   <data name="close" xml:space="preserve">
     <value>Fermer</value>
   </data>
@@ -174,8 +180,11 @@
   <data name="end_process" xml:space="preserve">
     <value>Terminer le processus</value>
   </data>
+  <data name="error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
   <data name="executable" xml:space="preserve">
-    <value> Exécutable</value>
+    <value>Exécutable</value>
   </data>
   <data name="file" xml:space="preserve">
     <value>Fichier</value>
@@ -194,6 +203,9 @@
   </data>
   <data name="general_info" xml:space="preserve">
     <value>Informations générales</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="High" xml:space="preserve">
     <value>Haut</value>
@@ -240,8 +252,14 @@
   <data name="processes" xml:space="preserve">
     <value>Processus : {0}</value>
   </data>
+  <data name="processes_successfully_unblocked" xml:space="preserve">
+    <value>Tous les processus ont été déverrouillés avec succès.</value>
+  </data>
   <data name="process_information" xml:space="preserve">
     <value>Informations sur le processus</value>
+  </data>
+  <data name="process_manager" xml:space="preserve">
+    <value>Gestionnaire de processus</value>
   </data>
   <data name="proc_id" xml:space="preserve">
     <value>Identifiants du processus</value>
@@ -300,6 +318,12 @@
   <data name="start_time" xml:space="preserve">
     <value>Durée de démarrage</value>
   </data>
+  <data name="system_process_block" xml:space="preserve">
+    <value>Le blocage de processus système peut être dangereux. Souhaitez-vous quand même bloquer le processus ?</value>
+  </data>
+  <data name="system_process_end" xml:space="preserve">
+    <value>L’arrêt de processus système peut être dangereux. Souhaitez-vous quand même arrêter le processus ?</value>
+  </data>
   <data name="taskmngr_invisible" xml:space="preserve">
     <value>Le gestionnaire des tâches est en mode invisible.</value>
   </data>
@@ -315,6 +339,15 @@
   <data name="trademark" xml:space="preserve">
     <value>Marque</value>
   </data>
+  <data name="unblock" xml:space="preserve">
+    <value>Déverrouiller</value>
+  </data>
+  <data name="unblock_all" xml:space="preserve">
+    <value>Tout déverrouiller</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>Utilisateur</value>
+  </data>
   <data name="value" xml:space="preserve">
     <value>Valeur</value>
   </data>
@@ -324,49 +357,16 @@
   <data name="version_information" xml:space="preserve">
     <value>Informations sur la version</value>
   </data>
-  <data name="window_title" xml:space="preserve">
-    <value>Gérer les processus</value>
-  </data>
-  <data name="cant_block_processmanager" xml:space="preserve">
-    <value>Vous ne pouvez pas bloquer Process Manager Freemium.</value>
-  </data>
-  <data name="cant_end_processmanager" xml:space="preserve">
-    <value>Vous ne pouvez pas terminer Process Manager Freemium.</value>
-  </data>
-  <data name="error" xml:space="preserve">
-    <value>erreur</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processes_successfully_unblocked" xml:space="preserve">
-    <value>Tous les processus ont pu être débloqués.</value>
-  </data>
-  <data name="process_manager" xml:space="preserve">
-    <value>Process Manager</value>
-  </data>
-  <data name="system_process_block" xml:space="preserve">
-    <value>Blocage des processus du système peut être dangereux. Voulez-vous arrêter le processus de toute façon?</value>
-  </data>
-  <data name="system_process_end" xml:space="preserve">
-    <value>Mettre fin à des processus système peut être dangereux. Voulez-vous arrêter le processus de toute façon?</value>
-  </data>
-  <data name="unblock" xml:space="preserve">
-    <value>débloquer</value>
-  </data>
-  <data name="unblock_all" xml:space="preserve">
-    <value>débloquer tous les</value>
-  </data>
-  <data name="user" xml:space="preserve">
-    <value>utilisateur</value>
-  </data>
   <data name="want_block_process" xml:space="preserve">
-    <value>Etes-vous sûr que vous voulez bloquer {0}?</value>
+    <value>Souhaitez-vous vraiment bloquer le processus {0} ?</value>
   </data>
   <data name="want_end_process" xml:space="preserve">
-    <value>Êtes-vous sûr de vouloir mettre fin à {0}?</value>
+    <value>Souhaitez-vous vraiment terminer le processus {0} ?</value>
   </data>
   <data name="warning" xml:space="preserve">
-    <value>avertissement</value>
+    <value>Avertissement</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Gérer les processus</value>
   </data>
 </root>

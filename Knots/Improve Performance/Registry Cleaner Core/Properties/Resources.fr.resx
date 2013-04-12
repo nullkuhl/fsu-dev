@@ -150,11 +150,20 @@
   <data name="CheckingVirtualDeviceRegistration" xml:space="preserve">
     <value>Vérification de la présence d’un bogue VDM...</value>
   </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Chaîne de caractères pour le traitement de clés de classe</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Chaîne de caractères pour l’ouverture de clés de classe</value>
+  </data>
   <data name="ClassKeySubPaths" xml:space="preserve">
     <value>Sous-chemins d’accès des clés de classe</value>
   </data>
   <data name="ClassNameRegistrations" xml:space="preserve">
     <value>Registres des noms de classes</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>Inscriptions CLSID</value>
   </data>
   <data name="ComparingInternalID" xml:space="preserve">
     <value>Comparaison de chaînes de caractère d’identification internes...</value>
@@ -168,14 +177,47 @@
   <data name="DeepSystemScan" xml:space="preserve">
     <value>Vérification exhaustive du système</value>
   </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Chaînes de caractères intensives du logiciel de l’utilisateur</value>
+  </data>
   <data name="FontPaths" xml:space="preserve">
     <value>Chemins d’accès du type d’écriture</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Chemin des fichiers d’aide</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>Fichiers d’aide</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>Historique et menu Démarrer</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>Historique d’Explorer</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Cronologia link</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Cronologia menu</value>
   </data>
   <data name="HistorySettings" xml:space="preserve">
     <value>Paramètres de l’historique</value>
   </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>Historique de démarrage</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Percorsi icone</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>Chaînes de caractères d’installation</value>
+  </data>
   <data name="InstalledSoftware" xml:space="preserve">
     <value>Logiciels installés</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>ID du proxy de l’interface</value>
   </data>
   <data name="InterfaceTypes" xml:space="preserve">
     <value>Types d’interfaces</value>
@@ -183,8 +225,14 @@
   <data name="MostRecentlyUsedLists" xml:space="preserve">
     <value>Dernières listes utilisées</value>
   </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>Dernière liste utilisée</value>
+  </data>
   <data name="MRUScan" xml:space="preserve">
     <value>Vérification des dernières listes utilisées</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>Sottochiave ProcServer</value>
   </data>
   <data name="RegisteredHelpFiles" xml:space="preserve">
     <value>Fichiers d’aide enregistrés</value>
@@ -201,6 +249,9 @@
   <data name="StartupApplicationPaths" xml:space="preserve">
     <value>Chemins d’accès d’application de l’AutoRun</value>
   </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>Entrées de l’AutoRun</value>
+  </data>
   <data name="StartupOptions" xml:space="preserve">
     <value>Options de démarrage</value>
   </data>
@@ -212,6 +263,12 @@
   </data>
   <data name="SystemFonts" xml:space="preserve">
     <value>Types de systèmes d’écriture</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>Scan système</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>Logiciel système</value>
   </data>
   <data name="TestingClassInterfaces" xml:space="preserve">
     <value>Vérification des interfaces de classes...</value>
@@ -231,6 +288,9 @@
   <data name="UninstallExecutablePaths" xml:space="preserve">
     <value>Chemins d’accès de programmes de désinstallation</value>
   </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>Scan utilisateur</value>
+  </data>
   <data name="UserSoftware" xml:space="preserve">
     <value>Logiciel utilisateur</value>
   </data>
@@ -243,67 +303,7 @@
   <data name="VirtualDevices" xml:space="preserve">
     <value>Appareils virtuels</value>
   </data>
-  <data name="ClassKeyEditStrings" xml:space="preserve">
-    <value>Classe clés Strings Modifier</value>
-  </data>
-  <data name="ClassKeyOpenStrings" xml:space="preserve">
-    <value>Classe Open Strings clés</value>
-  </data>
-  <data name="ClsidRegistrations" xml:space="preserve">
-    <value>Inscriptions CLSID</value>
-  </data>
-  <data name="DeepUserSoftwareStrings" xml:space="preserve">
-    <value>Profondes Strings Software utilisateur</value>
-  </data>
-  <data name="HelpFilePaths" xml:space="preserve">
-    <value>Aide chemins d'accès</value>
-  </data>
-  <data name="HelpFiles" xml:space="preserve">
-    <value>Help Files</value>
-  </data>
-  <data name="HistoryandStartMenu" xml:space="preserve">
-    <value>Histoire et menu Démarrer</value>
-  </data>
-  <data name="HistoryExplorerStrings" xml:space="preserve">
-    <value>Strings Explorateur d'histoire</value>
-  </data>
-  <data name="HistoryLinkStrings" xml:space="preserve">
-    <value>Strings Lien Histoire</value>
-  </data>
-  <data name="HistoryMenuStrings" xml:space="preserve">
-    <value>Strings Menu Histoire</value>
-  </data>
-  <data name="HistoryStartPaths" xml:space="preserve">
-    <value>Chemins de démarrage Histoire</value>
-  </data>
-  <data name="IconPaths" xml:space="preserve">
-    <value>Chemins icône</value>
-  </data>
-  <data name="InstallationStrings" xml:space="preserve">
-    <value>Strings installation</value>
-  </data>
-  <data name="InterfaceProxyIDs" xml:space="preserve">
-    <value>Interface Proxy ID</value>
-  </data>
-  <data name="MRULists" xml:space="preserve">
-    <value>listes MRU</value>
-  </data>
-  <data name="ProcServerSubkeys" xml:space="preserve">
-    <value>Les sous-clés ProcServer</value>
-  </data>
-  <data name="StartupEntries" xml:space="preserve">
-    <value>Entrées de démarrage</value>
-  </data>
-  <data name="SystemScan" xml:space="preserve">
-    <value>système de numérisation</value>
-  </data>
-  <data name="SystemSoftware" xml:space="preserve">
-    <value>System Software</value>
-  </data>
-  <data name="UserScan" xml:space="preserve">
-    <value>utilisateur de numérisation</value>
-  </data>
   <data name="Win32HelpFiles" xml:space="preserve">
-    <value>Fichiers d'aide Win32</value>
+    <value>Fichiers d’aide Win32</value>
   </data>
 </root>

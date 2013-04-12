@@ -163,11 +163,32 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   <data name="closed_google" xml:space="preserve">
     <value>Pour cette opération, Chrome doit être fermé. Êtes-vous sûr(e) que Chrome est fermé ?</value>
   </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Cela nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="CloseIE1" xml:space="preserve">
+    <value>Pour cette opération, Internet Explorer doit être fermé. Êtes-vous sûr(e) qu’Internet Explorer est fermé ?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
   <data name="close_ff" xml:space="preserve">
     <value>Fermez Firefox et procédez à un nouvel essai.</value>
   </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
   <data name="close_google" xml:space="preserve">
     <value>Fermez Chrome et procédez à un nouvel essai.</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Pour cette opération, Internet Explorer doit être fermé. Êtes-vous sûr(e) qu’Internet Explorer est fermé ?</value>
+  </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
   </data>
   <data name="cookies" xml:space="preserve">
     <value>Cookies</value>
@@ -209,7 +230,7 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
     <value>Erreur lors de l’accès à la corbeille</value>
   </data>
   <data name="error_select" xml:space="preserve">
-    <value>Aucun élément n’a été sélectionné pour l’analyse!</value>
+    <value>Aucun élément n’a été sélectionné pour l’analyse.</value>
   </data>
   <data name="error_sure" xml:space="preserve">
     <value>Êtes-vous sûr(e) de vouloir</value>
@@ -280,6 +301,9 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   <data name="google_saved_info" xml:space="preserve">
     <value>Google Chrome - Données de formulaire enregistrées</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
   <data name="ie" xml:space="preserve">
     <value>Internet Explorer</value>
   </data>
@@ -294,6 +318,9 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   </data>
   <data name="ie_history_item" xml:space="preserve">
     <value>Internet Explorer - Entrée de l’historique :</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer est en cours d’exécution. Veuillez fermer Internet Explorer pour supprimer les cookies.</value>
   </data>
   <data name="ie_typed_urls" xml:space="preserve">
     <value>Internet Explorer - URL saisies</value>
@@ -367,6 +394,9 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   <data name="scan_started" xml:space="preserve">
     <value>Vérification lancée.</value>
   </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Seules les pistes effaçables</value>
+  </data>
   <data name="start_menu_history" xml:space="preserve">
     <value>Historique des clics du menu Démarrer</value>
   </data>
@@ -432,29 +462,5 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   </data>
   <data name="win_temp_files" xml:space="preserve">
     <value>Windows - Fichiers temporaires</value>
-  </data>
-  <data name="CloseIE" xml:space="preserve">
-    <value>Cela nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
-  </data>
-  <data name="close_chrome_to_erase" xml:space="preserve">
-    <value>Google Chrome est déjà en cours, s'il vous plaît fermez puis exécutez de nouveau sur SCAN.</value>
-  </data>
-  <data name="close_firefox_to_erase" xml:space="preserve">
-    <value>Mozilla Firefox est déjà en cours, s'il vous plaît fermez puis exécutez de nouveau sur SCAN.</value>
-  </data>
-  <data name="close_iexplore_to_erase" xml:space="preserve">
-    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
-  </data>
-  <data name="close_ie_to_erase" xml:space="preserve">
-    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="ie_running" xml:space="preserve">
-    <value>Internet Explorer est en cours d'exécution. S'il vous plaît fermer le navigateur Internet Explorer pour supprimer les cookies.</value>
-  </data>
-  <data name="show_av_er_tracks" xml:space="preserve">
-    <value>Afficher seulement disponibles pistes effaçables</value>
   </data>
 </root>

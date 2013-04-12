@@ -133,7 +133,7 @@
     <value>Efetuar cópia de segurança de ficheiros temporários antes de limpar</value>
   </data>
   <data name="backup_zero_files" xml:space="preserve">
-    <value>Efetuar cópia de segurança de ficheiros de zero bytes antes de limpar </value>
+    <value>Efetuar cópia de segurança de ficheiros de zero bytes antes de limpar</value>
   </data>
   <data name="browse" xml:space="preserve">
     <value>Procurar</value>
@@ -237,6 +237,9 @@
   <data name="help" xml:space="preserve">
     <value>Ajuda</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>Se não tiver a certeza sobre estas opções, recomenda-se que fiquem como predefinidas</value>
   </data>
@@ -297,6 +300,9 @@
   <data name="pending" xml:space="preserve">
     <value>pendente</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processamento a decorrer…</value>
+  </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Processar ficheiros não solicitados</value>
   </data>
@@ -325,10 +331,10 @@
     <value>analisar</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Selecione uma unidade da lista.</value>
+    <value>Selecione uma unidade da lista</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Selecione pelo menos um item da lista.</value>
+    <value>Selecione pelo menos um item da lista</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Selecione um conjunto de cópias de segurança que pretenda restaurar e clique em Restaurar</value>
@@ -355,7 +361,7 @@
     <value>Os ficheiros temporários são utilizados por programas como um espaço de armazenamento intermédio e geralmente são removidos após a utilização</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Esta ferramenta não se encontra na sua plataforma.</value>
+    <value>Esta ferramenta não se encontra na sua plataforma</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Total</value>
@@ -374,6 +380,9 @@
   </data>
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Aguarde até terminar a análise das unidades selecionadas</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Os ficheiros no índice Temp do Windows são considerados sempre desnecessários.</value>
   </data>
   <data name="windows_components" xml:space="preserve">
     <value>Componentes do Windows</value>
@@ -395,14 +404,5 @@
   </data>
   <data name="zero_files_def" xml:space="preserve">
     <value>Os ficheiros com zero-bytes não têm dados e geralmente podem ser eliminados</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing ...</value>
-  </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Arquivos dentro da pasta Temp do Windows são sempre considerados como resíduos</value>
   </data>
 </root>

@@ -165,6 +165,9 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Directory distrutta</value>
   </data>
+  <data name="eliminate_folders" xml:space="preserve">
+    <value>Supprimer aussi les dossiers.</value>
+  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>Svuotamento dei contenuti del file non riuscito</value>
   </data>
@@ -207,11 +210,14 @@
   <data name="file_shredder" xml:space="preserve">
     <value>Cancella i file in modo sicuro</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Percorso non valido</value>
   </data>
   <data name="no_sufficient_access" xml:space="preserve">
-    <value>Non possiedi privilegi di accesso sufficienti per l'esecuzione di questo programma. Devi essere connetto come amministratore di sistema.</value>
+    <value>Non possiedi privilegi di accesso sufficienti per l'esecuzione di questo programma. Devi essere connetto come amministratore di sistema</value>
   </data>
   <data name="open_file_select" xml:space="preserve">
     <value>Apri la finestra di dialogo di selezione file o di apertura delle cartelle</value>
@@ -247,7 +253,7 @@
     <value>Seleziona un file</value>
   </data>
   <data name="select_file_folder" xml:space="preserve">
-    <value>Seleziona un file o una cartella.</value>
+    <value>Seleziona un file o una cartella</value>
   </data>
   <data name="select_folder" xml:space="preserve">
     <value>Seleziona una cartella</value>
@@ -265,7 +271,7 @@
     <value>Alcuni file non sono stati eliminati</value>
   </data>
   <data name="system_not_supported" xml:space="preserve">
-    <value>Il tuo sistema operativo non è supportato. Questa applicazione può essere eseguita soltanto su sistemi basati su NT (XP.Vista/2000/2003).</value>
+    <value>Il tuo sistema operativo non è supportato. Questa applicazione può essere eseguita soltanto su sistemi basati su NT (XP.Vista/2000/2003)</value>
   </data>
   <data name="terminate_running" xml:space="preserve">
     <value>Chiudi qualsiasi istanza in esecuzione del file prima di eseguire lo strumento di distruzione</value>
@@ -278,11 +284,5 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Visitaci</value>
-  </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Eliminare le cartelle, anche</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

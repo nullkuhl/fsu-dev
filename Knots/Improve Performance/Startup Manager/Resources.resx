@@ -127,7 +127,7 @@
     <value>Command</value>
   </data>
   <data name="commands_disabled" xml:space="preserve">
-    <value>All commands except delete are disabled.</value>
+    <value>All commands except delete are disabled</value>
   </data>
   <data name="company" xml:space="preserve">
     <value>Company</value>
@@ -142,7 +142,7 @@
     <value>Delete startup item</value>
   </data>
   <data name="description" xml:space="preserve">
-    <value>Description:</value>
+    <value>Description</value>
   </data>
   <data name="details" xml:space="preserve">
     <value>Details</value>
@@ -157,7 +157,7 @@
     <value>Disable startup item</value>
   </data>
   <data name="do_you_wish" xml:space="preserve">
-    <value>Do you wish to continue?</value>
+    <value>Do you wish to continue</value>
   </data>
   <data name="enable" xml:space="preserve">
     <value>Enable</value>
@@ -178,34 +178,43 @@
     <value>Execute command</value>
   </data>
   <data name="file_appear_not_valid" xml:space="preserve">
-    <value>The file does not appear to be a valid shortcut.</value>
+    <value>The file does not appear to be a valid shortcut</value>
   </data>
   <data name="file_folder_not_found" xml:space="preserve">
-    <value>The file and/or folder cannot be found.</value>
+    <value>The file and/or folder cannot be found</value>
   </data>
   <data name="file_invalid" xml:space="preserve">
-    <value>The file is invalid or does not exist.</value>
+    <value>The file is invalid or does not exist</value>
   </data>
   <data name="file_name" xml:space="preserve">
     <value>Filename</value>
   </data>
   <data name="file_not_found" xml:space="preserve">
-    <value>The file was not found or is hidden.</value>
+    <value>The file was not found or is hidden</value>
   </data>
   <data name="file_not_found1" xml:space="preserve">
     <value>The file was not found</value>
   </data>
   <data name="file_not_found_warning" xml:space="preserve">
-    <value>The file was not found.</value>
+    <value>The file was not found</value>
   </data>
   <data name="file_path" xml:space="preserve">
-    <value>File path:</value>
+    <value>File path</value>
   </data>
   <data name="folder_not_found" xml:space="preserve">
-    <value>The folder was not found.</value>
+    <value>The folder was not found</value>
   </data>
   <data name="full_version" xml:space="preserve">
     <value>File version</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="HKCU" xml:space="preserve">
+    <value>Registry: Current User</value>
+  </data>
+  <data name="HKLM" xml:space="preserve">
+    <value>Registry: All Users</value>
   </data>
   <data name="if_you_continue" xml:space="preserve">
     <value>If you continue, you will only be able to change those items marked "Current user"</value>
@@ -235,7 +244,7 @@
     <value>Move Item to Current user</value>
   </data>
   <data name="no_permission" xml:space="preserve">
-    <value>You do not have permission to view the properties of this file.</value>
+    <value>You do not have permission to view the properties of this file</value>
   </data>
   <data name="open_file_folder" xml:space="preserve">
     <value>Open file folder</value>
@@ -256,7 +265,13 @@
     <value>Refresh display</value>
   </data>
   <data name="run_as_admin" xml:space="preserve">
-    <value>To be able to change all startup items you must run this program as an administrator.</value>
+    <value>To be able to change all startup items you must run this program as an administrator</value>
+  </data>
+  <data name="StartupAllUsers" xml:space="preserve">
+    <value>Startup Folder: All Users</value>
+  </data>
+  <data name="StartupCurrentUser" xml:space="preserve">
+    <value>Startup Folder: Current User</value>
   </data>
   <data name="startup_manager" xml:space="preserve">
     <value>Manage startup</value>
@@ -265,48 +280,33 @@
     <value>Status</value>
   </data>
   <data name="system_returned" xml:space="preserve">
-    <value>The system returned the following information:</value>
+    <value>The system returned the following information</value>
   </data>
   <data name="unable_to_delete" xml:space="preserve">
-    <value>Unable to delete this item.</value>
+    <value>Unable to delete this item</value>
   </data>
   <data name="unable_to_disable" xml:space="preserve">
-    <value>Unable to disable this item.</value>
+    <value>Unable to disable this item</value>
   </data>
   <data name="unable_to_enable" xml:space="preserve">
-    <value>Unable to enable this item.</value>
+    <value>Unable to enable this item</value>
   </data>
   <data name="unable_to_execute" xml:space="preserve">
-    <value>Unable to execute this item.</value>
+    <value>Unable to execute this item</value>
   </data>
   <data name="unable_to_move" xml:space="preserve">
-    <value>Unable to move this item.</value>
+    <value>Unable to move this item</value>
   </data>
   <data name="unable_to_open" xml:space="preserve">
-    <value>Unable to open the folder containing this item.</value>
+    <value>Unable to open the folder containing this item</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Warning: Do not delete startup items unless you are 100% sure of what you are doing. In most cases, it is recommended that you use the "Disable" option instead.</value>
-  </data>
-  <data name="HKCU" xml:space="preserve">
-    <value>Registry: Current User</value>
-  </data>
-  <data name="HKLM" xml:space="preserve">
-    <value>Registry: All Users</value>
-  </data>
-  <data name="StartupAllUsers" xml:space="preserve">
-    <value>Startup Folder: All Users</value>
-  </data>
-  <data name="StartupCurrentUser" xml:space="preserve">
-    <value>Startup Folder: Current User</value>
   </data>
   <data name="WHKCU" xml:space="preserve">
     <value>Registry: x86 Current User</value>
   </data>
   <data name="WHKLM" xml:space="preserve">
     <value>Registry: x86 All Users</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

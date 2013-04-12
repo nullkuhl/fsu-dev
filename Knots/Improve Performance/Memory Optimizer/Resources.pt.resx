@@ -139,7 +139,7 @@
     <value>Sair</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://pt.freemium.com/company/faq/</value>
   </data>
   <data name="increase_free_memory" xml:space="preserve">
     <value>Aumentar memória livre para</value>
@@ -147,8 +147,14 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Carregar no Arranque do Windows</value>
   </data>
+  <data name="memory" xml:space="preserve">
+    <value>RAM MB foi libertado</value>
+  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Quantidade de Memória</value>
+  </data>
+  <data name="memory_freed" xml:space="preserve">
+    <value>havia</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Otimização de Memória</value>
@@ -172,7 +178,7 @@
     <value>Otimização</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Otimização completou: {{1}} MB de RAM foram libertados.</value>
+    <value>Otimização bem sucedida: Foi libertado %1 MB de memória.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Otimizar</value>

@@ -237,6 +237,9 @@
   <data name="help" xml:space="preserve">
     <value>Guida</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://it.freemium.com/company/faq/</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>Se non sei sicuro di queste opzioni, è consigliabile lasciare le impostazioni predefinite</value>
   </data>
@@ -297,6 +300,9 @@
   <data name="pending" xml:space="preserve">
     <value>in sospeso</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Elaborazione in corso…</value>
+  </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Elaborazione dei file indesiderati in corso</value>
   </data>
@@ -325,10 +331,10 @@
     <value>scansione in corso</value>
   </data>
   <data name="select_any_drive" xml:space="preserve">
-    <value>Seleziona un'unità dall'elenco.</value>
+    <value>Seleziona un'unità dall'elenco</value>
   </data>
   <data name="select_any_item" xml:space="preserve">
-    <value>Seleziona almeno un elemento dall'elenco.</value>
+    <value>Seleziona almeno un elemento dall'elenco</value>
   </data>
   <data name="select_backup" xml:space="preserve">
     <value>Seleziona un set di backup che desideri ripristinare, dopodiché fai clic su Ripristina</value>
@@ -355,7 +361,7 @@
     <value>I file temporanei vengono utilizzati dai programmi come spazio di memoria intermedio e, solitamente, vengono rimossi dopo l'uso</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
-    <value>Questo strumento non è stato trovato sulla tua piattaforma.</value>
+    <value>Questo strumento non è stato trovato sulla tua piattaforma</value>
   </data>
   <data name="total" xml:space="preserve">
     <value>Totale</value>
@@ -374,6 +380,9 @@
   </data>
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Attendi il completamento della scansione delle unità selezionata</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>I file contenuti nella cartella Temp di Windows sono sempre considerati superflui.</value>
   </data>
   <data name="windows_components" xml:space="preserve">
     <value>Componenti di Windows</value>
@@ -395,14 +404,5 @@
   </data>
   <data name="zero_files_def" xml:space="preserve">
     <value>I file a zero byte non contengono dati e, solitamente, possono essere eliminati</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Elaborazione in corso ...</value>
-  </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>I file all'interno della cartella temporanea di Windows sono sempre considerati come rifiuti</value>
   </data>
 </root>

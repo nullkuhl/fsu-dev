@@ -169,7 +169,7 @@
     <value>Inicie Firefox al menos una vez antes de utilizar esta característica.</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://es.freemium.com/company/faq/</value>
   </data>
   <data name="HijackRestore" xml:space="preserve">
     <value>Restauración de configuración secuestrada</value>
@@ -190,7 +190,7 @@
     <value>Extensiones de Internet Explorer</value>
   </data>
   <data name="InternetExplorerToolbars" xml:space="preserve">
-    <value>Las barras de herramientas de IE</value>
+    <value>Barras de herramientas de IE</value>
   </data>
   <data name="LocalPage" xml:space="preserve">
     <value>Página local</value>
@@ -274,7 +274,7 @@
     <value>Bienvenida</value>
   </data>
   <data name="WelcomeMessage" xml:space="preserve">
-    <value>                                      ¡Bienvenido al Administrador de navegadores!
+    <value>¡Bienvenido al Administrador de navegadores!
 Elija la pestaña correspondiente a la configuración del navegador que quiera modificar</value>
   </data>
 </root>

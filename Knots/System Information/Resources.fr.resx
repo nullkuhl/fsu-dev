@@ -169,7 +169,7 @@
     <value>Description</value>
   </data>
   <data name="computer_error_happen" xml:space="preserve">
-    <value>Une erreur est survenue dans l’ordinateur. </value>
+    <value>Une erreur est survenue dans l’ordinateur.</value>
   </data>
   <data name="computer_general" xml:space="preserve">
     <value>Généralités</value>
@@ -367,16 +367,19 @@
     <value>Désignation du support de données</value>
   </data>
   <data name="error_description" xml:space="preserve">
-    <value>Description:</value>
+    <value>Description</value>
   </data>
   <data name="error_return" xml:space="preserve">
-    <value>Le système a rapporté les informations suivantes:</value>
+    <value>Le système a rapporté les informations suivantes :</value>
   </data>
   <data name="error_source" xml:space="preserve">
     <value>Source</value>
   </data>
   <data name="eula_notfound" xml:space="preserve">
     <value>Le fichier EULA.pdf n’a pas pu être trouvé.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
   </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>La valeur est supérieure à 6.</value>
@@ -696,6 +699,9 @@
   <data name="pdf_notfound" xml:space="preserve">
     <value>Adobe Reader n’a pas pu être trouvé.</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Traitement en cours</value>
+  </data>
   <data name="root" xml:space="preserve">
     <value>Informations système</value>
   </data>
@@ -983,11 +989,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Oui</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>traitement</value>
   </data>
 </root>
