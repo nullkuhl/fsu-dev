@@ -64,7 +64,7 @@ namespace FreemiumUtilities.Context
                                 }
                                 else
                                 {
-                                    process.StartInfo.FileName = string.Concat(str, "\\File Splitter and Joiner.exe");
+                                    process.StartInfo.FileName = string.Concat(str, "\\FileSplitterJoiner.exe");
                                     process.StartInfo.Arguments = string.Concat(commandLineArgs[1], " ", commandLineArgs[2]);
                                 }
                             }

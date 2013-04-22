@@ -388,21 +388,23 @@ namespace EmptyFolderFinder
         {
             try
             {
-                var sr = new StreamReader(@"Files\ExcludeFiles.txt");
-
-                do
+                using (StreamReader sr = new StreamReader(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) +
+                                                            "\\FreeSystemUtilities\\Files\\ExcludeFiles.txt"))
                 {
-                    try
+                    do
                     {
-                        excludeFolder.Add(sr.ReadLine());
-                    }
-                    catch (Exception ex)
-                    {
-                        // ToDo: send exception details via SmartAssembly bug reporting!
-                    }
-                } while (!sr.EndOfStream);
+                        try
+                        {
+                            excludeFolder.Add(sr.ReadLine());
+                        }
+                        catch (Exception ex)
+                        {
+                            // ToDo: send exception details via SmartAssembly bug reporting!
+                        }
+                    } while (!sr.EndOfStream);
 
-                sr.Close();
+                    sr.Close();
+                }
             }
             catch
             {
@@ -641,7 +643,11 @@ namespace EmptyFolderFinder
             {
                 if (lvMain.Items.Count > 0)
                 {
-                    using (StreamWriter sw = new StreamWriter(@"Files\ExcludeFiles.txt", true))
+                    string exclFilesDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\Files";
+                    if (!Directory.Exists(exclFilesDir))
+                        Directory.CreateDirectory(exclFilesDir);
+                    
+                    using (StreamWriter sw = new StreamWriter(exclFilesDir + @"\ExcludeFiles.txt", true))
                     {
                         for (int i = lvMain.Items.Count - 1; i >= 0; i--)
                         {
@@ -661,7 +667,7 @@ namespace EmptyFolderFinder
             catch (Exception)
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
-            }
+            }            
         }
 
         /// <summary>

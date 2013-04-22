@@ -132,12 +132,12 @@ namespace FreemiumUtilities.Routine
                 {
                     if (scanOnly)
                     {
-                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, null);
+                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, Environment.CurrentDirectory);
                     }
                     else
                     {
                         task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe",
-                                                                    ScanAndFixCommandLineArg, null);
+                                                                    ScanAndFixCommandLineArg, Environment.CurrentDirectory);
                     }
                     task.RegisterChanges();
                 }
@@ -163,10 +163,9 @@ namespace FreemiumUtilities.Routine
 
                 td.Settings.Enabled = isEnabled;
                 td.RegistrationInfo.Description = "Freemium 1 ClickMaint";
-
+                td.Principal.RunLevel = TaskRunLevel.Highest;
                 // Create an action that will launch Notepad whenever the trigger fires
-                td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, null));
-
+                td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, Environment.CurrentDirectory));                
                 WeeklyTrigger mTrigger = new WeeklyTrigger();
                 mTrigger.DaysOfWeek = DaysOfTheWeek.Friday;
                 mTrigger.StartBoundary = DateTime.Today.AddHours(12);

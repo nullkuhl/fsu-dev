@@ -27,7 +27,15 @@ namespace FileEraser
             set
             {
                 isScanning = value;
-                cmdShred.Text = rm.GetString(isScanning ? "abort_it" : "shred_it");
+                if (optFolder.Checked)
+                {
+                    cmdShred.Text = rm.GetString(isScanning ? "abort_it" : "shred_it");
+                }
+                else
+                {
+                    cmdShred.Enabled = isScanning ? false : true;
+                }
+                grbSelectFile.Enabled = isScanning ? false : true;
             }
         }
 
@@ -41,8 +49,8 @@ namespace FileEraser
         void HelpSetup()
         {
             nshredHelp = new HelpProvider();
-            nshredHelp.SetShowHelp(txtPath, true);
-            nshredHelp.SetHelpString(txtPath, rm.GetString("enter_file_name"));
+            nshredHelp.SetShowHelp(tbPath, true);
+            nshredHelp.SetHelpString(tbPath, rm.GetString("enter_file_name"));
 
             nshredHelp.SetShowHelp(cmdSelect, true);
             nshredHelp.SetHelpString(cmdSelect, rm.GetString("open_file_select"));
@@ -112,13 +120,13 @@ namespace FileEraser
             {
                 if (wipePassedFile)
                 {
-                    txtPath.Text = arg;
+                    tbPath.Text = arg;
 
                     chkCloseInstance.Enabled = arg.EndsWith(".exe");
                     if (!chkCloseInstance.Enabled) chkCloseInstance.Checked = false;
 
-                    if (txtPath.Text.Length > 3)
-                        stInfo.Items[0].Text = rm.GetString("prepared_shred") + " " + txtPath.Text;
+                    if (tbPath.Text.Length > 3)
+                        stInfo.Items[0].Text = rm.GetString("prepared_shred") + " " + tbPath.Text;
                 }
 
                 if (arg == "WIPE")
@@ -213,12 +221,12 @@ namespace FileEraser
                     ofdFile.RestoreDirectory = true;
                     if (ofdFile.ShowDialog() == DialogResult.OK)
                     {
-                        txtPath.Text = ofdFile.FileName;
+                        tbPath.Text = ofdFile.FileName;
                         chkCloseInstance.Enabled = ofdFile.FileName.EndsWith(".exe");
                         if (!chkCloseInstance.Enabled) chkCloseInstance.Checked = false;
                     }
-                    if (txtPath.Text.Length > 3)
-                        stInfo.Items[0].Text = rm.GetString("prepared_shred") + " " + txtPath.Text;
+                    if (tbPath.Text.Length > 3)
+                        stInfo.Items[0].Text = rm.GetString("prepared_shred") + " " + tbPath.Text;
                 }
                 catch (Exception)
                 {
@@ -231,10 +239,10 @@ namespace FileEraser
                 fbFolder.ShowNewFolderButton = false;
                 if (fbFolder.ShowDialog() == DialogResult.OK)
                 {
-                    txtPath.Text = fbFolder.SelectedPath;
+                    tbPath.Text = fbFolder.SelectedPath;
                 }
-                if (txtPath.Text.Length > 3)
-                    stInfo.Items[0].Text = rm.GetString("prepared_process") + " " + txtPath.Text;
+                if (tbPath.Text.Length > 3)
+                    stInfo.Items[0].Text = rm.GetString("prepared_process") + " " + tbPath.Text;
             }
         }
 
@@ -251,8 +259,8 @@ namespace FileEraser
             }
             else
             {
-                Func(txtPath.Text);
-                txtPath.Text = String.Empty;
+                Func(tbPath.Text);
+                tbPath.Text = String.Empty;
             }
         }
 
@@ -329,7 +337,7 @@ namespace FileEraser
             }
             catch (Exception)
             {
-                // ToDo: send exception details via SmartAssembly bug reporting!
+                FinalizeShredProcess();
             }
         }
 
@@ -339,23 +347,29 @@ namespace FileEraser
         /// <param name="path"></param>
         void DeleteSubDirectories(DirectoryInfo path)
         {
-            foreach (FileInfo finfo in path.GetFiles())
+            try
             {
-                if (blnKillProcess)
+                foreach (FileInfo finfo in path.GetFiles())
                 {
-                    FinalizeShredProcess();
-                    return;
+                    if (blnKillProcess)
+                    {
+                        FinalizeShredProcess();
+                        return;
+                    }
+                    DeleteFile(finfo.FullName);
+                    evtProgressTick();
                 }
-                DeleteFile(finfo.FullName);
-                evtProgressTick();
+                foreach (DirectoryInfo dinfo in path.GetDirectories())
+                {
+                    if (blnKillProcess)
+                    {
+                        return;
+                    }
+                    DeleteSubDirectories(dinfo);
+                }
             }
-            foreach (DirectoryInfo dinfo in path.GetDirectories())
+            catch
             {
-                if (blnKillProcess)
-                {
-                    return;
-                }
-                DeleteSubDirectories(dinfo);
             }
         }
 
@@ -473,7 +487,7 @@ namespace FileEraser
         /// <param name="e"></param>
         void optFolder_CheckedChanged(object sender, EventArgs e)
         {
-            txtPath.Text = String.Empty;
+            tbPath.Text = String.Empty;
             chkSubfolders.Enabled = true;
             chkDelDir.Enabled = chkSubfolders.Checked;
             stInfo.Items[0].Text = rm.GetString("select_folder") + "..";
@@ -486,7 +500,7 @@ namespace FileEraser
         /// <param name="e"></param>
         void optFile_CheckedChanged(object sender, EventArgs e)
         {
-            txtPath.Text = String.Empty;
+            tbPath.Text = String.Empty;
             chkSubfolders.Enabled = false;
             chkDelDir.Enabled = false;
             stInfo.Items[0].Text = rm.GetString("select_file") + "..";

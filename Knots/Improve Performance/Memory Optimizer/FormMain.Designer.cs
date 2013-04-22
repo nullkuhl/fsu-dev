@@ -60,6 +60,7 @@ namespace MemoryOptimizer
             this.chtMemory = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.lbl0 = new System.Windows.Forms.Label();
             this.lbl100 = new System.Windows.Forms.Label();
+            this.prbCPU = new MemoryOptimizer.VerticalProgressBar();
             this.grbClipboard = new System.Windows.Forms.GroupBox();
             this.lblClearClipboard = new System.Windows.Forms.Label();
             this.tbpOptions = new System.Windows.Forms.TabPage();
@@ -84,7 +85,6 @@ namespace MemoryOptimizer
             this.prsMain = new System.Diagnostics.Process();
             this.ucBottom = new MemoryOptimizer.BottomControl();
             this.ucTop = new MemoryOptimizer.TopControl();
-            this.prbCPU = new MemoryOptimizer.VerticalProgressBar();
             this.tcMain.SuspendLayout();
             this.tbpOptimization.SuspendLayout();
             this.grbMemory.SuspendLayout();
@@ -201,13 +201,15 @@ namespace MemoryOptimizer
             // 
             this.trackBarMemoryAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(238)))));
             this.trackBarMemoryAmount.Location = new System.Drawing.Point(10, 73);
-            this.trackBarMemoryAmount.Maximum = 90;
+            this.trackBarMemoryAmount.Maximum = 100;
+            this.trackBarMemoryAmount.Minimum = 100;
             this.trackBarMemoryAmount.MinimumSize = new System.Drawing.Size(0, 55);
             this.trackBarMemoryAmount.Name = "trackBarMemoryAmount";
             this.trackBarMemoryAmount.Size = new System.Drawing.Size(413, 45);
             this.trackBarMemoryAmount.TabIndex = 2;
             this.trackBarMemoryAmount.TickFrequency = 0;
             this.trackBarMemoryAmount.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBarMemoryAmount.Value = 100;
             this.trackBarMemoryAmount.ValueChanged += new System.EventHandler(this.trackBarMemoryAmount_ValueChanged);
             // 
             // lblMemory
@@ -365,6 +367,13 @@ namespace MemoryOptimizer
             this.lbl100.Size = new System.Drawing.Size(35, 12);
             this.lbl100.TabIndex = 6;
             this.lbl100.Text = "100 % -";
+            // 
+            // prbCPU
+            // 
+            this.prbCPU.Location = new System.Drawing.Point(58, 46);
+            this.prbCPU.Name = "prbCPU";
+            this.prbCPU.Size = new System.Drawing.Size(47, 87);
+            this.prbCPU.TabIndex = 0;
             // 
             // grbClipboard
             // 
@@ -585,13 +594,6 @@ namespace MemoryOptimizer
             this.ucTop.Name = "ucTop";
             this.ucTop.Size = new System.Drawing.Size(450, 64);
             this.ucTop.TabIndex = 9;
-            // 
-            // prbCPU
-            // 
-            this.prbCPU.Location = new System.Drawing.Point(58, 46);
-            this.prbCPU.Name = "prbCPU";
-            this.prbCPU.Size = new System.Drawing.Size(47, 87);
-            this.prbCPU.TabIndex = 0;
             // 
             // FormMain
             // 

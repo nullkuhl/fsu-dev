@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using FreemiumUtil;
 using Microsoft.Win32;
 using System.Drawing;
+using System.Security.AccessControl;
 
 namespace Context_Menu_Manager
 {
@@ -41,7 +42,11 @@ namespace Context_Menu_Manager
         /// </summary>
         public string AppPath
         {
-            get { return Path.GetFullPath("."); }
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) +
+                                                          "\\FreeSystemUtilities\\Files\\";
+            }
         }
 
         string ExsKeys
@@ -386,6 +391,32 @@ namespace Context_Menu_Manager
             }
         }
 
+
+
+        private void DeleteSubkeysRecursively(RegistryKey regKey)
+        {
+            try
+            {
+                foreach (string subKeyName in regKey.GetSubKeyNames())
+                {
+                    RegistryKey tmpKey = regKey.CreateSubKey(subKeyName, RegistryKeyPermissionCheck.ReadWriteSubTree);
+                    if (regKey.OpenSubKey(subKeyName).SubKeyCount == 0)
+                    {
+                        foreach (string regValue in tmpKey.GetValueNames())
+                        {
+                            tmpKey.DeleteValue(regValue);
+                        }
+                        regKey.DeleteSubKey(subKeyName);
+                        tmpKey.Close();
+                    }
+                    else
+                        DeleteSubkeysRecursively(tmpKey);
+                }
+            }
+            catch
+            {
+            }
+        }
         /// <summary>
         /// save new list
         /// </summary>
@@ -585,161 +616,179 @@ namespace Context_Menu_Manager
                 //process keys
                 for (int i = 0; i < regPaths.Count; i++)
                 {
-                    if (i == 6)
+                    if (i == 1)
                     { }
                     foreach (string keyItem in regPaths[keys[i]])
                     {
-                        var key = Registry.ClassesRoot.OpenSubKey(keyItem);
-                        var subKeyNames = new string[] { };
                         try
                         {
-                            if (key != null)
+                            using (RegistryKey key = Registry.ClassesRoot.OpenSubKey(keyItem))
                             {
-                                subKeyNames = key.GetSubKeyNames();
-                            }
-                        }
-                        catch (Exception)
-                        {
-                            continue;
-                        }
-                        //process sub keys
-                        for (int j = 0; j < key.SubKeyCount; j++)
-                        {
-                            var regCLSID = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + subKeyNames[j]);
-                            string CLSID;
-                            if (keyItem == @"*\shell" || keyItem == @"Drive\shell" || keyItem == @"Directory\shell")
-                            {
-                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
-                                                                       regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
-
-                                var key1 = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + keyName);
-                                string keyName1 = string.Empty;
-
-                                if (key1.SubKeyCount == 0)
-                                    continue;
-
-                                string displayKeyName = string.Empty;
-
+                                string[] subKeyNames = new string[] { };
                                 try
                                 {
-                                    displayKeyName = key1.GetValue("").ToString();
-                                }
-                                catch
-                                {
-                                }
-
-                                foreach (var sbName in key1.GetSubKeyNames())
-                                {
-                                    if (sbName.ToLower() == "command")
+                                    if (key != null)
                                     {
-                                        var tempKey = key1.OpenSubKey(sbName);
-                                        try
+                                        subKeyNames = key.GetSubKeyNames();
+                                    }
+                                }
+                                catch (Exception)
+                                {
+                                    continue;
+                                }
+                                //process sub keys
+                                for (int j = 0; j < key.SubKeyCount; j++)
+                                {
+                                    try
+                                    {
+                                        using (RegistryKey regCLSID = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + subKeyNames[j]))
                                         {
-                                            keyName1 = tempKey.GetValue("").ToString();
-                                        }
-                                        catch
-                                        {
-                                            continue;
-                                        }
+                                            string CLSID;
+                                            if (keyItem == @"*\shell" || keyItem == @"Drive\shell" || keyItem == @"Directory\shell")
+                                            {
+                                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
+                                                                                       regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
 
-                                        string fileName = keyName1;
+                                                using (RegistryKey key1 = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + keyName))
+                                                {
+                                                    string keyName1 = string.Empty;
 
-                                        if (keyItem == @"Drive\shell" || keyItem == @"Directory\shell")
-                                        {
-                                            CommandLineParser parser = new CommandLineParser();
-                                            string commandLine = keyName1;
+                                                    if (key1.SubKeyCount == 0)
+                                                        continue;
 
-                                            IEnumerable<string> args = parser.Parse(commandLine);
-                                            if (args != null)
-                                                fileName = args.FirstOrDefault();
+                                                    string displayKeyName = string.Empty;
 
-                                            fileName = Environment.ExpandEnvironmentVariables(fileName);
-                                            if (!File.Exists(fileName))
-                                                continue;
+                                                    try
+                                                    {
+                                                        displayKeyName = key1.GetValue("").ToString();
+                                                    }
+                                                    catch
+                                                    {
+                                                    }
 
-                                            if (!string.IsNullOrEmpty(fileName) && fileName.Contains(Environment.GetEnvironmentVariable("WINDIR")) || string.IsNullOrEmpty(fileName))
+                                                    foreach (var sbName in key1.GetSubKeyNames())
+                                                    {
+                                                        if (sbName.ToLower() == "command")
+                                                        {
+                                                            try
+                                                            {
+                                                                using (RegistryKey tempKey = key1.OpenSubKey(sbName))
+                                                                {
+                                                                    keyName1 = tempKey.GetValue("").ToString();
+                                                                }
+                                                            }
+                                                            catch
+                                                            {
+                                                                continue;
+                                                            }
+                                                            string fileName = keyName1;
+                                                            CommandLineParser parser = new CommandLineParser();
+                                                            string commandLine = keyName1;
+
+                                                            IEnumerable<string> args = parser.Parse(commandLine);
+                                                            if (args != null)
+                                                                fileName = args.FirstOrDefault();
+
+                                                            if (keyItem == @"Drive\shell" || keyItem == @"Directory\shell")
+                                                            {                                                              
+                                                                fileName = Environment.ExpandEnvironmentVariables(fileName);
+                                                                if (!File.Exists(fileName))
+                                                                    continue;
+
+                                                                if (!string.IsNullOrEmpty(fileName) && fileName.Contains(Environment.GetEnvironmentVariable("WINDIR")) || string.IsNullOrEmpty(fileName))
+                                                                {
+                                                                    continue;
+                                                                }
+                                                            }
+
+                                                            if (!regShellPaths.ContainsKey(keyName))
+                                                                regShellPaths.Add(keyName, keyName1);
+
+                                                            if (String.IsNullOrEmpty(displayKeyName))
+                                                                displayKeyName = keyName;
+
+                                                            ListViewItem lv = new ListViewItem(displayKeyName);
+
+                                                            lv.Tag = "FilePath";
+                                                            lv.SubItems.Add(keys[i]);
+                                                            lv.SubItems.Add(fileName);
+                                                            lv.SubItems.Add(keyItem);
+                                                            lv.SubItems.Add(keyName);
+                                                            lv.Checked = true;
+                                                            filesFoldersListView.Items.Add(lv);
+                                                            break;
+                                                        }
+                                                    }
+                                                    continue;
+                                                }
+                                            }
+
+                                            try
+                                            {
+                                                CLSID = regCLSID.GetValue("").ToString();
+                                            }
+                                            catch
+                                            {
+                                                CLSID = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
+                                                                                   regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
+                                                if (!CLSID.StartsWith("{"))
+                                                    continue;
+                                            }
+
+                                            var file = CLSIDToFile(CLSID);
+                                            if (file != null && file.Contains(Environment.GetEnvironmentVariable("WINDIR")) || file == null)
                                             {
                                                 continue;
                                             }
+                                            if (keyItem == @"Directory\shell")
+                                            {
+                                                if (regCLSID.ValueCount > 1)
+                                                {
+                                                    continue;
+                                                }
+
+                                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
+                                                                                        regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
+
+                                                var key1 = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + keyName);
+                                                string keyName1 = key1.GetValue("").ToString();
+                                                regShellPaths.Add(keyName, keyName1);
+
+                                                filesFoldersListView.Items.Add(keyName1);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(rm.GetString("directory"));
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(CLSID);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyItem);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyName1);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].Checked = true;
+                                            }
+                                            else
+                                            {
+                                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
+                                                                                        regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
+                                                filesFoldersListView.Items.Add(keyName);
+                                                if (keys[i] == rm.GetString("directory_background"))
+                                                {
+                                                    filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(rm.GetString("background"));
+                                                }
+                                                else
+                                                {
+                                                    filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keys[i]);
+                                                }
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(CLSID);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyItem);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyName);
+                                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].Checked = true;
+                                            }
                                         }
-
-                                        if (!regShellPaths.ContainsKey(keyName))
-                                            regShellPaths.Add(keyName, keyName1);
-
-                                        if (String.IsNullOrEmpty(displayKeyName))
-                                            displayKeyName = keyName;
-
-                                        ListViewItem lv = new ListViewItem(displayKeyName);
-
-                                        lv.Tag = "FilePath";
-                                        lv.SubItems.Add(keys[i]);
-                                        lv.SubItems.Add(fileName);
-                                        lv.SubItems.Add(keyItem);
-                                        lv.SubItems.Add(keyName);
-                                        lv.Checked = true;
-                                        filesFoldersListView.Items.Add(lv);
-                                        break;
+                                    }
+                                    catch
+                                    {
                                     }
                                 }
-                                continue;
                             }
-
-                            try
-                            {
-                                CLSID = regCLSID.GetValue("").ToString();
-                            }
-                            catch
-                            {
-                                CLSID = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
-                                                                   regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
-                                if (!CLSID.StartsWith("{"))
-                                    continue;
-                            }
-
-                            var file = CLSIDToFile(CLSID);
-                            if (file != null && file.Contains(Environment.GetEnvironmentVariable("WINDIR")) || file == null)
-                            {
-                                continue;
-                            }
-                            if (keyItem == @"Directory\shell")
-                            {
-                                if (regCLSID.ValueCount > 1)
-                                {
-                                    continue;
-                                }
-
-                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
-                                                                        regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
-
-                                var key1 = Registry.ClassesRoot.OpenSubKey(keyItem + @"\" + keyName);
-                                string keyName1 = key1.GetValue("").ToString();
-                                regShellPaths.Add(keyName, keyName1);
-
-                                filesFoldersListView.Items.Add(keyName1);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(rm.GetString("directory"));
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(CLSID);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyItem);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyName1);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].Checked = true;
-                            }
-                            else
-                            {
-                                string keyName = regCLSID.Name.Substring(regCLSID.Name.LastIndexOf(@"\") + 1,
-                                                                        regCLSID.Name.Length - regCLSID.Name.LastIndexOf(@"\") - 1);
-                                filesFoldersListView.Items.Add(keyName);
-                                if (keys[i] == rm.GetString("directory_background"))
-                                {
-                                    filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(rm.GetString("background"));
-                                }
-                                else
-                                {
-                                    filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keys[i]);
-                                }
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(CLSID);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyItem);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].SubItems.Add(keyName);
-                                filesFoldersListView.Items[filesFoldersListView.Items.Count - 1].Checked = true;
-                            }
+                        }
+                        catch
+                        {
                         }
                     }
                 }
@@ -1092,9 +1141,9 @@ namespace Context_Menu_Manager
                 sendToListView.Items.Clear();
                 sendToListView.SmallImageList = sendTO_LargeIconeList;
                 sendTO_LargeIconeList.ColorDepth = ColorDepth.Depth32Bit;
-                FillListView(files);
+                FillListView(files, true);
 
-                string pathAppFolder = Application.StartupPath + "\\SendTo";
+                string pathAppFolder = AppPath + "\\SendTo";
                 if (Directory.Exists(pathAppFolder))
                 {
                     FileSystemInfo[] filesAppFolder = null;
@@ -1103,7 +1152,7 @@ namespace Context_Menu_Manager
                     {
                         diAppFolder = new DirectoryInfo(pathAppFolder);
                         filesAppFolder = diAppFolder.GetFileSystemInfos();
-                        FillListView(filesAppFolder);
+                        FillListView(filesAppFolder, false);
                     }
                     catch
                     {
@@ -1120,7 +1169,7 @@ namespace Context_Menu_Manager
         /// Fills listview
         /// </summary>
         /// <param name="files"></param>
-        private void FillListView(FileSystemInfo[] files)
+        private void FillListView(FileSystemInfo[] files, bool isEnabled)
         {
             ListViewItem lvi;
             foreach (FileSystemInfo file in files)
@@ -1137,7 +1186,7 @@ namespace Context_Menu_Manager
                 {
                     lvi = new ListViewItem(file.Name.Substring(0, file.Name.Length));
                 }
-                lvi.Checked = false;
+                lvi.Checked = isEnabled;
                 lvi.SubItems.Add(file.Name);
                 lvi.SubItems.Add(file.FullName);
 

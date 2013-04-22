@@ -799,13 +799,8 @@ namespace StartupManager
         /// <param name="hive"></param>
         void DisplayRegistryStartupEntries(string hive)
         {
-            bool disabled;
-            string command = string.Empty;
-            string filePath;
             RegistryKey rk = null;
             RegistryKey rkDisabled = null;
-
-
             try
             {
                 if (hive == rm.GetString("HKCU"))
@@ -836,215 +831,125 @@ namespace StartupManager
                 // Get all of the entries.
                 if (rk != null)
                 {
-                    foreach (string value in rk.GetValueNames())
-                    {
-                        // Reset disabled flag.
-                        disabled = false;
-                        // Save complete command.
-                        command = rk.GetValue(value).ToString();
-
-                        // Check if command is valid
-                        if (command.Length < 1)
-                        {
-                            continue;
-                        }
-
-                        // Check if command is disabled (begins with a ":")
-                        if (command.StartsWith(":"))
-                        {
-                            // Flag this entry as disabled.
-                            disabled = true;
-
-                            // Remove colon so that path command works and save file path.
-                            filePath = ReturnFilePath(command.Remove(0, 1));
-                        }
-                        else
-                        {
-                            // Save file path.
-                            filePath = ReturnFilePath(command);
-                        }
-
-                        filePath = ReturnFilePath(command);
-
-                        // Attempt to get application image (icon).
-                        if (native.GetIcon(filePath) != null)
-                        {
-                            // Add the icon to the image list so that the listview can access it.
-                            imageListStartupManager.Images.Add(native.GetIcon(filePath));
-                        }
-                        else
-                        {
-                            // If there is no icon, just add a blank image from resources to keep the indexes proper.
-                            imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
-                        }
-
-                        // Add entry description to listview.
-
-                        if (File.Exists(filePath))
-                        {
-                            FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
-
-                            if (fileInfo.FileDescription.Length != 0)
-                            {
-                                listviewStartup.Items.Add(fileInfo.FileDescription, i);
-                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                            }
-                            else
-                            {
-                                listviewStartup.Items.Add(value, i);
-                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                            }
-                        }
-                        else
-                        {
-                            listviewStartup.Items.Add(value, i);
-                            listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                        }
-
-
-                        // Add file name (without path) to listview.
-                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
-
-                        // Add location (type) information to listview.
-                        if (hive == rm.GetString("HKCU"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKCU"));
-                        }
-                        else if (hive == rm.GetString("HKLM"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKLM"));
-                        }
-                        else if (hive == rm.GetString("WHKCU"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKCU"));
-                        }
-                        else if (hive == rm.GetString("WHKLM"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKLM"));
-                        }
-
-                        // Add status information.
-                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
-
-                        // Add command.
-                        listviewStartup.Items[i].SubItems.Add(command);
-
-                        // Add file path.
-                        listviewStartup.Items[i].SubItems.Add(filePath);
-
-                        i++;
-                    }
-
-
-                    // Close the registry key.
-                    rk.Close();
+                    FillListviewWithRegItems(hive, rk, false);
                 }
                 if (rkDisabled != null)
                 {
-                    foreach (string value in rkDisabled.GetValueNames())
-                    {
-                        // Reset disabled flag.
-                        disabled = true;
-                        // Save complete command.
-                        command = rkDisabled.GetValue(value).ToString();
-
-                        // Check if command is valid
-                        if (command.Length < 1)
-                        {
-                            continue;
-                        }
-
-                        //Check if command is disabled (begins with a ":")
-                        if (command.StartsWith(":"))
-                        {
-                            // Flag this entry as disabled.
-                            disabled = true;
-
-                            // Remove colon so that path command works and save file path.
-                            filePath = ReturnFilePath(command.Remove(0, 1));
-                        }
-                        else
-                        {
-                            // Save file path.
-                            filePath = ReturnFilePath(command);
-                        }
-
-                        filePath = ReturnFilePath(command);
-
-                        // Attempt to get application image (icon).
-                        if (native.GetIcon(filePath) != null)
-                        {
-                            // Add the icon to the image list so that the listview can access it.
-                            imageListStartupManager.Images.Add(native.GetIcon(filePath));
-                        }
-                        else
-                        {
-                            // If there is no icon, just add a blank image from resources to keep the indexes proper.
-                            imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
-                        }
-
-                        // Add entry description to listview.
-
-                        if (File.Exists(filePath))
-                        {
-                            FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
-
-                            if (fileInfo.FileDescription.Length != 0)
-                            {
-                                listviewStartup.Items.Add(fileInfo.FileDescription, i);
-                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                            }
-                            else
-                            {
-                                listviewStartup.Items.Add(value, i);
-                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                            }
-                        }
-                        else
-                        {
-                            listviewStartup.Items.Add(value, i);
-                            listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
-                        }
-
-
-                        // Add file name (without path) to listview.
-                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
-
-                        // Add location (type) information to listview.
-                        if (hive == rm.GetString("HKCU"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKCU"));
-                        }
-                        else if (hive == rm.GetString("HKLM"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKLM"));
-                        }
-                        else if (hive == rm.GetString("WHKCU"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKCU"));
-                        }
-                        else if (hive == rm.GetString("WHKLM"))
-                        {
-                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKLM"));
-                        }
-
-                        // Add status information.
-                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
-
-                        // Add command.
-                        listviewStartup.Items[i].SubItems.Add(command);
-
-                        // Add file path.
-                        listviewStartup.Items[i].SubItems.Add(filePath);
-
-                        i++;
-
-                    }
+                    FillListviewWithRegItems(hive, rkDisabled, true);
                 }
-
             }
             catch (Exception ex)
             {
+            }
+            finally
+            {
+                if (rk != null)
+                    rk.Close();
+                if (rkDisabled != null)
+                    rkDisabled.Close();
+            }
+        }
+
+        private void FillListviewWithRegItems(string hive, RegistryKey regKey, bool isDisabled)
+        {
+            string command = string.Empty;
+            string filePath;
+            bool disabled;
+            foreach (string value in regKey.GetValueNames())
+            {
+                // Reset disabled flag.
+                disabled = isDisabled;
+                // Save complete command.
+                command = regKey.GetValue(value).ToString();
+
+                // Check if command is valid
+                if (command.Length < 1)
+                    continue;
+
+                // Check if command is disabled (begins with a ":")
+                if (command.StartsWith(":"))
+                {
+                    // Flag this entry as disabled.
+                    disabled = true;
+
+                    // Remove colon so that path command works and save file path.
+                    filePath = ReturnFilePath(command.Remove(0, 1));
+                }
+                else
+                {
+                    // Save file path.
+                    filePath = ReturnFilePath(command);
+                }
+
+                filePath = ReturnFilePath(command);
+
+                // Attempt to get application image (icon).
+                if (native.GetIcon(filePath) != null)
+                {
+                    // Add the icon to the image list so that the listview can access it.
+                    imageListStartupManager.Images.Add(native.GetIcon(filePath));
+                }
+                else
+                {
+                    // If there is no icon, just add a blank image from resources to keep the indexes proper.
+                    imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
+                }
+
+                // Add entry description to listview.
+                ListViewItem lvi;
+
+                if (File.Exists(filePath))
+                {
+                    FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
+
+                    if (fileInfo.FileDescription.Length != 0)
+                    {
+                        lvi = new ListViewItem(fileInfo.FileDescription);
+                    }
+                    else
+                    {
+                        lvi = new ListViewItem(value);
+                    }
+                }
+                else
+                {
+                    lvi = new ListViewItem(value);
+                }
+
+                lvi.ImageIndex = i;
+                lvi.Tag = value;
+
+                // Add file name (without path) to listview.
+                lvi.SubItems.Add(Path.GetFileName(filePath));
+
+                // Add location (type) information to listview.
+                if (hive == rm.GetString("HKCU"))
+                {
+                    lvi.SubItems.Add(rm.GetString("HKCU"));
+                }
+                else if (hive == rm.GetString("HKLM"))
+                {
+                    lvi.SubItems.Add(rm.GetString("HKLM"));
+                }
+                else if (hive == rm.GetString("WHKCU"))
+                {
+                    lvi.SubItems.Add(rm.GetString("WHKCU"));
+                }
+                else if (hive == rm.GetString("WHKLM"))
+                {
+                    lvi.SubItems.Add(rm.GetString("WHKLM"));
+                }
+
+                // Add status information.
+                lvi.SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
+
+                // Add command.
+                lvi.SubItems.Add(command);
+
+                // Add file path.
+                lvi.SubItems.Add(filePath);
+                listviewStartup.Items.Add(lvi);
+                i++;
             }
         }
 
@@ -1119,25 +1024,26 @@ namespace StartupManager
                         }
 
                         // Add entry description to listview.
-                        listviewStartup.Items.Add(Path.GetFileNameWithoutExtension(shortcut), i);
+                        ListViewItem lvi = new ListViewItem(Path.GetFileNameWithoutExtension(shortcut));
+                        lvi.ImageIndex = i;
 
                         // Add file name (without path) to listview.
-                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
+                        lvi.SubItems.Add(Path.GetFileName(filePath));
 
                         // Add type information to listview.
-                        listviewStartup.Items[i].SubItems.Add(type == rm.GetString("StartupCurrentUser")
+                        lvi.SubItems.Add(type == rm.GetString("StartupCurrentUser")
                                                                 ? rm.GetString("StartupCurrentUser")
                                                                 : rm.GetString("StartupAllUsers"));
 
                         // Add status information.
-                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
+                        lvi.SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
 
                         // Add command.
-                        listviewStartup.Items[i].SubItems.Add(command);
+                        lvi.SubItems.Add(command);
 
                         // Add file path.
-                        listviewStartup.Items[i].SubItems.Add(filePath);
-
+                        lvi.SubItems.Add(filePath);
+                        listviewStartup.Items.Add(lvi);
                         i++;
                     }
                 }
@@ -1327,9 +1233,11 @@ namespace StartupManager
                 {
                     if (regKey.GetValue(subKeyName) == null)
                     {
-                        RegistryKey _rk = msConfigKey.OpenSubKey(subKeyName);
-                        regKey.SetValue(subKeyName, _rk.GetValue("command"));
-                        msConfigKey.DeleteSubKey(subKeyName);
+                        using (RegistryKey _rk = msConfigKey.OpenSubKey(subKeyName))
+                        {
+                            regKey.SetValue(subKeyName, _rk.GetValue("command"));
+                            msConfigKey.DeleteSubKey(subKeyName);
+                        }
                     }
                     else
                     {
@@ -1516,23 +1424,24 @@ namespace StartupManager
                 if (regKey.GetValue(subKeyName) != null)
                 {
                     command = regKey.GetValue(subKeyName).ToString();
-                    // Check that entry does not begins with a colon (:), which would indicate it is already disabled.
-                    msConfigKey.CreateSubKey(subKeyName);
-                    RegistryKey newKey = msConfigKey.OpenSubKey(subKeyName, true);
+                    // Check that entry does not begins with a colon (:), which would indicate it is already disabled
+                    using (RegistryKey newKey = msConfigKey.CreateSubKey(subKeyName, RegistryKeyPermissionCheck.ReadWriteSubTree))
+                    {
+                        //msConfigKey.OpenSubKey(subKeyName, true);
+                        newKey.SetValue("item", subKeyName);
+                        newKey.SetValue("command", command);
+                        newKey.SetValue("hkey", "HKCU");
+                        newKey.SetValue("key", RunKey);
+                        DateTime dt = DateTime.Now;
 
-                    newKey.SetValue("item", subKeyName);
-                    newKey.SetValue("command", command);
-                    newKey.SetValue("hkey", "HKCU");
-                    newKey.SetValue("key", RunKey);
-                    DateTime dt = DateTime.Now;
-
-                    newKey.SetValue("DAY", int.Parse(dt.Date.Day.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("HOUR", int.Parse(dt.Date.Hour.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("MINUTE", int.Parse(dt.Date.Minute.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("MONTH", int.Parse(dt.Date.Month.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
-                    newKey.SetValue("inimapping", 0);
+                        newKey.SetValue("DAY", int.Parse(dt.Date.Day.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("HOUR", int.Parse(dt.Date.Hour.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MINUTE", int.Parse(dt.Date.Minute.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MONTH", int.Parse(dt.Date.Month.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("inimapping", 0);
+                    }
                     regKey.DeleteValue(subKeyName);
                     result = true;
                 }
@@ -1545,9 +1454,7 @@ namespace StartupManager
             {
                 // Close registry key.
                 if (regKey != null)
-                {
                     regKey.Close();
-                }
             }
             return result;
         }

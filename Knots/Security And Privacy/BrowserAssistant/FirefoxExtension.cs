@@ -64,7 +64,7 @@ namespace BrowserAssistant
         {
             get
             {
-                if (!string.IsNullOrEmpty(defProfilePath))
+                if (string.IsNullOrEmpty(defProfilePath))
                 {
                     try
                     {

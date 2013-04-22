@@ -147,14 +147,8 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Charger lors du démarrage de Windows</value>
   </data>
-  <data name="memory" xml:space="preserve">
-    <value>Les mémoires vives Mo ont été libérées.</value>
-  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Taille de l’espace de stockage</value>
-  </data>
-  <data name="memory_freed" xml:space="preserve">
-    <value>Il y avait</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Optimisation de l’espace de stockage</value>
@@ -178,7 +172,7 @@
     <value>Optimisation</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Optimisation réussie : %1 Mo de mémoire vive a été libéré.</value>
+    <value>Optimisation réussie : {0} Mo de mémoire vive a été libéré.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Optimiser</value>
@@ -200,5 +194,11 @@
   </data>
   <data name="show_main_window" xml:space="preserve">
     <value>Afficher la fenêtre principale</value>
+  </data>
+  <data name="memory" xml:space="preserve">
+    <value>Les mémoires vives Mo ont été libérées.</value>
+  </data>
+  <data name="memory_freed" xml:space="preserve">
+    <value>Il y avait</value>
   </data>
 </root>

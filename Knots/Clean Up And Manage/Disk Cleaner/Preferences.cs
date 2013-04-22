@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Xml;
+using System.Threading;
 
 namespace Disk_Cleaner
 {
@@ -102,7 +103,7 @@ namespace Disk_Cleaner
         /// <summary>
         /// Preferences file name
         /// </summary>
-        public static readonly string Filename = "configuration.xml";
+        public static readonly string Filename = String.Format("configuration-{0}.xml", Thread.CurrentThread.CurrentUICulture.Name);
 
         /// <summary>
         /// Default extensions collection

@@ -318,7 +318,7 @@
 				<my:DataGridTextColumn x:Name="collFolderSize"
 									   Header="{x:Static props:Resources.Size}"
 									   Binding="{Binding Path=FileSize}"
-									   SortMemberPath="lFileSize"
+									   SortMemberPath="LFileSize"
 									   CellStyle="{StaticResource ResourceKey=AlignRightStyle}"
 									   Width="80" />
 				<my:DataGridTextColumn x:Name="collFolderFolder"

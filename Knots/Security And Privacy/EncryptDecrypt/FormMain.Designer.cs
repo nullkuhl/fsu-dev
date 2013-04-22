@@ -245,9 +245,9 @@ namespace EncryptDecrypt
             this.chkCreateAuto.AutoSize = true;
             this.chkCreateAuto.Location = new System.Drawing.Point(30, 245);
             this.chkCreateAuto.Name = "chkCreateAuto";
-            this.chkCreateAuto.Size = new System.Drawing.Size(185, 17);
+            this.chkCreateAuto.Size = new System.Drawing.Size(191, 17);
             this.chkCreateAuto.TabIndex = 5;
-            this.chkCreateAuto.Text = "Create a auto-decrypting EXE file.";
+            this.chkCreateAuto.Text = "Create an auto-decrypting EXE file.";
             this.chkCreateAuto.UseVisualStyleBackColor = true;
             // 
             // chkDeleteAfterEncryption

@@ -147,14 +147,8 @@
   <data name="load_on_startup" xml:space="preserve">
     <value>Carregar no Arranque do Windows</value>
   </data>
-  <data name="memory" xml:space="preserve">
-    <value>RAM MB foi libertado</value>
-  </data>
   <data name="memory_amount" xml:space="preserve">
     <value>Quantidade de Memória</value>
-  </data>
-  <data name="memory_freed" xml:space="preserve">
-    <value>havia</value>
   </data>
   <data name="memory_optimization" xml:space="preserve">
     <value>Otimização de Memória</value>
@@ -178,7 +172,7 @@
     <value>Otimização</value>
   </data>
   <data name="optimization_complete" xml:space="preserve">
-    <value>Otimização bem sucedida: Foi libertado %1 MB de memória.</value>
+    <value>Otimização bem sucedida: Foi libertado {0} MB de memória.</value>
   </data>
   <data name="optimize" xml:space="preserve">
     <value>Otimizar</value>
@@ -200,5 +194,11 @@
   </data>
   <data name="show_main_window" xml:space="preserve">
     <value>Mostrar Janela Principal</value>
+  </data>
+  <data name="memory" xml:space="preserve">
+    <value>RAM MB foi libertado</value>
+  </data>
+  <data name="memory_freed" xml:space="preserve">
+    <value>havia</value>
   </data>
 </root>

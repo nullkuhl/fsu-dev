@@ -233,10 +233,11 @@ namespace EncryptDecrypt
         /// <param name="inFile">the file to decrypt</param>
         /// <param name="outFile">the to write the decrypted data to</param>
         /// <param name="password">the password used as the key</param>
-        public static void DecryptFile(string inFile, string outFile, string password, CryptoProgressCallBack callback)
+        public static bool DecryptFile(string inFile, string outFile, string password, CryptoProgressCallBack callback)
         {
             // NOTE:  The encrypting algo was so much easier...
             // create and open the file streams
+            bool result = false;
             try
             {
                 using (FileStream fin = File.OpenRead(inFile), fout = File.OpenWrite(outFile))
@@ -318,11 +319,14 @@ namespace EncryptDecrypt
                     // make sure the written and stored size are equal
                     if (outValue != lSize)
                         throw new CryptoHelpException("File Sizes don't match!");
+
+                    result = true;
                 }
             }
             catch
             {
             }
+            return result;
         }
     }
 

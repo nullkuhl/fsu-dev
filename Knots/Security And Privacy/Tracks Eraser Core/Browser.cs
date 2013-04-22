@@ -27,7 +27,7 @@ namespace Knots.Security.TracksEraserCore
                     return string.Empty;
 
                 return x;
-            }
+            }           
             else
             {
                 throw new NotImplementedException();
@@ -60,7 +60,7 @@ namespace Knots.Security.TracksEraserCore
                 }
                 catch
                 { }
-            }
+            }          
             else
             {
                 throw new NotImplementedException();

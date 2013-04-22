@@ -45,7 +45,7 @@ namespace BrowserAssistant
             Id = j.Name;
             Name = j.Value["manifest"]["name"].ToString();
             Version = j.Value["manifest"]["version"].ToString();
-            state = j.Value["state"].Value<int>();
+            state = j.Value["state"] == null ? 0 : j.Value["state"].Value<int>();
             IsEnabled = state == 1;
         }
 
@@ -113,9 +113,9 @@ namespace BrowserAssistant
             {
                 return null;
             }
-            return
-                jsonObj["extensions"]["settings"].Where(j => j.First.Children<JProperty>().Count(jp => jp.Name == "manifest") > 0)
-                    .Select(j => new ChromeExtension((JProperty)j)).ToArray();
+
+            return jsonObj["extensions"]["settings"].Where(j => j.First.Children<JProperty>().Count(jp => jp.Name == "manifest") > 0)
+                .Select(j => new ChromeExtension((JProperty)j)).ToArray();
         }
 
         /// <summary>

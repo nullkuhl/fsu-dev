@@ -49,7 +49,9 @@
 				<Border CornerRadius="6,6,0,0" Background="{StaticResource ContentBackGround}">
 					<DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Top">
 
-						<Button Margin="9,12,0,0" Click="GoHome" Style="{StaticResource TransparentButtonSimple}">
+						<Button Name="logoButton" Margin="9,12,0,0" PreviewMouseMove="logoButton_PreviewMouseMove"
+                                PreviewMouseLeftButtonDown="logoButton_PreviewMouseLeftButtonDown"
+                                Click="GoHome" Style="{StaticResource TransparentButtonSimple}">
 							<Image Width="136" Height="69" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Images/bg-logo.png"
 								   Stretch="None" />
 						</Button>
@@ -69,7 +71,7 @@
 						</TextBlock>
 						<DockPanel Margin="8,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" DockPanel.Dock="Right">
 							<Button Click="OpenAboutBox" FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55"
-									Style="{StaticResource HelpButton}" ToolTip="{lex:LocText FreemiumUtilities:Resources:Help}">
+									Style="{StaticResource HelpButton}" ToolTip="{lex:LocText FreemiumUtilities:Resources:About}">
 								<TextBlock FontFamily="Segoe UI" FontSize="12" FontWeight="Bold" Text="i" />
 							</Button>
 							<ComboBox Style="{StaticResource ComboboxStyle}" SelectionChanged="OptionChanged">

@@ -272,7 +272,7 @@
 
 				<c:PieChartLayout x:Name="piePlotter"
 								  Height="245"
-								  Margin="30 0 0 0"
+								  Margin="30 -20 0 0"
 								  PlottedProperty="Value">
 					<c:PieChartLayout.ColorSelector>
 						<c:IndexedColourSelector Brushes="{StaticResource brushes}" />

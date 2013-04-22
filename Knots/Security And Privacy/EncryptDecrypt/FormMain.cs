@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
+using Microsoft.VisualBasic.ApplicationServices;
 
 namespace EncryptDecrypt
 {
@@ -75,6 +76,47 @@ namespace EncryptDecrypt
                 }
             }
         }
+
+        public void NewInstance(StartupNextInstanceEventArgs e)
+        {
+            var args = e.CommandLine;
+            bool encryptPassedFile = false;
+            bool decryptPassedFile = false;
+            foreach (string arg in args)
+            {
+                if (encryptPassedFile)
+                {
+                    enPath_textbox.Text = arg;
+                    enpath = arg;
+                    encryptPath = arg;
+                    if (enpath.Contains('\\'))
+                        encryptToTxt.Text = enpath.Substring(0, enpath.LastIndexOf('\\'));
+                    if (encryptToTxt.Text.EndsWith(":"))
+                        encryptToTxt.Text += "\\";
+                }
+                if (decryptPassedFile)
+                {
+                    tcMain.SelectTab(1);
+                    dcPath_textbox.Text = arg;
+                    dcpath = arg;
+                    extractpath = arg;
+                    if (dcpath.Contains('\\'))
+                        extrect_Textbox.Text = dcpath.Substring(0, dcpath.LastIndexOf('\\'));
+
+                    if (extrect_Textbox.Text.EndsWith(":"))
+                        extrect_Textbox.Text += "\\";
+                }
+                if (arg == "ENCRYPT")
+                {
+                    encryptPassedFile = true;
+                }
+                if (arg == "DECRYPT")
+                {
+                    decryptPassedFile = true;
+                }
+            }
+        }
+       
 
         /// <summary>
         /// change current language
@@ -353,10 +395,10 @@ namespace EncryptDecrypt
 
                     if (continueDecrypt == DialogResult.Yes)
                     {
-                        bool successful = true;
+                        bool successful;
                         try
                         {
-                            CryptoHelp.DecryptFile(dcpath, output, password, UpdateDecryptProgress);
+                            successful = CryptoHelp.DecryptFile(dcpath, output, password, UpdateDecryptProgress);
                         }
                         catch (Exception)
                         {

@@ -193,7 +193,7 @@ namespace DiskAnalysis
         /// </summary>
         void StartWork()
         {
-            Analyze.IsEnabled = false;
+            EnableButtons(false);            ;
             if (d != null)
             {
                 // Initialize the Root folders and files
@@ -254,6 +254,19 @@ namespace DiskAnalysis
                 lnkAbort.Visibility = Visibility.Visible;
                 bwDiskScanner.RunWorkerAsync();
             }
+        }
+
+        /// <summary>
+        /// Changes buttons states
+        /// </summary>
+        /// <param name="isEnabled">true - if the buttons should be enabled, false - otherwise</param>
+        void EnableButtons(bool isEnabled)
+        {
+            Analyze.IsEnabled = isEnabled;
+            Explorer.IsEnabled = isEnabled;
+            CommandPrompt.IsEnabled = isEnabled;
+            Properties.IsEnabled = isEnabled;
+            Delete.IsEnabled = isEnabled;
         }
 
         /// <summary>
@@ -384,7 +397,7 @@ namespace DiskAnalysis
                     Refresh.IsEnabled = true;
                 }
             }
-            Analyze.IsEnabled = true;
+            EnableButtons(true);
         }
 
         /// <summary>
@@ -440,7 +453,7 @@ namespace DiskAnalysis
             }
 
             // Calculate Totals for Folders
-            directories[currentD].DPercent = 100;
+            directories[currentD].dPercent = 100;
             foreach (AppFolder fol in directories[currentD].SubFolders)
             {
                 GetPercentage(fol, directories[currentD].LSize);
@@ -457,7 +470,7 @@ namespace DiskAnalysis
             try
             {
                 decimal d = Convert.ToDecimal(fol.LSize * 100.0);
-                fol.DPercent = totalSize == 0 ? 100 : decimal.Round(d / totalSize, 2);
+                fol.dPercent = totalSize == 0 ? 100 : decimal.Round(d / totalSize, 2);
             }
             catch
             {
@@ -710,26 +723,29 @@ namespace DiskAnalysis
             AppFile selectedFile = dgFileListByFolder.SelectedItem as AppFile;
             AppFolder selectedFolder = rtvFolderList.SelectedItem as AppFolder;
 
-            if (lastFocusedList == dgFileListByFolder && selectedFile != null)
+            if (lastFocusedList != null && selectedFile != null)
             {
-                try
+                if (lastFocusedList == dgFileListByFolder)
                 {
-                    Process.Start(selectedFile.FolderPath);
+                    try
+                    {
+                        Process.Start(selectedFile.FolderPath);
+                    }
+                    catch
+                    {
+                        Process.Start("explorer.exe");
+                    }
                 }
-                catch
+                else if (lastFocusedList == rtvFolderList)
                 {
-                    Process.Start("explorer.exe");
-                }
-            }
-            else if (lastFocusedList == rtvFolderList && selectedFolder != null)
-            {
-                try
-                {
-                    Process.Start(selectedFolder.FullPath);
-                }
-                catch
-                {
-                    Process.Start("explorer.exe");
+                    try
+                    {
+                        Process.Start(selectedFolder.FullPath);
+                    }
+                    catch
+                    {
+                        Process.Start("explorer.exe");
+                    }
                 }
             }
         }

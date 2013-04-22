@@ -455,7 +455,7 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         prgTracker++;
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "Windows Recent Documents");
-                        
+
 
                         var d = new DirectoryInfo(
                             Environment.GetFolderPath(Environment.SpecialFolder.Recent));
@@ -475,7 +475,7 @@ namespace FreemiumUtilities.TracksEraser
 
                             //Update progress bar
                             worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), dir.FullName);
-                            
+
                         }
                         foreach (FileInfo f in files)
                         {
@@ -575,7 +575,7 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         prgTracker++;
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "Common Dialog File/Folder List");
-                        
+
 
                         string runRegKeyPath = @"Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\";
                         using (RegistryKey regKey = Registry.CurrentUser.OpenSubKey(runRegKeyPath))
@@ -589,7 +589,7 @@ namespace FreemiumUtilities.TracksEraser
                                 }
                                 //Update progress bar
                                 worker.ReportProgress((int)((float)(int)((float)prgTracker / maxCnt * 100)), subKeyName);
-                                
+
 
                                 if (subKeyName == "LastVisitedPidlMRU" || subKeyName == "OpenSavePidlMRU")
                                 {
@@ -597,7 +597,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                     //Update progress bar
                                     worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), regValuesToDelete[regValuesToDelete.Count - 1]);
-                                    
+
                                 }
                             }
                         }
@@ -633,7 +633,7 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         prgTracker++;
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "Windows Clipboard");
-                        
+
                         Object obj = Clipboard.GetData("*");
                     }
                 }
@@ -663,9 +663,9 @@ namespace FreemiumUtilities.TracksEraser
                             e.Cancel = true;
                             return;
                         }
-                        prgTracker++;                        
+                        prgTracker++;
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "Windows Temporary Files");
-                        
+
                         //string sWinTempFilesAddress = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData).ToString();
                         string sWinTempFilesAddress = Environment.GetEnvironmentVariable("temp"); //sWinTempFilesAddress + "\\Temp";
 
@@ -683,7 +683,7 @@ namespace FreemiumUtilities.TracksEraser
 
                             //Update progress bar
                             worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f.FullName);
-                            
+
                         }
                         foreach (DirectoryInfo di in dirWindowsTempFiles.GetDirectories())
                         {
@@ -714,7 +714,7 @@ namespace FreemiumUtilities.TracksEraser
 
                             //Update progress bar
                             worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f.FullName);
-                            
+
                         }
                         foreach (DirectoryInfo di in dirWindowsTempFiles.GetDirectories())
                         {
@@ -731,7 +731,7 @@ namespace FreemiumUtilities.TracksEraser
 
                         filesToDelete.Add(windir + @"\Memory.dmp");
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), filesToDelete[filesToDelete.Count - 1]);
-                        
+
                         try
                         {
                             foreach (string f in Directory.GetFiles(windir, "*.log", SearchOption.AllDirectories))
@@ -745,7 +745,7 @@ namespace FreemiumUtilities.TracksEraser
                                 filesToDelete.Add(f);
 
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                         }
                         catch
@@ -764,7 +764,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                         }
                         catch
@@ -787,7 +787,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                             var folders =
                                 new DirectoryInfo(Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
@@ -821,7 +821,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                             var folders =
                                 new DirectoryInfo(Environment.GetEnvironmentVariable("PROGRAMDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
@@ -854,7 +854,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                             var folders = new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\ElevatedDiagnostics");
                             foreach (DirectoryInfo di in folders.GetDirectories())
@@ -887,7 +887,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                             var folders =
                                 new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportQueue");
@@ -921,7 +921,7 @@ namespace FreemiumUtilities.TracksEraser
 
                                 filesToDelete.Add(f);
                                 worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), f);
-                                
+
                             }
                             var folders =
                                 new DirectoryInfo(Environment.GetEnvironmentVariable("LOCALAPPDATA") + "\\Microsoft\\Windows\\WER\\ReportArchive");
@@ -969,7 +969,7 @@ namespace FreemiumUtilities.TracksEraser
                         }
                         prgTracker++;
                         worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), "Windows recycle bin");
-                        
+
 
                         var sqrbi = new SHQUERYRBINFO();
                         sqrbi.cbSize = Marshal.SizeOf(typeof(SHQUERYRBINFO));
@@ -2592,7 +2592,7 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
+                                DirectoryInfo diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
@@ -2601,51 +2601,16 @@ namespace FreemiumUtilities.TracksEraser
                                         e.Cancel = true;
                                         return;
                                     }
-
-                                    FileSystemInfo[] fileSysChromeHistory = dir.GetFiles("*history*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        if (worker.CancellationPending)
-                                        {
-                                            e.Cancel = true;
-                                            return;
-                                        }
-
-                                        filesToDelete.Add(diNext.FullName);
-
-                                        //Update progress bar
-                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);
-                                    }
-                                    fileSysChromeHistory = dir.GetFiles("*Visited Links*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        if (worker.CancellationPending)
-                                        {
-                                            e.Cancel = true;
-                                            return;
-                                        }
-
-                                        filesToDelete.Add(diNext.FullName);
-
-                                        //Update progress bar
-                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);
-                                    }
-                                    fileSysChromeHistory = dir.GetFiles("*Current Tabs*");
-                                    foreach (FileInfo diNext in fileSysChromeHistory)
-                                    {
-                                        if (worker.CancellationPending)
-                                        {
-                                            e.Cancel = true;
-                                            return;
-                                        }
-
-                                        filesToDelete.Add(diNext.FullName);
-
-                                        //Update progress bar
-
-                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);
-                                    }
+                                    MarkFilesToDelete(dir, "History");
+                                    MarkFilesToDelete(dir, "*Visited Links*");
+                                    MarkFilesToDelete(dir, "*Current Tabs*");
+                                    MarkFilesToDelete(dir, "*Top Sites");
+                                    MarkFilesToDelete(dir, "*Network Action Predictor");
                                 }
+                                diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath + @"\Default\JumpListIcons");
+                                MarkDirToDelete(diInfoChromeHistory);
+                                diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath + @"\Default\JumpListIconsOld");
+                                MarkDirToDelete(diInfoChromeHistory);
                             }
                             catch
                             {
@@ -2697,7 +2662,7 @@ namespace FreemiumUtilities.TracksEraser
                                             e.Cancel = true;
                                             return;
                                         }
-                                         
+
                                         filesToDelete.Add(diNext.FullName);
 
                                         //Update progress bar
@@ -2759,7 +2724,7 @@ namespace FreemiumUtilities.TracksEraser
                                             return;
                                         }
                                         filesToDelete.Add(diNext.FullName);
-                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);                                        
+                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);
                                     }
                                 }
                             }
@@ -2819,7 +2784,7 @@ namespace FreemiumUtilities.TracksEraser
                                         filesToDelete.Add(diNext.FullName);
 
                                         //Update progress bar
-                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);                                        
+                                        worker.ReportProgress((int)((float)prgTracker / maxCnt * 100), diNext.FullName);
                                     }
                                 }
                             }
@@ -2976,6 +2941,63 @@ namespace FreemiumUtilities.TracksEraser
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
         }
+
+        /// <summary>
+        /// Marks all files and directories in directory to delete
+        /// </summary>
+        /// <param name="dir">Directory</param>
+        private void MarkDirToDelete(DirectoryInfo dir)
+        {
+            foreach (FileInfo fi in dir.GetFiles("*", SearchOption.AllDirectories))
+            {
+                if (worker.CancellationPending)
+                    return;
+                filesToDelete.Add(fi.FullName);
+            }
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                if (worker.CancellationPending)
+                    return;
+                foldersToDelete.Add(di.FullName);
+            }
+        }
+
+        /// <summary>
+        /// Marks all files in directory to delete
+        /// </summary>
+        /// <param name="di">Directory</param>
+        private void MarkFilesToDelete(DirectoryInfo di)
+        {
+            if (di != null)
+            {
+                foreach (FileInfo file in di.GetFiles("*", SearchOption.AllDirectories))
+                {
+                    if (worker.CancellationPending)
+                        return;
+                    filesToDelete.Add(file.FullName);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Marks files match of specific pattern in directory to delete
+        /// </summary>
+        /// <param name="di">Directory</param>
+        /// <param name="pattern">Patern</param>
+        private void MarkFilesToDelete(DirectoryInfo di, string pattern)
+        {
+            if (di != null)
+            {
+                foreach (FileInfo file in di.GetFiles(pattern))
+                {
+                    if (worker.CancellationPending)
+                        return;
+                    filesToDelete.Add(file.FullName);
+                }
+            }
+        }
+
+
 
         /// <summary>
         /// handle run worker completed event

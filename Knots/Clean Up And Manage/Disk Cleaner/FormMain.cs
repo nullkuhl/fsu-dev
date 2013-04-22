@@ -541,6 +541,7 @@ namespace Disk_Cleaner
             stack.Push(b);
             while (stack.Count > 0)
             {
+                if (ABORT) return;
                 string dir = stack.Pop();
                 try
                 {
@@ -548,18 +549,20 @@ namespace Disk_Cleaner
                     {
                         if (ABORT) return;
                         ProcessFile(filename);
+                        Application.DoEvents();
                     }
                     foreach (string dn in Directory.GetDirectories(dir))
                     {
                         if (ABORT) return;
                         if (DirectoryAllowed(dn))
                             stack.Push(dn);
+                        Application.DoEvents();
                     }
-                    Application.DoEvents();
                 }
                 catch
                 {
                 }
+                Application.DoEvents();
             }
         }
 
@@ -653,7 +656,7 @@ namespace Disk_Cleaner
                 listViewJunk.SelectedItems.Clear();
                 listViewJunk.Items[0].Selected = true;
 
-                labelFinal.Text = rm.GetString("you_can_use_cleanup") + " " + GetSizeInMB(binsize + junksize) + rm.GetString("of_disk_space") + " " + Preferences.CheckedNames.Replace('|', ' ');                
+                labelFinal.Text = rm.GetString("you_can_use_cleanup") + " " + GetSizeInMB(binsize + junksize) + rm.GetString("of_disk_space") + " " + Preferences.CheckedNames.Replace('|', ' ');
             }
             ABORT = false;
 

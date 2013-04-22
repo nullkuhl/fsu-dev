@@ -180,7 +180,6 @@
     <ProjectReference Include="..\FreemiumUtil\FreemiumUtil.csproj">
       <Project>{BAE70997-B37E-4FC6-A605-17967A89B7F9}</Project>
       <Name>FreemiumUtil</Name>
-      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Knots\Security And Privacy\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj">
       <Project>{374F6345-4849-4379-B200-B97051E6E5D1}</Project>

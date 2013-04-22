@@ -53,12 +53,11 @@ namespace FreemiumUtilities
 
             string culture = CfgFile.Get("Lang");
             LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
-
+            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;            
             if (CfgFile.Get("FirstRun") != "0")
             {
-                CfgFile.Set("FirstRun", "0");
                 FirstRun();
+                CfgFile.Set("FirstRun", "0");
             }
 
             string path = String.Format(@"Themes\{0}\Theme.xaml", CfgFile.Get("Theme"));
@@ -149,43 +148,43 @@ namespace FreemiumUtilities
             // ENCRYPT
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\*\shell\FreemiumEncrypt\",
                                       WPFLocalizeExtensionHelpers.GetUIString("EncryptWithFreemiumTools"), "ENCRYPT");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\*\shell\FreemiumEncrypt\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"*\shell\FreemiumEncrypt\",
                                       WPFLocalizeExtensionHelpers.GetUIString("EncryptWithFreemiumTools"), "ENCRYPT");
             CfgFile.Set("ShowContextMenuEncrypt", "1");
 
             // WIPE
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\*\shell\FreemiumWipe\",
                                       WPFLocalizeExtensionHelpers.GetUIString("WipeWithFreemiumTools"), "WIPE");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\*\shell\FreemiumWipe\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"*\shell\FreemiumWipe\",
                                       WPFLocalizeExtensionHelpers.GetUIString("WipeWithFreemiumTools"), "WIPE");
             CfgFile.Set("ShowContextMenuWipe", "1");
 
             // SPLIT
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\*\shell\FreemiumSplit\",
                                       WPFLocalizeExtensionHelpers.GetUIString("SplitWithFreemiumTools"), "SPLIT");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\*\shell\FreemiumSplit\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"*\shell\FreemiumSplit\",
                                       WPFLocalizeExtensionHelpers.GetUIString("SplitWithFreemiumTools"), "SPLIT");
             CfgFile.Set("ShowContextMenuSplit", "1");
 
             // ANALYSE
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Drive\shell\FreemiumAnalyze\",
                                       WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\Drive\shell\FreemiumAnalyze\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Drive\shell\FreemiumAnalyze\",
                                       WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Directory\shell\FreemiumAnalyze\",
                                       WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\Directory\shell\FreemiumAnalyze\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Directory\shell\FreemiumAnalyze\",
                                       WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
             CfgFile.Set("ShowContextMenuAnalyze", "1");
 
             // EMPTYFOLDERS
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Drive\shell\FreemiumFindEmptyFolders\",
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\Drive\shell\FreemiumFindEmptyFolders\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Drive\shell\FreemiumFindEmptyFolders\",
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Directory\shell\FreemiumFindEmptyFolders\",
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\Directory\shell\FreemiumFindEmptyFolders\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Directory\shell\FreemiumFindEmptyFolders\",
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
             CfgFile.Set("ShowContextMenuFindEmptyFolders", "1");
 
@@ -233,7 +232,7 @@ namespace FreemiumUtilities
             {
             }
 
-            SetContextMenuRegistryKey(Registry.LocalMachine, @"SOFTWARE\Classes\freemiumencfile\shell\FreemiumDecrypt\",
+            SetContextMenuRegistryKey(Registry.ClassesRoot, @"freemiumencfile\shell\FreemiumDecrypt\",
                                       WPFLocalizeExtensionHelpers.GetUIString("DecryptWithFreemiumTools"), "DECRYPT");
             CfgFile.Set("ShowContextMenuDecrypt", "1");
         }
@@ -396,6 +395,26 @@ namespace FreemiumUtilities
         void GoHome(object sender, RoutedEventArgs e)
         {
             CloseAdvancedModules(null, null);
+        }
+
+        private Point startPoint;
+
+        private void logoButton_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            startPoint = e.GetPosition(logoButton);
+        }
+
+        private void logoButton_PreviewMouseMove(object sender, MouseEventArgs e)
+        {
+            var currentPoint = e.GetPosition(logoButton);
+            if (e.LeftButton == MouseButtonState.Pressed && logoButton.IsMouseCaptured &&
+                (Math.Abs(currentPoint.X - startPoint.X) > SystemParameters.MinimumHorizontalDragDistance ||
+                Math.Abs(currentPoint.Y - startPoint.Y) > SystemParameters.MinimumVerticalDragDistance))
+            {
+                //Prevent click from firing
+                logoButton.ReleaseMouseCapture();
+                DragMove();
+            }
         }
 
         #region Task scheduling
@@ -892,8 +911,14 @@ namespace FreemiumUtilities
                     }
                 }
             }
-            ProcessStartInfo psi = new ProcessStartInfo(filepath + "\\" + filename + ".exe");
-            Process.Start(psi);
+            try
+            {
+                ProcessStartInfo psi = new ProcessStartInfo(filepath + "\\" + filename + ".exe");
+                Process.Start(psi);
+            }
+            catch 
+            {
+            }
         }
 
         //Cleanup & Manager

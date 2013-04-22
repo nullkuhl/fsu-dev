@@ -41,7 +41,7 @@ namespace FileEraser
             this.tmiEmpty = new System.Windows.Forms.ToolStripSeparator();
             this.tmiExit = new System.Windows.Forms.ToolStripMenuItem();
             this.grbSelectFile = new System.Windows.Forms.GroupBox();
-            this.txtPath = new System.Windows.Forms.TextBox();
+            this.tbPath = new System.Windows.Forms.TextBox();
             this.cmdSelect = new System.Windows.Forms.Button();
             this.optFile = new System.Windows.Forms.RadioButton();
             this.optFolder = new System.Windows.Forms.RadioButton();
@@ -86,7 +86,7 @@ namespace FileEraser
             // 
             // grbSelectFile
             // 
-            this.grbSelectFile.Controls.Add(this.txtPath);
+            this.grbSelectFile.Controls.Add(this.tbPath);
             this.grbSelectFile.Controls.Add(this.cmdSelect);
             this.grbSelectFile.Controls.Add(this.optFile);
             this.grbSelectFile.Controls.Add(this.optFolder);
@@ -98,13 +98,13 @@ namespace FileEraser
             this.grbSelectFile.TabStop = false;
             this.grbSelectFile.Text = "File Selection";
             // 
-            // txtPath
+            // tbPath
             // 
-            this.txtPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPath.Location = new System.Drawing.Point(12, 20);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.Size = new System.Drawing.Size(307, 20);
-            this.txtPath.TabIndex = 1;
+            this.tbPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbPath.Location = new System.Drawing.Point(12, 20);
+            this.tbPath.Name = "tbPath";
+            this.tbPath.Size = new System.Drawing.Size(307, 20);
+            this.tbPath.TabIndex = 1;
             // 
             // cmdSelect
             // 
@@ -288,7 +288,7 @@ namespace FileEraser
         public System.Windows.Forms.ToolStripSeparator tmiEmpty;
         public System.Windows.Forms.ToolStripMenuItem tmiExit;
         System.Windows.Forms.GroupBox grbSelectFile;
-        System.Windows.Forms.TextBox txtPath;
+        System.Windows.Forms.TextBox tbPath;
         System.Windows.Forms.Button cmdSelect;
         System.Windows.Forms.GroupBox grbOptions;
         System.Windows.Forms.RadioButton optFolder;

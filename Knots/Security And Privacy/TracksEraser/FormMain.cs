@@ -9,10 +9,10 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using FreemiumUtil;
 using Microsoft.Win32;
 using UrlHistoryLibrary;
 using Knots.Security.TracksEraserCore;
+using FreemiumUtil;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -55,6 +55,9 @@ namespace FreemiumUtilities.TracksEraser
         List<string> filesToDelete;
         List<string> foldersToDelete;
         List<string> regValuesToDelete;
+
+        private bool isCancel = false;
+        BackgroundWorker scanBackgroundWorker;
 
         ulong recycleBinCount;
         ulong recycleBinSize;
@@ -200,6 +203,26 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void tsbAnalyse_Click(object sender, EventArgs e)
         {
+            RunScan();
+        }
+
+        void btnAnalyse_Click(object sender, EventArgs e)
+        {
+            if (btnAnalyse.Text == rm.GetString("cancel"))
+            {
+                CancelScan();
+            }
+            else
+            {
+                RunScan();
+            }
+        }
+
+        /// <summary>
+        /// Runs Scanning process
+        /// </summary>
+        private void RunScan()
+        {
             filesToDelete = new List<string>();
             regValuesToDelete = new List<string>();
             foldersToDelete = new List<string>();
@@ -207,21 +230,31 @@ namespace FreemiumUtilities.TracksEraser
             Enumerator = UrlHistory.GetEnumerator();
             CheckNotInstalledApps();
 
-            btnAnalyse.Enabled = false;
             tsbAnalyse.Enabled = false;
             tsbErase.Enabled = false;
             tsbCheck.Enabled = false;
-            btnAnalyse.Text = rm.GetString("scanning");
+            btnAnalyse.Text = rm.GetString("cancel");
             tsbAnalyse.Text = rm.GetString("scanning");
 
             Scanninglbl.Visible = true;
             Scanninglbl.Text = rm.GetString("scanning_tracks");
             pcbScanning.Visible = true;
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.ProgressChanged += ProgressChanged;
-            worker.DoWork += DoWork;
-            worker.RunWorkerCompleted += WorkerCompleted;
-            worker.RunWorkerAsync();
+            scanBackgroundWorker = new BackgroundWorker();
+            scanBackgroundWorker.WorkerSupportsCancellation = true;
+            scanBackgroundWorker.ProgressChanged += ProgressChanged;
+            scanBackgroundWorker.DoWork += DoWork;
+            scanBackgroundWorker.RunWorkerCompleted += WorkerCompleted;
+            scanBackgroundWorker.RunWorkerAsync();
+        }
+
+        /// <summary>
+        /// cancel the scanning process
+        /// </summary>
+        public void CancelScan()
+        {
+            isCancel = true;
+            if (scanBackgroundWorker.IsBusy)
+                scanBackgroundWorker.CancelAsync(); //makes the backgroundworker stop
         }
 
         /// <summary>
@@ -241,10 +274,26 @@ namespace FreemiumUtilities.TracksEraser
         /// <param name="e"></param>
         void WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            BackgroundWorker bgWorker = new BackgroundWorker();
-            bgWorker.DoWork += bgWorker_DoWork;
-            bgWorker.RunWorkerCompleted += bgWorker_RunWorkerCompleted;
-            bgWorker.RunWorkerAsync();
+            if (isCancel || e.Cancelled)
+            {
+                btnAnalyse.Text = "Analyse";
+                tsbAnalyse.Text = "Analyse";
+                txtResults.Text = string.Empty;
+                btnAnalyse.Enabled = true;
+                tsbAnalyse.Enabled = true;
+                tsbErase.Enabled = true;
+                tsbCheck.Enabled = true;
+                pcbScanning.Visible = false;
+                Scanninglbl.Visible = false;
+                isCancel = false;
+            }
+            else
+            {
+                BackgroundWorker bgWorker = new BackgroundWorker();
+                bgWorker.DoWork += bgWorker_DoWork;
+                bgWorker.RunWorkerCompleted += bgWorker_RunWorkerCompleted;
+                bgWorker.RunWorkerAsync();
+            }
         }
 
         /// <summary>
@@ -1426,10 +1475,16 @@ namespace FreemiumUtilities.TracksEraser
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
-                                    MarkFilesToDelete(dir, "*history*");
+                                    MarkFilesToDelete(dir, "History");                            
                                     MarkFilesToDelete(dir, "*Visited Links*");
                                     MarkFilesToDelete(dir, "*Current Tabs*");
+                                    MarkFilesToDelete(dir, "*Top Sites");
+                                    MarkFilesToDelete(dir, "*Network Action Predictor");
                                 }
+                                diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath + @"\Default\JumpListIcons");
+                                MarkDirToDelete(diInfoChromeHistory);
+                                diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath + @"\Default\JumpListIconsOld");
+                                MarkDirToDelete(diInfoChromeHistory);
                             }
                             catch
                             {
@@ -1455,13 +1510,16 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             try
                             {
-                                var diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
+                                DirectoryInfo diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath);
                                 DirectoryInfo[] profileDirs = diInfoChromeHistory.GetDirectories();
 
                                 foreach (DirectoryInfo dir in profileDirs)
                                 {
                                     MarkFilesToDelete(dir, "*Cookies*");
                                 }
+
+                                diInfoChromeHistory = new DirectoryInfo(sGoogleChromePath + "\\Default\\Local Storage");
+                                MarkDirToDelete(diInfoChromeHistory);
                             }
                             catch
                             {
@@ -1738,7 +1796,7 @@ namespace FreemiumUtilities.TracksEraser
             }
             if (tracksCount == 0)
             {
-                MessageBox.Show(String.Format("{0}{1}{2}", rm.GetString("error_no_tracks_checked"), Environment.NewLine, 
+                MessageBox.Show(String.Format("{0}{1}{2}", rm.GetString("error_no_tracks_checked"), Environment.NewLine,
                                 rm.GetString("error_check_tracks")),
                                 rm.GetString("warning"), MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;

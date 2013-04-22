@@ -59,14 +59,13 @@ namespace DiskAnalysis.Entities
         /// <summary>
         /// Percent
         /// </summary>
-        public decimal DPercent { get; set; }
-
+        public decimal dPercent { get; set; }
         /// <summary>
         /// String percent
         /// </summary>
         public int DisplayPercent
         {
-            get { return Convert.ToInt32(DPercent / 2); }
+            get { return Convert.ToInt32(dPercent / 2); }
         }
 
         /// <summary>
@@ -74,7 +73,7 @@ namespace DiskAnalysis.Entities
         /// </summary>
         public string Percent
         {
-            get { return DPercent.ToString("00.00") + " %"; }
+            get { return dPercent.ToString("00.00") + " %"; }
         }
 
         /// <summary>

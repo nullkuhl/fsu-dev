@@ -243,12 +243,11 @@
     <None Include="Resources\bottomBar.png" />
     <None Include="Resources\Logo.png" />
     <None Include="Resources\install-busy.gif" />
-    <Content Include="configuration.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <None Include="Resources\help_off.png" />
     <None Include="Resources\help_on.png" />
     <None Include="Resources\FSUIcon.ico" />
+    <Content Include="configuration-de.xml" />
+    <Content Include="configuration-en.xml" />
     <Content Include="Resources\icon-disc-cleaner.png" />
     <Content Include="Resources\refresh-small.png" />
   </ItemGroup>

@@ -366,7 +366,7 @@ namespace FreemiumUtilities.TracksEraser
             this.btnAnalyse.TabIndex = 2;
             this.btnAnalyse.Text = "Analyse";
             this.btnAnalyse.UseVisualStyleBackColor = true;
-            this.btnAnalyse.Click += new System.EventHandler(this.tsbAnalyse_Click);
+            this.btnAnalyse.Click += new System.EventHandler(this.btnAnalyse_Click);
             // 
             // RunEraser
             // 

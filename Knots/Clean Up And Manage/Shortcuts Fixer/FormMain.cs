@@ -97,13 +97,7 @@ namespace ShortcutsFixer
         /// </summary>
         public void SearchDesktop()
         {
-            Abort.Visible = true;
-            btnFixShortCut.Enabled = false;
-            btnDelete.Enabled = false;
-            btnOpenFolder.Enabled = false;
-            btnProperties.Enabled = false;
-            tsbCheck.Enabled = false;
-
+            EnableControls(false);
             string root = Path.GetPathRoot(Environment.SystemDirectory);
             string user = Environment.UserName;
 
@@ -160,14 +154,28 @@ namespace ShortcutsFixer
             }
 
             prbMain.Visible = false;
-            lblStatus.Text = String.Empty;
-            Abort.Visible = false;
-            btnFixShortCut.Enabled = true;
-            btnDelete.Enabled = true;
-            btnOpenFolder.Enabled = true;
-            btnProperties.Enabled = true;
-            tsbCheck.Enabled = true;
-            fileLabel.Text = String.Empty;
+            EnableControls(true);            
+        }
+
+        /// <summary>
+        /// Enables or disables controls
+        /// </summary>
+        /// <param name="isEnabled">true - if the controls should be enabled, false - otherwise</param>
+        private void EnableControls(bool isEnabled)
+        {
+            Abort.Visible = !isEnabled;
+            btnFixShortCut.Enabled = isEnabled;
+            btnDelete.Enabled = isEnabled;
+            btnOpenFolder.Enabled = isEnabled;
+            btnProperties.Enabled = isEnabled;
+            btnScan.Enabled = isEnabled;
+            btnRestore.Enabled = isEnabled;
+            tsbCheck.Enabled = isEnabled;
+            if (isEnabled)
+            {
+                lblStatus.Text = String.Empty;
+                fileLabel.Text = String.Empty;
+            }
         }
 
         /// <summary>
@@ -201,13 +209,7 @@ namespace ShortcutsFixer
         /// </summary>
         public void SearchDrives()
         {
-            Abort.Visible = true;
-            btnFixShortCut.Enabled = false;
-            btnDelete.Enabled = false;
-            btnOpenFolder.Enabled = false;
-            btnProperties.Enabled = false;
-            tsbCheck.Enabled = false;
-
+            EnableControls(false);
             var objList = new ListBox();
             foreach (ListViewItem str in obj.checkedListViewDrives.CheckedItems)
             {
@@ -238,14 +240,7 @@ namespace ShortcutsFixer
             {
             }
 
-            lblStatus.Text = String.Empty;
-            Abort.Visible = false;
-            btnFixShortCut.Enabled = true;
-            btnDelete.Enabled = true;
-            btnOpenFolder.Enabled = true;
-            btnProperties.Enabled = true;
-            tsbCheck.Enabled = true;
-            fileLabel.Text = String.Empty;
+            EnableControls(true);
         }
 
         /// <summary>
@@ -371,9 +366,7 @@ namespace ShortcutsFixer
                 if (obj.radioButtonDesktop.Checked)
                     SearchDesktop();
                 else if (obj.radioButtonDrives.Checked)
-                {
                     SearchDrives();
-                }
             }
 
             try
