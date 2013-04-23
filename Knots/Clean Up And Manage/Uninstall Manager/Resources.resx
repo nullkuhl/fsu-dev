@@ -127,7 +127,7 @@
     <value>Currently installed programs</value>
   </data>
   <data name="entries_removed" xml:space="preserve">
-    <value>entries have been removed successfully.</value>
+    <value>Entries have been removed successfully</value>
   </data>
   <data name="error" xml:space="preserve">
     <value>Error</value>
@@ -160,7 +160,7 @@
     <value>You need administrative rights to use this functionality.</value>
   </data>
   <data name="one_entry_removed" xml:space="preserve">
-    <value>entry has been removed successfully.</value>
+    <value>Entry has been removed successfully</value>
   </data>
   <data name="operation_cancelled" xml:space="preserve">
     <value>Operation cancelled</value>
@@ -221,5 +221,8 @@
   </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
+  </data>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Please note that removing an entry is an irreversible process, it's better to try uninstalling first. Are you sure you want to remove selected item(s) ?</value>
   </data>
 </root>

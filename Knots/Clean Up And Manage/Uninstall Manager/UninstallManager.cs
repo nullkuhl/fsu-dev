@@ -536,93 +536,101 @@ namespace Uninstall_Manager
 
         void removeEntryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StringCollection selectedApps = new StringCollection();
-            if (dgvInstalledApps.Columns[dgvInstalledApps_CheckBox].Visible)
+            if (
+                MessageBox.Show(rm.GetString("entry_remove_confirm"), rm.GetString("uninstall_manager"),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.Yes
+              )
             {
-                foreach (DataGridViewRow row in dgvInstalledApps.Rows)
+
+
+                StringCollection selectedApps = new StringCollection();
+                if (dgvInstalledApps.Columns[dgvInstalledApps_CheckBox].Visible)
                 {
-                    if (Convert.ToBoolean(row.Cells[dgvInstalledApps_CheckBox].Value))
-                        selectedApps.Add(row.Cells[dgvInstalledApps_Name].Value.ToString());
-                }
-            }
-            else
-            {
-                foreach (DataGridViewRow row in dgvInstalledApps.SelectedRows)
-                {
-                    selectedApps.Add(row.Cells[dgvInstalledApps_Name].Value.ToString());
-                }
-            }
-
-            int appsRemoved = 0;
-
-            RegistryKey wow64UninstallKey =
-                Registry.LocalMachine.OpenSubKey(@"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\");
-            RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\");
-
-            foreach (String appName in selectedApps)
-            {
-                appsRemoved += LookForTheApp(
-                    appName,
-                    Registry.LocalMachine,
-                    wow64UninstallKey,
-                    @"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\",
-                    "DisplayName");
-
-                appsRemoved += LookForTheApp(
-                    appName,
-                    Registry.LocalMachine,
-                    rk,
-                    @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\",
-                    "DisplayName");
-
-                foreach (string userSid in Registry.Users.GetSubKeyNames())
-                {
-                    RegistryKey cuUnInstallKey = Registry.Users.OpenSubKey(userSid + @"\Software\Microsoft\Windows\CurrentVersion\Uninstall\");
-                    if (cuUnInstallKey != null)
+                    foreach (DataGridViewRow row in dgvInstalledApps.Rows)
                     {
-                        appsRemoved += LookForTheApp(
-                            appName,
-                            Registry.Users,
-                            cuUnInstallKey,
-                            userSid + @"\Software\Microsoft\Windows\CurrentVersion\Uninstall\",
-                            "DisplayName");
+                        if (Convert.ToBoolean(row.Cells[dgvInstalledApps_CheckBox].Value))
+                            selectedApps.Add(row.Cells[dgvInstalledApps_Name].Value.ToString());
                     }
-
-                    RegistryKey cuInstallerKey = Registry.Users.OpenSubKey(userSid + @"\Software\Microsoft\Installer\Products\");
-                    if (cuInstallerKey != null)
-                    {
-                        appsRemoved += LookForTheApp(
-                            appName,
-                            Registry.Users,
-                            cuInstallerKey,
-                            userSid + @"\Software\Microsoft\Installer\Products\",
-                            "ProductName");
-                    }
-                }
-            }
-
-            if (appsRemoved > 0)
-            {
-                if (appsRemoved == 1)
-                {
-                    MessageBox.Show(rm.GetString("one_entry_removed"), rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show(string.Format("{0} {1}", appsRemoved, rm.GetString("entries_removed")), rm.GetString("uninstall_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    foreach (DataGridViewRow row in dgvInstalledApps.SelectedRows)
+                    {
+                        selectedApps.Add(row.Cells[dgvInstalledApps_Name].Value.ToString());
+                    }
                 }
-            }
-            else
-            {
-                MessageBox.Show(rm.GetString("no_one_removed"), rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
 
-            Thread bgthread = new Thread(GetPrograms);
-            bgthread.IsBackground = true;
-            bgthread.Start();
+                int appsRemoved = 0;
+
+                RegistryKey wow64UninstallKey =
+                    Registry.LocalMachine.OpenSubKey(@"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\");
+                RegistryKey rk = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\");
+
+                foreach (String appName in selectedApps)
+                {
+                    appsRemoved += LookForTheApp(
+                        appName,
+                        Registry.LocalMachine,
+                        wow64UninstallKey,
+                        @"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\",
+                        "DisplayName");
+
+                    appsRemoved += LookForTheApp(
+                        appName,
+                        Registry.LocalMachine,
+                        rk,
+                        @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\",
+                        "DisplayName");
+
+                    foreach (string userSid in Registry.Users.GetSubKeyNames())
+                    {
+                        RegistryKey cuUnInstallKey = Registry.Users.OpenSubKey(userSid + @"\Software\Microsoft\Windows\CurrentVersion\Uninstall\");
+                        if (cuUnInstallKey != null)
+                        {
+                            appsRemoved += LookForTheApp(
+                                appName,
+                                Registry.Users,
+                                cuUnInstallKey,
+                                userSid + @"\Software\Microsoft\Windows\CurrentVersion\Uninstall\",
+                                "DisplayName");
+                        }
+
+                        RegistryKey cuInstallerKey = Registry.Users.OpenSubKey(userSid + @"\Software\Microsoft\Installer\Products\");
+                        if (cuInstallerKey != null)
+                        {
+                            appsRemoved += LookForTheApp(
+                                appName,
+                                Registry.Users,
+                                cuInstallerKey,
+                                userSid + @"\Software\Microsoft\Installer\Products\",
+                                "ProductName");
+                        }
+                    }
+                }
+
+                if (appsRemoved > 0)
+                {
+                    if (appsRemoved == 1)
+                    {
+                        MessageBox.Show(rm.GetString("one_entry_removed"), rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show(string.Format("{0} {1}", appsRemoved, rm.GetString("entries_removed")), rm.GetString("uninstall_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(rm.GetString("no_one_removed"), rm.GetString("uninstall_manager"), MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+
+                Thread bgthread = new Thread(GetPrograms);
+                bgthread.IsBackground = true;
+                bgthread.Start();
+            }
         }
 
         int LookForTheApp(string appName, RegistryKey baseKey, RegistryKey rk, string registryKeyPath, string nameField)

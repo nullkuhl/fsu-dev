@@ -222,4 +222,7 @@
   <data name="version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Veuillez noter que la suppression d'une entrée est un processus irréversible, il vaut mieux essayer de désinstaller d'abord. Etes-vous sûr de vouloir supprimer l'élément sélectionné(s)?</value>
+  </data>
 </root>

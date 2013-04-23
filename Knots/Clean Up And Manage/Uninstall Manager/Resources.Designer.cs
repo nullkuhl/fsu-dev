@@ -88,11 +88,20 @@ namespace Uninstall_Manager {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to entries have been removed successfully..
+        ///   Looks up a localized string similar to Entries have been removed successfully.
         /// </summary>
         internal static string entries_removed {
             get {
                 return ResourceManager.GetString("entries_removed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please note that removing an entry is an irreversible process, it&apos;s better to try uninstalling first. Are you sure you want to remove selected item(s) ?.
+        /// </summary>
+        internal static string entry_remove_confirm {
+            get {
+                return ResourceManager.GetString("entry_remove_confirm", resourceCulture);
             }
         }
         
@@ -187,7 +196,7 @@ namespace Uninstall_Manager {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to entry has been removed successfully..
+        ///   Looks up a localized string similar to Entry has been removed successfully.
         /// </summary>
         internal static string one_entry_removed {
             get {

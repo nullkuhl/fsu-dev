@@ -222,4 +222,7 @@
   <data name="version" xml:space="preserve">
     <value>Versione</value>
   </data>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Si prega di notare che la rimozione di una voce è un processo irreversibile, è meglio provare a disinstallare prima. Sei sicuro di voler rimuovere gli elementi selezionati?</value>
+  </data>
 </root>

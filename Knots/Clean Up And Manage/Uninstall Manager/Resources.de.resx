@@ -222,4 +222,7 @@
   <data name="version" xml:space="preserve">
     <value>Version</value>
   </data>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Bitte beachten Sie, dass das Löschen eines Eintrags nicht rückgängig gemacht werden kann. Versuchen Sie daher zunächst eine Deinstallation. Sind Sie sicher, dass Sie die ausgewählten Einträge entfernen möchten?</value>
+  </data>
 </root>
