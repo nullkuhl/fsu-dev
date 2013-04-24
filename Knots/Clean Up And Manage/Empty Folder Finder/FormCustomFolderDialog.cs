@@ -132,6 +132,7 @@ namespace EmptyFolderFinder
             }
             else if (rdbScanFolder.Checked)
             {
+                PathToScan = txtData.Text;
                 EPathType = PathType.File;
                 DialogResult = DialogResult.OK;
             }

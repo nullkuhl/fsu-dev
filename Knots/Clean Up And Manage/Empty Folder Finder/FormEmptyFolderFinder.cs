@@ -639,37 +639,45 @@ namespace EmptyFolderFinder
         /// <param name="e"></param>
         void tsbExclude_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (lvMain.Items.Count > 0)
-                {
-                    string exclFilesDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\Files";
-                    if (!Directory.Exists(exclFilesDir))
-                        Directory.CreateDirectory(exclFilesDir);
-                    
-                    using (StreamWriter sw = new StreamWriter(exclFilesDir + @"\ExcludeFiles.txt", true))
-                    {
-                        for (int i = lvMain.Items.Count - 1; i >= 0; i--)
-                        {
-                            if (lvMain.Items[i].Checked)
-                            {
-                                sw.WriteLine(lvMain.Items[i].SubItems[1].Text);
-                                lvMain.Items.RemoveAt(i);
-                            }
-                        }
-                        sw.Close();
-                    }
 
-                    MessageBox.Show(rm.GetString("excluded"), rm.GetString("operation_done"), MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+            if (lvMain.Items.Count > 0)
+            {
+                if (lvMain.CheckedItems.Count > 0)
+                {
+                    try
+                    {
+                        string exclFilesDir = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FreeSystemUtilities\\Files";
+                        if (!Directory.Exists(exclFilesDir))
+                            Directory.CreateDirectory(exclFilesDir);
+
+                        using (StreamWriter sw = new StreamWriter(exclFilesDir + @"\ExcludeFiles.txt", true))
+                        {
+                            for (int i = lvMain.Items.Count - 1; i >= 0; i--)
+                            {
+                                if (lvMain.Items[i].Checked)
+                                {
+                                    sw.WriteLine(lvMain.Items[i].SubItems[1].Text);
+                                    lvMain.Items.RemoveAt(i);
+                                }
+                            }
+                            sw.Close();
+                        }
+
+                        MessageBox.Show(rm.GetString("excluded"), rm.GetString("operation_done"), MessageBoxButtons.OK,
+                                        MessageBoxIcon.Information);
+                    }
+                    catch (Exception)
+                    {
+                        // ToDo: send exception details via SmartAssembly bug reporting!
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(rm.GetString("select_folder_to_remove"), rm.GetString("exclude"), MessageBoxButtons.OK,
+                                       MessageBoxIcon.Information);
                 }
             }
-            catch (Exception)
-            {
-                // ToDo: send exception details via SmartAssembly bug reporting!
-            }            
         }
-
         /// <summary>
         /// change current language
         /// </summary>

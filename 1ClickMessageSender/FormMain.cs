@@ -49,7 +49,7 @@ namespace ClickMaint
                 {
                     Process p = new Process
                                 {
-                                    StartInfo = { FileName = Environment.CurrentDirectory + "\\FreemiumUtilities.exe", Arguments = "StartHidden" }
+                                    StartInfo = { FileName = Environment.CurrentDirectory + "\\FreemiumUtilities.exe" }
                                 };
                     p.Start();
                     Thread.Sleep(3000);

@@ -235,4 +235,7 @@
   <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
     <value>Folder cannot be opened</value>
   </data>
+  <data name="select_folder_to_remove" xml:space="preserve">
+    <value>Please select a folder first.</value>
+  </data>
 </root>
