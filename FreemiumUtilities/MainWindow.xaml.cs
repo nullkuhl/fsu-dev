@@ -350,8 +350,9 @@ namespace FreemiumUtilities
             }
             if (context.SelectedIndex == 3)
             {
-                Process sysInfo = new Process { StartInfo = { FileName = "SysInfo.exe" } };
-                sysInfo.Start();
+                //Process sysInfo = new Process { StartInfo = { FileName = "SysInfo.exe" } };
+                //sysInfo.Start();
+                AppStarter(apppath, "SysInfo");
             }
             if (context.SelectedIndex == 4)
             {
