@@ -1451,4 +1451,7 @@ Cliquez sur « OK » pour ouvrir la page de téléchargement de .NET Framework
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Souhaitez-vous créer un point de restauration système avant de continuer ? La restauration peut durer plusieurs minutes.</value>
   </data>
+  <data name="select_day" xml:space="preserve">
+    <value>Au moins un jour doit être choisi</value>
+  </data>
 </root>

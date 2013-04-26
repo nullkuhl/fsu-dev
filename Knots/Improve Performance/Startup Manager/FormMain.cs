@@ -1325,7 +1325,7 @@ namespace StartupManager
                     if (EnableItemInReg(text, listviewStartup.Items[index].Tag.ToString()))
                     {
                         // Change the listview to indicate that this item is now enabled.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = "Enabled";
+                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
 
                         // Set context menu and tool strip buttons.
                         if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU"))
@@ -1462,9 +1462,10 @@ namespace StartupManager
         /// <param name="filePath"></param>
         /// <param name="newFilePath"></param>
         /// <returns>true - if success, false - otherwise</returns>
-        bool DisableItemForUser(string filePath, string newFilePath)
+        bool DisableItemForUser(string filePath, out string newFilePath)
         {
             bool result = false;
+            newFilePath = string.Empty;
             // Make sure the shortcut exists.
             if (File.Exists(filePath))
             {
@@ -1486,13 +1487,14 @@ namespace StartupManager
                     }
 
                     // Move the .lnk file to the disabled folder.
-                    newFilePath = disabledFolder + @"\" + Path.GetFileName(filePath);
+                    string tmpNewFilePath = disabledFolder + @"\" + Path.GetFileName(filePath);
 
-                    if (File.Exists(newFilePath))
-                        File.Delete(newFilePath);
+                    if (File.Exists(tmpNewFilePath))
+                        File.Delete(tmpNewFilePath);
 
-                    File.Move(filePath, newFilePath);
+                    File.Move(filePath, tmpNewFilePath);
                     result = true;
+                    newFilePath = tmpNewFilePath;
                 }
                 else
                 {
@@ -1543,9 +1545,7 @@ namespace StartupManager
                 {
                     // Get the path.
                     filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
-                    newFilePath = filePath.Replace("~Disabled", string.Empty);
-
-                    if (DisableItemForUser(filePath, newFilePath))
+                    if (DisableItemForUser(filePath, out newFilePath))
                     {
                         // Change the listview to indicate that this item is now disabled.
                         listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");

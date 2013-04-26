@@ -116,6 +116,10 @@ namespace FreemiumUtilities
                 cmbweek.SelectedIndex = 0;
                 cmbday.SelectedIndex = 0;
             }
+            else if (cmbSelectSchedule.SelectedIndex == (int)Schedule.Weekly)
+            {
+                chkMon.Checked = true;
+            }
             ChangeSettings();
         }
 
@@ -250,6 +254,13 @@ namespace FreemiumUtilities
                 else if (cmbSelectSchedule.SelectedIndex == (int)Schedule.Weekly)
                 {
                     WeeklyTrigger wTrigger = new WeeklyTrigger();
+
+                    if (!chkMon.Checked && !chkTue.Checked && !chkWed.Checked && !chkThu.Checked && !chkFri.Checked && !chkSat.Checked &&
+                        !chkSun.Checked)
+                    {
+                        MessageBox.Show(WPFLocalizeExtensionHelpers.GetUIString("select_day"), System.Windows.Forms.Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
 
                     if (chkMon.Checked && chkTue.Checked && chkWed.Checked && chkThu.Checked && chkFri.Checked && chkSat.Checked &&
                         chkSun.Checked)

@@ -1458,4 +1458,7 @@ e gestibili, per poi riunirli</value>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Vuoi creare un punto di ripristino del sistema prima di continuare? Il processo di ripristino può richiedere vari minuti prima di essere completato.</value>
   </data>
+  <data name="select_day" xml:space="preserve">
+    <value>Almeno un giorno dovrebbe essere scelto</value>
+  </data>
 </root>

@@ -1465,4 +1465,7 @@ managable parts and rejoin them</value>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Would you like to create a System Restore Point before proceeding? The Restore process may take several minutes to complete.</value>
   </data>
+  <data name="select_day" xml:space="preserve">
+    <value>At least one day should be chosen</value>
+  </data>
 </root>

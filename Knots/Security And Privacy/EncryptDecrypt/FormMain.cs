@@ -116,7 +116,7 @@ namespace EncryptDecrypt
                 }
             }
         }
-       
+
 
         /// <summary>
         /// change current language
@@ -387,33 +387,23 @@ namespace EncryptDecrypt
                         output = extractpath.Substring(0, extractpath.Length - 7);
 
                     DialogResult continueDecrypt = DialogResult.Yes;
+                    bool isEncryptedFileInSameDir = false;
                     if (File.Exists(output))
                     {
                         continueDecrypt = MessageBox.Show(rm.GetString("output_exists_message").Replace("%1", output), rm.GetString("output_exists_title"),
                                                           MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                        isEncryptedFileInSameDir = true;
                     }
 
                     if (continueDecrypt == DialogResult.Yes)
                     {
-                        bool successful;
+                        bool successful = false;
                         try
                         {
                             successful = CryptoHelp.DecryptFile(dcpath, output, password, UpdateDecryptProgress);
                         }
                         catch (Exception)
                         {
-                            try
-                            {
-                                if (File.Exists(output))
-                                    File.Delete(output);
-                            }
-                            catch
-                            {
-                            }
-
-                            MessageBox.Show(rm.GetString("wrong_pass"));
-                            txtPasswdDecrypt.Text = String.Empty;
-                            successful = false;
                         }
 
                         // If decryption was not successful, we should not delete the original file,
@@ -451,6 +441,20 @@ namespace EncryptDecrypt
                             extrect_Textbox.Text = String.Empty;
                             chkDeleteAfterDecryption.Checked = false;
                             chkOpenAfterDecryption.Checked = false;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                if (File.Exists(output) && !isEncryptedFileInSameDir)
+                                    File.Delete(output);
+                            }
+                            catch
+                            {
+                            }
+
+                            MessageBox.Show(rm.GetString("wrong_pass"));
+                            txtPasswdDecrypt.Text = String.Empty;
                         }
                     }
                 }

@@ -405,4 +405,43 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Os ficheiros com zero-bytes não têm dados e geralmente podem ser eliminados</value>
   </data>
+  <data name="temporary_file" xml:space="preserve">
+    <value>Aquivo temporário</value>
+  </data>
+  <data name="error_file" xml:space="preserve">
+    <value>Arquivo de erro</value>
+  </data>
+  <data name="intermediate_file" xml:space="preserve">
+    <value>Arquivo intermediário</value>
+  </data>
+  <data name="log_file" xml:space="preserve">
+    <value>O arquivo de log</value>
+  </data>
+  <data name="memory_dump_files" xml:space="preserve">
+    <value>Arquivos de despejo de memória</value>
+  </data>
+  <data name="office_bkup_file" xml:space="preserve">
+    <value>Arquivo de backup escritório</value>
+  </data>
+  <data name="outdated_file" xml:space="preserve">
+    <value>Arquivo desatualizado</value>
+  </data>
+  <data name="saved_disk_error_data" xml:space="preserve">
+    <value>Dados de erro de disco salvas scandisk</value>
+  </data>
+  <data name="temporary_file_created_during_setup" xml:space="preserve">
+    <value>Arquivo temporário criado durante a instalação</value>
+  </data>
+  <data name="temp_bkup_file" xml:space="preserve">
+    <value>Arquivo de backup temporário</value>
+  </data>
+  <data name="temp_dir_info" xml:space="preserve">
+    <value>Informações do diretório temporário</value>
+  </data>
+  <data name="temp_help_file_search_data" xml:space="preserve">
+    <value>Dados de pesquisa de arquivos de ajuda temporária</value>
+  </data>
+  <data name="win_help_sys_temp_file" xml:space="preserve">
+    <value>Arquivo temporário do sistema de ajuda do Windows</value>
+  </data>
 </root>

@@ -1458,4 +1458,7 @@ e juntá-las novamente</value>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Pretende criar um Ponto de Restauro do Sistema antes de continuar? Este processo de Restauro pode demorar alguns minutos a terminar.</value>
   </data>
+  <data name="select_day" xml:space="preserve">
+    <value>Pelo menos um dia deve ser escolhido</value>
+  </data>
 </root>

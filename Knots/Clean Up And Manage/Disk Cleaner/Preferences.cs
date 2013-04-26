@@ -4,6 +4,9 @@ using System.IO;
 using System.Text;
 using System.Xml;
 using System.Threading;
+using System.Resources;
+using System.Globalization;
+using FreemiumUtil;
 
 namespace Disk_Cleaner
 {
@@ -100,11 +103,13 @@ namespace Disk_Cleaner
     /// </summary>
     public static class Preferences
     {
+        public static ResourceManager rm = new ResourceManager("Disk_Cleaner.Resources",
+            System.Reflection.Assembly.GetExecutingAssembly());
+
         /// <summary>
         /// Preferences file name
         /// </summary>
         public static readonly string Filename = String.Format("configuration-{0}.xml", Thread.CurrentThread.CurrentUICulture.Name);
-
         /// <summary>
         /// Default extensions collection
         /// </summary>
@@ -154,43 +159,43 @@ namespace Disk_Cleaner
         static void DefaultsLoad()
         {
             DefaultExtensions.Clear();
-            DefaultExtensions.Add(new Option("*.tmp", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.temp", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.nch", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.---", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.~*", "Temporary file", true));
-            DefaultExtensions.Add(new Option("~*.*", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.??$", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.___", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.~mp", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*._mp", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.$db", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.?$?", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.??~", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.?~?", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.db$", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.^", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*._dd", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*._detmp", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.$$$", "Temporary file", true));
-            DefaultExtensions.Add(new Option("0*.nch", "Temporary file", true));
-            DefaultExtensions.Add(new Option("*.old", "Temporary backup file", true));
-            DefaultExtensions.Add(new Option("*.bak", "Temporary backup file", true));
-            DefaultExtensions.Add(new Option("*.chk", "Saved disk error data from scandisk", true));
-            DefaultExtensions.Add(new Option("*.gid", "Temporary help file search data", true));
-            DefaultExtensions.Add(new Option("mscreate.dir", "Temporary directory information", true));
-            DefaultExtensions.Add(new Option("*.wbk", "Office backup file", true));
-            DefaultExtensions.Add(new Option("*.fts", "Temporary help file search data", true));
-            DefaultExtensions.Add(new Option("*.ftg", "Windows help system temp file", true));
-            DefaultExtensions.Add(new Option("*log.txt", "Log file", true));
-            DefaultExtensions.Add(new Option("*.err", "Error file", true));
-            DefaultExtensions.Add(new Option("*.dmp", "Memory dump files", true));
-            DefaultExtensions.Add(new Option("*.prv", "Outdated file", true));
-            DefaultExtensions.Add(new Option("*.ilk", "Intermediate file", true));
-            DefaultExtensions.Add(new Option("*.aps", "Intermediate file", true));
-            DefaultExtensions.Add(new Option("*.ncb", "Intermediate file", true));
-            DefaultExtensions.Add(new Option("*.pch", "Intermediate file", true));
-            DefaultExtensions.Add(new Option("chklist.*", "Temporary file created during setup", true));
+            DefaultExtensions.Add(new Option("*.tmp", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.temp", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.nch", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.---", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.~*", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("~*.*", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.??$", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.___", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.~mp", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*._mp", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.$db", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.?$?", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.??~", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.?~?", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.db$", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.^", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*._dd", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*._detmp", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.$$$", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("0*.nch", rm.GetString("temporary_file"), true));
+            DefaultExtensions.Add(new Option("*.old", rm.GetString("temp_bkup_file"), true));
+            DefaultExtensions.Add(new Option("*.bak", rm.GetString("temp_bkup_file"), true));
+            DefaultExtensions.Add(new Option("*.chk", rm.GetString("saved_disk_error_data"), true));
+            DefaultExtensions.Add(new Option("*.gid", rm.GetString("temp_help_file_search_data"), true));
+            DefaultExtensions.Add(new Option("mscreate.dir", rm.GetString("temp_dir_info"), true));
+            DefaultExtensions.Add(new Option("*.wbk", rm.GetString("office_bkup_file"), true));
+            DefaultExtensions.Add(new Option("*.fts", rm.GetString("temp_help_file_search_data"), true));           
+            DefaultExtensions.Add(new Option("*.ftg", rm.GetString("win_help_sys_temp_file"), true));
+            DefaultExtensions.Add(new Option("*log.txt", rm.GetString("log_file"), true));
+            DefaultExtensions.Add(new Option("*.err", rm.GetString("error_file"), true));
+            DefaultExtensions.Add(new Option("*.dmp", rm.GetString("memory_dump_files"), true));
+            DefaultExtensions.Add(new Option("*.prv", rm.GetString("outdated_file"), true));
+            DefaultExtensions.Add(new Option("*.ilk", rm.GetString("intermediate_file"), true));
+            DefaultExtensions.Add(new Option("*.aps", rm.GetString("intermediate_file"), true));
+            DefaultExtensions.Add(new Option("*.ncb", rm.GetString("intermediate_file"), true));
+            DefaultExtensions.Add(new Option("*.pch",rm.GetString("intermediate_file"), true));
+            DefaultExtensions.Add(new Option("chklist.*", rm.GetString("temporary_file_created_during_setup"), true));
 
             DefaultExclude.Add(new Option("?:\\Program Files\\Common Files", String.Empty, true));
             DefaultExclude.Add(new Option("?:\\Program Files\\Uninstall Information", String.Empty, true));
@@ -220,6 +225,9 @@ namespace Disk_Cleaner
         /// <param name="filename">File name</param>
         public static void Load(string filename)
         {
+            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
+            Thread.CurrentThread.CurrentUICulture = culture;
+
             DefaultsLoad();
             PathExcluded.Clear();
             PathIncluded.Clear();
@@ -245,7 +253,7 @@ namespace Disk_Cleaner
             if (xml.DocumentElement == null ||
                 xml.DocumentElement.Name != "DiskCleaner" ||
                 !xml.DocumentElement.HasChildNodes) return;
-            
+
             XmlElement element = xml.DocumentElement["Exclusions"];
             FillOptionList(element, PathExcluded);
             element = xml.DocumentElement["Inclusions"];

@@ -405,4 +405,43 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Los archivos de cero bytes no albergan datos y normalmente se pueden eliminar</value>
   </data>
+  <data name="temporary_file" xml:space="preserve">
+    <value>Archivo temporal</value>
+  </data>
+  <data name="error_file" xml:space="preserve">
+    <value>Error archivo</value>
+  </data>
+  <data name="intermediate_file" xml:space="preserve">
+    <value>Archivo intermedio</value>
+  </data>
+  <data name="log_file" xml:space="preserve">
+    <value>Archivo de registro</value>
+  </data>
+  <data name="memory_dump_files" xml:space="preserve">
+    <value>Archivos de volcado de memoria</value>
+  </data>
+  <data name="office_bkup_file" xml:space="preserve">
+    <value>Archivo de copia de seguridad de Office</value>
+  </data>
+  <data name="outdated_file" xml:space="preserve">
+    <value>Archivo ha sido superado</value>
+  </data>
+  <data name="saved_disk_error_data" xml:space="preserve">
+    <value>Guardado datos de error de disco de scandisk</value>
+  </data>
+  <data name="temporary_file_created_during_setup" xml:space="preserve">
+    <value>Archivo de copia de seguridad temporal</value>
+  </data>
+  <data name="temp_bkup_file" xml:space="preserve">
+    <value>Archivo de copia de seguridad temporal</value>
+  </data>
+  <data name="temp_dir_info" xml:space="preserve">
+    <value>Información del directorio temporal</value>
+  </data>
+  <data name="temp_help_file_search_data" xml:space="preserve">
+    <value>Temporal de búsqueda de archivos de datos</value>
+  </data>
+  <data name="win_help_sys_temp_file" xml:space="preserve">
+    <value>De Windows ayuda del sistema de archivos temp</value>
+  </data>
 </root>

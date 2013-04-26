@@ -405,4 +405,43 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Zero-byte files don't hold any data and can usually be deleted</value>
   </data>
+  <data name="error_file" xml:space="preserve">
+    <value>Error file</value>
+  </data>
+  <data name="intermediate_file" xml:space="preserve">
+    <value>Intermediate file</value>
+  </data>
+  <data name="log_file" xml:space="preserve">
+    <value>Log file</value>
+  </data>
+  <data name="memory_dump_files" xml:space="preserve">
+    <value>Memory dump files</value>
+  </data>
+  <data name="office_bkup_file" xml:space="preserve">
+    <value>Office backup file</value>
+  </data>
+  <data name="outdated_file" xml:space="preserve">
+    <value>Outdated file</value>
+  </data>
+  <data name="saved_disk_error_data" xml:space="preserve">
+    <value>Saved disk error data from scandisk</value>
+  </data>
+  <data name="temporary_file" xml:space="preserve">
+    <value>Temporary file</value>
+  </data>
+  <data name="temporary_file_created_during_setup" xml:space="preserve">
+    <value>Temporary file created during setup</value>
+  </data>
+  <data name="temp_bkup_file" xml:space="preserve">
+    <value>Temporary backup file</value>
+  </data>
+  <data name="temp_dir_info" xml:space="preserve">
+    <value>Temporary directory information</value>
+  </data>
+  <data name="temp_help_file_search_data" xml:space="preserve">
+    <value>Temporary help file search data</value>
+  </data>
+  <data name="win_help_sys_temp_file" xml:space="preserve">
+    <value>Windows help system temp file</value>
+  </data>
 </root>

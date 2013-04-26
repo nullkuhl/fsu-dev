@@ -1459,4 +1459,7 @@ manejables, y únalos de nuevo</value>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>¿Desea crear un punto de restauración del sistema antes de continuar? El proceso de restauración puede tardar varios minutos en completarse.</value>
   </data>
+  <data name="select_day" xml:space="preserve">
+    <value>Al menos un día debe ser elegido</value>
+  </data>
 </root>
