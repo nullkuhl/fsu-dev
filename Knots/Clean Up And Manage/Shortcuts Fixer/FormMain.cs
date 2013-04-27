@@ -492,6 +492,7 @@ namespace ShortcutsFixer
                     if (fd.ShowDialog() == DialogResult.OK)
                     {
                         ShortcutSet(fd.FileName);
+                        dgwMain.SelectedRows[0].Cells[2].Value = fd.FileName;
                     }
                 }
                 else if (((flInfo)).Extension == String.Empty)
@@ -506,6 +507,7 @@ namespace ShortcutsFixer
                     if (fd.ShowDialog() == DialogResult.OK)
                     {
                         ShortcutSet(fd.SelectedPath);
+                        dgwMain.SelectedRows[0].Cells[2].Value = fd.SelectedPath;
                     }
                 }
 
