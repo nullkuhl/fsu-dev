@@ -236,6 +236,6 @@
     <value>Bitte wählen Sie zunächst die zu löschenden Ordner aus.</value>
   </data>
   <data name="select_folder_to_remove" xml:space="preserve">
-    <value>Bitte wählen Sie zunächst eln Verzeichnis aus.</value>
+    <value>Bitte wählen Sie zunächst ein Verzeichnis aus.</value>
   </data>
 </root>
