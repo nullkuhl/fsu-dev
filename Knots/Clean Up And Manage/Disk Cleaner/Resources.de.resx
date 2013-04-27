@@ -412,7 +412,7 @@
     <value>Fehler Datei</value>
   </data>
   <data name="intermediate_file" xml:space="preserve">
-    <value>Intermediate Datei</value>
+    <value>Zwischendatei</value>
   </data>
   <data name="log_file" xml:space="preserve">
     <value>Log-Datei</value>
@@ -427,7 +427,7 @@
     <value>Veraltete Datei</value>
   </data>
   <data name="saved_disk_error_data" xml:space="preserve">
-    <value>Gespeichert disk error Daten von scandisk</value>
+    <value>Gespeicherte Festplattenfehlerdaten von ScanDisk</value>
   </data>
   <data name="temporary_file_created_during_setup" xml:space="preserve">
     <value>Temporäre Datei während der Installation erstellt</value>
@@ -439,7 +439,7 @@
     <value>Speicher-Dump-Dateien</value>
   </data>
   <data name="temp_help_file_search_data" xml:space="preserve">
-    <value>Temporäre Hilfedatei Suche Daten</value>
+    <value>Temporäre Hilfedatei-Suchdaten</value>
   </data>
   <data name="win_help_sys_temp_file" xml:space="preserve">
     <value>Windows-Hilfe-System temporäre Datei</value>
