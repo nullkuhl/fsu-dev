@@ -330,7 +330,7 @@
 								<Grid>
 
 									<Grid Margin="10,0,0,0" VerticalAlignment="Top">
-										<CheckBox Style="{StaticResource CheckBoxAutomatedScan}" Click="CheckBox_Click">
+                                        <CheckBox Style="{StaticResource CheckBoxAutomatedScan}" Click="CheckBox_Click" IsChecked="{Binding IsScheduled}">
 											<Grid Style="{StaticResource OneClickCheckBoxInner}" Margin="0,14,0,0">
 												<Grid.ColumnDefinitions>
 													<ColumnDefinition Width="59" />
