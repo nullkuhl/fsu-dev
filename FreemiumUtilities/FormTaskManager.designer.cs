@@ -225,8 +225,6 @@ namespace FreemiumUtilities
             // chkMon
             // 
             this.chkMon.AutoSize = true;
-            this.chkMon.Checked = true;
-            this.chkMon.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkMon.Location = new System.Drawing.Point(198, 22);
             this.chkMon.Name = "chkMon";
             this.chkMon.Size = new System.Drawing.Size(47, 17);
@@ -361,8 +359,7 @@ namespace FreemiumUtilities
             this.cmbSelectSchedule.Location = new System.Drawing.Point(17, 103);
             this.cmbSelectSchedule.Name = "cmbSelectSchedule";
             this.cmbSelectSchedule.Size = new System.Drawing.Size(121, 21);
-            this.cmbSelectSchedule.TabIndex = 3;
-            this.cmbSelectSchedule.SelectedIndexChanged += new System.EventHandler(this.cmbSelectSchedule_SelectedIndexChanged);
+            this.cmbSelectSchedule.TabIndex = 3;            
             // 
             // lblTask
             // 

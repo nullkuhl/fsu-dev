@@ -18,9 +18,11 @@ namespace FreemiumUtilities
         public FormTaskManager()
         {
             InitializeComponent();
+            this.cmbSelectSchedule.SelectedIndexChanged -= new System.EventHandler(this.cmbSelectSchedule_SelectedIndexChanged);
             UpdateUILocalization();
             cmbSelectSchedule.SelectedIndex = 0;
             FillTaskDetail();
+            this.cmbSelectSchedule.SelectedIndexChanged += new System.EventHandler(this.cmbSelectSchedule_SelectedIndexChanged);
         }
 
         /// <summary>
@@ -428,7 +430,7 @@ namespace FreemiumUtilities
                     task.RegisterChanges();
 
                 ((OneClickAppsViewModel)Application.Current.MainWindow.DataContext).SchedulerText = lblSchedule.Text;
-
+                
                 Close();
             }
             catch
