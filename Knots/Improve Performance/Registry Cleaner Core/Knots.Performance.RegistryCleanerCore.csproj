@@ -112,8 +112,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\$(OutDir)Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries" /Y /S /I /R</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\$(OutDir)Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y /S /I /R</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

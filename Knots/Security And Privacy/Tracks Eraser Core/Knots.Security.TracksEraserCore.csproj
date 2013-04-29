@@ -68,8 +68,8 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\TracksEraser\$(OutDir)Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries" /Y /S /I /R</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\TracksEraser\$(OutDir)Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y /S /I /R</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
