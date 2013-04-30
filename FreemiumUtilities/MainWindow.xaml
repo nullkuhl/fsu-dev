@@ -4,10 +4,10 @@
 		xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:models="clr-namespace:FreemiumUtilities.Models" xmlns:routine="clr-namespace:FreemiumUtilities.Routine"
-		xmlns:viewmodels="clr-namespace:FreemiumUtilities.ViewModels" Name="AppMainWindow" Title="Freemium System Utilities"
+		xmlns:viewmodels="clr-namespace:FreemiumUtilities.ViewModels" Name="AppMainWindow" Title="Free System Utilities"
 		Width="800" Height="600" Engine:LocalizeDictionary.DesignCulture="en-US"
 		Icon="/FreemiumUtilities;component/Images/FSUIcon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
-		Style="{StaticResource MainWindowStyle}" WindowStartupLocation="CenterScreen" mc:Ignorable="d">
+		Style="{StaticResource MainWindowStyle}" WindowStartupLocation="CenterScreen" mc:Ignorable="d" WindowState="Minimized">
 	<Window.Resources>
 		<routine:ImageConverter x:Key="ImageConverter" />
 		<routine:ProgressPercentageConverter x:Key="ProgressPercentageConverter" />

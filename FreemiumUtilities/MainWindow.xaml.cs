@@ -386,6 +386,9 @@ namespace FreemiumUtilities
             // Create task manager form to get current task localized description
             FormTaskManager taskManager = new FormTaskManager();
             taskManager.btnOK_Click(null, null);
+
+            if(!App.StartMinimized)
+                this.WindowState = WindowState.Normal;
         }
 
         /// <summary>

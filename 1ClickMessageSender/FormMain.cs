@@ -27,6 +27,21 @@ namespace ClickMaint
         Label lblProcID;
         ListBox lbxMain;
 
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        /// <summary>
+        /// Find window by Caption only. Note you must pass IntPtr.Zero as the first parameter.
+        /// </summary>
+        [DllImport("user32.dll", EntryPoint = "FindWindow", SetLastError = true)]
+        static extern IntPtr FindWindowByCaption(IntPtr ZeroOnly, string lpWindowName);
+        
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+        const UInt32 WS_MINIMIZE = 0x20000000;
+
+
+
         /// <summary>
         /// constructor for FormMain
         /// </summary>
@@ -39,7 +54,7 @@ namespace ClickMaint
                 Process[] processes = Process.GetProcessesByName("FreemiumUtilities");
 
                 string[] args = Environment.GetCommandLineArgs();
-
+                
                 if (processes.Length > 0)
                 {
                     SendMessage((IntPtr)HwndBroadcast, Array.IndexOf(args, ScanAndFixCommandLineArg) != -1 ? MaintFixMsg : MaintMsg,
@@ -52,7 +67,15 @@ namespace ClickMaint
                                     StartInfo = { FileName = Environment.CurrentDirectory + "\\FreemiumUtilities.exe" }
                                 };
                     p.Start();
-                    Thread.Sleep(3000);
+                   //Thread.Sleep(5000);
+                    //while (FindWindowByCaption(IntPtr.Zero, "Free System Utilities") == IntPtr.Zero)
+                    while(( GetWindowLong(p.MainWindowHandle,  -16) & WS_MINIMIZE  ) == WS_MINIMIZE)
+                    {
+                        Thread.Sleep(500);
+                    }
+                    
+                    
+                    Thread.Sleep(4000);
                     SendMessage((IntPtr)HwndBroadcast, Array.IndexOf(args, ScanAndFixCommandLineArg) == -1 ? MaintMsg : MaintFixMsg,
                                 IntPtr.Zero, IntPtr.Zero);
                 }
