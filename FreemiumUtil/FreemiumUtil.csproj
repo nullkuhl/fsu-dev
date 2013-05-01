@@ -103,15 +103,15 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities\$(OutDir)\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)\Libraries" /Y /S /I /R
-xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)\Libraries" /Y /S /I /R
+    <PostBuildEvent>xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)\Libraries\" /Y /S /I /R
 
-xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Context Menu Manager\$(OutDir)\Libraries" /Y /S /I /R
+xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Context Menu Manager\$(OutDir)\Libraries\" /Y /S /I /R
 xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Analysis\$(OutDir)\Libraries\" /Y /S /I /R
 xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
 xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Empty Folder Finder\$(OutDir)\Libraries\" /Y /S /I /R

@@ -135,7 +135,7 @@
 		<Setter Property="Control.HorizontalContentAlignment" Value="Left" />
 		<Setter Property="Control.VerticalContentAlignment" Value="Top" />
 		<Setter Property="Panel.Background" Value="{StaticResource ScanForIssueBackground}" />
-		<Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="TextElement.FontSize" Value="19.9" />
 		<Setter Property="TextElement.FontWeight" Value="Bold" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -474,7 +474,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="15" />
 		<Setter Property="Foreground" Value="#FF406678" />
 		<Setter Property="Margin" Value="0,0,0,1" />
@@ -491,7 +491,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.65" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="Height" Value="25" />
@@ -572,7 +572,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.74" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
@@ -587,7 +587,7 @@
 
 	<Style x:Key="OptionsLink" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -641,7 +641,7 @@
 
 	<Style x:Key="TransparentButton" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -681,7 +681,7 @@
 
 	<Style x:Key="TransparentButtonSimple" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -714,7 +714,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Effect">
 			<Setter.Value>
@@ -749,7 +749,7 @@
 		<Setter Property="SnapsToDevicePixels" Value="true" />
 		<Setter Property="OverridesDefaultStyle" Value="true" />
 		<Setter Property="TextElement.Foreground" Value="#808080" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="TextElement.FontSize" Value="11.74" />
 		<Setter Property="FocusVisualStyle" Value="{StaticResource RadioButtonFocusVisual}" />
 		<Setter Property="Template">
@@ -810,7 +810,7 @@
         <Setter Property="Control.VerticalAlignment" Value="Top" />
         <Setter Property="Control.HorizontalContentAlignment" Value="Left" />
         <Setter Property="Control.VerticalContentAlignment" Value="Top" />
-        <Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+        <Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
         <Setter Property="TextElement.FontSize" Value="11.7" />
         <Setter Property="Foreground" Value="#FFFFFF" />
         <Setter Property="Border.BorderThickness" Value="1" />
@@ -1231,7 +1231,7 @@ StrokeThickness="0">
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="15" />
 		<Setter Property="Foreground" Value="#FF406678" />
 		<Setter Property="Margin" Value="0,0,0,1" />
@@ -1241,7 +1241,7 @@ StrokeThickness="0">
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
@@ -1469,7 +1469,7 @@ StrokeThickness="0">
 
 	<Style x:Key="ScanStatus" TargetType="{x:Type TextBlock}">
 		<Setter Property="Padding" Value="6,3,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="Foreground" Value="#808080" />
 		<Setter Property="FontWeight" Value="Normal" />
 		<Setter Property="ClipToBounds" Value="True" />

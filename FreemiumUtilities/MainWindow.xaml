@@ -70,7 +70,7 @@
 							Free System Utilities
 						</TextBlock>
 						<DockPanel Margin="8,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" DockPanel.Dock="Right">
-							<Button Click="OpenAboutBox" FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55"
+							<Button Click="OpenAboutBox" FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std"
 									Style="{StaticResource HelpButton}" ToolTip="{lex:LocText FreemiumUtilities:Resources:About}">
 								<TextBlock FontFamily="Segoe UI" FontSize="12" FontWeight="Bold" Text="i" />
 							</Button>
@@ -467,7 +467,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 								<Image Margin="11,8,0,0" Source="Images/icon-lamp.png" Style="{StaticResource FunctionalButtonImage}" />
 								<Grid Grid.Column="1" VerticalAlignment="Top">
 									<TextBlock Margin="0,12,0,0" VerticalAlignment="Top" DockPanel.Dock="Top"
-											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" FontSize="14.9" FontWeight="Normal"
+											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontSize="14.9" FontWeight="Normal"
 											   Foreground="#4e4e4e" Text="{lex:LocText FreemiumUtilities:Resources:ScanSystemRegularly}">
 										<!--
 											<TextBlock.Effect>
@@ -479,7 +479,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 										-->
 									</TextBlock>
 									<TextBlock Margin="0,32,0,0" VerticalAlignment="Top"
-											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" FontSize="11.9" Foreground="#808080"
+											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontSize="11.9" Foreground="#808080"
 											   Text="{lex:LocText FreemiumUtilities:Resources:RegularMaintenance}">
 										<!--
 											<TextBlock.Effect>

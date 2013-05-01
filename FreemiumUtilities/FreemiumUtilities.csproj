@@ -293,7 +293,7 @@
       <Numbers>True</Numbers>
       <Punctuation>True</Punctuation>
     </BlendEmbeddedFont>
-    <BlendEmbeddedFont Include="Fonts\HelveticaNeueCE-Roman.otf">
+    <BlendEmbeddedFont Include="Fonts\HelveticaNeueLTStd-Roman.otf">
       <All>True</All>
       <AutoFill>True</AutoFill>
       <Characters>
@@ -445,7 +445,7 @@
   <ItemGroup>
     <Resource Include="Fonts\HelveticaNeueCE-Bold.otf" />
     <Resource Include="Fonts\HelveticaNeueCE-Medium.otf" />
-    <Resource Include="Fonts\HelveticaNeueCE-Roman.otf" />
+    <Resource Include="Fonts\HelveticaNeueLTStd-Roman.otf" />
     <Resource Include="Fonts\MyriadPro-Bold.otf" />
     <Resource Include="Fonts\MyriadPro-Light.otf" />
   </ItemGroup>
