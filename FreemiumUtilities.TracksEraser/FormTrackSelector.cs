@@ -229,7 +229,19 @@ namespace FreemiumUtilities.TracksEraser
             trvMain.ExpandAll();
             trvMain.SelectedNode = trvMain.Nodes[0];
 
-            Process[] pname = Process.GetProcessesByName("firefox");
+
+            Process[] pname = Process.GetProcessesByName("iexplore");
+            if (pname.Length > 0)
+            {
+                trvMain.Nodes[1].ForeColor = Color.DarkGray;
+                for (int i = 0; i < trvMain.Nodes[1].Nodes.Count; i++)
+                {
+                    trvMain.Nodes[1].Nodes[i].ForeColor = Color.DarkGray;
+                    trvMain.Nodes[1].Nodes[i].ImageIndex = 7;
+                }
+            }
+
+            pname = Process.GetProcessesByName("firefox");
             if (pname.Length > 0)
             {
                 trvMain.Nodes[3].ForeColor = Color.DarkGray;

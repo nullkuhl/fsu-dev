@@ -96,7 +96,18 @@ namespace FreemiumUtilities.TracksEraser
 
                 CheckNotInstalledApps();
 
-                Process[] pname = Process.GetProcessesByName("firefox");
+                Process[] pname = Process.GetProcessesByName("iexplore");
+                if (pname.Length > 0)
+                {
+                    trvTracks.Nodes[1].ForeColor = Color.DarkGray;
+                    for (int i = 0; i < trvTracks.Nodes[1].Nodes.Count; i++)
+                    {
+                        trvTracks.Nodes[1].Nodes[i].ForeColor = Color.DarkGray;
+                        trvTracks.Nodes[1].Nodes[i].ImageIndex = 7;
+                    }
+                }
+
+                pname = Process.GetProcessesByName("firefox");
                 if (pname.Length > 0)
                 {
                     trvTracks.Nodes[3].ForeColor = Color.DarkGray;

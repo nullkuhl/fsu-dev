@@ -450,8 +450,8 @@
 	<Style x:Key="OneClickCheckBox" BasedOn="{StaticResource OneCLickCheckBoxBase}" TargetType="{x:Type CheckBox}" />
 
 	<Style x:Key="OneClickCheckBoxWrap" TargetType="{x:Type Grid}">
-		<Setter Property="Width" Value="320" />
-		<Setter Property="Height" Value="58" />
+		<Setter Property="Width" Value="358" />
+		<Setter Property="Height" Value="70" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -486,7 +486,6 @@
 	</Style>
 
 	<Style x:Key="CheckBoxContentText" TargetType="{x:Type TextBlock}">
-
 		<Setter Property="Margin" Value="0,0,20,0" />
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />

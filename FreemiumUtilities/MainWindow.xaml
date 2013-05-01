@@ -153,7 +153,7 @@
 					-->
 
 				<Border Grid.Row="1" Panel.ZIndex="10" Background="#E2F0F3" ClipToBounds="True">
-					<Grid Width="782" Height="67" HorizontalAlignment="Left" VerticalAlignment="Top" ClipToBounds="True">
+					<Grid Width="784" Height="67" HorizontalAlignment="Left" VerticalAlignment="Top" ClipToBounds="True">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="125*" />
 							<ColumnDefinition Width="657*" />
@@ -179,7 +179,7 @@
 						<Path Style="{StaticResource PanelTitleFigure}" Stroke="#FFFFFF" Stretch="Fill" VerticalAlignment="Top"
 							  Fill="{StaticResource NoiseBrush}" Width="793" Margin="-5,0" ClipToBounds="True" Grid.ColumnSpan="2"></Path>
 						<Path Style="{StaticResource PanelTitleFigure}" Stroke="#FFFFFF" Stretch="Fill" Width="793"
-							  VerticalAlignment="Top" Margin="-5,0" ClipToBounds="True" Grid.ColumnSpan="2">
+							  VerticalAlignment="Top"  ClipToBounds="True" Grid.ColumnSpan="2" Margin="-5,0">
 							<Path.Effect>
 								<DropShadowEffect ShadowDepth="0" BlurRadius="4" Color="#000000" />
 							</Path.Effect>
@@ -225,35 +225,37 @@
 							</ListBox.ItemsPanel>
 							<ListBox.ItemTemplate>
 								<DataTemplate>
-                                    <Grid Name="Border" Style="{StaticResource OneClickCheckBoxWrap}"  Width="340" Height="70">
+                                    <Grid Name="Border" Style="{StaticResource OneClickCheckBoxWrap}">
 										<StackPanel VerticalAlignment="Top" Orientation="Horizontal">
 											<CheckBox Name="State" IsChecked="{Binding Selected,
 																		  Mode=TwoWay}"
 													  Style="{StaticResource OneClickCheckBox}" Tag="{x:Static models:OneClickAppStatus.ScanFinishedOK}">
 												<Grid Style="{StaticResource OneClickCheckBoxInner}">
 													<Grid.ColumnDefinitions>
-														<ColumnDefinition Width="59"/>
+														<ColumnDefinition Width="60"/>
 														<ColumnDefinition />
 													</Grid.ColumnDefinitions>
-													<Image Height="100"
-														   Source="{Binding Path=Icon,
-																			Converter={StaticResource ImageConverter}}"
-														   Style="{StaticResource FunctionalButtonImage}" />
-													<StackPanel Grid.Column="1" Orientation="Horizontal">
-														<TextBlock Style="{StaticResource CheckBoxContentTitle}" Text="{Binding Title}" />
-														<StackPanel Orientation="Horizontal"
+                                                    <Image Height="100"
+                                                           Source="{Binding Path=Icon,
+														   Converter={StaticResource ImageConverter}}"
+														   Style="{StaticResource FunctionalButtonImage}" 
+                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
+                                                           RenderOptions.EdgeMode="Aliased"/>
+                                                    <StackPanel Grid.Column="1" Orientation="Horizontal">
+                                                        <TextBlock Style="{StaticResource CheckBoxContentTitle}" Text="{Binding Title}" />
+                                                        <StackPanel Orientation="Horizontal"
 																	Visibility="{Binding Path=Instance, Converter={StaticResource TypeEqualsToVisibilityConverter}}">
-															<Button Margin="8,2,0,0"
+                                                            <Button Margin="8,2,0,0"
 																	Command="{Binding ElementName=AppMainWindow,
 																					  Path=DataContext.ShowTrackCleanerTracksCommand}"
 																	Content="{lex:LocText FreemiumUtilities:Resources:SelectTracks}" Style="{StaticResource OptionsLink}" />
-															<Button Margin="8,2,0,0"
+                                                            <Button Margin="8,2,0,0"
 																	Command="{Binding ElementName=AppMainWindow,
 																					  Path=DataContext.ShowTrackCleanerOptionsCommand}"
 																	Content="{lex:LocText FreemiumUtilities:Resources:Options}" Style="{StaticResource OptionsLink}" />
-														</StackPanel>
-													</StackPanel>
-												</Grid>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </Grid>
 											</CheckBox>
 										</StackPanel>
 										<Grid Style="{StaticResource OneClickCheckBoxDetails}">
@@ -314,7 +316,7 @@
 						*****************************************************************************
 						-->
 
-						<Border Width="340" Height="107" Margin="0,0,40,13" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+						<Border Width="350" Height="107" Margin="0,0,40,13" HorizontalAlignment="Right" VerticalAlignment="Bottom"
 								BorderBrush="#DBE5E6" BorderThickness="0,0,0,1" CornerRadius="5"
 								Visibility="{Binding Path=Status,
 													 Source={x:Static viewmodels:OneClickAppsViewModel.Instance},
@@ -809,7 +811,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 									<Button.Content>
 										<Grid Style="{StaticResource FunctionalButtonContent}">
 											<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="67" />
+												<ColumnDefinition Width="60" />
 												<ColumnDefinition Width="*" />
 											</Grid.ColumnDefinitions>
 											<Image Style="{StaticResource FunctionalButtonImage}" Source="Images/icon-registry-cleaner.png" />
@@ -827,7 +829,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 									<Button.Content>
 										<Grid Style="{StaticResource FunctionalButtonContent}">
 											<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="67" />
+												<ColumnDefinition Width="60" />
 												<ColumnDefinition Width="*" />
 											</Grid.ColumnDefinitions>
 											<Image Style="{StaticResource FunctionalButtonImage}" Source="Images/icon-registry-compactor.png" />
@@ -845,8 +847,8 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 									<Button.Content>
 										<Grid Style="{StaticResource FunctionalButtonContent}">
 											<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="67" />
-												<ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="60" />
+                                                <ColumnDefinition Width="*" />
 											</Grid.ColumnDefinitions>
 											<Image Style="{StaticResource FunctionalButtonImage}" Source="Images/icon-memory-optimizer.png" />
 											<StackPanel Grid.Column="1">
@@ -863,8 +865,8 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 									<Button.Content>
 										<Grid Style="{StaticResource FunctionalButtonContent}">
 											<Grid.ColumnDefinitions>
-												<ColumnDefinition Width="67" />
-												<ColumnDefinition Width="*" />
+                                                <ColumnDefinition Width="60"/>
+                                                <ColumnDefinition Width="*" />
 											</Grid.ColumnDefinitions>
 											<Image Style="{StaticResource FunctionalButtonImage}" Source="Images/icon-startup-manager.png" />
 											<StackPanel Grid.Column="1">
