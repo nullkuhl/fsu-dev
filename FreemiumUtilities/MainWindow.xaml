@@ -236,11 +236,13 @@
 														<ColumnDefinition />
 													</Grid.ColumnDefinitions>
                                                     <Image Height="100"
+                                                          
                                                            Source="{Binding Path=Icon,
 														   Converter={StaticResource ImageConverter}}"
 														   Style="{StaticResource FunctionalButtonImage}" 
-                                                           RenderOptions.BitmapScalingMode="NearestNeighbor"
-                                                           RenderOptions.EdgeMode="Aliased"/>
+                                                         
+                                                           
+                                                           />
                                                     <StackPanel Grid.Column="1" Orientation="Horizontal">
                                                         <TextBlock Style="{StaticResource CheckBoxContentTitle}" Text="{Binding Title}" />
                                                         <StackPanel Orientation="Horizontal"
@@ -359,7 +361,7 @@
 										</Grid.RowDefinitions>
 										<TextBlock Style="{StaticResource CheckBoxAutomatedScanText}"
 												   Text="{lex:LocText FreemiumUtilities:Resources:CurrentSchedule}" />
-										<TextBlock Grid.Row="1" Style="{StaticResource CheckBoxAutomatedScanTextBold}" Text="{Binding SchedulerText}" />
+                                        <TextBlock Grid.Row="1" Style="{StaticResource CheckBoxAutomatedScanTextBold}" FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" Text="{Binding SchedulerText}" />
 										<StackPanel Grid.Row="2" Orientation="Horizontal">
 											<RadioButton Name="ScanOnly" Margin="0,0,23,0" Content="{lex:LocText FreemiumUtilities:Resources:ScanOnly}"
 														 IsChecked="True" Click="RadioButton_Click" />
@@ -481,7 +483,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 										-->
 									</TextBlock>
 									<TextBlock Margin="0,32,0,0" VerticalAlignment="Top"
-											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontSize="11.9" Foreground="#808080"
+											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontWeight="Bold" FontSize="11.9" Foreground="#808080"
 											   Text="{lex:LocText FreemiumUtilities:Resources:RegularMaintenance}">
 										<!--
 											<TextBlock.Effect>
@@ -765,7 +767,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 								</Button>
 
 								<Button Grid.Row="3" Grid.ColumnSpan="2" Click="CloseAdvancedModules"
-										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}" Style="{StaticResource LongButtonStyle}" />
+										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}"    Style="{StaticResource LongButtonStyle}" />
 
 							</Grid>
 						</Border>
@@ -917,7 +919,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 								</Button>
 
 								<Button Grid.Row="3" Grid.ColumnSpan="2" Click="CloseAdvancedModules"
-										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}" Style="{StaticResource LongButtonStyle}" />
+										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}"  Style="{StaticResource LongButtonStyle}" />
 
 							</Grid>
 						</Border>
@@ -1069,7 +1071,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 								</Button>
 
 								<Button Grid.Row="3" Grid.ColumnSpan="2" Click="CloseAdvancedModules"
-										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}" Style="{StaticResource LongButtonStyle}" />
+										Content="{lex:LocText FreemiumUtilities:Resources:BackToStartScreen}"  Style="{StaticResource LongButtonStyle}" />
 
 							</Grid>
 						</Border>

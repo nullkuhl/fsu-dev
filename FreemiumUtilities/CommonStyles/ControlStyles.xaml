@@ -1223,8 +1223,10 @@ StrokeThickness="0">
 		<Setter Property="Stretch" Value="None" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="SnapsToDevicePixels" Value="True" />
-	</Style>
+		<Setter Property="SnapsToDevicePixels" Value="False" />
+        <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor" />
+        <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
+    </Style>
 
 	<Style x:Key="FunctionalButtonTitle" TargetType="{x:Type TextBlock}">
 		<Setter Property="TextWrapping" Value="Wrap" />
@@ -1273,9 +1275,9 @@ StrokeThickness="0">
 		<Setter Property="HorizontalAlignment" Value="Left" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="TextWrapping" Value="Wrap" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 75" />
+        <Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
 		<Setter Property="FontSize" Value="11.889" />
-		<Setter Property="FontWeight" Value="Bold" />
+		<Setter Property="FontWeight" Value="ExtraBlack" />
 		<Setter Property="Foreground" Value="#FF97A9B3" />
 	</Style>
 
