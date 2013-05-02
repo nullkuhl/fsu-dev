@@ -483,7 +483,7 @@ Visibility="{Binding Path=Status, Source={x:Static viewmodels:OneClickAppsViewMo
 										-->
 									</TextBlock>
 									<TextBlock Margin="0,32,0,0" VerticalAlignment="Top"
-											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontWeight="Bold" FontSize="11.9" Foreground="#808080"
+											   FontFamily="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" FontWeight="Normal" FontSize="11.9" Foreground="#808080"
 											   Text="{lex:LocText FreemiumUtilities:Resources:RegularMaintenance}">
 										<!--
 											<TextBlock.Effect>

@@ -177,7 +177,7 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
     <value>Administrar navegadores</value>
   </data>
   <data name="BrowserManagerDesc" xml:space="preserve">
-    <value>Administre los complementos de los navegadores y restaure las opciones predeterminadas</value>
+    <value>Administra los complementos de los navegadores y restaura las opciones predeterminadas</value>
   </data>
   <data name="ButtonCloseText" xml:space="preserve">
     <value>Cerrar</value>
@@ -346,7 +346,7 @@ Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</va
     <value>Administrar menú contextual</value>
   </data>
   <data name="ContextMenuManagerDetailedDesc" xml:space="preserve">
-    <value>Administre las entradas del menú contextual para archivos, carpetas y dispositivos</value>
+    <value>Administra las entradas del menú contextual para archivos, carpetas y dispositivos</value>
   </data>
   <data name="ControlScanTitle" xml:space="preserve">
     <value>Controlar análisis</value>
@@ -439,7 +439,7 @@ Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</va
     <value>Cifrar y descifrar</value>
   </data>
   <data name="EncryptAndDecryptDesc" xml:space="preserve">
-    <value>Proteja sus archivos del uso y acceso no autorizados</value>
+    <value>Protege sus archivos del uso y acceso no autorizados</value>
   </data>
   <data name="EncryptWithFreemiumTools" xml:space="preserve">
     <value>Cifrar con System Utilities</value>
@@ -508,7 +508,7 @@ Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</va
     <value>Borrar archivos con seguridad</value>
   </data>
   <data name="FileEraserDesc" xml:space="preserve">
-    <value>Borre archivos permanentemente, de manera que
+    <value>Borra archivos permanentemente, de manera que
 nadie pueda recuperarlos</value>
   </data>
   <data name="files" xml:space="preserve">
@@ -541,7 +541,7 @@ manejables, y puede volverlos a unir</value>
     <value>Recuperar archivos</value>
   </data>
   <data name="FileUndeleteDetailedDesc" xml:space="preserve">
-    <value>Recupere archivos eliminados accidentalmente de
+    <value>Recupera archivos eliminados accidentalmente de
 forma rápida y efectiva</value>
   </data>
   <data name="file_folder_list" xml:space="preserve">
@@ -626,14 +626,14 @@ forma rápida y efectiva</value>
     <value>Analizar disco</value>
   </data>
   <data name="HardDiskAnalysisDesc" xml:space="preserve">
-    <value>Compruebe el uso del espacio en disco 
+    <value>Comprueba el uso del espacio en disco 
 de archivos y carpetas</value>
   </data>
   <data name="HardDiskCleaner" xml:space="preserve">
     <value>Limpiar disco</value>
   </data>
   <data name="HardDiskCleanerDesc" xml:space="preserve">
-    <value>Elimine archivos basura en las unidades y recupere espacio en disco</value>
+    <value>Elimina archivos basura en las unidades y recupera espacio en el disco</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Ayuda</value>
@@ -744,7 +744,7 @@ de archivos y carpetas</value>
     <value>Optimizar memoria</value>
   </data>
   <data name="MemoryOptimizerDetailedDesc" xml:space="preserve">
-    <value>Monitorice y optimice la memoria libre en segundo plano</value>
+    <value>Monitoriza y optimiza la memoria libre en segundo plano</value>
   </data>
   <data name="MinimiseToTrayCheckboxText" xml:space="preserve">
     <value>Minimizar a la bandeja cuando se cierre la ventana del programa</value>
@@ -879,8 +879,7 @@ de archivos y carpetas</value>
     <value>Administrar procesos</value>
   </data>
   <data name="ProcessManagerDetailedDesc" xml:space="preserve">
-    <value>Supervise los procesos en ejecución
-y deténgalos opcionalmente</value>
+    <value>Supervisa los procesos en ejecuciَn y detenlos opcionalmente</value>
   </data>
   <data name="qp" xml:space="preserve">
     <value>QuickTime Player</value>
@@ -901,10 +900,10 @@ y deténgalos opcionalmente</value>
     <value>Limpiar registro</value>
   </data>
   <data name="RegistryCleanerDetailedDesc" xml:space="preserve">
-    <value>Limpie el registro para mejorar el rendimiento del sistema</value>
+    <value>Limpia el registro para mejorar el rendimiento del sistema</value>
   </data>
   <data name="RegistryCleanerOneClickDesc" xml:space="preserve">
-    <value>Repare entradas incorrectas o no válidas del registro</value>
+    <value>Repara entradas incorrectas o no válidas del registro</value>
   </data>
   <data name="RegistryCleaningCompleted" xml:space="preserve">
     <value>Limpieza del registro completada</value>
@@ -913,7 +912,7 @@ y deténgalos opcionalmente</value>
     <value>Optimizar registro</value>
   </data>
   <data name="RegistryCompactorDesc" xml:space="preserve">
-    <value>Compacte el registro de Windows para aumentar la velocidad del ordenador</value>
+    <value>Compacta el registro de Windows para aumentar la velocidad del ordenador</value>
   </data>
   <data name="RegistryKeysToDeleteText" xml:space="preserve">
     <value>Estas claves del registro no son válidas y serán eliminadas.</value>
@@ -1156,7 +1155,7 @@ y deténgalos opcionalmente</value>
     <value>Reparar accesos directos</value>
   </data>
   <data name="ShortcutsFixerDesc" xml:space="preserve">
-    <value>Corrija errores en el menú Inicio y en los accesos directos del escritorio</value>
+    <value>Corrige errores en el menú Inicio y en los accesos directos del escritorio</value>
   </data>
   <data name="ShowBaloonCheckBoxText" xml:space="preserve">
     <value>Mostrar globo al minimizar a la bandeja</value>
@@ -1174,17 +1173,16 @@ y deténgalos opcionalmente</value>
     <value>Dividir y unir</value>
   </data>
   <data name="SplitAndJoinDesc" xml:space="preserve">
-    <value>Divida grandes archivos en otros más pequeños y
-manejables, y únalos de nuevo</value>
+    <value>Divide archivos grandes en otros más pequeños y permite unirlos de nuevo</value>
   </data>
   <data name="SplitWithFreemiumTools" xml:space="preserve">
     <value>Dividir con System Utilities</value>
   </data>
   <data name="SpyRemover" xml:space="preserve">
-    <value>Quitar spyware</value>
+    <value>Eliminar spyware</value>
   </data>
   <data name="SpyRemoverDesc" xml:space="preserve">
-    <value>Quite spyware y adware</value>
+    <value>Elimina spyware y adware</value>
   </data>
   <data name="SpywareRemover" xml:space="preserve">
     <value>Eliminador de spyware</value>
@@ -1205,10 +1203,10 @@ manejables, y únalos de nuevo</value>
     <value>Administrar inicio</value>
   </data>
   <data name="StartupManagerDetailedDesc" xml:space="preserve">
-    <value>Administre los programas que se ejecutan automáticamente al inicio</value>
+    <value>Administra los programas que se ejecutan automáticamente al inicio</value>
   </data>
   <data name="StartupManagerOneClickDesc" xml:space="preserve">
-    <value>Limpie entradas peligrosas del inicio</value>
+    <value>Limpia entradas peligrosas del inicio</value>
   </data>
   <data name="StartupScanTitle" xml:space="preserve">
     <value>Entradas del inicio</value>
@@ -1289,7 +1287,7 @@ manejables, y únalos de nuevo</value>
     <value>Limpiar archivos temporales</value>
   </data>
   <data name="TemporaryFilesCleanerDesc" xml:space="preserve">
-    <value>Elimine archivos y recupere espacio en disco</value>
+    <value>Elimina archivos y recupere espacio en disco</value>
   </data>
   <data name="temp_internet_files" xml:space="preserve">
     <value>Archivos temporales de Internet</value>
@@ -1334,10 +1332,10 @@ manejables, y únalos de nuevo</value>
     <value>Borrar rastros</value>
   </data>
   <data name="TracksEraserDetailedDesc" xml:space="preserve">
-    <value>Borre los rastros, las pruebas, las cookies, el historial de Internet y otros elementos</value>
+    <value>Borra los rastros, las pruebas, las cookies, el historial de Internet y otros elementos</value>
   </data>
   <data name="TracksEraserOneClickDesc" xml:space="preserve">
-    <value>Borre todos los rastros de Internet y el historial</value>
+    <value>Borra todos los rastros de Internet y el historial</value>
   </data>
   <data name="tracks_eraser" xml:space="preserve">
     <value>Borrar rastros</value>
@@ -1373,7 +1371,7 @@ manejables, y únalos de nuevo</value>
     <value>Desinstalar programas</value>
   </data>
   <data name="UninstallManagerDetailedDesc" xml:space="preserve">
-    <value>Desinstale completamente programas que ya no necesite</value>
+    <value>Desinstala completamente programas que ya no necesite</value>
   </data>
   <data name="UninstallScanTitle" xml:space="preserve">
     <value>Cadenas de instalación</value>
@@ -1427,7 +1425,7 @@ manejables, y únalos de nuevo</value>
     <value>Administrar Windows</value>
   </data>
   <data name="WindowsToolsDesc" xml:space="preserve">
-    <value>Acceda con facilidad a útiles funciones estándar de Windows</value>
+    <value>Accede con facilidad a útiles funciones estándar de Windows</value>
   </data>
   <data name="winrar" xml:space="preserve">
     <value>Winrar</value>
