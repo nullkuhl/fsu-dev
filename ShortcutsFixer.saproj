@@ -1,5 +1,5 @@
-<SmartAssemblyProject ProjectId="{a2c7fd6f-8258-446e-b236-e544daa58f23}" Version="2.0">
-    <MainAssemblyFileName>.\FreemiumUtilities\bin\Release\TracksEraser.exe</MainAssemblyFileName>
+<SmartAssemblyProject ProjectId="{d5a103fc-d4f3-4c06-bd50-ddfa9532da10}" Version="2.0">
+    <MainAssemblyFileName>.\FreemiumUtilities\bin\Release\ShortcutsFixer.exe</MainAssemblyFileName>
     <Configuration Name="Release">
         <Options>
             <ExceptionReporting Template="res:{SmartExceptions}.1033.dll" />
@@ -12,9 +12,9 @@
             <Debugging />
         </Options>
         <ApplicationName />
-        <Destination DestinationFileName=".\obfuscated\TracksEraser.exe" />
+        <Destination DestinationFileName=".\obfuscated\ShortcutsFixer.exe" />
         <Assemblies>
-            <Assembly AssemblyName="TracksEraser, Culture=neutral, PublicKeyToken=null">
+            <Assembly AssemblyName="shortcut, Culture=neutral, PublicKeyToken=null">
                 <Embedding />
                 <Merging>
                     <ResourcesCompression />
@@ -26,26 +26,34 @@
                     <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
                 </Merging>
             </Assembly>
-            <Assembly AssemblyName="TracksEraserCore, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\TracksEraserCore.dll">
-                <Merging />
-                <Embedding />
-            </Assembly>
             <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null">
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="UrlHistoryLibrary, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\UrlHistoryLibrary.dll">
+            <Assembly AssemblyName="Interop.IWshRuntimeLibrary, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\Interop.IWshRuntimeLibrary.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="System.Data.SQLite, Culture=neutral, PublicKeyToken=db937bc2d44ff139" HintPath=".\FreemiumUtilities\bin\Release\Libraries\System.Data.SQLite.dll">
+            <Assembly AssemblyName="Interop.Shell32, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\Interop.Shell32.dll">
                 <Merging />
                 <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="mscorlib, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
             </Assembly>
             <Assembly AssemblyName="System, Culture=neutral, PublicKeyToken=b77a5c561934e089">
                 <Merging />
             </Assembly>
-            <Assembly AssemblyName="mscorlib, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <Assembly AssemblyName="System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="System.Security, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+                <Merging />
+            </Assembly>
+            <Assembly AssemblyName="Accessibility, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
                 <Merging />
             </Assembly>
             <Assembly AssemblyName="System.Configuration, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -54,34 +62,22 @@
             <Assembly AssemblyName="System.Xml, Culture=neutral, PublicKeyToken=b77a5c561934e089">
                 <Merging />
             </Assembly>
-            <Assembly AssemblyName="System.Security, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-                <Merging />
-            </Assembly>
-            <Assembly AssemblyName="System.Data.SqlXml, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-                <Merging />
-            </Assembly>
-            <Assembly AssemblyName="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-                <Merging />
-            </Assembly>
-            <Assembly AssemblyName="System.Drawing, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-                <Merging />
-            </Assembly>
-            <Assembly AssemblyName="Accessibility, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-                <Merging />
-            </Assembly>
             <Assembly AssemblyName="System.Runtime.Serialization.Formatters.Soap, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
                 <Merging />
             </Assembly>
             <Assembly AssemblyName="System.Deployment, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
                 <Merging />
             </Assembly>
+            <Assembly AssemblyName="System.Data.SqlXml, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
             <Assembly AssemblyName="System.Data, Culture=neutral, PublicKeyToken=b77a5c561934e089">
                 <Merging />
             </Assembly>
-            <Assembly AssemblyName="System.Transactions, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+            <Assembly AssemblyName="Microsoft.VisualC, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
                 <Merging />
             </Assembly>
-            <Assembly AssemblyName="Microsoft.VisualC, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+            <Assembly AssemblyName="System.Transactions, Culture=neutral, PublicKeyToken=b77a5c561934e089">
                 <Merging />
             </Assembly>
             <Assembly AssemblyName="System.EnterpriseServices, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -141,6 +137,9 @@
             <Assembly AssemblyName="Microsoft.Transactions.Bridge, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
                 <Merging />
             </Assembly>
+            <Assembly AssemblyName="System.Data.DataSetExtensions, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+                <Merging />
+            </Assembly>
             <Assembly AssemblyName="System.Core, Culture=neutral, PublicKeyToken=b77a5c561934e089">
                 <Merging />
             </Assembly>
@@ -157,17 +156,27 @@
                     </Obfuscation>
                 </Merging>
             </Assembly>
-            <Assembly AssemblyName="TracksEraser.resources, Culture=de, PublicKeyToken=null">
+            <Assembly AssemblyName="shortcut.resources, Culture=de, PublicKeyToken=null">
                 <Merging>
                     <Pruning />
                     <Obfuscation />
                 </Merging>
             </Assembly>
-            <Assembly AssemblyName="TracksEraser.resources, Culture=en, PublicKeyToken=null">
+            <Assembly AssemblyName="shortcut.resources, Culture=en, PublicKeyToken=null">
                 <Merging>
                     <Pruning />
                     <Obfuscation />
                 </Merging>
+            </Assembly>
+            <Assembly AssemblyName="ShortcutsFixer, Culture=neutral, PublicKeyToken=null">
+                <Merging>
+                    <ResourcesCompression />
+                    <MemberRefsProxy />
+                    <Pruning />
+                    <Obfuscation />
+                    <ControlFlow />
+                </Merging>
+                <Embedding />
             </Assembly>
         </Assemblies>
     </Configuration>

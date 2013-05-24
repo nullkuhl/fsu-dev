@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System;
+using System.Globalization;
 
 /// <summary>
 /// The <see cref="FreemiumUtil"/> namespace contains a set of Utilities regarding bug reporting, and application paths, 
@@ -158,7 +159,7 @@ namespace FreemiumUtil
                     {
                         writer.WriteLine("[Freemiun Config File]");
                         writer.WriteLine("Version=1.4");
-                        writer.WriteLine("Lang=de");
+                        writer.WriteLine("Lang=" + CultureInfo.CurrentUICulture.Name.Split('-')[0]);
                         writer.WriteLine("FirstRun=1");
                         writer.WriteLine("Theme=Blue");
                         writer.WriteLine("MinimizeToTray=0");

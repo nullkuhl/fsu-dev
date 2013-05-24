@@ -1125,7 +1125,7 @@ Cliquez sur « OK » pour ouvrir la page de téléchargement de .NET Framework
     <value>Sélectionnez le point de restauration sur lequel vous souhaitez retourner, puis cliquez sur « Restaurer ».</value>
   </data>
   <data name="SelectTracks" xml:space="preserve">
-    <value>Sélectionner les traces</value>
+    <value>Traces</value>
   </data>
   <data name="SelectTracksToRemove" xml:space="preserve">
     <value>Veuillez sélectionner les traces à effacer.</value>

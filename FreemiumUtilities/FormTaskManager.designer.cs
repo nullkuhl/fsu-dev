@@ -796,7 +796,7 @@ namespace FreemiumUtilities
                                 {
                                     time = timePicker.Value.ToString(WPFLocalizeExtensionHelpers.GetUIString("TimeFormat"), System.Globalization.DateTimeFormatInfo.InvariantInfo),
                                     day = GetWeeklyStatus(),
-                                    week = nudWeeks.Value > 1 ? nudWeeks.Value + " " + WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeeks") : WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeek")
+                                    week = (nudWeeks.Value > 1 ? nudWeeks.Value + " " + WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeeks") : WPFLocalizeExtensionHelpers.GetUIString("RunEveryWeek"))
                                 };
                     scheduleLabel = WPFLocalizeExtensionHelpers.GetUIString("ScheduleWeeklyText").Inject(o);
                 }

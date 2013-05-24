@@ -36,7 +36,11 @@ namespace FreemiumUtilities
         {
             InitializeComponent();
             UpdateUILocalization();
-            Languages.SelectedIndex = langIndex[CfgFile.Get("Lang")];
+
+            var lang = CfgFile.Get("Lang");
+            if (!langIndex.ContainsKey(lang)) lang = "en";
+
+            Languages.SelectedIndex = langIndex[lang];
             cboThemes.SelectedIndex = themeIndex[CfgFile.Get("Theme")];
             chkMinToTray.Checked = CfgFile.Get("MinimizeToTray") == "1";
             chkShowBaloon.Checked = CfgFile.Get("ShowBaloon") == "1";

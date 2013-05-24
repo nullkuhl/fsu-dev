@@ -1362,7 +1362,7 @@ in ihnen wurde zurückgesetzt.</value>
     <value>Am {{date}} um {{time}}</value>
   </data>
   <data name="ScheduleWeeklyText" xml:space="preserve">
-    <value>Jeden {{day}} um {{time}} wöchentlich</value>
+    <value>Jeden {{day}} um {{time}} jede {{week}}</value>
   </data>
   <data name="RestoreAndBackupCenter" xml:space="preserve">
     <value>Restore &amp; Backup Center</value>
