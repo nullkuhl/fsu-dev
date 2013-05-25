@@ -1,0 +1,16 @@
+﻿<Application x:Class="PCCleaner.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" StartupUri="MainWindow.xaml" Startup="Application_Startup"
+             Exit="OnApplicationExit">
+<!-- DispatcherUnhandledException="Application_DispatcherUnhandledException" >-->
+
+	<Application.Resources>
+
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="CommonStyles/WindowStyles.xaml" />
+				<ResourceDictionary Source="CommonStyles/ControlStyles.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+
+	</Application.Resources>
+</Application>

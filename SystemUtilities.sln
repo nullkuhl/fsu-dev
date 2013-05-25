@@ -79,11 +79,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtilities.Context",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Security.TracksEraserCore", "Knots\Security And Privacy\Tracks Eraser Core\Knots.Security.TracksEraserCore.csproj", "{374F6345-4849-4379-B200-B97051E6E5D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PCCleaner", "PCCleaner\PCCleaner.csproj", "{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}"
+EndProject
 Global
-	GlobalSection(SubversionScc) = preSolution
-		Svn-Managed = True
-		Manager = AnkhSVN - Subversion Support for Visual Studio
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -524,8 +522,24 @@ Global
 		{374F6345-4849-4379-B200-B97051E6E5D1}.Release|x64.ActiveCfg = Release|x86
 		{374F6345-4849-4379-B200-B97051E6E5D1}.Release|x86.ActiveCfg = Release|x86
 		{374F6345-4849-4379-B200-B97051E6E5D1}.Release|x86.Build.0 = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|x64.ActiveCfg = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|x86.ActiveCfg = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Debug|x86.Build.0 = Debug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|Any CPU.ActiveCfg = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|Mixed Platforms.Build.0 = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|x64.ActiveCfg = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|x86.ActiveCfg = Release|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
 	EndGlobalSection
 EndGlobal
