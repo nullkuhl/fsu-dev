@@ -15,6 +15,7 @@ using PCCleaner.ViewModels;
 using Microsoft.Win32;
 using WPFLocalizeExtension.Engine;
 using Application = System.Windows.Application;
+using PCCleaner.Routine;
 
 namespace PCCleaner
 {

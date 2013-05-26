@@ -36,7 +36,12 @@ namespace Uninstall_Manager
                 {
                     try
                     {
-                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+#if PCCleaner
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\PCCleaner.exe");
+#else
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");                        
+#endif
+
                         Process.Start(process);
                     }
                     catch (Exception)

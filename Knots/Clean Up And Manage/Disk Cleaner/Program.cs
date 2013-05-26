@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Globalization;
+using System.IO;
+using System.Reflection;
 using System.Threading;
 using System.Windows.Forms;
 using Disk_Cleaner.Properties;
 using FreemiumUtil;
-using System.IO;
-using System.Reflection;
 
 /// <summary>
 /// The <see cref="Disk_Cleaner"/> namespace defines a Disk cleaner knot
@@ -37,7 +37,11 @@ namespace Disk_Cleaner
                 {
                     try
                     {
-                        var process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+#if PCCleaner
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\PCCleaner.exe");
+#else
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+#endif
                         Process.Start(process);
                     }
                     catch (Exception)

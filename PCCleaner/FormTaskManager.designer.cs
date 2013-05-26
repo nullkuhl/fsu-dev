@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
-using FreemiumUtilities.Infrastructure;
 using Microsoft.Win32.TaskScheduler;
+using FreemiumUtilities.Infrastructure;
 
 namespace PCCleaner
 {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Windows.Forms;
-using FreemiumUtilities.Infrastructure;
 using RegistryCleanerCore;
+using FreemiumUtilities.Infrastructure;
 
 namespace PCCleaner
 {

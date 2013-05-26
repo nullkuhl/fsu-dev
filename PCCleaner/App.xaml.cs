@@ -8,11 +8,11 @@ using System.Windows.Forms;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using FreemiumUtil;
-using FreemiumUtilities.Infrastructure;
 using Microsoft.Win32;
 using WPFLocalizeExtension.Engine;
 using ContextMenu = System.Windows.Controls.ContextMenu;
 using MessageBox = System.Windows.MessageBox;
+using FreemiumUtilities.Infrastructure;
 
 namespace PCCleaner
 {

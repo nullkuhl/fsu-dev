@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Windows.Forms;
-using FreemiumUtilities.Infrastructure;
-using PCCleaner.ViewModels;
 using Microsoft.Win32.TaskScheduler;
+using PCCleaner.ViewModels;
 using Application = System.Windows.Application;
+using FreemiumUtilities.Infrastructure;
 
 namespace PCCleaner
 {

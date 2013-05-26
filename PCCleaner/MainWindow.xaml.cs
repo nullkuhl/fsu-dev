@@ -144,7 +144,7 @@ namespace PCCleaner
         /// Adds the Windows Explorer context menu items for a quick launch a few knots
         /// </summary>
         static void FirstRun()
-        {           
+        {
             // ANALYSE
             SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Drive\shell\FreemiumAnalyze\",
                                       WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
@@ -165,7 +165,7 @@ namespace PCCleaner
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
             SetContextMenuRegistryKey(Registry.ClassesRoot, @"Directory\shell\FreemiumFindEmptyFolders\",
                                       WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            CfgFile.Set("ShowContextMenuFindEmptyFolders", "1");                       
+            CfgFile.Set("ShowContextMenuFindEmptyFolders", "1");
         }
 
         /// <summary>
@@ -178,13 +178,13 @@ namespace PCCleaner
             DataContext = model;
 
             model.OneClickApps.Add(new OneClickAppViewModel(
-                                    WPFLocalizeExtensionHelpers.GetUIString("RegistryCleaner"),
-                                    @"Images/icon-registry-cleaner.png",
-                                    true,
-                                    OneClickAppStatus.NotStarted,
-                                    WPFLocalizeExtensionHelpers.GetUIString("RegistryCleanerOneClickDesc"),
-                                    new RegistryCleanerApp()
-                                    ));
+                                WPFLocalizeExtensionHelpers.GetUIString("RegistryCleaner"),
+                                @"Images/icon-registry-cleaner.png",
+                                true,
+                                OneClickAppStatus.NotStarted,
+                                WPFLocalizeExtensionHelpers.GetUIString("RegistryCleanerOneClickDesc"),
+                                new RegistryCleanerApp()
+                                ));
 
             model.OneClickApps.Add(new OneClickAppViewModel(
                                     WPFLocalizeExtensionHelpers.GetUIString("TemporaryFilesCleaner"),
@@ -654,7 +654,7 @@ namespace PCCleaner
             if (AllAnimationsComplete() && OneClickMaintenancePanel.Style == navigationButtonStyle)
             {
                 CloseAdvancedModules(null, null);
-                LinkPanelCleanUp.Style = navigationButtonFirstStyle;             
+                LinkPanelCleanUp.Style = navigationButtonFirstStyle;
                 OneClickMaintenancePanel.Style = navigationButtonSelectedStyle;
             }
         }
