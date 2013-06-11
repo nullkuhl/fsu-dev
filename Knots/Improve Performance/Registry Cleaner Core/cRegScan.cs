@@ -1365,6 +1365,9 @@ namespace RegistryCleanerCore
                 if (_oProcessAsyncBackgroundWorker != null && _oProcessAsyncBackgroundWorker.CancellationPending)
                     return;
 
+                if (k.StartsWith(@"Software\Microsoft\Windows Live"))
+                    continue;
+
                 cv = _cLightning.EnumValues(cLightning.ROOT_KEY.HKEY_CURRENT_USER, k);
                 foreach (string v in cv)
                 {

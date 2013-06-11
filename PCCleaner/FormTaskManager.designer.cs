@@ -358,7 +358,7 @@ namespace PCCleaner
             this.cmbSelectSchedule.Location = new System.Drawing.Point(17, 103);
             this.cmbSelectSchedule.Name = "cmbSelectSchedule";
             this.cmbSelectSchedule.Size = new System.Drawing.Size(121, 21);
-            this.cmbSelectSchedule.TabIndex = 3;            
+            this.cmbSelectSchedule.TabIndex = 3;
             // 
             // lblTask
             // 
@@ -627,7 +627,7 @@ namespace PCCleaner
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.tbcMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = global::PCCleaner.Properties.Resources.FSUIcon;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormTaskManager";

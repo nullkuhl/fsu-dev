@@ -1223,7 +1223,7 @@ StrokeThickness="0">
 		<Setter Property="Stretch" Value="None" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="SnapsToDevicePixels" Value="True" />
+		<Setter Property="SnapsToDevicePixels" Value="False" />
         <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor" />
         <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
     </Style> 

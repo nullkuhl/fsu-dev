@@ -41,12 +41,12 @@
 					</Border.Background>
 
 					<StackPanel>
-						<Image Style="{StaticResource FunctionalButtonImage}" Width="123" Height="149" Source="Images/icon-app.png"
-						       Margin="80,0,0,0" HorizontalAlignment="Left" />
+						<Image Style="{StaticResource FunctionalButtonImage}" Width="123" Height="135" Source="/PCCleaner;component/Images/PC_Cleaner_Logo_123.png"
+						       Margin="80,0,0,0" HorizontalAlignment="Left" Stretch="Fill" />
 						<TextBlock Style="{StaticResource FunctionalButtonTitle}" Padding="0 0 0 5" Text="PC Cleaner"
 						           HorizontalAlignment="Center" />
 						<TextBlock Style="{StaticResource FunctionalButtonText}" Text="Version 1.1.0" HorizontalAlignment="Center" />
-						<Button Style="{StaticResource TransparentButton}" Margin="56,5,0,5" Click="GoToSite" Panel.ZIndex="100"
+						<Button Style="{StaticResource TransparentButton}" Margin="70,5,0,5" Click="GoToSite" Panel.ZIndex="100"
 						        HorizontalAlignment="Left" Content="{lex:LocText PCCleaner:Resources:RootUrl}"></Button>
 						<TextBlock Style="{StaticResource FunctionalButtonText}" Text="© 2011-2013 Covus Freemium GmbH"
 						           HorizontalAlignment="Center" />

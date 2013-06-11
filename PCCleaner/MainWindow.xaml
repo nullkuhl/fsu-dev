@@ -6,7 +6,7 @@
 		xmlns:models="clr-namespace:PCCleaner.Models" xmlns:routine="clr-namespace:PCCleaner.Routine"
 		xmlns:viewmodels="clr-namespace:PCCleaner.ViewModels" Name="AppMainWindow" Title="PC Cleaner"
 		Width="800" Height="550" Engine:LocalizeDictionary.DesignCulture="en-US"
-		Icon="/PCCleaner;component/Images/FSUIcon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
+		Icon="/PCCleaner;component/PCCleanerIcon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
 		Style="{StaticResource MainWindowStyle}" WindowStartupLocation="CenterScreen" mc:Ignorable="d" WindowState="Minimized">
     <Window.Resources>
         <routine:ImageConverter x:Key="ImageConverter" />
@@ -50,10 +50,10 @@
                         <Button Name="logoButton" Margin="9,12,0,0" PreviewMouseMove="logoButton_PreviewMouseMove"
                                 PreviewMouseLeftButtonDown="logoButton_PreviewMouseLeftButtonDown"
                                 Click="GoHome" Style="{StaticResource TransparentButtonSimple}">
-                            <Image Width="136" Height="69" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Images/bg-logo.png"
-								   Stretch="None" />
+                            <Image Width="63" Height="69" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/PC_Cleaner_Logo.png"
+								   Stretch="Fill" FlowDirection="LeftToRight"/>
                         </Button>
-                        <TextBlock Margin="-75,40,0,0" FontFamily="/PCCleaner;component/Fonts/#Myriad Pro" FontSize="30.5"
+                        <TextBlock Margin="0,40,0,0" FontFamily="/PCCleaner;component/Fonts/#Myriad Pro" FontSize="30.5"
 								   FontWeight="SemiBold" Foreground="#FF4E4E4E">
 							<!--
 								<TextBlock.Effect>

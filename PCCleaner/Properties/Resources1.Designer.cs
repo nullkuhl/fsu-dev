@@ -892,16 +892,6 @@ namespace PCCleaner.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon desktop_icon {
-            get {
-                object obj = ResourceManager.GetObject("desktop_icon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Details of files to be deleted.
         /// </summary>
         internal static string details_files_tobe_del {
@@ -1432,16 +1422,6 @@ namespace PCCleaner.Properties {
         internal static string FridayFull {
             get {
                 return ResourceManager.GetString("FridayFull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon FSUIcon {
-            get {
-                object obj = ResourceManager.GetObject("FSUIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -2216,6 +2196,16 @@ namespace PCCleaner.Properties {
         internal static string Options {
             get {
                 return ResourceManager.GetString("Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon PCCleanerIcon {
+            get {
+                object obj = ResourceManager.GetObject("PCCleanerIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

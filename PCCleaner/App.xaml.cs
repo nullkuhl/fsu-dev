@@ -105,7 +105,7 @@ namespace PCCleaner
 
             notifyIcon = new NotifyIcon
                             {
-                                Icon = PCCleaner.Properties.Resources.desktop_icon,
+                                Icon = PCCleaner.Properties.Resources.PCCleanerIcon,
                                 Text = "PCCleaner",
                                 Visible = true
                             };
