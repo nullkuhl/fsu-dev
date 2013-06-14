@@ -137,9 +137,6 @@ once they are deleted, however the previous data in them has been reset.</value>
   <data name="analysis_report" xml:space="preserve">
     <value>ANALYSIS REPORT</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>Analyse with System Utilities</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>Analyzing...</value>
   </data>
@@ -372,9 +369,6 @@ Press "OK" to go to the .NET Framework v3.5 SP1 download page.</value>
   <data name="Day" xml:space="preserve">
     <value>Day</value>
   </data>
-  <data name="DecryptWithFreemiumTools" xml:space="preserve">
-    <value>Decrypt with System Utilities</value>
-  </data>
   <data name="DeepScanTitle" xml:space="preserve">
     <value>Deep System Scan</value>
   </data>
@@ -535,7 +529,7 @@ files quick and effectively</value>
     <value>Microsoft Common Dialog - File/Folder List</value>
   </data>
   <data name="FindEmptyFolders" xml:space="preserve">
-    <value>Find Empty Folders with System Utilities</value>
+    <value>Find Empty Folders with PC Cleaner</value>
   </data>
   <data name="firefox" xml:space="preserve">
     <value>Mozilla Firefox</value>
@@ -1415,7 +1409,7 @@ managable parts and rejoin them</value>
   <data name="select_day" xml:space="preserve">
     <value>At least one day should be chosen</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="PCCleanerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\PCCleanerIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

@@ -51,12 +51,7 @@ namespace PCCleaner
         /// </summary>
         void SetContextMenuOptionsFromCfg()
         {
-            clbContextMenuOptions.SetItemChecked(0, CfgFile.Get("ShowContextMenuAnalyze") == "1");
-            clbContextMenuOptions.SetItemChecked(1, CfgFile.Get("ShowContextMenuDecrypt") == "1");
-            clbContextMenuOptions.SetItemChecked(2, CfgFile.Get("ShowContextMenuEncrypt") == "1");
-            clbContextMenuOptions.SetItemChecked(3, CfgFile.Get("ShowContextMenuFindEmptyFolders") == "1");
-            clbContextMenuOptions.SetItemChecked(4, CfgFile.Get("ShowContextMenuSplit") == "1");
-            clbContextMenuOptions.SetItemChecked(5, CfgFile.Get("ShowContextMenuWipe") == "1");
+            clbContextMenuOptions.SetItemChecked(0, CfgFile.Get("ShowContextMenuFindEmptyFolders") == "1");            
         }
 
         /// <summary>
@@ -65,12 +60,7 @@ namespace PCCleaner
         void UpdateUILocalization()
         {
             clbContextMenuOptions.Items.Clear();
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"));
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("DecryptWithFreemiumTools"));
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("EncryptWithFreemiumTools"));
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"));
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("SplitWithFreemiumTools"));
-            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("WipeWithFreemiumTools"));
+            clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"));            
             SetContextMenuOptionsFromCfg();
 
             Language.Text = WPFLocalizeExtensionHelpers.GetUIString("Language");

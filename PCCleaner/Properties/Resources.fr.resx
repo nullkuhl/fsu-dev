@@ -136,9 +136,6 @@ Tenez compte du fait que certains fichiers et certaines clés de la base de regi
   <data name="analysis_report" xml:space="preserve">
     <value>RAPPORT D’ANALYSE</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>Analyser avec les utilitaires système</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>Analyse en cours...</value>
   </data>
@@ -427,9 +424,6 @@ Cliquez sur « OK » pour ouvrir la page de téléchargement de .NET Framework
   </data>
   <data name="EncryptAndDecryptDesc" xml:space="preserve">
     <value>Protège vos fichiers contre les accès non autorisés.</value>
-  </data>
-  <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Crypter avec les utilitaires système</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>L’entrée redirige vers</value>
@@ -1285,7 +1279,7 @@ Cliquez sur « OK » pour ouvrir la page de téléchargement de .NET Framework
   </data>
   <data name="tracks" xml:space="preserve">
     <value>Traces</value>
-  </data>  
+  </data>
   <data name="tracks_eraser" xml:space="preserve">
     <value>Effacer les traces</value>
   </data>

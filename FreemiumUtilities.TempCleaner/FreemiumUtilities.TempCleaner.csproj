@@ -145,8 +145,13 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.TempCleaner.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.TempCleaner.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y</PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" == "PCCleanerDebug" (
+ xcopy "$(TargetDir)FreemiumUtilities.TempCleaner.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+) else if "$(ConfigurationName)" == "PCCleanerRelease" (
+  xcopy "$(TargetDir)FreemiumUtilities.TempCleaner.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+) else (
+ xcopy "$(TargetDir)FreemiumUtilities.TempCleaner.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

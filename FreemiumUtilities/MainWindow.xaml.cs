@@ -53,7 +53,7 @@ namespace FreemiumUtilities
 
             string culture = CfgFile.Get("Lang");
             LocalizeDictionary.Instance.Culture = CultureInfo.GetCultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;            
+            Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
             if (CfgFile.Get("FirstRun") != "0")
             {
                 FirstRun();
@@ -387,7 +387,7 @@ namespace FreemiumUtilities
             FormTaskManager taskManager = new FormTaskManager();
             taskManager.btnOK_Click(null, null);
 
-            if(!App.StartMinimized)
+            if (!App.StartMinimized)
                 this.WindowState = WindowState.Normal;
         }
 
@@ -920,7 +920,7 @@ namespace FreemiumUtilities
                 ProcessStartInfo psi = new ProcessStartInfo(filepath + "\\" + filename + ".exe");
                 Process.Start(psi);
             }
-            catch 
+            catch
             {
             }
         }

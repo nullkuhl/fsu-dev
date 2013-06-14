@@ -1106,14 +1106,8 @@ nützliche Windows-Programme</value>
   <data name="SendFeedback" xml:space="preserve">
     <value>Feedback geben</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>analysieren mit System Utilities</value>
-  </data>
   <data name="DecryptWithFreemiumTools" xml:space="preserve">
     <value>entschlüsseln mit System Utilities</value>
-  </data>
-  <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Verschlüsseln mit System Utilities</value>
   </data>
   <data name="FindEmptyFolders" xml:space="preserve">
     <value>leere Ordner finden mit System Utilities</value>

@@ -53,7 +53,9 @@
                             <Image Width="63" Height="69" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/PC_Cleaner_Logo.png"
 								   Stretch="Fill" FlowDirection="LeftToRight"/>
                         </Button>
-                        <TextBlock Margin="0,40,0,0" FontFamily="/PCCleaner;component/Fonts/#Myriad Pro" FontSize="30.5"
+                        <Image Margin="5,20,0,0" Width="76" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/bg-freemium.png"
+								   Stretch="Fill" FlowDirection="LeftToRight"/>
+                        <TextBlock Margin="-75,40,0,0" FontFamily="/PCCleaner;component/Fonts/#Myriad Pro" FontSize="30.5"
 								   FontWeight="SemiBold" Foreground="#FF4E4E4E">
 							<!--
 								<TextBlock.Effect>

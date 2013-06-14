@@ -137,9 +137,6 @@ dopo essere stati eliminati, tuttavia i dati in essi contenuti precedentemente v
   <data name="analysis_report" xml:space="preserve">
     <value>RAPPORTO DI ANALISI</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>Analizza con System Utilities</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>Analisi in corso...</value>
   </data>
@@ -428,9 +425,6 @@ Premi OK" per andare alla pagina di download di .NET Framework v3.5 SP1."</value
   </data>
   <data name="EncryptAndDecryptDesc" xml:space="preserve">
     <value>Proteggi i file dall'accesso e dall'utilizzo non autorizzato</value>
-  </data>
-  <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Codifica con System Utilities</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>La voce rimanda a</value>
@@ -1291,7 +1285,7 @@ e gestibili, per poi riunirli</value>
   </data>
   <data name="tracks" xml:space="preserve">
     <value>Tracce</value>
-  </data>  
+  </data>
   <data name="tracks_eraser" xml:space="preserve">
     <value>Cancella tracce</value>
   </data>

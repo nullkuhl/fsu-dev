@@ -137,9 +137,6 @@ cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido re
   <data name="analysis_report" xml:space="preserve">
     <value>INFORME DE ANÁLISIS</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>Analizar con System Utilities</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>Analizando...</value>
   </data>
@@ -372,9 +369,6 @@ Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</va
   <data name="Day" xml:space="preserve">
     <value>Día</value>
   </data>
-  <data name="DecryptWithFreemiumTools" xml:space="preserve">
-    <value>Descifrar con System Utilities</value>
-  </data>
   <data name="DeepScanTitle" xml:space="preserve">
     <value>Análisis profundo del sistema</value>
   </data>
@@ -428,9 +422,6 @@ Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</va
   </data>
   <data name="EncryptAndDecryptDesc" xml:space="preserve">
     <value>Protege sus archivos del uso y acceso no autorizados</value>
-  </data>
-  <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Cifrar con System Utilities</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>La entrada apunta a</value>

@@ -459,7 +459,13 @@
   <PropertyGroup>
     <PreBuildEvent>
     </PreBuildEvent>
-    <PostBuildEvent>xcopy "$(SolutionDir)Knots\System Information\bin" "$(SolutionDir)FreemiumUtilities\bin\" /Y /S /I /R</PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" == "PCCleanerDebug" (
+  xcopy "$(TargetDir)*.*" "$(SolutionDir)PCCleaner\$(OutDir)" /Y /S /I /R
+) else if "$(ConfigurationName)" == "PCCleanerRelease" (
+  xcopy "$(TargetDir)*.*" "$(SolutionDir)PCCleaner\$(OutDir)" /Y /S /I /R
+) else (
+ xcopy "$(SolutionDir)Knots\System Information\bin" "$(SolutionDir)FreemiumUtilities\bin\" /Y /S /I /R
+)</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
     <Win32Resource>

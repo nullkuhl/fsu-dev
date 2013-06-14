@@ -90,14 +90,29 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y</PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" == "PCCleanerDebug" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+) else if "$(ConfigurationName)" == "PCCleanerRelease" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+) else (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

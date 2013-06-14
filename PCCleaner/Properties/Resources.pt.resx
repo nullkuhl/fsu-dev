@@ -137,9 +137,6 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
   <data name="analysis_report" xml:space="preserve">
     <value>RELATÓRIO DE ANÁLISE</value>
   </data>
-  <data name="AnalyzeWithFreemiumTools" xml:space="preserve">
-    <value>Analisar com o System Utilities</value>
-  </data>
   <data name="Analyzing" xml:space="preserve">
     <value>A Analisar...</value>
   </data>
@@ -428,9 +425,6 @@ Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."
   </data>
   <data name="EncryptAndDecryptDesc" xml:space="preserve">
     <value>Proteger os ficheiros do acesso e utilização não autorizados</value>
-  </data>
-  <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Encriptar com o System Utilities</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>Registo indica para</value>
