@@ -920,7 +920,7 @@ besser verwaltbare Teile auf</value>
     <value>URLs</value>
   </data>
   <data name="WaitTillScanningFinishes" xml:space="preserve">
-    <value>PC Cleaner verarbeitet gerade Daten. Warten Sie bitte, bis dies abgeschlossen ist.</value>
+    <value>Free Computer Cleaner verarbeitet gerade Daten. Warten Sie bitte, bis dies abgeschlossen ist.</value>
   </data>
   <data name="warning" xml:space="preserve">
     <value>Warnung</value>
@@ -1315,7 +1315,7 @@ in ihnen wurde zurückgesetzt.</value>
     <value>Restore &amp; Backup Center</value>
   </data>
   <data name="CheckNETVersion" xml:space="preserve">
-    <value>Sie müssen installieren. NET Framework v3.5 SP1 um PC Cleaner laufen.
+    <value>Sie müssen installieren. NET Framework v3.5 SP1 um Free Computer Cleaner laufen.
 Drücken Sie auf "OK", um. NET Framework v3.5 SP1 Download-Seite gehen.</value>
   </data>
   <data name="CheckNETVersionTitle" xml:space="preserve">
@@ -1343,10 +1343,10 @@ Drücken Sie auf "OK", um. NET Framework v3.5 SP1 Download-Seite gehen.</value>
     <value>http://www.freemium.com/fsu/googleplus</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+    <value>http://de.freemium.com/free-computer-cleaner/faq/</value>
   </data>
   <data name="RootUrl" xml:space="preserve">
-    <value>http://de.freemium.com/fsu/</value>
+    <value>http://de.freemium.com/free-computer-cleaner/</value>
   </data>
   <data name="TwitterUrl" xml:space="preserve">
     <value>http://www.freemium.com/fsu/twitter</value>

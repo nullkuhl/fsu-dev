@@ -207,7 +207,7 @@ assim que são eliminados, contudo os dados anteriores foram redefinidos.</value
     <value>Selecionar</value>
   </data>
   <data name="CheckNETVersion" xml:space="preserve">
-    <value>Tem de instalar o .NET Framework v3.5 SP1 para executar o PC Cleaner.
+    <value>Tem de instalar o .NET Framework v3.5 SP1 para executar o Free Computer Cleaner.
 Prima "OK" para ir para a página de transferência do .NET Framework v3.5 SP1."</value>
   </data>
   <data name="CheckNETVersionTitle" xml:space="preserve">
@@ -616,7 +616,7 @@ de forma rápida e eficaz</value>
     <value>Ficheiros de Ajuda do Sistema</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+    <value>http://pt.freemium.com/free-computer-cleaner/faq/</value>
   </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Menu Iniciar e Histórico</value>
@@ -938,7 +938,7 @@ e interrompê-los opcionalmente</value>
     <value>Resultados</value>
   </data>
   <data name="RootUrl" xml:space="preserve">
-    <value>http://de.freemium.com/fsu/</value>
+    <value>http://pt.freemium.com/free-computer-cleaner/</value>
   </data>
   <data name="RunAsAdmin" xml:space="preserve">
     <value>Para executar este programa tem de ter privilégios de administrador. Reinicie este programa como administrador.</value>

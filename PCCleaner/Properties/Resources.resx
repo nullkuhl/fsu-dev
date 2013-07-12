@@ -207,7 +207,7 @@ once they are deleted, however the previous data in them has been reset.</value>
     <value>Check</value>
   </data>
   <data name="CheckNETVersion" xml:space="preserve">
-    <value>You need to install .NET Framework v3.5 SP1 in order to run PC Cleaner.
+    <value>You need to install .NET Framework v3.5 SP1 in order to run Free Computer Cleaner.
 Press "OK" to go to the .NET Framework v3.5 SP1 download page.</value>
   </data>
   <data name="CheckNETVersionTitle" xml:space="preserve">
@@ -529,7 +529,7 @@ files quick and effectively</value>
     <value>Microsoft Common Dialog - File/Folder List</value>
   </data>
   <data name="FindEmptyFolders" xml:space="preserve">
-    <value>Find Empty Folders with PC Cleaner</value>
+    <value>Find Empty Folders with Free Computer Cleaner</value>
   </data>
   <data name="firefox" xml:space="preserve">
     <value>Mozilla Firefox</value>
@@ -616,7 +616,7 @@ files quick and effectively</value>
     <value>System Help Files</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>http://freemium.com/free-computer-cleaner/faq/</value>
   </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>History and Start Menu</value>
@@ -938,7 +938,7 @@ and optionally stop them</value>
     <value>Results</value>
   </data>
   <data name="RootUrl" xml:space="preserve">
-    <value>http://freemium.com/fsu/</value>
+    <value>http://freemium.com/free-computer-cleaner/</value>
   </data>
   <data name="RunAsAdmin" xml:space="preserve">
     <value>This program needs administrator privilege in order to run. Please restart this program as admin.</value>

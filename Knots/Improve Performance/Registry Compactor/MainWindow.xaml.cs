@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media.Imaging;
+using System.IO;
+using System.Windows.Interop;
 
 namespace RegistryCompactor
 {
@@ -29,6 +31,7 @@ namespace RegistryCompactor
 		public MainWindow()
 		{
 			InitializeComponent();
+          
 		}
 
 		#endregion
@@ -171,5 +174,19 @@ namespace RegistryCompactor
 		}
 
 		#endregion
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+    
+   
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                 this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/PCCleanerIcon.ico", UriKind.RelativeOrAbsolute)).Stream);             
+            }
+            else
+            {           
+                this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/FSUIcon.ico", UriKind.RelativeOrAbsolute)).Stream);              
+            }
+        }
 	}
 }

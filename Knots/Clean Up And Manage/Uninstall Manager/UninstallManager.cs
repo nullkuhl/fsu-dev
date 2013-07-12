@@ -16,6 +16,7 @@ using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
 using Microsoft.Win32;
+using System.IO;
 
 namespace Uninstall_Manager
 {
@@ -51,6 +52,14 @@ namespace Uninstall_Manager
         public UninstallManager()
         {
             InitializeComponent();
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
         }
 
         [DllImport("shell32.dll", CharSet = CharSet.Auto)]

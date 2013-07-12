@@ -9,6 +9,7 @@ using RegistryCleaner.Models;
 using RegistryCleaner.Properties;
 using RegistryCleanerCore;
 using System.Windows.Media.Imaging;
+using System.IO;
 
 /// <summary>
 /// The <see cref="RegistryCleaner"/> namespace defines a Registry Cleaner knot
@@ -1209,6 +1210,14 @@ namespace RegistryCleaner
         /// <param name="e"></param>
         void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/PCCleanerIcon.ico", UriKind.RelativeOrAbsolute)).Stream);
+            }
+            else
+            {
+                this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/FSUIcon.ico", UriKind.RelativeOrAbsolute)).Stream);
+            }
             pictureBoxLoading.Image = Properties.Resources.ajax_loader;
         }
 

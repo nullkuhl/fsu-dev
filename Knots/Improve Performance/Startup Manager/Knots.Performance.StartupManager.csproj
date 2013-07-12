@@ -10,7 +10,6 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StartupManager</RootNamespace>
     <AssemblyName>StartupManager</AssemblyName>
-    <ApplicationIcon>Resources\FSUIcon.ico</ApplicationIcon>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>
     </AssemblyOriginatorKeyFile>
@@ -51,6 +50,7 @@
     <CodeAnalysisRuleSet>Migrated rules for Startup Manager.ruleset</CodeAnalysisRuleSet>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <UseVSHostingProcess>true</UseVSHostingProcess>
+	    <ApplicationIcon>Resources\FSUIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -64,6 +64,7 @@
     </CodeAnalysisRules>
     <CodeAnalysisRuleSet>Migrated rules for Startup Manager (2).ruleset</CodeAnalysisRuleSet>
     <UseVSHostingProcess>false</UseVSHostingProcess>
+	<ApplicationIcon>Resources\FSUIcon.ico</ApplicationIcon>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PCCleanerDebug|AnyCPU'">
@@ -80,6 +81,7 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+	<ApplicationIcon>Resources\PCCleanerIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PCCleanerRelease|AnyCPU'">
     <DebugSymbols>true</DebugSymbols>
@@ -95,6 +97,7 @@
     <CodeAnalysisRuleSet>Migrated rules for Startup Manager (2).ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+	<ApplicationIcon>Resources\PCCleanerIcon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -225,6 +228,7 @@
     <None Include="Resources\help_off.png" />
     <None Include="Resources\help_on.png" />
     <None Include="Resources\FSUIcon.ico" />
+    <None Include="Resources\PCCleanerIcon.ico" />
     <Content Include="Resources\Startup Manager.ico" />
   </ItemGroup>
   <ItemGroup>

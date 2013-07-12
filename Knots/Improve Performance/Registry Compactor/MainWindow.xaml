@@ -9,9 +9,9 @@
 		Width="680"
 		Height="530"
 		Background="#FFFFFF"
-		Icon="Images\FSUIcon.ico"
+		Icon="Images\PCCleanerIcon.ico"
 		ResizeMode="NoResize"
-		WindowStartupLocation="CenterScreen">
+		WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
 
 	<Window.Resources>
 		<x:ArrayExtension x:Key="brushes"

@@ -260,16 +260,14 @@ Global
 		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|Any CPU.ActiveCfg = PCCleanerDebug|Any CPU
 		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|Any CPU.Build.0 = PCCleanerDebug|Any CPU
 		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|Mixed Platforms.ActiveCfg = PCCleanerDebug|Any CPU
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|x64.ActiveCfg = PCCleanerDebug|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|x86.ActiveCfg = PCCleanerDebug|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|x86.Build.0 = PCCleanerDebug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|x64.ActiveCfg = PCCleanerDebug|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerDebug|x86.ActiveCfg = PCCleanerDebug|Any CPU
 		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Any CPU.ActiveCfg = PCCleanerRelease|Any CPU
 		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Any CPU.Build.0 = PCCleanerRelease|Any CPU
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Mixed Platforms.ActiveCfg = PCCleanerRelease|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Mixed Platforms.Build.0 = PCCleanerRelease|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|x64.ActiveCfg = PCCleanerRelease|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|x86.ActiveCfg = PCCleanerRelease|x86
-		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|x86.Build.0 = PCCleanerRelease|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Mixed Platforms.ActiveCfg = PCCleanerRelease|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|Mixed Platforms.Build.0 = PCCleanerRelease|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|x64.ActiveCfg = PCCleanerRelease|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.PCCleanerRelease|x86.ActiveCfg = PCCleanerRelease|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

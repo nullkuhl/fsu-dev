@@ -40,6 +40,7 @@ namespace Disk_Cleaner
         public FormMain()
         {
             InitializeComponent();
+           
             Clean.OnProgress += Clean_OnProgress;
         }
 
@@ -1085,6 +1086,14 @@ namespace Disk_Cleaner
         {
             CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
             SetCulture(culture);
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
         }
 
         /// <summary>

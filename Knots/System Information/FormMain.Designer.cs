@@ -1,6 +1,7 @@
 using System.Resources;
 using System.Globalization;
 using System.Threading;
+using System.IO;
 
 namespace SystemInformation
 {
@@ -100,7 +101,7 @@ namespace SystemInformation
             this.SplitContainer.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
             this.SplitContainer.Panel2MinSize = 100;
             this.SplitContainer.Size = new System.Drawing.Size(798, 456);
-            this.SplitContainer.SplitterDistance = 240;
+            this.SplitContainer.SplitterDistance = 242;
             this.SplitContainer.SplitterWidth = 3;
             this.SplitContainer.TabIndex = 0;
             // 
@@ -208,7 +209,7 @@ namespace SystemInformation
             treeNode16});
             this.treeviewSystemInfo.SelectedImageIndex = 0;
             this.treeviewSystemInfo.ShowPlusMinus = false;
-            this.treeviewSystemInfo.Size = new System.Drawing.Size(240, 456);
+            this.treeviewSystemInfo.Size = new System.Drawing.Size(242, 456);
             this.treeviewSystemInfo.TabIndex = 0;
             this.treeviewSystemInfo.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeviewSystemInfo_AfterSelect);
             // 
@@ -303,7 +304,9 @@ namespace SystemInformation
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+
+           
+            
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMain";

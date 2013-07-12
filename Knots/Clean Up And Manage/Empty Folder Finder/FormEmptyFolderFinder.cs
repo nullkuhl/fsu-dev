@@ -38,6 +38,14 @@ namespace EmptyFolderFinder
         public FormEmptyFolderFinder()
         {
             InitializeComponent();
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
         }
 
         /// <summary>

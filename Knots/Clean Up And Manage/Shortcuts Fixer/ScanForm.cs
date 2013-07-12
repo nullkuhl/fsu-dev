@@ -44,6 +44,14 @@ namespace ShortcutsFixer
 		public ScanForm()
 		{
 			InitializeComponent();
+            if (!System.IO.File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
 		}
 
 		/// <summary>

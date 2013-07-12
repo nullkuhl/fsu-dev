@@ -42,6 +42,14 @@ namespace ShortcutsFixer
             fileLabel.Text = string.Empty;
             lblStatus.Text = string.Empty;
             Shown += FormMain_Shown;
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
         }
 
         void InitializeShortcutItems()

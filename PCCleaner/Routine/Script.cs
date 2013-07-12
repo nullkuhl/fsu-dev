@@ -16,7 +16,7 @@ namespace PCCleaner
 		                              "Set objWMIService = GetObject(\"winmgmts:\\\\\" & strComputer & \"\\root\\default\") " +
 		                              Environment.NewLine +
 		                              "Set objItem = objWMIService.Get(\"SystemRestore\")" + Environment.NewLine +
-                                      "CSRP = objItem.createrestorepoint (\"PC Cleaner\", 0, 100)" +
+                                      "CSRP = objItem.createrestorepoint (\"Free Computer Cleaner\", 0, 100)" +
 		                              Environment.NewLine +
 		                              "return 1,1";
 

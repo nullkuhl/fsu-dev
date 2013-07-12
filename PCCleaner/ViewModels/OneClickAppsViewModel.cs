@@ -556,7 +556,7 @@ namespace PCCleaner.ViewModels
             _bRestoreComplete = false;
             //_bRestoreSucess = _Restore.StartRestore("Registry Cleaner Restore Point");
             Thread.BeginCriticalRegion();
-            SysRestore.StartRestore("PC Cleaner " + DateTime.Now, out lSeqNum);
+            SysRestore.StartRestore("Free Computer Cleaner " + DateTime.Now, out lSeqNum);
 
             // ToDo: only set this to true if it really was successful!
             _bRestoreSucess = true;

@@ -34,6 +34,7 @@ using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
+using System.IO;
 
 #endregion
 
@@ -229,6 +230,14 @@ namespace SystemInformation
 		public FormMain()
 		{
 			InitializeComponent();
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
 		}
 
         /// <summary>
@@ -278,7 +287,8 @@ namespace SystemInformation
 
 			//treeNode16.Text = rm.GetString("root", culture);
 			StatusStrip.Text = rm.GetString("main_statusstrip", culture);
-			Icon = ((Icon)(resources.GetObject("$this.Icon", culture)));
+           // Icon = Properties.Resources.PCCleanerIcon;
+            
 			Text = rm.GetString("window_title", culture);
 			ucTop.Text = rm.GetString("window_title", culture);
 		}

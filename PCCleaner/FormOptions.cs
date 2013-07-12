@@ -63,6 +63,7 @@ namespace PCCleaner
             clbContextMenuOptions.Items.Add(WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"));            
             SetContextMenuOptionsFromCfg();
 
+            this.Text = WPFLocalizeExtensionHelpers.GetUIString("Options");
             Language.Text = WPFLocalizeExtensionHelpers.GetUIString("Language");
             Theme.Text = WPFLocalizeExtensionHelpers.GetUIString("Theme");
             chkMinToTray.Text = WPFLocalizeExtensionHelpers.GetUIString("MinimiseToTrayCheckboxText");

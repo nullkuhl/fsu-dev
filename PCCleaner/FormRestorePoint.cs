@@ -119,7 +119,7 @@ namespace PCCleaner
             try
             {
                 long lSeqNum;
-                SysRestore.StartRestore("PC Cleaner " + DateTime.Now, out lSeqNum);
+                SysRestore.StartRestore("Free Computer Cleaner " + DateTime.Now, out lSeqNum);
 
                 MessageBox.Show(WPFLocalizeExtensionHelpers.GetUIString("RestorePointCreated"),
                                 WPFLocalizeExtensionHelpers.GetUIString("info"), MessageBoxButtons.OK, MessageBoxIcon.Information);

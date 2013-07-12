@@ -4,7 +4,7 @@
 		xmlns:lex="clr-namespace:WPFLocalizeExtension.Extensions;assembly=WPFLocalizeExtension"
 		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 		xmlns:models="clr-namespace:PCCleaner.Models" xmlns:routine="clr-namespace:PCCleaner.Routine"
-		xmlns:viewmodels="clr-namespace:PCCleaner.ViewModels" Name="AppMainWindow" Title="PC Cleaner"
+		xmlns:viewmodels="clr-namespace:PCCleaner.ViewModels" Name="AppMainWindow" Title="Free Computer Cleaner"
 		Width="800" Height="550" Engine:LocalizeDictionary.DesignCulture="en-US"
 		Icon="/PCCleaner;component/PCCleanerIcon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
 		Style="{StaticResource MainWindowStyle}" WindowStartupLocation="CenterScreen" mc:Ignorable="d" WindowState="Minimized">
@@ -53,7 +53,7 @@
                             <Image Width="63" Height="69" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/PC_Cleaner_Logo.png"
 								   Stretch="Fill" FlowDirection="LeftToRight"/>
                         </Button>
-                        <Image Margin="5,20,0,0" Width="76" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/bg-freemium.png"
+                        <Image Margin="10,20,0,0" Width="76" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/PCCleaner;component/Images/bg-freemium.png"
 								   Stretch="Fill" FlowDirection="LeftToRight"/>
                         <TextBlock Margin="-75,40,0,0" FontFamily="/PCCleaner;component/Fonts/#Myriad Pro" FontSize="30.5"
 								   FontWeight="SemiBold" Foreground="#FF4E4E4E">
@@ -67,7 +67,7 @@
 								RenderingBias="Quality" />
 								</TextBlock.Effect>
 							-->
-							PC Cleaner
+							Free Computer Cleaner
                         </TextBlock>
                         <DockPanel Margin="8,10,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" DockPanel.Dock="Right">
                             <Button Click="OpenAboutBox" FontFamily="/PCCleaner;component/Fonts/#Helvetica Neue LT Std"
