@@ -45,7 +45,7 @@
 						       Margin="80,0,0,0" HorizontalAlignment="Left" />
 						<TextBlock Style="{StaticResource FunctionalButtonTitle}" Padding="0 0 0 5" Text="Freemium Free System Utilities"
 						           HorizontalAlignment="Center" />
-						<TextBlock Style="{StaticResource FunctionalButtonText}" Text="Version 1.1.0" HorizontalAlignment="Center" />
+						<TextBlock Style="{StaticResource FunctionalButtonText}" Text="Version 1.1.2" HorizontalAlignment="Center" />
 						<Button Style="{StaticResource TransparentButton}" Margin="56,5,0,5" Click="GoToSite" Panel.ZIndex="100"
 						        HorizontalAlignment="Left" Content="{lex:LocText FreemiumUtilities:Resources:RootUrl}"></Button>
 						<TextBlock Style="{StaticResource FunctionalButtonText}" Text="© 2011-2013 Covus Freemium GmbH"
