@@ -133,6 +133,79 @@
     <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GamingBoosterDebug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterDebug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\GamingBoosterDebug\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\x64\Debug\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterDebug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\GamingBoosterDebug\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\x86\Debug\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterRelease|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GamingBoosterRelease\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterRelease|x64'">
+    <OutputPath>bin\x64\GamingBoosterRelease\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisLogFile>bin\x64\Release\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterRelease|x86'">
+    <OutputPath>bin\x86\GamingBoosterRelease\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\x86\Release\FreemiumUtil.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -215,6 +288,34 @@
  xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner Core\$(OutDir)\Libraries\" /Y /S /I /R
  xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\$(OutDir)\Libraries\" /Y /S /I /R
  xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Startup Manager\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R
+) else if "$(ConfigurationName)" == "GamingBoosterDebug" (
+ xcopy "$(TargetPath)" "$(SolutionDir)FreeGamingBooster\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Memory Optimizer\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Process Manager\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner Core\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Startup Manager\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Windows Standard Tools\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R
+) else if "$(ConfigurationName)" == "GamingBoosterRelease" (
+ xcopy "$(TargetPath)" "$(SolutionDir)FreeGamingBooster\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Clean Up And Manage\Disk Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Memory Optimizer\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Process Manager\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Cleaner Core\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Registry Compactor\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Startup Manager\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Improve Performance\Windows Standard Tools\$(OutDir)\Libraries\" /Y /S /I /R
  xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R
 ) else (
  xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities\$(OutDir)\Libraries\" /Y /S /I /R
