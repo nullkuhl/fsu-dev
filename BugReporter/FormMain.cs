@@ -89,7 +89,7 @@ namespace BugReporter
 				os += " 32-bit";
 
 			// MAC address
-			string mac = "";
+			string mac = String.Empty;
 			NetworkInterface[] interfaces = NetworkInterface.GetAllNetworkInterfaces();
 			foreach (NetworkInterface intrfce in interfaces)
 			{
@@ -110,7 +110,6 @@ namespace BugReporter
 			{
 				// Bug stack trace
 				int trimLimit = Program.BugStackTrace.IndexOf("line");
-				//var stackTraceTrimmed ="test";
 				stackTraceTrimmed = Program.BugStackTrace.Substring(0, trimLimit + 10);
 			}
 			catch (Exception)
@@ -140,17 +139,17 @@ namespace BugReporter
 
 			try
 			{
-				string str_ver = "";
-				string str_mac = "";
-				string str_ip = "";
-				string str_os = "";
-				string str_host = "";
-				string str_stacktrace = "";
-				string str_bugtype = "";
-				string str_bugmsg = "";
-				string str_userinput = "";
-				string str_target = "";
-				string str_source = "";
+				string str_ver = String.Empty;
+				string str_mac = String.Empty;
+				string str_ip = String.Empty;
+				string str_os = String.Empty;
+				string str_host = String.Empty;
+				string str_stacktrace = String.Empty;
+				string str_bugtype = String.Empty;
+				string str_bugmsg = String.Empty;
+				string str_userinput = String.Empty;
+				string str_target = String.Empty;
+				string str_source = String.Empty;
 
 				try
 				{

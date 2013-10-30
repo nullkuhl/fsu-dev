@@ -4,16 +4,14 @@ using System.Globalization;
 using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
+using System.IO;
+using System.Reflection;
 
+/// <summary>
+/// The <see cref="StartupManager"/> namespace defines a Startup Manager knot
+/// </summary>
 namespace StartupManager
 {
-	/// <summary>
-	/// The <see cref="StartupManager"/> namespace defines a Startup Manager knot
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
 	internal static class Program
 	{
 		static Mutex mutex;
@@ -32,7 +30,24 @@ namespace StartupManager
 				//Application.ThreadException += Application_ThreadException;
 				//AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
 
-				Properties.Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
+                // As all first run initialization is done in the main project,
+                // we need to make sure the user does not start a different knot first.
+                if (CfgFile.Get("FirstRun") != "0")
+                {
+                    try
+                    {
+                        ProcessStartInfo process = new ProcessStartInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().GetName().CodeBase) + "\\FreemiumUtilities.exe");
+                        Process.Start(process);
+                    }
+                    catch (Exception)
+                    {
+                    }
+
+                    Application.Exit();
+                    return;
+                }
+
+                Properties.Resources.Culture = new CultureInfo(CfgFile.Get("Lang"));
 
 				Application.EnableVisualStyles();
 				Application.SetCompatibleTextRenderingDefault(false);
@@ -42,13 +57,11 @@ namespace StartupManager
 
 		static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
 		{
-			Reporting.Report(e.Exception);
 			Process.GetCurrentProcess().Kill();
 		}
 
 		static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
 		{
-			Reporting.Report((Exception)(e.ExceptionObject));
 			Process.GetCurrentProcess().Kill();
 		}
 	}

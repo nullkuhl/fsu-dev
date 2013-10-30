@@ -274,7 +274,4 @@
   <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
     <value>Die Systemwiederherstellung ist deaktiviert. Möchten Sie dennoch auf eigenes Risiko fortfahren?</value>
   </data>
-  <data name="CreatingRestorePoint" xml:space="preserve">
-    <value>Wiederherstellungspunkt erstellen ...</value>
-  </data>
 </root>

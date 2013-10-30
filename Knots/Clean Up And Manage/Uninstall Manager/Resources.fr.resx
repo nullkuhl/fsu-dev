@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="batch_uninstall" xml:space="preserve">
+    <value>Désinstallation avec traitement par lots</value>
+  </data>
+  <data name="command_line" xml:space="preserve">
+    <value>Ligne de commande</value>
+  </data>
+  <data name="current_installed_progs" xml:space="preserve">
+    <value>Programmes actuellement installés</value>
+  </data>
+  <data name="entries_removed" xml:space="preserve">
+    <value>Les entrées ont été supprimés avec succès.</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="error_occurred" xml:space="preserve">
+    <value>Une erreur est survenue.</value>
+  </data>
+  <data name="file_imported" xml:space="preserve">
+    <value>Le fichier a été importé.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="image" xml:space="preserve">
+    <value>Image</value>
+  </data>
+  <data name="installed_date" xml:space="preserve">
+    <value>Date d’installation</value>
+  </data>
+  <data name="installed_on" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="is_update" xml:space="preserve">
+    <value>Mise à jour réelle</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="no_one_removed" xml:space="preserve">
+    <value>Vous avez besoin des droits d’administrateur pour utiliser cette fonction.</value>
+  </data>
+  <data name="one_entry_removed" xml:space="preserve">
+    <value>L’entrée a été supprimée avec succès.</value>
+  </data>
+  <data name="operation_cancelled" xml:space="preserve">
+    <value>Processus interrompu.</value>
+  </data>
+  <data name="programs" xml:space="preserve">
+    <value>Programmes</value>
+  </data>
+  <data name="programs_installed_total" xml:space="preserve">
+    <value>Programmes installés sur votre ordinateur (au total</value>
+  </data>
+  <data name="publisher" xml:space="preserve">
+    <value>Éditeur</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Actualiser</value>
+  </data>
+  <data name="reg_key" xml:space="preserve">
+    <value>regKey</value>
+  </data>
+  <data name="remove_entries" xml:space="preserve">
+    <value>Supprimer les entrées</value>
+  </data>
+  <data name="remove_entry" xml:space="preserve">
+    <value>Supprimer l’entrée</value>
+  </data>
+  <data name="report_created_on" xml:space="preserve">
+    <value>Rapport établi le</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>ENREGISTRER</value>
+  </data>
+  <data name="saved_to" xml:space="preserve">
+    <value>Le fichier a été enregistré sous</value>
+  </data>
+  <data name="search_program" xml:space="preserve">
+    <value>Rechercher un programme</value>
+  </data>
+  <data name="show_win_updates" xml:space="preserve">
+    <value>Afficher les mises à jour Windows</value>
+  </data>
+  <data name="size" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>Au total :</value>
+  </data>
+  <data name="uninstall_manager" xml:space="preserve">
+    <value>Désinstaller des programmes</value>
+  </data>
+  <data name="uninstall_program" xml:space="preserve">
+    <value>Désinstaller un programme</value>
+  </data>
+  <data name="uninstall_programs" xml:space="preserve">
+    <value>Désinstaller des programmes</value>
+  </data>
+  <data name="unistaller_not_found" xml:space="preserve">
+    <value>Les fichiers de désinstallation pour {0} n’ont pas pu être trouvés. Le programme doit-il être supprimé de la liste ?</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Veuillez noter que la suppression d'une entrée est un processus irréversible, il vaut mieux essayer de désinstaller d'abord. Etes-vous sûr de vouloir supprimer l'élément sélectionné(s)?</value>
+  </data>
+</root>

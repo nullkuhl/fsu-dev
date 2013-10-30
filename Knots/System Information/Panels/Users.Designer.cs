@@ -55,11 +55,13 @@ namespace SystemInformation
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.picturePanel = new System.Windows.Forms.PictureBox();
-            this.labelRegistration = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
             this.imagelistUsers = new System.Windows.Forms.ImageList(this.components);
+            this.btnSaveRegisteredOrganization = new System.Windows.Forms.Button();
+            this.btnSaveRegisteredUser = new System.Windows.Forms.Button();
+            this.textboxRegisteredOrganization = new System.Windows.Forms.TextBox();
+            this.textboxRegisteredUser = new System.Windows.Forms.TextBox();
+            this.labelRegisteredOrganization = new System.Windows.Forms.Label();
+            this.labelRegisteredUser = new System.Windows.Forms.Label();
             this.listviewUsers = new System.Windows.Forms.ListView();
             this.UserAccount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FullName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -67,56 +69,12 @@ namespace SystemInformation
             this.Notes = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelUserList = new System.Windows.Forms.Label();
             this.labelSeparator2 = new System.Windows.Forms.Label();
-            this.btnSaveRegisteredOrganization = new System.Windows.Forms.Button();
-            this.btnSaveRegisteredUser = new System.Windows.Forms.Button();
-            this.textboxRegisteredOrganization = new System.Windows.Forms.TextBox();
-            this.textboxRegisteredUser = new System.Windows.Forms.TextBox();
-            this.labelRegisteredOrganization = new System.Windows.Forms.Label();
-            this.labelRegisteredUser = new System.Windows.Forms.Label();
+            this.labelRegistration = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.picturePanel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(80, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 25);
-            this.labelTitle.TabIndex = 7;
-            // 
-            // picturePanel
-            // 
-            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Users_48x48;
-            this.picturePanel.Location = new System.Drawing.Point(16, 16);
-            this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(48, 48);
-            this.picturePanel.TabIndex = 6;
-            this.picturePanel.TabStop = false;
-            // 
-            // labelRegistration
-            // 
-            this.labelRegistration.AutoSize = true;
-            this.labelRegistration.BackColor = System.Drawing.Color.Transparent;
-            this.labelRegistration.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistration.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelRegistration.Location = new System.Drawing.Point(16, 322);
-            this.labelRegistration.Name = "labelRegistration";
-            this.labelRegistration.Size = new System.Drawing.Size(0, 17);
-            this.labelRegistration.TabIndex = 15;
-            // 
-            // labelSeparator
-            // 
-            this.labelSeparator.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator.Location = new System.Drawing.Point(16, 100);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
-            this.labelSeparator.TabIndex = 14;
             // 
             // imagelistUsers
             // 
@@ -124,6 +82,61 @@ namespace SystemInformation
             this.imagelistUsers.TransparentColor = System.Drawing.Color.Transparent;
             this.imagelistUsers.Images.SetKeyName(0, "User_16x16.png");
             this.imagelistUsers.Images.SetKeyName(1, "UserDisabled_16x16.png");
+            // 
+            // btnSaveRegisteredOrganization
+            // 
+            this.btnSaveRegisteredOrganization.Enabled = false;
+            this.btnSaveRegisteredOrganization.Location = new System.Drawing.Point(425, 389);
+            this.btnSaveRegisteredOrganization.Name = "btnSaveRegisteredOrganization";
+            this.btnSaveRegisteredOrganization.Size = new System.Drawing.Size(73, 23);
+            this.btnSaveRegisteredOrganization.TabIndex = 32;
+            this.btnSaveRegisteredOrganization.UseVisualStyleBackColor = true;
+            this.btnSaveRegisteredOrganization.Click += new System.EventHandler(this.btnRegisteredOrganization_Click);
+            // 
+            // btnSaveRegisteredUser
+            // 
+            this.btnSaveRegisteredUser.Enabled = false;
+            this.btnSaveRegisteredUser.Location = new System.Drawing.Point(425, 362);
+            this.btnSaveRegisteredUser.Name = "btnSaveRegisteredUser";
+            this.btnSaveRegisteredUser.Size = new System.Drawing.Size(73, 23);
+            this.btnSaveRegisteredUser.TabIndex = 31;
+            this.btnSaveRegisteredUser.UseVisualStyleBackColor = true;
+            this.btnSaveRegisteredUser.Click += new System.EventHandler(this.btnSaveRegisteredUser_Click);
+            // 
+            // textboxRegisteredOrganization
+            // 
+            this.textboxRegisteredOrganization.AcceptsReturn = true;
+            this.textboxRegisteredOrganization.Location = new System.Drawing.Point(156, 389);
+            this.textboxRegisteredOrganization.Name = "textboxRegisteredOrganization";
+            this.textboxRegisteredOrganization.Size = new System.Drawing.Size(263, 23);
+            this.textboxRegisteredOrganization.TabIndex = 30;
+            this.textboxRegisteredOrganization.TextChanged += new System.EventHandler(this.textboxRegisteredOrganization_TextChanged);
+            // 
+            // textboxRegisteredUser
+            // 
+            this.textboxRegisteredUser.Location = new System.Drawing.Point(156, 361);
+            this.textboxRegisteredUser.Name = "textboxRegisteredUser";
+            this.textboxRegisteredUser.Size = new System.Drawing.Size(263, 23);
+            this.textboxRegisteredUser.TabIndex = 29;
+            this.textboxRegisteredUser.TextChanged += new System.EventHandler(this.textboxRegisteredUser_TextChanged);
+            // 
+            // labelRegisteredOrganization
+            // 
+            this.labelRegisteredOrganization.AutoSize = true;
+            this.labelRegisteredOrganization.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegisteredOrganization.Location = new System.Drawing.Point(16, 393);
+            this.labelRegisteredOrganization.Name = "labelRegisteredOrganization";
+            this.labelRegisteredOrganization.Size = new System.Drawing.Size(0, 15);
+            this.labelRegisteredOrganization.TabIndex = 28;
+            // 
+            // labelRegisteredUser
+            // 
+            this.labelRegisteredUser.AutoSize = true;
+            this.labelRegisteredUser.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegisteredUser.Location = new System.Drawing.Point(16, 365);
+            this.labelRegisteredUser.Name = "labelRegisteredUser";
+            this.labelRegisteredUser.Size = new System.Drawing.Size(0, 15);
+            this.labelRegisteredUser.TabIndex = 27;
             // 
             // listviewUsers
             // 
@@ -147,11 +160,11 @@ namespace SystemInformation
             // 
             // UserAccount
             // 
-            this.UserAccount.Width = 100;
+            this.UserAccount.Width = 125;
             // 
             // FullName
             // 
-            this.FullName.Width = 150;
+            this.FullName.Width = 135;
             // 
             // AccountType
             // 
@@ -182,60 +195,47 @@ namespace SystemInformation
             this.labelSeparator2.Size = new System.Drawing.Size(482, 3);
             this.labelSeparator2.TabIndex = 17;
             // 
-            // btnSaveRegisteredOrganization
+            // labelRegistration
             // 
-            this.btnSaveRegisteredOrganization.Enabled = false;
-            this.btnSaveRegisteredOrganization.Location = new System.Drawing.Point(450, 389);
-            this.btnSaveRegisteredOrganization.Name = "btnSaveRegisteredOrganization";
-            this.btnSaveRegisteredOrganization.Size = new System.Drawing.Size(48, 23);
-            this.btnSaveRegisteredOrganization.TabIndex = 32;
-            this.btnSaveRegisteredOrganization.UseVisualStyleBackColor = true;
-            this.btnSaveRegisteredOrganization.Click += new System.EventHandler(this.btnRegisteredOrganization_Click);
+            this.labelRegistration.AutoSize = true;
+            this.labelRegistration.BackColor = System.Drawing.Color.Transparent;
+            this.labelRegistration.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegistration.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelRegistration.Location = new System.Drawing.Point(16, 322);
+            this.labelRegistration.Name = "labelRegistration";
+            this.labelRegistration.Size = new System.Drawing.Size(0, 17);
+            this.labelRegistration.TabIndex = 15;
             // 
-            // btnSaveRegisteredUser
+            // labelSeparator
             // 
-            this.btnSaveRegisteredUser.Enabled = false;
-            this.btnSaveRegisteredUser.Location = new System.Drawing.Point(450, 362);
-            this.btnSaveRegisteredUser.Name = "btnSaveRegisteredUser";
-            this.btnSaveRegisteredUser.Size = new System.Drawing.Size(48, 23);
-            this.btnSaveRegisteredUser.TabIndex = 31;
-            this.btnSaveRegisteredUser.UseVisualStyleBackColor = true;
-            this.btnSaveRegisteredUser.Click += new System.EventHandler(this.btnSaveRegisteredUser_Click);
+            this.labelSeparator.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator.Location = new System.Drawing.Point(16, 100);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
+            this.labelSeparator.TabIndex = 14;
             // 
-            // textboxRegisteredOrganization
+            // labelTitle
             // 
-            this.textboxRegisteredOrganization.AcceptsReturn = true;
-            this.textboxRegisteredOrganization.Location = new System.Drawing.Point(156, 389);
-            this.textboxRegisteredOrganization.Name = "textboxRegisteredOrganization";
-            this.textboxRegisteredOrganization.Size = new System.Drawing.Size(276, 23);
-            this.textboxRegisteredOrganization.TabIndex = 30;
-            this.textboxRegisteredOrganization.TextChanged += new System.EventHandler(this.textboxRegisteredOrganization_TextChanged);
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(80, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 25);
+            this.labelTitle.TabIndex = 7;
             // 
-            // textboxRegisteredUser
+            // picturePanel
             // 
-            this.textboxRegisteredUser.Location = new System.Drawing.Point(156, 361);
-            this.textboxRegisteredUser.Name = "textboxRegisteredUser";
-            this.textboxRegisteredUser.Size = new System.Drawing.Size(276, 23);
-            this.textboxRegisteredUser.TabIndex = 29;
-            this.textboxRegisteredUser.TextChanged += new System.EventHandler(this.textboxRegisteredUser_TextChanged);
-            // 
-            // labelRegisteredOrganization
-            // 
-            this.labelRegisteredOrganization.AutoSize = true;
-            this.labelRegisteredOrganization.BackColor = System.Drawing.Color.Transparent;
-            this.labelRegisteredOrganization.Location = new System.Drawing.Point(16, 393);
-            this.labelRegisteredOrganization.Name = "labelRegisteredOrganization";
-            this.labelRegisteredOrganization.Size = new System.Drawing.Size(0, 15);
-            this.labelRegisteredOrganization.TabIndex = 28;
-            // 
-            // labelRegisteredUser
-            // 
-            this.labelRegisteredUser.AutoSize = true;
-            this.labelRegisteredUser.BackColor = System.Drawing.Color.Transparent;
-            this.labelRegisteredUser.Location = new System.Drawing.Point(16, 365);
-            this.labelRegisteredUser.Name = "labelRegisteredUser";
-            this.labelRegisteredUser.Size = new System.Drawing.Size(0, 15);
-            this.labelRegisteredUser.TabIndex = 27;
+            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Users_48x48;
+            this.picturePanel.Location = new System.Drawing.Point(16, 16);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(48, 48);
+            this.picturePanel.TabIndex = 6;
+            this.picturePanel.TabStop = false;
             // 
             // Users
             // 

@@ -1,0 +1,701 @@
+<UnhandledExceptionReport AssemblyID="{72D1F21A-FC77-4C09-82CA-EC214D5C5086}" BuildDateTime="2013-01-14T13:12:24" BuildVersion="1.0.0.0" DateTime="2013-02-05T22:33:05" ExceptionMessage="Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied." ExceptionType="System.UnauthorizedAccessException" MethodName="private void cboThemes_SelectedIndexChanged(object sender, EventArgs e);" NETVersion="2.0.50727.3053" OSFullName="Windows XP Service Pack 3" OSVersion="Version 5.1.2600.196608" Path="C:\Program Files\Covus Freemium\Free System Utilities\FreemiumUtilities.exe" TypeName="[FreemiumUtilities]FreemiumUtilities.FormOptions" UserHostAddress="{9c030475-1eca-6223-7a99-9c9296e1f574}" UserID="{00000000-0000-0000-0000-000000000000}">
+    <Assemblies>
+        <Assembly CodeBase="file:///C:/WINDOWS/Microsoft.NET/Framework/v2.0.50727/mscorlib.dll" Name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/FreemiumUtilities.exe" Name="FreemiumUtilities, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" This="1" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/PresentationFramework/3.0.0.0__31bf3856ad364e35/PresentationFramework.dll" Name="PresentationFramework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/WindowsBase/3.0.0.0__31bf3856ad364e35/WindowsBase.dll" Name="WindowsBase, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System/2.0.0.0__b77a5c561934e089/System.dll" Name="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_32/PresentationCore/3.0.0.0__31bf3856ad364e35/PresentationCore.dll" Name="PresentationCore, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System.Windows.Forms/2.0.0.0__b77a5c561934e089/System.Windows.Forms.dll" Name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System.Drawing/2.0.0.0__b03f5f7f11d50a3a/System.Drawing.dll" Name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System.Core/3.5.0.0__b77a5c561934e089/System.Core.dll" Name="System.Core, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/FreemiumUtil.DLL" Name="FreemiumUtil, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/WPFLocalizeExtension.DLL" Name="WPFLocalizeExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/FreemiumUtilities.Infrastructure.DLL" Name="FreemiumUtilities.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/PresentationFramework.Luna/3.0.0.0__31bf3856ad364e35/PresentationFramework.Luna.dll" Name="PresentationFramework.Luna, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/System.Tuples.DLL" Name="System.Tuples, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/Microsoft.Win32.TaskScheduler.DLL" Name="Microsoft.Win32.TaskScheduler, Version=1.7.4273.24968, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.TracksEraser.DLL" Name="FreemiumUtilities.TracksEraser, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.RegCleaner.DLL" Name="FreemiumUtilities.RegCleaner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.TempCleaner.DLL" Name="FreemiumUtilities.TempCleaner, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.ShortcutFixer.DLL" Name="FreemiumUtilities.ShortcutFixer, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.StartupManager.DLL" Name="FreemiumUtilities.StartupManager, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Applications/FreemiumUtilities.Spyware.DLL" Name="FreemiumUtilities.Spyware, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/RegistryCleanerCore.DLL" Name="RegistryCleanerCore, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/UrlHistoryLibrary.DLL" Name="UrlHistoryLibrary, Version=1.0.3999.22290, Culture=neutral, PublicKeyToken=null" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/PresentationCFFRasterizer/3.0.0.0__31bf3856ad364e35/PresentationCFFRasterizer.dll" Name="PresentationCFFRasterizer, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System.Configuration/2.0.0.0__b03f5f7f11d50a3a/System.Configuration.dll" Name="System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+        <Assembly CodeBase="file:///C:/WINDOWS/assembly/GAC_MSIL/System.Xml/2.0.0.0__b77a5c561934e089/System.Xml.dll" Name="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+        <Assembly CodeBase="file:///C:/Program Files/Covus Freemium/Free System Utilities/Libraries/Interop.IWshRuntimeLibrary.DLL" Name="Interop.IWshRuntimeLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </Assemblies>
+    <CustomProperties />
+    <StackTrace>
+        <Exception ExceptionStackTrace="at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode)&#xD;&#xA;   at &#xE;.&#x1;.&#x2;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)&#xD;&#xA;   at &#xE;.&#x1;..ctor()&#xD;&#xA;   at FreemiumUtilities.MainWindow.OptionChanged(Object sender, SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.ComboBox.OnSelectionChanged(SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(List`1 unselectedItems, List`1 selectedItems)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.SelectJustThisItem(Object item, Boolean assumeInItemsCollection)&#xD;&#xA;   at System.Windows.Controls.ComboBox.NotifyComboBoxItemMouseUp(ComboBoxItem comboBoxItem)&#xD;&#xA;   at System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#xD;&#xA;   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessStagingArea()&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#xD;&#xA;   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)" ID="0" Message="Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied." Type="System.UnauthorizedAccessException" />
+        <StackFrame DocumentURL="c:\TeamCity\buildAgent\work\6c0148f3b3b64261\FreemiumUtilities\FormOptions.cs" ExceptionStackDepth="5" LineNumber="267" Method="private void cboThemes_SelectedIndexChanged(object sender, EventArgs e);" Type="[FreemiumUtilities]FreemiumUtilities.FormOptions">
+            <Local Name="path" ReportedType="System.String" Type="System.String" Value="&quot;Themes\Blue\Theme.xaml&quot;" />
+            <Local Name="fs" Null="1" Type="class [mscorlib]System.IO.FileStream" />
+            <Local Name="dic" Null="1" Type="class [PresentationFramework]System.Windows.ResourceDictionary" />
+            <This ID="1" Name="this" />
+            <Parameter ID="2" Name="sender" />
+            <Parameter ID="3" Name="e" />
+        </StackFrame>
+        <StackFrame DocumentURL="c:\TeamCity\buildAgent\work\6c0148f3b3b64261\FreemiumUtilities\FormOptions.cs" ExceptionStackDepth="8" LineNumber="40" Method="public FormOptions();" Type="[FreemiumUtilities]FreemiumUtilities.FormOptions">
+            <Local ID="4" Name="&lt;&gt;g__initLocal0" Type="class [mscorlib]System.Collections.Generic.Dictionary`2&lt;System.String, System.Int32&gt;" />
+            <Local ID="5" Name="&lt;&gt;g__initLocal1" Type="class [mscorlib]System.Collections.Generic.Dictionary`2&lt;System.String, System.Int32&gt;" />
+            <This ID="1" Name="this" />
+        </StackFrame>
+        <StackFrame DocumentURL="c:\TeamCity\buildAgent\work\6c0148f3b3b64261\FreemiumUtilities\MainWindow.xaml.cs" ExceptionStackDepth="9" LineNumber="339" Method="private void OptionChanged(object sender, SelectionChangedEventArgs e);" Type="[FreemiumUtilities]FreemiumUtilities.MainWindow">
+            <Local ID="6" Name="context" Type="class [PresentationFramework]System.Windows.Controls.ComboBox" />
+            <Local Name="frmOptions" Null="1" Type="class [FreemiumUtilities]FreemiumUtilities.FormOptions" />
+            <Local Name="frmRestorePoint" Null="1" Type="class [FreemiumUtilities]FreemiumUtilities.FormRestorePoint" />
+            <Local Name="sysInfo" Null="1" Type="class [System]System.Diagnostics.Process" />
+            <Local Name="&lt;&gt;g__initLocal0" Null="1" Type="class [System]System.Diagnostics.Process" />
+            <This ID="7" Name="this" />
+            <Parameter ID="6" Name="sender" />
+            <Parameter ID="8" Name="e" />
+        </StackFrame>
+    </StackTrace>
+    <Objects>
+        <ObjectDef ID="0" Type="System.UnauthorizedAccessException" Value="&quot;System.UnauthorizedAccessException: Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied.&#xD;&#xA;   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode)&#xD;&#xA;   at &#xE;.&#x1;.&#x2;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)&#xD;&#xA;   at &#xE;.&#x1;..ctor()&#xD;&#xA;   at FreemiumUtilities.MainWindow.OptionChanged(Object sender, SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.ComboBox.OnSelectionChanged(SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(List`1 unselectedItems, List`1 selectedItems)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.SelectJustThisItem(Object item, Boolean assumeInItemsCollection)&#xD;&#xA;   at System.Windows.Controls.ComboBox.NotifyComboBoxItemMouseUp(ComboBoxItem comboBoxItem)&#xD;&#xA;   at System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#xD;&#xA;   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessStagingArea()&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#xD;&#xA;   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)&quot;">
+            <Field ID="9" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="1" Type="[FreemiumUtilities]FreemiumUtilities.FormOptions" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field ID="4" Name="langIndex" Type="System.Collections.Generic.Dictionary`2" />
+            <Field ID="5" Name="themeIndex" Type="System.Collections.Generic.Dictionary`2" />
+            <Field Name="components" Null="1" Type="[System]System.ComponentModel.IContainer" />
+            <Field ID="10" Name="Language" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="11" Name="Languages" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox" />
+            <Field ID="12" Name="Theme" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="2" Name="cboThemes" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox" />
+            <Field ID="13" Name="chkMinToTray" Type="[System.Windows.Forms]System.Windows.Forms.CheckBox" />
+            <Field ID="14" Name="chkShowBaloon" Type="[System.Windows.Forms]System.Windows.Forms.CheckBox" />
+            <Field ID="15" Name="contextMenu" Type="[System.Windows.Forms]System.Windows.Forms.GroupBox" />
+            <Field ID="16" Name="clbContextMenuOptions" Type="[System.Windows.Forms]System.Windows.Forms.CheckedListBox" />
+            <Field ID="17" Name="SelectContextMenus" Type="[System.Windows.Forms]System.Windows.Forms.Label" />
+            <Field ID="18" Name="btnOK" Type="[System.Windows.Forms]System.Windows.Forms.Button" />
+            <Field ID="19" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="2" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;">
+            <Field Name="autoCompleteDroppedDown" Type="System.Boolean" Value="false" />
+            <Field Name="flatStyle" Type="[System.Windows.Forms]System.Windows.Forms.FlatStyle" Value="Standard" />
+            <Field Name="updateCount" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="autoCompleteTimeStamp" Type="System.Int64" Value="0 (0x0)" />
+            <Field Name="selectedIndex" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="allowCommit" Type="System.Boolean" Value="true" />
+            <Field Name="requestedHeight" Type="System.Int32" Value="30 (0x1e)" />
+            <Field Name="childEdit" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/ComboBoxChildNativeWindow" />
+            <Field Name="childListBox" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/ComboBoxChildNativeWindow" />
+            <Field Name="dropDownHandle" Type="System.IntPtr" Value="0 (0x0)" />
+            <Field ID="20" Name="itemsCollection" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/ObjectCollection" />
+            <Field Name="prefHeightCache" Type="System.Int16" Value="25 (0x19)" />
+            <Field Name="maxDropDownItems" Type="System.Int16" Value="8 (0x8)" />
+            <Field Name="integralHeight" Type="System.Boolean" Value="true" />
+            <Field Name="mousePressed" Type="System.Boolean" Value="false" />
+            <Field Name="mouseEvents" Type="System.Boolean" Value="false" />
+            <Field Name="mouseInEdit" Type="System.Boolean" Value="false" />
+            <Field Name="sorted" Type="System.Boolean" Value="false" />
+            <Field Name="fireSetFocus" Type="System.Boolean" Value="true" />
+            <Field Name="fireLostFocus" Type="System.Boolean" Value="true" />
+            <Field Name="mouseOver" Type="System.Boolean" Value="false" />
+            <Field Name="suppressNextWindosPos" Type="System.Boolean" Value="false" />
+            <Field Name="canFireLostFocus" Type="System.Boolean" Value="false" />
+            <Field Name="currentText" Type="System.String" Value="&quot;&quot;" />
+            <Field Name="lastTextChangedValue" Null="1" Type="System.String" />
+            <Field Name="dropDown" Type="System.Boolean" Value="false" />
+            <Field ID="21" Name="finder" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/AutoCompleteDropDownFinder" />
+            <Field Name="selectedValueChangedFired" Type="System.Boolean" Value="true" />
+            <Field Name="autoCompleteMode" Type="[System.Windows.Forms]System.Windows.Forms.AutoCompleteMode" Value="None" />
+            <Field Name="autoCompleteSource" Type="[System.Windows.Forms]System.Windows.Forms.AutoCompleteSource" Value="None" />
+            <Field Name="autoCompleteCustomSource" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.AutoCompleteStringCollection" />
+            <Field Name="stringSource" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.StringSource" />
+            <Field Name="fromHandleCreate" Type="System.Boolean" Value="false" />
+            <Field ID="22" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="3" Type="System.EventArgs">
+            <Field ID="23" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="4" Type="System.Collections.Generic.Dictionary`2" Value="&quot;System.Collections.Generic.Dictionary`2[System.String,System.Int32]&quot;">
+            <IEnumerable>
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[en, 0]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[de, 1]&quot;" />
+            </IEnumerable>
+            <Field ID="24" Name="buckets" Type="System.Int32" />
+            <Field ID="25" Name="entries" Type="System.Collections.Generic.Dictionary`2/Entry" />
+            <Field Name="count" Type="System.Int32" Value="2 (0x2)" />
+            <Field Name="version" Type="System.Int32" Value="2 (0x2)" />
+            <Field Name="freeList" Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Field Name="freeCount" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="26" Name="comparer" Type="System.Collections.Generic.IEqualityComparer`1" />
+            <Field Name="keys" Null="1" Type="System.Collections.Generic.Dictionary`2/KeyCollection" />
+            <Field Name="values" Null="1" Type="System.Collections.Generic.Dictionary`2/ValueCollection" />
+            <Field Name="_syncRoot" Null="1" Type="System.Object" />
+            <Field Name="m_siInfo" Null="1" Type="System.Runtime.Serialization.SerializationInfo" />
+            <Field ID="27" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="5" Type="System.Collections.Generic.Dictionary`2" Value="&quot;System.Collections.Generic.Dictionary`2[System.String,System.Int32]&quot;">
+            <IEnumerable>
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Blue, 0]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Green, 1]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Red, 1]&quot;" />
+            </IEnumerable>
+            <Field ID="28" Name="buckets" Type="System.Int32" />
+            <Field ID="29" Name="entries" Type="System.Collections.Generic.Dictionary`2/Entry" />
+            <Field Name="count" Type="System.Int32" Value="3 (0x3)" />
+            <Field Name="version" Type="System.Int32" Value="3 (0x3)" />
+            <Field Name="freeList" Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Field Name="freeCount" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="26" Name="comparer" Type="System.Collections.Generic.IEqualityComparer`1" />
+            <Field Name="keys" Null="1" Type="System.Collections.Generic.Dictionary`2/KeyCollection" />
+            <Field Name="values" Null="1" Type="System.Collections.Generic.Dictionary`2/ValueCollection" />
+            <Field Name="_syncRoot" Null="1" Type="System.Object" />
+            <Field Name="m_siInfo" Null="1" Type="System.Runtime.Serialization.SerializationInfo" />
+            <Field ID="30" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="6" Type="[PresentationFramework]System.Windows.Controls.ComboBox">
+            <Field Name="_editableTextBoxSite" Null="1" Type="[PresentationFramework]System.Windows.Controls.TextBox" />
+            <Field ID="31" Name="_dropDownPopup" Type="[PresentationFramework]System.Windows.Controls.Primitives.Popup" />
+            <Field Name="_textBoxSelectionStart" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="_cacheValid" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000000000000000001}&quot;" />
+            <Field Name="_highlightedElement" Null="1" Type="System.WeakReference" />
+            <Field Name="_autoScrollTimer" Null="1" Type="[WindowsBase]System.Windows.Threading.DispatcherTimer" />
+            <Field Name="_clonedElement" Null="1" Type="[PresentationCore]System.Windows.UIElement" />
+            <Field ID="32" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="7" Type="[FreemiumUtilities]FreemiumUtilities.MainWindow">
+            <Field Name="apppath" Type="System.String" Value="&quot;file:\C:\Program Files\Covus Freemium\Free System Utilities&quot;" />
+            <Field ID="33" Name="languages" Type="System.String" />
+            <Field ID="34" Name="navigationButtonFirstSelectedStyle" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="35" Name="navigationButtonFirstStyle" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="36" Name="navigationButtonSelectedStyle" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="37" Name="navigationButtonStyle" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="7" Name="AppMainWindow" Type="[FreemiumUtilities]FreemiumUtilities.MainWindow" />
+            <Field ID="38" Name="Shape" Type="[PresentationFramework]System.Windows.Shapes.Path" />
+            <Field ID="39" Name="PanelOneClickHeader" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+            <Field ID="40" Name="PanelCleanUpHeader" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+            <Field ID="41" Name="PanelImprovePerformanceHeader" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+            <Field ID="42" Name="PanelPrivacyHeader" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+            <Field ID="43" Name="PanelOneClick" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+            <Field ID="44" Name="ScanOnly" Type="[PresentationFramework]System.Windows.Controls.RadioButton" />
+            <Field ID="45" Name="BackgroundShape" Type="[PresentationFramework]System.Windows.Shapes.Rectangle" />
+            <Field ID="46" Name="GreenProgressBar" Type="[PresentationFramework]System.Windows.Controls.Border" />
+            <Field ID="47" Name="PanelOneClickShutter" Type="[PresentationFramework]System.Windows.Controls.Border" />
+            <Field ID="48" Name="PanelCleanUp" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+            <Field ID="49" Name="PanelImprovePerformance" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+            <Field ID="50" Name="PanelPrivacy" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+            <Field ID="51" Name="LinkPanelCleanUp" Type="[PresentationFramework]System.Windows.Controls.Button" />
+            <Field ID="52" Name="LinkPanelImprovePerformance" Type="[PresentationFramework]System.Windows.Controls.Button" />
+            <Field ID="53" Name="LinkPanelPrivacy" Type="[PresentationFramework]System.Windows.Controls.Button" />
+            <Field Name="_contentLoaded" Type="System.Boolean" Value="true" />
+            <Field ID="54" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="8" Type="[PresentationFramework]System.Windows.Controls.SelectionChangedEventArgs">
+            <Field ID="55" Name="_addedItems" Type="System.Object" />
+            <Field ID="56" Name="_removedItems" Type="System.Object" />
+            <Field ID="57" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="9" Type="System.SystemException" Value="&quot;System.UnauthorizedAccessException: Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied.&#xD;&#xA;   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode)&#xD;&#xA;   at &#xE;.&#x1;.&#x2;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)&#xD;&#xA;   at &#xE;.&#x1;..ctor()&#xD;&#xA;   at FreemiumUtilities.MainWindow.OptionChanged(Object sender, SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.ComboBox.OnSelectionChanged(SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(List`1 unselectedItems, List`1 selectedItems)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.SelectJustThisItem(Object item, Boolean assumeInItemsCollection)&#xD;&#xA;   at System.Windows.Controls.ComboBox.NotifyComboBoxItemMouseUp(ComboBoxItem comboBoxItem)&#xD;&#xA;   at System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#xD;&#xA;   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessStagingArea()&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#xD;&#xA;   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)&quot;">
+            <Field ID="58" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="10" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Language:&quot;" />
+        <ObjectDef ID="11" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 2&quot;" />
+        <ObjectDef ID="12" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Theme:&quot;" />
+        <ObjectDef ID="13" Type="[System.Windows.Forms]System.Windows.Forms.CheckBox" Value="&quot;System.Windows.Forms.CheckBox, CheckState: 0&quot;" />
+        <ObjectDef ID="14" Type="[System.Windows.Forms]System.Windows.Forms.CheckBox" Value="&quot;System.Windows.Forms.CheckBox, CheckState: 0&quot;" />
+        <ObjectDef ID="15" Type="[System.Windows.Forms]System.Windows.Forms.GroupBox" Value="&quot;System.Windows.Forms.GroupBox, Text: Context Menu&quot;" />
+        <ObjectDef ID="16" Type="[System.Windows.Forms]System.Windows.Forms.CheckedListBox" Value="&quot;System.Windows.Forms.CheckedListBox, Items.Count: 6, Items[0]: Analyse with System Utilities&quot;" />
+        <ObjectDef ID="17" Type="[System.Windows.Forms]System.Windows.Forms.Label" Value="&quot;System.Windows.Forms.Label, Text: Select the context menus that you want to integrate into Windows Explorer&quot;" />
+        <ObjectDef ID="18" Type="[System.Windows.Forms]System.Windows.Forms.Button" Value="&quot;System.Windows.Forms.Button, Text: OK&quot;" />
+        <ObjectDef ID="19" Type="[System.Windows.Forms]System.Windows.Forms.Form" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field Name="formState" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{01000100000001000000100000110010}&quot;" />
+            <Field Name="formStateEx" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000001000000000000}&quot;" />
+            <Field ID="59" Name="icon" Type="[System.Drawing]System.Drawing.Icon" />
+            <Field Name="smallIcon" Null="1" Type="[System.Drawing]System.Drawing.Icon" />
+            <Field Name="autoScaleBaseSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="minAutoSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="restoredWindowBounds" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=-1,Y=-1,Width=-1,Height=-1}&quot;" />
+            <Field Name="restoredWindowBoundsSpecified" Type="[System.Windows.Forms]System.Windows.Forms.BoundsSpecified" Value="None" />
+            <Field Name="dialogResult" Type="[System.Windows.Forms]System.Windows.Forms.DialogResult" Value="None" />
+            <Field Name="ctlClient" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.MdiClient" />
+            <Field Name="ownerWindow" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.NativeWindow" />
+            <Field Name="userWindowText" Type="System.String" Value="&quot;Options&quot;" />
+            <Field Name="securityZone" Null="1" Type="System.String" />
+            <Field Name="securitySite" Null="1" Type="System.String" />
+            <Field Name="rightToLeftLayout" Type="System.Boolean" Value="false" />
+            <Field Name="restoreBounds" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=0,Y=0,Width=599,Height=473}&quot;" />
+            <Field Name="closeReason" Type="[System.Windows.Forms]System.Windows.Forms.CloseReason" Value="None" />
+            <Field Name="sizeGripRenderer" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.VisualStyles.VisualStyleRenderer" />
+            <Field ID="60" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="20" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/ObjectCollection" />
+        <ObjectDef ID="21" Type="[System.Windows.Forms]System.Windows.Forms.ComboBox/AutoCompleteDropDownFinder" />
+        <ObjectDef ID="22" Type="[System.Windows.Forms]System.Windows.Forms.ListControl" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;">
+            <Field Name="dataSource" Null="1" Type="System.Object" />
+            <Field Name="dataManager" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.CurrencyManager" />
+            <Field Name="displayMember" Type="[System.Windows.Forms]System.Windows.Forms.BindingMemberInfo" Value="&quot;System.Windows.Forms.BindingMemberInfo&quot;" />
+            <Field Name="valueMember" Type="[System.Windows.Forms]System.Windows.Forms.BindingMemberInfo" Value="&quot;System.Windows.Forms.BindingMemberInfo&quot;" />
+            <Field Name="formatString" Type="System.String" Value="&quot;&quot;" />
+            <Field Name="formatInfo" Null="1" Type="System.IFormatProvider" />
+            <Field Name="formattingEnabled" Type="System.Boolean" Value="true" />
+            <Field Name="displayMemberConverter" Null="1" Type="[System]System.ComponentModel.TypeConverter" />
+            <Field Name="isDataSourceInitialized" Type="System.Boolean" Value="false" />
+            <Field Name="isDataSourceInitEventHooked" Type="System.Boolean" Value="false" />
+            <Field Name="inSetDataConnection" Type="System.Boolean" Value="false" />
+            <Field ID="61" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="23" Type="System.Object" Value="&quot;System.EventArgs&quot;" />
+        <ObjectDef ID="24" Length="3" Rank="1" Type="System.Int32">
+            <Object Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Object Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Object Type="System.Int32" Value="1 (0x1)" />
+        </ObjectDef>
+        <ObjectDef ID="25" Length="3" Rank="1" Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32][]&quot;">
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+        </ObjectDef>
+        <ObjectDef ID="26" Type="System.Collections.Generic.GenericEqualityComparer`1" Value="&quot;System.Collections.Generic.GenericEqualityComparer`1[System.String]&quot;" />
+        <ObjectDef ID="27" Type="System.Object" Value="&quot;System.Collections.Generic.Dictionary`2[System.String,System.Int32]&quot;">
+            <IEnumerable>
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[en, 0]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[de, 1]&quot;" />
+            </IEnumerable>
+        </ObjectDef>
+        <ObjectDef ID="28" Length="3" Rank="1" Type="System.Int32">
+            <Object Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Object Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Object Type="System.Int32" Value="2 (0x2)" />
+        </ObjectDef>
+        <ObjectDef ID="29" Length="3" Rank="1" Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32][]&quot;">
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+            <Object Type="System.Collections.Generic.Dictionary`2/Entry" Value="&quot;System.Collections.Generic.Dictionary`2+Entry[System.String,System.Int32]&quot;" />
+        </ObjectDef>
+        <ObjectDef ID="30" Type="System.Object" Value="&quot;System.Collections.Generic.Dictionary`2[System.String,System.Int32]&quot;">
+            <IEnumerable>
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Blue, 0]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Green, 1]&quot;" />
+                <Object Type="System.Collections.Generic.KeyValuePair`2" Value="&quot;[Red, 1]&quot;" />
+            </IEnumerable>
+        </ObjectDef>
+        <ObjectDef ID="31" Type="[PresentationFramework]System.Windows.Controls.Primitives.Popup" />
+        <ObjectDef ID="32" Type="[PresentationFramework]System.Windows.Controls.Primitives.Selector">
+            <Field ID="62" Name="_selectedItems" Type="[PresentationFramework]System.Windows.Controls.Primitives.Selector/InternalSelectedItemsStorage" />
+            <Field Name="_lastMousePosition" Type="[WindowsBase]System.Windows.Point" Value="&quot;15.4000000000001,21&quot;" />
+            <Field ID="63" Name="_selectionChangeInstance" Type="[PresentationFramework]System.Windows.Controls.Primitives.Selector/SelectionChanger" />
+            <Field Name="_cacheValid" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000000000000000000}&quot;" />
+            <Field ID="64" Name="_focusEnterMainFocusScopeEventHandler" Type="System.EventHandler" />
+            <Field ID="65" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="33" Length="2" Rank="1" Type="System.String">
+            <Object Type="System.String" Value="&quot;en&quot;" />
+            <Object Type="System.String" Value="&quot;de&quot;" />
+        </ObjectDef>
+        <ObjectDef ID="34" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="35" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="36" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="37" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="38" Type="[PresentationFramework]System.Windows.Shapes.Path" />
+        <ObjectDef ID="39" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+        <ObjectDef ID="40" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+        <ObjectDef ID="41" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+        <ObjectDef ID="42" Type="[PresentationFramework]System.Windows.Controls.TextBlock" />
+        <ObjectDef ID="43" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+        <ObjectDef ID="44" Type="[PresentationFramework]System.Windows.Controls.RadioButton" Value="&quot;System.Windows.Controls.RadioButton Content:Scan Only IsChecked:True&quot;" />
+        <ObjectDef ID="45" Type="[PresentationFramework]System.Windows.Shapes.Rectangle" />
+        <ObjectDef ID="46" Type="[PresentationFramework]System.Windows.Controls.Border" />
+        <ObjectDef ID="47" Type="[PresentationFramework]System.Windows.Controls.Border" />
+        <ObjectDef ID="48" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+        <ObjectDef ID="49" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+        <ObjectDef ID="50" Type="[PresentationFramework]System.Windows.Controls.Grid" />
+        <ObjectDef ID="51" Type="[PresentationFramework]System.Windows.Controls.Button" />
+        <ObjectDef ID="52" Type="[PresentationFramework]System.Windows.Controls.Button" />
+        <ObjectDef ID="53" Type="[PresentationFramework]System.Windows.Controls.Button" />
+        <ObjectDef ID="54" Type="[PresentationFramework]System.Windows.Window" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="66" Name="_swh" Type="[PresentationFramework]System.Windows.Window/SourceWindowHelper" />
+            <Field Name="_ownerWindow" Null="1" Type="[PresentationFramework]System.Windows.Window" />
+            <Field Name="_ownerHandle" Type="System.IntPtr" Value="0 (0x0)" />
+            <Field ID="67" Name="_ownedWindows" Type="[PresentationFramework]System.Windows.WindowCollection" />
+            <Field Name="_threadWindowHandles" Null="1" Type="System.Collections.ArrayList" />
+            <Field Name="_updateHwndSize" Type="System.Boolean" Value="true" />
+            <Field Name="_updateHwndLocation" Type="System.Boolean" Value="true" />
+            <Field Name="_updateStartupLocation" Type="System.Boolean" Value="false" />
+            <Field Name="_coercedFromWmMoveChanged" Type="System.Boolean" Value="false" />
+            <Field Name="_isVisible" Type="System.Boolean" Value="true" />
+            <Field Name="_isVisibilitySet" Type="System.Boolean" Value="true" />
+            <Field Name="_resetKeyboardCuesProperty" Type="System.Boolean" Value="false" />
+            <Field Name="_previousKeyboardCuesProperty" Type="System.Boolean" Value="false" />
+            <Field Name="_postContentRenderedFromLoadedHandler" Type="System.Boolean" Value="false" />
+            <Field Name="_disposed" Type="System.Boolean" Value="false" />
+            <Field Name="_appShuttingDown" Type="System.Boolean" Value="false" />
+            <Field Name="_ignoreCancel" Type="System.Boolean" Value="false" />
+            <Field Name="_showingAsDialog" Type="System.Boolean" Value="false" />
+            <Field Name="_isClosing" Type="System.Boolean" Value="false" />
+            <Field Name="_visibilitySetInternally" Type="System.Boolean" Value="false" />
+            <Field Name="_trackMinWidthDeviceUnits" Type="System.Double" Value="2" />
+            <Field Name="_trackMinHeightDeviceUnits" Type="System.Double" Value="2" />
+            <Field Name="_trackMaxWidthDeviceUnits" Type="System.Double" Value="1612" />
+            <Field Name="_trackMaxHeightDeviceUnits" Type="System.Double" Value="1212" />
+            <Field Name="_currentHwndWidthDevicePixels" Type="System.Double" Value="895" />
+            <Field Name="_currentHwndHeightDevicePixels" Type="System.Double" Value="719" />
+            <Field Name="_actualTop" Type="System.Double" Value="227.2" />
+            <Field Name="_actualLeft" Type="System.Double" Value="236" />
+            <Field Name="_inUserSizeMove" Type="System.Boolean" Value="false" />
+            <Field Name="_userResized" Type="System.Boolean" Value="true" />
+            <Field Name="_inTrustedSubWindow" Type="System.Boolean" Value="false" />
+            <Field ID="68" Name="_icon" Type="[PresentationCore]System.Windows.Media.Imaging.BitmapFrame" />
+            <Field Name="_defaultLargeIconHandle" Null="1" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+            <Field Name="_defaultSmallIconHandle" Null="1" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+            <Field ID="69" Name="_currentLargeIconHandle" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+            <Field ID="70" Name="_currentSmallIconHandle" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+            <Field Name="_dialogResult" Null="1" Type="System.Nullable`1" />
+            <Field Name="_dialogOwnerHandle" Type="System.IntPtr" Value="0 (0x0)" />
+            <Field Name="_dialogPreviousActiveHandle" Type="System.IntPtr" Value="0 (0x0)" />
+            <Field Name="_dispatcherFrame" Null="1" Type="[WindowsBase]System.Windows.Threading.DispatcherFrame" />
+            <Field Name="_windowStartupLocation" Type="[PresentationFramework]System.Windows.WindowStartupLocation" Value="CenterScreen" />
+            <Field Name="_previousWindowState" Type="[PresentationFramework]System.Windows.WindowState" Value="Normal" />
+            <Field Name="_hiddenWindow" Null="1" Type="[PresentationCore]System.Windows.Interop.HwndSource" />
+            <Field ID="71" Name="_events" Type="[System]System.ComponentModel.EventHandlerList" />
+            <Field Name="_styleDoNotUse" Type="[WindowsBase]MS.Internal.SecurityCriticalDataForSet`1" Value="&quot;MS.Internal.SecurityCriticalDataForSet`1[System.Int32]&quot;" />
+            <Field Name="_styleExDoNotUse" Type="[WindowsBase]MS.Internal.SecurityCriticalDataForSet`1" Value="&quot;MS.Internal.SecurityCriticalDataForSet`1[System.Int32]&quot;" />
+            <Field Name="_manager" Null="1" Type="[PresentationFramework]System.Windows.Window/HwndStyleManager" />
+            <Field Name="_resizeGripControl" Null="1" Type="[PresentationFramework]System.Windows.Controls.Control" />
+            <Field Name="_contentRenderedCallback" Null="1" Type="[WindowsBase]System.Windows.Threading.DispatcherOperation" />
+            <Field ID="72" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="55" Length="1" Rank="1" Type="System.Object">
+            <Object ID="73" />
+        </ObjectDef>
+        <ObjectDef ID="56" Length="0" Rank="1" Type="System.Object" />
+        <ObjectDef ID="57" Type="[PresentationCore]System.Windows.RoutedEventArgs" Value="&quot;System.Windows.Controls.SelectionChangedEventArgs&quot;">
+            <Field ID="74" Name="_routedEvent" Type="[PresentationCore]System.Windows.RoutedEvent" />
+            <Field ID="6" Name="_source" Type="System.Object" />
+            <Field ID="6" Name="_originalSource" Type="System.Object" />
+            <Field Name="_flags" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000000000000000000}&quot;" />
+            <Field ID="75" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="58" Type="System.Exception" Value="&quot;System.UnauthorizedAccessException: Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied.&#xD;&#xA;   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode)&#xD;&#xA;   at &#xE;.&#x1;.&#x2;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)&#xD;&#xA;   at &#xE;.&#x1;..ctor()&#xD;&#xA;   at FreemiumUtilities.MainWindow.OptionChanged(Object sender, SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.ComboBox.OnSelectionChanged(SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(List`1 unselectedItems, List`1 selectedItems)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.SelectJustThisItem(Object item, Boolean assumeInItemsCollection)&#xD;&#xA;   at System.Windows.Controls.ComboBox.NotifyComboBoxItemMouseUp(ComboBoxItem comboBoxItem)&#xD;&#xA;   at System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#xD;&#xA;   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessStagingArea()&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#xD;&#xA;   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)&quot;">
+            <Field Name="_className" Type="System.String" Value="&quot;System.UnauthorizedAccessException&quot;" />
+            <Field Name="_exceptionMethod" Null="1" Type="System.Reflection.MethodBase" />
+            <Field Name="_exceptionMethodString" Null="1" Type="System.String" />
+            <Field Name="_message" Type="System.String" Value="&quot;Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied.&quot;" />
+            <Field ID="76" Name="_data" Type="System.Collections.IDictionary" />
+            <Field Name="_innerException" Null="1" Type="System.Exception" />
+            <Field Name="_helpURL" Null="1" Type="System.String" />
+            <Field ID="77" Name="_stackTrace" Type="System.Object" />
+            <Field Name="_stackTraceString" Null="1" Type="System.String" />
+            <Field Name="_remoteStackTraceString" Null="1" Type="System.String" />
+            <Field Name="_remoteStackIndex" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="_dynamicMethods" Null="1" Type="System.Object" />
+            <Field Name="_HResult" Type="System.Int32" Value="-2147024891 (0x80070005)" />
+            <Field Name="_source" Null="1" Type="System.String" />
+            <Field Name="_xptrs" Type="System.IntPtr" Value="0 (0x0)" />
+            <Field Name="_xcode" Type="System.Int32" Value="-532459699 (0xe0434f4d)" />
+            <Field ID="78" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="59" Type="[System.Drawing]System.Drawing.Icon" Value="&quot;(Icon)&quot;" />
+        <ObjectDef ID="60" Type="[System.Windows.Forms]System.Windows.Forms.ContainerControl" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field Name="activeControl" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="focusedControl" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="unvalidatedControl" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="autoValidate" Type="[System.Windows.Forms]System.Windows.Forms.AutoValidate" Value="Inherit" />
+            <Field Name="autoValidateChanged" Null="1" Type="System.EventHandler" />
+            <Field Name="autoScaleDimensions" Type="[System.Drawing]System.Drawing.SizeF" Value="&quot;{Width=8, Height=16}&quot;" />
+            <Field Name="currentAutoScaleDimensions" Type="[System.Drawing]System.Drawing.SizeF" Value="&quot;{Width=8, Height=16}&quot;" />
+            <Field Name="autoScaleMode" Type="[System.Windows.Forms]System.Windows.Forms.AutoScaleMode" Value="Font" />
+            <Field Name="state" Type="[System]System.Collections.Specialized.BitVector32" Value="&quot;BitVector32{00000000000000000000000000000000}&quot;" />
+            <Field ID="79" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="61" Type="[System.Windows.Forms]System.Windows.Forms.Control" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;">
+            <Field ID="80" Name="window" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+            <Field ID="1" Name="parent" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="reflectParent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field ID="81" Name="createParams" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" />
+            <Field Name="x" Type="System.Int32" Value="101 (0x65)" />
+            <Field Name="y" Type="System.Int32" Value="50 (0x32)" />
+            <Field Name="width" Type="System.Int32" Value="160 (0xa0)" />
+            <Field Name="height" Type="System.Int32" Value="25 (0x19)" />
+            <Field Name="clientWidth" Type="System.Int32" Value="156 (0x9c)" />
+            <Field Name="clientHeight" Type="System.Int32" Value="21 (0x15)" />
+            <Field Name="state" Type="System.Int32" Value="131598 (0x2020e)" />
+            <Field Name="state2" Type="System.Int32" Value="2120 (0x848)" />
+            <Field Name="controlStyle" Type="[System.Windows.Forms]System.Windows.Forms.ControlStyles" Value="Selectable, StandardDoubleClick, AllPaintingInWmPaint" />
+            <Field Name="tabIndex" Type="System.Int32" Value="1 (0x1)" />
+            <Field Name="text" Type="System.String" Value="&quot;Blue&quot;" />
+            <Field Name="layoutSuspendCount" Type="System.Byte" Value="0 (0x0)" />
+            <Field Name="requiredScaling" Type="System.Byte" Value="0 (0x0)" />
+            <Field ID="82" Name="propertyStore" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+            <Field Name="trackMouseEvent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.NativeMethods/TRACKMOUSEEVENT" />
+            <Field Name="updateCount" Type="System.Int16" Value="0 (0x0)" />
+            <Field ID="83" Name="cachedLayoutEventArgs" Type="[System.Windows.Forms]System.Windows.Forms.LayoutEventArgs" />
+            <Field Name="threadCallbackList" Null="1" Type="System.Collections.Queue" />
+            <Field Name="uiCuesState" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="84" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="62" Type="[PresentationFramework]System.Windows.Controls.Primitives.Selector/InternalSelectedItemsStorage" />
+        <ObjectDef ID="63" Type="[PresentationFramework]System.Windows.Controls.Primitives.Selector/SelectionChanger" />
+        <ObjectDef ID="64" Type="System.EventHandler" />
+        <ObjectDef ID="65" Type="[PresentationFramework]System.Windows.Controls.ItemsControl">
+            <Field Name="_focusedItem" Null="1" Type="System.Object" />
+            <Field ID="85" Name="_items" Type="[PresentationFramework]System.Windows.Controls.ItemCollection" />
+            <Field ID="86" Name="_itemContainerGenerator" Type="[PresentationFramework]System.Windows.Controls.ItemContainerGenerator" />
+            <Field ID="87" Name="_itemsHost" Type="[PresentationFramework]System.Windows.Controls.Panel" />
+            <Field Name="_scrollHost" Null="1" Type="[PresentationFramework]System.Windows.Controls.ScrollViewer" />
+            <Field ID="88" Name="_groupStyle" Type="[WindowsBase]System.Collections.ObjectModel.ObservableCollection`1" />
+            <Field ID="89" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="66" Type="[PresentationFramework]System.Windows.Window/SourceWindowHelper" />
+        <ObjectDef ID="67" Type="[PresentationFramework]System.Windows.WindowCollection" />
+        <ObjectDef ID="68" Type="[PresentationCore]System.Windows.Media.Imaging.BitmapFrameDecode" />
+        <ObjectDef ID="69" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+        <ObjectDef ID="70" Type="[WindowsBase]MS.Win32.NativeMethods/IconHandle" />
+        <ObjectDef ID="71" Type="[System]System.ComponentModel.EventHandlerList" />
+        <ObjectDef ID="72" Type="[PresentationFramework]System.Windows.Controls.ContentControl" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="90" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="73" Type="[PresentationFramework]System.Windows.Controls.ComboBoxItem" />
+        <ObjectDef ID="74" Type="[PresentationCore]System.Windows.RoutedEvent" Value="&quot;Selector.SelectionChanged&quot;" />
+        <ObjectDef ID="75" Type="System.EventArgs" Value="&quot;System.Windows.Controls.SelectionChangedEventArgs&quot;">
+            <Field ID="91" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="76" Type="System.Collections.ListDictionaryInternal" />
+        <ObjectDef ID="77" Length="768" Rank="1" Type="System.SByte">
+            <Object Type="System.SByte" Value="45 (0x2d)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="92 (0x5c)" />
+            <Object Type="System.SByte" Value="23 (0x17)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="-33 (0xdf)" />
+            <Object Type="System.SByte" Value="-18 (0xee)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+            <Object Type="System.SByte" Value="0 (0x0)" />
+        </ObjectDef>
+        <ObjectDef ID="78" Type="System.Object" Value="&quot;System.UnauthorizedAccessException: Access to the path 'C:\Program Files\Covus Freemium\Free System Utilities\Themes\Blue\Theme.xaml' is denied.&#xD;&#xA;   at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)&#xD;&#xA;   at System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)&#xD;&#xA;   at System.IO.FileStream..ctor(String path, FileMode mode)&#xD;&#xA;   at &#xE;.&#x1;.&#x2;(Object &#x2;, EventArgs &#x3;)&#xD;&#xA;   at System.Windows.Forms.ComboBox.OnSelectedIndexChanged(EventArgs e)&#xD;&#xA;   at System.Windows.Forms.ComboBox.set_SelectedIndex(Int32 value)&#xD;&#xA;   at &#xE;.&#x1;..ctor()&#xD;&#xA;   at FreemiumUtilities.MainWindow.OptionChanged(Object sender, SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.SelectionChangedEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.ComboBox.OnSelectionChanged(SelectionChangedEventArgs e)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.InvokeSelectionChanged(List`1 unselectedItems, List`1 selectedItems)&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.End()&#xD;&#xA;   at System.Windows.Controls.Primitives.Selector.SelectionChanger.SelectJustThisItem(Object item, Boolean assumeInItemsCollection)&#xD;&#xA;   at System.Windows.Controls.ComboBox.NotifyComboBoxItemMouseUp(ComboBoxItem comboBoxItem)&#xD;&#xA;   at System.Windows.Controls.ComboBoxItem.OnMouseLeftButtonUp(MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)&#xD;&#xA;   at System.Windows.UIElement.CrackMouseButtonEventAndReRaiseEvent(DependencyObject sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)&#xD;&#xA;   at System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)&#xD;&#xA;   at System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)&#xD;&#xA;   at System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)&#xD;&#xA;   at System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)&#xD;&#xA;   at System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)&#xD;&#xA;   at System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessStagingArea()&#xD;&#xA;   at System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)&#xD;&#xA;   at System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)&#xD;&#xA;   at System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean&amp; handled)&#xD;&#xA;   at MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Boolean isSingleParameter)&#xD;&#xA;   at System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Boolean isSingleParameter, Delegate catchHandler)&quot;" />
+        <ObjectDef ID="79" Type="[System.Windows.Forms]System.Windows.Forms.ScrollableControl" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field Name="userAutoScrollMinSize" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="displayRect" Type="[System.Drawing]System.Drawing.Rectangle" Value="&quot;{X=0,Y=0,Width=593,Height=430}&quot;" />
+            <Field Name="scrollMargin" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="requestedScrollMargin" Type="[System.Drawing]System.Drawing.Size" Value="&quot;{Width=0, Height=0}&quot;" />
+            <Field Name="scrollPosition" Type="[System.Drawing]System.Drawing.Point" Value="&quot;{X=0,Y=0}&quot;" />
+            <Field Name="dockPadding" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.ScrollableControl/DockPaddingEdges" />
+            <Field Name="scrollState" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="92" Name="verticalScroll" Type="[System.Windows.Forms]System.Windows.Forms.VScrollProperties" />
+            <Field ID="93" Name="horizontalScroll" Type="[System.Windows.Forms]System.Windows.Forms.HScrollProperties" />
+            <Field Name="resetRTLHScrollValue" Type="System.Boolean" Value="false" />
+            <Field ID="94" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="80" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+        <ObjectDef ID="81" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" Value="&quot;CreateParams {'COMBOBOX', '', 0x56210243, 0x200, {76, 41, 121, 25}}&quot;" />
+        <ObjectDef ID="82" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+        <ObjectDef ID="83" Type="[System.Windows.Forms]System.Windows.Forms.LayoutEventArgs" />
+        <ObjectDef ID="84" Type="[System]System.ComponentModel.Component" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;">
+            <Field Name="site" Null="1" Type="[System]System.ComponentModel.ISite" />
+            <Field ID="95" Name="events" Type="[System]System.ComponentModel.EventHandlerList" />
+            <Field ID="96" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="85" Type="[PresentationFramework]System.Windows.Controls.ItemCollection" />
+        <ObjectDef ID="86" Type="[PresentationFramework]System.Windows.Controls.ItemContainerGenerator" />
+        <ObjectDef ID="87" Type="[PresentationFramework]System.Windows.Controls.StackPanel" />
+        <ObjectDef ID="88" Type="[WindowsBase]System.Collections.ObjectModel.ObservableCollection`1" Value="&quot;System.Collections.ObjectModel.ObservableCollection`1[System.Windows.Controls.GroupStyle]&quot;" />
+        <ObjectDef ID="89" Type="[PresentationFramework]System.Windows.Controls.Control">
+            <Field ID="97" Name="_templateCache" Type="[PresentationFramework]System.Windows.Controls.ControlTemplate" />
+            <Field Name="_controlBoolField" Type="[PresentationFramework]System.Windows.Controls.Control/ControlBoolFlags" Value="0" />
+            <Field ID="98" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="90" Type="[PresentationFramework]System.Windows.Controls.Control" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="99" Name="_templateCache" Type="[PresentationFramework]System.Windows.Controls.ControlTemplate" />
+            <Field Name="_controlBoolField" Type="[PresentationFramework]System.Windows.Controls.Control/ControlBoolFlags" Value="0" />
+            <Field ID="100" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="91" Type="System.Object" Value="&quot;System.Windows.Controls.SelectionChangedEventArgs&quot;" />
+        <ObjectDef ID="92" Type="[System.Windows.Forms]System.Windows.Forms.VScrollProperties" />
+        <ObjectDef ID="93" Type="[System.Windows.Forms]System.Windows.Forms.HScrollProperties" />
+        <ObjectDef ID="94" Type="[System.Windows.Forms]System.Windows.Forms.Control" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field ID="101" Name="window" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+            <Field Name="parent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field Name="reflectParent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.Control" />
+            <Field ID="102" Name="createParams" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" />
+            <Field Name="x" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="y" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="width" Type="System.Int32" Value="599 (0x257)" />
+            <Field Name="height" Type="System.Int32" Value="473 (0x1d9)" />
+            <Field Name="clientWidth" Type="System.Int32" Value="593 (0x251)" />
+            <Field Name="clientHeight" Type="System.Int32" Value="430 (0x1ae)" />
+            <Field Name="state" Type="System.Int32" Value="655372 (0xa000c)" />
+            <Field Name="state2" Type="System.Int32" Value="2056 (0x808)" />
+            <Field Name="controlStyle" Type="[System.Windows.Forms]System.Windows.Forms.ControlStyles" Value="ContainerControl, UserPaint, StandardClick, Selectable, StandardDoubleClick, UseTextForAccessibility" />
+            <Field Name="tabIndex" Type="System.Int32" Value="-1 (0xffffffff)" />
+            <Field Name="text" Type="System.String" Value="&quot;Options&quot;" />
+            <Field Name="layoutSuspendCount" Type="System.Byte" Value="0 (0x0)" />
+            <Field Name="requiredScaling" Type="System.Byte" Value="0 (0x0)" />
+            <Field ID="103" Name="propertyStore" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+            <Field Name="trackMouseEvent" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.NativeMethods/TRACKMOUSEEVENT" />
+            <Field Name="updateCount" Type="System.Int16" Value="0 (0x0)" />
+            <Field Name="cachedLayoutEventArgs" Null="1" Type="[System.Windows.Forms]System.Windows.Forms.LayoutEventArgs" />
+            <Field Name="threadCallbackList" Null="1" Type="System.Collections.Queue" />
+            <Field Name="uiCuesState" Type="System.Int32" Value="0 (0x0)" />
+            <Field ID="104" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="95" Type="[System]System.ComponentModel.EventHandlerList" />
+        <ObjectDef ID="96" Type="System.MarshalByRefObject" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;">
+            <Field Name="__identity" Null="1" Type="System.Object" />
+            <Field ID="105" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="97" Type="[PresentationFramework]System.Windows.Controls.ControlTemplate" />
+        <ObjectDef ID="98" Type="[PresentationFramework]System.Windows.FrameworkElement">
+            <Field ID="106" Name="_themeStyleCache" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="107" Name="_styleCache" Type="[PresentationFramework]System.Windows.Style" />
+            <Field Name="_templatedParent" Null="1" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field ID="108" Name="_templateChild" Type="[PresentationCore]System.Windows.UIElement" />
+            <Field Name="_flags" Type="[PresentationFramework]System.Windows.InternalFlags" Value="1172346881" />
+            <Field Name="_flags2" Type="[PresentationFramework]System.Windows.InternalFlags2" Value="Default, IsLoadedCache, IsParentAnFE, HasStyleChanged, HasStyleInvalidated" />
+            <Field ID="109" Name="_parent" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field Name="_inheritableProperties" Null="1" Type="[WindowsBase]MS.Utility.FrugalObjectList`1" />
+            <Field ID="110" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="99" Type="[PresentationFramework]System.Windows.Controls.ControlTemplate" />
+        <ObjectDef ID="100" Type="[PresentationFramework]System.Windows.FrameworkElement" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="111" Name="_themeStyleCache" Type="[PresentationFramework]System.Windows.Style" />
+            <Field ID="112" Name="_styleCache" Type="[PresentationFramework]System.Windows.Style" />
+            <Field Name="_templatedParent" Null="1" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field ID="113" Name="_templateChild" Type="[PresentationCore]System.Windows.UIElement" />
+            <Field Name="_flags" Type="[PresentationFramework]System.Windows.InternalFlags" Value="1172346881" />
+            <Field Name="_flags2" Type="[PresentationFramework]System.Windows.InternalFlags2" Value="Default, TreeHasLoadedChangeHandler, IsLoadedCache, HasStyleInvalidated, BypassLayoutPolicies" />
+            <Field Name="_parent" Null="1" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field Name="_inheritableProperties" Null="1" Type="[WindowsBase]MS.Utility.FrugalObjectList`1" />
+            <Field ID="114" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="101" Type="[System.Windows.Forms]System.Windows.Forms.Control/ControlNativeWindow" />
+        <ObjectDef ID="102" Type="[System.Windows.Forms]System.Windows.Forms.CreateParams" Value="&quot;CreateParams {'', 'Options', 0x2c80000, 0x50000, {574, 387, 451, 392}}&quot;" />
+        <ObjectDef ID="103" Type="[System.Windows.Forms]System.Windows.Forms.PropertyStore" />
+        <ObjectDef ID="104" Type="[System]System.ComponentModel.Component" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field Name="site" Null="1" Type="[System]System.ComponentModel.ISite" />
+            <Field ID="115" Name="events" Type="[System]System.ComponentModel.EventHandlerList" />
+            <Field ID="116" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="105" Type="System.Object" Value="&quot;System.Windows.Forms.ComboBox, Items.Count: 3&quot;" />
+        <ObjectDef ID="106" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="107" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="108" Type="[PresentationFramework]System.Windows.Controls.Border" />
+        <ObjectDef ID="109" Type="[PresentationFramework]System.Windows.Controls.DockPanel" />
+        <ObjectDef ID="110" Type="[PresentationCore]System.Windows.UIElement">
+            <Field Name="_flags" Type="[PresentationCore]System.Windows.CoreFlags" Value="SnapsToDevicePixelsCache, IsVisibleCache, AreTransformsClean, ExistsEventHandlersStore" />
+            <Field Name="_finalRect" Type="[WindowsBase]System.Windows.Rect" Value="&quot;18,0,39.6,28&quot;" />
+            <Field Name="_desiredSize" Type="[WindowsBase]System.Windows.Size" Value="&quot;39.6,28&quot;" />
+            <Field Name="_previousAvailableSize" Type="[WindowsBase]System.Windows.Size" Value="&quot;892.193333333333,84&quot;" />
+            <Field Name="_drawingContent" Null="1" Type="[PresentationCore]System.Windows.Media.IDrawingContent" />
+            <Field Name="MeasureRequest" Null="1" Type="[PresentationCore]System.Windows.ContextLayoutManager/LayoutQueue/Request" />
+            <Field Name="ArrangeRequest" Null="1" Type="[PresentationCore]System.Windows.ContextLayoutManager/LayoutQueue/Request" />
+            <Field Name="_persistId" Type="System.Int32" Value="13 (0xd)" />
+            <Field Name="sizeChangedInfo" Null="1" Type="[PresentationCore]System.Windows.SizeChangedInfo" />
+            <Field Name="_size" Type="[WindowsBase]System.Windows.Size" Value="&quot;33.6,18&quot;" />
+            <Field ID="117" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="111" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="112" Type="[PresentationFramework]System.Windows.Style" />
+        <ObjectDef ID="113" Type="[PresentationFramework]System.Windows.Controls.Border" />
+        <ObjectDef ID="114" Type="[PresentationCore]System.Windows.UIElement" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field Name="_flags" Type="[PresentationCore]System.Windows.CoreFlags" Value="SnapsToDevicePixelsCache, IsVisibleCache, AreTransformsClean, ExistsEventHandlersStore" />
+            <Field Name="_finalRect" Type="[WindowsBase]System.Windows.Rect" Value="&quot;0,0,716,575&quot;" />
+            <Field Name="_desiredSize" Type="[WindowsBase]System.Windows.Size" Value="&quot;716,575&quot;" />
+            <Field Name="_previousAvailableSize" Type="[WindowsBase]System.Windows.Size" Value="&quot;Infinity,Infinity&quot;" />
+            <Field Name="_drawingContent" Null="1" Type="[PresentationCore]System.Windows.Media.IDrawingContent" />
+            <Field Name="MeasureRequest" Null="1" Type="[PresentationCore]System.Windows.ContextLayoutManager/LayoutQueue/Request" />
+            <Field Name="ArrangeRequest" Null="1" Type="[PresentationCore]System.Windows.ContextLayoutManager/LayoutQueue/Request" />
+            <Field Name="_persistId" Type="System.Int32" Value="1 (0x1)" />
+            <Field Name="sizeChangedInfo" Null="1" Type="[PresentationCore]System.Windows.SizeChangedInfo" />
+            <Field Name="_size" Type="[WindowsBase]System.Windows.Size" Value="&quot;716,575&quot;" />
+            <Field ID="118" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="115" Type="[System]System.ComponentModel.EventHandlerList" />
+        <ObjectDef ID="116" Type="System.MarshalByRefObject" Value="&quot;&#xE;.&#x1;, Text: Options&quot;">
+            <Field Name="__identity" Null="1" Type="System.Object" />
+            <Field ID="119" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="117" Type="[PresentationCore]System.Windows.Media.Visual">
+            <Field Name="_parentIndex" Type="System.Int32" Value="1 (0x1)" />
+            <Field ID="109" Name="_parent" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field Name="_proxy" Type="[PresentationCore]System.Windows.Media.Composition.VisualProxy" Value="&quot;System.Windows.Media.Composition.VisualProxy&quot;" />
+            <Field Name="_bboxSubgraph" Type="[WindowsBase]System.Windows.Rect" Value="&quot;0,0,33.6,18&quot;" />
+            <Field Name="_offset" Type="[WindowsBase]System.Windows.Vector" Value="&quot;21,5&quot;" />
+            <Field Name="_flags" Type="[PresentationCore]System.Windows.Media.VisualFlags" Value="IsUIElement, VisibilityCache_Visible, HasChildren, TreeLevelBit0, TreeLevelBit1, TreeLevelBit3" />
+            <Field ID="120" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="118" Type="[PresentationCore]System.Windows.Media.Visual" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field Name="_parentIndex" Type="System.Int32" Value="0 (0x0)" />
+            <Field Name="_parent" Null="1" Type="[WindowsBase]System.Windows.DependencyObject" />
+            <Field Name="_proxy" Type="[PresentationCore]System.Windows.Media.Composition.VisualProxy" Value="&quot;System.Windows.Media.Composition.VisualProxy&quot;" />
+            <Field Name="_bboxSubgraph" Type="[WindowsBase]System.Windows.Rect" Value="&quot;0,0,716,575&quot;" />
+            <Field Name="_offset" Type="[WindowsBase]System.Windows.Vector" Value="&quot;0,0&quot;" />
+            <Field Name="_flags" Type="[PresentationCore]System.Windows.Media.VisualFlags" Value="ShouldPostRender, IsUIElement, VisibilityCache_Visible, SubTreeHoldsAncestorChanged, HasChildren, TreeLevelBit0" />
+            <Field ID="121" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="119" Type="System.Object" Value="&quot;&#xE;.&#x1;, Text: Options&quot;" />
+        <ObjectDef ID="120" Type="[WindowsBase]System.Windows.DependencyObject">
+            <Field ID="122" Name="_dType" Type="[WindowsBase]System.Windows.DependencyObjectType" />
+            <Field Name="_contextStorage" Null="1" Type="System.Object" />
+            <Field ID="123" Name="_effectiveValues" Type="[WindowsBase]System.Windows.EffectiveValueEntry" />
+            <Field Name="_packedData" Type="System.UInt32" Value="3677223 (0x381c27)" />
+            <Field ID="124" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="121" Type="[WindowsBase]System.Windows.DependencyObject" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="125" Name="_dType" Type="[WindowsBase]System.Windows.DependencyObjectType" />
+            <Field Name="_contextStorage" Null="1" Type="System.Object" />
+            <Field ID="126" Name="_effectiveValues" Type="[WindowsBase]System.Windows.EffectiveValueEntry" />
+            <Field Name="_packedData" Type="System.UInt32" Value="3677223 (0x381c27)" />
+            <Field ID="127" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="122" Type="[WindowsBase]System.Windows.DependencyObjectType" />
+        <ObjectDef ID="123" Length="45" Rank="1" Type="[WindowsBase]System.Windows.EffectiveValueEntry">
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+        </ObjectDef>
+        <ObjectDef ID="124" Type="[WindowsBase]System.Windows.Threading.DispatcherObject">
+            <Field ID="128" Name="_dispatcher" Type="[WindowsBase]System.Windows.Threading.Dispatcher" />
+            <Field ID="129" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="125" Type="[WindowsBase]System.Windows.DependencyObjectType" />
+        <ObjectDef ID="126" Length="48" Rank="1" Type="[WindowsBase]System.Windows.EffectiveValueEntry">
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+            <Object Type="[WindowsBase]System.Windows.EffectiveValueEntry" Value="&quot;System.Windows.EffectiveValueEntry&quot;" />
+        </ObjectDef>
+        <ObjectDef ID="127" Type="[WindowsBase]System.Windows.Threading.DispatcherObject" Value="&quot;FreemiumUtilities.MainWindow&quot;">
+            <Field ID="128" Name="_dispatcher" Type="[WindowsBase]System.Windows.Threading.Dispatcher" />
+            <Field ID="130" Name="__base" />
+        </ObjectDef>
+        <ObjectDef ID="128" Type="[WindowsBase]System.Windows.Threading.Dispatcher" />
+        <ObjectDef ID="129" Type="System.Object" />
+        <ObjectDef ID="130" Type="System.Object" Value="&quot;FreemiumUtilities.MainWindow&quot;" />
+    </Objects>
+</UnhandledExceptionReport>

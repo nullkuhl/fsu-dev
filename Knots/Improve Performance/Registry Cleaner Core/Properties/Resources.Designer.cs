@@ -295,7 +295,7 @@ namespace RegistryCleanerCore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to History Link Strings.
+        ///   Looks up a localized string similar to Link-Verlauf.
         /// </summary>
         public static string HistoryLinkStrings {
             get {
@@ -304,7 +304,7 @@ namespace RegistryCleanerCore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to History Menu Strings.
+        ///   Looks up a localized string similar to Menu-Verlauf.
         /// </summary>
         public static string HistoryMenuStrings {
             get {
@@ -331,7 +331,7 @@ namespace RegistryCleanerCore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Icon Paths.
+        ///   Looks up a localized string similar to Icon-Pfade.
         /// </summary>
         public static string IconPaths {
             get {
@@ -403,7 +403,7 @@ namespace RegistryCleanerCore.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ProcServer Subkeys.
+        ///   Looks up a localized string similar to ProcServer-Unterschlüssel.
         /// </summary>
         public static string ProcServerSubkeys {
             get {

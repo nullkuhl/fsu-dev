@@ -1,0 +1,1408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="AdminRightsNeeded" xml:space="preserve">
+    <value>Para utilizar esta característica es necesario que disponga de derechos administrativos en Windows</value>
+  </data>
+  <data name="after_scan_msg" xml:space="preserve">
+    <value>¡Se han borrado correctamente sus rastros!
+Tenga en cuenta que el sistema operativo regenera automáticamente algunos archivos y claves del registro
+cuando se eliminan. Sin embargo, los datos anteriores que contenían han sido restablecidos.</value>
+  </data>
+  <data name="AllRightsReserved" xml:space="preserve">
+    <value>Todos los derechos reservados.</value>
+  </data>
+  <data name="analyse" xml:space="preserve">
+    <value>Analizar</value>
+  </data>
+  <data name="analysis_report" xml:space="preserve">
+    <value>INFORME DE ANÁLISIS</value>
+  </data>
+  <data name="Analyzing" xml:space="preserve">
+    <value>Analizando...</value>
+  </data>
+  <data name="ApplyAndRepair" xml:space="preserve">
+    <value>Aplicar y reparar</value>
+  </data>
+  <data name="AtLogon" xml:space="preserve">
+    <value>Al iniciar sesión</value>
+  </data>
+  <data name="AtSystemStartup" xml:space="preserve">
+    <value>Al iniciar el sistema</value>
+  </data>
+  <data name="AttemptedDeletionOfValue" xml:space="preserve">
+    <value>Se intentó la eliminación del valor:</value>
+  </data>
+  <data name="AutomatedScan" xml:space="preserve">
+    <value>Análisis automatizado</value>
+  </data>
+  <data name="auto_pass" xml:space="preserve">
+    <value>Formularios inteligentes: autocompletar contraseñas</value>
+  </data>
+  <data name="BackToStartScreen" xml:space="preserve">
+    <value>Volver a Mantenimiento con 1 clic</value>
+  </data>
+  <data name="BackupsColumnHeader" xml:space="preserve">
+    <value>Copias de seguridad</value>
+  </data>
+  <data name="BrowserAssistant" xml:space="preserve">
+    <value>Asistente de navegadores</value>
+  </data>
+  <data name="BrowserAssistantDesc" xml:space="preserve">
+    <value>Administra los complementos de los navegadores y restablece la configuración secuestrada</value>
+  </data>
+  <data name="BrowserManager" xml:space="preserve">
+    <value>Administrar navegadores</value>
+  </data>
+  <data name="BrowserManagerDesc" xml:space="preserve">
+    <value>Administra los complementos de los navegadores y restaura las opciones predeterminadas</value>
+  </data>
+  <data name="ButtonCloseText" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="ButtonRestoreText" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="ButtonViewFilesContent" xml:space="preserve">
+    <value>Ver archivos</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Cancelling" xml:space="preserve">
+    <value>Cancelando...</value>
+  </data>
+  <data name="CancelRepair" xml:space="preserve">
+    <value>Cancelar reparación</value>
+  </data>
+  <data name="CancelScan" xml:space="preserve">
+    <value>Cancelar análisis</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categorías</value>
+  </data>
+  <data name="ChangeSchedule" xml:space="preserve">
+    <value>Cambiar programación</value>
+  </data>
+  <data name="check" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="CheckNETVersion" xml:space="preserve">
+    <value>Es necesario instalar .NET Framework v3.5 SP1 para ejecutar Free Computer Cleaner.
+Pulse Aceptar" para ir a la página de descarga de .NET Framework v3.5 SP1."</value>
+  </data>
+  <data name="CheckNETVersionTitle" xml:space="preserve">
+    <value>Falta .NET Framework v3.5 SP1</value>
+  </data>
+  <data name="check_all" xml:space="preserve">
+    <value>Seleccionar todo</value>
+  </data>
+  <data name="check_invert" xml:space="preserve">
+    <value>Invertir selección</value>
+  </data>
+  <data name="check_mark_cookies" xml:space="preserve">
+    <value>Seleccionar las cookies de Internet Explorer que se quiera eliminar y hacer clic debajo en "Eliminar cookies seleccionadas ahora".</value>
+  </data>
+  <data name="check_mark_cookies_ff" xml:space="preserve">
+    <value>Seleccionar las cookies de Firefox que se quiera eliminar y hacer clic debajo en "Eliminar cookies seleccionadas ahora".</value>
+  </data>
+  <data name="check_mark_cookies_google" xml:space="preserve">
+    <value>Seleccionar las cookies de Chrome que se quiera eliminar y hacer clic debajo en "Eliminar cookies seleccionadas ahora".</value>
+  </data>
+  <data name="check_mark_urls_ie" xml:space="preserve">
+    <value>Seleccionar las direcciones URL de Internet Explorer que se quiera eliminar y hacer clic debajo en "Eliminar URL seleccionadas ahora".</value>
+  </data>
+  <data name="check_none" xml:space="preserve">
+    <value>No seleccionar</value>
+  </data>
+  <data name="ChromeNotInstalledOrRunning" xml:space="preserve">
+    <value>Google Chrome no está instalado o ya se está ejecutando</value>
+  </data>
+  <data name="CleanerCancelScan" xml:space="preserve">
+    <value>Cancelar análisis</value>
+  </data>
+  <data name="CleanerNowScanning" xml:space="preserve">
+    <value>Procesando</value>
+  </data>
+  <data name="CleanerProblemsFound" xml:space="preserve">
+    <value>problemas encontrados. Se recomienda volver a analizar para encontrar más problemas.</value>
+  </data>
+  <data name="CleanerProblemsFoundClickClear" xml:space="preserve">
+    <value>problemas encontrados. Seleccionar los que se quiera eliminar y pulsar Iniciar limpieza.</value>
+  </data>
+  <data name="CleaningClipboard" xml:space="preserve">
+    <value>Vaciando el portapapeles...</value>
+  </data>
+  <data name="CleaningRecycleBin" xml:space="preserve">
+    <value>Vaciando la papelera...</value>
+  </data>
+  <data name="CleaningRegistry" xml:space="preserve">
+    <value>Depurando el registro...</value>
+  </data>
+  <data name="CleaningUrlHistory" xml:space="preserve">
+    <value>Eliminando historial de direcciones URL...</value>
+  </data>
+  <data name="CleanUpAndImprove" xml:space="preserve">
+    <value>Limpieza y administración</value>
+  </data>
+  <data name="CleanUpAndImproveNav" xml:space="preserve">
+    <value>Limpieza y administración</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="closed_ff" xml:space="preserve">
+    <value>Para realizar esta operación es necesario que Firefox esté cerrado. ¿Está seguro de que es así</value>
+  </data>
+  <data name="closed_google" xml:space="preserve">
+    <value>Para realizar esta operación es necesario que Chrome esté cerrado. ¿Está seguro de que es así</value>
+  </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Para ello es necesario que Internet Explorer esté cerrado. ¿Está seguro de que es así?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome se está ejecutando. Primero guarde su trabajo y luego haga clic en Aceptar.</value>
+  </data>
+  <data name="close_ff" xml:space="preserve">
+    <value>Cierre Firefox y vuélvalo a intentar</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox se está ejecutando. Primero guarde su trabajo y luego haga clic en Aceptar.</value>
+  </data>
+  <data name="close_google" xml:space="preserve">
+    <value>Cierre Chrome y vuélvalo a intentar</value>
+  </data>
+  <data name="ColumnDetailsFile" xml:space="preserve">
+    <value>Nombre de archivo</value>
+  </data>
+  <data name="ColumnDetailsLocation" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="ColumnProblem" xml:space="preserve">
+    <value>Problema</value>
+  </data>
+  <data name="ColumnRegKey" xml:space="preserve">
+    <value>Clave del registro</value>
+  </data>
+  <data name="ColumnShortcutDescription" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="ColumnShortcutLocation" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="ColumnShortcutName" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="ColumnShortcutTarget" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="ColumnSpyware" xml:space="preserve">
+    <value>Spyware</value>
+  </data>
+  <data name="ColumnSpywareFile" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Confirmar eliminación</value>
+  </data>
+  <data name="ConfirmRestore" xml:space="preserve">
+    <value>Confirmar restauración</value>
+  </data>
+  <data name="ConfirmRestoreDesc" xml:space="preserve">
+    <value>¿Está seguro de que desea restaurarlo? Cierre todos los programas, el sistema se reiniciará en unos segundos</value>
+  </data>
+  <data name="contextMenu" xml:space="preserve">
+    <value>Menú contextual</value>
+  </data>
+  <data name="ControlScanTitle" xml:space="preserve">
+    <value>Controlar análisis</value>
+  </data>
+  <data name="cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="cookie_info_locked_ff" xml:space="preserve">
+    <value>Mozilla Firefox no está instalado</value>
+  </data>
+  <data name="cookie_info_locked_google" xml:space="preserve">
+    <value>Google Chrome no está instalado</value>
+  </data>
+  <data name="CreateRestorePoint" xml:space="preserve">
+    <value>Crear punto de restauración</value>
+  </data>
+  <data name="CreatingRestorePoint" xml:space="preserve">
+    <value>Creando punto de restauración del sistema...</value>
+  </data>
+  <data name="CreationDateColumnHeader" xml:space="preserve">
+    <value>Fecha de creación</value>
+  </data>
+  <data name="CurrentSchedule" xml:space="preserve">
+    <value>Programación actual</value>
+  </data>
+  <data name="Daily" xml:space="preserve">
+    <value>Diariamente</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Datos</value>
+  </data>
+  <data name="DataAndDefense" xml:space="preserve">
+    <value>Datos y defensa</value>
+  </data>
+  <data name="Day" xml:space="preserve">
+    <value>Día</value>
+  </data>
+  <data name="DeepScanTitle" xml:space="preserve">
+    <value>Análisis profundo del sistema</value>
+  </data>
+  <data name="DeleteInvalidShortcutsMsg" xml:space="preserve">
+    <value>Se eliminarán los accesos directos no válidos. ¿Está seguro de que desea continuar?</value>
+  </data>
+  <data name="DeleteRestorePoint" xml:space="preserve">
+    <value>Eliminar punto de restauración</value>
+  </data>
+  <data name="DeletingFiles" xml:space="preserve">
+    <value>Eliminando archivos...</value>
+  </data>
+  <data name="DeletingFolders" xml:space="preserve">
+    <value>Eliminando carpetas...</value>
+  </data>
+  <data name="del_cookies" xml:space="preserve">
+    <value>Eliminar cookies seleccionadas ahora</value>
+  </data>
+  <data name="del_urls" xml:space="preserve">
+    <value>Eliminar URL seleccionadas ahora</value>
+  </data>
+  <data name="details_files_tobe_del" xml:space="preserve">
+    <value>Detalles de los archivos que se van a eliminar</value>
+  </data>
+  <data name="details_reg_tobe_del" xml:space="preserve">
+    <value>Detalles de las claves del registro de Windows que se van a eliminar</value>
+  </data>
+  <data name="DiskAnalysis" xml:space="preserve">
+    <value>Análisis del disco</value>
+  </data>
+  <data name="DiskAnalysisDesc" xml:space="preserve">
+    <value>Muestra el uso del espacio en disco de archivos y carpetas</value>
+  </data>
+  <data name="DiskCleaner" xml:space="preserve">
+    <value>Herramienta de limpieza del disco</value>
+  </data>
+  <data name="DiskCleanerDesc" xml:space="preserve">
+    <value>Elimina del disco datos basura y recupera espacio</value>
+  </data>
+  <data name="EmptyFolders" xml:space="preserve">
+    <value>Carpetas vacías</value>
+  </data>
+  <data name="EmptyFoldersFinder" xml:space="preserve">
+    <value>Buscar carpetas vacías</value>
+  </data>
+  <data name="EmptyFoldersFinderDesc" xml:space="preserve">
+    <value>Busca carpetas vacías en Windows y las elimina</value>
+  </data>
+  <data name="EncryptAndDecrypt" xml:space="preserve">
+    <value>Cifrar y descifrar</value>
+  </data>
+  <data name="EncryptAndDecryptDesc" xml:space="preserve">
+    <value>Protege sus archivos del uso y acceso no autorizados</value>
+  </data>
+  <data name="EntryPointsTo" xml:space="preserve">
+    <value>La entrada apunta a</value>
+  </data>
+  <data name="erase_check_track" xml:space="preserve">
+    <value>Borrar rastros seleccionados</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="error_check_tracks" xml:space="preserve">
+    <value>gustaría borrar utilizando la casilla que aparece a la izquierda del nombre de rastro</value>
+  </data>
+  <data name="error_erased_succ" xml:space="preserve">
+    <value>Se han borrado correctamente los rastros seleccionados</value>
+  </data>
+  <data name="error_no_tracks_checked" xml:space="preserve">
+    <value>No hay rastros seleccionados. Para eliminar rastros, seleccione aquellos que le</value>
+  </data>
+  <data name="error_rec_bin" xml:space="preserve">
+    <value>Error al acceder a la Papelera de reciclaje</value>
+  </data>
+  <data name="error_select" xml:space="preserve">
+    <value>No ha seleccionado ningún elemento para su análisis</value>
+  </data>
+  <data name="error_sure" xml:space="preserve">
+    <value>¿Está seguro de que desea borrar</value>
+  </data>
+  <data name="error_tracks" xml:space="preserve">
+    <value>rastro(s)</value>
+  </data>
+  <data name="Every" xml:space="preserve">
+    <value>Cada</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="FacebookLike" xml:space="preserve">
+    <value>Me gusta</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>falló.</value>
+  </data>
+  <data name="FBUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/facebook</value>
+  </data>
+  <data name="FeedbackUrl" xml:space="preserve">
+    <value>http://es.freemium.com/contact/fsu/</value>
+  </data>
+  <data name="FFNotInstalledOrRunning" xml:space="preserve">
+    <value>Mozilla Firefox no está instalado o ya se está ejecutando</value>
+  </data>
+  <data name="ff_cookie_manager" xml:space="preserve">
+    <value>Administrador de cookies de FF</value>
+  </data>
+  <data name="FileEncrypterAndDecrypter" xml:space="preserve">
+    <value>Cifrador y descifrador de archivos</value>
+  </data>
+  <data name="FileEncrypterAndDecrypterDesc" xml:space="preserve">
+    <value>Protege sus archivos del uso y acceso no autorizados</value>
+  </data>
+  <data name="FileEraser" xml:space="preserve">
+    <value>Borrar archivos con seguridad</value>
+  </data>
+  <data name="FileEraserDesc" xml:space="preserve">
+    <value>Borra archivos permanentemente, de manera que
+nadie pueda recuperarlos</value>
+  </data>
+  <data name="files" xml:space="preserve">
+    <value>archivos</value>
+  </data>
+  <data name="FilesAndFolders" xml:space="preserve">
+    <value>Archivos y carpetas</value>
+  </data>
+  <data name="FileShredder" xml:space="preserve">
+    <value>Borrar archivos con seguridad</value>
+  </data>
+  <data name="FileShredderDesc" xml:space="preserve">
+    <value>Borra los archivos permanentemente, de manera que
+nadie pueda recuperarlos</value>
+  </data>
+  <data name="FileSplitterAndJoiner" xml:space="preserve">
+    <value>Herramienta de división y unión de archivos</value>
+  </data>
+  <data name="FileSplitterAndJoinerdDesc" xml:space="preserve">
+    <value>Divide grandes archivos en otros más pequeños y
+manejables, y puede volverlos a unir</value>
+  </data>
+  <data name="FileUndelete" xml:space="preserve">
+    <value>Recuperar archivos</value>
+  </data>
+  <data name="FileUndeleteDesc" xml:space="preserve">
+    <value>Una forma rápida y efectiva de recuperar archivos que hayan sido eliminados de forma accidental</value>
+  </data>
+  <data name="FileUndeleteDetailed" xml:space="preserve">
+    <value>Recuperar archivos</value>
+  </data>
+  <data name="FileUndeleteDetailedDesc" xml:space="preserve">
+    <value>Recupera archivos eliminados accidentalmente de
+forma rápida y efectiva</value>
+  </data>
+  <data name="file_folder_list" xml:space="preserve">
+    <value>Cuadro de diálogo común de Microsoft: lista de archivos/carpetas</value>
+  </data>
+  <data name="FindEmptyFolders" xml:space="preserve">
+    <value>Buscar carpetas vacías con System Utilities</value>
+  </data>
+  <data name="firefox" xml:space="preserve">
+    <value>Mozilla Firefox</value>
+  </data>
+  <data name="firefox_cache" xml:space="preserve">
+    <value>Mozilla Firefox: caché de Internet</value>
+  </data>
+  <data name="firefox_cookies" xml:space="preserve">
+    <value>Mozilla Firefox: cookies</value>
+  </data>
+  <data name="firefox_download_history" xml:space="preserve">
+    <value>Mozilla Firefox: historial del administrador de descargas</value>
+  </data>
+  <data name="firefox_history" xml:space="preserve">
+    <value>Mozilla Firefox: historial</value>
+  </data>
+  <data name="firefox_saved_info" xml:space="preserve">
+    <value>Mozilla Firefox: información guardada de formularios</value>
+  </data>
+  <data name="firefox_saved_pass" xml:space="preserve">
+    <value>Mozilla Firefox: contraseñas guardadas</value>
+  </data>
+  <data name="firefox_search_history" xml:space="preserve">
+    <value>Mozilla Firefox: historial de búsquedas</value>
+  </data>
+  <data name="First" xml:space="preserve">
+    <value>Primer</value>
+  </data>
+  <data name="FontScanTitle" xml:space="preserve">
+    <value>Fuentes del sistema</value>
+  </data>
+  <data name="Fourth" xml:space="preserve">
+    <value>Cuarto</value>
+  </data>
+  <data name="Friday" xml:space="preserve">
+    <value>Vie</value>
+  </data>
+  <data name="FridayFull" xml:space="preserve">
+    <value>Viernes</value>
+  </data>
+  <data name="GettingTracks" xml:space="preserve">
+    <value>Primeras huellas...</value>
+  </data>
+  <data name="google" xml:space="preserve">
+    <value>Google Chrome</value>
+  </data>
+  <data name="GooglePlusUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/googleplus</value>
+  </data>
+  <data name="google_cache" xml:space="preserve">
+    <value>Google Chrome: caché de Internet</value>
+  </data>
+  <data name="google_chrome_running" xml:space="preserve">
+    <value>Google Chrome se está ejecutando Cierre el navegador Google Chrome para eliminar las cookies.</value>
+  </data>
+  <data name="google_cookies" xml:space="preserve">
+    <value>Google Chrome: cookies</value>
+  </data>
+  <data name="google_cookie_manager" xml:space="preserve">
+    <value>Administrador de Google Chrome</value>
+  </data>
+  <data name="google_download_history" xml:space="preserve">
+    <value>Google Chrome: historial de descargas</value>
+  </data>
+  <data name="google_history" xml:space="preserve">
+    <value>Google Chrome: historial</value>
+  </data>
+  <data name="google_saved_info" xml:space="preserve">
+    <value>Google Chrome: información guardada de formularios</value>
+  </data>
+  <data name="GroupBoxScheduleTaskWeeklyText" xml:space="preserve">
+    <value>Programar tarea semanalmente</value>
+  </data>
+  <data name="HardDiskCleaner" xml:space="preserve">
+    <value>Limpiar disco</value>
+  </data>
+  <data name="HardDiskCleanerDesc" xml:space="preserve">
+    <value>Elimina archivos basura en las unidades y recupera espacio en el disco</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="HelpScanTitle" xml:space="preserve">
+    <value>Archivos de ayuda del sistema</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/free-computer-cleaner/faq/</value>
+  </data>
+  <data name="HistoryScanTitle" xml:space="preserve">
+    <value>Historial y menú Inicio</value>
+  </data>
+  <data name="ie" xml:space="preserve">
+    <value>Internet Explorer</value>
+  </data>
+  <data name="ie_cookies" xml:space="preserve">
+    <value>Cookies de Internet Explorer</value>
+  </data>
+  <data name="ie_cookie_mngr" xml:space="preserve">
+    <value>Administrador de cookies de IE</value>
+  </data>
+  <data name="ie_history" xml:space="preserve">
+    <value>Historial de Internet Explorer</value>
+  </data>
+  <data name="ie_typed_urls" xml:space="preserve">
+    <value>URL introducidas en IE</value>
+  </data>
+  <data name="ie_url_history" xml:space="preserve">
+    <value>Internet Explorer: historial de URL</value>
+  </data>
+  <data name="IgnoreList" xml:space="preserve">
+    <value>Lista de elementos omitidos</value>
+  </data>
+  <data name="ImprovePerformance" xml:space="preserve">
+    <value>Mejora del rendimiento</value>
+  </data>
+  <data name="ImprovePerformanceNav" xml:space="preserve">
+    <value>Mejora del rendimiento</value>
+  </data>
+  <data name="index_files" xml:space="preserve">
+    <value>Archivos Index.dat</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Información</value>
+  </data>
+  <data name="InterfaceLanguage" xml:space="preserve">
+    <value>Idioma de la interfaz</value>
+  </data>
+  <data name="InvalidSelection" xml:space="preserve">
+    <value>¡Selección no válida!</value>
+  </data>
+  <data name="IssuesFound" xml:space="preserve">
+    <value>Hacer clic en Aplicar y reparar para solucionar los problemas enumerados</value>
+  </data>
+  <data name="ItemsCleared" xml:space="preserve">
+    <value>elementos borrados</value>
+  </data>
+  <data name="item_running_or_installed" xml:space="preserve">
+    <value>No es posible seleccionar este elemento porque ya se está ejecutando o no está instalado.</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Clave</value>
+  </data>
+  <data name="LabelChromeCache" xml:space="preserve">
+    <value>Caché de Chrome</value>
+  </data>
+  <data name="LabelFFCache" xml:space="preserve">
+    <value>Caché de Firefox</value>
+  </data>
+  <data name="LabelIETempraryFiles" xml:space="preserve">
+    <value>Archivos temporales de Internet Explorer</value>
+  </data>
+  <data name="LabelScheduleTaskText" xml:space="preserve">
+    <value>Programar tarea:</value>
+  </data>
+  <data name="LabelScheduleText" xml:space="preserve">
+    <value>Programar</value>
+  </data>
+  <data name="LabelTmpFiles" xml:space="preserve">
+    <value>Archivos .tmp</value>
+  </data>
+  <data name="LabelWeeksOnText" xml:space="preserve">
+    <value>semana(s) el:</value>
+  </data>
+  <data name="LabelWindowsTemporaryFiles" xml:space="preserve">
+    <value>Archivos temporales de Windows</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma:</value>
+  </data>
+  <data name="Last" xml:space="preserve">
+    <value>Último</value>
+  </data>
+  <data name="LastCleanTime" xml:space="preserve">
+    <value>La última vez que limpió el registro fue a las {0:hh:mm dd-MM-yy}</value>
+  </data>
+  <data name="LibraryScanTitle" xml:space="preserve">
+    <value>Bibliotecas compartidas</value>
+  </data>
+  <data name="MemoryOptimizer" xml:space="preserve">
+    <value>Optimizar memoria</value>
+  </data>
+  <data name="MemoryOptimizerDesc" xml:space="preserve">
+    <value>Monitoriza y optimiza la memoria libre en segundo plano</value>
+  </data>
+  <data name="MemoryOptimizerDetailed" xml:space="preserve">
+    <value>Optimizar memoria</value>
+  </data>
+  <data name="MemoryOptimizerDetailedDesc" xml:space="preserve">
+    <value>Monitoriza y optimiza la memoria libre en segundo plano</value>
+  </data>
+  <data name="MinimiseToTrayCheckboxText" xml:space="preserve">
+    <value>Minimizar a la bandeja cuando se cierre la ventana del programa</value>
+  </data>
+  <data name="Minimize" xml:space="preserve">
+    <value>Minimizar</value>
+  </data>
+  <data name="mmfp" xml:space="preserve">
+    <value>Macromedia Flash Player</value>
+  </data>
+  <data name="Modules" xml:space="preserve">
+    <value>MÓDULOS</value>
+  </data>
+  <data name="ModulesDesc" xml:space="preserve">
+    <value>Herramientas personalizadas</value>
+  </data>
+  <data name="Monday" xml:space="preserve">
+    <value>Lun</value>
+  </data>
+  <data name="MondayFull" xml:space="preserve">
+    <value>Lunes</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Monthly" xml:space="preserve">
+    <value>Mensualmente</value>
+  </data>
+  <data name="mozilla_firefox_running" xml:space="preserve">
+    <value>Mozilla Firefox se está ejecutando. Cierre el navegador Mozilla Firefox para eliminar las cookies.</value>
+  </data>
+  <data name="mp" xml:space="preserve">
+    <value>Windows Media Player</value>
+  </data>
+  <data name="MRUScanTitle" xml:space="preserve">
+    <value>Listas de usados más recientemente</value>
+  </data>
+  <data name="ms_management_console" xml:space="preserve">
+    <value>MS Management Console</value>
+  </data>
+  <data name="ms_paint" xml:space="preserve">
+    <value>MS Paint</value>
+  </data>
+  <data name="ms_wordpad" xml:space="preserve">
+    <value>MS Wordpad</value>
+  </data>
+  <data name="network_places" xml:space="preserve">
+    <value>Mis sitios de red</value>
+  </data>
+  <data name="NoItemSelectedMsg" xml:space="preserve">
+    <value>No hay nada seleccionado. Marque al menos uno de los análisis.</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>No hay elementos seleccionados</value>
+  </data>
+  <data name="NoProblemsFound" xml:space="preserve">
+    <value>No se han encontrado problemas</value>
+  </data>
+  <data name="notice" xml:space="preserve">
+    <value>Nota</value>
+  </data>
+  <data name="NotStartedHeader" xml:space="preserve">
+    <value>Seleccionar las categorías del registro y pulsar Analizar</value>
+  </data>
+  <data name="NowFixing" xml:space="preserve">
+    <value>Reparando:</value>
+  </data>
+  <data name="NowScanning" xml:space="preserve">
+    <value>Analizando:</value>
+  </data>
+  <data name="office" xml:space="preserve">
+    <value>Microsoft Office</value>
+  </data>
+  <data name="office_2003" xml:space="preserve">
+    <value>Office 2003</value>
+  </data>
+  <data name="office_2007" xml:space="preserve">
+    <value>Office 2007</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="On" xml:space="preserve">
+    <value>el</value>
+  </data>
+  <data name="Once" xml:space="preserve">
+    <value>Una vez</value>
+  </data>
+  <data name="OneClickMaintenance" xml:space="preserve">
+    <value>Mantenimiento con 1 clic</value>
+  </data>
+  <data name="OneClickMaintenanceDesc" xml:space="preserve">
+    <value>Mantenga alejados los problemas de su PC</value>
+  </data>
+  <data name="OneClickSchedule" xml:space="preserve">
+    <value>Programación del mantenimiento con 1 clic</value>
+  </data>
+  <data name="OneClickScheduleCheckBox" xml:space="preserve">
+    <value>Ejecutar el mantenimiento con 1 clic en un momento programado</value>
+  </data>
+  <data name="OnlyScanForProblems" xml:space="preserve">
+    <value>Sólo buscar problemas</value>
+  </data>
+  <data name="OptimizationAndRepairs" xml:space="preserve">
+    <value>Optimización y reparaciones</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="plugins" xml:space="preserve">
+    <value>Complementos</value>
+  </data>
+  <data name="PostResultsOn" xml:space="preserve">
+    <value>¿Le ha gustado? Más información:</value>
+  </data>
+  <data name="PrivacyAndSecurity" xml:space="preserve">
+    <value>Seguridad y privacidad</value>
+  </data>
+  <data name="ProblemsFixed" xml:space="preserve">
+    <value>Problemas reparados</value>
+  </data>
+  <data name="ProblemsFound" xml:space="preserve">
+    <value>Problemas encontrados</value>
+  </data>
+  <data name="ProcessManager" xml:space="preserve">
+    <value>Administrar procesos</value>
+  </data>
+  <data name="ProcessManagerDesc" xml:space="preserve">
+    <value>Supervisa los procesos en ejecución y opcionalmente puede detenerlos</value>
+  </data>
+  <data name="ProcessManagerDetailed" xml:space="preserve">
+    <value>Administrar procesos</value>
+  </data>
+  <data name="ProcessManagerDetailedDesc" xml:space="preserve">
+    <value>Supervisa los procesos en ejecuciَn y detenlos opcionalmente</value>
+  </data>
+  <data name="qp" xml:space="preserve">
+    <value>QuickTime Player</value>
+  </data>
+  <data name="Recoverable" xml:space="preserve">
+    <value>eliminables</value>
+  </data>
+  <data name="Recovered" xml:space="preserve">
+    <value>recuperables</value>
+  </data>
+  <data name="RegistryCleaner" xml:space="preserve">
+    <value>Limpiar registro</value>
+  </data>
+  <data name="RegistryCleanerDesc" xml:space="preserve">
+    <value>Limpia el registro para mejorar el rendimiento del sistema</value>
+  </data>
+  <data name="RegistryCleanerDetailed" xml:space="preserve">
+    <value>Limpiar registro</value>
+  </data>
+  <data name="RegistryCleanerDetailedDesc" xml:space="preserve">
+    <value>Limpia el registro para mejorar el rendimiento del sistema</value>
+  </data>
+  <data name="RegistryCleanerOneClickDesc" xml:space="preserve">
+    <value>Repara entradas incorrectas o no válidas del registro</value>
+  </data>
+  <data name="RegistryCleaningCompleted" xml:space="preserve">
+    <value>Limpieza del registro completada</value>
+  </data>
+  <data name="RegistryCompactor" xml:space="preserve">
+    <value>Optimizar registro</value>
+  </data>
+  <data name="RegistryCompactorDesc" xml:space="preserve">
+    <value>Compacta el registro de Windows para aumentar la velocidad del ordenador</value>
+  </data>
+  <data name="RegistryKeysToDeleteText" xml:space="preserve">
+    <value>Estas claves del registro no son válidas y serán eliminadas.</value>
+  </data>
+  <data name="RegistryOptimizer" xml:space="preserve">
+    <value>Optimizar registro</value>
+  </data>
+  <data name="RegistryOptimizerDesc" xml:space="preserve">
+    <value>Optimiza el registro de Windows para aumentar la velocidad del ordenador</value>
+  </data>
+  <data name="RegistryScanCanceled" xml:space="preserve">
+    <value>Análisis del registro cancelado</value>
+  </data>
+  <data name="RegistryScanCompleted" xml:space="preserve">
+    <value>Análisis del registro completado</value>
+  </data>
+  <data name="RegistryTools" xml:space="preserve">
+    <value>Herramientas del registro</value>
+  </data>
+  <data name="RegistryToolsDesc" xml:space="preserve">
+    <value>Utilice nuestras herramientas del registro para mejorar el rendimiento del sistema</value>
+  </data>
+  <data name="RegularMaintenance" xml:space="preserve">
+    <value>Un mantenimiento regular ayudará a mejorar el rendimiento del sistema.</value>
+  </data>
+  <data name="RemoveSuccess" xml:space="preserve">
+    <value>Acción de eliminación de elementos completada correctamente.</value>
+  </data>
+  <data name="RepairComplete" xml:space="preserve">
+    <value>¡Problemas resueltos correctamente!</value>
+  </data>
+  <data name="RestoreAndBackupCenter" xml:space="preserve">
+    <value>Centro de restauración y copias de seguridad</value>
+  </data>
+  <data name="RestoreCenter" xml:space="preserve">
+    <value>Centro de restauración</value>
+  </data>
+  <data name="RestoreDisabled" xml:space="preserve">
+    <value>¡Restauración deshabilitada!</value>
+  </data>
+  <data name="RestorePointCreated" xml:space="preserve">
+    <value>Nuevo punto de restauración creado correctamente.</value>
+  </data>
+  <data name="RestorePointDeleted" xml:space="preserve">
+    <value>Punto de restauración eliminado correctamente.</value>
+  </data>
+  <data name="results" xml:space="preserve">
+    <value>Resultados</value>
+  </data>
+  <data name="RootUrl" xml:space="preserve">
+    <value>http://es.freemium.com/free-computer-cleaner/</value>
+  </data>
+  <data name="RunAsAdmin" xml:space="preserve">
+    <value>Este programa necesita privilegios de administrador para poder ejecutarse. Reinícielo como administrador.</value>
+  </data>
+  <data name="RunAsAdminTitle" xml:space="preserve">
+    <value>Se requieren privilegios de administrador</value>
+  </data>
+  <data name="RunAt" xml:space="preserve">
+    <value>A las</value>
+  </data>
+  <data name="RunAtLogin" xml:space="preserve">
+    <value>Ejecutar cuando el usuario inicie sesión</value>
+  </data>
+  <data name="RunAtStartup" xml:space="preserve">
+    <value>Ejecutar al inicio del sistema</value>
+  </data>
+  <data name="RunEvery" xml:space="preserve">
+    <value>cada</value>
+  </data>
+  <data name="RunEveryDay" xml:space="preserve">
+    <value>día</value>
+  </data>
+  <data name="RunEveryDays" xml:space="preserve">
+    <value>días</value>
+  </data>
+  <data name="RunEveryWeek" xml:space="preserve">
+    <value>semana</value>
+  </data>
+  <data name="RunEveryWeeks" xml:space="preserve">
+    <value>semanas</value>
+  </data>
+  <data name="RunMontly" xml:space="preserve">
+    <value>mensualmente</value>
+  </data>
+  <data name="running_tray" xml:space="preserve">
+    <value>La aplicación ya se está ejecutando en la bandeja del sistema.</value>
+  </data>
+  <data name="RunOf" xml:space="preserve">
+    <value>de</value>
+  </data>
+  <data name="RunOn" xml:space="preserve">
+    <value>el</value>
+  </data>
+  <data name="RunOnMinutes" xml:space="preserve">
+    <value>minuto(s)</value>
+  </data>
+  <data name="RunWhenIdle" xml:space="preserve">
+    <value>Ejecutar cuando esté inactivo</value>
+  </data>
+  <data name="run_eraser" xml:space="preserve">
+    <value>Ejecutar borrador</value>
+  </data>
+  <data name="Saturday" xml:space="preserve">
+    <value>Sáb</value>
+  </data>
+  <data name="SaturdayFull" xml:space="preserve">
+    <value>Sábado</value>
+  </data>
+  <data name="ScanAborted" xml:space="preserve">
+    <value>Análisis anulado. No hay segmentos seleccionados.</value>
+  </data>
+  <data name="ScanAbortedByUser" xml:space="preserve">
+    <value>Análisis anulado por el usuario.</value>
+  </data>
+  <data name="ScanAgain" xml:space="preserve">
+    <value>Volver a analizar</value>
+  </data>
+  <data name="ScanAndRepair" xml:space="preserve">
+    <value>Análisis y reparación</value>
+  </data>
+  <data name="ScanComplete" xml:space="preserve">
+    <value>Análisis completado:</value>
+  </data>
+  <data name="ScanForIssues" xml:space="preserve">
+    <value>Buscar problemas</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Analizando:</value>
+  </data>
+  <data name="ScanningRegistry" xml:space="preserve">
+    <value>Analizando el registro</value>
+  </data>
+  <data name="scanning_tracks" xml:space="preserve">
+    <value>Analizando rastros seleccionados</value>
+  </data>
+  <data name="ScanNow" xml:space="preserve">
+    <value>Analizar ahora</value>
+  </data>
+  <data name="ScanOnly" xml:space="preserve">
+    <value>Sólo análisis</value>
+  </data>
+  <data name="ScanResultsReset" xml:space="preserve">
+    <value>Se han restablecido los resultados del análisis.</value>
+  </data>
+  <data name="ScanStarted" xml:space="preserve">
+    <value>Análisis iniciado...</value>
+  </data>
+  <data name="ScanSystemRegularly" xml:space="preserve">
+    <value>Analice su sistema con regularidad</value>
+  </data>
+  <data name="scan_started" xml:space="preserve">
+    <value>Análisis iniciado.</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Programación:</value>
+  </data>
+  <data name="ScheduleDailyText" xml:space="preserve">
+    <value>A las {{0}} cada día</value>
+  </data>
+  <data name="ScheduleMonthlyRunEveryDay" xml:space="preserve">
+    <value>día {{0}}</value>
+  </data>
+  <data name="ScheduleMonthlyText" xml:space="preserve">
+    <value>A las {{time}} del {{day}} mensualmente</value>
+  </data>
+  <data name="ScheduleOnceText" xml:space="preserve">
+    <value>A las {{time}} del {{date}}</value>
+  </data>
+  <data name="ScheduleTaskDaily" xml:space="preserve">
+    <value>Programar tarea diariamente</value>
+  </data>
+  <data name="ScheduleTaskDays" xml:space="preserve">
+    <value>día(s)</value>
+  </data>
+  <data name="ScheduleTaskMonth" xml:space="preserve">
+    <value>del mes</value>
+  </data>
+  <data name="ScheduleTaskMonthly" xml:space="preserve">
+    <value>Programar tarea mensualmente</value>
+  </data>
+  <data name="ScheduleTaskOnce" xml:space="preserve">
+    <value>Programar tarea una vez</value>
+  </data>
+  <data name="ScheduleWeeklyText" xml:space="preserve">
+    <value>Cada {{day}} a las {{time}} cada {{week}}</value>
+  </data>
+  <data name="ScheduleWhenIdle" xml:space="preserve">
+    <value>Programar cuando esté inactivo</value>
+  </data>
+  <data name="Second" xml:space="preserve">
+    <value>Segundo</value>
+  </data>
+  <data name="SecurityAndPrivacyNav" xml:space="preserve">
+    <value>Seguridad y privacidad</value>
+  </data>
+  <data name="SelectAtLeastOneItem" xml:space="preserve">
+    <value>No ha seleccionado ningún segmento de análisis; marque al menos uno</value>
+  </data>
+  <data name="SelectBackup" xml:space="preserve">
+    <value>Seleccione primero una copia de seguridad.</value>
+  </data>
+  <data name="SelectContextMenus" xml:space="preserve">
+    <value>Seleccionar los menús contextuales que se desee integrar en el Explorador de Windows</value>
+  </data>
+  <data name="SelectItemsToRemove" xml:space="preserve">
+    <value>No ha seleccionado ningún elemento para su eliminación. Para restablecer los resultados del análisis, seleccione Cancelar</value>
+  </data>
+  <data name="SelectItemsToStartScanCaption" xml:space="preserve">
+    <value>Seleccionar los elementos que se analizarán</value>
+  </data>
+  <data name="SelectItemsToStartScanText" xml:space="preserve">
+    <value>Debe seleccionar al menos 1 elemento para continuar.</value>
+  </data>
+  <data name="SelectRestorePoint" xml:space="preserve">
+    <value>Seleccione un punto de restauración que desee restaurar y después haga clic en el botón 'Restaurar'.</value>
+  </data>
+  <data name="SelectTracks" xml:space="preserve">
+    <value>Seleccionar rastros</value>
+  </data>
+  <data name="SelectTracksToRemove" xml:space="preserve">
+    <value>Seleccione los rastros que desee eliminar</value>
+  </data>
+  <data name="SendFeedback" xml:space="preserve">
+    <value>Enviar opinión</value>
+  </data>
+  <data name="SetUpSystemRestore" xml:space="preserve">
+    <value>¿Desea establecer un punto de restauración del sistema antes de continuar? Si no es así, no se podrán deshacer los cambios en el sistema</value>
+  </data>
+  <data name="ShortcutFixer" xml:space="preserve">
+    <value>Reparar accesos directos</value>
+  </data>
+  <data name="ShortcutFixerDesc" xml:space="preserve">
+    <value>Quitar accesos directos no válidos</value>
+  </data>
+  <data name="ShortcutFixerOneClickDesc" xml:space="preserve">
+    <value>Limpia los accesos directos no válidos</value>
+  </data>
+  <data name="ShortcutsFixer" xml:space="preserve">
+    <value>Reparar accesos directos</value>
+  </data>
+  <data name="ShortcutsFixerDesc" xml:space="preserve">
+    <value>Corrige errores en el menú Inicio y en los accesos directos del escritorio</value>
+  </data>
+  <data name="ShowBaloonCheckBoxText" xml:space="preserve">
+    <value>Mostrar globo al minimizar a la bandeja</value>
+  </data>
+  <data name="ShowDetails" xml:space="preserve">
+    <value>Mostrar detalles</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Mostrar sólo los rastros eliminables disponibles</value>
+  </data>
+  <data name="SoftwareScanTitle" xml:space="preserve">
+    <value>Software del sistema</value>
+  </data>
+  <data name="SplitAndJoin" xml:space="preserve">
+    <value>Dividir y unir</value>
+  </data>
+  <data name="SplitAndJoinDesc" xml:space="preserve">
+    <value>Divide archivos grandes en otros más pequeños y permite unirlos de nuevo</value>
+  </data>
+  <data name="SplitWithFreemiumTools" xml:space="preserve">
+    <value>Dividir con System Utilities</value>
+  </data>
+  <data name="StartClearing" xml:space="preserve">
+    <value>Iniciar limpieza</value>
+  </data>
+  <data name="StartupManager" xml:space="preserve">
+    <value>Limpiar menú de inicio</value>
+  </data>
+  <data name="StartupManagerDesc" xml:space="preserve">
+    <value>Administra los programas que se ejecutan automáticamente al inicio</value>
+  </data>
+  <data name="StartupManagerDetailed" xml:space="preserve">
+    <value>Administrar inicio</value>
+  </data>
+  <data name="StartupManagerDetailedDesc" xml:space="preserve">
+    <value>Administra los programas que se ejecutan automáticamente al inicio</value>
+  </data>
+  <data name="StartupManagerOneClickDesc" xml:space="preserve">
+    <value>Limpia entradas peligrosas del inicio</value>
+  </data>
+  <data name="StartupScanTitle" xml:space="preserve">
+    <value>Entradas del inicio</value>
+  </data>
+  <data name="start_menu_history" xml:space="preserve">
+    <value>Historial de clics en el menú Inicio</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>ESTADO</value>
+  </data>
+  <data name="StatusDesc" xml:space="preserve">
+    <value>Información del sistema</value>
+  </data>
+  <data name="status_strip" xml:space="preserve">
+    <value>estadoBarra1</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>Detener</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>correcto.</value>
+  </data>
+  <data name="Sunday" xml:space="preserve">
+    <value>Dom</value>
+  </data>
+  <data name="SundayFull" xml:space="preserve">
+    <value>Domingo</value>
+  </data>
+  <data name="sun_java" xml:space="preserve">
+    <value>Sun Java</value>
+  </data>
+  <data name="SystemInfo" xml:space="preserve">
+    <value>Información del sistema</value>
+  </data>
+  <data name="SystemInformation" xml:space="preserve">
+    <value>Información del sistema</value>
+  </data>
+  <data name="SystemInformationDesc" xml:space="preserve">
+    <value>Recopila información sobre el hardware y el software</value>
+  </data>
+  <data name="SystemRestore" xml:space="preserve">
+    <value>Restaurar sistema</value>
+  </data>
+  <data name="SystemRestoreDeactivated" xml:space="preserve">
+    <value>Restaurar sistema considerado no disponible o desactivado. Opción deshabilitada.</value>
+  </data>
+  <data name="SystemRestoreUnavailable" xml:space="preserve">
+    <value>Restaurar sistema está deshabilitado o no disponible en este ordenador.</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>La restauración del sistema está desactivada. ¿Aún así desea proseguir bajo su responsabilidad?</value>
+  </data>
+  <data name="SystemTools" xml:space="preserve">
+    <value>Herramientas del sistema</value>
+  </data>
+  <data name="sys_error" xml:space="preserve">
+    <value>Error del sistema</value>
+  </data>
+  <data name="TabScheduleText" xml:space="preserve">
+    <value>Programar</value>
+  </data>
+  <data name="TaskSchedulingFailedMessage" xml:space="preserve">
+    <value>La planificación de tareas ha fallado. Compruebe si el servicio de planificación de tareas se está ejecutando correctamente en su sistema.</value>
+  </data>
+  <data name="TaskSchedulingFailedTitle" xml:space="preserve">
+    <value>La planificación de tareas ha fallado.</value>
+  </data>
+  <data name="TempDetailsFiles" xml:space="preserve">
+    <value>archivos</value>
+  </data>
+  <data name="TempDetailsRecoverable" xml:space="preserve">
+    <value>eliminables</value>
+  </data>
+  <data name="TempDetailsTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="TemporaryFilesCleaner" xml:space="preserve">
+    <value>Limpiar archivos temporales</value>
+  </data>
+  <data name="TemporaryFilesCleanerDesc" xml:space="preserve">
+    <value>Elimina archivos y recupere espacio en disco</value>
+  </data>
+  <data name="temp_internet_files" xml:space="preserve">
+    <value>Archivos temporales de Internet</value>
+  </data>
+  <data name="Thanks" xml:space="preserve">
+    <value>Listo</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema:</value>
+  </data>
+  <data name="Third" xml:space="preserve">
+    <value>Tercer</value>
+  </data>
+  <data name="Thursday" xml:space="preserve">
+    <value>Jue</value>
+  </data>
+  <data name="ThursdayFull" xml:space="preserve">
+    <value>Jueves</value>
+  </data>
+  <data name="TimeFormat" xml:space="preserve">
+    <value>h:mm tt</value>
+  </data>
+  <data name="tobe_removed" xml:space="preserve">
+    <value>se eliminarán</value>
+  </data>
+  <data name="tobe_removed_win_reg" xml:space="preserve">
+    <value>elementos se eliminarán del registro de Windows</value>
+  </data>
+  <data name="toolStrip" xml:space="preserve">
+    <value>herramientaBarra1</value>
+  </data>
+  <data name="tracks" xml:space="preserve">
+    <value>Rastros</value>
+  </data>
+  <data name="tracks_eraser" xml:space="preserve">
+    <value>Borrar rastros</value>
+  </data>
+  <data name="track_eraser" xml:space="preserve">
+    <value>Borrador de rastros</value>
+  </data>
+  <data name="TryDeleteRestorePoint" xml:space="preserve">
+    <value>¿Está seguro de que desea eliminarlo? Desea eliminar el punto de restauración del sistema.</value>
+  </data>
+  <data name="Tuesday" xml:space="preserve">
+    <value>Mar</value>
+  </data>
+  <data name="TuesdayFull" xml:space="preserve">
+    <value>Martes</value>
+  </data>
+  <data name="Twitter" xml:space="preserve">
+    <value>Twitear</value>
+  </data>
+  <data name="TwitterUrl" xml:space="preserve">
+    <value>http://www.freemium.com/fsu/twitter</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="UninstallManager" xml:space="preserve">
+    <value>Desinstalar programas</value>
+  </data>
+  <data name="UninstallManagerDesc" xml:space="preserve">
+    <value>Desinstala completamente programas que ya no necesita</value>
+  </data>
+  <data name="UninstallManagerDetailed" xml:space="preserve">
+    <value>Desinstalar programas</value>
+  </data>
+  <data name="UninstallManagerDetailedDesc" xml:space="preserve">
+    <value>Desinstala completamente programas que ya no necesite</value>
+  </data>
+  <data name="UninstallScanTitle" xml:space="preserve">
+    <value>Cadenas de instalación</value>
+  </data>
+  <data name="UrlCannotBeOpenedMessage" xml:space="preserve">
+    <value>El enlace no se puede abrir automáticamente. Abra el siguiente enlace en su navegador favorito:</value>
+  </data>
+  <data name="UrlCannotBeOpenedTitle" xml:space="preserve">
+    <value>El enlace no se puede abrir automáticamente.</value>
+  </data>
+  <data name="urls" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="UserScanTitle" xml:space="preserve">
+    <value>Análisis de usuarios</value>
+  </data>
+  <data name="VdmScanTitle" xml:space="preserve">
+    <value>Dispositivos virtuales</value>
+  </data>
+  <data name="WaitTillScanningFinishes" xml:space="preserve">
+    <value>Freemium está procesando. Espere a que finalice el progreso.</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Advertencia</value>
+  </data>
+  <data name="Wednesday" xml:space="preserve">
+    <value>Mié</value>
+  </data>
+  <data name="WednesdayFull" xml:space="preserve">
+    <value>Miércoles</value>
+  </data>
+  <data name="Weekly" xml:space="preserve">
+    <value>Semanalmente</value>
+  </data>
+  <data name="WhenIdle" xml:space="preserve">
+    <value>Cuando esté inactivo</value>
+  </data>
+  <data name="WhenSystemIdle" xml:space="preserve">
+    <value>Cuando el sistema lleve inactivo:</value>
+  </data>
+  <data name="win" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="WindowsStandardTools" xml:space="preserve">
+    <value>Administrar Windows</value>
+  </data>
+  <data name="WindowsStandardToolsDesc" xml:space="preserve">
+    <value>Permite acceder directamente a las útiles funciones predeterminadas de Windows</value>
+  </data>
+  <data name="WindowsTools" xml:space="preserve">
+    <value>Administrar Windows</value>
+  </data>
+  <data name="WindowsToolsDesc" xml:space="preserve">
+    <value>Accede con facilidad a útiles funciones estándar de Windows</value>
+  </data>
+  <data name="winrar" xml:space="preserve">
+    <value>Winrar</value>
+  </data>
+  <data name="win_clipboard" xml:space="preserve">
+    <value>Portapapeles de Windows</value>
+  </data>
+  <data name="win_def" xml:space="preserve">
+    <value>Windows Defender</value>
+  </data>
+  <data name="win_map_drives" xml:space="preserve">
+    <value>Unidades de red asignadas de Windows</value>
+  </data>
+  <data name="win_rec_bin" xml:space="preserve">
+    <value>Papelera de reciclaje de Windows</value>
+  </data>
+  <data name="win_rec_doc" xml:space="preserve">
+    <value>Documentos recientes de Windows</value>
+  </data>
+  <data name="win_st_menu_run" xml:space="preserve">
+    <value>Ejecutar del menú Inicio de Windows</value>
+  </data>
+  <data name="win_temp_files" xml:space="preserve">
+    <value>Archivos temporales de Windows</value>
+  </data>
+  <data name="WipeWithFreemiumTools" xml:space="preserve">
+    <value>Eliminar con System Utilities</value>
+  </data>
+  <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
+    <value>¿Desea crear un punto de restauración del sistema antes de continuar? El proceso de restauración puede tardar varios minutos en completarse.</value>
+  </data>
+  <data name="select_day" xml:space="preserve">
+    <value>Al menos un día debe ser elegido</value>
+  </data>
+</root>

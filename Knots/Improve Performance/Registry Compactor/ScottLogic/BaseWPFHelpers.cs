@@ -11,15 +11,11 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
+/// <summary>
+/// The <see cref="BaseWPFHelpers"/> namespace defines common helpers for tree walking etc
+/// </summary>
 namespace BaseWPFHelpers
 {
-	/// <summary>
-	/// The <see cref="BaseWPFHelpers"/> namespace defines common helpers for tree walking etc
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
 	/// <summary>
 	/// Common helpers for tree walking etc
 	/// </summary>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="backup" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="backup_note" xml:space="preserve">
+    <value>Le programme de sauvegarde vous aide à protéger vos données importantes contre les pertes inopinées ou involontaires, par exemple en cas de dysfonctionnement de votre matériel informatique ou de votre support de données.</value>
+  </data>
+  <data name="checkdisk" xml:space="preserve">
+    <value>Vérifier le disque dur (ChkDsk)</value>
+  </data>
+  <data name="checkdisk_note" xml:space="preserve">
+    <value>Un outil d’interface en ligne de commande qui vérifie le support de données et corrige les erreurs éventuelles. Il répare par exemple les secteurs erronés, les clusters perdus, les fichiers mis en réseau et les erreurs de répertoires.</value>
+  </data>
+  <data name="critical_warning" xml:space="preserve">
+    <value>Avertissement critique</value>
+  </data>
+  <data name="disk_defragmenter" xml:space="preserve">
+    <value>Défragmentation</value>
+  </data>
+  <data name="disk_defragmenter_note" xml:space="preserve">
+    <value>Quand vous installez un programme sur votre ordinateur, il est possible que ses fichiers se dispersent progressivement sur l’ensemble du disque dur. C’est ce qu’on appelle la fragmentation. Quand la fragmentation est excessive, elle peut faire baisser la performance du disque dur et ralentir l’exécution des programmes. L’outil de défragmentation optimise la performance de votre PC et reclasse les fichiers de votre disque dur en blocs cohérents.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="system_file_checker" xml:space="preserve">
+    <value>Vérifier les fichiers système</value>
+  </data>
+  <data name="system_file_checker_note" xml:space="preserve">
+    <value>Cet outil vérifie l’intégralité des fichiers système pour détecter des dégâts ou manipulations éventuels. En cas d’écrasement d’un fichier système protégé, celui-ci sera restauré à partir du cache d’installation (%Systemroot%\System32\Dllcache) ou de la source d’installation Windows.</value>
+  </data>
+  <data name="system_restore" xml:space="preserve">
+    <value>Restauration système</value>
+  </data>
+  <data name="system_restore_note" xml:space="preserve">
+    <value>À chaque fois qu’une nouvelle application est installée sur votre ordinateur, le système est soumis à des modifications. Parfois, cela met en péril la stabilité de votre PC. Grâce à la restauration système, vous pouvez remettre votre ordinateur dans l’état où il se trouvait à une date antérieure, à laquelle il fonctionnait correctement.</value>
+  </data>
+  <data name="tool_not_found" xml:space="preserve">
+    <value>Cet outil n’a pas été détecté sur votre ordinateur.</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Gérer Windows</value>
+  </data>
+</root>

@@ -16,7 +16,7 @@
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -25,7 +25,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
+    <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
@@ -33,6 +33,76 @@
     <WarningLevel>4</WarningLevel>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PCCleanerDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\PCCleanerDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PCCleaner</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PCCleanerRelease|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\PCCleanerRelease\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PCCleaner</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterDebug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GamingBoosterDebug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;GamingBooster</DefineConstants>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'GamingBoosterRelease|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\GamingBoosterRelease\</OutputPath>
+    <DefineConstants>TRACE;GamingBooster</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -55,13 +125,39 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\Libraries\" /Y
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\Libraries\" /Y</PostBuildEvent>
+    <PostBuildEvent>if "$(ConfigurationName)" == "PCCleanerDebug" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+) else if "$(ConfigurationName)" == "PCCleanerRelease" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)PCCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+) else if "$(ConfigurationName)" == "GamingBoosterDebug" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreeGamingBooster\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+) else if "$(ConfigurationName)" == "GamingBoosterRelease" (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreeGamingBooster\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+) else (
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
+ xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TracksEraser\$(OutDir)Libraries\" /Y
+)</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -117,17 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\bottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="desktop_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\desktop_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\thinBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_registry_compactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\icon-registry-compactor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlreadyRunningError" xml:space="preserve">
+    <value>Another program seems to be already running...</value>
+  </data>
   <data name="Analyse" xml:space="preserve">
     <value>Analyse</value>
   </data>
-  <data name="Information" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="Options" xml:space="preserve">
-    <value>Options</value>
-  </data>
   <data name="AnalyseRegistry" xml:space="preserve">
     <value>Analyse Registry</value>
+  </data>
+  <data name="Analyze" xml:space="preserve">
+    <value>Analyze</value>
+  </data>
+  <data name="AnalyzeBeforeCompactError" xml:space="preserve">
+    <value>You must analyze the hive before you can optimize it</value>
+  </data>
+  <data name="AnalyzeRegistry" xml:space="preserve">
+    <value>Analyze the Registry</value>
+  </data>
+  <data name="Analyzing" xml:space="preserve">
+    <value>Analyzing</value>
+  </data>
+  <data name="AnalyzingRegistry" xml:space="preserve">
+    <value>Analyzing Registry</value>
   </data>
   <data name="AnalyzingResults" xml:space="preserve">
     <value>Analysis Results</value>
@@ -138,20 +172,53 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="CloseProgramsBeforeOptimizing" xml:space="preserve">
+    <value>You must close running programs before optimizing the registry. Please save your work and close any running programs now.</value>
+  </data>
   <data name="Compact" xml:space="preserve">
     <value>Optimize</value>
+  </data>
+  <data name="Compacting" xml:space="preserve">
+    <value>Optimizing</value>
+  </data>
+  <data name="CompactingRegistry" xml:space="preserve">
+    <value>Optimizing Registry</value>
   </data>
   <data name="CreateSystemRestorePointsAutomatically" xml:space="preserve">
     <value>Create system restore points automatically</value>
   </data>
+  <data name="DefragmentRegistry" xml:space="preserve">
+    <value>Optimize the registry</value>
+  </data>
+  <data name="DefragRegistry" xml:space="preserve">
+    <value>Optimize the registry</value>
+  </data>
+  <data name="DisplaySystemInformation" xml:space="preserve">
+    <value>Display system information</value>
+  </data>
   <data name="ElaspedTime" xml:space="preserve">
     <value>Elasped Time:</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="HiveListError" xml:space="preserve">
+    <value>Unable to open hive list... this can be a problem!</value>
+  </data>
+  <data name="Hives" xml:space="preserve">
+    <value>Hives</value>
+  </data>
+  <data name="Information" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="LastOptimization" xml:space="preserve">
     <value>Last Optimization</value>
   </data>
   <data name="LastOptimizationPerformed" xml:space="preserve">
     <value>Last Optimization Performed:</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Loading</value>
   </data>
   <data name="LoadingTripleColon" xml:space="preserve">
     <value>Loading...</value>
@@ -168,74 +235,32 @@
   <data name="OperatingSystem" xml:space="preserve">
     <value>Operating System:</value>
   </data>
+  <data name="Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="PleaseTryAgainLater" xml:space="preserve">
+    <value>Please try again later...</value>
+  </data>
   <data name="Processor" xml:space="preserve">
     <value>Processor:</value>
   </data>
   <data name="ProgramStats" xml:space="preserve">
     <value>Program Stats</value>
   </data>
-  <data name="RegistryFiles" xml:space="preserve">
-    <value>Registry Files</value>
-  </data>
-  <data name="RegistryCompactorOptions" xml:space="preserve">
-    <value>Optimize registry - Options</value>
-  </data>
-  <data name="RegistrySize" xml:space="preserve">
-    <value>Registry Size</value>
-  </data>
-  <data name="RegistrySizeColon" xml:space="preserve">
-    <value>Registry Size:</value>
-  </data>
-  <data name="SpaceSaved" xml:space="preserve">
-    <value>Space Saved:</value>
-  </data>
-  <data name="SystemInformation" xml:space="preserve">
-    <value>System Information</value>
-  </data>
-  <data name="TotalElapsedTime" xml:space="preserve">
-    <value>Total Elasped Time:</value>
-  </data>
-  <data name="TotalSpaceSaved" xml:space="preserve">
-    <value>Total Space Saved:</value>
-  </data>
-  <data name="WindowsRegistryInformation" xml:space="preserve">
-    <value>Windows Registry Information</value>
-  </data>
-  <data name="AlreadyRunningError" xml:space="preserve">
-    <value>Another program seems to be already running...</value>
-  </data>
-  <data name="AnalyzeBeforeCompactError" xml:space="preserve">
-    <value>You must analyze the hive before you can optimize it</value>
-  </data>
-  <data name="AnalyzingRegistry" xml:space="preserve">
-    <value>Analyzing Registry</value>
-  </data>
-  <data name="CloseProgramsBeforeOptimizing" xml:space="preserve">
-    <value>You must close running programs before optimizing the registry. Please save your work and close any running programs now.</value>
-  </data>
-  <data name="Compacting" xml:space="preserve">
-    <value>Optimizing</value>
-  </data>
-  <data name="RegistryValueAlreadyAnalyzedError" xml:space="preserve">
-    <value>Hive has already been analyzed</value>
-  </data>
-  <data name="RegistryValueAlreadyCompactedError" xml:space="preserve">
-    <value>The hive has already been optimized</value>
-  </data>
-  <data name="HiveListError" xml:space="preserve">
-    <value>Unable to open hive list... this can be a problem!</value>
-  </data>
-  <data name="Hives" xml:space="preserve">
-    <value>Hives</value>
-  </data>
-  <data name="Loading" xml:space="preserve">
-    <value>Loading</value>
-  </data>
-  <data name="PleaseTryAgainLater" xml:space="preserve">
-    <value>Please try again later...</value>
+  <data name="RegHive" xml:space="preserve">
+    <value>Registry hive</value>
   </data>
   <data name="RegistryAlreadyCompacted" xml:space="preserve">
     <value>It appears that the registry has already been optimized.</value>
+  </data>
+  <data name="RegistryCompactor" xml:space="preserve">
+    <value>Optimize Registry</value>
+  </data>
+  <data name="RegistryCompactorDesc" xml:space="preserve">
+    <value>This module defrags, optimizes and compacts the windows registry by removing unnecessary gaps and wasted space. This can improve the system performance and boost registry access.</value>
+  </data>
+  <data name="RegistryCompactorOptions" xml:space="preserve">
+    <value>Optimize registry - Options</value>
   </data>
   <data name="RegistryCompactQuestion" xml:space="preserve">
     <value>This can take several minutes. Are you sure you want to optimize your registry?</value>
@@ -243,14 +268,32 @@
   <data name="RegistryDoesntNeedCompact" xml:space="preserve">
     <value>The Windows Registry does NOT need to be optimized</value>
   </data>
+  <data name="RegistryFiles" xml:space="preserve">
+    <value>Registry Files</value>
+  </data>
   <data name="RegistryHiveLoadError" xml:space="preserve">
     <value>There was an error loading the registry hives</value>
   </data>
   <data name="RegistryNeedsCompact" xml:space="preserve">
     <value>The Windows Registry needs to be optimized</value>
   </data>
+  <data name="RegistrySize" xml:space="preserve">
+    <value>Registry Size</value>
+  </data>
+  <data name="RegistrySizeColon" xml:space="preserve">
+    <value>Registry Size:</value>
+  </data>
+  <data name="RegistryValueAlreadyAnalyzedError" xml:space="preserve">
+    <value>Hive has already been analyzed</value>
+  </data>
+  <data name="RegistryValueAlreadyCompactedError" xml:space="preserve">
+    <value>The hive has already been optimized</value>
+  </data>
   <data name="RestartComputerQuestion" xml:space="preserve">
     <value>You must restart your computer before the new setting will take effect. Do you want to restart your computer now?</value>
+  </data>
+  <data name="ReviewAnalysisResults" xml:space="preserve">
+    <value>Review Analysis Results</value>
   </data>
   <data name="Saved" xml:space="preserve">
     <value>Saved</value>
@@ -264,60 +307,8 @@
   <data name="Seconds" xml:space="preserve">
     <value>seconds</value>
   </data>
-  <data name="TotalMemory" xml:space="preserve">
-    <value>total memory</value>
-  </data>
-  <data name="Unknown" xml:space="preserve">
-    <value>Unknown</value>
-  </data>
-  <data name="UpdaterError" xml:space="preserve">
-    <value>The updater encountered an error</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="bottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\bottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="desktop_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\desktop_icon.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="thinBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\thinBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_registry_compactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\icon-registry-compactor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="RegistryCompactor" xml:space="preserve">
-    <value>Optimize Registry</value>
-  </data>
-  <data name="Analyzing" xml:space="preserve">
-    <value>Analyzing</value>
-  </data>
-  <data name="StepXofY" xml:space="preserve">
-    <value>Step {0} of {1}</value>
-  </data>
-  <data name="CompactingRegistry" xml:space="preserve">
-    <value>Optimizing Registry</value>
-  </data>
-  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AnalyzeRegistry" xml:space="preserve">
-    <value>Analyze the Registry</value>
-  </data>
-  <data name="DefragmentRegistry" xml:space="preserve">
-    <value>Optimize the registry</value>
-  </data>
-  <data name="DefragRegistry" xml:space="preserve">
-    <value>Optimize the registry</value>
-  </data>
-  <data name="DisplaySystemInformation" xml:space="preserve">
-    <value>Display system information</value>
-  </data>
-  <data name="RegistryCompactorDesc" xml:space="preserve">
-    <value>This module defrags, optimizes and compacts the windows registry by removing unnecessary gaps and wasted space. This can improve the system performance and boost registry access.</value>
-  </data>
-  <data name="ReviewAnalysisResults" xml:space="preserve">
-    <value>Review Analysis Results</value>
+  <data name="SpaceSaved" xml:space="preserve">
+    <value>Space Saved:</value>
   </data>
   <data name="StartRegistryDefrag" xml:space="preserve">
     <value>Start optimization</value>
@@ -334,19 +325,38 @@
   <data name="StepsToComplete" xml:space="preserve">
     <value>3-Steps to complete the process:</value>
   </data>
+  <data name="StepXofY" xml:space="preserve">
+    <value>Step {0} of {1}</value>
+  </data>
+  <data name="SystemInformation" xml:space="preserve">
+    <value>System Information</value>
+  </data>
+  <data name="TotalElapsedTime" xml:space="preserve">
+    <value>Total Elasped Time:</value>
+  </data>
+  <data name="TotalMemory" xml:space="preserve">
+    <value>total memory</value>
+  </data>
+  <data name="TotalSpaceSaved" xml:space="preserve">
+    <value>Total Space Saved:</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Unknown</value>
+  </data>
+  <data name="UpdaterError" xml:space="preserve">
+    <value>The updater encountered an error</value>
+  </data>
   <data name="ViewSystemInfo" xml:space="preserve">
     <value>View System Info</value>
   </data>
-  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WindowsRegistryInformation" xml:space="preserve">
+    <value>Windows Registry Information</value>
   </data>
-  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="FSUIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\FSUIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="RegHive" xml:space="preserve">
-    <value>Registry hive</value>
+  <data name="PCCleanerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\PCCleanerIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

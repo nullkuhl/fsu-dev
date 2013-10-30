@@ -139,7 +139,7 @@
     <value>Confirm Password</value>
   </data>
   <data name="create_auto_file" xml:space="preserve">
-    <value>Create a auto-decrypting EXE file</value>
+    <value>Create an auto-decrypting EXE file</value>
   </data>
   <data name="decrypt" xml:space="preserve">
     <value>Decrypt</value>

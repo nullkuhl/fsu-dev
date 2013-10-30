@@ -1,12 +1,4 @@
-using System.Drawing;
-using System.Windows.Forms;
-using System.Collections;
-using Microsoft.VisualBasic;
-using System.Diagnostics;
-using System;
 using System.Resources;
-using System.Globalization;
-using System.Threading;
 
 namespace SystemInformation
 {

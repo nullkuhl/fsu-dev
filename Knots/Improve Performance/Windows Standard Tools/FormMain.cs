@@ -14,6 +14,9 @@ namespace WindowsStandardTools
 	/// </summary>
 	public partial class FormMain : Form
 	{
+        private static bool getOS = false;
+        private static bool _OSisXp;
+
 		/// <summary>
 		/// constructor for FrmWindowStdTools
 		/// </summary>
@@ -22,32 +25,37 @@ namespace WindowsStandardTools
 			InitializeComponent();
 		}
 
-		/// <summary>
-		/// check if the current operating system is windows xp
-		/// </summary>
-		/// <returns></returns>
-		public static Boolean OSisXp()
-		{
-			// Get OperatingSystem information from the system namespace.
-			OperatingSystem osInfo = Environment.OSVersion;
+        /// <summary>
+        /// check if the current operating system is windows xp
+        /// </summary>
+        public static bool OSisXP
+        {
+            get
+            {
+                if (!getOS)
+                {
+                    _OSisXp = OSisXp();
+                }
+                return _OSisXp;
+            }
+        }
 
-			// Determine the platform.
-			switch (osInfo.Platform)
-			{
-				case PlatformID.Win32NT:
+        /// <summary>
+        /// check if the current operating system is windows xp
+        /// </summary>
+        /// <returns></returns>
+        private static Boolean OSisXp()
+        {
+            bool result = false;
+            getOS = true;
 
-					switch (osInfo.Version.Major)
-					{
-						case 4:
-							return false;
+            // Get OperatingSystem information from the system namespace.
+            OperatingSystem osInfo = Environment.OSVersion;
 
-						case 5:
-							return true;
-					}
-					break;
-			}
-			return false;
-		}
+            if (osInfo.Platform == PlatformID.Win32NT && osInfo.Version.Major == 5)
+                result = true;
+            return result;
+        }
 
 		/// <summary>
 		/// initialize FrmWindowStdTools
@@ -66,22 +74,22 @@ namespace WindowsStandardTools
 		/// <param name="culture"></param>
 		void SetCulture(CultureInfo culture)
 		{
-			var rm = new ResourceManager("WindowsStandardTools.Resources", typeof (FormMain).Assembly);
+            ResourceManager rm = new ResourceManager("WindowsStandardTools.Resources", typeof(FormMain).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
 
-			CheckDisk.Text = rm.GetString("checkdisk");
-			CheckDiskNote.Text = rm.GetString("checkdisk_note") + ".";
-			DiskDefrag.Text = rm.GetString("disk_defragmenter");
-			DiskDefragNote.Text = rm.GetString("disk_defragmenter_note") + ".";
-			SysRestore.Text = rm.GetString("system_restore");
-			SysRestoreNote.Text = rm.GetString("system_restore_note") + ".";
-			SysFileChecker.Text = rm.GetString("system_file_checker");
-			SysFileCheckerNote.Text = rm.GetString("system_file_checker_note") + ".";
-			;
-			Backup.Text = rm.GetString("backup");
-			BackupNote.Text = rm.GetString("backup_note") + ".";
-			Text = rm.GetString("window_title");
-			ucTop.Text = rm.GetString("window_title");
+            CheckDisk.Text = rm.GetString("checkdisk");
+            CheckDiskNote.Text = rm.GetString("checkdisk_note");
+            DiskDefrag.Text = rm.GetString("disk_defragmenter");
+            DiskDefragNote.Text = rm.GetString("disk_defragmenter_note");
+            SysRestore.Text = rm.GetString("system_restore");
+            SysRestoreNote.Text = rm.GetString("system_restore_note");
+            SysFileChecker.Text = rm.GetString("system_file_checker");
+            SysFileCheckerNote.Text = rm.GetString("system_file_checker_note");
+
+            Backup.Text = rm.GetString("backup");
+            BackupNote.Text = rm.GetString("backup_note");
+            Text = rm.GetString("window_title");
+            ucTop.Text = rm.GetString("window_title");
 		}
 
 		/// <summary>
@@ -93,13 +101,15 @@ namespace WindowsStandardTools
 		{
             try
             {
-                var file = new StreamWriter("script.cmd");
-                file.WriteLine("@echo off");
-                file.WriteLine("chkdsk /f /r");
-                file.WriteLine("pause");
-                file.Close();
+                using (StreamWriter file = new StreamWriter("script.cmd"))
+                {
+                    file.WriteLine("@echo off");
+                    file.WriteLine("chkdsk /f /r");
+                    file.WriteLine("pause");
+                    file.Close();
+                }
 
-                var process = new Process();
+                Process process = new Process();
                 process.StartInfo.FileName = "script.cmd";
                 process.StartInfo.Arguments = "";
                 process.StartInfo.CreateNoWindow = false;
@@ -128,7 +138,7 @@ namespace WindowsStandardTools
                 }
                 else
                 {
-                    var process = new Process();
+                    Process process = new Process();
                     process.StartInfo.FileName = "dfrgui";
                     process.StartInfo.Arguments = "";
                     process.StartInfo.CreateNoWindow = false;
@@ -157,7 +167,7 @@ namespace WindowsStandardTools
                 }
                 else
                 {
-                    var process = new Process();
+                    Process process = new Process();
                     process.StartInfo.FileName = "rstrui";
                     process.StartInfo.Arguments = "";
                     process.StartInfo.CreateNoWindow = false;
@@ -182,13 +192,12 @@ namespace WindowsStandardTools
             {
                 if (OSisXp())
                 {
-                    MessageBox.Show(
-                        "Windows System File Checker might ask for your windows installation disc to continue, please prepare your disc",
+                    MessageBox.Show(rm.GetString("xp_warning"),
                         "Warning",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
 
-                    var process = new Process();
+                    Process process = new Process();
                     process.StartInfo.FileName = "sfc";
                     process.StartInfo.Arguments = "/scannow";
                     process.StartInfo.CreateNoWindow = false;
@@ -197,13 +206,15 @@ namespace WindowsStandardTools
                 }
                 else
                 {
-                    var file = new StreamWriter("script.cmd");
-                    file.WriteLine("@echo off");
-                    file.WriteLine("sfc /scannow");
-                    file.WriteLine("pause");
-                    file.Close();
+                    using (StreamWriter file = new StreamWriter("script.cmd"))
+                    {
+                        file.WriteLine("@echo off");
+                        file.WriteLine("sfc /scannow");
+                        file.WriteLine("pause");
+                        file.Close();
+                    }
 
-                    var process = new Process();
+                    Process process = new Process();
                     process.StartInfo.FileName = "script.cmd";
                     process.StartInfo.Arguments = "";
                     process.StartInfo.CreateNoWindow = false;
@@ -236,7 +247,7 @@ namespace WindowsStandardTools
                     }
                     else
                     {
-                        MessageBox.Show(rm.GetString("tool_not_found") + ".",
+                        MessageBox.Show(rm.GetString("tool_not_found"),
                                         rm.GetString("critical_warning"),
                                         MessageBoxButtons.OK,
                                         MessageBoxIcon.Warning);

@@ -6,12 +6,12 @@
 		xmlns:properties="clr-namespace:RegistryCompactor.Properties"
 		xmlns:WinCtr="clr-namespace:RegistryCompactor"
 		Title="{x:Static Member=properties:Resources.RegistryCompactor}"
-		Width="575"
+		Width="680"
 		Height="530"
 		Background="#FFFFFF"
-		Icon="Images\FSUIcon.ico"
+		Icon="Images\PCCleanerIcon.ico"
 		ResizeMode="NoResize"
-		WindowStartupLocation="CenterScreen">
+		WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
 
 	<Window.Resources>
 		<x:ArrayExtension x:Key="brushes"
@@ -139,7 +139,7 @@
 						   TextWrapping="Wrap" />
 				<DockPanel Margin="0,20">
 					<Button Name="Start"
-							Width="252"
+							Width="310"
 							Height="57"
 							HorizontalAlignment="Left"
 							VerticalAlignment="Top"
@@ -165,7 +165,7 @@
 						</StackPanel>
 					</Button>
 					<Button Name="ViewSystemInfo"
-							Width="252"
+							Width="310"
 							Height="57"
 							HorizontalAlignment="Right"
 							HorizontalContentAlignment="Left"
@@ -272,7 +272,7 @@
 
 				<c:PieChartLayout x:Name="piePlotter"
 								  Height="245"
-								  Margin="30 0 0 0"
+								  Margin="30 -20 0 0"
 								  PlottedProperty="Value">
 					<c:PieChartLayout.ColorSelector>
 						<c:IndexedColourSelector Brushes="{StaticResource brushes}" />

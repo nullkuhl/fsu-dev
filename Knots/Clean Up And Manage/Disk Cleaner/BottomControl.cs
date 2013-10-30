@@ -6,46 +6,37 @@ using Disk_Cleaner.Properties;
 
 namespace Disk_Cleaner
 {
-	/// <summary>
-	/// Bottom control
-	/// </summary>
-	public partial class BottomControl : UserControl
-	{
-		/// <summary>
-		/// constructor for BottomControl
-		/// </summary>
-		public BottomControl()
-		{
-			InitializeComponent();
-			SetImage();
-		}
+    /// <summary>
+    /// Bottom control
+    /// </summary>
+    public partial class BottomControl : UserControl
+    {
+        /// <summary>
+        /// constructor for BottomControl
+        /// </summary>
+        public BottomControl()
+        {
+            InitializeComponent();
+            SetImage();
+        }
 
-		/// <summary>
-		/// change image for BottomControl
-		/// </summary>
-		void SetImage()
-		{
-			Image image;
-			try
-			{
-				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
-				image = Resources.bottomBar;
-				if (File.Exists(path))
-				{
-					image = Image.FromFile(path);
-				}
-			}
-			catch (Exception)
-			{
-				image = Resources.bottomBar;
-			}
+        /// <summary>
+        /// change image for BottomControl
+        /// </summary>
+        void SetImage()
+        {
+            Image image = Resources.bottomBar;
+            try
+            {
+                string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
+                if (File.Exists(path))
+                    image = Image.FromFile(path);
+            }
+            catch (Exception)
+            {
+            }
 
-			if (image == null)
-			{
-				image = Resources.bottomBar;
-			}
-
-			lblMain.Image = image;
-		}
-	}
+            lblMain.Image = image;
+        }
+    }
 }

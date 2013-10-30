@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationHelpFiles" xml:space="preserve">
+    <value>Archivos de ayuda de aplicaciones</value>
+  </data>
+  <data name="ApplicationHistory" xml:space="preserve">
+    <value>Historial de aplicaciones</value>
+  </data>
+  <data name="ApplicationIDPaths" xml:space="preserve">
+    <value>Rutas de ids. de aplicaciones</value>
+  </data>
+  <data name="CheckingApplicationHelpFiles" xml:space="preserve">
+    <value>Comprobando rutas en busca de archivos de ayuda del sistema no válidos...</value>
+  </data>
+  <data name="CheckingClassNameRegistrations" xml:space="preserve">
+    <value>Buscando ids. de clase no válidos...</value>
+  </data>
+  <data name="CheckingFontPaths" xml:space="preserve">
+    <value>Comprobando rutas en busca de fuentes no válidas...</value>
+  </data>
+  <data name="CheckingHistorySettings" xml:space="preserve">
+    <value>Buscando vínculos no válidos en el historial...</value>
+  </data>
+  <data name="CheckingSharedLibraries" xml:space="preserve">
+    <value>Comprobando rutas en busca de conexiones de bibliotecas compartidas válidas...</value>
+  </data>
+  <data name="CheckingStartupApplicationPaths" xml:space="preserve">
+    <value>Comprobando entradas de software de inicio...</value>
+  </data>
+  <data name="CheckingUninstallExecutablePaths" xml:space="preserve">
+    <value>Comprobando rutas en busca de software instalado por el usuario...</value>
+  </data>
+  <data name="CheckingVirtualDeviceRegistration" xml:space="preserve">
+    <value>Buscando error de VDM...</value>
+  </data>
+  <data name="ClassKeyEditStrings" xml:space="preserve">
+    <value>Cadena para editar claves de clases</value>
+  </data>
+  <data name="ClassKeyOpenStrings" xml:space="preserve">
+    <value>Cadena para abrir claves de clases</value>
+  </data>
+  <data name="ClassKeySubPaths" xml:space="preserve">
+    <value>Subrutas de claves de clase</value>
+  </data>
+  <data name="ClassNameRegistrations" xml:space="preserve">
+    <value>Registros de nombres de clase</value>
+  </data>
+  <data name="ClsidRegistrations" xml:space="preserve">
+    <value>inscripciones Clsid</value>
+  </data>
+  <data name="ComparingInternalID" xml:space="preserve">
+    <value>Comparando cadenas de id. internos...</value>
+  </data>
+  <data name="DeepNativeSoftwareStrings" xml:space="preserve">
+    <value>Cadenas de software nativo profundo</value>
+  </data>
+  <data name="DeepSoftwareScan" xml:space="preserve">
+    <value>Análisis profundo de software...</value>
+  </data>
+  <data name="DeepSystemScan" xml:space="preserve">
+    <value>Análisis profundo del sistema</value>
+  </data>
+  <data name="DeepUserSoftwareStrings" xml:space="preserve">
+    <value>Cadenas de software de usuario intensivas</value>
+  </data>
+  <data name="FontPaths" xml:space="preserve">
+    <value>Rutas de fuentes</value>
+  </data>
+  <data name="HelpFilePaths" xml:space="preserve">
+    <value>Ruta de los archivos de ayuda</value>
+  </data>
+  <data name="HelpFiles" xml:space="preserve">
+    <value>Archivos de ayuda</value>
+  </data>
+  <data name="HistoryandStartMenu" xml:space="preserve">
+    <value>Historial y menú Inicio</value>
+  </data>
+  <data name="HistoryExplorerStrings" xml:space="preserve">
+    <value>Historial del explorador</value>
+  </data>
+  <data name="HistoryLinkStrings" xml:space="preserve">
+    <value>Historique des liens</value>
+  </data>
+  <data name="HistoryMenuStrings" xml:space="preserve">
+    <value>Historique de menu</value>
+  </data>
+  <data name="HistorySettings" xml:space="preserve">
+    <value>Configuración de historial</value>
+  </data>
+  <data name="HistoryStartPaths" xml:space="preserve">
+    <value>Historial de inicios</value>
+  </data>
+  <data name="IconPaths" xml:space="preserve">
+    <value>Chemins des icônes</value>
+  </data>
+  <data name="InstallationStrings" xml:space="preserve">
+    <value>Cadenas de instalación</value>
+  </data>
+  <data name="InstalledSoftware" xml:space="preserve">
+    <value>Software instalado</value>
+  </data>
+  <data name="InterfaceProxyIDs" xml:space="preserve">
+    <value>Identificadores de proxy de interfaces</value>
+  </data>
+  <data name="InterfaceTypes" xml:space="preserve">
+    <value>Tipos de interfaz</value>
+  </data>
+  <data name="MostRecentlyUsedLists" xml:space="preserve">
+    <value>Listas de usados más recientemente</value>
+  </data>
+  <data name="MRULists" xml:space="preserve">
+    <value>Lista de últimos utilizados</value>
+  </data>
+  <data name="MRUScan" xml:space="preserve">
+    <value>Análisis de usados más recientemente</value>
+  </data>
+  <data name="ProcServerSubkeys" xml:space="preserve">
+    <value>Sous-clé du ProcServer</value>
+  </data>
+  <data name="RegisteredHelpFiles" xml:space="preserve">
+    <value>Archivos de ayuda registrados</value>
+  </data>
+  <data name="SearchingMRULists" xml:space="preserve">
+    <value>Buscando listas de usados más recientemente...</value>
+  </data>
+  <data name="SharedLibraries" xml:space="preserve">
+    <value>Bibliotecas compartidas</value>
+  </data>
+  <data name="SoftwareRegistrations" xml:space="preserve">
+    <value>Registros de software</value>
+  </data>
+  <data name="StartupApplicationPaths" xml:space="preserve">
+    <value>Rutas de aplicaciones de inicio</value>
+  </data>
+  <data name="StartupEntries" xml:space="preserve">
+    <value>Entradas de autoarranque</value>
+  </data>
+  <data name="StartupOptions" xml:space="preserve">
+    <value>Opciones de inicio</value>
+  </data>
+  <data name="StatusChangeFormat" xml:space="preserve">
+    <value>Analizando: {0}</value>
+  </data>
+  <data name="SystemControlClasses" xml:space="preserve">
+    <value>Clases de controles del sistema</value>
+  </data>
+  <data name="SystemFonts" xml:space="preserve">
+    <value>Fuentes del sistema</value>
+  </data>
+  <data name="SystemScan" xml:space="preserve">
+    <value>Análisis del sistema</value>
+  </data>
+  <data name="SystemSoftware" xml:space="preserve">
+    <value>Software del sistema</value>
+  </data>
+  <data name="TestingClassInterfaces" xml:space="preserve">
+    <value>Comprobando interfaces de clase...</value>
+  </data>
+  <data name="TestingClasskeyPathReferences" xml:space="preserve">
+    <value>Comprobando referencias de rutas de claves de clase...</value>
+  </data>
+  <data name="TestingTypeLibraryReferences" xml:space="preserve">
+    <value>Comprobando referencias de bibliotecas de tipo</value>
+  </data>
+  <data name="TestingUserSoftwarePaths" xml:space="preserve">
+    <value>Buscando rutas de software de usuario no válidas...</value>
+  </data>
+  <data name="TypeLibraries" xml:space="preserve">
+    <value>Bibliotecas de tipo</value>
+  </data>
+  <data name="UninstallExecutablePaths" xml:space="preserve">
+    <value>Rutas de ejecutables de desinstalación</value>
+  </data>
+  <data name="UserScan" xml:space="preserve">
+    <value>Análisis de usuario</value>
+  </data>
+  <data name="UserSoftware" xml:space="preserve">
+    <value>Software de usuario</value>
+  </data>
+  <data name="UserSoftwarePaths" xml:space="preserve">
+    <value>Rutas de software de usuario</value>
+  </data>
+  <data name="VirtualDeviceRegistration" xml:space="preserve">
+    <value>Registro de dispositivos virtuales</value>
+  </data>
+  <data name="VirtualDevices" xml:space="preserve">
+    <value>Dispositivos virtuales</value>
+  </data>
+  <data name="Win32HelpFiles" xml:space="preserve">
+    <value>Archivos de ayuda de Win32</value>
+  </data>
+</root>

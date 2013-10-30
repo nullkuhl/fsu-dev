@@ -49,6 +49,9 @@ namespace RegistryCompactor
 
 		#endregion
 
+        /// <summary>
+        /// Compact registry
+        /// </summary>
 		void CompactRegistry()
 		{
 			long lSeqNum;
@@ -93,6 +96,10 @@ namespace RegistryCompactor
 			Dispatcher.BeginInvoke(new Action(Close));
 		}
 
+        /// <summary>
+        /// Sets dialog result
+        /// </summary>
+        /// <param name="bResult"></param>
 		void SetDialogResult(bool bResult)
 		{
 			if (Dispatcher.Thread != Thread.CurrentThread)
@@ -104,6 +111,10 @@ namespace RegistryCompactor
 			DialogResult = bResult;
 		}
 
+        /// <summary>
+        /// Updates status text
+        /// </summary>
+        /// <param name="statusText"></param>
 		void SetStatusText(string statusText)
 		{
 			if (Dispatcher.Thread != Thread.CurrentThread)
@@ -115,6 +126,9 @@ namespace RegistryCompactor
 			CurrentValue.Text = statusText;
 		}
 
+        /// <summary>
+        /// Increments progress bar value
+        /// </summary>
 		void IncrementProgressBar()
 		{
 			if (Dispatcher.Thread != Thread.CurrentThread)
@@ -126,6 +140,11 @@ namespace RegistryCompactor
 			progressBar.Value++;
 		}
 
+        /// <summary>
+        /// Handles window loaded event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			progressBar.Minimum = 0;
@@ -137,7 +156,7 @@ namespace RegistryCompactor
 
 			Color color = Color.FromArgb(240, 240, 240);
 			Brush solidBrush = new SolidBrush(color);
-			var animatedImageControl =
+            AnimatedImageControl animatedImageControl =
 				new AnimatedImageControl(this, Properties.Resources.ajax_loader, solidBrush);
 			CompactingTitle.Children.Insert(0, animatedImageControl);
 		}

@@ -120,6 +120,12 @@
   <data name="all_files" xml:space="preserve">
     <value>All files(*)</value>
   </data>
+  <data name="all_filesystem_objects" xml:space="preserve">
+    <value>AllFilesystemObjects</value>
+  </data>
+  <data name="background" xml:space="preserve">
+    <value>Background</value>
+  </data>
   <data name="click_check_mark" xml:space="preserve">
     <value>Click the checkmark before the item to either enable or disable it. To remove it permanently, click 'Remove' button below</value>
   </data>
@@ -147,6 +153,12 @@
   <data name="directory" xml:space="preserve">
     <value>Directory</value>
   </data>
+  <data name="directory_background" xml:space="preserve">
+    <value>Directory\Background</value>
+  </data>
+  <data name="directory_shell" xml:space="preserve">
+    <value>Directory\shell</value>
+  </data>
   <data name="drive" xml:space="preserve">
     <value>Drive</value>
   </data>
@@ -167,6 +179,9 @@
   </data>
   <data name="internal_name" xml:space="preserve">
     <value>Internal Name</value>
+  </data>
+  <data name="lnkfile" xml:space="preserve">
+    <value>Shortcut</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>New</value>
@@ -206,20 +221,5 @@
   </data>
   <data name="version_info" xml:space="preserve">
     <value>Version Information</value>
-  </data>
-  <data name="all_filesystem_objects" xml:space="preserve">
-    <value>AllFilesystemObjects</value>
-  </data>
-  <data name="background" xml:space="preserve">
-    <value>Background</value>
-  </data>
-  <data name="directory_background" xml:space="preserve">
-    <value>Directory\Background</value>
-  </data>
-  <data name="directory_shell" xml:space="preserve">
-    <value>Directory\shell</value>
-  </data>
-  <data name="lnkfile" xml:space="preserve">
-    <value>Shortcut</value>
   </data>
 </root>

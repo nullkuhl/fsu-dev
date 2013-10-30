@@ -26,6 +26,10 @@
                     <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
                 </Merging>
             </Assembly>
+            <Assembly AssemblyName="TracksEraserCore, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\TracksEraserCore.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
             <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null">
                 <Merging />
                 <Embedding />

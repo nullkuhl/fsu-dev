@@ -42,10 +42,10 @@ namespace FreemiumUtil
 		{
 			string currVersion = CfgFile.Get("Version");
 
-			var binding = new BasicHttpBinding();
-			var address = new EndpointAddress("http://service.freemiumlab.com/ReportService.svc");
+            BasicHttpBinding binding = new BasicHttpBinding();
+            EndpointAddress address = new EndpointAddress("http://service.freemiumlab.com/ReportService.svc");
 
-			var client = new ReportServiceClient(binding, address);
+            ReportServiceClient client = new ReportServiceClient(binding, address);
 			string[] latestVersion;
 			try
 			{
@@ -54,7 +54,7 @@ namespace FreemiumUtil
 			}
 			catch
 			{
-				latestVerLink = "";
+				latestVerLink = string.Empty;
 				return true;
 			}
 			latestVerLink = latestVersion[1];
@@ -67,7 +67,7 @@ namespace FreemiumUtil
 		/// <param name="downloadLink"></param>
 		public void Download(string downloadLink)
 		{
-			var webClient = new WebClient();
+            WebClient webClient = new WebClient();
 
 			webClient.DownloadFileCompleted += webClient_DownloadFileCompleted;
 			webClient.DownloadProgressChanged += webClient_DownloadProgressChanged;

@@ -20,13 +20,11 @@ namespace Disk_Cleaner
     /// </summary>
     public partial class FormMain : Form
     {
-        readonly FormRestore formRest = new FormRestore();
         readonly frmView formView = new frmView();
         readonly ArrayList junk = new ArrayList();
         readonly ArrayList scan = new ArrayList();
         readonly ArrayList zero = new ArrayList();
         bool ABORT;
-        //bool RUN = false;
         FormPreferences formPref;
         decimal binsize;
         decimal junksize;
@@ -42,6 +40,7 @@ namespace Disk_Cleaner
         public FormMain()
         {
             InitializeComponent();
+           
             Clean.OnProgress += Clean_OnProgress;
         }
 
@@ -124,9 +123,7 @@ namespace Disk_Cleaner
                         if (IsAnyItemChecked(listViewJunk.Items))
                         {
                             DoSearchVisible(4);
-
                             buttonNext.Enabled = false;
-                            //ulong gainedSizeBytes = 0;
                             ProcessedFiles.Clear();
                             ProcessedFiles.View = View.Details;
                             ProcessedFiles.Columns.Add(rm.GetString("cleaning_status"), 350);
@@ -140,11 +137,11 @@ namespace Disk_Cleaner
                             };
                             bgWorker.DoWork += bgWorker_DoWork;
                             bgWorker.RunWorkerCompleted += bgWorker_RunWorkerCompleted;
-                            bgWorker.RunWorkerAsync();                            
+                            bgWorker.RunWorkerAsync();
                         }
                         else
                         {
-                            MessageBox.Show(rm.GetString("select_any_item") + ".",
+                            MessageBox.Show(rm.GetString("select_any_item"),
                                             rm.GetString("critical_warning"),
                                             MessageBoxButtons.OK,
                                             MessageBoxIcon.Warning);
@@ -169,10 +166,10 @@ namespace Disk_Cleaner
                     {
                         try
                         {
-                            var drive = listViewDrives.Items[i].Tag as DriveInfo;
+                            DriveInfo drive = listViewDrives.Items[i].Tag as DriveInfo;
                             if (drive != null)
                             {
-                                var item = new ListViewItem(
+                                ListViewItem item = new ListViewItem(
                                     string.IsNullOrEmpty(drive.VolumeLabel) ? drive.Name : drive.VolumeLabel + " (" + drive.Name + ")") { Tag = drive };
                                 item.SubItems.Add(rm.GetString("pending"));
                                 listViewScanning.Items.Add(item);
@@ -192,7 +189,7 @@ namespace Disk_Cleaner
             }
             else
             {
-                MessageBox.Show(rm.GetString("select_any_drive") + ".",
+                MessageBox.Show(rm.GetString("select_any_drive"),
                                 rm.GetString("critical_warning"),
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
@@ -284,7 +281,6 @@ namespace Disk_Cleaner
 
         void bgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-
             HideProcessing();
             if (labelClean.InvokeRequired)
             {
@@ -400,7 +396,7 @@ namespace Disk_Cleaner
             formPref.listViewGeneral.Items.Clear();
             foreach (Option opt in Preferences.FileExtensions)
             {
-                var item = new ListViewItem(opt.Value);
+                ListViewItem item = new ListViewItem(opt.Value);
                 item.SubItems.Add(opt.Description);
                 item.Checked = opt.Checked;
                 item.Tag = opt;
@@ -409,7 +405,7 @@ namespace Disk_Cleaner
             formPref.listViewExclude.Items.Clear();
             foreach (Option opt in Preferences.PathExcluded)
             {
-                var item = new ListViewItem(opt.Value);
+                ListViewItem item = new ListViewItem(opt.Value);
                 item.SubItems.Add(opt.Description);
                 item.Checked = opt.Checked;
                 item.Tag = opt;
@@ -418,7 +414,7 @@ namespace Disk_Cleaner
             formPref.listViewInclude.Items.Clear();
             foreach (Option opt in Preferences.PathIncluded)
             {
-                var item = new ListViewItem(opt.Value);
+                ListViewItem item = new ListViewItem(opt.Value);
                 item.SubItems.Add(opt.Description);
                 item.Checked = opt.Checked;
                 item.Tag = opt;
@@ -448,15 +444,15 @@ namespace Disk_Cleaner
         {
             if (e.Item.Checked)
             {
-                var driveInfo = e.Item.Tag as DriveInfo;
+                DriveInfo driveInfo = e.Item.Tag as DriveInfo;
                 if (driveInfo != null) Preferences.CheckedNames += driveInfo.Name + "|";
             }
             else
             {
-                var info = e.Item.Tag as DriveInfo;
+                DriveInfo info = e.Item.Tag as DriveInfo;
                 if (info != null)
                     Preferences.CheckedNames = Preferences.CheckedNames.Replace(
-                        info.Name + "|", "");
+                        info.Name + "|", string.Empty);
             }
         }
 
@@ -510,7 +506,7 @@ namespace Disk_Cleaner
                     {
                         if (drive.IsReady && (drive.DriveType == DriveType.Fixed || drive.DriveType == DriveType.Removable))
                         {
-                            var item = new ListViewItem(
+                            ListViewItem item = new ListViewItem(
                                 string.IsNullOrEmpty(drive.VolumeLabel) ? drive.Name : drive.VolumeLabel + " (" + drive.Name + ")");
                             item.SubItems.Add((drive.TotalSize / Math.Pow(1024, 3)).ToString("N2") + " GB");
                             item.SubItems.Add((drive.AvailableFreeSpace / Math.Pow(1024, 3)).ToString("N2") + " GB");
@@ -523,7 +519,7 @@ namespace Disk_Cleaner
                     {
                         foreach (ListViewItem item in listViewDrives.Items)
                         {
-                            var driveInfo = item.Tag as DriveInfo;
+                            DriveInfo driveInfo = item.Tag as DriveInfo;
                             if (driveInfo != null)
                                 item.Checked = Preferences.CheckedNames.IndexOf(driveInfo.Name + "|") != -1;
                         }
@@ -542,10 +538,11 @@ namespace Disk_Cleaner
         void GetFilesRecursive(string b)
         {
             if (!DirectoryAllowed(b)) return;
-            var stack = new Stack<string>();
+            Stack<string> stack = new Stack<string>();
             stack.Push(b);
             while (stack.Count > 0)
             {
+                if (ABORT) return;
                 string dir = stack.Pop();
                 try
                 {
@@ -553,18 +550,20 @@ namespace Disk_Cleaner
                     {
                         if (ABORT) return;
                         ProcessFile(filename);
+                        Application.DoEvents();
                     }
                     foreach (string dn in Directory.GetDirectories(dir))
                     {
                         if (ABORT) return;
                         if (DirectoryAllowed(dn))
                             stack.Push(dn);
+                        Application.DoEvents();
                     }
-                    Application.DoEvents();
                 }
                 catch
                 {
                 }
+                Application.DoEvents();
             }
         }
 
@@ -573,7 +572,6 @@ namespace Disk_Cleaner
             junk.Clear();
             zero.Clear();
             junksize = binsize = 0;
-            //this.RUN = true;
             ABORT = false;
             progressBarSearch.Maximum = 10000;
             progressBarSearch.Value = 0;
@@ -596,7 +594,7 @@ namespace Disk_Cleaner
                         }
                     if (info is DriveInfo)
                     {
-                        var nfo = info as DriveInfo;
+                        DriveInfo nfo = info as DriveInfo;
                         progressBarSearch.Maximum = (int)((nfo.TotalSize - nfo.TotalFreeSpace) / (1024 * 512));
                         GetFilesRecursive((info as DriveInfo).RootDirectory.FullName);
                     }
@@ -622,7 +620,6 @@ namespace Disk_Cleaner
                 DoSearchVisible(3);
 
                 ListViewItem item;
-
                 listViewJunk.ItemChecked -= listViewJunk_ItemChecked;
 
                 ulong total, size;
@@ -632,7 +629,7 @@ namespace Disk_Cleaner
                     binsize = size;
                     item = new ListViewItem(rm.GetString("recycle_bin"));
                     item.SubItems.Add(total.ToString());
-                    item.SubItems.Add((binsize / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB");
+                    item.SubItems.Add(GetSizeInMB(binsize));
                     item.Tag = 1;
                     item.Checked = true;
                     listViewJunk.Items.Add(item);
@@ -640,7 +637,7 @@ namespace Disk_Cleaner
 
                 item = new ListViewItem(rm.GetString("temporary_files"));
                 item.SubItems.Add(junk.Count.ToString());
-                item.SubItems.Add((junksize / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB");
+                item.SubItems.Add(GetSizeInMB(junksize));
                 item.Tag = 2;
                 item.Checked = true;
                 listViewJunk.Items.Add(item);
@@ -649,26 +646,27 @@ namespace Disk_Cleaner
                 {
                     item = new ListViewItem(rm.GetString("zero_byte_files"));
                     item.SubItems.Add(zero.Count.ToString());
-                    item.SubItems.Add((0).ToString("N2") + " MB");
+                    item.SubItems.Add(GetSizeInMB(0));
                     item.Tag = 3;
                     item.Checked = false;
                     listViewJunk.Items.Add(item);
                 }
 
                 listViewJunk.ItemChecked += listViewJunk_ItemChecked;
-                labelGain.Text = ((junksize + binsize) / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB";
+                labelGain.Text = GetSizeInMB(junksize + binsize);
                 listViewJunk.SelectedItems.Clear();
                 listViewJunk.Items[0].Selected = true;
 
-                labelFinal.Text = rm.GetString("you_can_use_cleanup") + " " +
-                                  ((binsize + junksize) / (decimal)Math.Pow(1024, 2)).ToString("N2") +
-                                  " MB " + rm.GetString("of_disk_space") + " " + Preferences.CheckedNames.Replace('|', ' ');
-
-                //Preferences.CheckedNames = string.Empty;
+                labelFinal.Text = rm.GetString("you_can_use_cleanup") + " " + GetSizeInMB(binsize + junksize) + rm.GetString("of_disk_space") + " " + Preferences.CheckedNames.Replace('|', ' ');
             }
             ABORT = false;
 
             buttonNext.Enabled = true;
+        }
+
+        string GetSizeInMB(decimal size)
+        {
+            return (size / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB";
         }
 
         void ProcessFile(string filename)
@@ -877,16 +875,16 @@ namespace Disk_Cleaner
                 {
                     foreach (DeleteFile del in junk)
                         del.Delete = item.Checked;
-                    item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                    item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                 }
                 if (Equals(item.Tag, 3))
                 {
                     foreach (DeleteFile del in zero)
                         del.Delete = item.Checked;
-                    item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                    item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                 }
             }
-            labelGain.Text = (gain / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB";
+            labelGain.Text = GetSizeInMB(gain);
         }
 
         /// <summary>
@@ -916,16 +914,14 @@ namespace Disk_Cleaner
             else if (Equals(buttonViewFiles.Tag, 2))
             {
                 formView.lvMain.Items.Clear();
-                //this.FormView.label1.Text = string.Format(
-                //     rm.GetString("temporary_files") + " (" + rm.GetString("total") + " {0} " + rm.GetString("files") + ", {1:N2} MB)", this.junk.Count, this.junksize / (decimal)Math.Pow(1024, 2));
                 foreach (DeleteFile data in junk)
                 {
                     try
                     {
-                        var item = new ListViewItem(Path.GetFileNameWithoutExtension(data.Name));
+                        ListViewItem item = new ListViewItem(Path.GetFileNameWithoutExtension(data.Name));
                         item.SubItems.Add(Path.GetExtension(data.Name));
                         item.SubItems.Add(Path.GetDirectoryName(data.Name));
-                        item.SubItems.Add(data.Info != null ? (data.Info.Length / Math.Pow(1024, 2)).ToString("N2") + " MB" : "N/A");
+                        item.SubItems.Add(data.Info != null ? GetSizeInMB(data.Info.Length) : "N/A");
                         item.Tag = data;
                         item.Checked = data.Delete;
                         formView.lvMain.Items.Add(item);
@@ -934,7 +930,6 @@ namespace Disk_Cleaner
                 }
                 if (formView.ShowDialog() == DialogResult.OK)
                 {
-                    //this.junksize = 0;
                     int check = junk.Cast<DeleteFile>().Count(file => file.Delete);
                     listViewJunk.ItemChecked -= listViewJunk_ItemChecked;
                     foreach (ListViewItem item in listViewJunk.Items)
@@ -945,16 +940,14 @@ namespace Disk_Cleaner
                                 item.Checked = true;
                                 if (check != junk.Count)
                                     if (item.Text.IndexOf(" " + rm.GetString("partial")) == -1) item.Text += " " + rm.GetString("partial");
-                                    //else ;
                                     else
-                                        item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                                        item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                             }
                             else
                             {
                                 item.Checked = false;
-                                item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                                item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                             }
-                            //item.SubItems[2].Text = (this.junksize / (decimal)Math.Pow(1024, 2)).ToString("N2") + " MB";
                         }
                     listViewJunk.ItemChecked += listViewJunk_ItemChecked;
                 }
@@ -962,16 +955,14 @@ namespace Disk_Cleaner
             else
             {
                 formView.lvMain.Items.Clear();
-                // this.FormView.label1.Text = string.Format(
-                //      rm.GetString("zero_byte_files") + " (" + rm.GetString("total") + " {0} " + rm.GetString("files") + ", {1:N2} MB)", this.junk.Count, 0);
                 foreach (DeleteFile data in zero)
                 {
                     try
                     {
-                        var item = new ListViewItem(Path.GetFileNameWithoutExtension(data.Name));
+                        ListViewItem item = new ListViewItem(Path.GetFileNameWithoutExtension(data.Name));
                         item.SubItems.Add(Path.GetExtension(data.Name));
                         item.SubItems.Add(Path.GetDirectoryName(data.Name));
-                        item.SubItems.Add(data.Info != null ? (data.Info.Length / Math.Pow(1024, 2)).ToString("N2") + " MB" : "N/A");
+                        item.SubItems.Add(data.Info != null ? GetSizeInMB(data.Info.Length) : "N/A");
                         item.Tag = data;
                         item.Checked = data.Delete;
                         formView.lvMain.Items.Add(item);
@@ -990,14 +981,13 @@ namespace Disk_Cleaner
                                 item.Checked = true;
                                 if (check != zero.Count)
                                     if (item.Text.IndexOf(" " + rm.GetString("partial")) == -1) item.Text += " " + rm.GetString("partial");
-                                    //  else ;
                                     else
-                                        item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                                        item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                             }
                             else
                             {
                                 item.Checked = false;
-                                item.Text = item.Text.Replace(" " + rm.GetString("partial"), "");
+                                item.Text = item.Text.Replace(" " + rm.GetString("partial"), string.Empty);
                             }
                         }
                     listViewJunk.ItemChecked += listViewJunk_ItemChecked;
@@ -1013,6 +1003,7 @@ namespace Disk_Cleaner
         void buttonRestore_Click(object sender, EventArgs e)
         {
             Clean.OnProgress -= Clean_OnProgress;
+            FormRestore formRest = new FormRestore();
             formRest.ShowDialog();
             Clean.OnProgress += Clean_OnProgress;
         }
@@ -1030,11 +1021,10 @@ namespace Disk_Cleaner
                 if (File.Exists(curFile))
                 {
                     Process.Start(curFile, "/i:c:\\" + Environment.ExpandEnvironmentVariables("%SystemRoot%") + "\\inf\\sysoc.inf");
-                    //StartProgram("ntbackup");
                 }
                 else
                 {
-                    MessageBox.Show(rm.GetString("tool_not_found") + ".",
+                    MessageBox.Show(rm.GetString("tool_not_found"),
                                     rm.GetString("critical_warning"),
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Warning);
@@ -1046,11 +1036,8 @@ namespace Disk_Cleaner
                 if (File.Exists(curFile))
                 {
                     Process.Start(curFile);
-                    //StartProgram("ntbackup");
                 }
-                // Process.Start("control.exe", " /name Microsoft.BackupAndRestore");
             }
-            //RecycleBin.Clean();
         }
 
         /// <summary>
@@ -1090,10 +1077,6 @@ namespace Disk_Cleaner
             LoadDrives();
         }
 
-        void lblWait_Click(object sender, EventArgs e)
-        {
-        }
-
         /// <summary>
         /// initialize FormMain
         /// </summary>
@@ -1101,8 +1084,16 @@ namespace Disk_Cleaner
         /// <param name="e"></param>
         void FormMain_Load(object sender, EventArgs e)
         {
-            var culture = new CultureInfo(CfgFile.Get("Lang"));
+            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
             SetCulture(culture);
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
         }
 
         /// <summary>
@@ -1111,8 +1102,8 @@ namespace Disk_Cleaner
         /// <param name="culture"></param>
         void SetCulture(CultureInfo culture)
         {
-            var rm = new ResourceManager("Disk_Cleaner.Resources", typeof(FormMain).Assembly);
-            var resources = new ComponentResourceManager(typeof(FormMain));
+            ResourceManager rm = new ResourceManager("Disk_Cleaner.Resources", typeof(FormMain).Assembly);
+            ComponentResourceManager resources = new ComponentResourceManager(typeof(FormMain));
             Thread.CurrentThread.CurrentUICulture = culture;
 
             tabPageCleanup.Text = rm.GetString("disk_cleanup");

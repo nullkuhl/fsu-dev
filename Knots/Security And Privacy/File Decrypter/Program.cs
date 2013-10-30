@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
 
+/// <summary>
+/// The <see cref="Decrypter"/> namespace defines a Decrypter utility
+/// </summary>
 namespace Decrypter
 {
-	/// <summary>
-	/// The <see cref="Decrypter"/> namespace defines a Decrypter utility
-	/// </summary>
-
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
-
 	internal static class Program
 	{
 		/// <summary>

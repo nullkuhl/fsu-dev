@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="backup" xml:space="preserve">
+    <value>Cópia de Segurança</value>
+  </data>
+  <data name="backup_note" xml:space="preserve">
+    <value>O utilitário de Cópia de Segurança ajuda a proteger dados de perdas acidentais ou indesejadas, por exemplo se o hardware ou suporte de armazenamento do seu sistema falhar</value>
+  </data>
+  <data name="checkdisk" xml:space="preserve">
+    <value>SelecionarDisco</value>
+  </data>
+  <data name="checkdisk_note" xml:space="preserve">
+    <value>Uma ferramenta da linha de comandos que verifica a existência de problemas no suporte de armazenamento e repara-os, como por exemplo maus setores, clusters perdidos, ficheiros em rede e erros de diretório</value>
+  </data>
+  <data name="critical_warning" xml:space="preserve">
+    <value>Aviso Crítico</value>
+  </data>
+  <data name="disk_defragmenter" xml:space="preserve">
+    <value>Desfragmentador do Disco</value>
+  </data>
+  <data name="disk_defragmenter_note" xml:space="preserve">
+    <value>Quando instala um programa no computador, os seus ficheiros podem ficar separados pelo disco rígido. Dá-se o nome de fragmentação. Se a fragmentação for excessiva, o desempenho do disco rígido pode diminuir e a execução dos programas pode ser mais lenta. A ferramenta de desfragmentação otimiza o desempenho do PC e reorganiza os ficheiros no disco rígido em blocos contíguos</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
+  <data name="system_file_checker" xml:space="preserve">
+    <value>Verificador do Ficheiro do Sistema</value>
+  </data>
+  <data name="system_file_checker_note" xml:space="preserve">
+    <value>Esta ferramenta verifica se todos os ficheiros do sistema protegidos estão corrompidos. Se um ficheiro do sistema protegido foi substituído, será restaurado a partir da cache de instalação (%Systemroot%\System32\Dllcache) ou da origem de instalação do Windows</value>
+  </data>
+  <data name="system_restore" xml:space="preserve">
+    <value>Restauro do Sistema</value>
+  </data>
+  <data name="system_restore_note" xml:space="preserve">
+    <value>Sempre que instala uma nova aplicação no computador está a efetuar alterações. Por vezes, o PC fica instável devido às alterações. Com o Restauro do Sistema pode redefinir o estado do computador para um ponto anterior no tempo, quando funcionava adequadamente</value>
+  </data>
+  <data name="tool_not_found" xml:space="preserve">
+    <value>Esta ferramenta não se encontra na sua plataforma</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Gerir Windows</value>
+  </data>
+</root>

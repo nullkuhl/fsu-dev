@@ -378,6 +378,9 @@
   <data name="eula_notfound" xml:space="preserve">
     <value>Die Datei EULA.pdf konnte nicht gefunden werden</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>TDJ ist größer als 6</value>
   </data>
@@ -696,6 +699,9 @@
   <data name="pdf_notfound" xml:space="preserve">
     <value>Adobe Reader konnte nicht gefunden werden</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Verarbeitung</value>
+  </data>
   <data name="root" xml:space="preserve">
     <value>Systeminformationen</value>
   </data>
@@ -983,11 +989,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Ja</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Verarbeitung</value>
   </data>
 </root>

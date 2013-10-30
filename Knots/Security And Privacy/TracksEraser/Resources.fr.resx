@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="after_scan_msg" xml:space="preserve">
+    <value>Les traces de votre activité ont été supprimées avec succès.
+Tenez compte du fait que certains fichiers et certaines clés de la base de registre sont de nouveau générés automatiquement par votre système d’exploitation dès qu’ils sont effacés. Les données contenues jusqu’à présent ont été réinitialisées.</value>
+  </data>
+  <data name="analyse" xml:space="preserve">
+    <value>Analyser</value>
+  </data>
+  <data name="analysis_report" xml:space="preserve">
+    <value>RAPPORT D’ANALYSE</value>
+  </data>
+  <data name="auto_pass" xml:space="preserve">
+    <value>Formulaires intelligents - Saisie automatique de mots de passe</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="check" xml:space="preserve">
+    <value>Sélectionner</value>
+  </data>
+  <data name="check_all" xml:space="preserve">
+    <value>Tout sélectionner</value>
+  </data>
+  <data name="check_invert" xml:space="preserve">
+    <value>Inverser la sélection</value>
+  </data>
+  <data name="check_mark_cookies" xml:space="preserve">
+    <value>Sélectionnez les cookies d’Internet Explorer que vous souhaitez supprimer et cliquez sur « Supprimer les cookies sélectionnés ».</value>
+  </data>
+  <data name="check_mark_cookies_ff" xml:space="preserve">
+    <value>Sélectionnez les cookies de Firefox que vous souhaitez supprimer et cliquez sur « Supprimer les cookies sélectionnés ».</value>
+  </data>
+  <data name="check_mark_cookies_google" xml:space="preserve">
+    <value>Sélectionnez les cookies de Chrome que vous souhaitez supprimer et cliquez sur « Supprimer les cookies sélectionnés ».</value>
+  </data>
+  <data name="check_mark_urls_ie" xml:space="preserve">
+    <value>Sélectionnez les URL d’Internet Explorer que vous souhaitez supprimer et cliquez sur « Supprimer les URL sélectionnées ».</value>
+  </data>
+  <data name="check_none" xml:space="preserve">
+    <value>Ne rien sélectionner</value>
+  </data>
+  <data name="closed_ff" xml:space="preserve">
+    <value>Pour cette opération, Firefox doit être fermé. Êtes-vous sûr(e) que Firefox est fermé ?</value>
+  </data>
+  <data name="closed_google" xml:space="preserve">
+    <value>Pour cette opération, Chrome doit être fermé. Êtes-vous sûr(e) que Chrome est fermé ?</value>
+  </data>
+  <data name="CloseIE" xml:space="preserve">
+    <value>Cela nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="CloseIE1" xml:space="preserve">
+    <value>Pour cette opération, Internet Explorer doit être fermé. Êtes-vous sûr(e) qu’Internet Explorer est fermé ?</value>
+  </data>
+  <data name="close_chrome_to_erase" xml:space="preserve">
+    <value>Google Chrome est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
+  <data name="close_ff" xml:space="preserve">
+    <value>Fermez Firefox et procédez à un nouvel essai.</value>
+  </data>
+  <data name="close_firefox_to_erase" xml:space="preserve">
+    <value>Mozilla Firefox est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
+  <data name="close_google" xml:space="preserve">
+    <value>Fermez Chrome et procédez à un nouvel essai.</value>
+  </data>
+  <data name="close_iexplore_to_erase" xml:space="preserve">
+    <value>Cette opération nécessite Internet Explorer être fermé. Etes-vous sûr d'Internet Explorer est fermé?</value>
+  </data>
+  <data name="close_ie_to_erase" xml:space="preserve">
+    <value>Pour cette opération, Internet Explorer doit être fermé. Êtes-vous sûr(e) qu’Internet Explorer est fermé ?</value>
+  </data>
+  <data name="close_ie_to_erase1" xml:space="preserve">
+    <value>Internet Explorer est déjà en cours d’exécution, veuillez le fermer et procéder à un nouveau scan.</value>
+  </data>
+  <data name="cookies" xml:space="preserve">
+    <value>Cookies</value>
+  </data>
+  <data name="cookie_info_locked_ff" xml:space="preserve">
+    <value>Mozilla Firefox n’est pas installé.</value>
+  </data>
+  <data name="cookie_info_locked_google" xml:space="preserve">
+    <value>Google Chrome n’est pas installé.</value>
+  </data>
+  <data name="del_cookies" xml:space="preserve">
+    <value>Supprimer maintenant les cookies sélectionnés</value>
+  </data>
+  <data name="del_urls" xml:space="preserve">
+    <value>Supprimer maintenant les URL sélectionnées</value>
+  </data>
+  <data name="details_files_tobe_del" xml:space="preserve">
+    <value>Détails des fichiers à supprimer</value>
+  </data>
+  <data name="details_reg_tobe_del" xml:space="preserve">
+    <value>Détails des clés de la base de registre Windows à supprimer</value>
+  </data>
+  <data name="erase_check_track" xml:space="preserve">
+    <value>Effacer les traces sélectionnées</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Erreur</value>
+  </data>
+  <data name="error_check_tracks" xml:space="preserve">
+    <value>que vous souhaitez supprimer en cochant la case située à gauche de l’entrée correspondante.</value>
+  </data>
+  <data name="error_erased_succ" xml:space="preserve">
+    <value>Les traces sélectionnées ont été supprimées avec succès.</value>
+  </data>
+  <data name="error_no_tracks_checked" xml:space="preserve">
+    <value>Aucune entrée n’a été sélectionnée. Pour effacer des traces, vous devez sélectionner les entrées correspondantes.</value>
+  </data>
+  <data name="error_rec_bin" xml:space="preserve">
+    <value>Erreur lors de l’accès à la corbeille</value>
+  </data>
+  <data name="error_select" xml:space="preserve">
+    <value>Aucun élément n’a été sélectionné pour l’analyse.</value>
+  </data>
+  <data name="error_sure" xml:space="preserve">
+    <value>Êtes-vous sûr(e) de vouloir</value>
+  </data>
+  <data name="error_tracks" xml:space="preserve">
+    <value>effacer ces traces ?</value>
+  </data>
+  <data name="ff_cookie_manager" xml:space="preserve">
+    <value>Firefox - Gérer les cookies</value>
+  </data>
+  <data name="files" xml:space="preserve">
+    <value>Fichiers</value>
+  </data>
+  <data name="files_and" xml:space="preserve">
+    <value>Fichier(s) et</value>
+  </data>
+  <data name="files_from" xml:space="preserve">
+    <value>Fichier(s) issus de</value>
+  </data>
+  <data name="file_folder_list" xml:space="preserve">
+    <value>Boîte de dialogue générale Microsoft - Liste des fichiers/dossiers</value>
+  </data>
+  <data name="firefox" xml:space="preserve">
+    <value>Mozilla Firefox</value>
+  </data>
+  <data name="firefox_cache" xml:space="preserve">
+    <value>Mozilla Firefox - Cache Internet</value>
+  </data>
+  <data name="firefox_cookies" xml:space="preserve">
+    <value>Mozilla Firefox - Cookies</value>
+  </data>
+  <data name="firefox_download_history" xml:space="preserve">
+    <value>Mozilla Firefox - Historique du gestionnaire des téléchargements</value>
+  </data>
+  <data name="firefox_history" xml:space="preserve">
+    <value>Mozilla Firefox - Historique</value>
+  </data>
+  <data name="firefox_saved_info" xml:space="preserve">
+    <value>Mozilla Firefox - Données de formulaire enregistrées</value>
+  </data>
+  <data name="firefox_saved_pass" xml:space="preserve">
+    <value>Mozilla Firefox - Mots de passe enregistrés</value>
+  </data>
+  <data name="firefox_search_history" xml:space="preserve">
+    <value>Mozilla Firefox - Historique de recherche</value>
+  </data>
+  <data name="google" xml:space="preserve">
+    <value>Google Chrome</value>
+  </data>
+  <data name="google_cache" xml:space="preserve">
+    <value>Google Chrome - Cache Internet</value>
+  </data>
+  <data name="google_chrome_running" xml:space="preserve">
+    <value>Google Chrome est en cours d’exécution. Veuillez fermer Google Chrome afin de permettre la suppression des cookies.</value>
+  </data>
+  <data name="google_cookies" xml:space="preserve">
+    <value>Google Chrome - Cookies</value>
+  </data>
+  <data name="google_cookie_manager" xml:space="preserve">
+    <value>Google Chrome - Gérer les cookies</value>
+  </data>
+  <data name="google_download_history" xml:space="preserve">
+    <value>Google Chrome - Historique des téléchargements</value>
+  </data>
+  <data name="google_history" xml:space="preserve">
+    <value>Google Chrome - Historique</value>
+  </data>
+  <data name="google_saved_info" xml:space="preserve">
+    <value>Google Chrome - Données de formulaire enregistrées</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="ie" xml:space="preserve">
+    <value>Internet Explorer</value>
+  </data>
+  <data name="ie_cookies" xml:space="preserve">
+    <value>Internet Explorer - Cookies</value>
+  </data>
+  <data name="ie_cookie_mngr" xml:space="preserve">
+    <value>Internet Explorer - Gérer les cookies</value>
+  </data>
+  <data name="ie_history" xml:space="preserve">
+    <value>Internet Explorer - Historique</value>
+  </data>
+  <data name="ie_history_item" xml:space="preserve">
+    <value>Internet Explorer - Entrée de l’historique :</value>
+  </data>
+  <data name="ie_running" xml:space="preserve">
+    <value>Internet Explorer est en cours d’exécution. Veuillez fermer Internet Explorer pour supprimer les cookies.</value>
+  </data>
+  <data name="ie_typed_urls" xml:space="preserve">
+    <value>Internet Explorer - URL saisies</value>
+  </data>
+  <data name="ie_url_history" xml:space="preserve">
+    <value>Internet Explorer - Historique des URL</value>
+  </data>
+  <data name="index_files" xml:space="preserve">
+    <value>Fichiers index.dat</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="item_running_or_installed" xml:space="preserve">
+    <value>Cet élément ne peut pas être sélectionné car il a déjà été d’exécuté ou il n’est pas installé.</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Langue</value>
+  </data>
+  <data name="mmfp" xml:space="preserve">
+    <value>Macromedia Flash Player</value>
+  </data>
+  <data name="mozilla_firefox_running" xml:space="preserve">
+    <value>Mozilla Firefox est en cours d’exécution. Veuillez fermer Mozilla Firefox afin de permettre la suppression des cookies.</value>
+  </data>
+  <data name="mp" xml:space="preserve">
+    <value>Windows Media Player</value>
+  </data>
+  <data name="ms_management_console" xml:space="preserve">
+    <value>Console de gestion Microsoft</value>
+  </data>
+  <data name="ms_paint" xml:space="preserve">
+    <value>MS Paint</value>
+  </data>
+  <data name="ms_wordpad" xml:space="preserve">
+    <value>MS Wordpad</value>
+  </data>
+  <data name="network_places" xml:space="preserve">
+    <value>Environnement réseau</value>
+  </data>
+  <data name="office" xml:space="preserve">
+    <value>Microsoft Office</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="plugins" xml:space="preserve">
+    <value>Modules d’extension</value>
+  </data>
+  <data name="qp" xml:space="preserve">
+    <value>QuickTime Player</value>
+  </data>
+  <data name="registries_from" xml:space="preserve">
+    <value>Entrées de la base de registre issues de</value>
+  </data>
+  <data name="results" xml:space="preserve">
+    <value>Résultats</value>
+  </data>
+  <data name="run_eraser" xml:space="preserve">
+    <value>Procéder à la suppression</value>
+  </data>
+  <data name="scanning" xml:space="preserve">
+    <value>Vérification en cours...</value>
+  </data>
+  <data name="scanning_tracks" xml:space="preserve">
+    <value>Les traces sélectionnées sont analysées...</value>
+  </data>
+  <data name="scan_started" xml:space="preserve">
+    <value>Vérification lancée.</value>
+  </data>
+  <data name="show_av_er_tracks" xml:space="preserve">
+    <value>Seules les pistes effaçables</value>
+  </data>
+  <data name="start_menu_history" xml:space="preserve">
+    <value>Historique des clics du menu Démarrer</value>
+  </data>
+  <data name="status_strip" xml:space="preserve">
+    <value>statusStrip1</value>
+  </data>
+  <data name="sun_java" xml:space="preserve">
+    <value>Sun Java</value>
+  </data>
+  <data name="sys_error" xml:space="preserve">
+    <value>Erreur système</value>
+  </data>
+  <data name="temp_internet_files" xml:space="preserve">
+    <value>Fichiers Internet temporaires</value>
+  </data>
+  <data name="tobe_removed" xml:space="preserve">
+    <value>qui doivent être supprimés</value>
+  </data>
+  <data name="tobe_removed_win_reg" xml:space="preserve">
+    <value>Éléments qui doivent être supprimés de la base de registre Windows</value>
+  </data>
+  <data name="toolStrip" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="tracks" xml:space="preserve">
+    <value>Traces</value>
+  </data>
+  <data name="tracks_eraser" xml:space="preserve">
+    <value>Effacer les traces</value>
+  </data>
+  <data name="track_eraser" xml:space="preserve">
+    <value>Effacer les traces</value>
+  </data>
+  <data name="urls" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Avertissement</value>
+  </data>
+  <data name="win" xml:space="preserve">
+    <value>Windows</value>
+  </data>
+  <data name="winrar" xml:space="preserve">
+    <value>Winrar</value>
+  </data>
+  <data name="win_clipboard" xml:space="preserve">
+    <value>Presse-papiers Windows</value>
+  </data>
+  <data name="win_def" xml:space="preserve">
+    <value>Windows Defender</value>
+  </data>
+  <data name="win_map_drives" xml:space="preserve">
+    <value>Windows - Lecteurs réseau connectés</value>
+  </data>
+  <data name="win_rec_bin" xml:space="preserve">
+    <value>Windows - Corbeille</value>
+  </data>
+  <data name="win_rec_doc" xml:space="preserve">
+    <value>Windows - Derniers documents utilisés</value>
+  </data>
+  <data name="win_st_menu_run" xml:space="preserve">
+    <value>Windows - Exécuter (dans le menu Démarrer)</value>
+  </data>
+  <data name="win_temp_files" xml:space="preserve">
+    <value>Windows - Fichiers temporaires</value>
+  </data>
+</root>

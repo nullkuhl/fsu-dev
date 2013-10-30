@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="access_denied" xml:space="preserve">
+    <value>Vous n'êtes pas autorisé à écrire dans une destination donnée. S'il vous plaît choisir un autre dossier de destination.</value>
+  </data>
+  <data name="add_self_joining" xml:space="preserve">
+    <value>Créer un fichier EXE auto-assemblé</value>
+  </data>
+  <data name="application_paused" xml:space="preserve">
+    <value>L’application est en suspens. Souhaitez-vous vraiment terminer ?</value>
+  </data>
+  <data name="bigger_faster" xml:space="preserve">
+    <value>(plus volumineux = plus rapide)</value>
+  </data>
+  <data name="browse_for_part" xml:space="preserve">
+    <value>Rechercher des fragments de fichiers</value>
+  </data>
+  <data name="busy" xml:space="preserve">
+    <value>Occupé</value>
+  </data>
+  <data name="create_dictionary" xml:space="preserve">
+    <value>Le répertoire n’existe pas. Souhaitez-vous créer le répertoire ?</value>
+  </data>
+  <data name="custom" xml:space="preserve">
+    <value>Défini par l’utilisateur</value>
+  </data>
+  <data name="data_size_splits_after" xml:space="preserve">
+    <value>Taille du fichier après division</value>
+  </data>
+  <data name="debug_vars" xml:space="preserve">
+    <value>Variables de débogage</value>
+  </data>
+  <data name="delete_pieces" xml:space="preserve">
+    <value>Supprimer les fragments et le fichier EXE exécutable après l’assemblage</value>
+  </data>
+  <data name="doselect_join_file" xml:space="preserve">
+    <value>Souhaitez-vous sélectionner le fichier .join ?</value>
+  </data>
+  <data name="do_events" xml:space="preserve">
+    <value>Exécuter aussi les événements à chaque</value>
+  </data>
+  <data name="do_events_also" xml:space="preserve">
+    <value>Exécuter aussi les événements après (nombre d’octets)</value>
+  </data>
+  <data name="file_joiner" xml:space="preserve">
+    <value>Assembler le fichier</value>
+  </data>
+  <data name="file_name" xml:space="preserve">
+    <value>Nom du fichier</value>
+  </data>
+  <data name="file_size" xml:space="preserve">
+    <value>Taille du fichier</value>
+  </data>
+  <data name="file_size_changed" xml:space="preserve">
+    <value>La taille du fichier a été modifiée.</value>
+  </data>
+  <data name="file_splitter" xml:space="preserve">
+    <value>Division du fichier</value>
+  </data>
+  <data name="file_splitter_joiner" xml:space="preserve">
+    <value>Segmenter et assembler</value>
+  </data>
+  <data name="file_splitter_joiner_title" xml:space="preserve">
+    <value>Diviser &amp;et assembler</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="idle" xml:space="preserve">
+    <value>Quand l’ordinateur est inactif</value>
+  </data>
+  <data name="invalid_path" xml:space="preserve">
+    <value>Chemin d’accès invalide</value>
+  </data>
+  <data name="joined" xml:space="preserve">
+    <value>Assemblage effectué avec succès</value>
+  </data>
+  <data name="joining_info" xml:space="preserve">
+    <value>Informations (contenu du fichier .join)</value>
+  </data>
+  <data name="join_file" xml:space="preserve">
+    <value>Assembler</value>
+  </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Connexion interrompue Le processus ne peut pas être poursuivi !</value>
+  </data>
+  <data name="may_not_respond" xml:space="preserve">
+    <value>(L’application peut mettre un certain temps à réagir quand la valeur est trop élevée.)</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Au moins 2 parties de fichier à assembler</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Espace de stockage insuffisant Veuillez utiliser un autre répertoire.</value>
+  </data>
+  <data name="not_join_file" xml:space="preserve">
+    <value>Pas de fichier .join</value>
+  </data>
+  <data name="num_of_files" xml:space="preserve">
+    <value>Nombre de fragments de fichiers souhaités</value>
+  </data>
+  <data name="num_of_pieces" xml:space="preserve">
+    <value>Nombre de fragments</value>
+  </data>
+  <data name="num_pieces" xml:space="preserve">
+    <value>Nombre de fragments</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Un fichier portant le même nom que le fichier joint existe déjà. Êtes-vous sûr(e) de vouloir écraser ce fichier ?</value>
+  </data>
+  <data name="part_not_found" xml:space="preserve">
+    <value>Un fragment de fichier n’a pas été trouvé. Impossible de continuer.</value>
+  </data>
+  <data name="part_num" xml:space="preserve">
+    <value>Numéro des fragments</value>
+  </data>
+  <data name="pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="paused" xml:space="preserve">
+    <value>En pause</value>
+  </data>
+  <data name="pause_resume" xml:space="preserve">
+    <value>Suspendre le processus</value>
+  </data>
+  <data name="pieces_deleted" xml:space="preserve">
+    <value>Les fragments ont été supprimés.</value>
+  </data>
+  <data name="piece_size" xml:space="preserve">
+    <value>Taille partielle</value>
+  </data>
+  <data name="refreshes_piece" xml:space="preserve">
+    <value>Tout actualiser</value>
+  </data>
+  <data name="refresh_debug_info" xml:space="preserve">
+    <value>Actualiser les infos de débogage</value>
+  </data>
+  <data name="refresh_num" xml:space="preserve">
+    <value>N° d’actualisation</value>
+  </data>
+  <data name="resume" xml:space="preserve">
+    <value>Continuer</value>
+  </data>
+  <data name="s360_min" xml:space="preserve">
+    <value>360 Ko (minimum)</value>
+  </data>
+  <data name="save_joined_file" xml:space="preserve">
+    <value>Enregistrer le fichier assemblé dans ce dossier :</value>
+  </data>
+  <data name="save_pieces" xml:space="preserve">
+    <value>Enregistrer les fragments dans ce dossier :</value>
+  </data>
+  <data name="select_create_folder" xml:space="preserve">
+    <value>Sélectionnez ou créez le dossier dans lequel doivent être enregistrés les fragments du fichier divisé.</value>
+  </data>
+  <data name="select_create_folder_join" xml:space="preserve">
+    <value>Sélectionnez ou créez le dossier dans lequel doit être enregistré le fichier assemblé.</value>
+  </data>
+  <data name="select_file_split" xml:space="preserve">
+    <value>Sélectionner le fichier à diviser</value>
+  </data>
+  <data name="select_join_file" xml:space="preserve">
+    <value>Sélectionner un fichier .join</value>
+  </data>
+  <data name="select_split" xml:space="preserve">
+    <value>Souhaitez-vous sélectionner un fichier à diviser ?</value>
+  </data>
+  <data name="self_joining_created" xml:space="preserve">
+    <value>Un fichier EXE auto-assemblé a été créé.</value>
+  </data>
+  <data name="specify_parts" xml:space="preserve">
+    <value>Saisissez le nombre des fragments de fichier souhaités.</value>
+  </data>
+  <data name="specify_piece_size" xml:space="preserve">
+    <value>Saisissez la taille des fragments.</value>
+  </data>
+  <data name="splitted" xml:space="preserve">
+    <value>Division effectuée avec succès.</value>
+  </data>
+  <data name="split_file" xml:space="preserve">
+    <value>Diviser le fichier</value>
+  </data>
+  <data name="split_info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Fractionnement interrompu Le processus ne peut pas être poursuivi !</value>
+  </data>
+  <data name="stream_reader" xml:space="preserve">
+    <value>StreamReader non fermé.</value>
+  </data>
+  <data name="stream_writer" xml:space="preserve">
+    <value>StreamWriter non fermé.</value>
+  </data>
+  <data name="too_large" xml:space="preserve">
+    <value>Une division avec la taille des fragments indiquée n’est pas possible. Saisissez une taille de fragments inférieure.</value>
+  </data>
+</root>
