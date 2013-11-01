@@ -105,7 +105,7 @@ namespace FreeGamingBooster
 
             notifyIcon = new NotifyIcon
                             {
-                                Icon = FreeGamingBooster.Properties.Resources.PCCleanerIcon,
+                                Icon = FreeGamingBooster.Properties.Resources.GBicon,
                                 Text = "FreeGamingBooster",
                                 Visible = true
                             };
