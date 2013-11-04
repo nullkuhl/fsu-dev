@@ -446,10 +446,10 @@
     <Resource Include="Images\frame4.png" />
     <Resource Include="Images\frame5.png" />
     <Resource Include="Images\frame6.png" />
-    <Resource Include="Images\PC_Cleaner_Logo.png" />
-    <Resource Include="Images\PC_Cleaner_Logo_123.png" />
-    <None Include="Images\PCCleanerIcon.ico" />
     <Resource Include="Images\bg-freemium.png" />
+    <Resource Include="Images\FGB_AboutBox.png" />
+    <Resource Include="GBicon.ico" />
+    <None Include="Images\GBicon.ico" />
     <Content Include="Libraries\SQLite.Interop.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

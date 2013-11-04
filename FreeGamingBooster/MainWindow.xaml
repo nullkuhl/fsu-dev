@@ -6,7 +6,7 @@
 		xmlns:models="clr-namespace:FreeGamingBooster.Models" xmlns:routine="clr-namespace:FreeGamingBooster.Routine"
 		xmlns:viewmodels="clr-namespace:FreeGamingBooster.ViewModels" Name="AppMainWindow" Title="Free Gaming Booster"
 		Width="800" Height="550" Engine:LocalizeDictionary.DesignCulture="en-US"
-		Icon="/FreeGamingBooster;component/PCCleanerIcon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
+		Icon="/FreeGamingBooster;component/GBicon.ico" Loaded="MainWindowLoaded" SizeToContent="WidthAndHeight"
 		Style="{StaticResource MainWindowStyle}" WindowStartupLocation="CenterScreen" mc:Ignorable="d" WindowState="Minimized">
     <Window.Resources>
         <routine:ImageConverter x:Key="ImageConverter" />
