@@ -380,10 +380,9 @@ namespace FreeGamingBooster
             // pcbLogo
             // 
             this.pcbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pcbLogo.Image")));
-            this.pcbLogo.Location = new System.Drawing.Point(15, 13);
+            this.pcbLogo.Location = new System.Drawing.Point(15, 6);
             this.pcbLogo.Name = "pcbLogo";
-            this.pcbLogo.Size = new System.Drawing.Size(56, 38);
-            this.pcbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbLogo.Size = new System.Drawing.Size(43, 44);
             this.pcbLogo.TabIndex = 0;
             this.pcbLogo.TabStop = false;
             // 
