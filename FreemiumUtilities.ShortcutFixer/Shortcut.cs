@@ -1,5 +1,4 @@
-﻿
-namespace FreemiumUtilities.ShortcutFixer
+﻿namespace FreemiumUtilities.ShortcutFixer
 {
 	/// <summary>
 	/// Shortcut model

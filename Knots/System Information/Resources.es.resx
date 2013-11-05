@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="bios_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel BIOS</value>
+  </data>
+  <data name="bios_features" xml:space="preserve">
+    <value>Características</value>
+  </data>
+  <data name="bios_general" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="bios_man" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="bios_model" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="bios_release_date" xml:space="preserve">
+    <value>Fecha de publicación</value>
+  </data>
+  <data name="bios_smbios_present" xml:space="preserve">
+    <value>SMBIOS presente</value>
+  </data>
+  <data name="bios_smbios_version" xml:space="preserve">
+    <value>Versión de SMBIOS</value>
+  </data>
+  <data name="bios_unavailable" xml:space="preserve">
+    <value>No disponible</value>
+  </data>
+  <data name="bios_version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="build" xml:space="preserve">
+    <value>Compilación</value>
+  </data>
+  <data name="computer_board_man" xml:space="preserve">
+    <value>Fabricante de la placa base</value>
+  </data>
+  <data name="computer_board_model" xml:space="preserve">
+    <value>Modelo de placa base</value>
+  </data>
+  <data name="computer_bootup_state" xml:space="preserve">
+    <value>Estado de arranque</value>
+  </data>
+  <data name="computer_chipset_man" xml:space="preserve">
+    <value>Fabricante de ordenador/chipset</value>
+  </data>
+  <data name="computer_chipset_model" xml:space="preserve">
+    <value>Modelo de ordenador/chipset</value>
+  </data>
+  <data name="computer_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="computer_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Ordenador</value>
+  </data>
+  <data name="computer_general" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="computer_mem" xml:space="preserve">
+    <value>Memoria</value>
+  </data>
+  <data name="computer_mem_av_physical" xml:space="preserve">
+    <value>Física disponible</value>
+  </data>
+  <data name="computer_mem_av_virtual" xml:space="preserve">
+    <value>Virtual disponible</value>
+  </data>
+  <data name="computer_mem_tot_physical" xml:space="preserve">
+    <value>Física total</value>
+  </data>
+  <data name="computer_mem_tot_virtual" xml:space="preserve">
+    <value>Virtual total</value>
+  </data>
+  <data name="computer_system_type" xml:space="preserve">
+    <value>Tipo de sistema</value>
+  </data>
+  <data name="computer_up_time" xml:space="preserve">
+    <value>Tiempo activo</value>
+  </data>
+  <data name="cpu_address_width" xml:space="preserve">
+    <value>Ancho de dirección</value>
+  </data>
+  <data name="cpu_cache_size" xml:space="preserve">
+    <value>Tamaño de caché de nivel 2</value>
+  </data>
+  <data name="cpu_cache_speed" xml:space="preserve">
+    <value>Velocidad de caché de nivel 2</value>
+  </data>
+  <data name="cpu_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="cpu_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel CPU</value>
+  </data>
+  <data name="cpu_fsb_speed" xml:space="preserve">
+    <value>Velocidad de FSB</value>
+  </data>
+  <data name="cpu_man" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="cpu_model" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
+  <data name="cpu_num_core" xml:space="preserve">
+    <value>Número de núcleos de CPU</value>
+  </data>
+  <data name="cpu_num_logic_proc" xml:space="preserve">
+    <value>Número de procesadores lógicos</value>
+  </data>
+  <data name="cpu_num_processors" xml:space="preserve">
+    <value>Número de procesadores</value>
+  </data>
+  <data name="cpu_power_management_cap" xml:space="preserve">
+    <value>Capacidades de administración de energía</value>
+  </data>
+  <data name="cpu_power_management_supp" xml:space="preserve">
+    <value>Administración de energía admitida</value>
+  </data>
+  <data name="cpu_proc" xml:space="preserve">
+    <value>Procesador</value>
+  </data>
+  <data name="cpu_proc_id" xml:space="preserve">
+    <value>Id. de procesador</value>
+  </data>
+  <data name="cpu_proc_socket" xml:space="preserve">
+    <value>Socket de procesador</value>
+  </data>
+  <data name="cpu_proc_speed" xml:space="preserve">
+    <value>Velocidad del procesador</value>
+  </data>
+  <data name="datetime_dayahead" xml:space="preserve">
+    <value>día después</value>
+  </data>
+  <data name="datetime_daybehind" xml:space="preserve">
+    <value>día antes</value>
+  </data>
+  <data name="datetime_dayofyear" xml:space="preserve">
+    <value>Día del año</value>
+  </data>
+  <data name="datetime_daysahead" xml:space="preserve">
+    <value>días después</value>
+  </data>
+  <data name="datetime_daysbehind" xml:space="preserve">
+    <value>días antes</value>
+  </data>
+  <data name="datetime_daysleft" xml:space="preserve">
+    <value>Días restantes</value>
+  </data>
+  <data name="datetime_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Fecha y hora</value>
+  </data>
+  <data name="datetime_holidayname_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Fecha y hora, método GetHolidayName</value>
+  </data>
+  <data name="datetime_holidays_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Fecha y hora, método GetHolidays</value>
+  </data>
+  <data name="datetime_local" xml:space="preserve">
+    <value>Fecha y hora locales</value>
+  </data>
+  <data name="datetime_offset" xml:space="preserve">
+    <value>Diferencia con horario universal</value>
+  </data>
+  <data name="datetime_offset_from_today" xml:space="preserve">
+    <value>Diferencia con respecto al día de hoy</value>
+  </data>
+  <data name="datetime_save_end" xml:space="preserve">
+    <value>Fin de horario de verano</value>
+  </data>
+  <data name="datetime_save_start" xml:space="preserve">
+    <value>Inicio de horario de verano</value>
+  </data>
+  <data name="datetime_selected_date" xml:space="preserve">
+    <value>Fecha seleccionada</value>
+  </data>
+  <data name="datetime_univ" xml:space="preserve">
+    <value>Fecha y hora universales</value>
+  </data>
+  <data name="datetime_weekofyear" xml:space="preserve">
+    <value>Semana del año</value>
+  </data>
+  <data name="datetime_weeksleft" xml:space="preserve">
+    <value>Semanas restantes</value>
+  </data>
+  <data name="drives_capacity" xml:space="preserve">
+    <value>Capacidad</value>
+  </data>
+  <data name="drives_drive" xml:space="preserve">
+    <value>Unidad</value>
+  </data>
+  <data name="drives_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Unidades</value>
+  </data>
+  <data name="drives_filesystem" xml:space="preserve">
+    <value>Sistema de archivos</value>
+  </data>
+  <data name="drives_filesystem_abbr" xml:space="preserve">
+    <value>S. A.</value>
+  </data>
+  <data name="drives_free" xml:space="preserve">
+    <value>Libre</value>
+  </data>
+  <data name="drives_freespace" xml:space="preserve">
+    <value>Espacio libre</value>
+  </data>
+  <data name="drives_model_num" xml:space="preserve">
+    <value>Número de modelo</value>
+  </data>
+  <data name="drives_notavailable" xml:space="preserve">
+    <value>No disponible</value>
+  </data>
+  <data name="drives_physical_drives" xml:space="preserve">
+    <value>Unidades físicas</value>
+  </data>
+  <data name="drives_ready" xml:space="preserve">
+    <value>Lista</value>
+  </data>
+  <data name="drives_ready_abbr" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="drives_ready_n" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="drives_ready_n/a" xml:space="preserve">
+    <value>N/D</value>
+  </data>
+  <data name="drives_ready_y" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="drives_status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="drives_tot_size" xml:space="preserve">
+    <value>Tamaño total</value>
+  </data>
+  <data name="drives_type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="drives_usedspace" xml:space="preserve">
+    <value>Espacio utilizado</value>
+  </data>
+  <data name="drives_volumes" xml:space="preserve">
+    <value>Volúmenes</value>
+  </data>
+  <data name="drives_volumes_none" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="drives_volume_label" xml:space="preserve">
+    <value>Etiqueta de volumen</value>
+  </data>
+  <data name="error_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="error_return" xml:space="preserve">
+    <value>El sistema ha devuelto la siguiente información</value>
+  </data>
+  <data name="error_source" xml:space="preserve">
+    <value>Origen</value>
+  </data>
+  <data name="eula_notfound" xml:space="preserve">
+    <value>No se puede encontrar el archivo EULA.pdf</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
+  <data name="holiday_dow" xml:space="preserve">
+    <value>Día de la semana superior a 6</value>
+  </data>
+  <data name="holiday_not" xml:space="preserve">
+    <value>El objeto no son vacaciones</value>
+  </data>
+  <data name="hours" xml:space="preserve">
+    <value>Horas</value>
+  </data>
+  <data name="infoclass_reserved_for_bios" xml:space="preserve">
+    <value>Reservado para el proveedor de BIOS</value>
+  </data>
+  <data name="infoclass_reserved_for_system" xml:space="preserve">
+    <value>Reservado para el proveedor del sistema</value>
+  </data>
+  <data name="installedprogs_description" xml:space="preserve">
+    <value>Aplicaciones y otro software instalado en este ordenador</value>
+  </data>
+  <data name="installedprogs_details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="installedprogs_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Programas instalados</value>
+  </data>
+  <data name="installedprogs_estimatesize" xml:space="preserve">
+    <value>Tamaño estimado</value>
+  </data>
+  <data name="installedprogs_helplink" xml:space="preserve">
+    <value>Vínculo de ayuda</value>
+  </data>
+  <data name="installedprogs_helptelephone" xml:space="preserve">
+    <value>Teléfono de ayuda</value>
+  </data>
+  <data name="installedprogs_iconindex" xml:space="preserve">
+    <value>Número de icono</value>
+  </data>
+  <data name="installedprogs_installdate" xml:space="preserve">
+    <value>Fecha de instalación</value>
+  </data>
+  <data name="installedprogs_items" xml:space="preserve">
+    <value>Elementos</value>
+  </data>
+  <data name="installedprogs_listview_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en la vista de lista Programas instalados</value>
+  </data>
+  <data name="installedprogs_name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="installedprogs_publisher" xml:space="preserve">
+    <value>Editor</value>
+  </data>
+  <data name="installedprogs_unable_to_open_website" xml:space="preserve">
+    <value>No se puede abrir el sitio web</value>
+  </data>
+  <data name="installedprogs_version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="intro_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel de introducción</value>
+  </data>
+  <data name="is_a_product_of" xml:space="preserve">
+    <value>es un producto de</value>
+  </data>
+  <data name="main_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el procedimiento \"MainForm_Load\"</value>
+  </data>
+  <data name="main_statusstrip" xml:space="preserve">
+    <value>BarraEstado</value>
+  </data>
+  <data name="network_adapter" xml:space="preserve">
+    <value>Tipo de adaptador</value>
+  </data>
+  <data name="network_combobox_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el cuadro combinado del panel Red</value>
+  </data>
+  <data name="network_computer" xml:space="preserve">
+    <value>Ordenador</value>
+  </data>
+  <data name="network_connection_id" xml:space="preserve">
+    <value>Id. de conexión</value>
+  </data>
+  <data name="network_connection_status" xml:space="preserve">
+    <value>Estado de conexión</value>
+  </data>
+  <data name="network_dhcp_lease_exp" xml:space="preserve">
+    <value>Concesión DHCP caducada</value>
+  </data>
+  <data name="network_dhcp_lease_obt" xml:space="preserve">
+    <value>Concesión DHCP obtenida</value>
+  </data>
+  <data name="network_dhcp_server" xml:space="preserve">
+    <value>Servidor DHCP</value>
+  </data>
+  <data name="network_dns_domain" xml:space="preserve">
+    <value>Dominio DNS</value>
+  </data>
+  <data name="network_dns_name" xml:space="preserve">
+    <value>Nombre de host DNS</value>
+  </data>
+  <data name="network_domain" xml:space="preserve">
+    <value>Dominio</value>
+  </data>
+  <data name="network_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Red</value>
+  </data>
+  <data name="network_interfaces" xml:space="preserve">
+    <value>Interfaces</value>
+  </data>
+  <data name="network_ip_address" xml:space="preserve">
+    <value>Dirección IP</value>
+  </data>
+  <data name="network_mac_address" xml:space="preserve">
+    <value>Dirección MAC</value>
+  </data>
+  <data name="network_manufacturer" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="network_max_speed" xml:space="preserve">
+    <value>Velocidad máxima</value>
+  </data>
+  <data name="network_mtu" xml:space="preserve">
+    <value>Unidad de transmisión máxima (MTU)</value>
+  </data>
+  <data name="network_nonetwork" xml:space="preserve">
+    <value>No hay ninguna red configurada en este ordenador</value>
+  </data>
+  <data name="network_numconnections" xml:space="preserve">
+    <value>Número de conexiones</value>
+  </data>
+  <data name="network_sense" xml:space="preserve">
+    <value>Detección automática</value>
+  </data>
+  <data name="network_speed" xml:space="preserve">
+    <value>Velocidad</value>
+  </data>
+  <data name="network_tcp_size" xml:space="preserve">
+    <value>Tamaño de ventana de TCP</value>
+  </data>
+  <data name="network_ttl" xml:space="preserve">
+    <value>Período de vida (TTL) predeterminado</value>
+  </data>
+  <data name="network_workgroup" xml:space="preserve">
+    <value>Grupo de trabajo</value>
+  </data>
+  <data name="no" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="node_bios" xml:space="preserve">
+    <value>BIOS</value>
+  </data>
+  <data name="node_bios_tip" xml:space="preserve">
+    <value>Información sobre el sistema de entrada y salida básico</value>
+  </data>
+  <data name="node_computer" xml:space="preserve">
+    <value>Ordenador</value>
+  </data>
+  <data name="node_computer_tip" xml:space="preserve">
+    <value>Información general sobre este ordenador</value>
+  </data>
+  <data name="node_cpu" xml:space="preserve">
+    <value>CPU</value>
+  </data>
+  <data name="node_cpu_tip" xml:space="preserve">
+    <value>Información sobre la unidad de procesamiento central (procesador)</value>
+  </data>
+  <data name="node_datetime" xml:space="preserve">
+    <value>Fecha y hora</value>
+  </data>
+  <data name="node_datetime_tip" xml:space="preserve">
+    <value>Información sobre la fecha y la hora</value>
+  </data>
+  <data name="node_drives" xml:space="preserve">
+    <value>Unidades</value>
+  </data>
+  <data name="node_drives_tip" xml:space="preserve">
+    <value>Información sobre discos duros, unidades extraíbles y volúmenes</value>
+  </data>
+  <data name="node_installedprogs" xml:space="preserve">
+    <value>Programas instalados</value>
+  </data>
+  <data name="node_installedprogs_tip" xml:space="preserve">
+    <value>Lista del software instalado en este ordenador</value>
+  </data>
+  <data name="node_network" xml:space="preserve">
+    <value>Red</value>
+  </data>
+  <data name="node_network_tip" xml:space="preserve">
+    <value>Información sobre las interfaces de red</value>
+  </data>
+  <data name="node_os" xml:space="preserve">
+    <value>Sistema operativo</value>
+  </data>
+  <data name="node_os_tip" xml:space="preserve">
+    <value>Información sobre el sistema operativo</value>
+  </data>
+  <data name="node_services" xml:space="preserve">
+    <value>Servicios</value>
+  </data>
+  <data name="node_services_tip" xml:space="preserve">
+    <value>Lista de los servicios de Windows y de terceros instalados en este ordenador</value>
+  </data>
+  <data name="node_sound" xml:space="preserve">
+    <value>Sonido</value>
+  </data>
+  <data name="node_sound_tip" xml:space="preserve">
+    <value>Información sobre los controladores de sonido</value>
+  </data>
+  <data name="node_spfolders" xml:space="preserve">
+    <value>Carpetas especiales</value>
+  </data>
+  <data name="node_spfolders_tip" xml:space="preserve">
+    <value>Lista de carpetas especiales de Windows® y sus rutas</value>
+  </data>
+  <data name="node_startupprogs" xml:space="preserve">
+    <value>Programas de inicio</value>
+  </data>
+  <data name="node_startupprogs_tip" xml:space="preserve">
+    <value>Programas que se ejecutan al iniciar sesión</value>
+  </data>
+  <data name="node_useraccounts" xml:space="preserve">
+    <value>Cuentas de usuario</value>
+  </data>
+  <data name="node_useraccounts_tip" xml:space="preserve">
+    <value>Cuentas de usuario y niveles de privilegio</value>
+  </data>
+  <data name="node_video" xml:space="preserve">
+    <value>Vídeo</value>
+  </data>
+  <data name="node_video_tip" xml:space="preserve">
+    <value>Información sobre los controladores de vídeo</value>
+  </data>
+  <data name="node_visualstyles" xml:space="preserve">
+    <value>Estilos visuales</value>
+  </data>
+  <data name="node_visualstyles_tip" xml:space="preserve">
+    <value>Información sobre el estilo visual que esté en uso actualmente</value>
+  </data>
+  <data name="os_admin" xml:space="preserve">
+    <value>Administrador</value>
+  </data>
+  <data name="os_build" xml:space="preserve">
+    <value>Compilación</value>
+  </data>
+  <data name="os_code_name" xml:space="preserve">
+    <value>Nombre de código</value>
+  </data>
+  <data name="os_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Sistemas operativos</value>
+  </data>
+  <data name="os_framework_full_version" xml:space="preserve">
+    <value>Versión completa</value>
+  </data>
+  <data name="os_framework_short_version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="os_full_version" xml:space="preserve">
+    <value>Versión completa</value>
+  </data>
+  <data name="os_install_date" xml:space="preserve">
+    <value>Fecha de instalación</value>
+  </data>
+  <data name="os_limited_user" xml:space="preserve">
+    <value>Usuario limitado</value>
+  </data>
+  <data name="os_machine_name" xml:space="preserve">
+    <value>Nombre de equipo</value>
+  </data>
+  <data name="os_ms_net_framework" xml:space="preserve">
+    <value>Microsoft .NET Framework</value>
+  </data>
+  <data name="os_ms_win" xml:space="preserve">
+    <value>Microsoft Windows</value>
+  </data>
+  <data name="os_ms_win_ce" xml:space="preserve">
+    <value>Microsoft Windows CE</value>
+  </data>
+  <data name="os_ms_win_nt" xml:space="preserve">
+    <value>Microsoft Windows NT</value>
+  </data>
+  <data name="os_name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="os_net_framework_info" xml:space="preserve">
+    <value>Información sobre .NET Framework</value>
+  </data>
+  <data name="os_product_id" xml:space="preserve">
+    <value>Id. de producto</value>
+  </data>
+  <data name="os_product_key" xml:space="preserve">
+    <value>Clave del producto</value>
+  </data>
+  <data name="os_service_pack" xml:space="preserve">
+    <value>Service Pack</value>
+  </data>
+  <data name="os_type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="os_unix" xml:space="preserve">
+    <value>Unix</value>
+  </data>
+  <data name="os_unknown_os" xml:space="preserve">
+    <value>Sistema operativo desconocido</value>
+  </data>
+  <data name="os_user_name" xml:space="preserve">
+    <value>Usuario actual</value>
+  </data>
+  <data name="os_version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="os_windows_info" xml:space="preserve">
+    <value>Información sobre Windows®</value>
+  </data>
+  <data name="os_win_32s" xml:space="preserve">
+    <value>Win32S</value>
+  </data>
+  <data name="pdf_notfound" xml:space="preserve">
+    <value>No se puede encontrar Adobe Reader</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Procesando</value>
+  </data>
+  <data name="root" xml:space="preserve">
+    <value>Información del sistema</value>
+  </data>
+  <data name="root_note" xml:space="preserve">
+    <value>Haga clic en un tema de la izquierda para obtener información específica sobre el sistema.</value>
+  </data>
+  <data name="services_description" xml:space="preserve">
+    <value>Windows y servicios de terceros</value>
+  </data>
+  <data name="services_details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="services_details_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="services_display_name" xml:space="preserve">
+    <value>Nombre para mostrar</value>
+  </data>
+  <data name="services_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Servicios</value>
+  </data>
+  <data name="services_listview_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en la vista de lista del panel Servicios</value>
+  </data>
+  <data name="services_path" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="services_pathname" xml:space="preserve">
+    <value>Nombre de ruta</value>
+  </data>
+  <data name="services_start_mode" xml:space="preserve">
+    <value>Modo de inicio</value>
+  </data>
+  <data name="services_state" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="sound_controller" xml:space="preserve">
+    <value>Controlador</value>
+  </data>
+  <data name="sound_controllers" xml:space="preserve">
+    <value>Controladores</value>
+  </data>
+  <data name="sound_controller_info" xml:space="preserve">
+    <value>Información del controlador</value>
+  </data>
+  <data name="sound_dma_buffer_size" xml:space="preserve">
+    <value>Tamaño de búfer DMA</value>
+  </data>
+  <data name="sound_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Sonido</value>
+  </data>
+  <data name="sound_man" xml:space="preserve">
+    <value>Fabricante</value>
+  </data>
+  <data name="sound_n/a" xml:space="preserve">
+    <value>N/D</value>
+  </data>
+  <data name="sound_numofcontrollers" xml:space="preserve">
+    <value>Número de controladores</value>
+  </data>
+  <data name="sound_numofsoundcontrollers" xml:space="preserve">
+    <value>Número de controladores de sonido</value>
+  </data>
+  <data name="spfolders_click_copy" xml:space="preserve">
+    <value>Haga clic para copiar la ruta en el Portapapeles</value>
+  </data>
+  <data name="spfolders_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Carpetas especiales</value>
+  </data>
+  <data name="spfolders_path" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="spfolders_sp_folder_name" xml:space="preserve">
+    <value>Nombre de la carpeta especial</value>
+  </data>
+  <data name="spfolders_win_sp_folders" xml:space="preserve">
+    <value>Carpetas especiales de Windows</value>
+  </data>
+  <data name="startupprogs_args" xml:space="preserve">
+    <value>Argumentos</value>
+  </data>
+  <data name="startupprogs_command" xml:space="preserve">
+    <value>Comando</value>
+  </data>
+  <data name="startupprogs_company" xml:space="preserve">
+    <value>Compañía</value>
+  </data>
+  <data name="startupprogs_description" xml:space="preserve">
+    <value>Programas que se ejecutan automáticamente al iniciar sesión</value>
+  </data>
+  <data name="startupprogs_details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="startupprogs_details_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="startupprogs_disabled" xml:space="preserve">
+    <value>Deshabilitado</value>
+  </data>
+  <data name="startupprogs_enabled" xml:space="preserve">
+    <value>Habilitado</value>
+  </data>
+  <data name="startupprogs_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Inicio</value>
+  </data>
+  <data name="startupprogs_filename" xml:space="preserve">
+    <value>Nombre de archivo</value>
+  </data>
+  <data name="startupprogs_fileversion" xml:space="preserve">
+    <value>Versión del archivo</value>
+  </data>
+  <data name="startupprogs_itemname" xml:space="preserve">
+    <value>Nombre de elemento</value>
+  </data>
+  <data name="startupprogs_listview_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en la vista de lista del panel Inicio</value>
+  </data>
+  <data name="startupprogs_location" xml:space="preserve">
+    <value>Ubicación</value>
+  </data>
+  <data name="startupprogs_product" xml:space="preserve">
+    <value>Producto</value>
+  </data>
+  <data name="startupprogs_prog_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="startupprogs_returnfilepath_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el método ReturnFilePath del panel Inicio</value>
+  </data>
+  <data name="startupprogs_status" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="today" xml:space="preserve">
+    <value>Hoy</value>
+  </data>
+  <data name="user_account_type" xml:space="preserve">
+    <value>Tipo de cuenta</value>
+  </data>
+  <data name="user_acc_disabled" xml:space="preserve">
+    <value>Cuenta deshabilitada</value>
+  </data>
+  <data name="user_acc_locked" xml:space="preserve">
+    <value>Cuenta bloqueada</value>
+  </data>
+  <data name="user_action_admin" xml:space="preserve">
+    <value>Esta acción requiere derechos administrativos</value>
+  </data>
+  <data name="user_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Usuarios</value>
+  </data>
+  <data name="user_fullname" xml:space="preserve">
+    <value>Nombre completo</value>
+  </data>
+  <data name="user_list" xml:space="preserve">
+    <value>Lista de cuentas de usuario del ordenador</value>
+  </data>
+  <data name="user_list_master" xml:space="preserve">
+    <value>Lista de cuentas de usuario del ordenador: MAESTRA</value>
+  </data>
+  <data name="user_notes" xml:space="preserve">
+    <value>Notas</value>
+  </data>
+  <data name="user_pwd_doesnt_expire" xml:space="preserve">
+    <value>Contraseña no expira</value>
+  </data>
+  <data name="user_pwd_not_changeable" xml:space="preserve">
+    <value>Contraseña no modificable</value>
+  </data>
+  <data name="user_pwd_not_required" xml:space="preserve">
+    <value>Contraseña no requerida</value>
+  </data>
+  <data name="user_registration" xml:space="preserve">
+    <value>Registro</value>
+  </data>
+  <data name="user_reg_org" xml:space="preserve">
+    <value>Organización registrada</value>
+  </data>
+  <data name="user_reg_user" xml:space="preserve">
+    <value>Usuario registrado</value>
+  </data>
+  <data name="user_save" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="user_unable_save_info" xml:space="preserve">
+    <value>No se puede guardar información</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="video_controllers" xml:space="preserve">
+    <value>Controladores</value>
+  </data>
+  <data name="video_controller_info" xml:space="preserve">
+    <value>Información del controlador</value>
+  </data>
+  <data name="video_current_scr_dim" xml:space="preserve">
+    <value>Dimensiones de pantalla actual</value>
+  </data>
+  <data name="video_current_scr_work_area" xml:space="preserve">
+    <value>Área de trabajo de pantalla actual</value>
+  </data>
+  <data name="video_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Vídeo</value>
+  </data>
+  <data name="video_n/a" xml:space="preserve">
+    <value>N/D</value>
+  </data>
+  <data name="video_num_colors" xml:space="preserve">
+    <value>Número de colores</value>
+  </data>
+  <data name="video_num_controllers" xml:space="preserve">
+    <value>Número de controladores</value>
+  </data>
+  <data name="video_num_vid_controllers" xml:space="preserve">
+    <value>Número de controladores de vídeo</value>
+  </data>
+  <data name="video_primary_scr_dim" xml:space="preserve">
+    <value>Dimensiones de pantalla principal</value>
+  </data>
+  <data name="video_primary_scr_work_area" xml:space="preserve">
+    <value>Área de trabajo de pantalla principal</value>
+  </data>
+  <data name="video_ram" xml:space="preserve">
+    <value>RAM de vídeo</value>
+  </data>
+  <data name="video_refresh_rate" xml:space="preserve">
+    <value>Frecuencia de actualización</value>
+  </data>
+  <data name="video_vid_controller" xml:space="preserve">
+    <value>Controlador de vídeo</value>
+  </data>
+  <data name="vs_author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="vs_color_scheme" xml:space="preserve">
+    <value>Combinación de colores</value>
+  </data>
+  <data name="vs_company" xml:space="preserve">
+    <value>Compañía</value>
+  </data>
+  <data name="vs_control_border" xml:space="preserve">
+    <value>Borde de control de texto</value>
+  </data>
+  <data name="vs_control_highlight" xml:space="preserve">
+    <value>Control resaltado activo</value>
+  </data>
+  <data name="vs_copyright" xml:space="preserve">
+    <value>Copyright</value>
+  </data>
+  <data name="vs_current_vs" xml:space="preserve">
+    <value>Estilo visual actual</value>
+  </data>
+  <data name="vs_current_vss" xml:space="preserve">
+    <value>Estilos visuales actuales</value>
+  </data>
+  <data name="vs_description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="vs_disabled" xml:space="preserve">
+    <value>Los estilos visuales están deshabilitados o no se admiten</value>
+  </data>
+  <data name="vs_displayname" xml:space="preserve">
+    <value>Nombre para mostrar</value>
+  </data>
+  <data name="vs_enabled_by_user" xml:space="preserve">
+    <value>Habilitado por el usuario</value>
+  </data>
+  <data name="vs_error_happen" xml:space="preserve">
+    <value>Se ha producido un error en el panel Estilos visuales</value>
+  </data>
+  <data name="vs_min_color_depth" xml:space="preserve">
+    <value>Profundidad de color mínima</value>
+  </data>
+  <data name="vs_not_enabled_by_user" xml:space="preserve">
+    <value>Los estilos visuales no han sido habilitados por el usuario</value>
+  </data>
+  <data name="vs_supp_os" xml:space="preserve">
+    <value>Admitido por el SO</value>
+  </data>
+  <data name="vs_version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Información del sistema</value>
+  </data>
+  <data name="yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+</root>

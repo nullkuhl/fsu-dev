@@ -5,97 +5,93 @@ using System.IO;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 
+/// <summary>
+/// The <see cref="FreemiumUtilities.Spyware"/> namespace defines a Spyware remover 1 Click-Maintenance application
+/// </summary>
 namespace FreemiumUtilities.Spyware
 {
-	/// <summary>
-	/// The <see cref="FreemiumUtilities.Spyware"/> namespace defines a Spyware remover 1 Click-Maintenance application
-	/// </summary>
+    /// <summary>
+    /// A Spyware Remover tool
+    /// </summary>
+    public class SpywareRemoverApp : OneClickApp
+    {
+        #region Instance Variables
 
-	[System.Runtime.CompilerServices.CompilerGenerated]
-	class NamespaceDoc { }
+        // List of spyware file names to look for
 
-	/// <summary>
-	/// A Spyware Remover tool
-	/// </summary>
-	public class SpywareRemoverApp : OneClickApp
-	{
-		#region Instance Variables
-
-		// List of spyware file names to look for
-
-		ProgressUpdate callback;
-		CancelComplete cancelComplete;
-		ScanComplete complete;
-		bool fixAfterScan;
-		BackgroundWorker fixBackgroundWorker;
-		int progressMax;
+        ProgressUpdate callback;
+        CancelComplete cancelComplete;
+        ScanComplete complete;
+        bool fixAfterScan;
+        BackgroundWorker fixBackgroundWorker;
+        int progressMax;
         private bool isCancel = false;
 
-		BackgroundWorker scanBackgroundWorker;
-		List<string> spywareLst = new List<string>();
+        BackgroundWorker scanBackgroundWorker;
+        List<string> spywareLst = new List<string>();
 
-		/// <summary>
-		/// Problems count
-		/// </summary>
-		public override int ProblemsCount { get; set; }
+        /// <summary>
+        /// Problems count
+        /// </summary>
+        public override int ProblemsCount { get; set; }
 
-		#endregion
+        #endregion
 
-		#region Properties
+        #region Properties
 
-		/// <summary>
-		/// Gets the spyware files found on the system. It should be called
-		/// after <code>StartScan</code>method.
-		/// </summary>
-		public List<SpywareInfo> SpywareFound { get; set; }
+        /// <summary>
+        /// Gets the spyware files found on the system. It should be called
+        /// after <code>StartScan</code>method.
+        /// </summary>
+        public List<SpywareInfo> SpywareFound { get; set; }
 
-		#endregion
+        #endregion
 
-		#region Constructors
+        #region Constructors
 
-		/// <summary>
-		/// Creates a new instance of spyware remover tool
-		/// </summary>
-		/// <param name="defFilePath">The path to the file containing spyware file names to check for</param>
-		public SpywareRemoverApp(string defFilePath)
-		{
-			SpywareFound = new List<SpywareInfo>();
-			ReadDefinitions(defFilePath);
-		}
+        /// <summary>
+        /// Creates a new instance of spyware remover tool
+        /// </summary>
+        /// <param name="defFilePath">The path to the file containing spyware file names to check for</param>
+        public SpywareRemoverApp(string defFilePath)
+        {
+            SpywareFound = new List<SpywareInfo>();
+            ReadDefinitions(defFilePath);
+        }
 
-		#endregion
+        #endregion
 
-		#region Methods
+        #region Methods
 
-		void ReadDefinitions(string defFilePath)
-		{
-			spywareLst = FileRW.ReadFile(defFilePath);
-		}
+        void ReadDefinitions(string defFilePath)
+        {
+            spywareLst = FileRW.ReadFile(defFilePath);
+        }
 
-		#region Scan
+        #region Scan
 
-		/// <summary>
-		/// handle DoWork event to start scanning
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void ScanBackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
-		{
+        /// <summary>
+        /// handle DoWork event to start scanning
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void ScanBackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
+        {
             try
             {
                 SpywareFound.Clear();
 
-                var directoriesToScan = new List<DirectoryInfo>();
+                List<DirectoryInfo> directoriesToScan = new List<DirectoryInfo>();
 
                 // Windows directory
-                var winDirPath = Environment.GetEnvironmentVariable("windir");
-                if (winDirPath != null)
+                string winDirPath = Environment.GetEnvironmentVariable("windir");
+                if (!string.IsNullOrEmpty(winDirPath))
                 {
-                    var winDirInfo = new DirectoryInfo(winDirPath);
+                    DirectoryInfo winDirInfo = new DirectoryInfo(winDirPath);
 
                     // SysWOW64
                     string sysWow64Path = winDirPath + "\\SysWOW64";
-                    var sysWow64Info = new DirectoryInfo(sysWow64Path);
+                    DirectoryInfo sysWow64Info = new DirectoryInfo(sysWow64Path);
                     if (sysWow64Info.Exists)
                         directoriesToScan.Add(sysWow64Info);
 
@@ -127,113 +123,113 @@ namespace FreemiumUtilities.Spyware
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
-		}
+        }
 
-		/// <summary>
-		/// handle ProgressChanged event to show progress
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void scanBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-		{
+        /// <summary>
+        /// handle ProgressChanged event to show progress
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void scanBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
             if (!isCancel)
             {
                 callback(e.ProgressPercentage, e.UserState.ToString());
             }
-		}
+        }
 
-		/// <summary>
-		/// handle RunWorkerCompleted to finish scanning
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void scanBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			if (e.Cancelled || isCancel)
-			{
-				cancelComplete();
-			}
-			else if (e.Error != null)
-			{
-				MessageBox.Show("Error: " + e.Error.Message);
-			}
-			else
-			{
-				complete(fixAfterScan);
-			}
-		}
+        /// <summary>
+        /// handle RunWorkerCompleted to finish scanning
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void scanBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled || isCancel)
+            {
+                cancelComplete();
+            }
+            else if (e.Error != null)
+            {
+                MessageBox.Show("Error: " + e.Error.Message);
+            }
+            else
+            {
+                complete(fixAfterScan);
+            }
+        }
 
-		void ScanDir(DirectoryInfo dirInfo, bool filesOnly, long sizeScanned, DoWorkEventArgs e)
-		{
-			try
-			{
-				// Get files and dirs
-				if (dirInfo.FullName.Contains(@"System32\"))
-				{
-					return;
-				}
-				FileInfo[] filesInDir = dirInfo.GetFiles();
+        void ScanDir(DirectoryInfo dirInfo, bool filesOnly, long sizeScanned, DoWorkEventArgs e)
+        {
+            try
+            {
+                // Get files and dirs
+                if (dirInfo.FullName.Contains(@"System32\"))
+                {
+                    return;
+                }
+                FileInfo[] filesInDir = dirInfo.GetFiles();
 
-				// Scan files
-				foreach (FileInfo file in filesInDir)
-				{
-					if (scanBackgroundWorker.CancellationPending) //checks for cancel request
-					{
-						e.Cancel = true;
-						return;
-					}
+                // Scan files
+                foreach (FileInfo file in filesInDir)
+                {
+                    if (scanBackgroundWorker.CancellationPending) //checks for cancel request
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
 
-					try
-					{
-						if (spywareLst.Contains(file.Name))
-						{
-							var spyware = new SpywareInfo
-											{
-												Spyware = file.Name,
-												FilePath = file.FullName
-											};
-							SpywareFound.Add(spyware);
-							ProblemsCount++;
-						}
+                    try
+                    {
+                        if (spywareLst.Contains(file.Name))
+                        {
+                            SpywareInfo spyware = new SpywareInfo
+                                            {
+                                                Spyware = file.Name,
+                                                FilePath = file.FullName
+                                            };
+                            SpywareFound.Add(spyware);
+                            ProblemsCount++;
+                        }
 
-						var progressPercentage = (int)((double)sizeScanned / progressMax * 100);
+                        int progressPercentage = (int)((double)sizeScanned / progressMax * 100);
 
-						scanBackgroundWorker.ReportProgress(progressPercentage, file.FullName); //reports a percentage between 0 and 100
-					}
-					catch { }
-				}
+                        scanBackgroundWorker.ReportProgress(progressPercentage, file.FullName); //reports a percentage between 0 and 100
+                    }
+                    catch { }
+                }
 
 
-				// Scan subdirectories
-				if (filesOnly)
-					return;
+                // Scan subdirectories
+                if (filesOnly)
+                    return;
 
-				DirectoryInfo[] subDirs = dirInfo.GetDirectories();
-				foreach (DirectoryInfo dir in subDirs)
-				{
-					if (scanBackgroundWorker.CancellationPending) //checks for cancel request
-					{
-						e.Cancel = true;
-						return;
-					}
+                DirectoryInfo[] subDirs = dirInfo.GetDirectories();
+                foreach (DirectoryInfo dir in subDirs)
+                {
+                    if (scanBackgroundWorker.CancellationPending) //checks for cancel request
+                    {
+                        e.Cancel = true;
+                        return;
+                    }
 
-					ScanDir(dir, filesOnly, sizeScanned, e);
-				}
-			}
-			catch { }
-		}
+                    ScanDir(dir, filesOnly, sizeScanned, e);
+                }
+            }
+            catch { }
+        }
 
-		#endregion
+        #endregion
 
-		#region Fix
+        #region Fix
 
-		/// <summary>
-		/// handle DoWork event to start fixing
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void FixBackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
-		{
+        /// <summary>
+        /// handle DoWork event to start fixing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void FixBackgroundWorkerDoWork(object sender, DoWorkEventArgs e)
+        {
             try
             {
                 int SpywareFoundCount = SpywareFound.Count;
@@ -245,7 +241,7 @@ namespace FreemiumUtilities.Spyware
                         return;
                     }
                     SpywareInfo spyware = SpywareFound[i];
-                    var progressPercentage = (int)((double)(i + 1) / SpywareFoundCount * 100);
+                    int progressPercentage = (int)((double)(i + 1) / SpywareFoundCount * 100);
                     fixBackgroundWorker.ReportProgress(progressPercentage, spyware.FilePath); //reports a percentage between 0 and 100
                     if (File.Exists(spyware.FilePath))
                     {
@@ -255,7 +251,6 @@ namespace FreemiumUtilities.Spyware
                         }
                         catch (Exception)
                         {
-                            //MessageBox.Show(ex.ToString());
                         }
                     }
                 }
@@ -264,122 +259,117 @@ namespace FreemiumUtilities.Spyware
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
-		}
+        }
 
-		/// <summary>
-		/// handle ProgressChanged event to show progress
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void fixBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-		{
+        /// <summary>
+        /// handle ProgressChanged event to show progress
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void fixBackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
             if (!isCancel)
             {
                 callback(e.ProgressPercentage, e.UserState.ToString());
             }
-		}
+        }
 
-		/// <summary>
-		/// handle RunWorkerCompleted event to finish fixing
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		void fixBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			if (e.Cancelled || isCancel)
-			{
-				//TODO: Think is it needed here!
-				cancelComplete();
-			}
-			else if (e.Error != null)
-			{
-				MessageBox.Show("Error: " + e.Error.Message);
-			}
-			else
-			{
-				complete(fixAfterScan);
-			}
-		}
+        /// <summary>
+        /// handle RunWorkerCompleted event to finish fixing
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void fixBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Cancelled || isCancel)
+            {
+                //TODO: Think is it needed here!
+                cancelComplete();
+            }
+            else if (e.Error != null)
+            {
+                MessageBox.Show("Error: " + e.Error.Message);
+            }
+            else
+            {
+                complete(fixAfterScan);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#endregion
+        #endregion
 
-		#region Public Methods
+        #region Public Methods
 
-		#region Scan
+        #region Scan
 
-		/// <summary>
-		/// Starts the scanning process
-		/// </summary>
-		/// <param name="callback">The callback method to update progress</param>
-		public override void StartScan(ProgressUpdate callback, ScanComplete complete, CancelComplete cancelComplete,
-									   bool fixAfterScan)
-		{
-			// Get Windows partition
-			//var winPartition = Environment.GetEnvironmentVariable("SystemDrive");
-			//var winDriveInfo = new DriveInfo(winPartition);
-			//winPartitionUsedSpace = winDriveInfo.TotalSize - winDriveInfo.TotalFreeSpace;
+        /// <summary>
+        /// Starts the scanning process
+        /// </summary>
+        /// <param name="callback">The callback method to update progress</param>
+        public override void StartScan(ProgressUpdate callback, ScanComplete complete, CancelComplete cancelComplete,
+                                       bool fixAfterScan)
+        {
+            this.callback = callback;
+            this.complete = complete;
+            this.cancelComplete = cancelComplete;
+            this.fixAfterScan = fixAfterScan;
 
-			this.callback = callback;
-			this.complete = complete;
-			this.cancelComplete = cancelComplete;
-			this.fixAfterScan = fixAfterScan;
-            
             isCancel = false;
-			scanBackgroundWorker = new BackgroundWorker();
-			scanBackgroundWorker.WorkerSupportsCancellation = true;
-			scanBackgroundWorker.WorkerReportsProgress = true;
-			scanBackgroundWorker.DoWork += ScanBackgroundWorkerDoWork;
-			scanBackgroundWorker.RunWorkerCompleted += scanBackgroundWorker_RunWorkerCompleted;
-			scanBackgroundWorker.ProgressChanged += scanBackgroundWorker_ProgressChanged;
+            scanBackgroundWorker = new BackgroundWorker();
+            scanBackgroundWorker.WorkerSupportsCancellation = true;
+            scanBackgroundWorker.WorkerReportsProgress = true;
+            scanBackgroundWorker.DoWork += ScanBackgroundWorkerDoWork;
+            scanBackgroundWorker.RunWorkerCompleted += scanBackgroundWorker_RunWorkerCompleted;
+            scanBackgroundWorker.ProgressChanged += scanBackgroundWorker_ProgressChanged;
 
-			scanBackgroundWorker.RunWorkerAsync();
-		}
+            scanBackgroundWorker.RunWorkerAsync();
+        }
 
-		/// <summary>
-		/// cancel the scanning process
-		/// </summary>
-		public override void CancelScan()
-		{
+        /// <summary>
+        /// cancel the scanning process
+        /// </summary>
+        public override void CancelScan()
+        {
             isCancel = true;
             if (scanBackgroundWorker.IsBusy)
-			    scanBackgroundWorker.CancelAsync(); //makes the backgroundworker stop
-		}
+                scanBackgroundWorker.CancelAsync(); //makes the backgroundworker stop
+        }
 
-		#endregion
+        #endregion
 
-		#region Fix
+        #region Fix
 
-		/// <summary>
-		/// Deletes found spyware
-		/// </summary>
-		public override void StartFix(ProgressUpdate callback)
-		{
+        /// <summary>
+        /// Deletes found spyware
+        /// </summary>
+        public override void StartFix(ProgressUpdate callback)
+        {
             isCancel = false;
-			this.callback = callback;
-			fixBackgroundWorker = new BackgroundWorker();
-			fixBackgroundWorker.WorkerSupportsCancellation = true;
-			fixBackgroundWorker.WorkerReportsProgress = true;
-			fixBackgroundWorker.DoWork += FixBackgroundWorkerDoWork;
-			fixBackgroundWorker.RunWorkerCompleted += fixBackgroundWorker_RunWorkerCompleted;
-			fixBackgroundWorker.ProgressChanged += fixBackgroundWorker_ProgressChanged;
+            this.callback = callback;
+            fixBackgroundWorker = new BackgroundWorker();
+            fixBackgroundWorker.WorkerSupportsCancellation = true;
+            fixBackgroundWorker.WorkerReportsProgress = true;
+            fixBackgroundWorker.DoWork += FixBackgroundWorkerDoWork;
+            fixBackgroundWorker.RunWorkerCompleted += fixBackgroundWorker_RunWorkerCompleted;
+            fixBackgroundWorker.ProgressChanged += fixBackgroundWorker_ProgressChanged;
 
-			fixBackgroundWorker.RunWorkerAsync();
-		}
+            fixBackgroundWorker.RunWorkerAsync();
+        }
 
-		/// <summary>
-		/// cancel spyware deleting
-		/// </summary>
-		public override void CancelFix()
-		{
+        /// <summary>
+        /// cancel spyware deleting
+        /// </summary>
+        public override void CancelFix()
+        {
             isCancel = true;
             if (fixBackgroundWorker.IsBusy)
-			    fixBackgroundWorker.CancelAsync(); //makes the backgroundworker stop
-		}
+                fixBackgroundWorker.CancelAsync(); //makes the backgroundworker stop
+        }
 
-		#endregion
+        #endregion
 
-		#endregion
-	}
+        #endregion
+    }
 }

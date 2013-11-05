@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&amp;cancel" xml:space="preserve">
+    <value>&amp;Cancelar</value>
+  </data>
+  <data name="&amp;ok" xml:space="preserve">
+    <value>&amp;Ok</value>
+  </data>
+  <data name="AboveNormal" xml:space="preserve">
+    <value>Acima do Normal</value>
+  </data>
+  <data name="application" xml:space="preserve">
+    <value>Aplicação</value>
+  </data>
+  <data name="arguments" xml:space="preserve">
+    <value>Argumentos</value>
+  </data>
+  <data name="BelowNormal" xml:space="preserve">
+    <value>Abaixo do Normal</value>
+  </data>
+  <data name="blocked_proc" xml:space="preserve">
+    <value>Processo Bloqueado</value>
+  </data>
+  <data name="block_process" xml:space="preserve">
+    <value>Bloquear Processo</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>&amp;Procurar</value>
+  </data>
+  <data name="cant_block_processmanager" xml:space="preserve">
+    <value>Não pode bloquear o processo Freemium.</value>
+  </data>
+  <data name="cant_end_processmanager" xml:space="preserve">
+    <value>Não pode finalizar processos Freemium.</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Fechar</value>
+  </data>
+  <data name="comments" xml:space="preserve">
+    <value>Comentários</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>Empresa</value>
+  </data>
+  <data name="copyright" xml:space="preserve">
+    <value>Direitos de Autor</value>
+  </data>
+  <data name="cpu" xml:space="preserve">
+    <value>CPU: {0}%</value>
+  </data>
+  <data name="cpu_time" xml:space="preserve">
+    <value>Tempo da CPU</value>
+  </data>
+  <data name="data" xml:space="preserve">
+    <value>Dados</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
+  <data name="ended_process" xml:space="preserve">
+    <value>Processo terminado com sucesso</value>
+  </data>
+  <data name="end_process" xml:space="preserve">
+    <value>Terminar Processo</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="executable" xml:space="preserve">
+    <value>Executável</value>
+  </data>
+  <data name="file" xml:space="preserve">
+    <value>Ficheiro</value>
+  </data>
+  <data name="file_path" xml:space="preserve">
+    <value>Caminho do Ficheiro</value>
+  </data>
+  <data name="file_type" xml:space="preserve">
+    <value>Tipo de Ficheiro</value>
+  </data>
+  <data name="folder" xml:space="preserve">
+    <value>Pasta</value>
+  </data>
+  <data name="gathering_data" xml:space="preserve">
+    <value>A Reunir Dados...</value>
+  </data>
+  <data name="general_info" xml:space="preserve">
+    <value>Informação Geral</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>Elevado</value>
+  </data>
+  <data name="Idle" xml:space="preserve">
+    <value>Inativo</value>
+  </data>
+  <data name="internal_name" xml:space="preserve">
+    <value>Nome Interno</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Baixo</value>
+  </data>
+  <data name="mem" xml:space="preserve">
+    <value>Memória</value>
+  </data>
+  <data name="memory" xml:space="preserve">
+    <value>Memória: {0}MB</value>
+  </data>
+  <data name="memory_usage" xml:space="preserve">
+    <value>Utilização da Memória</value>
+  </data>
+  <data name="module_info" xml:space="preserve">
+    <value>Informação do Módulo</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="num_threads" xml:space="preserve">
+    <value>Nº de Ameaças</value>
+  </data>
+  <data name="open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="original_file_name" xml:space="preserve">
+    <value>Nome do Ficheiro Original</value>
+  </data>
+  <data name="priority" xml:space="preserve">
+    <value>Prioridade</value>
+  </data>
+  <data name="processes" xml:space="preserve">
+    <value>Processos : {0}</value>
+  </data>
+  <data name="processes_successfully_unblocked" xml:space="preserve">
+    <value>Todos os processos foram desbloqueados com sucesso.</value>
+  </data>
+  <data name="process_information" xml:space="preserve">
+    <value>Informação do Processo</value>
+  </data>
+  <data name="process_manager" xml:space="preserve">
+    <value>Gestor de processo</value>
+  </data>
+  <data name="proc_id" xml:space="preserve">
+    <value>Id do Processo</value>
+  </data>
+  <data name="product_name" xml:space="preserve">
+    <value>Nome do Produto</value>
+  </data>
+  <data name="product_version" xml:space="preserve">
+    <value>Versão do Produto</value>
+  </data>
+  <data name="properties" xml:space="preserve">
+    <value>Propriedades</value>
+  </data>
+  <data name="RealTime" xml:space="preserve">
+    <value>Tempo Real</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>Remover</value>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Reiniciar Computador</value>
+  </data>
+  <data name="restart?" xml:space="preserve">
+    <value>Pretende mesmo reiniciar o computador agora?</value>
+  </data>
+  <data name="search_internet" xml:space="preserve">
+    <value>Procurar na Internet</value>
+  </data>
+  <data name="select_item" xml:space="preserve">
+    <value>Selecione o processo para trabalhar</value>
+  </data>
+  <data name="select_item_title" xml:space="preserve">
+    <value>Selecione um item</value>
+  </data>
+  <data name="set_priority" xml:space="preserve">
+    <value>Definir Prioridade</value>
+  </data>
+  <data name="show_detail" xml:space="preserve">
+    <value>Mostrar Detalhe</value>
+  </data>
+  <data name="show_details" xml:space="preserve">
+    <value>Mostrar Detalhes</value>
+  </data>
+  <data name="shutdown" xml:space="preserve">
+    <value>Encerrar Computador</value>
+  </data>
+  <data name="shutdown?" xml:space="preserve">
+    <value>Pretende mesmo encerrar o computador agora?</value>
+  </data>
+  <data name="started_by" xml:space="preserve">
+    <value>Iniciado Por</value>
+  </data>
+  <data name="started_on" xml:space="preserve">
+    <value>Iniciado A</value>
+  </data>
+  <data name="start_time" xml:space="preserve">
+    <value>Hora de Início</value>
+  </data>
+  <data name="system_process_block" xml:space="preserve">
+    <value>O bloqueamento dos processos do sistema pode ser de risco. Pretende mesmo assim bloquear o processo?</value>
+  </data>
+  <data name="system_process_end" xml:space="preserve">
+    <value>A finalização dos processos do sistema podem ser de risco. Pretende mesmo assim finalizar o processo?</value>
+  </data>
+  <data name="taskmngr_invisible" xml:space="preserve">
+    <value>O Gestor de Tarefas está no Modo Invisível</value>
+  </data>
+  <data name="taskmngr_visible" xml:space="preserve">
+    <value>O Gestor de Tarefas está no Modo Visível</value>
+  </data>
+  <data name="threads" xml:space="preserve">
+    <value>Ameaças</value>
+  </data>
+  <data name="tool_strip" xml:space="preserve">
+    <value>ferramentaFaixa1</value>
+  </data>
+  <data name="trademark" xml:space="preserve">
+    <value>Marca registada</value>
+  </data>
+  <data name="unblock" xml:space="preserve">
+    <value>Desbloquear</value>
+  </data>
+  <data name="unblock_all" xml:space="preserve">
+    <value>Desbloquear Todos</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>Utilizador</value>
+  </data>
+  <data name="value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="version" xml:space="preserve">
+    <value>Versão</value>
+  </data>
+  <data name="version_information" xml:space="preserve">
+    <value>Informação da Versão</value>
+  </data>
+  <data name="want_block_process" xml:space="preserve">
+    <value>Pretende mesmo bloquear o processo {0}?</value>
+  </data>
+  <data name="want_end_process" xml:space="preserve">
+    <value>Pretende mesmo finalizar o processo {0}?</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Aviso</value>
+  </data>
+  <data name="window_title" xml:space="preserve">
+    <value>Gerir processos</value>
+  </data>
+</root>

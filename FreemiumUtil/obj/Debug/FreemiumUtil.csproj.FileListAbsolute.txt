@@ -1,5 +1,0 @@
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\bin\Debug\FreemiumUtil.dll.config
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\bin\Debug\FreemiumUtil.dll
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\bin\Debug\FreemiumUtil.pdb
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.dll
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtil\obj\Debug\FreemiumUtil.pdb

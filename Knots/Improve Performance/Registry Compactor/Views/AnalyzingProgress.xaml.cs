@@ -29,6 +29,11 @@ namespace RegistryCompactor
 
 		#endregion
 
+        /// <summary>
+        /// Handles Loaded window event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void Window_Loaded(object sender, RoutedEventArgs e)
 		{
 			// Set start time
@@ -44,11 +49,14 @@ namespace RegistryCompactor
 
 			Color color = Color.FromArgb(240, 240, 240);
 			Brush solidBrush = new SolidBrush(color);
-			var animatedImageControl =
+            AnimatedImageControl animatedImageControl =
 				new AnimatedImageControl(this, Properties.Resources.ajax_loader, solidBrush);
 			AnalyzingTitle.Children.Insert(0, animatedImageControl);
 		}
 
+        /// <summary>
+        /// Analyzing process
+        /// </summary>
 		void Analyze()
 		{
 			Thread.BeginCriticalRegion();
@@ -64,6 +72,10 @@ namespace RegistryCompactor
 			Dispatcher.BeginInvoke(new Action(Close));
 		}
 
+        /// <summary>
+        /// Increments progress bar value 
+        /// </summary>
+        /// <param name="currentHive"></param>
 		void IncrementProgressBar(string currentHive)
 		{
 			if (Dispatcher.Thread != Thread.CurrentThread)

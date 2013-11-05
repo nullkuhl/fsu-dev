@@ -1,8 +1,0 @@
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\bin\Debug\freemiumContext.exe.config
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\bin\Debug\freemiumContext.exe
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\bin\Debug\freemiumContext.pdb
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\obj\x86\Debug\FreemiumUtilities.Context.NamespaceDoc.resources
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\obj\x86\Debug\FreemiumUtilities.Context.Properties.Resources.resources
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\obj\x86\Debug\FreemiumUtilities.Context.csproj.GenerateResource.Cache
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\obj\x86\Debug\freemiumContext.exe
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\FreemiumUtilities.Context\obj\x86\Debug\freemiumContext.pdb

@@ -277,7 +277,7 @@
     <value>Local Date and Time</value>
   </data>
   <data name="datetime_offset" xml:space="preserve">
-    <value>Offset from Univeral Time</value>
+    <value>Offset from Universal Time</value>
   </data>
   <data name="datetime_offset_from_today" xml:space="preserve">
     <value>Offset from Today</value>
@@ -377,6 +377,9 @@
   </data>
   <data name="eula_notfound" xml:space="preserve">
     <value>The EULA.pdf file cannot be found</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
   <data name="holiday_dow" xml:space="preserve">
     <value>DOW is greater than 6</value>
@@ -696,11 +699,14 @@
   <data name="pdf_notfound" xml:space="preserve">
     <value>Adobe Reader cannot be found</value>
   </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing</value>
+  </data>
   <data name="root" xml:space="preserve">
     <value>System Information</value>
   </data>
   <data name="root_note" xml:space="preserve">
-    <value>Click a topic at the left for specific system information.</value>
+    <value>Click a topic on the left for specific system information.</value>
   </data>
   <data name="services_description" xml:space="preserve">
     <value>Windows and Third-Party Services</value>
@@ -983,11 +989,5 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Yes</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing</value>
   </data>
 </root>

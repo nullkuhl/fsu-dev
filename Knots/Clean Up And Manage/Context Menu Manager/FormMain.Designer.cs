@@ -373,7 +373,7 @@ namespace Context_Menu_Manager
 		BottomControl ucBottom;
 		System.Windows.Forms.Button SaveFilesFolders;
 		System.Windows.Forms.Button SaveNew;
-		System.Windows.Forms.Button SaveSend;
+        System.Windows.Forms.Button SaveSend;
 	}
 }
 

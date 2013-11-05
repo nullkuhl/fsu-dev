@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Resources;
@@ -32,7 +31,7 @@ namespace Disk_Cleaner
 		/// <param name="e"></param>
 		void FormRestore_Load(object sender, EventArgs e)
 		{
-			var culture = new CultureInfo(CfgFile.Get("Lang"));
+            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
 			SetCulture(culture);
 
 			lvBackups.Items.Clear();
@@ -42,13 +41,13 @@ namespace Disk_Cleaner
 			string[] dirs = Directory.GetDirectories(backuppath);
 			foreach (string str in dirs)
 			{
-				var fileName = Path.GetFileName(str);
-				if (fileName != null && fileName.Length != 14) continue;
+				string fileName = Path.GetFileName(str);
+				if (!string.IsNullOrEmpty(fileName) && fileName.Length != 14) continue;
 				DateTime val;
 				if (!DateTime.TryParseExact(Path.GetFileName(str), "yyyyMMddHHmmss",
 				                            CultureInfo.CurrentCulture.DateTimeFormat,
 				                            DateTimeStyles.AssumeLocal, out val)) continue;
-				var item = new ListViewItem(rm.GetString("backup") + " " + val.ToString());
+                ListViewItem item = new ListViewItem(rm.GetString("backup") + " " + val.ToString());
 				item.Tag = val;
 				string[] files = Directory.GetFiles(str);
 				long size = 0;
@@ -76,7 +75,7 @@ namespace Disk_Cleaner
 			if (lvBackups.SelectedItems.Count == 0) return;
 
 			//Show Processing
-			var objProc = new FormProcessing();
+            FormProcessing objProc = new FormProcessing();
 			objProc.Show();
 
 			foreach (ListViewItem item in lvBackups.SelectedItems)
@@ -85,12 +84,7 @@ namespace Disk_Cleaner
 				{
 					ABORT = false;
 					return;
-				}
-				//try { Directory.Delete(this.backuppath + ((DateTime)item.Tag).ToString("yyyyMMddHHmmss"), true); }
-				//catch (Exception ex)
-				//{
-				//    MessageBox.Show(ex.Message);
-				//}
+				}				
 				Thread.Sleep(3000);
 			}
 

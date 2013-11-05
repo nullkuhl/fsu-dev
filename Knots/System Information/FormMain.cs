@@ -34,7 +34,7 @@ using System.Resources;
 using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
-using Microsoft.VisualBasic;
+using System.IO;
 
 #endregion
 
@@ -51,7 +51,11 @@ namespace SystemInformation
 
 		#region " TreeView Select "
 
-		// Display the correct panel based on the node that was selected.
+        /// <summary>
+        /// Display the correct panel based on the node that was selected.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void treeviewSystemInfo_AfterSelect(object sender, TreeViewEventArgs e)
 		{
 			BackgroundWorker worker = new BackgroundWorker();
@@ -61,6 +65,11 @@ namespace SystemInformation
 			formBusy.ShowDialog();
 		}
 
+        /// <summary>
+        /// Shows the result
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void worker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			SplitContainer.Panel2.Controls.Clear();
@@ -68,6 +77,11 @@ namespace SystemInformation
 			formBusy.Close();
 		}
 
+        /// <summary>
+        /// Fills information on tab
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void worker_DoWork(object sender, DoWorkEventArgs e)
 		{
 			Thread.Sleep(400);
@@ -136,6 +150,11 @@ namespace SystemInformation
 
 		#region " Form Events "
 
+        /// <summary>
+        /// Handles Load event of Main form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 		void MainForm_Load(Object sender, EventArgs e)
 		{
 			try
@@ -194,8 +213,7 @@ namespace SystemInformation
 		void timerTime_Tick(Object sender, EventArgs e)
 		{
 			// Update HolidayDate and Time.
-			tsslDateTime.Text = Strings.FormatDateTime(DateTime.Now, DateFormat.LongDate) + "  " +
-								Strings.FormatDateTime(DateTime.Now, DateFormat.LongTime);
+            tsslDateTime.Text = DateTime.Now.ToLongDateString() + "  " + DateTime.Now.ToLongTimeString();
 		}
 
 		void timerTimeUp_Tick(Object sender, EventArgs e)
@@ -212,11 +230,23 @@ namespace SystemInformation
 		public FormMain()
 		{
 			InitializeComponent();
+            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            {
+                this.Icon = Properties.Resources.PCCleanerIcon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
 		}
 
+        /// <summary>
+        /// Sets culture
+        /// </summary>
+        /// <param name="culture"></param>
 		void SetCulture(CultureInfo culture)
 		{
-			var rm = new ResourceManager("SystemInformation.Resources", typeof(FormMain).Assembly);
+            ResourceManager rm = new ResourceManager("SystemInformation.Resources", typeof(FormMain).Assembly);
 
 			var resources = new ComponentResourceManager(typeof(FormMain));
 			Thread.CurrentThread.CurrentUICulture = culture;
@@ -257,7 +287,8 @@ namespace SystemInformation
 
 			//treeNode16.Text = rm.GetString("root", culture);
 			StatusStrip.Text = rm.GetString("main_statusstrip", culture);
-			Icon = ((Icon)(resources.GetObject("$this.Icon", culture)));
+           // Icon = Properties.Resources.PCCleanerIcon;
+            
 			Text = rm.GetString("window_title", culture);
 			ucTop.Text = rm.GetString("window_title", culture);
 		}

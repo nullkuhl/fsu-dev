@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="add" xml:space="preserve">
+    <value>Ajouter</value>
+  </data>
+  <data name="add_junk_file" xml:space="preserve">
+    <value>Ajouter un type de fichier spam</value>
+  </data>
+  <data name="back" xml:space="preserve">
+    <value>Retour</value>
+  </data>
+  <data name="backup" xml:space="preserve">
+    <value>Sécurité</value>
+  </data>
+  <data name="backup_temp_files" xml:space="preserve">
+    <value>Sauvegarder les fichiers temporaires avant le nettoyage</value>
+  </data>
+  <data name="backup_zero_files" xml:space="preserve">
+    <value>Sauvegarder les fichiers 0 octet avant le nettoyage</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Rechercher</value>
+  </data>
+  <data name="cancel" xml:space="preserve">
+    <value>Annuler</value>
+  </data>
+  <data name="can_use_wildcards" xml:space="preserve">
+    <value>Vous pouvez utiliser des métacaractères.</value>
+  </data>
+  <data name="cleaning_completed" xml:space="preserve">
+    <value>Nettoyage terminé avec succès.</value>
+  </data>
+  <data name="cleaning_started" xml:space="preserve">
+    <value>Nettoyage en cours.</value>
+  </data>
+  <data name="cleaning_status" xml:space="preserve">
+    <value>État du nettoyage :</value>
+  </data>
+  <data name="cleanup" xml:space="preserve">
+    <value>Nettoyer</value>
+  </data>
+  <data name="click_finish_return" xml:space="preserve">
+    <value>Cliquez sur « Terminer » pour retourner au menu principal</value>
+  </data>
+  <data name="click_next_after_selecting" xml:space="preserve">
+    <value>Cliquez sur « Continuer » après avoir sélectionné les lecteurs.</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>Fermer</value>
+  </data>
+  <data name="considered_junk" xml:space="preserve">
+    <value>Tous les fichiers contenus dans ces dossiers doivent toujours être traités comme des spams, quel que soit leur type :</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>Créé</value>
+  </data>
+  <data name="creation_date" xml:space="preserve">
+    <value>Date de création</value>
+  </data>
+  <data name="critical_warning" xml:space="preserve">
+    <value>Avertissement critique</value>
+  </data>
+  <data name="default_string" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="disk_cleaner" xml:space="preserve">
+    <value>Nettoyer le support de données</value>
+  </data>
+  <data name="disk_cleanup" xml:space="preserve">
+    <value>Nettoyer le support de données</value>
+  </data>
+  <data name="done" xml:space="preserve">
+    <value>Terminé</value>
+  </data>
+  <data name="emptying_recycle_bin" xml:space="preserve">
+    <value>La corbeille est vidée...</value>
+  </data>
+  <data name="exclude" xml:space="preserve">
+    <value>Exclure</value>
+  </data>
+  <data name="ext" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="filename_ends_with" xml:space="preserve">
+    <value>Nom de fichier se terminant par</value>
+  </data>
+  <data name="files" xml:space="preserve">
+    <value>Fichiers</value>
+  </data>
+  <data name="files1" xml:space="preserve">
+    <value>Fichiers</value>
+  </data>
+  <data name="FilesRestored" xml:space="preserve">
+    <value>Les fichiers ont été restaurés avec succès.</value>
+  </data>
+  <data name="file_type" xml:space="preserve">
+    <value>Type de fichier</value>
+  </data>
+  <data name="finish" xml:space="preserve">
+    <value>Terminer</value>
+  </data>
+  <data name="folder" xml:space="preserve">
+    <value>Dossier</value>
+  </data>
+  <data name="free_size" xml:space="preserve">
+    <value>Espace de stockage libre</value>
+  </data>
+  <data name="general" xml:space="preserve">
+    <value>Généralités</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="if_unsure" xml:space="preserve">
+    <value>Si vous n’êtes pas sûr(e) de ces options, conservez la configuration par défaut.</value>
+  </data>
+  <data name="include" xml:space="preserve">
+    <value>Inclure</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="last_access" xml:space="preserve">
+    <value>Dernier accès</value>
+  </data>
+  <data name="modified" xml:space="preserve">
+    <value>modifiés</value>
+  </data>
+  <data name="more_options" xml:space="preserve">
+    <value>Autres options</value>
+  </data>
+  <data name="n/a" xml:space="preserve">
+    <value>N.d.</value>
+  </data>
+  <data name="n/a1" xml:space="preserve">
+    <value>N.d.</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Nom</value>
+  </data>
+  <data name="next" xml:space="preserve">
+    <value>Continuer</value>
+  </data>
+  <data name="not_considered_junk" xml:space="preserve">
+    <value>Tous les fichiers contenus dans ces dossiers ne doivent jamais être traités comme des spams :</value>
+  </data>
+  <data name="no_extra_space" xml:space="preserve">
+    <value>Pas de gain d’espace de stockage supplémentaire</value>
+  </data>
+  <data name="objects" xml:space="preserve">
+    <value>Objets</value>
+  </data>
+  <data name="of_disk_space" xml:space="preserve">
+    <value>Espace de stockage sur le(s) lecteur(s)</value>
+  </data>
+  <data name="ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="overwrite_existing_files" xml:space="preserve">
+    <value>Écraser les fichiers existants lors de la restauration</value>
+  </data>
+  <data name="partial" xml:space="preserve">
+    <value>Partiellement</value>
+  </data>
+  <data name="path" xml:space="preserve">
+    <value>Chemin d’accès</value>
+  </data>
+  <data name="pending" xml:space="preserve">
+    <value>en cours</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Traitement en cours...</value>
+  </data>
+  <data name="processing_junk_files" xml:space="preserve">
+    <value>Les fichiers spam sont en cours de traitement...</value>
+  </data>
+  <data name="processing_zero_byte_files" xml:space="preserve">
+    <value>Les fichiers 0 octet sont en cours de traitement...</value>
+  </data>
+  <data name="recycle_bin" xml:space="preserve">
+    <value>Corbeille</value>
+  </data>
+  <data name="recycle_bin_def" xml:space="preserve">
+    <value>La corbeille contient les fichiers supprimés de votre ordinateur. Pour supprimer ces fichiers définitivement, vous devez vider la corbeille.</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Actualiser</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="restore" xml:space="preserve">
+    <value>Restaurer</value>
+  </data>
+  <data name="review_list_junk_files" xml:space="preserve">
+    <value>Vérifiez la liste des types de fichiers spam située ci-dessous et (dé)sélectionnez des entrées en (dés)activant les cases correspondantes.</value>
+  </data>
+  <data name="scanning" xml:space="preserve">
+    <value>Vérification en cours...</value>
+  </data>
+  <data name="select_any_drive" xml:space="preserve">
+    <value>Veuillez sélectionner un lecteur situé dans la liste.</value>
+  </data>
+  <data name="select_any_item" xml:space="preserve">
+    <value>Veuillez sélectionner au moins un élément situé dans la liste.</value>
+  </data>
+  <data name="select_backup" xml:space="preserve">
+    <value>Sélectionnez une sauvegarde à restaurer et cliquez sur « Restaurer ».</value>
+  </data>
+  <data name="select_drives_for_cleanup" xml:space="preserve">
+    <value>Sélectionnez les lecteurs à nettoyer :</value>
+  </data>
+  <data name="select_files_to_delete" xml:space="preserve">
+    <value>Sélectionnez les fichiers à supprimer :</value>
+  </data>
+  <data name="size" xml:space="preserve">
+    <value>Taille</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="temporary_files" xml:space="preserve">
+    <value>Fichiers temporaires</value>
+  </data>
+  <data name="temporary_folders" xml:space="preserve">
+    <value>Dossiers temporaires</value>
+  </data>
+  <data name="temp_files_def" xml:space="preserve">
+    <value>Les fichiers temporaires sont utilisés par les programmes comme mémoires intermédiaires et en principe, ils sont supprimés après utilisation.</value>
+  </data>
+  <data name="tool_not_found" xml:space="preserve">
+    <value>Cet outil n’a pas été détecté sur votre ordinateur.</value>
+  </data>
+  <data name="total" xml:space="preserve">
+    <value>Au total</value>
+  </data>
+  <data name="total_size" xml:space="preserve">
+    <value>Taille totale</value>
+  </data>
+  <data name="total_space_gain" xml:space="preserve">
+    <value>Taille totale de l’espace de stockage libéré</value>
+  </data>
+  <data name="use_wildcards" xml:space="preserve">
+    <value>Vous pouvez utiliser des métacaractères (p. ex. *.tmp).</value>
+  </data>
+  <data name="view_files" xml:space="preserve">
+    <value>Afficher les fichiers</value>
+  </data>
+  <data name="wait_until_scanning" xml:space="preserve">
+    <value>Veuillez attendre que le nettoyage du disque ait vérifié les lecteurs sélectionnés.</value>
+  </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Les fichiers du répertoire temporaire Windows sont toujours considérés comme superflus.</value>
+  </data>
+  <data name="windows_components" xml:space="preserve">
+    <value>Composants Windows</value>
+  </data>
+  <data name="you_can_free_more_space" xml:space="preserve">
+    <value>Vous pouvez libérer de l’espace de stockage en supprimant les composants Windows non utilisés.</value>
+  </data>
+  <data name="you_can_restore" xml:space="preserve">
+    <value>Vous pouvez restaurer les fichiers temporaires supprimés à partir d’un dossier de sauvegarde.</value>
+  </data>
+  <data name="you_can_use_cleanup" xml:space="preserve">
+    <value>Espace de stockage libéré :</value>
+  </data>
+  <data name="you_gained" xml:space="preserve">
+    <value>Gain :</value>
+  </data>
+  <data name="zero_byte_files" xml:space="preserve">
+    <value>Fichiers 0 octet</value>
+  </data>
+  <data name="zero_files_def" xml:space="preserve">
+    <value>Les fichiers 0 octets ne contiennent pas de données et ils sont en principe supprimés.</value>
+  </data>
+  <data name="temporary_file" xml:space="preserve">
+    <value>Fichier temporaire</value>
+  </data>
+  <data name="error_file" xml:space="preserve">
+    <value>Fichier d'erreurs</value>
+  </data>
+  <data name="intermediate_file" xml:space="preserve">
+    <value>Intermédiaire fichier</value>
+  </data>
+  <data name="log_file" xml:space="preserve">
+    <value>Fichier journal</value>
+  </data>
+  <data name="memory_dump_files" xml:space="preserve">
+    <value>Fichiers de vidage de la mémoire de</value>
+  </data>
+  <data name="office_bkup_file" xml:space="preserve">
+    <value>Fichier de sauvegarde de bureau</value>
+  </data>
+  <data name="outdated_file" xml:space="preserve">
+    <value>Expirée fichier</value>
+  </data>
+  <data name="saved_disk_error_data" xml:space="preserve">
+    <value>Sauvé données d'erreur de disque de scandisk</value>
+  </data>
+  <data name="temporary_file_created_during_setup" xml:space="preserve">
+    <value>Fichier temporaire créé lors de l'installation</value>
+  </data>
+  <data name="temp_bkup_file" xml:space="preserve">
+    <value>Fichier de sauvegarde temporaire</value>
+  </data>
+  <data name="temp_dir_info" xml:space="preserve">
+    <value>Informations de répertoire temporaire</value>
+  </data>
+  <data name="temp_help_file_search_data" xml:space="preserve">
+    <value>Aide temporaire file search data</value>
+  </data>
+  <data name="win_help_sys_temp_file" xml:space="preserve">
+    <value>De Windows système d'aide temporaire fichier</value>
+  </data>
+</root>

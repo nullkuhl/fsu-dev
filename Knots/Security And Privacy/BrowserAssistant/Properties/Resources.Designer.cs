@@ -210,7 +210,7 @@ namespace BrowserAssistant.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Firefox Extentions.
+        ///   Looks up a localized string similar to Firefox Extensions.
         /// </summary>
         public static string FirefoxExtentions {
             get {
@@ -402,7 +402,7 @@ namespace BrowserAssistant.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Post Not Cached.
+        ///   Looks up a localized string similar to Post not Cached.
         /// </summary>
         public static string PostNotCached {
             get {
@@ -528,7 +528,7 @@ namespace BrowserAssistant.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SettingName.
+        ///   Looks up a localized string similar to Setting Name.
         /// </summary>
         public static string SettingName {
             get {
@@ -571,9 +571,8 @@ namespace BrowserAssistant.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to                                       Welcome to Browser Manager!
-        ///
-        ///Choose the Tab that corresponds to the Browser Configuration you want to change.
+        ///   Looks up a localized string similar to Welcome to Browser Manager!
+        ///Choose the tab that corresponds to the browser configuration you want to change..
         /// </summary>
         public static string WelcomeMessage {
             get {

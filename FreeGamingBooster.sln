@@ -1,0 +1,252 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtilities.Infrastructure", "FreemiumUtilities.Infrastructure\FreemiumUtilities.Infrastructure.csproj", "{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtilities.StartupManager", "FreemiumUtilities.StartupManager\FreemiumUtilities.StartupManager.csproj", "{375A58EF-E2A8-41A1-94DD-4FE644219FD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtilities.TempCleaner", "FreemiumUtilities.TempCleaner\FreemiumUtilities.TempCleaner.csproj", "{E4885A39-64CE-4952-AFD5-0C72240AB27C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtilities.RegCleaner", "FreemiumUtilities.RegCleaner\FreemiumUtilities.RegCleaner.csproj", "{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.CleanUp.DiskCleaner", "Knots\Clean Up And Manage\Disk Cleaner\Knots.CleanUp.DiskCleaner.csproj", "{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.StartupManager", "Knots\Improve Performance\Startup Manager\Knots.Performance.StartupManager.csproj", "{D70269D0-DC20-43D5-86D1-A87894523337}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.RegistryCleaner", "Knots\Improve Performance\Registry Cleaner\Knots.Performance.RegistryCleaner.csproj", "{E9C048F5-8E21-4721-9B55-E6FF332B6C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreemiumUtil", "FreemiumUtil\FreemiumUtil.csproj", "{BAE70997-B37E-4FC6-A605-17967A89B7F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.RegistryCompactor", "Knots\Improve Performance\Registry Compactor\Knots.Performance.RegistryCompactor.csproj", "{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.RegistryCleanerCore", "Knots\Improve Performance\Registry Cleaner Core\Knots.Performance.RegistryCleanerCore.csproj", "{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeGamingBooster", "FreeGamingBooster\FreeGamingBooster.csproj", "{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.SystemInformation", "Knots\System Information\Knots.SystemInformation.csproj", "{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.ProcessManager", "Knots\Improve Performance\Process Manager\Knots.Performance.ProcessManager.csproj", "{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.WindowsStandardTools", "Knots\Improve Performance\Windows Standard Tools\Knots.Performance.WindowsStandardTools.csproj", "{DD71F98A-B510-4A5E-A77A-377CB0DE840F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knots.Performance.MemoryOptimizer", "Knots\Improve Performance\Memory Optimizer\Knots.Performance.MemoryOptimizer.csproj", "{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		GamingBoosterDebug|Any CPU = GamingBoosterDebug|Any CPU
+		GamingBoosterDebug|Mixed Platforms = GamingBoosterDebug|Mixed Platforms
+		GamingBoosterDebug|x64 = GamingBoosterDebug|x64
+		GamingBoosterDebug|x86 = GamingBoosterDebug|x86
+		GamingBoosterRelease|Any CPU = GamingBoosterRelease|Any CPU
+		GamingBoosterRelease|Mixed Platforms = GamingBoosterRelease|Mixed Platforms
+		GamingBoosterRelease|x64 = GamingBoosterRelease|x64
+		GamingBoosterRelease|x86 = GamingBoosterRelease|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{A98D8752-DCD1-4EDF-B0B5-3E90351050AF}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{375A58EF-E2A8-41A1-94DD-4FE644219FD1}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E4885A39-64CE-4952-AFD5-0C72240AB27C}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{5CAA16A7-B9D5-41D1-AD1F-4DA4704176A2}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x86
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x86
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{C0E8BAA1-FD36-493A-AB3B-6C4C42A2E066}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{D70269D0-DC20-43D5-86D1-A87894523337}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{E9C048F5-8E21-4721-9B55-E6FF332B6C51}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x64
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|x64.Build.0 = GamingBoosterDebug|x64
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x64
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|x64.Build.0 = GamingBoosterRelease|x64
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{BAE70997-B37E-4FC6-A605-17967A89B7F9}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{3292A9F4-72EE-4BA9-B1B5-81F5928EE327}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{FF431EF5-47E4-43A2-B7A9-FF0939C688E5}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{0D9542F5-0E0D-4F7E-BB6C-6803DAC2D838}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = Debug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|Mixed Platforms.Build.0 = Debug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|x64.ActiveCfg = Debug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|x86.ActiveCfg = Debug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterDebug|x86.Build.0 = Debug|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = Release|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|Mixed Platforms.Build.0 = Release|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|x64.ActiveCfg = Release|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|x86.ActiveCfg = Release|x86
+		{D21BFE21-20EB-48B8-BA66-9B7F639DFF95}.GamingBoosterRelease|x86.Build.0 = Release|x86
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|x64.Build.0 = GamingBoosterDebug|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|x86
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterDebug|x86.Build.0 = GamingBoosterDebug|x86
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|x64.Build.0 = GamingBoosterRelease|x64
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|x86
+		{8C4BCD19-B00A-4C79-84F5-E474E7204FB7}.GamingBoosterRelease|x86.Build.0 = GamingBoosterRelease|x86
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DD71F98A-B510-4A5E-A77A-377CB0DE840F}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|Any CPU.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|Any CPU.Build.0 = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|Mixed Platforms.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|Mixed Platforms.Build.0 = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|x64.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterDebug|x86.ActiveCfg = GamingBoosterDebug|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|Any CPU.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|Any CPU.Build.0 = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|Mixed Platforms.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|Mixed Platforms.Build.0 = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|x64.ActiveCfg = GamingBoosterRelease|Any CPU
+		{DCCEEBA8-B0DE-4401-A8EC-54178C505B68}.GamingBoosterRelease|x86.ActiveCfg = GamingBoosterRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

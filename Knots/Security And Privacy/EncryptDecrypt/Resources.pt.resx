@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="auto_encrypt_created" xml:space="preserve">
+    <value>Exe de encriptação automática foi criado</value>
+  </data>
+  <data name="browse" xml:space="preserve">
+    <value>Procurar</value>
+  </data>
+  <data name="cannot_be_encrypted" xml:space="preserve">
+    <value>Não é possível Encriptar o ficheiro, segue a instrução adequada para Encriptar</value>
+  </data>
+  <data name="cannot_create" xml:space="preserve">
+    <value>Não é possível criar o desencriptador executável</value>
+  </data>
+  <data name="cannot_find" xml:space="preserve">
+    <value>Não é possível localizar</value>
+  </data>
+  <data name="confirmed_pass" xml:space="preserve">
+    <value>Palavra-passe Confirmada</value>
+  </data>
+  <data name="confirm_pass" xml:space="preserve">
+    <value>Confirmar Palavra-passe</value>
+  </data>
+  <data name="create_auto_file" xml:space="preserve">
+    <value>Criar um ficheiro EXE de desencriptação automática</value>
+  </data>
+  <data name="decrypt" xml:space="preserve">
+    <value>Desencriptar</value>
+  </data>
+  <data name="decrypted_succ" xml:space="preserve">
+    <value>Ficheiro Desencriptado com Sucesso</value>
+  </data>
+  <data name="decryption" xml:space="preserve">
+    <value>Desencriptação</value>
+  </data>
+  <data name="delete_encrypt_decrypt" xml:space="preserve">
+    <value>Eliminar o Ficheiro Encriptado após a Desencriptação</value>
+  </data>
+  <data name="del_after_decryption" xml:space="preserve">
+    <value>Eliminar o ficheiro encriptado após a desencriptação</value>
+  </data>
+  <data name="del_original_file_encryption" xml:space="preserve">
+    <value>Eliminar o ficheiro original após a encriptação</value>
+  </data>
+  <data name="encrypt" xml:space="preserve">
+    <value>Encriptar</value>
+  </data>
+  <data name="encrypted_succ" xml:space="preserve">
+    <value>Ficheiro Encriptado com Sucesso</value>
+  </data>
+  <data name="encryption" xml:space="preserve">
+    <value>Encriptação</value>
+  </data>
+  <data name="enter_pass" xml:space="preserve">
+    <value>Introduzir Palavra-passe</value>
+  </data>
+  <data name="error" xml:space="preserve">
+    <value>Erro</value>
+  </data>
+  <data name="extract_to" xml:space="preserve">
+    <value>Extrair para</value>
+  </data>
+  <data name="file_decryption" xml:space="preserve">
+    <value>Desencriptação do Ficheiro</value>
+  </data>
+  <data name="file_encrypter_decrypter" xml:space="preserve">
+    <value>Encriptar e Desencriptar</value>
+  </data>
+  <data name="file_encrypter_decrypter_title" xml:space="preserve">
+    <value>Encriptar e Desencriptar</value>
+  </data>
+  <data name="file_open_failed" xml:space="preserve">
+    <value>Não foi possível abrir o ficheiro descodificado.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
+  <data name="open_file_decrypt" xml:space="preserve">
+    <value>Abri ficheiro após desencriptação com sucesso</value>
+  </data>
+  <data name="original_delete" xml:space="preserve">
+    <value>Quando o ficheiro original é apagado, não é mais possível aceder, caso tenha esquecido a sua palavra-passe. Pretende mesmo assim continuar?</value>
+  </data>
+  <data name="output_exists_message" xml:space="preserve">
+    <value>O ficheiro de saída "%1" já existe. Pretende escrever por cima do ficheiro?</value>
+  </data>
+  <data name="output_exists_title" xml:space="preserve">
+    <value>Ficheiro de saída já existe</value>
+  </data>
+  <data name="pass" xml:space="preserve">
+    <value>Palavra-passe</value>
+  </data>
+  <data name="pass_must_match" xml:space="preserve">
+    <value>Palavra-passe e Palavra-passe Confirmada têm de corresponder</value>
+  </data>
+  <data name="path_selection" xml:space="preserve">
+    <value>Seleção do Caminho</value>
+  </data>
+  <data name="save_to" xml:space="preserve">
+    <value>Guardar em</value>
+  </data>
+  <data name="select_destination_first" xml:space="preserve">
+    <value>Primeiro selecione um destino válido</value>
+  </data>
+  <data name="select_encrypted_file_to_decrypt" xml:space="preserve">
+    <value>Selecione um ficheiro Encriptado que pretende Desencriptar</value>
+  </data>
+  <data name="select_file" xml:space="preserve">
+    <value>Selecionar Ficheiro</value>
+  </data>
+  <data name="select_file_decrypt" xml:space="preserve">
+    <value>Selecione um ficheiro encriptado que pretende desencriptar</value>
+  </data>
+  <data name="select_file_encrypt" xml:space="preserve">
+    <value>Selecione um ficheiro que pretende encriptar</value>
+  </data>
+  <data name="select_file_first" xml:space="preserve">
+    <value>Primeiro Selecione um Ficheiro</value>
+  </data>
+  <data name="select_folder_encrypt" xml:space="preserve">
+    <value>Selecionar pasta a encriptar para</value>
+  </data>
+  <data name="select_path_decrypt" xml:space="preserve">
+    <value>Selecionar Caminho para ficheiro Desencriptado</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Splitting interrompido. Não é possível continuar com o processo.</value>
+  </data>
+  <data name="succ" xml:space="preserve">
+    <value>Com Sucesso</value>
+  </data>
+  <data name="wrong_pass" xml:space="preserve">
+    <value>Palavra-passe Incorreta</value>
+  </data>
+</root>

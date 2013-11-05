@@ -1,7 +1,0 @@
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.exe
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\bin\Debug\Decrypter.pdb
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.FormDecrypter.resources
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.Properties.Resources.resources
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Knots.Security.Decrypter.csproj.GenerateResource.Cache
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.exe
-E:\Alex\Work\Freelance\Null Kuhl\System Utils\Knots\Security And Privacy\File Decrypter\obj\x86\Debug\Decrypter.pdb

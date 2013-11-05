@@ -74,7 +74,7 @@ namespace FreemiumUtilities.TracksEraser
 				// Create a bitmap which holds the relevent check box style
 				// see http://msdn.microsoft.com/en-us/library/ms404307.aspx and http://msdn.microsoft.com/en-us/library/system.windows.forms.checkboxrenderer.aspx
 
-				var bmp = new Bitmap(16, 16);
+                Bitmap bmp = new Bitmap(16, 16);
 				Graphics chkGraphics = Graphics.FromImage(bmp);
 				switch (i)
 				{

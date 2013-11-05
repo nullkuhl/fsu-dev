@@ -38,18 +38,23 @@ namespace SystemInformation
 		public ShortcutClass(string linkPath)
 		{
 			IPersistFile pfile;
+            Type shellLink;
+            try
+            {
+                Guid CLSID_ShellLink = new Guid("00021401-0000-0000-C000-000000000046");
 
-			var CLSID_ShellLink = new Guid("00021401-0000-0000-C000-000000000046");
-			Type shellLink;
+                shellLink = Type.GetTypeFromCLSID(CLSID_ShellLink);
+                link = (IShellLinkW)(Activator.CreateInstance(shellLink));
 
-			shellLink = Type.GetTypeFromCLSID(CLSID_ShellLink);
-			link = (IShellLinkW) (Activator.CreateInstance(shellLink));
-
-			if (File.Exists(linkPath))
-			{
-				pfile = (IPersistFile) link;
-				pfile.Load(linkPath, 0);
-			}
+                if (File.Exists(linkPath))
+                {
+                    pfile = (IPersistFile)link;
+                    pfile.Load(linkPath, 0);
+                }
+            }
+            catch
+            {
+            }
 		}
 
 		#endregion
@@ -96,7 +101,7 @@ namespace SystemInformation
 		{
 			get
 			{
-				var sb = new StringBuilder(INFOTIPSIZE);
+                StringBuilder sb = new StringBuilder(INFOTIPSIZE);
 				link.GetArguments(sb, sb.Capacity);
 				return sb.ToString();
 			}
@@ -109,7 +114,7 @@ namespace SystemInformation
 		{
 			get
 			{
-				var sb = new StringBuilder(INFOTIPSIZE);
+				StringBuilder sb = new StringBuilder(INFOTIPSIZE);
 				link.GetDescription(sb, sb.Capacity);
 				return sb.ToString();
 			}
@@ -158,7 +163,7 @@ namespace SystemInformation
 		{
 			get
 			{
-				var sb = new StringBuilder(MAX_PATH);
+				StringBuilder sb = new StringBuilder(MAX_PATH);
 				int nIconIdx;
 				link.GetIconLocation(sb, sb.Capacity, out nIconIdx);
 				return sb.ToString();
@@ -176,7 +181,7 @@ namespace SystemInformation
 		{
 			get
 			{
-				var sb = new StringBuilder(MAX_PATH);
+                StringBuilder sb = new StringBuilder(MAX_PATH);
 				int nIconIdx;
 				link.GetIconLocation(sb, sb.Capacity, out nIconIdx);
 				return nIconIdx;
@@ -192,7 +197,7 @@ namespace SystemInformation
 		{
 			get
 			{
-				var sb = new StringBuilder(MAX_PATH);
+                StringBuilder sb = new StringBuilder(MAX_PATH);
 				int nIconIdx;
 				IntPtr hIcon, hInst;
 				Icon ico, clone;

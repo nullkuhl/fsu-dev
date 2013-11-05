@@ -130,6 +130,12 @@
   <data name="icon_disc_analysis" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon-disc-analysis.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Abort" xml:space="preserve">
     <value>Abort</value>
   </data>
@@ -154,6 +160,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="CommandPrompt" xml:space="preserve">
     <value>Command prompt</value>
   </data>
@@ -175,11 +184,20 @@
   <data name="DeleteFolderConfirmation" xml:space="preserve">
     <value>Are you sure you want to delete folder "{1}"?</value>
   </data>
+  <data name="DeleteHiddenFile" xml:space="preserve">
+    <value>This file is a hidden file. Do you want to delete it anyway?</value>
+  </data>
+  <data name="DeleteSystemFile" xml:space="preserve">
+    <value>This file is a system file. Do you want to delete it anyway?</value>
+  </data>
   <data name="DiskAnalysis" xml:space="preserve">
     <value>Analyze disk</value>
   </data>
   <data name="Explorer" xml:space="preserve">
     <value>Explorer</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>The File is in use and cannot be deleted.</value>
   </data>
   <data name="FileName" xml:space="preserve">
     <value>Filename</value>
@@ -199,6 +217,9 @@
   <data name="FreeSpace" xml:space="preserve">
     <value>Free space</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="IndividualDrives" xml:space="preserve">
     <value>Individual drives</value>
   </data>
@@ -208,11 +229,17 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="NoRightsToDelete" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Percent" xml:space="preserve">
     <value>Percent</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing...</value>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Properties</value>
@@ -234,32 +261,5 @@
   </data>
   <data name="UsedOverTotal" xml:space="preserve">
     <value>Used/Total</value>
-  </data>
-  <data name="NoRightsToDelete" xml:space="preserve">
-    <value>You need administrative rights to use this functionality.</value>
-  </data>
-  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="FileInUse" xml:space="preserve">
-    <value>The File is in use and cannot be deleted.</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
-  </data>
-  <data name="DeleteHiddenFile" xml:space="preserve">
-    <value>This file is a hidden file. Do you want to delete it anyway?</value>
-  </data>
-  <data name="DeleteSystemFile" xml:space="preserve">
-    <value>This file is a system file. Do you want to delete it anyway?</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Close</value>
   </data>
 </root>

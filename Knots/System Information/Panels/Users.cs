@@ -34,217 +34,215 @@ using System.Windows.Forms;
 
 namespace SystemInformation
 {
-	/// <summary>
-	/// Users panel of the System Information utility
-	/// </summary>
-	public partial class Users : SystemInformation.TaskPanelBase
-	{
-		static Users panelInstance;
-		static InformationClass info = new InformationClass();
+    /// <summary>
+    /// Users panel of the System Information utility
+    /// </summary>
+    public partial class Users : SystemInformation.TaskPanelBase
+    {
+        static Users panelInstance;
+        static InformationClass info = new InformationClass();
 
-		static bool UserIsAdministrator;
-		static string OSMachineName;
-		static Collection<string> UserAccounts;
-		static Collection<string> UserFullName;
-		static Collection<string> UserPrivilege;
-		static Collection<int> UserFlags;
-		static string UserRegisteredOrganization;
-		static string UserRegisteredName;
+        static bool UserIsAdministrator;
+        static string OSMachineName;
+        static Collection<string> UserAccounts;
+        static Collection<string> UserFullName;
+        static Collection<string> UserPrivilege;
+        static Collection<int> UserFlags;
+        static string UserRegisteredOrganization;
+        static string UserRegisteredName;
 
-		/// <summary>
-		/// Create a global instance of this panel
-		/// </summary>>
-		public static Users CreateInstance()
-		{
-			if (panelInstance == null)
-			{
-				panelInstance = new Users();
-				UserIsAdministrator = info.UserIsAdministrator;
-				OSMachineName = info.OSMachineName;
-				UserAccounts = info.UserAccounts;
-				UserFullName = info.UserFullName;
-				UserPrivilege = info.UserPrivilege;
-				UserFlags = info.UserFlags;
-				UserRegisteredOrganization = info.UserRegisteredOrganization;
-				UserRegisteredName = info.UserRegisteredName;
-			}
-			return panelInstance;
-		}
+        /// <summary>
+        /// Create a global instance of this panel
+        /// </summary>>
+        public static Users CreateInstance()
+        {
+            if (panelInstance == null)
+            {
+                panelInstance = new Users();
+                UserIsAdministrator = info.UserIsAdministrator;
+                OSMachineName = info.OSMachineName;
+                UserAccounts = info.UserAccounts;
+                UserFullName = info.UserFullName;
+                UserPrivilege = info.UserPrivilege;
+                UserFlags = info.UserFlags;
+                UserRegisteredOrganization = info.UserRegisteredOrganization;
+                UserRegisteredName = info.UserRegisteredName;
+            }
+            return panelInstance;
+        }
 
-		// Set to true after load. Prevents false TextBox changed results.
-		bool loaded;
+        // Set to true after load. Prevents false TextBox changed results.
+        bool loaded;
 
-		// Bit masks for UserFlags.
-		const int accountDisabled = 0x2;
-		const int accountLockedOut = 0x10;
-		const int passwordNotRequired = 0x20;
-		const int passwordCanNotChange = 0x40;
-		const int passwordDoesNotExpire = 0x10000;
+        // Bit masks for UserFlags.
+        const int accountDisabled = 0x2;
+        const int accountLockedOut = 0x10;
+        const int passwordNotRequired = 0x20;
+        const int passwordCanNotChange = 0x40;
+        const int passwordDoesNotExpire = 0x10000;
 
-		#region " Users Events "
+        #region " Users Events "
 
-		void Users_Load(object sender, System.EventArgs e)
-		{
-			ResourceManager rm = new ResourceManager("SystemInformation.Resources", System.Reflection.Assembly.GetExecutingAssembly());
+        void Users_Load(object sender, System.EventArgs e)
+        {
+            ResourceManager rm = new ResourceManager("SystemInformation.Resources", System.Reflection.Assembly.GetExecutingAssembly());
 
-			this.labelTitle.Text = rm.GetString("node_useraccounts");
-			this.labelRegistration.Text = rm.GetString("user_registration");
-			this.UserAccount.Text = rm.GetString("node_useraccounts");
-			this.FullName.Text = rm.GetString("user_fullname");
-			this.AccountType.Text = rm.GetString("user_account_type");
-			this.Notes.Text = rm.GetString("user_notes");
-			this.labelUserList.Text = rm.GetString("user_list_master");
-			this.btnSaveRegisteredOrganization.Text = rm.GetString("user_save");
-			this.btnSaveRegisteredUser.Text = rm.GetString("user_save");
-			this.labelRegisteredOrganization.Text = rm.GetString("user_reg_org") + ":";
-			this.labelRegisteredUser.Text = rm.GetString("user_reg_user") + ":";
+            this.labelTitle.Text = rm.GetString("node_useraccounts");
+            this.labelRegistration.Text = rm.GetString("user_registration");
+            this.UserAccount.Text = rm.GetString("node_useraccounts");
+            this.FullName.Text = rm.GetString("user_fullname");
+            this.AccountType.Text = rm.GetString("user_account_type");
+            this.Notes.Text = rm.GetString("user_notes");
+            this.labelUserList.Text = rm.GetString("user_list_master");
+            this.btnSaveRegisteredOrganization.Text = rm.GetString("user_save");
+            this.btnSaveRegisteredUser.Text = rm.GetString("user_save");
+            this.labelRegisteredOrganization.Text = rm.GetString("user_reg_org") + ":";
+            this.labelRegisteredUser.Text = rm.GetString("user_reg_user") + ":";
 
-			try
-			{
-				Application.DoEvents();
+            try
+            {
+                Application.DoEvents();
 
-				Collection<string> users = new Collection<string>();
-				Collection<string> fullNames = new Collection<string>();
-				Collection<string> privileges = new Collection<string>();
-				Collection<int> flags = new Collection<int>();
+                Collection<string> users = new Collection<string>();
+                Collection<string> fullNames = new Collection<string>();
+                Collection<string> privileges = new Collection<string>();
+                Collection<int> flags = new Collection<int>();
 
-				// Lock TextBoxes and hide save buttons if user is not an administrator.
-				// But display a normal background.
-				if (!UserIsAdministrator)
-				{
-					btnSaveRegisteredOrganization.Visible = false;
-					btnSaveRegisteredUser.Visible = false;
-					textboxRegisteredOrganization.ReadOnly = true;
-					textboxRegisteredOrganization.BackColor = Color.FromKnownColor(KnownColor.Window);
-					textboxRegisteredUser.ReadOnly = true;
-					textboxRegisteredUser.BackColor = Color.FromKnownColor(KnownColor.Window);
-				}
+                // Lock TextBoxes and hide save buttons if user is not an administrator.
+                // But display a normal background.
+                if (!UserIsAdministrator)
+                {
+                    btnSaveRegisteredOrganization.Visible = false;
+                    btnSaveRegisteredUser.Visible = false;
+                    textboxRegisteredOrganization.ReadOnly = true;
+                    textboxRegisteredOrganization.BackColor = Color.FromKnownColor(KnownColor.Window);
+                    textboxRegisteredUser.ReadOnly = true;
+                    textboxRegisteredUser.BackColor = Color.FromKnownColor(KnownColor.Window);
+                }
 
-				// Add computer name to label.
-				labelUserList.Text = rm.GetString("user_list") + ": " + OSMachineName;
+                // Add computer name to label.
+                labelUserList.Text = rm.GetString("user_list") + ": " + OSMachineName;
 
-				// Clear ListView.
-				listviewUsers.Items.Clear();
+                // Clear ListView.
+                listviewUsers.Items.Clear();
 
-				// Get Information.
-				users = UserAccounts;
-				fullNames = UserFullName;
-				privileges = UserPrivilege;
-				flags = UserFlags;
+                // Get Information.
+                users = UserAccounts;
+                fullNames = UserFullName;
+                privileges = UserPrivilege;
+                flags = UserFlags;
 
-				// Populate Listview.
-				for (int i = 0; i < users.Count; i++)
-				{
-					// Show disabled users as greyed.
-					if (Convert.ToBoolean(flags[i] & accountDisabled))
-					{
-						listviewUsers.Items.Add(users[i], 1);
-					}
-					else
-					{
-						listviewUsers.Items.Add(users[i], 0);
-					}
+                // Populate Listview.
+                for (int i = 0; i < users.Count; i++)
+                {
+                    // Show disabled users as greyed.
+                    if (Convert.ToBoolean(flags[i] & accountDisabled))
+                    {
+                        listviewUsers.Items.Add(users[i], 1);
+                    }
+                    else
+                    {
+                        listviewUsers.Items.Add(users[i], 0);
+                    }
 
-					listviewUsers.Items[i].SubItems.Add(fullNames[i]);
-					listviewUsers.Items[i].SubItems.Add(privileges[i]);
+                    listviewUsers.Items[i].SubItems.Add(fullNames[i]);
+                    listviewUsers.Items[i].SubItems.Add(privileges[i]);
 
-					ManagementObject userObject = NativeMethods.GetUserObject(users[i]);
+                    ManagementObject userObject = NativeMethods.GetUserObject(users[i]);
 
-					// Show miscellaneous flags.
-					if (Convert.ToBoolean(userObject["Disabled"]))
-					{
-						listviewUsers.Items[i].SubItems.Add(rm.GetString("user_acc_disabled"));
-					}
-					else if (Convert.ToBoolean(userObject["Lockout"]))
-					{
-						listviewUsers.Items[i].SubItems.Add(rm.GetString("user_acc_locked"));
-					}
-					else if (!Convert.ToBoolean(userObject["PasswordRequired"]))
-					{
-						listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_not_required"));
-					}
-					else if (!Convert.ToBoolean(userObject["PasswordChangeable"]))
-					{
-						listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_not_changeable"));
-					}
-					else if (!Convert.ToBoolean(userObject["PasswordExpires"]))
-					{
-						listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_doesnt_expire"));
-					}
+                    // Show miscellaneous flags.
+                    if (Convert.ToBoolean(userObject["Disabled"]))
+                    {
+                        listviewUsers.Items[i].SubItems.Add(rm.GetString("user_acc_disabled"));
+                    }
+                    else if (Convert.ToBoolean(userObject["Lockout"]))
+                    {
+                        listviewUsers.Items[i].SubItems.Add(rm.GetString("user_acc_locked"));
+                    }
+                    else if (!Convert.ToBoolean(userObject["PasswordRequired"]))
+                    {
+                        listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_not_required"));
+                    }
+                    else if (!Convert.ToBoolean(userObject["PasswordChangeable"]))
+                    {
+                        listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_not_changeable"));
+                    }
+                    else if (!Convert.ToBoolean(userObject["PasswordExpires"]))
+                    {
+                        listviewUsers.Items[i].SubItems.Add(rm.GetString("user_pwd_doesnt_expire"));
+                    }
 
-					// Fill in registration information.
-					textboxRegisteredOrganization.Text = UserRegisteredOrganization;
-					textboxRegisteredUser.Text = UserRegisteredName;
+                    // Fill in registration information.
+                    textboxRegisteredOrganization.Text = UserRegisteredOrganization;
+                    textboxRegisteredUser.Text = UserRegisteredName;
 
-					// Flag that panel has loaded; enables TextChanged events.
-					loaded = true;
-				}
+                    // Flag that panel has loaded; enables TextChanged events.
+                    loaded = true;
+                }
 
-			}
-			catch { }
+            }
+            catch { }
 
-		}
+        }
 
-		#endregion
+        #endregion
 
-		#region " Button Events "
+        #region " Button Events "
 
-		void btnSaveRegisteredUser_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				info.UserRegisteredName = textboxRegisteredUser.Text;
-				btnSaveRegisteredUser.Enabled = false;
-			}
-			catch (SecurityException ex)
-			{
-				MessageBox.Show(rm.GetString("user_unable_save_info") + "." + "\r\n" +
-					rm.GetString("user_action_admin") + "." + "\r\n" +
-					rm.GetString("error_return") + ":" + "\r\n" +
-					rm.GetString("error_description") + ": " + ex.Message,
-					Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
+        void btnSaveRegisteredUser_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                info.UserRegisteredName = textboxRegisteredUser.Text;
+                btnSaveRegisteredUser.Enabled = false;
+            }
+            catch (SecurityException ex)
+            {
+                MessageBox.Show(String.Format("{0}{1}{2}{3}{4}{5}{6}{7}", rm.GetString("user_unable_save_info"),
+                    Environment.NewLine, rm.GetString("user_action_admin"), Environment.NewLine, rm.GetString("error_return"),
+                    Environment.NewLine, rm.GetString("error_description"), ex.Message),
+                    Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-		void btnRegisteredOrganization_Click(object sender, EventArgs e)
-		{
-			try
-			{
-				info.UserRegisteredOrganization = textboxRegisteredOrganization.Text;
-				btnSaveRegisteredOrganization.Enabled = false;
-			}
-			catch (SecurityException ex)
-			{
-				MessageBox.Show(rm.GetString("user_unable_save_info") + "." + "\r\n" +
-					rm.GetString("user_action_admin") + "." + "\r\n" +
-					rm.GetString("error_return") + ":" + "\r\n" +
-					rm.GetString("error_description") + ": " + ex.Message,
-					Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
-			}
-		}
+        void btnRegisteredOrganization_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                info.UserRegisteredOrganization = textboxRegisteredOrganization.Text;
+                btnSaveRegisteredOrganization.Enabled = false;
+            }
+            catch (SecurityException ex)
+            {
+                MessageBox.Show(String.Format("{0}{1}{2}{3}{4}{5}{6}{7}", rm.GetString("user_unable_save_info"),
+                    Environment.NewLine, rm.GetString("user_action_admin"), Environment.NewLine, rm.GetString("error_return"),
+                    Environment.NewLine, rm.GetString("error_description"), ex.Message),
+                    Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
-		#endregion
+        #endregion
 
-		#region " TextBox Events "
+        #region " TextBox Events "
 
-		void textboxRegisteredUser_TextChanged(object sender, EventArgs e)
-		{
-			if (loaded && info.UserIsAdministrator)
-			{
-				btnSaveRegisteredUser.Enabled = true;
-			}
-		}
+        void textboxRegisteredUser_TextChanged(object sender, EventArgs e)
+        {
+            if (loaded && info.UserIsAdministrator)
+            {
+                btnSaveRegisteredUser.Enabled = true;
+            }
+        }
 
-		void textboxRegisteredOrganization_TextChanged(object sender, EventArgs e)
-		{
-			if (loaded && info.UserIsAdministrator)
-			{
-				btnSaveRegisteredOrganization.Enabled = true;
-			}
-		}
+        void textboxRegisteredOrganization_TextChanged(object sender, EventArgs e)
+        {
+            if (loaded && info.UserIsAdministrator)
+            {
+                btnSaveRegisteredOrganization.Enabled = true;
+            }
+        }
 
-		#endregion
+        #endregion
 
-	}
+    }
 
 }

@@ -216,6 +216,9 @@
   <data name="files1" xml:space="preserve">
     <value>Dateien</value>
   </data>
+  <data name="FilesRestored" xml:space="preserve">
+    <value>Dateien erfolgreich wiederhergestellt</value>
+  </data>
   <data name="file_type" xml:space="preserve">
     <value>Dateityp</value>
   </data>
@@ -234,11 +237,17 @@
   <data name="help" xml:space="preserve">
     <value>Hilfe</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>Wenn Sie bei diesen Optionen unsicher sind, belassen Sie sie auf den Standardeinstellungen</value>
   </data>
   <data name="include" xml:space="preserve">
     <value>Einschließen</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="last_access" xml:space="preserve">
     <value>Letzter Zugriff</value>
@@ -290,6 +299,9 @@
   </data>
   <data name="pending" xml:space="preserve">
     <value>ausstehend</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Verarbeitung läuft…</value>
   </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Mülldateien werden verarbeitet</value>
@@ -369,6 +381,9 @@
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Bitte warten Sie, bis die Festplattenbereinigung die gewählten Laufwerke überprüft hat</value>
   </data>
+  <data name="waste_files" xml:space="preserve">
+    <value>Dateien im Windows-Temp-Verzeichnis werden immer als überflüssig betrachtet.</value>
+  </data>
   <data name="windows_components" xml:space="preserve">
     <value>Windowskomponenten</value>
   </data>
@@ -390,19 +405,43 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Null Byte-Dateien enthalten keine Daten und können normalerweise gelöscht werden</value>
   </data>
-  <data name="FilesRestored" xml:space="preserve">
-    <value>Dateien erfolgreich wiederhergestellt</value>
+  <data name="temporary_file" xml:space="preserve">
+    <value>Temporäre Datei</value>
   </data>
-  <data name="info" xml:space="preserve">
-    <value>Information</value>
+  <data name="error_file" xml:space="preserve">
+    <value>Fehler Datei</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  <data name="intermediate_file" xml:space="preserve">
+    <value>Zwischendatei</value>
   </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Dateien im Windows-Temp-Verzeichnis werden immer als überflüssig betrachtet.</value>
+  <data name="log_file" xml:space="preserve">
+    <value>Log-Datei</value>
   </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
+  <data name="memory_dump_files" xml:space="preserve">
+    <value>Speicher-Dump-Dateien</value>
+  </data>
+  <data name="office_bkup_file" xml:space="preserve">
+    <value>Office-Backup-Datei</value>
+  </data>
+  <data name="outdated_file" xml:space="preserve">
+    <value>Veraltete Datei</value>
+  </data>
+  <data name="saved_disk_error_data" xml:space="preserve">
+    <value>Gespeicherte Festplattenfehlerdaten von ScanDisk</value>
+  </data>
+  <data name="temporary_file_created_during_setup" xml:space="preserve">
+    <value>Temporäre Datei während der Installation erstellt</value>
+  </data>
+  <data name="temp_bkup_file" xml:space="preserve">
+    <value>Temporäre Backup-Datei</value>
+  </data>
+  <data name="temp_dir_info" xml:space="preserve">
+    <value>Speicher-Dump-Dateien</value>
+  </data>
+  <data name="temp_help_file_search_data" xml:space="preserve">
+    <value>Temporäre Hilfedatei-Suchdaten</value>
+  </data>
+  <data name="win_help_sys_temp_file" xml:space="preserve">
+    <value>Windows-Hilfe-System temporäre Datei</value>
   </data>
 </root>

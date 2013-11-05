@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutURL" xml:space="preserve">
+    <value>URL de About</value>
+  </data>
+  <data name="AllUsers" xml:space="preserve">
+    <value>todos los usuarios</value>
+  </data>
+  <data name="Blank" xml:space="preserve">
+    <value>En blanco</value>
+  </data>
+  <data name="BrowserAssistant" xml:space="preserve">
+    <value>Administrar navegadores</value>
+  </data>
+  <data name="ChromeExtensions" xml:space="preserve">
+    <value>Extensiones de Chrome</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="CloseBrowserError" xml:space="preserve">
+    <value>Es necesario cerrar {0} para ver sus extensiones. Cierre {0} antes de volver a hacer clic en su pestaña.</value>
+  </data>
+  <data name="CurrentSetting" xml:space="preserve">
+    <value>Configuración actual</value>
+  </data>
+  <data name="CustomizeSearch" xml:space="preserve">
+    <value>Personalizar búsqueda</value>
+  </data>
+  <data name="DefaultPageURL" xml:space="preserve">
+    <value>URL de página predeterminada</value>
+  </data>
+  <data name="DefaultSearchURL" xml:space="preserve">
+    <value>URL de búsqueda predeterminada</value>
+  </data>
+  <data name="DesktopNavigation" xml:space="preserve">
+    <value>Navegación del escritorio</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>¡Listo!</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Habilitado</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="FirefoxExtentions" xml:space="preserve">
+    <value>Extensiones de Firefox</value>
+  </data>
+  <data name="FirstStart" xml:space="preserve">
+    <value>Inicie Firefox al menos una vez antes de utilizar esta característica.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://es.freemium.com/company/faq/</value>
+  </data>
+  <data name="HijackRestore" xml:space="preserve">
+    <value>Restauración de configuración secuestrada</value>
+  </data>
+  <data name="HomePage" xml:space="preserve">
+    <value>Página de inicio</value>
+  </data>
+  <data name="InPrivate" xml:space="preserve">
+    <value>InPrivate</value>
+  </data>
+  <data name="InternetExplorerActiveX" xml:space="preserve">
+    <value>ActiveX de Internet Explorer</value>
+  </data>
+  <data name="InternetExplorerBHOs" xml:space="preserve">
+    <value>BHO de Internet Explorer</value>
+  </data>
+  <data name="InternetExplorerExtensions" xml:space="preserve">
+    <value>Extensiones de Internet Explorer</value>
+  </data>
+  <data name="InternetExplorerToolbars" xml:space="preserve">
+    <value>Barras de herramientas de IE</value>
+  </data>
+  <data name="LocalPage" xml:space="preserve">
+    <value>Página local</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NavigationCanceled" xml:space="preserve">
+    <value>Navegación cancelada</value>
+  </data>
+  <data name="NavigationFailure" xml:space="preserve">
+    <value>Error en navegación</value>
+  </data>
+  <data name="NoAddons" xml:space="preserve">
+    <value>Sin complementos</value>
+  </data>
+  <data name="NoAddonsInfo" xml:space="preserve">
+    <value>Sin información de complementos</value>
+  </data>
+  <data name="NotInstalledError" xml:space="preserve">
+    <value>no está instalado.</value>
+  </data>
+  <data name="OfflineInformation" xml:space="preserve">
+    <value>Información offline</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>Ruta</value>
+  </data>
+  <data name="PostNotCached" xml:space="preserve">
+    <value>Post no alojado en caché</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="RestoreSettingTo" xml:space="preserve">
+    <value>Restaurar configuración a</value>
+  </data>
+  <data name="SaveExtensions" xml:space="preserve">
+    <value>Guardar extensiones</value>
+  </data>
+  <data name="SaveIeActiveX" xml:space="preserve">
+    <value>Guardar ActiveX de IE</value>
+  </data>
+  <data name="SaveIeBHOs" xml:space="preserve">
+    <value>Guardar BHO de IE</value>
+  </data>
+  <data name="SaveIeExtensions" xml:space="preserve">
+    <value>Guardar extensiones de IE</value>
+  </data>
+  <data name="SaveIeToolbars" xml:space="preserve">
+    <value>Guardar barras de herramientas de IE</value>
+  </data>
+  <data name="SearchAssistant" xml:space="preserve">
+    <value>Asistente de búsqueda</value>
+  </data>
+  <data name="SearchBar" xml:space="preserve">
+    <value>Barra de búsqueda</value>
+  </data>
+  <data name="SearchPage" xml:space="preserve">
+    <value>Página de búsqueda</value>
+  </data>
+  <data name="SearchProvider" xml:space="preserve">
+    <value>Proveedor de búsquedas</value>
+  </data>
+  <data name="SearchURL" xml:space="preserve">
+    <value>URL de búsqueda</value>
+  </data>
+  <data name="SecurityRisk" xml:space="preserve">
+    <value>Riesgo de seguridad</value>
+  </data>
+  <data name="SettingName" xml:space="preserve">
+    <value>Nombre de ajuste</value>
+  </data>
+  <data name="StartPage" xml:space="preserve">
+    <value>Página de inicio</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Versión</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenida</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>¡Bienvenido al Administrador de navegadores!
+Elija la pestaña correspondiente a la configuración del navegador que quiera modificar</value>
+  </data>
+</root>

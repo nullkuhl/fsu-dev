@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminRightsNeeded" xml:space="preserve">
+    <value>Les droits d’administrateur sont nécessaires pour effectuer cette opération.</value>
+  </data>
+  <data name="arguments" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="command" xml:space="preserve">
+    <value>Commande</value>
+  </data>
+  <data name="commands_disabled" xml:space="preserve">
+    <value>À part la suppression, toutes les commandes sont désactivées.</value>
+  </data>
+  <data name="company" xml:space="preserve">
+    <value>Fabricant</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>Supprimer</value>
+  </data>
+  <data name="delete_selected_item" xml:space="preserve">
+    <value>Souhaitez-vous toujours supprimer l’entrée sélectionnée ?</value>
+  </data>
+  <data name="delete_startup_item" xml:space="preserve">
+    <value>Supprimer l’entrée de l’AutoRun</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="disable" xml:space="preserve">
+    <value>Désactiver</value>
+  </data>
+  <data name="disabled" xml:space="preserve">
+    <value>Désactivé</value>
+  </data>
+  <data name="disable_startup_item" xml:space="preserve">
+    <value>Désactiver l’entrée de l’AutoRun</value>
+  </data>
+  <data name="do_you_wish" xml:space="preserve">
+    <value>Souhaitez-vous continuer ?</value>
+  </data>
+  <data name="enable" xml:space="preserve">
+    <value>Activer</value>
+  </data>
+  <data name="enabled" xml:space="preserve">
+    <value>Activé</value>
+  </data>
+  <data name="enable_startup_item" xml:space="preserve">
+    <value>Activer l’entrée de l’AutoRun</value>
+  </data>
+  <data name="error_occurred" xml:space="preserve">
+    <value>Erreur dans</value>
+  </data>
+  <data name="execute" xml:space="preserve">
+    <value>Exécuter</value>
+  </data>
+  <data name="execute_command" xml:space="preserve">
+    <value>Exécuter la commande</value>
+  </data>
+  <data name="file_appear_not_valid" xml:space="preserve">
+    <value>Le fichier ne semble pas être un raccourci valide.</value>
+  </data>
+  <data name="file_folder_not_found" xml:space="preserve">
+    <value>Le fichier et/ou le dossier n’a/ont pas pu être trouvé(s).</value>
+  </data>
+  <data name="file_invalid" xml:space="preserve">
+    <value>Le fichier est invalide ou n’existe pas.</value>
+  </data>
+  <data name="file_name" xml:space="preserve">
+    <value>Nom du fichier</value>
+  </data>
+  <data name="file_not_found" xml:space="preserve">
+    <value>Le fichier n’a pas été trouvé ou il est caché.</value>
+  </data>
+  <data name="file_not_found1" xml:space="preserve">
+    <value>Le fichier n’a pas été trouvé.</value>
+  </data>
+  <data name="file_not_found_warning" xml:space="preserve">
+    <value>Le fichier n’a pas été trouvé.</value>
+  </data>
+  <data name="file_path" xml:space="preserve">
+    <value>Chemin d’accès du fichier</value>
+  </data>
+  <data name="folder_not_found" xml:space="preserve">
+    <value>Le dossier n’a pas été trouvé.</value>
+  </data>
+  <data name="full_version" xml:space="preserve">
+    <value>Version du fichier</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://fr.freemium.com/company/faq/</value>
+  </data>
+  <data name="HKCU" xml:space="preserve">
+    <value>Enregistrement : utilisateur actuel</value>
+  </data>
+  <data name="HKLM" xml:space="preserve">
+    <value>Enregistrement : tous les utilisateurs</value>
+  </data>
+  <data name="if_you_continue" xml:space="preserve">
+    <value>Si vous continuez, vous ne pourrez plus modifier que les entrées portant la désignation « Utilisateur actuel ».</value>
+  </data>
+  <data name="item_name" xml:space="preserve">
+    <value>Nom de l’entrée</value>
+  </data>
+  <data name="location" xml:space="preserve">
+    <value>Site</value>
+  </data>
+  <data name="move_to_all" xml:space="preserve">
+    <value>Déplacer dans « Tous »</value>
+  </data>
+  <data name="move_to_all_tip" xml:space="preserve">
+    <value>Déplacer l’entrée dans « Tous les utilisateurs »</value>
+  </data>
+  <data name="move_to_all_users" xml:space="preserve">
+    <value>Déplacer dans « Tous les utilis&amp;ateurs »</value>
+  </data>
+  <data name="move_to_current_user" xml:space="preserve">
+    <value>Déplacer dans « &amp;Utilisateur actuel »</value>
+  </data>
+  <data name="move_to_uesr" xml:space="preserve">
+    <value>Déplacer dans « Utilisateur »</value>
+  </data>
+  <data name="move_to_user_tip" xml:space="preserve">
+    <value>Déplacer l’entrée dans « Utilisateur actuel »</value>
+  </data>
+  <data name="no_permission" xml:space="preserve">
+    <value>Vous ne disposez pas des droits nécessaires permettant d’afficher les propriétés de ce fichier.</value>
+  </data>
+  <data name="open_file_folder" xml:space="preserve">
+    <value>Ouvrir le dossier de fichiers</value>
+  </data>
+  <data name="open_folder" xml:space="preserve">
+    <value>Ouvrir le dossier</value>
+  </data>
+  <data name="open_folder_tip" xml:space="preserve">
+    <value>Ouvrir le dossier des entrées de l’AutoRun</value>
+  </data>
+  <data name="product" xml:space="preserve">
+    <value>Produit</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>Actualiser</value>
+  </data>
+  <data name="refresh_tip" xml:space="preserve">
+    <value>Actualiser l’affichage</value>
+  </data>
+  <data name="run_as_admin" xml:space="preserve">
+    <value>Pour pouvoir modifier toutes les entrées de l’AutoRun, vous devez exécuter ce programme en tant qu’administrateur.</value>
+  </data>
+  <data name="StartupAllUsers" xml:space="preserve">
+    <value>Dossier AutoRun Tous les utilisateurs</value>
+  </data>
+  <data name="StartupCurrentUser" xml:space="preserve">
+    <value>Dossier AutoRun Utilisateur actuel</value>
+  </data>
+  <data name="startup_manager" xml:space="preserve">
+    <value>Gérer le démarrage système</value>
+  </data>
+  <data name="status" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="system_returned" xml:space="preserve">
+    <value>Le système a rapporté les informations suivantes :</value>
+  </data>
+  <data name="unable_to_delete" xml:space="preserve">
+    <value>Cette entrée n’a pas pu être supprimée.</value>
+  </data>
+  <data name="unable_to_disable" xml:space="preserve">
+    <value>Cette entrée n’a pas pu être désactivée.</value>
+  </data>
+  <data name="unable_to_enable" xml:space="preserve">
+    <value>Cette entrée n’a pas pu être activée.</value>
+  </data>
+  <data name="unable_to_execute" xml:space="preserve">
+    <value>Cette entrée n’a pas pu être exécutée.</value>
+  </data>
+  <data name="unable_to_move" xml:space="preserve">
+    <value>Cette entrée n’a pas pu être déplacée.</value>
+  </data>
+  <data name="unable_to_open" xml:space="preserve">
+    <value>Le dossier de cette entrée n’a pas pu être ouvert.</value>
+  </data>
+  <data name="warning" xml:space="preserve">
+    <value>Avertissement : n’effacez les entrées système que si vous êtes absolument sûr(e) de la pertinence de l’opération. Dans la plupart des cas, il suffit de désactiver les entrées.</value>
+  </data>
+  <data name="WHKCU" xml:space="preserve">
+    <value>Enregistrement : x86 Utilisateur actuel</value>
+  </data>
+  <data name="WHKLM" xml:space="preserve">
+    <value>Enregistrement : x86 Tous les utilisateurs</value>
+  </data>
+</root>

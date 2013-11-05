@@ -54,22 +54,114 @@ namespace SystemInformation
         /// </summary>
         void InitializeComponent()
         {
+            this.labelWindows = new System.Windows.Forms.Label();
+            this.labelTitleCompany = new System.Windows.Forms.Label();
+            this.labelCustomerOrganization = new System.Windows.Forms.Label();
+            this.labelCustomerName = new System.Windows.Forms.Label();
+            this.llbEULA = new System.Windows.Forms.LinkLabel();
+            this.labelLicenseTerms = new System.Windows.Forms.Label();
+            this.labelAppCopyright = new System.Windows.Forms.Label();
+            this.labelAppDescription = new System.Windows.Forms.Label();
+            this.labelAppVersion = new System.Windows.Forms.Label();
+            this.labelAbout = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
+            this.labelDirections = new System.Windows.Forms.Label();
             this.labelTitle = new System.Windows.Forms.Label();
             this.picturePanel = new System.Windows.Forms.PictureBox();
-            this.labelDirections = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
-            this.labelAbout = new System.Windows.Forms.Label();
-            this.labelAppVersion = new System.Windows.Forms.Label();
-            this.labelAppDescription = new System.Windows.Forms.Label();
-            this.labelAppCopyright = new System.Windows.Forms.Label();
-            this.labelLicenseTerms = new System.Windows.Forms.Label();
-            this.llbEULA = new System.Windows.Forms.LinkLabel();
-            this.labelCustomerName = new System.Windows.Forms.Label();
-            this.labelCustomerOrganization = new System.Windows.Forms.Label();
-            this.labelTitleCompany = new System.Windows.Forms.Label();
-            this.labelWindows = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelWindows
+            // 
+            this.labelWindows.Location = new System.Drawing.Point(0, 0);
+            this.labelWindows.Name = "labelWindows";
+            this.labelWindows.Size = new System.Drawing.Size(100, 23);
+            this.labelWindows.TabIndex = 0;
+            // 
+            // labelTitleCompany
+            // 
+            this.labelTitleCompany.Location = new System.Drawing.Point(0, 0);
+            this.labelTitleCompany.Name = "labelTitleCompany";
+            this.labelTitleCompany.Size = new System.Drawing.Size(100, 23);
+            this.labelTitleCompany.TabIndex = 1;
+            // 
+            // labelCustomerOrganization
+            // 
+            this.labelCustomerOrganization.Location = new System.Drawing.Point(0, 0);
+            this.labelCustomerOrganization.Name = "labelCustomerOrganization";
+            this.labelCustomerOrganization.Size = new System.Drawing.Size(100, 23);
+            this.labelCustomerOrganization.TabIndex = 2;
+            // 
+            // labelCustomerName
+            // 
+            this.labelCustomerName.Location = new System.Drawing.Point(0, 0);
+            this.labelCustomerName.Name = "labelCustomerName";
+            this.labelCustomerName.Size = new System.Drawing.Size(100, 23);
+            this.labelCustomerName.TabIndex = 3;
+            // 
+            // llbEULA
+            // 
+            this.llbEULA.Location = new System.Drawing.Point(0, 0);
+            this.llbEULA.Name = "llbEULA";
+            this.llbEULA.Size = new System.Drawing.Size(100, 23);
+            this.llbEULA.TabIndex = 4;
+            // 
+            // labelLicenseTerms
+            // 
+            this.labelLicenseTerms.Location = new System.Drawing.Point(0, 0);
+            this.labelLicenseTerms.Name = "labelLicenseTerms";
+            this.labelLicenseTerms.Size = new System.Drawing.Size(100, 23);
+            this.labelLicenseTerms.TabIndex = 5;
+            // 
+            // labelAppCopyright
+            // 
+            this.labelAppCopyright.Location = new System.Drawing.Point(0, 0);
+            this.labelAppCopyright.Name = "labelAppCopyright";
+            this.labelAppCopyright.Size = new System.Drawing.Size(100, 23);
+            this.labelAppCopyright.TabIndex = 6;
+            // 
+            // labelAppDescription
+            // 
+            this.labelAppDescription.Location = new System.Drawing.Point(0, 0);
+            this.labelAppDescription.Name = "labelAppDescription";
+            this.labelAppDescription.Size = new System.Drawing.Size(100, 23);
+            this.labelAppDescription.TabIndex = 7;
+            // 
+            // labelAppVersion
+            // 
+            this.labelAppVersion.Location = new System.Drawing.Point(0, 0);
+            this.labelAppVersion.Name = "labelAppVersion";
+            this.labelAppVersion.Size = new System.Drawing.Size(100, 23);
+            this.labelAppVersion.TabIndex = 8;
+            // 
+            // labelAbout
+            // 
+            this.labelAbout.Location = new System.Drawing.Point(0, 0);
+            this.labelAbout.Name = "labelAbout";
+            this.labelAbout.Size = new System.Drawing.Size(100, 23);
+            this.labelAbout.TabIndex = 9;
+            // 
+            // labelSeparator
+            // 
+            this.labelSeparator.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator.Location = new System.Drawing.Point(45, 156);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(425, 3);
+            this.labelSeparator.TabIndex = 5;
+            // 
+            // labelDirections
+            // 
+            this.labelDirections.AutoSize = true;
+            this.labelDirections.BackColor = System.Drawing.Color.Transparent;
+            this.labelDirections.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDirections.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelDirections.Location = new System.Drawing.Point(45, 87);
+            this.labelDirections.MaximumSize = new System.Drawing.Size(425, 0);
+            this.labelDirections.Name = "labelDirections";
+            this.labelDirections.Size = new System.Drawing.Size(0, 17);
+            this.labelDirections.TabIndex = 4;
             // 
             // labelTitle
             // 
@@ -91,97 +183,6 @@ namespace SystemInformation
             this.picturePanel.Size = new System.Drawing.Size(48, 48);
             this.picturePanel.TabIndex = 2;
             this.picturePanel.TabStop = false;
-            // 
-            // labelDirections
-            // 
-            this.labelDirections.AutoSize = true;
-            this.labelDirections.BackColor = System.Drawing.Color.Transparent;
-            this.labelDirections.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDirections.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelDirections.Location = new System.Drawing.Point(45, 87);
-            this.labelDirections.Name = "labelDirections";
-            this.labelDirections.Size = new System.Drawing.Size(0, 17);
-            this.labelDirections.TabIndex = 4;
-            // 
-            // labelSeparator
-            // 
-            this.labelSeparator.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator.Location = new System.Drawing.Point(45, 156);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(425, 3);
-            this.labelSeparator.TabIndex = 5;
-            // 
-            // labelAbout
-            // 
-            this.labelAbout.Location = new System.Drawing.Point(0, 0);
-            this.labelAbout.Name = "labelAbout";
-            this.labelAbout.Size = new System.Drawing.Size(100, 23);
-            this.labelAbout.TabIndex = 9;
-            // 
-            // labelAppVersion
-            // 
-            this.labelAppVersion.Location = new System.Drawing.Point(0, 0);
-            this.labelAppVersion.Name = "labelAppVersion";
-            this.labelAppVersion.Size = new System.Drawing.Size(100, 23);
-            this.labelAppVersion.TabIndex = 8;
-            // 
-            // labelAppDescription
-            // 
-            this.labelAppDescription.Location = new System.Drawing.Point(0, 0);
-            this.labelAppDescription.Name = "labelAppDescription";
-            this.labelAppDescription.Size = new System.Drawing.Size(100, 23);
-            this.labelAppDescription.TabIndex = 7;
-            // 
-            // labelAppCopyright
-            // 
-            this.labelAppCopyright.Location = new System.Drawing.Point(0, 0);
-            this.labelAppCopyright.Name = "labelAppCopyright";
-            this.labelAppCopyright.Size = new System.Drawing.Size(100, 23);
-            this.labelAppCopyright.TabIndex = 6;
-            // 
-            // labelLicenseTerms
-            // 
-            this.labelLicenseTerms.Location = new System.Drawing.Point(0, 0);
-            this.labelLicenseTerms.Name = "labelLicenseTerms";
-            this.labelLicenseTerms.Size = new System.Drawing.Size(100, 23);
-            this.labelLicenseTerms.TabIndex = 5;
-            // 
-            // llbEULA
-            // 
-            this.llbEULA.Location = new System.Drawing.Point(0, 0);
-            this.llbEULA.Name = "llbEULA";
-            this.llbEULA.Size = new System.Drawing.Size(100, 23);
-            this.llbEULA.TabIndex = 4;
-            // 
-            // labelCustomerName
-            // 
-            this.labelCustomerName.Location = new System.Drawing.Point(0, 0);
-            this.labelCustomerName.Name = "labelCustomerName";
-            this.labelCustomerName.Size = new System.Drawing.Size(100, 23);
-            this.labelCustomerName.TabIndex = 3;
-            // 
-            // labelCustomerOrganization
-            // 
-            this.labelCustomerOrganization.Location = new System.Drawing.Point(0, 0);
-            this.labelCustomerOrganization.Name = "labelCustomerOrganization";
-            this.labelCustomerOrganization.Size = new System.Drawing.Size(100, 23);
-            this.labelCustomerOrganization.TabIndex = 2;
-            // 
-            // labelTitleCompany
-            // 
-            this.labelTitleCompany.Location = new System.Drawing.Point(0, 0);
-            this.labelTitleCompany.Name = "labelTitleCompany";
-            this.labelTitleCompany.Size = new System.Drawing.Size(100, 23);
-            this.labelTitleCompany.TabIndex = 1;
-            // 
-            // labelWindows
-            // 
-            this.labelWindows.Location = new System.Drawing.Point(0, 0);
-            this.labelWindows.Name = "labelWindows";
-            this.labelWindows.Size = new System.Drawing.Size(100, 23);
-            this.labelWindows.TabIndex = 0;
             // 
             // Introduction
             // 

@@ -207,6 +207,15 @@
   <data name="full_version" xml:space="preserve">
     <value>Dateiversion</value>
   </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="HKCU" xml:space="preserve">
+    <value>Registry: Aktueller Benutzer</value>
+  </data>
+  <data name="HKLM" xml:space="preserve">
+    <value>Registry: Alle Benutzer</value>
+  </data>
   <data name="if_you_continue" xml:space="preserve">
     <value>Wenn Sie fortfahren, werden Sie nur die Einträge mit der Markierung "Aktueller Benutzer" ändern können</value>
   </data>
@@ -258,6 +267,12 @@
   <data name="run_as_admin" xml:space="preserve">
     <value>Um alle Autostarteinträge zu ändern, müssen Sie dieses Programm als Administrator ausführen.</value>
   </data>
+  <data name="StartupAllUsers" xml:space="preserve">
+    <value>Autostart-Ordner: Alle Benutzer</value>
+  </data>
+  <data name="StartupCurrentUser" xml:space="preserve">
+    <value>Autostart-Ordner: Aktueller Benutzer</value>
+  </data>
   <data name="startup_manager" xml:space="preserve">
     <value>Systemstart verwalten</value>
   </data>
@@ -288,25 +303,10 @@
   <data name="warning" xml:space="preserve">
     <value>Warnung: Löschen Sie keine Autostart-Einträge, wenn Sie nicht 100% sicher sind. In den meisten Fällen sollten Sie diese nur deaktivieren.</value>
   </data>
-  <data name="HKCU" xml:space="preserve">
-    <value>Registry: Aktueller Benutzer</value>
-  </data>
-  <data name="HKLM" xml:space="preserve">
-    <value>Registry: Alle Benutzer</value>
-  </data>
-  <data name="StartupAllUsers" xml:space="preserve">
-    <value>Autostart-Ordner: Alle Benutzer</value>
-  </data>
-  <data name="StartupCurrentUser" xml:space="preserve">
-    <value>Autostart-Ordner: Aktueller Benutzer</value>
-  </data>
   <data name="WHKCU" xml:space="preserve">
     <value>Registry: x86 Aktueller Benutzer</value>
   </data>
   <data name="WHKLM" xml:space="preserve">
     <value>Registry: x86 Alle Benutzer</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
 </root>

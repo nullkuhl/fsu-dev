@@ -129,6 +129,9 @@
   <data name="entries_removed" xml:space="preserve">
     <value>Einträge wurden erfolgreich entfernt</value>
   </data>
+  <data name="error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Fehler aufgetreten</value>
   </data>
@@ -213,13 +216,13 @@
   <data name="uninstall_programs" xml:space="preserve">
     <value>Programme deinstallieren</value>
   </data>
+  <data name="unistaller_not_found" xml:space="preserve">
+    <value>Die Deinstallationsdateien für {0} konnten nicht gefunden werden. Soll das Programm aus der Liste entfernt werden?</value>
+  </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="error" xml:space="preserve">
-    <value>Fehler</value>
-  </data>
-  <data name="unistaller_not_found" xml:space="preserve">
-    <value>Uninstall-Dateien konnten nicht für {0} gefunden werden, Wollen Sie es aus der Liste zu entfernen?</value>
+  <data name="entry_remove_confirm" xml:space="preserve">
+    <value>Bitte beachten Sie, dass das Löschen eines Eintrags nicht rückgängig gemacht werden kann. Versuchen Sie daher zunächst eine Deinstallation. Sind Sie sicher, dass Sie die ausgewählten Einträge entfernen möchten?</value>
   </data>
 </root>

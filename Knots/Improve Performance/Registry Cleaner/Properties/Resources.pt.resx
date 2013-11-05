@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminRightsNeeded" xml:space="preserve">
+    <value>Necessita de direitos de administrador para utilizar esta funcionalidade.</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>Todas as Categorias</value>
+  </data>
+  <data name="AttemptedDeletionOfValue" xml:space="preserve">
+    <value>Tentativas de eliminação do valor:</value>
+  </data>
+  <data name="CancelScan" xml:space="preserve">
+    <value>Cancelar análise</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categorias</value>
+  </data>
+  <data name="ControlScanTitle" xml:space="preserve">
+    <value>Análise do Sistema</value>
+  </data>
+  <data name="Data" xml:space="preserve">
+    <value>Dados</value>
+  </data>
+  <data name="DeepScanTitle" xml:space="preserve">
+    <value>Análise Completa do Sistema</value>
+  </data>
+  <data name="Failed" xml:space="preserve">
+    <value>falhou.</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Terminar</value>
+  </data>
+  <data name="FontScanTitle" xml:space="preserve">
+    <value>Tipos de Letra do Sistema</value>
+  </data>
+  <data name="HelpScanTitle" xml:space="preserve">
+    <value>Ficheiros de ajuda</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://pt.freemium.com/company/faq/</value>
+  </data>
+  <data name="HistoryScanTitle" xml:space="preserve">
+    <value>Menu Iniciar e Histórico</value>
+  </data>
+  <data name="InvalidSelection" xml:space="preserve">
+    <value>Seleção Inválida</value>
+  </data>
+  <data name="ItemsCleared" xml:space="preserve">
+    <value>itens limpos</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Chave</value>
+  </data>
+  <data name="LastCleanTime" xml:space="preserve">
+    <value>A última limpeza de registo foi às {0:hh:mm dd-MM-aa}</value>
+  </data>
+  <data name="LibraryScanTitle" xml:space="preserve">
+    <value>Bibliotecas Partilhadas</value>
+  </data>
+  <data name="MRUScanTitle" xml:space="preserve">
+    <value>Listas do MRU</value>
+  </data>
+  <data name="NoItemsSelected" xml:space="preserve">
+    <value>Não Existem Itens Selecionados</value>
+  </data>
+  <data name="NotStartedHeader" xml:space="preserve">
+    <value>Selecione categorias de registo e prima Analisar agora</value>
+  </data>
+  <data name="NowScanning" xml:space="preserve">
+    <value>A Processar</value>
+  </data>
+  <data name="ProblemsFound" xml:space="preserve">
+    <value>problemas encontrados. Para analisar novamente recomenda-se que localize mais problemas.</value>
+  </data>
+  <data name="ProblemsFoundClickClear" xml:space="preserve">
+    <value>problemas encontrados. Selecione os problemas que pretende remover e prima Iniciar limpeza.</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>A Processar</value>
+  </data>
+  <data name="RegistryCleaner" xml:space="preserve">
+    <value>Limpar registo</value>
+  </data>
+  <data name="RegistryCleaningCompleted" xml:space="preserve">
+    <value>O registo foi limpo.</value>
+  </data>
+  <data name="RegistryScanCanceled" xml:space="preserve">
+    <value>A análise de registo foi cancelada.</value>
+  </data>
+  <data name="RegistryScanCompleted" xml:space="preserve">
+    <value>A análise de registo foi concluída.</value>
+  </data>
+  <data name="RemoveSuccess" xml:space="preserve">
+    <value>Os itens foram removidos com sucesso.</value>
+  </data>
+  <data name="RestoreDisabled" xml:space="preserve">
+    <value>O restauro está desativado.</value>
+  </data>
+  <data name="Root" xml:space="preserve">
+    <value>Raiz</value>
+  </data>
+  <data name="ScanAborted" xml:space="preserve">
+    <value>Primeiro selecione alguns módulos.</value>
+  </data>
+  <data name="ScanAbortedByUser" xml:space="preserve">
+    <value>A análise foi abortada pelo utilizador.</value>
+  </data>
+  <data name="ScanAgain" xml:space="preserve">
+    <value>Analisar novamente</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Analisar:</value>
+  </data>
+  <data name="ScanningRegistry" xml:space="preserve">
+    <value>Analisar Registo</value>
+  </data>
+  <data name="ScanNow" xml:space="preserve">
+    <value>Analisar agora</value>
+  </data>
+  <data name="ScanResultsReset" xml:space="preserve">
+    <value>Os Resultados de Análise foram Redefinidos.</value>
+  </data>
+  <data name="ScanStarted" xml:space="preserve">
+    <value>Análise Iniciada...</value>
+  </data>
+  <data name="SelectAtLeastOneItem" xml:space="preserve">
+    <value>Não selecionou quaisquer categorias. Selecione pelo menos uma.</value>
+  </data>
+  <data name="SelectItemsToRemove" xml:space="preserve">
+    <value>Não selecionou quaisquer itens para remoção. Para Redefinir os Resultados de Análise, selecione Cancelar</value>
+  </data>
+  <data name="SetUpSystemRestore" xml:space="preserve">
+    <value>Pretende configurar um ponto de restauro do sistema antes de continuar? Sem um ponto, não é possível anular as alterações ao sistema.</value>
+  </data>
+  <data name="SoftwareScanTitle" xml:space="preserve">
+    <value>Software do Sistema</value>
+  </data>
+  <data name="StartClearing" xml:space="preserve">
+    <value>Iniciar limpeza</value>
+  </data>
+  <data name="StartupScanTitle" xml:space="preserve">
+    <value>Entradas do Arranque</value>
+  </data>
+  <data name="Successful" xml:space="preserve">
+    <value>com sucesso.</value>
+  </data>
+  <data name="SystemRestore" xml:space="preserve">
+    <value>Restauro do Sistema</value>
+  </data>
+  <data name="SystemRestoreDeactivated" xml:space="preserve">
+    <value>O Restauro do Sistema está indisponível ou desativado. A opção estava desativada.</value>
+  </data>
+  <data name="SystemRestoreUnavailable" xml:space="preserve">
+    <value>Restaurar Sistema está desativado ou indisponível neste computador.</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>Restauro do Sistema está desativado nesta máquina, pretende continuar à sua responsabilidade?</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="UninstallScanTitle" xml:space="preserve">
+    <value>Cadeias de Texto de Instalação</value>
+  </data>
+  <data name="UserScanTitle" xml:space="preserve">
+    <value>Análise do Utilizador</value>
+  </data>
+  <data name="VdmScanTitle" xml:space="preserve">
+    <value>Dispositivos Virtuais</value>
+  </data>
+  <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
+    <value>Pretende criar um ponto de restauro do sistema antes de continuar? Este processo pode demorar alguns minutos a terminar.</value>
+  </data>
+</root>

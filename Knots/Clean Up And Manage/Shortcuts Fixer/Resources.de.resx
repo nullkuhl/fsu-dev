@@ -117,14 +117,20 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="target" xml:space="preserve">
-    <value>Ziel</value>
-  </data>
   <data name="abort" xml:space="preserve">
     <value>Abbruch</value>
   </data>
   <data name="aborted" xml:space="preserve">
     <value>Abgebrochen</value>
+  </data>
+  <data name="are_you_sure" xml:space="preserve">
+    <value>Möchten Sie</value>
+  </data>
+  <data name="are_you_sure_cont" xml:space="preserve">
+    <value>Verknüpfungen löschen?</value>
+  </data>
+  <data name="atleast_one" xml:space="preserve">
+    <value>Wählen Sie bitte wenigstens eine Verknüpfung zum Löschen aus.</value>
   </data>
   <data name="backup" xml:space="preserve">
     <value>Sicherung</value>
@@ -150,6 +156,9 @@
   <data name="choose_correct_shortcut" xml:space="preserve">
     <value>Wählen Sie das korrekte Verknüpfungsziel</value>
   </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Bestätigung</value>
+  </data>
   <data name="date" xml:space="preserve">
     <value>Datum</value>
   </data>
@@ -164,6 +173,9 @@
   </data>
   <data name="following_restore_points" xml:space="preserve">
     <value>Doppelklicken Sie auf einen Systemwiederherstellungspunkt um ihn wiederherzustellen.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="location" xml:space="preserve">
     <value>Ort</value>
@@ -216,19 +228,7 @@
   <data name="shortcut_fixer" xml:space="preserve">
     <value>Verknüpfungen reparieren</value>
   </data>
-  <data name="are_you_sure" xml:space="preserve">
-    <value>Möchten Sie</value>
-  </data>
-  <data name="are_you_sure_cont" xml:space="preserve">
-    <value>Verknüpfungen löschen?</value>
-  </data>
-  <data name="atleast_one" xml:space="preserve">
-    <value>Wählen Sie bitte wenigstens eine Verknüpfung zum Löschen aus.</value>
-  </data>
-  <data name="Confirmation" xml:space="preserve">
-    <value>Bestätigung</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  <data name="target" xml:space="preserve">
+    <value>Ziel</value>
   </data>
 </root>
