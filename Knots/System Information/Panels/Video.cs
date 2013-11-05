@@ -84,9 +84,12 @@ namespace SystemInformation
 			{
 				// Allow panel to paint.
 				Application.DoEvents();
+
 				int X;
+
 				// Display number of adaptors
 				labelNumberControllers.Text = rm.GetString("video_num_vid_controllers") + ": " + VidNumberOfControllers.ToString();
+
 				// Display dimensions
 				if (VidNumberOfControllers > 0)
 				{
@@ -96,11 +99,13 @@ namespace SystemInformation
 
 				// Clear listview
 				listviewAdaptors.Items.Clear();
+
 				// Add information to listview
 				if (VidNumberOfControllers > 0)
 				{
 					for (X = 0; X <= VidNumberOfControllers - 1; X++)
 					{
+
 						try
 						{
 							listviewAdaptors.Items.Add(rm.GetString("video_vid_controller") + ": " + VidController[X].ToString());
@@ -144,8 +149,11 @@ namespace SystemInformation
 
 			}
 			catch { }
+
 		}
 
 		#endregion
+
 	}
+
 }

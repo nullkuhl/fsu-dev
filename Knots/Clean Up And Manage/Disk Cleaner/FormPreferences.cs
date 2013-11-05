@@ -48,7 +48,7 @@ namespace Disk_Cleaner
 					if (opt != null && string.Compare(opt.Value, ext, true) == 0) return;
 				}
 				opt = new Option(ext, desc, true);
-                ListViewItem item = new ListViewItem(opt.Value);
+				var item = new ListViewItem(opt.Value);
 				item.SubItems.Add(opt.Description);
 				item.Checked = opt.Checked;
 				item.Tag = opt;
@@ -274,7 +274,7 @@ namespace Disk_Cleaner
 		/// <param name="e"></param>
 		void FormPreferences_Load(object sender, EventArgs e)
 		{
-            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
+			var culture = new CultureInfo(CfgFile.Get("Lang"));
 			SetCulture(culture);
 
 			listViewExclude.ItemChecked += listViewGeneral_ItemChecked;

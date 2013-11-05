@@ -1,11 +1,17 @@
-﻿using System.Windows.Forms;
+﻿using System.Runtime.CompilerServices;
+using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 
-/// <summary>
-/// The <see cref="FreemiumUtilities.TracksEraser"/> namespace defines a Tracks Eraser 1 Click-Maintenance application
-/// </summary>
 namespace FreemiumUtilities.TracksEraser
 {
+	/// <summary>
+	/// The <see cref="FreemiumUtilities.TracksEraser"/> namespace defines a Tracks Eraser 1 Click-Maintenance application
+	/// </summary>
+	[CompilerGenerated]
+	internal class NamespaceDoc
+	{
+	}
+
 	/// <summary>
 	/// Tracks Eraser 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
 	/// </summary>

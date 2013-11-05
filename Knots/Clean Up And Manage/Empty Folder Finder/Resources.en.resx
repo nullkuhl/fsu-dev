@@ -154,7 +154,7 @@
     <value>Exclude (Never Find Again)</value>
   </data>
   <data name="excluded" xml:space="preserve">
-    <value>Excluded Successfully!</value>
+    <value>Excluded Successfully</value>
   </data>
   <data name="folder_name" xml:space="preserve">
     <value>Folder Name</value>
@@ -167,7 +167,7 @@
     <value>resources\freem_emptyfolder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no_drives_selected" xml:space="preserve">
-    <value>You have to select at least 1 item for scan</value>
+    <value>You have to select atleast 1 item for scan</value>
   </data>
   <data name="open_folder" xml:space="preserve">
     <value>Open Folder</value>
@@ -182,7 +182,7 @@
     <value>Scanning</value>
   </data>
   <data name="scanning_aborted" xml:space="preserve">
-    <value>Scanning aborted.</value>
+    <value>Scanning aborted</value>
   </data>
   <data name="scan_drives" xml:space="preserve">
     <value>Scan Drives</value>
@@ -200,7 +200,7 @@
     <value>Select a drive or folder to scan</value>
   </data>
   <data name="select_folder" xml:space="preserve">
-    <value>Please select folder(s) to be deleted first.</value>
+    <value>Select folder(s) to be deleted</value>
   </data>
   <data name="error_deleting_file" xml:space="preserve">
     <value>Error Deleting File</value>
@@ -234,8 +234,5 @@
   </data>
   <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
     <value>Folder cannot be opened</value>
-  </data>
-  <data name="select_folder_to_remove" xml:space="preserve">
-    <value>Please select a folder first.</value>
   </data>
 </root>

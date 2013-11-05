@@ -207,15 +207,6 @@
   <data name="full_version" xml:space="preserve">
     <value>File version</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
-  <data name="HKCU" xml:space="preserve">
-    <value>Registry: Current User</value>
-  </data>
-  <data name="HKLM" xml:space="preserve">
-    <value>Registry: All Users</value>
-  </data>
   <data name="if_you_continue" xml:space="preserve">
     <value>If you continue, you will only be able to change those items marked "Current user"</value>
   </data>
@@ -267,12 +258,6 @@
   <data name="run_as_admin" xml:space="preserve">
     <value>To be able to change all startup items you must run this program as an administrator</value>
   </data>
-  <data name="StartupAllUsers" xml:space="preserve">
-    <value>Startup Folder: All Users</value>
-  </data>
-  <data name="StartupCurrentUser" xml:space="preserve">
-    <value>Startup Folder: Current User</value>
-  </data>
   <data name="startup_manager" xml:space="preserve">
     <value>Manage startup</value>
   </data>
@@ -303,10 +288,25 @@
   <data name="warning" xml:space="preserve">
     <value>Warning: Do not delete startup items unless you are 100% sure of what you are doing. In most cases, it is recommended that you use the "Disable" option instead.</value>
   </data>
+  <data name="HKCU" xml:space="preserve">
+    <value>Registry: Current User</value>
+  </data>
+  <data name="HKLM" xml:space="preserve">
+    <value>Registry: All Users</value>
+  </data>
+  <data name="StartupAllUsers" xml:space="preserve">
+    <value>Startup Folder: All Users</value>
+  </data>
+  <data name="StartupCurrentUser" xml:space="preserve">
+    <value>Startup Folder: Current User</value>
+  </data>
   <data name="WHKCU" xml:space="preserve">
     <value>Registry: x86 Current User</value>
   </data>
   <data name="WHKLM" xml:space="preserve">
     <value>Registry: x86 All Users</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

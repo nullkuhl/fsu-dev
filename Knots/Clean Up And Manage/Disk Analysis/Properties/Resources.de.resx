@@ -141,9 +141,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
-  <data name="Close" xml:space="preserve">
-    <value>Schließen</value>
-  </data>
   <data name="CommandPrompt" xml:space="preserve">
     <value>Kommandozeile</value>
   </data>
@@ -165,20 +162,11 @@
   <data name="DeleteFolderConfirmation" xml:space="preserve">
     <value>Möchten Sie den Ordner "{1}" wirklich löschen?</value>
   </data>
-  <data name="DeleteHiddenFile" xml:space="preserve">
-    <value>Die Datei ist eine versteckte Datei. Möchten Sie diese trotzdem löschen?</value>
-  </data>
-  <data name="DeleteSystemFile" xml:space="preserve">
-    <value>Die Datei ist eine System-Datei. Möchten Sie diese trotzdem löschen?</value>
-  </data>
   <data name="DiskAnalysis" xml:space="preserve">
     <value>Datenträger analysieren</value>
   </data>
   <data name="Explorer" xml:space="preserve">
     <value>Explorer</value>
-  </data>
-  <data name="FileInUse" xml:space="preserve">
-    <value>Die Datei ist im Einsatz und kann nicht gelöscht werden.</value>
   </data>
   <data name="FileName" xml:space="preserve">
     <value>Dateiname</value>
@@ -198,9 +186,6 @@
   <data name="FreeSpace" xml:space="preserve">
     <value>Freier Speicher</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
   <data name="IndividualDrives" xml:space="preserve">
     <value>Einzelne Laufwerke</value>
   </data>
@@ -210,17 +195,11 @@
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
-  <data name="NoRightsToDelete" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
   <data name="Ok" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="Percent" xml:space="preserve">
     <value>Prozent</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Verarbeitung...</value>
   </data>
   <data name="Properties" xml:space="preserve">
     <value>Eigenschaften</value>
@@ -242,5 +221,26 @@
   </data>
   <data name="UsedOverTotal" xml:space="preserve">
     <value>Verwendet/Insgesamt</value>
+  </data>
+  <data name="NoRightsToDelete" xml:space="preserve">
+    <value>Sie benötigen Administratorrechte, um diese Funktion verwenden zu können.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="FileInUse" xml:space="preserve">
+    <value>Die Datei ist im Einsatz und können nicht gelöscht werden.</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Verarbeitung...</value>
+  </data>
+  <data name="DeleteHiddenFile" xml:space="preserve">
+    <value>Die Datei ist eine versteckte Datei. Möchten Sie diese trotzdem löschen?</value>
+  </data>
+  <data name="DeleteSystemFile" xml:space="preserve">
+    <value>Die Datei ist eine System-Datei. Möchten Sie diese trotzdem löschen?</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
   </data>
 </root>

@@ -125,9 +125,9 @@ namespace EmptyFolderFinder
             // 
             // btnScan
             // 
-            this.btnScan.Location = new System.Drawing.Point(86, 269);
+            this.btnScan.Location = new System.Drawing.Point(98, 269);
             this.btnScan.Name = "btnScan";
-            this.btnScan.Size = new System.Drawing.Size(111, 27);
+            this.btnScan.Size = new System.Drawing.Size(99, 27);
             this.btnScan.TabIndex = 1;
             this.btnScan.Text = "Scan Now";
             this.btnScan.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@ namespace EmptyFolderFinder
             // 
             this.btnCancel.Location = new System.Drawing.Point(212, 269);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(111, 27);
+            this.btnCancel.Size = new System.Drawing.Size(99, 27);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;

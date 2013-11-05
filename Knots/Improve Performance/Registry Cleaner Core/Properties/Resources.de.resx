@@ -196,10 +196,10 @@
     <value>Explorer-Verlauf</value>
   </data>
   <data name="HistoryLinkStrings" xml:space="preserve">
-    <value>Historial de enlaces</value>
+    <value>Link-Verlauf</value>
   </data>
   <data name="HistoryMenuStrings" xml:space="preserve">
-    <value>Historial de menús</value>
+    <value>Menu-Verlauf</value>
   </data>
   <data name="HistorySettings" xml:space="preserve">
     <value>Einstellungen</value>
@@ -208,7 +208,7 @@
     <value>Start-Verlauf</value>
   </data>
   <data name="IconPaths" xml:space="preserve">
-    <value>Rutas de iconos</value>
+    <value>Icon-Pfade</value>
   </data>
   <data name="InstallationStrings" xml:space="preserve">
     <value>Installations-Strings</value>
@@ -232,7 +232,7 @@
     <value>Zuletzt verwendet Scan</value>
   </data>
   <data name="ProcServerSubkeys" xml:space="preserve">
-    <value>Subclave de ProcServer</value>
+    <value>ProcServer-Unterschlüssel</value>
   </data>
   <data name="RegisteredHelpFiles" xml:space="preserve">
     <value>Registrierte Hilfe-Dateien</value>

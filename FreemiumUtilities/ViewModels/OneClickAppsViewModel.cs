@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using System.Windows;
 using System.Windows.Input;
@@ -19,7 +20,6 @@ using FreemiumUtilities.TempCleaner;
 using FreemiumUtilities.TracksEraser;
 using Microsoft.Win32.TaskScheduler;
 using Action = System.Action;
-using RegistryCleanerCore;
 
 namespace FreemiumUtilities.ViewModels
 {
@@ -27,6 +27,10 @@ namespace FreemiumUtilities.ViewModels
     /// The <see cref="FreemiumUtilities.ViewModels"/> namespace contains a set of viewmodel classes
     /// of the <see cref="FreemiumUtilities"/> project
     /// </summary>
+    [CompilerGenerated]
+    internal class NamespaceDoc
+    {
+    }
 
     internal class OneClickAppsViewModel : INotifyPropertyChanged
     {
@@ -35,6 +39,8 @@ namespace FreemiumUtilities.ViewModels
         /// </summary>
         public static void UpdateOneClickAppsRunningQueue(OneClickAppViewModel unckeckedOneClickApp)
         {
+            //OneClickAppsRunningQueue.Remove(unckeckedOneClickApp);
+
             if (!OneClickAppsRunningQueue.Any() ||
                 (OneClickAppsRunningQueue.Any(a => a.Status == OneClickAppStatus.ScanFinishedOK) &&
                     OneClickAppsRunningQueue.All(a => a.Status != OneClickAppStatus.ScanFinishedError)))
@@ -210,6 +216,7 @@ namespace FreemiumUtilities.ViewModels
             set
             {
                 currentApp = value;
+                //Instance.Status = CurrentApp.Status;
                 OnPropertyChanged("CurrentApp");
             }
         }
@@ -427,6 +434,12 @@ namespace FreemiumUtilities.ViewModels
         {
             ProgressValue = 0;
             IEnumerable<OneClickAppViewModel> selectedApps = OneClickApps.Where(a => a.Selected);
+            //foreach (
+            //    OneClickAppViewModel oneClickApp in
+            //        selectedApps.Where(oneClickApp => OneClickAppsRunningQueue.IndexOf(oneClickApp) == -1))
+            //{
+            //    OneClickAppsRunningQueue.Add(oneClickApp);
+            //}
             OneClickAppsRunningQueue.Clear();
             foreach (OneClickAppViewModel oneClickApp in selectedApps)
             {
@@ -452,32 +465,6 @@ namespace FreemiumUtilities.ViewModels
         void RunFix()
         {
             ProgressValue = 0;
-            MessageBoxResult chc = MessageBox.Show(WPFLocalizeExtensionHelpers.GetUIString("WouldYouLikeToCreateRestorePoint"),
-                                       WPFLocalizeExtensionHelpers.GetUIString("SystemRestore"), MessageBoxButton.YesNo, MessageBoxImage.Question);
-            if (chc == MessageBoxResult.Yes)
-            {
-                try
-                {
-                    RestoreProgressStart();
-
-                    if (!_bRestoreSucess)
-                    {
-                        MessageBoxResult msg = MessageBox.Show(
-                            WPFLocalizeExtensionHelpers.GetUIString("SystemRestoreUnavailableRunFixAnyway"),
-                            WPFLocalizeExtensionHelpers.GetUIString("RestoreDisabled"),
-                            MessageBoxButton.YesNo);
-                        if (msg != MessageBoxResult.Yes)
-                        {
-                            CancelComplete();
-                            return;
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    // ToDo: send exception details via SmartAssembly bug reporting!
-                }
-            }
 
             foreach (OneClickAppViewModel oneClickApp in OneClickAppsRunningQueue.ToList())
             {
@@ -530,94 +517,6 @@ namespace FreemiumUtilities.ViewModels
             else
                 Instance.Status = OneClickAppStatus.NotStarted;
         }
-
-        #region System Restore
-
-        BusyWindow busyWindow;
-        Thread busyThread;
-        static long lSeqNum;
-        static DateTime _dTime;
-        static TimeSpan _tTimeElapsed;
-        static bool _bRestoreComplete;
-        static bool _bRestoreSucess;
-        BackgroundWorker _oProcessAsyncBackgroundWorker;
-
-        void RestoreProgressStart()
-        {
-            try
-            {
-                ShowProcessing();
-                _bRestoreComplete = false;
-                _bRestoreSucess = false;
-
-                _oProcessAsyncBackgroundWorker = new BackgroundWorker { WorkerSupportsCancellation = true };
-                _oProcessAsyncBackgroundWorker.DoWork += _oProcessAsyncBackgroundWorker_DoWork;
-                _oProcessAsyncBackgroundWorker.RunWorkerCompleted += _oProcessAsyncBackgroundWorker_RunWorkerCompleted;
-                _oProcessAsyncBackgroundWorker.RunWorkerAsync();
-
-                _dTime = DateTime.Now;
-                while (_bRestoreComplete == false)
-                {
-                    DoEvents();
-                    _tTimeElapsed = DateTime.Now.Subtract(_dTime);
-                    double safe = _tTimeElapsed.TotalSeconds;
-                    // break at 5 minutes, something has gone wrong
-                    if (safe > 300)
-                    {
-                        break;
-                    }
-                }
-
-                HideProcessing();
-            }
-            catch (Exception ex)
-            {
-            }
-        }
-
-        static void _oProcessAsyncBackgroundWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            _bRestoreComplete = true;
-            SysRestore.EndRestore(lSeqNum);
-            Thread.EndCriticalRegion();
-        }
-
-        static void _oProcessAsyncBackgroundWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-            _bRestoreComplete = false;
-            //_bRestoreSucess = _Restore.StartRestore("Registry Cleaner Restore Point");
-            Thread.BeginCriticalRegion();
-            SysRestore.StartRestore("Free System Utilities " + DateTime.Now, out lSeqNum);
-
-            // ToDo: only set this to true if it really was successful!
-            _bRestoreSucess = true;
-        }
-
-        /// <summary>
-        /// Shows Processing form
-        /// </summary>
-        public void ShowProcessing()
-        {
-            busyThread = new Thread(() =>
-            {
-                busyWindow = new BusyWindow();
-                busyWindow.Show();
-                busyWindow.Closed += (s, e) => busyWindow.Dispatcher.InvokeShutdown();
-                Dispatcher.Run();
-            });
-            busyThread.SetApartmentState(ApartmentState.STA);
-            busyThread.Start();
-        }
-
-        /// <summary>
-        /// Hides Processing form
-        /// </summary>
-        public void HideProcessing()
-        {
-            busyThread.Abort();
-        }
-
-        #endregion
 
         void CancelFix()
         {
@@ -677,8 +576,18 @@ namespace FreemiumUtilities.ViewModels
 
         void ChangeSchedule()
         {
-            FormTaskManager taskManager = new FormTaskManager();
+            var taskManager = new FormTaskManager();
             taskManager.ShowDialog();
+            //string taskDescription = TaskManager.GetTaskDescription("Freemium1ClickMaint");
+            //now can we make a check here , to see if checkbox is empty or not, 
+            // and if its empty it disabled the task in task scheduler ??
+            //SchedulerText = taskDescription;
+            /*
+            if (taskDescription.IndexOf(", starting") > 0)
+                SchedulerText = taskDescription.Substring(0, (taskDescription.Length - taskDescription.IndexOf(", starting")) + 1);
+            else
+                SchedulerText = taskDescription;
+            */
         }
 
         #endregion
@@ -687,7 +596,7 @@ namespace FreemiumUtilities.ViewModels
 
         void SpywareScanFinished(bool fixAfterScan)
         {
-            SpywareRemoverApp spywareRemover = ((SpywareRemoverApp)CurrentApp.Instance);
+            var spywareRemover = ((SpywareRemoverApp)CurrentApp.Instance);
             frmSpyware = new FrmSpyware { SpywareFound = spywareRemover.SpywareFound };
             CurrentAppScanFinished(CurrentApp.Instance.ProblemsCount.ToString(), CurrentApp.Instance.ProblemsCount == 0,
                                     fixAfterScan);
@@ -699,7 +608,7 @@ namespace FreemiumUtilities.ViewModels
 
         void ShortcutFixerScanFinished(bool fixAfterScan)
         {
-            ShortcutFixerApp shortcutFixer = ((ShortcutFixerApp)CurrentApp.Instance);
+            var shortcutFixer = ((ShortcutFixerApp)CurrentApp.Instance);
             frmShortcut = new FrmShortcutFixer { BrokenShortcuts = shortcutFixer.BrokenShortcuts };
             CurrentAppScanFinished(CurrentApp.Instance.ProblemsCount.ToString(), CurrentApp.Instance.ProblemsCount == 0,
                                     fixAfterScan);
@@ -733,7 +642,8 @@ namespace FreemiumUtilities.ViewModels
         {
             try
             {
-                TracksEraserApp trackEraser = (TracksEraserApp)CurrentApp.Instance;
+                var trackEraser = (TracksEraserApp)CurrentApp.Instance;
+                //CurrentAppScanFinished(trackEraser.FrmTrackSel.FilesToDeletedCount.ToString(CultureInfo.InvariantCulture), trackEraser.FrmTrackSel.FilesToDeletedCount == 0, fixAfterScan);
                 CurrentAppScanFinished(trackEraser.FrmTrackSel.ItemsToDeleteAvailable.ToString(CultureInfo.InvariantCulture),
                                         trackEraser.FrmTrackSel.ItemsToDeleteAvailable == 0, fixAfterScan);
             }
@@ -748,7 +658,7 @@ namespace FreemiumUtilities.ViewModels
 
         void TempCleanerScanFinished(bool fixAfterScan)
         {
-            TempCleanerApp tempCleaner = ((TempCleanerApp)CurrentApp.Instance);
+            var tempCleaner = ((TempCleanerApp)CurrentApp.Instance);
             frmTempCleaner = new FrmTempCleaner
                                 {
                                     TmpSize = (ulong)tempCleaner.TmpSize,
@@ -880,8 +790,13 @@ namespace FreemiumUtilities.ViewModels
                     StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("IssuesFound");
                     StatusTitleKey = "IssuesFound";
                     StatusText = String.Empty;
+
+                    // Start fix after scan completes if there is such option
                     if (fixAfterScan)
                     {
+                        //CurrentApp.Status = OneClickAppStatus.FixStarted;
+                        //CurrentApp.Instance.StartFix(new ProgressUpdate(UpdateProgressBar));
+                        //StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("NowFixing;
                         RunFix();
                     }
                 }
@@ -897,6 +812,9 @@ namespace FreemiumUtilities.ViewModels
 
         void CurrentAppFixFinished()
         {
+            CurrentApp.Status = OneClickAppStatus.FixFinished;
+            Instance.Status = CurrentApp.Status;
+
             if (CurrentApp.Instance.GetType() == typeof(TempCleanerApp))
             {
                 ulong recoverableSize = frmTempCleaner.TmpSize + frmTempCleaner.WinSize +
@@ -905,7 +823,6 @@ namespace FreemiumUtilities.ViewModels
                 CurrentApp.StatusText = String.Format("{0} " + WPFLocalizeExtensionHelpers.GetUIString("Recovered"),
                                                         frmTempCleaner.FormatSize(recoverableSize));
                 CurrentApp.StatusTextKey = "Recovered";
-                CurrentApp.Status = OneClickAppStatus.FixFinished;
             }
             else
             {
@@ -916,14 +833,12 @@ namespace FreemiumUtilities.ViewModels
                                                             TrackEraser.FrmTrackSel.ItemsToDeleteAll);
 
                     CurrentApp.StatusTextKey = "ProblemsFixed";
-                    CurrentApp.Status = OneClickAppStatus.FixFinished;
                 }
                 else
                 {
                     CurrentApp.StatusText = String.Format("{0} " + WPFLocalizeExtensionHelpers.GetUIString("ProblemsFixed"),
                                                             CurrentApp.Instance.ProblemsCount);
                     CurrentApp.StatusTextKey = "ProblemsFixed";
-                    CurrentApp.Status = OneClickAppStatus.FixFinished;
                 }
             }
 
@@ -934,8 +849,6 @@ namespace FreemiumUtilities.ViewModels
                 CurrentApp.Status = OneClickAppStatus.FixStarted;
                 try
                 {
-                    StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("NowFixing");
-                    StatusTitleKey = "NowFixing";
                     CurrentApp.Instance.StartFix(UpdateProgressBar);
                 }
                 catch (Exception)
@@ -943,6 +856,8 @@ namespace FreemiumUtilities.ViewModels
                     AppScanComplete(false); // This function is used also after fix (rename?).
                     // ToDo: send exception details via SmartAssembly bug reporting!
                 }
+                StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("NowFixing");
+                StatusTitleKey = "NowFixing";
             }
             else
             // This code runs only after all apps in OneClickAppsRunningQueue iterated
@@ -952,8 +867,6 @@ namespace FreemiumUtilities.ViewModels
                 StatusTitleKey = "RepairComplete";
                 StatusText = String.Empty;
             }
-
-            CurrentApp.Status = OneClickAppStatus.FixFinished;
         }
 
         #endregion
@@ -1013,26 +926,33 @@ namespace FreemiumUtilities.ViewModels
         /// <param name="fileName"></param>
         public void UpdateProgressBar(int progressPercentage, string fileName)
         {
-            try
-            {
-                if (progressPercentage > 0)
-                    ProgressValue = progressPercentage;
+            //DispatcherOperation op = currentDispatcher.BeginInvoke((Action)(() =>
+            //{
+                try
+                {
+                    if (progressPercentage > 0)
+                        ProgressValue = progressPercentage;
 
-                int index1 = fileName.IndexOf("\\");
-                if (index1 != -1 && fileName.Length > 25)
-                {
-                    index1 = fileName.IndexOf("\\", index1 + 1);
-                    int index2 = fileName.LastIndexOf("\\");
-                    StatusText = fileName.Substring(0, index1 + 1) + "..." + fileName.Substring(index2, fileName.Length - index2);
+                    if (fileName.IndexOf("\\") != -1 && fileName.Length > 25)
+                    {
+                        int index1 = fileName.IndexOf("\\");
+                        index1 = fileName.IndexOf("\\", index1 + 1);
+                        int index2 = fileName.LastIndexOf("\\");
+                        StatusText = fileName.Substring(0, index1 + 1) + "..." + fileName.Substring(index2, fileName.Length - index2);
+                    }
+                    else
+                    {
+                        StatusText = fileName;
+                    }
                 }
-                else
+                catch
                 {
-                    StatusText = fileName;
                 }
-            }
-            catch
-            {
-            }
+            //}), DispatcherPriority.Normal);
+            //while (op.Status != DispatcherOperationStatus.Completed)
+            //{
+            //    DoEvents();
+            //}
         }
 
         static void DoEvents()

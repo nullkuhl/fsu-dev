@@ -64,7 +64,7 @@ namespace StartupManager
 
         const string RunKey = @"Software\Microsoft\Windows\CurrentVersion\Run";
         const string WowRunKey = @"Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Run";
-        readonly string allUsersStartup = String.Empty;
+        readonly string allUsersStartup = "";
         readonly string currentUserStartup = Environment.GetFolderPath(Environment.SpecialFolder.Programs) + @"\Startup\";
         bool admin; // True if user has administrative privileges.
         bool _Ascending; // Used to toggle column sort.
@@ -83,6 +83,8 @@ namespace StartupManager
             Path = 5
         }
 
+
+
         #endregion
 
         #region MainForm Events
@@ -94,21 +96,23 @@ namespace StartupManager
         /// <param name="e"></param>
         void MainForm_Load(Object sender, EventArgs e)
         {
+
             try
             {
-                CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
+
+                var culture = new CultureInfo(CfgFile.Get("Lang"));
                 SetCulture(culture);
                 // Get user privilege level.
-                WindowsPrincipal wp = new WindowsPrincipal(WindowsIdentity.GetCurrent());
+                var wp = new WindowsPrincipal(WindowsIdentity.GetCurrent());
                 admin = wp.IsInRole(WindowsBuiltInRole.Administrator);
 
                 if (!admin)
                 {
                     // Display message if user is not an administrator.
-                    DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}{4}",
-                        rm.GetString("run_as_admin"), Environment.NewLine,
-                        rm.GetString("if_you_continue"), Environment.NewLine,
-                        rm.GetString("do_you_wish")), rm.GetString("startup_manager"),
+                    DialogResult result = MessageBox.Show(
+                        rm.GetString("run_as_admin") + ".\r\n" +
+                        rm.GetString("if_you_continue") + "\r\n" +
+                        rm.GetString("do_you_wish") + "?", rm.GetString("startup_manager"),
                         MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     // Exit if user does not want to continue as a non-admin.
@@ -116,6 +120,8 @@ namespace StartupManager
                     {
                         Application.Exit();
                     }
+                    //if (HLM == null)
+                    //    HLM = Registry.LocalMachine.CreateSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg");
                 }
                 if (HLM == null)
                     HLM = Registry.LocalMachine.CreateSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg");
@@ -128,28 +134,17 @@ namespace StartupManager
                 // Display startup items.
                 FillListview();
             }
-            catch (Exception ex)
+            catch (Win32Exception ex)
             {
-                if (ex is Win32Exception)
-                {
-                    MessageBox.Show(string.Format("{0} {1}{2}{3} {4}", rm.GetString("error_occurred"), rm.GetString("startup_manager"),
-                                                                       Environment.NewLine, rm.GetString("description"), ex.Message),
-                                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else if (ex is SecurityException)
-                {
-                    MessageBox.Show(string.Format("{0} {1}{2}{3} {4}", rm.GetString("error_occurred"), rm.GetString("startup_manager"),
-                                                       Environment.NewLine, rm.GetString("description"), ex.Message),
-                                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(rm.GetString("error_occurred") + " " + rm.GetString("startup_manager") + "\r\n" +
+                                rm.GetString("description") + ": " + ex.Message,
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            catch (SecurityException exc)
             {
-                this.Icon = Properties.Resources.PCCleanerIcon;
-            }
-            else
-            {
-                this.Icon = Properties.Resources.FSUIcon;
+                MessageBox.Show(rm.GetString("error_occurred") + " " + rm.GetString("startup_manager") + "\r\n" +
+                                rm.GetString("description") + ": " + exc.Message,
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -171,19 +166,14 @@ namespace StartupManager
 
         #region ListView Events
 
-        /// <summary>
-        /// Handles listViewStartup ItemSelectionChanged event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void listviewStartup_ItemSelectionChanged(object sender,
                                                   ListViewItemSelectionChangedEventArgs e)
         {
             //Show Details Section
             firstCover.Visible = false;
 
-            string command = String.Empty;
-            string filePath = String.Empty;
+            string command = "";
+            string filePath = "";
 
             try
             {
@@ -223,20 +213,20 @@ namespace StartupManager
                         if (filePath.Contains("cmd.exe"))
                         {
                             // Since this is a command window, we will not be able to resolve any properties.
-                            labelCompany.Text = string.Empty;
-                            labelProductName.Text = string.Empty;
-                            labelDescription.Text = string.Empty;
-                            labelFileVersion.Text = string.Empty;
+                            labelCompany.Text = "";
+                            labelProductName.Text = "";
+                            labelDescription.Text = "";
+                            labelFileVersion.Text = "";
                             labelCommand.Text = command;
 
                             // Only display arguments for shortcuts.
                             labelArguments.Visible = false;
-                            labelArguments.Text = string.Empty;
+                            labelArguments.Text = "";
                         }
-                        else if (Path.GetExtension(filePath) == ".lnk")
+                        else if (Path.GetExtension(filePath) == ".lnk")// || Path.GetExtension(filePath) == ".disabled")
                         {
                             // Resolve the shortcut.
-                            ShortcutClass sc = new ShortcutClass(filePath);
+                            var sc = new ShortcutClass(filePath);
 
                             // Get the file version information.
                             FileVersionInfo selectedFileVersionInfo = FileVersionInfo.GetVersionInfo(sc.Path);
@@ -272,6 +262,11 @@ namespace StartupManager
                                 // Then try getting icon from the resolved path.
                                 pictureBoxPanel.Image = GetBitmap(native.GetIcon(sc.Path));
                             }
+                            //else
+                            //{
+                            //    // If both methods fail, display a blank icon.
+                            //    pictureBoxPanel.Image = ((System.Drawing.Image)ResourceManager.GetObject("Blank"));
+                            //}
 
                             // Dispose of the class instance.
                             sc.Dispose();
@@ -299,7 +294,7 @@ namespace StartupManager
                             }
                             // Only display arguments for shortcuts.
                             labelArguments.Visible = false;
-                            labelArguments.Text = string.Empty;
+                            labelArguments.Text = "";
                         }
 
 
@@ -355,33 +350,35 @@ namespace StartupManager
                         toolStripButtonMoveToCurrentUser.Enabled = false;
 
                         // Clear all information, since the file is missing or invalid.
-                        labelCompany.Text = String.Empty;
-                        labelProductName.Text = String.Empty;
-                        labelDescription.Text = String.Empty;
-                        labelFileVersion.Text = String.Empty;
-                        labelCommand.Text = String.Empty;
+                        labelCompany.Text = "";
+                        labelProductName.Text = "";
+                        labelDescription.Text = "";
+                        labelFileVersion.Text = "";
+                        labelCommand.Text = "";
 
                         // Only display arguments for shortcuts.
                         labelArguments.Visible = false;
-                        labelArguments.Text = String.Empty;
+                        labelArguments.Text = "";
 
                         // Display a message to the user indicating that the file does not exist.
-                        MessageBox.Show(string.Format("{0}{1}{2}", rm.GetString("file_invalid"), Environment.NewLine, rm.GetString("commands_disabled")),
-                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(rm.GetString("file_invalid") + ".\r\n" +
+                                        rm.GetString("commands_disabled") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (SecurityException ex)
             {
-                MessageBox.Show(string.Format("{0}{1}{2}{3}{4} {5}", rm.GetString("no_permission"), Environment.NewLine,
-                                               rm.GetString("system_returned"), Environment.NewLine, rm.GetString("description"), ex.Message),
-                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(rm.GetString("no_permission") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                rm.GetString("description") + ": " + ex.Message, rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
             catch (FileNotFoundException)
             {
-
-                MessageBox.Show(string.Format("{0}{1}{2} {3}{4}{5}: {6}", rm.GetString("file_not_found"), Environment.NewLine,
-                                              rm.GetString("file_path"), filePath, Environment.NewLine, rm.GetString("command"), command),
+                MessageBox.Show(rm.GetString("file_not_found") + ".\n\r" +
+                                rm.GetString("file_path") + ": " + filePath + "\n\r" + rm.GetString("command") + ": " + command,
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             catch (IOException exc)
@@ -390,8 +387,8 @@ namespace StartupManager
             }
             catch (ArgumentException excp)
             {
-                MessageBox.Show(string.Format("{0}{1}{2} {3}{4}{5}: {6}", excp.Message, Environment.NewLine,
-                                              rm.GetString("file_path"), filePath, Environment.NewLine, rm.GetString("command"), command),
+                MessageBox.Show(excp.Message + "\n\r" +
+                                rm.GetString("file_path") + ": " + filePath + "\n\r" + rm.GetString("command") + ": " + command,
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -419,6 +416,10 @@ namespace StartupManager
 
         #endregion
 
+        #region Main Tool Strip Menu Events
+
+        #endregion
+
         #region Context Tool Strip Menu Events
 
         void toolStripMenuItemDisable_Click(object sender, EventArgs e)
@@ -434,10 +435,11 @@ namespace StartupManager
         void toolStripMenuItemDelete_Click(object sender, EventArgs e)
         {
             // Display a warning message before deleting an item.
-            DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}", rm.GetString("warning"), Environment.NewLine, Environment.NewLine,
-                                                                rm.GetString("delete_selected_item")),
-                                                  rm.GetString("startup_manager"), MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                                                  MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show(
+                rm.GetString("warning") + "." + "\r\n" + "\r\n" +
+                rm.GetString("delete_selected_item") + "?", rm.GetString("startup_manager"),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
             if (result == DialogResult.No)
             {
                 return;
@@ -482,10 +484,10 @@ namespace StartupManager
         void toolStripButtonDelete_Click(object sender, EventArgs e)
         {
             // Display a warning message before deleting an item.
-            DialogResult result = MessageBox.Show(string.Format("{0}{1}{2}{3}", rm.GetString("warning"), Environment.NewLine, Environment.NewLine,
-                                                                 rm.GetString("delete_selected_item")),
-                                                  rm.GetString("startup_manager"), MessageBoxButtons.YesNo, MessageBoxIcon.Question,
-                                                  MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show(
+                rm.GetString("warning") + "." + "\r\n" + "\r\n" +
+                rm.GetString("delete_selected_item") + "?", rm.GetString("startup_manager"),
+                MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.No)
             {
@@ -513,7 +515,7 @@ namespace StartupManager
         {
             if (!IsUserAdministrator())
             {
-                MessageBox.Show(rm.GetString("AdminRightsNeeded"), string.Empty, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(rm.GetString("AdminRightsNeeded"), "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -555,9 +557,6 @@ namespace StartupManager
 
         #region Listview Methods
 
-        /// <summary>
-        /// Fills list view
-        /// </summary>
         void FillListview()
         {
             try
@@ -569,20 +568,24 @@ namespace StartupManager
 
                 // Get all startup programs in HHEY_CURRENT_USER
                 DisplayRegistryStartupEntries(rm.GetString("HKCU"));
+                //getItems("HKCU", listviewStartup);
 
                 // Get all startup programs in HHEY_CURRENT_USER\Wow6432Node
                 if (is64Bit)
                 {
                     DisplayRegistryStartupEntries(rm.GetString("WHKCU"));
+                    //getItems("WHKCU", listviewStartup);
                 }
 
                 // Get all startup programs in HKEY_LOCAL_MACHINE
                 DisplayRegistryStartupEntries(rm.GetString("HKLM"));
+                //getItems("HKLM", listviewStartup);
 
                 // Get all startup programs in HKEY_LOCAL_MACHINE\Wow6432Node
                 if (is64Bit)
                 {
                     DisplayRegistryStartupEntries(rm.GetString("WHKLM"));
+                    //getItems("WHKLM", listviewStartup);
                 }
 
                 // Get all startup shortcuts and programs in the Current User's Startup Folder.
@@ -592,6 +595,7 @@ namespace StartupManager
                 DisplayStartupShortcuts(rm.GetString("StartupAllUsers"));
 
                 //Get all startup disabled shortcuts
+                //DisplayStartupShortcuts(currentUserStartup + @"\~Disabled");
                 FillDisabledItems();
             }
             catch (Exception)
@@ -607,14 +611,23 @@ namespace StartupManager
             string filePath;
             try
             {
+                //Readin from Startup path
+                //if (Directory.Exists(currentUserStartup+@"\~Disabled"))
+                //{
+
+                //}
                 foreach (string key in HLM.GetSubKeyNames())
                 {
                     try
                     {
                         if (count < HLM.GetSubKeyNames().Length)
                         {
+                            //MessageBox.Show(listviewStartup.Items.Count.ToString() + "  " + imageListStartupManager.Images.Count.ToString());
                             count++;
                             RegistryKey entry = HLM.OpenSubKey(key);
+
+
+                            // RegistryKey newKey = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString(), true);
                             if (entry != null)
                             {
                                 if (entry.ValueCount > 0)
@@ -686,6 +699,7 @@ namespace StartupManager
                                         if (entry.GetValue("hkey") != null)
                                             hkey = rm.GetString(entry.GetValue("hkey").ToString());
                                         listviewStartup.Items[i].SubItems.Add(hkey);
+
 
                                         // Add status information.
                                         listviewStartup.Items[i].SubItems.Add(true ? rm.GetString("disabled") : rm.GetString("enabled"));
@@ -804,14 +818,15 @@ namespace StartupManager
 
         #region Display Registry Startup Entries Method
 
-        /// <summary>
-        /// Displays registry startup entries
-        /// </summary>
-        /// <param name="hive"></param>
         void DisplayRegistryStartupEntries(string hive)
         {
+            bool disabled;
+            string command = string.Empty;
+            string filePath;
             RegistryKey rk = null;
             RegistryKey rkDisabled = null;
+
+
             try
             {
                 if (hive == rm.GetString("HKCU"))
@@ -842,125 +857,221 @@ namespace StartupManager
                 // Get all of the entries.
                 if (rk != null)
                 {
-                    FillListviewWithRegItems(hive, rk, false);
+                    foreach (string value in rk.GetValueNames())
+                    {
+                        // Reset disabled flag.
+                        disabled = false;
+                        // Save complete command.
+                        command = rk.GetValue(value).ToString();
+
+                        // Check if command is valid
+                        if (command.Length < 1)
+                        {
+                            continue;
+                        }
+
+                        // Check if command is disabled (begins with a ":")
+                        if (command.StartsWith(":"))
+                        {
+                            // Flag this entry as disabled.
+                            disabled = true;
+
+                            // Remove colon so that path command works and save file path.
+                            filePath = ReturnFilePath(command.Remove(0, 1));
+                        }
+                        else
+                        {
+                            // Save file path.
+                            filePath = ReturnFilePath(command);
+                        }
+
+                        filePath = ReturnFilePath(command);
+
+                        // Attempt to get application image (icon).
+                        if (native.GetIcon(filePath) != null)
+                        {
+                            // Add the icon to the image list so that the listview can access it.
+                            imageListStartupManager.Images.Add(native.GetIcon(filePath));
+                        }
+                        else
+                        {
+                            // If there is no icon, just add a blank image from resources to keep the indexes proper.
+                            imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
+                        }
+
+                        // Add entry description to listview.
+
+                        if (File.Exists(filePath))
+                        {
+                            FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
+
+                            if (fileInfo.FileDescription.Length != 0)
+                            {
+                                listviewStartup.Items.Add(fileInfo.FileDescription, i);
+                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                            }
+                            else
+                            {
+                                listviewStartup.Items.Add(value, i);
+                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                            }
+                        }
+                        else
+                        {
+                            listviewStartup.Items.Add(value, i);
+                            listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                        }
+
+
+                        // Add file name (without path) to listview.
+                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
+
+                        // Add location (type) information to listview.
+                        if (hive == rm.GetString("HKCU"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKCU"));
+                        }
+                        else if (hive == rm.GetString("HKLM"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKLM"));
+                        }
+                        else if (hive == rm.GetString("WHKCU"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKCU"));
+                        }
+                        else if (hive == rm.GetString("WHKLM"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKLM"));
+                        }
+
+                        // Add status information.
+                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
+
+                        // Add command.
+                        listviewStartup.Items[i].SubItems.Add(command);
+
+                        // Add file path.
+                        listviewStartup.Items[i].SubItems.Add(filePath);
+
+                        i++;
+
+                    }
+
+
+                    // Close the registry key.
+                    rk.Close();
                 }
                 if (rkDisabled != null)
                 {
-                    FillListviewWithRegItems(hive, rkDisabled, true);
+                    foreach (string value in rkDisabled.GetValueNames())
+                    {
+                        // Reset disabled flag.
+                        disabled = true;
+                        // Save complete command.
+                        command = rkDisabled.GetValue(value).ToString();
+
+                        // Check if command is valid
+                        if (command.Length < 1)
+                        {
+                            continue;
+                        }
+
+                        //Check if command is disabled (begins with a ":")
+                        if (command.StartsWith(":"))
+                        {
+                            // Flag this entry as disabled.
+                            disabled = true;
+
+                            // Remove colon so that path command works and save file path.
+                            filePath = ReturnFilePath(command.Remove(0, 1));
+                        }
+                        else
+                        {
+                            // Save file path.
+                            filePath = ReturnFilePath(command);
+                        }
+
+                        filePath = ReturnFilePath(command);
+
+                        // Attempt to get application image (icon).
+                        if (native.GetIcon(filePath) != null)
+                        {
+                            // Add the icon to the image list so that the listview can access it.
+                            imageListStartupManager.Images.Add(native.GetIcon(filePath));
+                        }
+                        else
+                        {
+                            // If there is no icon, just add a blank image from resources to keep the indexes proper.
+                            imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
+                        }
+
+                        // Add entry description to listview.
+
+                        if (File.Exists(filePath))
+                        {
+                            FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
+
+                            if (fileInfo.FileDescription.Length != 0)
+                            {
+                                listviewStartup.Items.Add(fileInfo.FileDescription, i);
+                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                            }
+                            else
+                            {
+                                listviewStartup.Items.Add(value, i);
+                                listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                            }
+                        }
+                        else
+                        {
+                            listviewStartup.Items.Add(value, i);
+                            listviewStartup.Items[listviewStartup.Items.Count - 1].Tag = value;
+                        }
+
+
+                        // Add file name (without path) to listview.
+                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
+
+                        // Add location (type) information to listview.
+                        if (hive == rm.GetString("HKCU"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKCU"));
+                        }
+                        else if (hive == rm.GetString("HKLM"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("HKLM"));
+                        }
+                        else if (hive == rm.GetString("WHKCU"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKCU"));
+                        }
+                        else if (hive == rm.GetString("WHKLM"))
+                        {
+                            listviewStartup.Items[i].SubItems.Add(rm.GetString("WHKLM"));
+                        }
+
+                        // Add status information.
+                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
+
+                        // Add command.
+                        listviewStartup.Items[i].SubItems.Add(command);
+
+                        // Add file path.
+                        listviewStartup.Items[i].SubItems.Add(filePath);
+
+                        i++;
+
+                    }
                 }
+
             }
             catch (Exception ex)
             {
-            }
-            finally
-            {
-                if (rk != null)
-                    rk.Close();
-                if (rkDisabled != null)
-                    rkDisabled.Close();
-            }
-        }
-
-        private void FillListviewWithRegItems(string hive, RegistryKey regKey, bool isDisabled)
-        {
-            string command = string.Empty;
-            string filePath;
-            bool disabled;
-            foreach (string value in regKey.GetValueNames())
-            {
-                // Reset disabled flag.
-                disabled = isDisabled;
-                // Save complete command.
-                command = regKey.GetValue(value).ToString();
-
-                // Check if command is valid
-                if (command.Length < 1)
-                    continue;
-
-                // Check if command is disabled (begins with a ":")
-                if (command.StartsWith(":"))
-                {
-                    // Flag this entry as disabled.
-                    disabled = true;
-
-                    // Remove colon so that path command works and save file path.
-                    filePath = ReturnFilePath(command.Remove(0, 1));
-                }
-                else
-                {
-                    // Save file path.
-                    filePath = ReturnFilePath(command);
-                }
-
-                filePath = ReturnFilePath(command);
-
-                // Attempt to get application image (icon).
-                if (native.GetIcon(filePath) != null)
-                {
-                    // Add the icon to the image list so that the listview can access it.
-                    imageListStartupManager.Images.Add(native.GetIcon(filePath));
-                }
-                else
-                {
-                    // If there is no icon, just add a blank image from resources to keep the indexes proper.
-                    imageListStartupManager.Images.Add((Image)resourceManager.GetObject("Blank"));
-                }
-
-                // Add entry description to listview.
-                ListViewItem lvi;
-
-                if (File.Exists(filePath))
-                {
-                    FileVersionInfo fileInfo = FileVersionInfo.GetVersionInfo(filePath);
-
-                    if (fileInfo.FileDescription.Length != 0)
-                    {
-                        lvi = new ListViewItem(fileInfo.FileDescription);
-                    }
-                    else
-                    {
-                        lvi = new ListViewItem(value);
-                    }
-                }
-                else
-                {
-                    lvi = new ListViewItem(value);
-                }
-
-                lvi.ImageIndex = i;
-                lvi.Tag = value;
-
-                // Add file name (without path) to listview.
-                lvi.SubItems.Add(Path.GetFileName(filePath));
-
-                // Add location (type) information to listview.
-                if (hive == rm.GetString("HKCU"))
-                {
-                    lvi.SubItems.Add(rm.GetString("HKCU"));
-                }
-                else if (hive == rm.GetString("HKLM"))
-                {
-                    lvi.SubItems.Add(rm.GetString("HKLM"));
-                }
-                else if (hive == rm.GetString("WHKCU"))
-                {
-                    lvi.SubItems.Add(rm.GetString("WHKCU"));
-                }
-                else if (hive == rm.GetString("WHKLM"))
-                {
-                    lvi.SubItems.Add(rm.GetString("WHKLM"));
-                }
-
-                // Add status information.
-                lvi.SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
-
-                // Add command.
-                lvi.SubItems.Add(command);
-
-                // Add file path.
-                lvi.SubItems.Add(filePath);
-                listviewStartup.Items.Add(lvi);
-                i++;
+                //if (rkDisabled != null || rk!=null)
+                //{
+                //    rkDisabled.Close();
+                //    rk.Close();
+                //}
             }
         }
 
@@ -968,10 +1079,6 @@ namespace StartupManager
 
         #region Display Startup Shortcuts Method
 
-        /// <summary>
-        /// Fills a list with shortcuts items
-        /// </summary>
-        /// <param name="type"></param>
         void DisplayStartupShortcuts(string type)
         {
             bool disabled;
@@ -997,8 +1104,10 @@ namespace StartupManager
                 {
                     // Only process shortcuts, executibles, or disabled shortcuts.
                     if (Path.GetExtension(shortcut) == ".lnk" || Path.GetExtension(shortcut) == ".exe")
+                    //    || Path.GetExtension(shortcut) == ".disabled")
                     {
                         // Set diabled flag.
+                        //if (Path.GetExtension(shortcut) == ".disabled")
                         if (Path.GetDirectoryName(shortcut).EndsWith("~Disabled"))
                         {
                             disabled = true;
@@ -1035,26 +1144,25 @@ namespace StartupManager
                         }
 
                         // Add entry description to listview.
-                        ListViewItem lvi = new ListViewItem(Path.GetFileNameWithoutExtension(shortcut));
-                        lvi.ImageIndex = i;
+                        listviewStartup.Items.Add(Path.GetFileNameWithoutExtension(shortcut), i);
 
                         // Add file name (without path) to listview.
-                        lvi.SubItems.Add(Path.GetFileName(filePath));
+                        listviewStartup.Items[i].SubItems.Add(Path.GetFileName(filePath));
 
                         // Add type information to listview.
-                        lvi.SubItems.Add(type == rm.GetString("StartupCurrentUser")
+                        listviewStartup.Items[i].SubItems.Add(type == rm.GetString("StartupCurrentUser")
                                                                 ? rm.GetString("StartupCurrentUser")
                                                                 : rm.GetString("StartupAllUsers"));
 
                         // Add status information.
-                        lvi.SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
+                        listviewStartup.Items[i].SubItems.Add(disabled ? rm.GetString("disabled") : rm.GetString("enabled"));
 
                         // Add command.
-                        lvi.SubItems.Add(command);
+                        listviewStartup.Items[i].SubItems.Add(command);
 
                         // Add file path.
-                        lvi.SubItems.Add(filePath);
-                        listviewStartup.Items.Add(lvi);
+                        listviewStartup.Items[i].SubItems.Add(filePath);
+
                         i++;
                     }
                 }
@@ -1086,7 +1194,7 @@ namespace StartupManager
             try
             {
                 // Remove any quote characters.
-                definedPath = definedPath.Replace("\"", string.Empty);
+                definedPath = definedPath.Replace("\"", "");
 
                 // Get all of the defined paths.
                 string[] paths = definedPath.Split(new[] { ';' });
@@ -1099,12 +1207,12 @@ namespace StartupManager
                         definedPath = Path.Combine(path, partialPath);
                         break;
                     }
-                    definedPath = string.Empty;
+                    definedPath = "";
                 }
             }
             catch (ArgumentException)
             {
-                return string.Empty;
+                return "";
             }
 
             return definedPath;
@@ -1114,31 +1222,27 @@ namespace StartupManager
 
         #region Return FilePath Method
 
-        /// <summary>
-        /// Transforms value to the valid file path
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
         string ReturnFilePath(string value)
         {
             try
             {
                 int p;
+
                 // Check for quotes, and if present, remove them.
                 if (value.Contains("\"")) // quote character 34, 22H
                 {
-                    value = value.Replace("\"", string.Empty);
+                    value = value.Replace("\"", "");
                 }
 
                 // Check for brackets, and if present, remove them.
                 if (value.Contains("["))
                 {
-                    value = value.Replace("[", string.Empty);
+                    value = value.Replace("[", "");
                 }
 
                 if (value.Contains("]"))
                 {
-                    value = value.Replace("]", string.Empty);
+                    value = value.Replace("]", "");
                 }
 
                 // Check for hyphens, and if present, return the part before first one.
@@ -1176,212 +1280,421 @@ namespace StartupManager
                         value = FindPathFromEnvironment(value);
                         return value;
                     }
-                    return string.Empty;
+                    return "";
                 }
                 if (!string.IsNullOrEmpty(value))
                 {
                     return Path.GetFullPath(value);
                 }
-                return string.Empty;
+                return "";
             }
             catch (DirectoryNotFoundException e)
             {
-                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}{5}: {6}", rm.GetString("folder_not_found"), Environment.NewLine,
-                                              rm.GetString("description"), e.Message, Environment.NewLine, rm.GetString("command"), value),
+                MessageBox.Show(rm.GetString("folder_not_found") + "." + "\r\n" +
+                                rm.GetString("description") + ": " + e.Message + "\r\n" + rm.GetString("command") + ": " + value,
                                 rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return string.Empty;
+                return "";
             }
             catch (FileNotFoundException ex)
             {
-                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}{5}: {6}", rm.GetString("file_not_found_warning"), Environment.NewLine,
-                              rm.GetString("description"), ex.Message, Environment.NewLine, rm.GetString("command"), value),
-                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return string.Empty;
+                MessageBox.Show(rm.GetString("file_not_found_warning") + "." + "\r\n" +
+                                rm.GetString("description") + ": " + ex.Message + "\r\n" + rm.GetString("command") + ": " + value,
+                                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return "";
             }
         }
 
         #endregion
 
 
+
+
+
+
+
         #region Enable Item Method
 
-        /// <summary>
-        /// Enables item in registry
-        /// </summary>
-        /// <param name="regDir"></param>
-        /// <param name="subKeyName"></param>
-        /// <returns></returns>
-        bool EnableItemInReg(string regDir, string subKeyName)
+        void EnableItem(int index)
         {
-            bool result = false;
-            RegistryKey regKey = null;
-            string command = string.Empty;
+            RegistryKey rk = null;
+            string filePath = "";
+            string newFilePath = "";
+
+            RegistryKey msConfigKey = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg", true);
+
             try
             {
-                RegistryKey msConfigKey = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg", true);
+                string command = string.Empty;
 
-                if (regDir == rm.GetString("HKCU"))
+                // Get type (location) of startup item.
+                string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
+
+                if (text == rm.GetString("HKCU"))
                 {
-                    regKey = Registry.CurrentUser.OpenSubKey(RunKey, true);
+                    // Open "Run" key in HKEY_CURRENT_USER and get value for this entry.
+                    rk = Registry.CurrentUser.OpenSubKey(RunKey, true);
+
+                    //command = rk.GetValue(listviewStartup.Items[index].Text).ToString();
+
+                    if (Registry.CurrentUser.OpenSubKey(RunKey, true) != null)
+                    //if (Registry.CurrentUser.OpenSubKey(RunKey + strRegPath, true) != null)
+                    {
+                        //RegistryKey key = Registry.CurrentUser.OpenSubKey(RunKey + strRegPath, true);
+                        RegistryKey key = Registry.CurrentUser.OpenSubKey(RunKey, true);
+                        if (key.GetValue(listviewStartup.Items[index].Tag.ToString()) == null)
+                        {
+                            RegistryKey _rk = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString());
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), _rk.GetValue("command"));
+                            msConfigKey.DeleteSubKey(listviewStartup.Items[index].Tag.ToString());
+                        }
+                        else
+                        {
+                            command = key.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+
+                            key.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+                        }
+                    }
+
+
+                    // Change the listview to indicate that this item is now enabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = "Enabled";
+
+                    //    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+
+                    // Check that entry begins with a colon (:), which indicates it is disabled.
+                    //if (command.StartsWith(":"))
+                    //{
+                    //    // Remove the leading colon.
+                    //    command = command.Remove(0, 1);
+
+                    //    // Replace the command in the registry without the colon.
+                    //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                    //    // Change the listview to indicate that this item is now enabled.
+                    //    listviewStartup.Items[index].SubItems[(int) ListCol.Status].Text = "Enabled";
+
+                    //    // Set context menu and tool strip buttons.
+                    //    SetItems(index, "Current User");
+                    //}
+
+                    return;
                 }
-                else if (regDir == rm.GetString("WHKCU"))
+
+                if (text == rm.GetString("WHKCU"))
                 {
                     // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node and get value for this entry.
-                    regKey = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
-                }
-                else if (regDir == rm.GetString("HKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value for this entry.
-                    regKey = Registry.LocalMachine.OpenSubKey(RunKey, true);
-                }
-                if (regDir == rm.GetString("WHKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value for this entry.
-                    regKey = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                    rk = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+                    //command = rk.GetValue(listviewStartup.Items[index].Text).ToString();
+
+                    if (Registry.CurrentUser.OpenSubKey(WowRunKey, true) != null)
+                    //if (Registry.CurrentUser.OpenSubKey(WowRunKey + strRegPath, true) != null)
+                    {
+                        //RegistryKey key = Registry.CurrentUser.OpenSubKey(WowRunKey + strRegPath, true);
+                        RegistryKey key = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+                        if (key.GetValue(listviewStartup.Items[index].Tag.ToString()) == null)
+                        {
+                            RegistryKey _rk = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString());
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), _rk.GetValue("command"));
+                            msConfigKey.DeleteSubKey(listviewStartup.Items[index].Tag.ToString());
+                        }
+                        else
+                        {
+                            command = key.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+
+                            key.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+                        }
+                    }
+
+
+
+                    // Change the listview to indicate that this item is now enabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+
+
+                    // Check that entry begins with a colon (:), which indicates it is disabled.
+                    //if (command.StartsWith(":"))
+                    //{
+                    //    // Remove the leading colon.
+                    //    command = command.Remove(0, 1);
+
+                    //    // Replace the command in the registry without the colon.
+                    //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                    //    // Change the listview to indicate that this item is now enabled.
+                    //    listviewStartup.Items[index].SubItems[(int) ListCol.Status].Text = rm.GetString("enabled");
+
+                    //    // Set context menu and tool strip buttons.
+                    //    SetItems(index, "Current User");
+                    //}
+
+                    return;
                 }
 
-                if (regKey != null)
+                if (text == rm.GetString("HKLM"))
                 {
-                    if (regKey.GetValue(subKeyName) == null)
+                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value for this entry.
+                    rk = Registry.LocalMachine.OpenSubKey(RunKey, true);
+                    //command = rk.GetValue(listviewStartup.Items[index].Text).ToString();
+
+                    if (Registry.LocalMachine.OpenSubKey(RunKey, true) != null)
+                    //if (Registry.LocalMachine.OpenSubKey(RunKey + strRegPath, true) != null)
                     {
-                        using (RegistryKey _rk = msConfigKey.OpenSubKey(subKeyName))
+                        //RegistryKey key = Registry.LocalMachine.OpenSubKey(RunKey + strRegPath, true);
+                        RegistryKey key = Registry.LocalMachine.OpenSubKey(RunKey, true);
+                        if (key.GetValue(listviewStartup.Items[index].Tag.ToString()) == null)
                         {
-                            regKey.SetValue(subKeyName, _rk.GetValue("command"));
-                            msConfigKey.DeleteSubKey(subKeyName);
+                            RegistryKey _rk = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString());
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), _rk.GetValue("command"));
+                            msConfigKey.DeleteSubKey(listviewStartup.Items[index].Tag.ToString());
+                        }
+                        else
+                        {
+                            command = key.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+
+                            key.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+                        }
+                    }
+
+
+
+                    // Change the listview to indicate that this item is now enabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+
+
+                    // Check that entry begins with a colon (:), which indicates it is disabled.
+                    //if (command.StartsWith(":"))
+                    //{
+                    //    // Remove the leading colon.
+                    //    command = command.Remove(0, 1);
+
+                    //    // Replace the command in the registry without the colon.
+                    //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                    //    // Change the listview to indicate that this item is now enabled.
+                    //    listviewStartup.Items[index].SubItems[(int) ListCol.Status].Text = rm.GetString("enabled");
+
+                    //    // Set context menu and tool strip buttons.
+                    //    SetItems(index, "All Users");
+                    //}
+
+                    return;
+                }
+
+                if (text == rm.GetString("WHKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value for this entry.
+                    rk = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                    //command = rk.GetValue(listviewStartup.Items[index].Text).ToString();
+
+                    if (Registry.LocalMachine.OpenSubKey(WowRunKey, true) != null)
+                    //if (Registry.LocalMachine.OpenSubKey(WowRunKey + strRegPath, true) != null)
+                    {
+                        //RegistryKey key = Registry.LocalMachine.OpenSubKey(WowRunKey + strRegPath, true);
+                        RegistryKey key = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                        if (key.GetValue(listviewStartup.Items[index].Tag.ToString()) == null)
+                        {
+                            RegistryKey _rk = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString());
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), _rk.GetValue("command"));
+                            msConfigKey.DeleteSubKey(listviewStartup.Items[index].Tag.ToString());
+                        }
+                        else
+                        {
+                            command = key.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+                            rk.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+
+                            key.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+                        }
+                    }
+
+                    // Change the listview to indicate that this item is now enabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+
+
+
+                    // Check that entry begins with a colon (:), which indicates it is disabled.
+                    //if (command.StartsWith(":"))
+                    //{
+                    //    // Remove the leading colon.
+                    //    command = command.Remove(0, 1);
+
+                    //    // Replace the command in the registry without the colon.
+                    //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                    //    // Change the listview to indicate that this item is now enabled.
+                    //    listviewStartup.Items[index].SubItems[(int) ListCol.Status].Text = rm.GetString("enabled");
+
+                    //    // Set context menu and tool strip buttons.
+                    //    SetItems(index, "All Users");
+                    //}
+
+                    return;
+                }
+
+                if (text == rm.GetString("StartupCurrentUser"))
+                {
+                    // Get the path.
+                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
+
+                    // Make sure the shortcut exists.
+                    if (File.Exists(filePath))
+                    {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+
+                        // Make sure this is a .lnk file.
+                        if (Path.GetDirectoryName(filePath).EndsWith("~Disabled"))
+                        //if (Path.GetExtension(filePath) == ".disabled")
+                        {
+                            //// Move the file from the ~Disabled subfolder to the Startup folder.
+                            //string disabledFolder = Path.GetDirectoryName(filePath) + @"\~Disabled";
+                            //// Move the .lnk file to the disabled folder.
+                            //newFilePath = disabledFolder + @"\" + Path.GetFileName(filePath.Replace(".disabled", ""));
+                            //// If ~Disabled subfolder is empty remove it.
+                            ////if (Directory.GetFiles(Path.GetDirectoryName(filePath)).Length == 0)
+                            ////{
+                            ////    Directory.Delete(Path.GetDirectoryName(filePath));
+                            ////}
+                            //File.Delete(filePath);
+                            //filePath = filePath.Replace(".disabled", "");                            
+                            //newFilePath = filePath.Replace(".disabled", string.Empty);
+                            newFilePath = filePath.Replace("~Disabled", string.Empty);
+                            
+                            if (File.Exists(newFilePath))
+                                File.Delete(newFilePath);
+
+                            File.Move(filePath, newFilePath);
+                            // Change the listview to indicate that this item is now enabled.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
+
+                            // Store the new path in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
+
+                            // Store the new filename in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
+
+                            // Set context menu and tool strip buttons.
+                            SetItems(index, "Current User");
+                        }
+                        else
+                        {
+                            MessageBox.Show(rm.GetString("file_appear_not_valid") + ".",
+                                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                         }
                     }
                     else
                     {
-                        command = regKey.GetValue(subKeyName).ToString();
-                        regKey.SetValue(subKeyName, command);
-
-                        regKey.DeleteValue(subKeyName);
+                        //  Cannot find file.
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-                    result = true;
+
+                    return;
+                }
+                if (text == rm.GetString("StartupAllUsers"))
+                {
+                    // Get the path.
+                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
+
+                    // Make sure the shortcut exists.
+                    if (File.Exists(filePath))
+                    {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+                        // Make sure this is a .lnk file.
+                        if (Path.GetDirectoryName(filePath).EndsWith("~Disabled"))
+                        //if (Path.GetExtension(filePath) == ".disabled")
+                        {
+                            //// Move the file from the ~Disabled subfolder to the Startup folder.
+                            //string disabledFolder = Path.GetDirectoryName(filePath) + @"\~Disabled";
+                            // Move the .lnk file to the disabled folder.
+                            //newFilePath = disabledFolder + @"\" + Path.GetFileName(filePath.Replace(".disabled", ""));
+                            //File.Delete(filePath);
+                            //// If ~Disabled subfolder is empty remove it.
+                            //if (Directory.GetFiles(Path.GetDirectoryName(filePath)).Length == 0)
+                            //{
+                            //    Directory.Delete(Path.GetDirectoryName(filePath));
+                            //}
+                            newFilePath = filePath.Replace("~Disabled", string.Empty);
+                            //newFilePath = filePath.Replace(".disabled", "");
+                            if (File.Exists(newFilePath))
+                                File.Delete(newFilePath);
+
+                            File.Move(filePath, newFilePath);
+                            // Change the listview to indicate that this item is now enabled.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
+
+                            // Store the new path in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
+
+                            // Store the new filename in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
+
+                            // Set context menu and tool strip buttons.
+                            SetItems(index, "All Users");
+                        }
+                        else
+                        {
+                            MessageBox.Show(rm.GetString("file_folder_not_found") + ".",
+                                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                    else
+                    {
+                        //  Cannot find file.
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    return;
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                throw ex;
+                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_enable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                //  Cannot find file.
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
                 // Close registry key.
-                if (regKey != null)
+                if (rk != null)
                 {
-                    regKey.Close();
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Enables item for user
-        /// </summary>
-        /// <param name="filePath">filepath where disable item located</param>
-        /// <param name="newFilePath">filepath where the item will be located after enabling</param>
-        /// <returns></returns>
-        bool EnableItemForUser(string filePath, string newFilePath)
-        {
-            bool result = false;
-
-            if (File.Exists(filePath))
-            {
-                // Remove any attributes.
-                File.SetAttributes(filePath, FileAttributes.Normal);
-                // Make sure this is a .lnk file.
-                if (Path.GetDirectoryName(filePath).EndsWith("~Disabled"))
-                {
-                    if (File.Exists(newFilePath))
-                        File.Delete(newFilePath);
-
-                    File.Move(filePath, newFilePath);
-                    result = true;
-                }
-                else
-                {
-                    MessageBox.Show(rm.GetString("file_appear_not_valid"),
-                                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-            }
-            else
-            {
-                //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Enables item
-        /// </summary>
-        /// <param name="index">ittem index in list</param>
-        void EnableItem(int index)
-        {
-            string filePath = string.Empty;
-            string newFilePath = string.Empty;
-
-            try
-            {
-                // Get type (location) of startup item.
-                string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
-
-                if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU") || text == rm.GetString("HKLM") || text == rm.GetString("WHKLM"))
-                {
-                    if (EnableItemInReg(text, listviewStartup.Items[index].Tag.ToString()))
-                    {
-                        // Change the listview to indicate that this item is now enabled.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
-
-                        // Set context menu and tool strip buttons.
-                        if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU"))
-                            SetItems(index, "Current User");
-                        else
-                            SetItems(index, "All Users");
-                    }
-                    return;
-                }
-                else if (text == rm.GetString("StartupCurrentUser") || text == rm.GetString("StartupAllUsers"))
-                {
-                    // Get the path.
-                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
-                    newFilePath = filePath.Replace("~Disabled", string.Empty);
-
-                    if (EnableItemForUser(filePath, newFilePath))
-                    {
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("enabled");
-
-                        // Store the new path in the listview.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
-
-                        // Store the new filename in the listview.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
-
-                        // Set context menu and tool strip buttons.
-                        if (text == rm.GetString("StartupCurrentUser"))
-                            SetItems(index, "Current User");
-                        else
-                            SetItems(index, "All User");
-                    };
-
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                if (ex is Win32Exception)
-                {
-                    //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    //UnauthorizedAccessException, ArgumentException, is SecurityException etc                    
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_enable"), Environment.NewLine,
-                                rm.GetString("system_returned"), Environment.NewLine, ex.Message), rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    rk.Close();
                 }
             }
         }
@@ -1389,51 +1702,35 @@ namespace StartupManager
         #endregion
 
         #region Disable Item Method
-        /// <summary>
-        /// Disables item in registry
-        /// </summary>
-        /// <param name="regDir">registry directory name</param>
-        /// <param name="subKeyName">subkey to delete</param>
-        /// <returns>true - if success, false - otherwise</returns>
-        bool DisableItemInReg(string regDir, string subKeyName)
+
+        void DisableItem(int index)
         {
-            bool result = false;
-            string command = string.Empty;
-            RegistryKey regKey = null;
+            RegistryKey rk = null;
+            string filePath = "";
+            string newFilePath = "";
+            RegistryKey msConfigKey = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg", true);
             try
             {
-                RegistryKey msConfigKey = Registry.LocalMachine.OpenSubKey("Software\\Microsoft\\Shared Tools\\MSConfig\\startupreg", true);
+                string command = string.Empty;
 
-                if (regDir == rm.GetString("HKCU"))
-                {
-                    regKey = Registry.CurrentUser.OpenSubKey(RunKey, true);
-                }
+                // Get type (location) of startup item.
+                string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
 
-                if (regDir == rm.GetString("WHKCU"))
+                if (text == rm.GetString("HKCU"))
                 {
-                    regKey = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
-                }
+                    // Open "Run" key in HKEY_CURRENT_USER and get value for this entry.
 
-                if (regDir == rm.GetString("HKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value for this entry.
-                    regKey = Registry.LocalMachine.OpenSubKey(RunKey, true);
-                }
-
-                if (regDir == rm.GetString("WHKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value for this entry.
-                    regKey = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
-                }
-
-                if (regKey.GetValue(subKeyName) != null)
-                {
-                    command = regKey.GetValue(subKeyName).ToString();
-                    // Check that entry does not begins with a colon (:), which would indicate it is already disabled
-                    using (RegistryKey newKey = msConfigKey.CreateSubKey(subKeyName, RegistryKeyPermissionCheck.ReadWriteSubTree))
+                    rk = Registry.CurrentUser.OpenSubKey(RunKey, true);
+                    if (rk.GetValue(listviewStartup.Items[index].Tag.ToString()) != null)
                     {
-                        //msConfigKey.OpenSubKey(subKeyName, true);
-                        newKey.SetValue("item", subKeyName);
+                        command = rk.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+
+                        // Check that entry does not begins with a colon (:), which would indicate it is already disabled.
+
+                        msConfigKey.CreateSubKey(listviewStartup.Items[index].Tag.ToString());
+                        RegistryKey newKey = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString(), true);
+
+                        newKey.SetValue("item", listviewStartup.Items[index].Tag.ToString());
                         newKey.SetValue("command", command);
                         newKey.SetValue("hkey", "HKCU");
                         newKey.SetValue("key", RunKey);
@@ -1446,150 +1743,428 @@ namespace StartupManager
                         newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
                         newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
                         newKey.SetValue("inimapping", 0);
+                        rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+                        //if (Registry.CurrentUser.OpenSubKey(RunKey + strRegPath, true) == null)
+                        //{
+                        //    RegistryKey key = Registry.CurrentUser.CreateSubKey(RunKey + strRegPath);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+                        //else
+                        //{
+                        //    RegistryKey key = Registry.CurrentUser.OpenSubKey(RunKey + strRegPath, true);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+
+
+
+                        // Change the listview to indicate that this item is now disabled.
+                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        // Set context menu and tool strip buttons.
+                        SetItems(index, "Current User");
+
+                        //if (!command.StartsWith(":"))
+                        //{
+                        //    // Add the leading colon.
+                        //    command = ":" + command;
+
+                        //    // Replace the command in the registry without the colon.
+                        //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                        //    // Change the listview to indicate that this item is now disabled.
+                        //    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        //    // Set context menu and tool strip buttons.
+                        //    SetItems(index, "Current User");
+                        //}
+
+                        return;
                     }
-                    regKey.DeleteValue(subKeyName);
-                    result = true;
+                }
+
+                if (text == rm.GetString("WHKCU"))
+                {
+                    // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node and get value for this entry.
+                    rk = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+                    if (rk.GetValue(listviewStartup.Items[index].Tag.ToString()) != null)
+                    {
+
+                        command = rk.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+
+                        // Check that entry does not begins with a colon (:), which would indicate it is already disabled.
+
+                        msConfigKey.CreateSubKey(listviewStartup.Items[index].Tag.ToString());
+                        RegistryKey newKey = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString(), true);
+
+
+
+                        newKey.SetValue("item", listviewStartup.Items[index].Tag.ToString());
+                        newKey.SetValue("command", command);
+                        newKey.SetValue("hkey", "WHKCU");
+                        newKey.SetValue("key", WowRunKey);
+                        DateTime dt = DateTime.Now;
+
+                        newKey.SetValue("DAY", int.Parse(dt.Date.Day.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("HOUR", int.Parse(dt.Date.Hour.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MINUTE", int.Parse(dt.Date.Minute.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MONTH", int.Parse(dt.Date.Month.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("inimapping", 0);
+                        rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        //if (Registry.CurrentUser.OpenSubKey(WowRunKey + strRegPath, true) == null)
+                        //{
+                        //    RegistryKey key = Registry.CurrentUser.CreateSubKey(WowRunKey + strRegPath);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+                        //else
+                        //{
+                        //    RegistryKey key = Registry.CurrentUser.OpenSubKey(WowRunKey + strRegPath, true);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+
+                        //rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        // Change the listview to indicate that this item is now disabled.
+                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        // Set context menu and tool strip buttons.
+                        SetItems(index, "Current User");
+
+
+                        //if (!command.StartsWith(":"))
+                        //{
+                        //    // Add the leading colon.
+                        //    command = ":" + command;
+
+                        //    // Replace the command in the registry without the colon.
+                        //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                        //    // Change the listview to indicate that this item is now disabled.
+                        //    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        //    // Set context menu and tool strip buttons.
+                        //    SetItems(index, "Current User");
+                        //}
+
+                        return;
+                    }
+                }
+
+                if (text == rm.GetString("HKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value for this entry.
+                    rk = Registry.LocalMachine.OpenSubKey(RunKey, true);
+                    if (rk.GetValue(listviewStartup.Items[index].Tag.ToString()) != null)
+                    {
+
+                        command = rk.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+
+                        // Check that entry does not begins with a colon (:), which would indicate it is already disabled.
+
+                        msConfigKey.CreateSubKey(listviewStartup.Items[index].Tag.ToString());
+                        RegistryKey newKey = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString(), true);
+
+                        newKey.SetValue("item", listviewStartup.Items[index].Tag.ToString());
+                        newKey.SetValue("command", command);
+                        newKey.SetValue("hkey", "HKLM");
+                        newKey.SetValue("key", RunKey);
+                        DateTime dt = DateTime.Now;
+
+                        newKey.SetValue("DAY", int.Parse(dt.Date.Day.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("HOUR", int.Parse(dt.Date.Hour.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MINUTE", int.Parse(dt.Date.Minute.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MONTH", int.Parse(dt.Date.Month.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("inimapping", 0);
+                        rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        //if (Registry.LocalMachine.OpenSubKey(RunKey + strRegPath, true) == null)
+                        //{
+                        //    RegistryKey key = Registry.LocalMachine.CreateSubKey(RunKey + strRegPath);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+                        //else
+                        //{
+                        //    RegistryKey key = Registry.LocalMachine.OpenSubKey(RunKey + strRegPath, true);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+
+                        //rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        // Change the listview to indicate that this item is now disabled.
+                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        // Set context menu and tool strip buttons.
+                        SetItems(index, "All Users");
+
+                        //if (!command.StartsWith(":"))
+                        //{
+                        //    // Add the leading colon.
+                        //    command = ":" + command;
+
+                        //    // Replace the command in the registry without the colon.
+                        //    rk.SetValue(listviewStartup.Items[index].Text, command);
+
+                        //    // Change the listview to indicate that this item is now disabled.
+                        //    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        //    // Set context menu and tool strip buttons.
+                        //    SetItems(index, "All Users");
+                        //}
+
+                        return;
+                    }
+                }
+
+                if (text == rm.GetString("WHKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value for this entry.
+                    rk = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                    if (rk.GetValue(listviewStartup.Items[index].Tag.ToString()) != null)
+                    {
+                        command = rk.GetValue(listviewStartup.Items[index].Tag.ToString()).ToString();
+
+                        // Check that entry does not begins with a colon (:), which would indicate it is already disabled.
+
+                        msConfigKey.CreateSubKey(listviewStartup.Items[index].Tag.ToString());
+                        RegistryKey newKey = msConfigKey.OpenSubKey(listviewStartup.Items[index].Tag.ToString(), true);
+
+                        newKey.SetValue("item", listviewStartup.Items[index].Tag.ToString());
+                        newKey.SetValue("command", command);
+                        newKey.SetValue("hkey", "WHKLM");
+                        newKey.SetValue("key", WowRunKey);
+                        DateTime dt = DateTime.Now;
+
+                        newKey.SetValue("DAY", int.Parse(dt.Date.Day.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("HOUR", int.Parse(dt.Date.Hour.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MINUTE", int.Parse(dt.Date.Minute.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("MONTH", int.Parse(dt.Date.Month.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("SECOND", int.Parse(dt.Date.Second.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("YEAR", int.Parse(dt.Date.Year.ToString()), RegistryValueKind.DWord);
+                        newKey.SetValue("inimapping", 0);
+                        rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        //if (Registry.LocalMachine.OpenSubKey(WowRunKey + strRegPath, true) == null)
+                        //{
+                        //    RegistryKey key = Registry.LocalMachine.CreateSubKey(WowRunKey + strRegPath);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+                        //else
+                        //{
+                        //    RegistryKey key = Registry.LocalMachine.OpenSubKey(WowRunKey + strRegPath, true);
+                        //    key.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+                        //}
+
+                        //rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                        // Change the listview to indicate that this item is now disabled.
+                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        // Set context menu and tool strip buttons.
+                        SetItems(index, "All Users");
+
+
+                        //if (!command.StartsWith(":"))
+                        //{
+                        //    // Add the leading colon.
+                        //    command = ":" + command;
+
+                        //    // Replace the command in the registry without the colon.
+                        //    rk.SetValue(listviewStartup.Items[index].Tag.ToString(), command);
+
+                        //    // Change the listview to indicate that this item is now disabled.
+                        //    listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                        //    // Set context menu and tool strip buttons.
+                        //    SetItems(index, "All Users");
+                        //}
+
+                        return;
+                    }
+                }
+
+                if (text == rm.GetString("StartupCurrentUser"))
+                {
+                    // Get the path.
+                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
+
+                    // Make sure the shortcut exists.
+                    if (File.Exists(filePath))
+                    {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+
+                        // Make sure this is a .lnk file.
+                        if (Path.GetExtension(filePath) == ".lnk")
+                        {
+                            //Create disabled item
+                            //string disabledPath = filePath + ".disabled";
+
+                            //File.Move(filePath, disabledPath);
+
+                            //File.Copy(filePath, disabledPath, true);
+
+                            // If "~Disabled" folder does not exist, create it.
+
+
+                            string disabledFolder = Path.GetDirectoryName(filePath) + @"\~Disabled";
+
+                            if (!Directory.Exists(disabledFolder))
+                            {
+                                // Create subdirectory.
+                                Directory.CreateDirectory(disabledFolder);
+
+                                // Make it hidden.
+                                File.SetAttributes(disabledFolder, FileAttributes.Hidden);
+                            }
+
+                            // Move the .lnk file to the disabled folder.
+                            newFilePath = disabledFolder + @"\" + Path.GetFileName(filePath);
+                            
+                            if (File.Exists(newFilePath))
+                                File.Delete(newFilePath);
+
+                            File.Move(filePath, newFilePath);
+
+                            // Change the listview to indicate that this item is now disabled.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                            // Store the new path in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
+
+                            //listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = disabledPath;
+
+                            // Store the new filename in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
+
+                            //listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(disabledPath);
+
+                            // Set context menu and tool strip buttons.
+                            SetItems(index, "Current User");
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(rm.GetString("file_appear_not_valid") + ".",
+                                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                    else
+                    {
+                        //  Cannot find file.
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    return;
+                }
+
+                if (text == rm.GetString("StartupAllUsers"))
+                {
+                    // Get the path.
+                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
+
+                    // Make sure the shortcut exists.
+                    if (File.Exists(filePath))
+                    {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+
+                        // Make sure this is a .lnk file.
+                        if (Path.GetExtension(filePath) == ".lnk")
+                        {
+                            //Create disabled item
+                            // string disabledPath = filePath + ".disabled";
+
+                            //File.Move(filePath, disabledPath);
+                            //File.Copy(filePath, disabledPath, true);
+
+                            // If "~Disabled" folder does not exist, create it.
+                            string disabledFolder = Path.GetDirectoryName(filePath) + @"\~Disabled";
+
+                            if (!Directory.Exists(disabledFolder))
+                            {
+                                // Create subdirectory.
+                                Directory.CreateDirectory(disabledFolder);
+
+                                // Make it hidden.
+                                File.SetAttributes(disabledFolder, FileAttributes.Hidden);
+                            }
+
+                            //// Move the .lnk file to the disabled folder.
+                            newFilePath = disabledFolder + @"\" + Path.GetFileName(filePath);
+                            if (!File.Exists(newFilePath))
+                                File.Move(filePath, newFilePath);
+
+                            // Change the listview to indicate that this item is now disabled.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
+
+                            // Store the new path in the listview.File
+                            listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
+
+                            //listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = disabledPath;
+
+                            // Store the new filename in the listview.
+                            listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
+                            //listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(disabledPath);
+
+                            // Set context menu and tool strip buttons.
+                            SetItems(index, "All Users");
+                        }
+                        else
+                        {
+                            MessageBox.Show(rm.GetString("file_appear_not_valid") + ".",
+                                            rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                    }
+                    else
+                    {
+                        //  Cannot find file.
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                    return;
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                throw ex;
+                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_disable") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                //  Cannot find file.
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            catch (NullReferenceException exc)
+            {
+                MessageBox.Show(exc.Source, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
                 // Close registry key.
-                if (regKey != null)
-                    regKey.Close();
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Deletes item for user
-        /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="newFilePath"></param>
-        /// <returns>true - if success, false - otherwise</returns>
-        bool DisableItemForUser(string filePath, out string newFilePath)
-        {
-            bool result = false;
-            newFilePath = string.Empty;
-            // Make sure the shortcut exists.
-            if (File.Exists(filePath))
-            {
-                // Remove any attributes.
-                File.SetAttributes(filePath, FileAttributes.Normal);
-
-                // Make sure this is a .lnk file.
-                if (Path.GetExtension(filePath) == ".lnk")
+                if (rk != null)
                 {
-                    string disabledFolder = Path.GetDirectoryName(filePath) + @"\~Disabled";
-
-                    if (!Directory.Exists(disabledFolder))
-                    {
-                        // Create subdirectory.
-                        Directory.CreateDirectory(disabledFolder);
-
-                        // Make it hidden.
-                        File.SetAttributes(disabledFolder, FileAttributes.Hidden);
-                    }
-
-                    // Move the .lnk file to the disabled folder.
-                    string tmpNewFilePath = disabledFolder + @"\" + Path.GetFileName(filePath);
-
-                    if (File.Exists(tmpNewFilePath))
-                        File.Delete(tmpNewFilePath);
-
-                    File.Move(filePath, tmpNewFilePath);
-                    result = true;
-                    newFilePath = tmpNewFilePath;
-                }
-                else
-                {
-                    MessageBox.Show(rm.GetString("file_appear_not_valid"),
-                                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                }
-            }
-            else
-            {
-                //  Cannot find file.
-                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Disables item
-        /// </summary>
-        /// <param name="index">item index in list</param>
-        void DisableItem(int index)
-        {
-
-            string filePath = string.Empty;
-            string newFilePath = string.Empty;
-
-            try
-            {
-                // Get type (location) of startup item.
-                string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
-
-                if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU") || text == rm.GetString("HKLM") || text == rm.GetString("WHKLM"))
-                {
-                    if (DisableItemInReg(text, listviewStartup.Items[index].Tag.ToString()))
-                    {
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
-
-                        // Set context menu and tool strip buttons.
-                        if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU"))
-                            SetItems(index, "Current User");
-                        else
-                            SetItems(index, "All Users");
-                    }
-                    return;
-                }
-                else if (text == rm.GetString("StartupCurrentUser") || text == rm.GetString("StartupAllUsers"))
-                {
-                    // Get the path.
-                    filePath = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
-                    if (DisableItemForUser(filePath, out newFilePath))
-                    {
-                        // Change the listview to indicate that this item is now disabled.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Status].Text = rm.GetString("disabled");
-
-                        // Store the new path in the listview.File
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text = newFilePath;
-
-                        // Store the new filename in the listview.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text = Path.GetFileName(newFilePath);
-
-                        // Set context menu and tool strip buttons.
-                        if (text == rm.GetString("StartupCurrentUser"))
-                            SetItems(index, "Current User");
-                        else
-                            SetItems(index, "All User");
-                    }
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                if (ex is Win32Exception)
-                {
-                    //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else if (ex is NullReferenceException)
-                {
-                    MessageBox.Show(ex.Source, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_disable"), Environment.NewLine,
-                    rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    rk.Close();
                 }
             }
         }
@@ -1598,91 +2173,9 @@ namespace StartupManager
 
         #region Delete Item Method
 
-        /// <summary>
-        /// Deletes item in registry
-        /// </summary>
-        /// <param name="regDir">registry directory name</param>
-        /// <param name="subKeyName">subkey to delete</param>
-        /// <returns>true - if success, false - otherwise</returns>
-        bool DeleteItemInReg(string regDir, string subKeyName)
-        {
-            bool result = false;
-            RegistryKey regKey = null;
-            try
-            {
-                if (regDir == rm.GetString("HKCU"))
-                {
-                    // Open "Run" key in HKEY_CURRENT_USER.
-                    regKey = Registry.CurrentUser.OpenSubKey(RunKey, true);
-                }
-
-                else if (regDir == rm.GetString("WHKCU"))
-                {
-                    // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node.
-                    regKey = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
-                }
-                else if (regDir == rm.GetString("HKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE.
-                    regKey = Registry.LocalMachine.OpenSubKey(RunKey, true);
-                }
-                else if (regDir == rm.GetString("WHKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node.
-                    regKey = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
-                }
-                // Attempt to delete the value.
-                regKey.DeleteValue(subKeyName);
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                // Close registry key.
-                if (regKey != null)
-                {
-                    regKey.Close();
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Deletes item
-        /// </summary>
-        /// <param name="fileName">full path to file</param>
-        /// <returns>true - if success, false - otherwise</returns>
-        bool DeleteItemForUser(string fileName)
-        {
-            bool result = false;
-            // Make sure file exists.
-            if (File.Exists(fileName))
-            {
-                // Remove attributes.
-                File.SetAttributes(fileName, FileAttributes.Normal);
-
-                // Delete file.
-                File.Delete(fileName);
-                result = true;
-            }
-            else
-            {
-                MessageBox.Show(rm.GetString("file_not_found"), rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Deletes a startup item
-        /// </summary>
-        /// <param name="index"></param>
         void DeleteItem(int index)
         {
+            RegistryKey rk = null;
             string fileName;
 
             try
@@ -1690,51 +2183,193 @@ namespace StartupManager
                 // Get type (location) of startup item.
                 string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
 
-                if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU") || text == rm.GetString("HKLM") || text == rm.GetString("WHKLM"))
+                if (text == rm.GetString("HKCU"))
                 {
-                    if (DeleteItemInReg(text, listviewStartup.Items[index].Tag.ToString()))
-                    {
-                        // Remove item from listview.
-                        listviewStartup.Items[index].Remove();
+                    // Open "Run" key in HKEY_CURRENT_USER.
+                    rk = Registry.CurrentUser.OpenSubKey(RunKey, true);
 
-                        // Clear the details labels.
-                        labelArguments.Text = string.Empty;
-                        labelCommand.Text = string.Empty;
-                        labelCompany.Text = string.Empty;
-                        labelDescription.Text = string.Empty;
-                        labelFileVersion.Text = string.Empty;
-                        labelProductName.Text = string.Empty;
-                    }
+                    // Attempt to delete the value.
+                    rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                    // Remove item from listview.
+                    listviewStartup.Items[index].Remove();
+
+                    // Clear the details labels.
+                    labelArguments.Text = "";
+                    labelCommand.Text = "";
+                    labelCompany.Text = "";
+                    labelDescription.Text = "";
+                    labelFileVersion.Text = "";
+                    labelProductName.Text = "";
 
                     return;
                 }
 
-                if (text == rm.GetString("StartupCurrentUser") || text == rm.GetString("StartupAllUsers"))
+                if (text == rm.GetString("WHKCU"))
+                {
+                    // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node.
+                    rk = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+
+                    // Attempt to delete the value.
+                    rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                    // Remove item from listview.
+                    listviewStartup.Items[index].Remove();
+
+                    // Clear the details labels.
+                    labelArguments.Text = "";
+                    labelCommand.Text = "";
+                    labelCompany.Text = "";
+                    labelDescription.Text = "";
+                    labelFileVersion.Text = "";
+                    labelProductName.Text = "";
+
+                    return;
+                }
+
+                if (text == rm.GetString("HKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE.
+                    rk = Registry.LocalMachine.OpenSubKey(RunKey, true);
+
+                    // Attempt to delete the value.
+                    rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                    // Remove item from listview.
+                    listviewStartup.Items[index].Remove();
+
+                    // Clear the details labels.
+                    labelArguments.Text = "";
+                    labelCommand.Text = "";
+                    labelCompany.Text = "";
+                    labelDescription.Text = "";
+                    labelFileVersion.Text = "";
+                    labelProductName.Text = "";
+
+                    return;
+                }
+
+                if (text == rm.GetString("WHKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node.
+                    rk = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+
+                    // Attempt to delete the value.
+                    rk.DeleteValue(listviewStartup.Items[index].Tag.ToString());
+
+                    // Remove item from listview.
+                    listviewStartup.Items[index].Remove();
+
+                    // Clear the details labels.
+                    labelArguments.Text = "";
+                    labelCommand.Text = "";
+                    labelCompany.Text = "";
+                    labelDescription.Text = "";
+                    labelFileVersion.Text = "";
+                    labelProductName.Text = "";
+
+                    return;
+                }
+
+                if (text == rm.GetString("StartupCurrentUser"))
                 {
                     // Get the file name.
                     fileName = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
 
-                    if (DeleteItemForUser(fileName))
+                    // Make sure file exists.
+                    if (File.Exists(fileName))
                     {
+                        // Remove attributes.
+                        File.SetAttributes(fileName, FileAttributes.Normal);
+
+                        // Delete file.
+                        File.Delete(fileName);
+
                         // Remove item from listview.
                         listviewStartup.Items[index].Remove();
 
                         // Clear the details labels.
-                        labelArguments.Text = string.Empty;
-                        labelCommand.Text = string.Empty;
-                        labelCompany.Text = string.Empty;
-                        labelDescription.Text = string.Empty;
-                        labelFileVersion.Text = string.Empty;
-                        labelProductName.Text = string.Empty;
+                        labelArguments.Text = "";
+                        labelCommand.Text = "";
+                        labelCompany.Text = "";
+                        labelDescription.Text = "";
+                        labelFileVersion.Text = "";
+                        labelProductName.Text = "";
                     }
+                    else
+                    {
+                        MessageBox.Show(rm.GetString("file_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+
+                    return;
+                }
+
+                if (text == rm.GetString("StartupAllUsers"))
+                {
+                    // Get the file name.
+                    fileName = listviewStartup.Items[index].SubItems[(int)ListCol.Path].Text;
+
+                    // Make sure file exists.
+                    if (File.Exists(fileName))
+                    {
+                        // Remove attributes.
+                        File.SetAttributes(fileName, FileAttributes.Normal);
+
+                        // Delete file.
+                        File.Delete(fileName);
+
+                        // Remove item from listview.
+                        listviewStartup.Items[index].Remove();
+
+                        // Clear the details labels.
+                        labelArguments.Text = "";
+                        labelCommand.Text = "";
+                        labelCompany.Text = "";
+                        labelDescription.Text = "";
+                        labelFileVersion.Text = "";
+                        labelProductName.Text = "";
+                    }
+                    else
+                    {
+                        MessageBox.Show(rm.GetString("file_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_delete"), Environment.NewLine,
-                rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception except)
+            {
+                MessageBox.Show(rm.GetString("unable_to_delete") + "." + "\r\n" +
+                                rm.GetString("system_returned") + ":" + "\r\n" +
+                                except.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Close registry key.
+                if (rk != null)
+                {
+                    rk.Close();
+                }
             }
         }
 
@@ -1742,10 +2377,6 @@ namespace StartupManager
 
         #region Open Folder Method
 
-        /// <summary>
-        /// Opens folder where the current item is located in Windows Explorer
-        /// </summary>
-        /// <param name="index">index of item</param>
         void OpenFolder(int index)
         {
             try
@@ -1762,7 +2393,7 @@ namespace StartupManager
                     folder = Path.GetDirectoryName(folder);
 
                     // Start Explorer.
-                    ProcessStartInfo startInfo =
+                    var startInfo =
                         new ProcessStartInfo(Environment.GetEnvironmentVariable("windir") + "\\explorer.exe");
                     startInfo.Arguments = " /root, " + folder;
                     startInfo.WindowStyle = ProcessWindowStyle.Normal;
@@ -1771,34 +2402,40 @@ namespace StartupManager
                 else
                 {
                     //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
+                    MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                if (ex is Win32Exception)
-                {
-                    //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_open"), Environment.NewLine,
-                              rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(rm.GetString("unable_to_open") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_open") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_open") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                //  Cannot find file.
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
         #endregion
 
         #region Execute Command Method
-        /// <summary>
-        /// Runs current item
-        /// </summary>
-        /// <param name="index">item index in list</param>
+
         void ExecuteCommand(int index)
         {
             try
@@ -1826,21 +2463,21 @@ namespace StartupManager
                     // If the command contains a complete path and filename, remove to get the arguments.
                     if (command.Contains(@"\:"))
                     {
-                        arguments = command.Replace(fileName, string.Empty);
+                        arguments = command.Replace(fileName, "");
                     }
                     // Check if filename in "command" does not contain an extension.
                     // Just remove the filename to get the arguments.
                     else if (!command.Substring(0, command.IndexOf(" ") - 1).Contains("."))
                     {
-                        arguments = command.Replace(Path.GetFileNameWithoutExtension(fileName), string.Empty);
+                        arguments = command.Replace(Path.GetFileNameWithoutExtension(fileName), "");
                     }
                     else
                     {
-                        arguments = command.Replace(Path.GetFileName(fileName), string.Empty);
+                        arguments = command.Replace(Path.GetFileName(fileName), "");
                     }
 
                     // Remove all quotes.
-                    arguments = arguments.Replace("\"", string.Empty);
+                    arguments = arguments.Replace("\"", "");
                 }
 
                 if (File.Exists(fileName))
@@ -1854,23 +2491,32 @@ namespace StartupManager
                 else
                 {
                     //  Cannot find file.
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
+                    MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
                                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                if (ex is Win32Exception)
-                {
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_execute"), Environment.NewLine,
-                    rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                    rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(rm.GetString("unable_to_execute") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unabble_to_execute") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unabble_to_execute") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -1878,169 +2524,162 @@ namespace StartupManager
 
         #region Move to All Users Method
 
-        /// <summary>
-        /// Moves an item in registry so that it will be available for 'All Users'
-        /// </summary>
-        /// <param name="regDir">current directory in registry where the item is located</param>
-        /// <param name="subKeyName">subKey name</param>
-        /// <returns>true if success, false - otherwise</returns>
-        bool MoveToAllUsersInReg(string regDir, string subKeyName)
-        {
-            bool result = false;
-            RegistryKey regKey = null;
-            string command = string.Empty;
-            try
-            {
-                if (regDir == rm.GetString("HKCU"))
-                {
-                    // Open "Run" key in HKEY_CURRENT_USER and get value.
-                    regKey = Registry.CurrentUser.OpenSubKey(RunKey, true);
-                }
-                else if (regDir == rm.GetString("WHKCU"))
-                {
-                    regKey = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
-                }
-                else
-                    return result;
-
-                command = regKey.GetValue(subKeyName).ToString();
-
-                // Delete the value in HKEY_LOCAL_MACHINE.
-                regKey.DeleteValue(subKeyName);
-
-                regKey.Close();
-                if (regDir == "HKCU")
-                    // Open "Run" key in HKEY_LOCAL_MACHINE and set the value.
-                    regKey = Registry.LocalMachine.OpenSubKey(RunKey, true);
-                else
-                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and set the value.
-                    regKey = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
-                regKey.SetValue(subKeyName, command);
-
-                regKey.Close();
-                result = true;
-            }
-            catch (Exception ex)
-            {
-            }
-            finally
-            {
-                // Close registry key.
-                if (regKey != null)
-                {
-                    regKey.Close();
-                }
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// Moves executable file for the item so that it will be available for 'All Users'
-        /// </summary>
-        /// <param name="filePath"></param>
-        /// <param name="newFilePath"></param>
-        /// <returns>true - if success, false - otherwise</returns>
-        bool MoveToAllUsersForUser(string filePath, string newFilePath)
-        {
-            bool result = false;
-
-            if (File.Exists(filePath))
-            {
-                // Remove any attributes.
-                File.SetAttributes(filePath, FileAttributes.Normal);
-
-                // Move the shortcut from Current User to All Users.   
-
-                if (File.Exists(newFilePath))
-                    File.Delete(newFilePath);
-
-                File.Move(filePath, newFilePath);
-
-                result = true;
-            }
-            else
-            {
-                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Moves item to be available for 'All Users'
-        /// </summary>
-        /// <param name="index"></param>
         void MoveToAllUsers(int index)
         {
+            RegistryKey rk = null;
+
             try
             {
+                string name;
+                string command;
+                string filePath;
+                string newFilePath;
+
                 // Get type (location) of startup item.
                 string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
-                if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU"))
-                {
-                    if (MoveToAllUsersInReg(text, listviewStartup.Items[index].Tag.ToString()))
-                    {
-                        // Change the listview to indicate that this item is now disabled.
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("HKLM");
 
-                        // Set context menu and tool strip buttons.
-                        SetItems(index, "All Users");
-                    }
+                if (text == rm.GetString("HKCU"))
+                {
+                    // Open "Run" key in HKEY_CURRENT_USER and get value.
+                    rk = Registry.CurrentUser.OpenSubKey(RunKey, true);
+                    name = listviewStartup.Items[index].Tag.ToString();
+                    command = rk.GetValue(name).ToString();
+
+                    // Delete the value in HKEY_LOCAL_MACHINE.
+                    rk.DeleteValue(name);
+
+                    rk.Close();
+
+                    // Open "Run" key in HKEY_LOCAL_MACHINE and set the value.
+                    rk = Registry.LocalMachine.OpenSubKey(RunKey, true);
+                    rk.SetValue(name, command);
+
+                    rk.Close();
+
+                    // Change the listview to indicate that this item is now disabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("HKLM");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "All Users");
+
                     return;
                 }
-                else if (text == rm.GetString("HKLM") || text == rm.GetString("WHKLM"))
+
+                if (text == rm.GetString("WHKCU"))
+                {
+                    // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node and get value.
+                    rk = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+                    name = listviewStartup.Items[index].Text;
+                    command = rk.GetValue(name).ToString();
+
+                    // Delete the value in HKEY_LOCAL_MACHINE.
+                    rk.DeleteValue(name);
+
+                    rk.Close();
+
+                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and set the value.
+                    rk = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                    rk.SetValue(name, command);
+
+                    rk.Close();
+
+                    // Change the listview to indicate that this item is now disabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("WHKLM");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "All Users");
+
+                    return;
+                }
+
+                if (text == rm.GetString("HKLM"))
                 {
                     // Do nothing. Startup item is already in All Users.
                     return;
                 }
-                else if (text == rm.GetString("StartupCurrentUser"))
-                {
-                    string filePath;
-                    string newFilePath;
 
+                if (text == rm.GetString("WHKLM"))
+                {
+                    // Do nothing. Startup item is already in All Users.
+                    return;
+                }
+
+                if (text == rm.GetString("StartupCurrentUser"))
+                {
                     // Get the file name.
-                    string path = listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text;
+                    name = listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text;
 
                     // Get the current path.
-                    filePath = currentUserStartup + path;
+                    filePath = currentUserStartup + name;
 
                     // Get the new path.
-                    newFilePath = allUsersStartup + path;
+                    newFilePath = allUsersStartup + name;
 
-                    if (MoveToAllUsersForUser(filePath, newFilePath))
+                    if (File.Exists(filePath))
                     {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+
+                        // Move the shortcut from Current User to All Users.   
+
+                        if (File.Exists(newFilePath))
+                            File.Delete(newFilePath);
+
+                        File.Move(filePath, newFilePath);                        
+
                         // Change the location in the listview.
                         listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("StartupAllUsers");
 
                         // Set context menu and tool strip buttons.
                         SetItems(index, "All Users");
                     }
+                    else
+                    {
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
 
                     return;
                 }
-                else if (text == rm.GetString("StartupAllUsers"))
+
+                if (text == rm.GetString("StartupAllUsers"))
                 {
                     // Do nothing. Startup item is already in All Users.
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                if (ex is Win32Exception)
-                {
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
-                        rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                        rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                MessageBox.Show("test2");
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
+                // Close registry key.
+                if (rk != null)
+                {
+                    rk.Close();
+                }
+
                 //Update List
                 FillListview();
             }
@@ -2050,159 +2689,162 @@ namespace StartupManager
 
         #region Move to Current User Method
 
-        /// <summary>
-        /// Moves item in registry so that it will be available for 'Current User'
-        /// </summary>
-        /// <param name="regDir"></param>
-        /// <param name="subKeyName"></param>
-        /// <returns></returns>
-        bool MoveToCurrentUserInReg(string regDir, string subKeyName)
-        {
-            bool result = false;
-            RegistryKey regKey = null;
-            string command = string.Empty;
-            try
-            {
-                if (regDir == rm.GetString("HKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value.
-                    regKey = Registry.LocalMachine.OpenSubKey(RunKey, true);
-                }
-                else if (regDir == rm.GetString("WHKLM"))
-                {
-                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value.
-                    regKey = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
-                }
-                else
-                    return result;
-
-                command = regKey.GetValue(subKeyName).ToString();
-
-                // Delete the value in HKEY_LOCAL_MACHINE.
-                regKey.DeleteValue(subKeyName);
-
-                regKey.Close();
-
-                regKey = Registry.CurrentUser.OpenSubKey(RunKey, true);
-                regKey.SetValue(subKeyName, command);
-
-                regKey.Close();
-                result = true;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                // Close registry key.
-                if (regKey != null)
-                {
-                    regKey.Close();
-                }
-            }
-            return result;
-        }
-
-        /// Moves executable file for the item so that it will be available for 'Current User'
-        bool MoveToCurrentUsersForUser(string filePath, string newFilePath)
-        {
-            bool result = false;
-            if (File.Exists(filePath))
-            {
-                // Remove any attributes.
-                File.SetAttributes(filePath, FileAttributes.Normal);
-
-                // Move the shortcut from Current User to All Users.   
-
-                if (File.Exists(newFilePath))
-                    File.Delete(newFilePath);
-
-                File.Move(filePath, newFilePath);
-
-                result = true;
-            }
-            else
-            {
-                MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-
-            return result;
-        }
-
-        /// <summary>
-        /// Moves item to be available for 'Current User'
-        /// </summary>
-        /// <param name="index"></param>
         void MoveToCurrentUser(int index)
         {
+            RegistryKey rk = null;
+
             try
             {
+                string name;
+                string command;
+                string filePath;
+                string newFilePath;
+
                 // Get type (location) of startup item.
                 string text = listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text;
 
-                if (text == rm.GetString("HKCU") || text == rm.GetString("WHKCU"))
+                if (text == rm.GetString("HKCU"))
                 {
                     // Do nothing. Startup item is already in Current User.
                     return;
                 }
-                else if (text == rm.GetString("HKLM") || text == rm.GetString("WHKLM"))
-                {
-                    if (MoveToCurrentUserInReg(text, listviewStartup.Items[index].Tag.ToString()))
-                    {
-                        // Change the listview to indicate that this item is now disabled.                        
-                        listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("HKCU");
 
-                        // Set context menu and tool strip buttons.
-                        SetItems(index, "Current User");
-                    }
+                if (text == rm.GetString("WHKCU"))
+                {
+                    // Do nothing. Startup item is already in Current User.
                     return;
                 }
 
-                if (text == rm.GetString("StartupCurrenUser"))
+                if (text == rm.GetString("HKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE and get value.
+                    rk = Registry.LocalMachine.OpenSubKey(RunKey, true);
+                    name = listviewStartup.Items[index].Tag.ToString();
+                    command = rk.GetValue(name).ToString();
+
+                    // Delete the value in HKEY_LOCAL_MACHINE.
+                    rk.DeleteValue(name);
+
+                    rk.Close();
+
+                    // Open "Run" key in HKEY_CURRENT_USER and set the value.
+                    rk = Registry.CurrentUser.OpenSubKey(RunKey, true);
+                    rk.SetValue(name, command);
+
+                    rk.Close();
+
+                    // Change the listview to indicate that this item is now disabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("HKCU");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+                    return;
+                }
+
+                if (text == rm.GetString("WHKLM"))
+                {
+                    // Open "Run" key in HKEY_LOCAL_MACHINE\Wow6432Node and get value.
+                    rk = Registry.LocalMachine.OpenSubKey(WowRunKey, true);
+                    name = listviewStartup.Items[index].Text;
+                    command = rk.GetValue(name).ToString();
+
+                    // Delete the value in HKEY_LOCAL_MACHINE.
+                    rk.DeleteValue(name);
+
+                    rk.Close();
+
+                    // Open "Run" key in HKEY_CURRENT_USER\Wow6432Node and set the value.
+                    rk = Registry.CurrentUser.OpenSubKey(WowRunKey, true);
+                    rk.SetValue(name, command);
+
+                    rk.Close();
+
+                    // Change the listview to indicate that this item is now disabled.
+                    listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("HKCU");
+
+                    // Set context menu and tool strip buttons.
+                    SetItems(index, "Current User");
+
+                    return;
+                }
+
+                if (text == rm.GetString("StartupCurrentUser"))
                 {
                     // Do nothing. Startup item is already in Current User.
                     return;
                 }
                 if (text == rm.GetString("StartupAllUsers"))
                 {
-                    string filePath, newFilePath;
                     // Get the file name.
-                    string path = listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text;
+                    name = listviewStartup.Items[index].SubItems[(int)ListCol.FileName].Text;
 
                     // Get the current path.
-                    filePath = allUsersStartup + path;
+                    filePath = allUsersStartup + name;
+                    // MessageBox.Show("file path is :" + filePath);
                     // Get the new path.
-                    newFilePath = currentUserStartup + path;
-                    if (MoveToCurrentUsersForUser(filePath, newFilePath))
+                    newFilePath = currentUserStartup + name;
+                    // MessageBox.Show("New file path is :" + newFilePath);
+                    if (File.Exists(filePath))
                     {
+                        // Remove any attributes.
+                        File.SetAttributes(filePath, FileAttributes.Normal);
+
+                        // Move the shortcut from All Users to Current User.
+
+                        if (File.Exists(newFilePath))
+                            File.Delete(newFilePath);
+
+                        File.Move(filePath, newFilePath);
+
                         // Change the listview to indicate that this item is now disabled.
                         listviewStartup.Items[index].SubItems[(int)ListCol.Type].Text = rm.GetString("StartupCurrentUser");
 
                         // Set context menu and tool strip buttons.
                         SetItems(index, "Current User");
                     }
+                    else
+                    {
+                        // MessageBox.Show("test 3-->" + filePath);
+                        MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                        MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
 
                     return;
                 }
             }
-            catch (Exception ex)
+            catch (UnauthorizedAccessException ex)
             {
-                if (ex is Win32Exception)
-                {
-                    MessageBox.Show(rm.GetString("file_folder_not_found"), rm.GetString("startup_manager"),
-                                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-                else
-                {
-                    MessageBox.Show(string.Format("{0}{1}{2}{3}{4}", rm.GetString("unable_to_move"), Environment.NewLine,
-                                            rm.GetString("system_returned"), Environment.NewLine, ex.Message),
-                              rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                ex.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException exc)
+            {
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                exc.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SecurityException excep)
+            {
+                MessageBox.Show(rm.GetString("unable_to_move") + "."
+                                + "\r\n" + rm.GetString("system_returned") + ":" + "\r\n" +
+                                excep.Message, rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Win32Exception)
+            {
+                // MessageBox.Show("test 4");
+                MessageBox.Show(rm.GetString("file_folder_not_found") + ".", rm.GetString("startup_manager"),
+                                MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {
+                // Close registry key.
+                if (rk != null)
+                {
+                    rk.Close();
+                }
+
                 //Update List
                 FillListview();
             }
@@ -2249,10 +2891,6 @@ namespace StartupManager
             return bmp;
         }
 
-        /// <summary>
-        /// Sets culture for the form
-        /// </summary>
-        /// <param name="culture"></param>
         void SetCulture(CultureInfo culture)
         {
             var resourceManager = new ResourceManager("StartupManager.Resources", typeof(FormMain).Assembly);
@@ -2286,12 +2924,14 @@ namespace StartupManager
             Status.Text = resourceManager.GetString("status");
             labelCommandDesc.Text = resourceManager.GetString("command") + ":";
             labelFileVersionDesc.Text = resourceManager.GetString("full_version") + ":";
-            labelDescriptionDesc.Text = resourceManager.GetString("description");
+            labelDescriptionDesc.Text = resourceManager.GetString("description") + ":";
             labelCompanyDesc.Text = resourceManager.GetString("company") + ":";
             labelDetails.Text = resourceManager.GetString("details");
             Text = resourceManager.GetString("startup_manager");
             labelProductNameDesc.Text = resourceManager.GetString("product") + ":";
             ucTop.Text = resourceManager.GetString("startup_manager");
+
+            //    this.pictureBox1.Image = (System.Drawing.Image)ResourceManager.GetObject("header",culture);
         }
     }
 }

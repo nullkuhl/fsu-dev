@@ -121,13 +121,13 @@
     <value>Backup</value>
   </data>
   <data name="backup_note" xml:space="preserve">
-    <value>The Backup utility helps you to protect data from accidental or unwanted loss, for example if your system experiences hardware or storage media faliure.</value>
+    <value>The Backup utility helps you to protect data from accidental or unwanted loss, for example if your system experiences hardware or storage media faliure</value>
   </data>
   <data name="checkdisk" xml:space="preserve">
     <value>Check Disk</value>
   </data>
   <data name="checkdisk_note" xml:space="preserve">
-    <value>A command line tool that checks your storage media for problems and repairs them like bad sectors, lost clusters, networked files and directory errors.</value>
+    <value>A command line tool that checks your storage media for problems and repairs them like bad sectors, lost clusters, networked files and directory errors</value>
   </data>
   <data name="critical_warning" xml:space="preserve">
     <value>Critical Warning</value>
@@ -136,7 +136,7 @@
     <value>Disk Defragmenter</value>
   </data>
   <data name="disk_defragmenter_note" xml:space="preserve">
-    <value>When you install a program on your computer its files might end up spread across your hard drive. This is called fragmentation. If the fragmentation becomes too much the hard drive's performance may degrade and programs might be executed slower. The defragmentation tool optimizes the performance of your PC and reorganizes the files on your hard drive into contiguous blocks.</value>
+    <value>When you install a program on your computer its files might end up spreaded across your hard drive. This is called fragmentation. If the fragmentation becomes to much the hard drive's performance may degrade and programs might be executed slower. The defragmentation tool optimizes the performance of your PC and reorganizes the files on your hard drive into contiguous blocks</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
     <value>http://freemium.com/company/faq/</value>
@@ -145,13 +145,13 @@
     <value>System File Checker</value>
   </data>
   <data name="system_file_checker_note" xml:space="preserve">
-    <value>This tool checks all protected system files for corruption. If a protected system file has been overwritten it will be restored from the installation cache (%Systemroot%\System32\Dllcache) or the Windows installation source.</value>
+    <value>This tool checks all protected system files for corruption. If a protected system file has been overwritten it will be restored from the installation cache (%Systemroot%\System32\Dllcache) or the Windows installation source</value>
   </data>
   <data name="system_restore" xml:space="preserve">
     <value>System Restore</value>
   </data>
   <data name="system_restore_note" xml:space="preserve">
-    <value>Every time you install a new application on your computer you're making changes to it. Sometimes your PC becomes unstable because of this. With the System Restore you can reset the state of your computer to a previous point in time, when it worked properly.</value>
+    <value>Every time you install a new application on your computer you're making changes to it. Sometimes your PC becomes unstable because of this. With the System Restore you can reset the state of your computer to a previous point in time, when it worked properly</value>
   </data>
   <data name="tool_not_found" xml:space="preserve">
     <value>This tool is not found on your platform</value>

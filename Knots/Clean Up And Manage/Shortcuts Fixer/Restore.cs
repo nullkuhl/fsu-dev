@@ -32,16 +32,18 @@ namespace ShortcutsFixer
 		/// <param name="e"></param>
 		void Restore_Load(object sender, EventArgs e)
 		{
-            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
+			var culture = new CultureInfo(CfgFile.Get("Lang"));
 			SetCulture(culture);
 			Shown += Restore_Shown;
+			//backobj = new Backup();
+			//backobj.ShowDialog();
 			FillTable();
 		}
 
 		void Restore_Shown(object sender, EventArgs e)
 		{
 			dgwMain.Columns[1].Width = 230;
-			dgwMain.Columns[0].HeaderText = string.Empty;
+			dgwMain.Columns[0].HeaderText = "";
 			dgwMain.Columns[2].Width = 230;
 			dgwMain.Columns[3].Width = 230;
 			dgwMain.Columns[0].Width = 30;
@@ -59,17 +61,38 @@ namespace ShortcutsFixer
 			myTable.ReadXml(@"datafile");
 
 			dgwMain.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+			//myTable.Columns.Add("Select", typeof(bool));
+			//myTable.Columns[3].DefaultValue = true;
+
+			//for (int i = 0; i < myTable.Rows.Count; i++)
+			//{
+			//    //MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
+			//    myTable.Rows[i][3] = false;
+
+			//}
 
 			for (int i = 0; i < myTable.Rows.Count; i++)
-			{				
+			{
+				//MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
 				if (Convert.ToString(myTable.Rows[i][3].ToString()) == checkDate)
-				{					
+				{
+					//dataGridView1.Rows.RemoveAt(i);
+					//myTable.Rows.RemoveAt(i);
+					//i--;
 					myTable.Rows[i][0] = true;
 				}
 			}
 
-            string expression = "Date = '" + Convert.ToDateTime(checkDate) + "'";
+			////dataGridView1.Columns[2].Visible = false;
 
+			//myTable.DefaultView.RowFilter = "true";
+			//myTable.DefaultView.FindRows(Convert.ToInt32(checkDate));
+
+			string expression = "Date = '" + Convert.ToDateTime(checkDate) + "'";
+
+			// Use the Select method to find all rows matching the filter.
+
+			//myTable.Select(expression);
 			dgwMain.DataSource = myTable;
 
 			((DataTable) dgwMain.DataSource).DefaultView.RowFilter = expression;
@@ -88,12 +111,13 @@ namespace ShortcutsFixer
 				}
 				catch (Exception)
 				{
-					MessageBox.Show(rm.GetString("unable-restore"));
+					MessageBox.Show("Restore isn't a valid option, can't restore this file.");
 				}
 			}
 
 			for (int i = 0; i < dgwMain.Rows.Count; i++)
 			{
+				//MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
 				if (Convert.ToBoolean(dgwMain.Rows[i].Cells[0].Value))
 				{
 					dgwMain.Rows.RemoveAt(i);
@@ -114,6 +138,7 @@ namespace ShortcutsFixer
 
 			for (int i = 0; i < dgwMain.Rows.Count; i++)
 			{
+				//MessageBox.Show(dataGridView1.Rows[i].Cells[0].Value.ToString());
 				if (Convert.ToBoolean(dgwMain.Rows[i].Cells[0].Value))
 				{
 					dgwMain.Rows.RemoveAt(i);

@@ -127,10 +127,7 @@
     <value>Currently installed programs</value>
   </data>
   <data name="entries_removed" xml:space="preserve">
-    <value>Entries have been removed successfully</value>
-  </data>
-  <data name="error" xml:space="preserve">
-    <value>Error</value>
+    <value>entries have been removed successfully.</value>
   </data>
   <data name="error_occurred" xml:space="preserve">
     <value>Error occured</value>
@@ -160,7 +157,7 @@
     <value>You need administrative rights to use this functionality.</value>
   </data>
   <data name="one_entry_removed" xml:space="preserve">
-    <value>Entry has been removed successfully</value>
+    <value>entry has been removed successfully.</value>
   </data>
   <data name="operation_cancelled" xml:space="preserve">
     <value>Operation cancelled</value>
@@ -169,7 +166,7 @@
     <value>Programs</value>
   </data>
   <data name="programs_installed_total" xml:space="preserve">
-    <value>Programs installed on your computer (Total</value>
+    <value>Programs installed on your computer (Total </value>
   </data>
   <data name="publisher" xml:space="preserve">
     <value>Publisher</value>
@@ -216,20 +213,13 @@
   <data name="uninstall_programs" xml:space="preserve">
     <value>Uninstall programs</value>
   </data>
-  <data name="unistaller_not_found" xml:space="preserve">
-    <value>Uninstall files could not be found for {0}, Do you want to remove it from the list?</value>
-  </data>
   <data name="version" xml:space="preserve">
     <value>Version</value>
   </data>
-  <data name="entry_remove_confirm" xml:space="preserve">
-    <value>Please note that removing an entry is an irreversible process, it's better to try uninstalling first. Are you sure you want to remove selected item(s) ?</value>
+  <data name="error" xml:space="preserve">
+    <value>Error</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="FSUIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\FSUIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PCCleanerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\PCCleanerIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="unistaller_not_found" xml:space="preserve">
+    <value>Uninstall files could not be found for {0}, Do you want to remove it from the list?</value>
   </data>
 </root>

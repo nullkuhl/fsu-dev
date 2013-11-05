@@ -6,6 +6,7 @@ using System.Windows.Data;
 using System.Windows.Media;
 using System.Collections.Specialized;
 using System.ComponentModel;
+
 using ScottLogic.Shapes;
 using System.Windows.Media.Animation;
 using ScottLogic.ScottLogic.PieChart;

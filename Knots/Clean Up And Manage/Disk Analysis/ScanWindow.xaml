@@ -26,7 +26,8 @@
 								 Content="{x:Static props:Resources.IndividualDrives}"
 								 Height="16"
 								 Name="rbDrives"
-								 Margin="10,10,0,0"/>
+								 Margin="10,10,0,0"
+								 Checked="rbDrives_Checked" />
 				</StackPanel>
 				<StackPanel HorizontalAlignment="Right"
 							Width="370">

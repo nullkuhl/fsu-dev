@@ -6,7 +6,6 @@ using System.Linq;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 using Microsoft.Win32;
-using Knots.Security.TracksEraserCore;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -88,23 +87,23 @@ namespace FreemiumUtilities.TracksEraser
 
 			if (dr == DialogResult.Yes)
 			{
-                for (int i = 0; i < lsvIECookies.Items.Count; i++)
-                {
-                    Application.DoEvents();
-                    if (lsvIECookies.Items[i].Checked)
-                    {
-                        try
-                        {
-                            var fileInfo = new FileInfo(lsvIECookies.Items[i].Tag.ToString());
-                            fileInfo.Delete();
-                            //listView1.Items[i].Remove();
-                        }
-                        catch
-                        {
-                            //  MessageBox.Show(ex.Message);
-                        }
-                    }
-                }
+				for (int i = 0; i < lsvIECookies.Items.Count; i++)
+				{
+					Application.DoEvents();
+					if (lsvIECookies.Items[i].Checked)
+					{
+						try
+						{
+							var fileInfo = new FileInfo(lsvIECookies.Items[i].Tag.ToString());
+							fileInfo.Delete();
+							//listView1.Items[i].Remove();
+						}
+						catch
+						{
+							//  MessageBox.Show(ex.Message);
+						}
+					}
+				}
 				FrmOptions_Load(null, null);
 			}
 		}
@@ -246,7 +245,7 @@ namespace FreemiumUtilities.TracksEraser
 				{
 					if (IsBrowserInstalled("firefox") == false)
 						throw new Exception();
-					List<CookieData> cookies = Browser.GetCookies(BrowserType.FireFox);
+					List<CookieData> cookies = FFCookieManager.GetCookies();
 					ListViewFF.Items.Clear();
 					foreach (CookieData data in cookies)
 					{
@@ -281,7 +280,7 @@ namespace FreemiumUtilities.TracksEraser
 				{
 					if (IsBrowserInstalled("chrome") == false)
 						throw new Exception();
-					List<CookieData> cookies = Browser.GetCookies(BrowserType.Chrome);
+					List<CookieData> cookies = ChromeCookieManager.GetChromeCookies();
 					ListViewChrome.Items.Clear();
 					foreach (CookieData data in cookies)
 					{
@@ -359,7 +358,7 @@ namespace FreemiumUtilities.TracksEraser
                     foreach (ListViewItem item in ListViewFF.CheckedItems)
                     {
                         Application.DoEvents();
-                        Browser.DeleteCookie(BrowserType.FireFox, item.Tag);
+                        FFCookieManager.DeleteCookie(item.Tag);
                         ListViewFF.Items.Remove(item);
                     }
 
@@ -393,7 +392,7 @@ namespace FreemiumUtilities.TracksEraser
 						Application.DoEvents();
 						if (ListViewChrome.Items[i].Checked)
 						{
-							Browser.DeleteCookie(BrowserType.Chrome, ListViewChrome.Items[i].Tag);
+							ChromeCookieManager.DeleteCookie(ListViewChrome.Items[i].Tag);
 							ListViewChrome.Items[i].Remove();
 						}
 					}

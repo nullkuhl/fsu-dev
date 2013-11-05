@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="access_denied" xml:space="preserve">
-    <value>Sie sind nicht berechtigt, um bestimmtes Ziel zu schreiben. Bitte wählen Sie einen anderen Zielordner.</value>
+  <data name="s360_min" xml:space="preserve">
+    <value>360 KB (Minimum)</value>
   </data>
   <data name="add_self_joining" xml:space="preserve">
     <value>Selbstzusammenführende Datei erstellen</value>
@@ -150,9 +150,6 @@
   <data name="delete_pieces" xml:space="preserve">
     <value>Die einzelnen Teile und die ausführbare Datei nach Zusammenführung löschen</value>
   </data>
-  <data name="doselect_join_file" xml:space="preserve">
-    <value>Möchten Sie zunächst die Dateien zum Zusammenführen auswählen?</value>
-  </data>
   <data name="do_events" xml:space="preserve">
     <value>Ereignisse auch ausführen bei jedem</value>
   </data>
@@ -177,12 +174,6 @@
   <data name="file_splitter_joiner" xml:space="preserve">
     <value>Aufteilen &amp; Zusammenführen</value>
   </data>
-  <data name="file_splitter_joiner_title" xml:space="preserve">
-    <value>Aufteilen &amp;&amp; Zusammenführen</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
   <data name="idle" xml:space="preserve">
     <value>Unbeschäftigt</value>
   </data>
@@ -198,25 +189,19 @@
   <data name="join_file" xml:space="preserve">
     <value>Zusammenführen</value>
   </data>
-  <data name="join_interrupted" xml:space="preserve">
-    <value>Verbinden unterbrochen. Kann nicht fortgesetzt werden!</value>
-  </data>
   <data name="may_not_respond" xml:space="preserve">
     <value>(Die Anwendung reagiert eventuell für längere Zeit nicht, wenn der Wert zu groß ist)</value>
-  </data>
-  <data name="min_parts_count" xml:space="preserve">
-    <value>Mindestens 2 Datei-Teile zum Zusammenführen</value>
-  </data>
-  <data name="not_enough_disk_space" xml:space="preserve">
-    <value>Nicht ausreichend Speicherplatz. Bitte verwenden Sie ein anderes Verzeichnis.</value>
   </data>
   <data name="not_join_file" xml:space="preserve">
     <value>Keine .join-Datei</value>
   </data>
   <data name="num_of_files" xml:space="preserve">
-    <value>Anzahl an Dateiteilen</value>
+    <value>Anzahl an gewünschten Dateiteilen</value>
   </data>
   <data name="num_of_pieces" xml:space="preserve">
+    <value>Teileanzahl</value>
+  </data>
+  <data name="num_of_pieces1" xml:space="preserve">
     <value>Teileanzahl</value>
   </data>
   <data name="num_pieces" xml:space="preserve">
@@ -227,12 +212,6 @@
   </data>
   <data name="options" xml:space="preserve">
     <value>Optionen</value>
-  </data>
-  <data name="overwrite_confirm" xml:space="preserve">
-    <value>Eine Datei mit dem gleichen Namen wie die zusammengefügte Datei existiert bereits. Sind Sie sicher, dass Sie diese Datei überschreiben?</value>
-  </data>
-  <data name="part_not_found" xml:space="preserve">
-    <value>Ein Datei-Teil wurde nicht gefunden. Kann nicht fortgesetzt werden.</value>
   </data>
   <data name="part_num" xml:space="preserve">
     <value>Teilenummer</value>
@@ -264,9 +243,6 @@
   <data name="resume" xml:space="preserve">
     <value>Fortsetzen</value>
   </data>
-  <data name="s360_min" xml:space="preserve">
-    <value>360 KB (Minimum)</value>
-  </data>
   <data name="save_joined_file" xml:space="preserve">
     <value>Zusammengeführte Datei in Ordner speichern</value>
   </data>
@@ -284,6 +260,9 @@
   </data>
   <data name="select_join_file" xml:space="preserve">
     <value>Zusammenzuführende Datei auswählen</value>
+  </data>
+  <data name="doselect_join_file" xml:space="preserve">
+    <value>Möchten Sie zunächst die Dateien zum Zusammenführen auswählen?</value>
   </data>
   <data name="select_split" xml:space="preserve">
     <value>Möchten Sie eine aufzuteilende Datei auswählen</value>
@@ -306,9 +285,6 @@
   <data name="split_info" xml:space="preserve">
     <value>Informationen</value>
   </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Splitting unterbrochen. Kann nicht fortgesetzt werden!</value>
-  </data>
   <data name="stream_reader" xml:space="preserve">
     <value>Streamreader nicht geschlossen</value>
   </data>
@@ -317,5 +293,32 @@
   </data>
   <data name="too_large" xml:space="preserve">
     <value>Eingegebene Teilegröße ist zu groß. Geben Sie bitte einen niedrigeren Wert ein</value>
+  </data>
+  <data name="file_splitter_joiner_title" xml:space="preserve">
+    <value>Aufteilen &amp;&amp; Zusammenführen</value>
+  </data>
+  <data name="part_not_found" xml:space="preserve">
+    <value>Ein Datei-Teil wurde nicht gefunden. Kann nicht fortgesetzt werden.</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="access_denied" xml:space="preserve">
+    <value>Sie sind nicht berechtigt, um bestimmtes Ziel zu schreiben. Bitte wählen Sie einen anderen Zielordner.</value>
+  </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Verbinden unterbrochen. Kann nicht fortgesetzt werden!</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Splitting unterbrochen. Kann nicht fortgesetzt werden!</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>Eine Datei mit dem gleichen Namen wie die zusammengefügte Datei existiert bereits. Sind Sie sicher, dass Sie diese Datei überschreiben?</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>Mindestens 2 Datei-Teile zum Zusammenführen</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Nicht ausreichend Speicherplatz. Bitte verwenden Sie ein anderes Verzeichnis.</value>
   </data>
 </root>

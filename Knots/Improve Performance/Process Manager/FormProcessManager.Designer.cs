@@ -315,7 +315,7 @@ namespace ProcessManager
             this.lvprocesslist.UseCompatibleStateImageBehavior = false;
             this.lvprocesslist.View = System.Windows.Forms.View.Details;
             this.lvprocesslist.ColumnClick += new System.Windows.Forms.ColumnClickEventHandler(this.lvprocesslist_ColumnClick);
-            this.lvprocesslist.SelectedIndexChanged += new System.EventHandler(this.lvprocesslist_SelectedIndexChanged);
+            this.lvprocesslist.SelectedIndexChanged += new System.EventHandler(this.lvprocesslist_SelectedIndexChanged_1);
             this.lvprocesslist.Leave += new System.EventHandler(this.lvprocesslist_Leave);
             // 
             // procname

@@ -123,15 +123,6 @@
   <data name="aborted" xml:space="preserve">
     <value>Aborted</value>
   </data>
-  <data name="are_you_sure" xml:space="preserve">
-    <value>Are you sure you want to delete</value>
-  </data>
-  <data name="are_you_sure_cont" xml:space="preserve">
-    <value>shortcuts?</value>
-  </data>
-  <data name="atleast_one" xml:space="preserve">
-    <value>Please select at least on shortcut to delete.</value>
-  </data>
   <data name="backup" xml:space="preserve">
     <value>Backup</value>
   </data>
@@ -156,9 +147,6 @@
   <data name="choose_correct_shortcut" xml:space="preserve">
     <value>Choose the correct shortcut target</value>
   </data>
-  <data name="Confirmation" xml:space="preserve">
-    <value>Confirmation</value>
-  </data>
   <data name="date" xml:space="preserve">
     <value>Date</value>
   </data>
@@ -173,9 +161,6 @@
   </data>
   <data name="following_restore_points" xml:space="preserve">
     <value>Double click a system restore point to restore it.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
   </data>
   <data name="location" xml:space="preserve">
     <value>Location</value>
@@ -230,5 +215,20 @@
   </data>
   <data name="target" xml:space="preserve">
     <value>Target</value>
+  </data>
+  <data name="are_you_sure" xml:space="preserve">
+    <value>Are you sure you want to delete</value>
+  </data>
+  <data name="are_you_sure_cont" xml:space="preserve">
+    <value>shortcuts?</value>
+  </data>
+  <data name="atleast_one" xml:space="preserve">
+    <value>Please select at least on shortcut to delete.</value>
+  </data>
+  <data name="Confirmation" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

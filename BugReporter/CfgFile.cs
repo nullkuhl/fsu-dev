@@ -79,25 +79,23 @@ namespace BugReporter
 			}
 			else
 			{
-				string cfg = string.Empty;
-                using (StreamReader reader = new StreamReader(CfgFilePath))
-                {
-                    string line;
-                    while ((line = reader.ReadLine()) != null)
-                    {
-                        string[] entry = line.Split(new[] { ' ', '=' });
-                        if (entry[0] == key)
-                            cfg += key + "=" + value + "\r\n";
-                        else
-                            cfg += line + "\r\n";
-                    }
-                    reader.Close();
-                }
-                using (StreamWriter writer = new StreamWriter(CfgFilePath))
-                {
-                    writer.Write(cfg);
-                    writer.Close();
-                }
+				var cfg = "";
+				var reader = new StreamReader(CfgFilePath);
+
+				string line;
+				while ((line = reader.ReadLine()) != null)
+				{
+					var entry = line.Split(new[] { ' ', '=' });
+					if (entry[0] == key)
+						cfg += key + "=" + value + "\r\n";
+					else
+						cfg += line + "\r\n";
+				}
+				reader.Close();
+
+				var writer = new StreamWriter(CfgFilePath);
+				writer.Write(cfg);
+				writer.Close();
 			}
 		}
 	}

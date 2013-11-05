@@ -25,7 +25,7 @@ namespace FreemiumUtilities.Routine
 		{
 			Visibility result = Visibility.Hidden;
 
-            OneClickAppStatus s1 = (OneClickAppStatus)parameter;
+			var s1 = (OneClickAppStatus) parameter;
 
 			foreach (object val in values)
 			{
@@ -37,8 +37,8 @@ namespace FreemiumUtilities.Routine
 
 			if (values[0] != null && values[1] != null)
 			{
-                OneClickAppStatus s2 = (OneClickAppStatus)values[0];
-                OneClickAppStatus s3 = (OneClickAppStatus)values[1];
+				var s2 = (OneClickAppStatus) values[0];
+				var s3 = (OneClickAppStatus) values[1];
 
 				if (s2 == s3)
 				{

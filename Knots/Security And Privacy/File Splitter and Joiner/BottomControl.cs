@@ -25,17 +25,26 @@ namespace FileSplitterAndJoiner
 		/// </summary>
 		void SetImage()
 		{
-            Image image = Resources.bottomBar;
+			Image image;
 			try
 			{
 				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
+				image = Resources.bottomBar;
 				if (File.Exists(path))
+				{
 					image = Image.FromFile(path);
+				}
 			}
 			catch (Exception)
-			{				
+			{
+				image = Resources.bottomBar;
 			}
-			
+
+			if (image == null)
+			{
+				image = Resources.bottomBar;
+			}
+
 			lblBotomBar.Image = image;
 		}
 	}

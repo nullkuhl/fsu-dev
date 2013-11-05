@@ -6,6 +6,8 @@ namespace Context_Menu_Manager
 {
     public static class FileIcon
     {
+
+
         [DllImport("shell32.dll")]
         static extern IntPtr ExtractAssociatedIcon(IntPtr hinst, string file,
         ref int index);

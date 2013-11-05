@@ -5,11 +5,15 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Controls;
 
-/// <summary>
-/// The <see cref="RegistryCompactor"/> namespace defines a RegistryOptimizer knot
-/// </summary>
 namespace RegistryCompactor
 {
+	/// <summary>
+	/// The <see cref="RegistryCompactor"/> namespace defines a RegistryOptimizer knot
+	/// </summary>
+
+	[System.Runtime.CompilerServices.CompilerGenerated]
+	class NamespaceDoc { }
+
 	internal static class PInvoke
 	{
 		#region HKEY enum
@@ -420,16 +424,16 @@ namespace RegistryCompactor
 		/// <returns>File Size</returns>
 		long GetFileSize(string filePath)
 		{
-            long result = 0;
 			try
 			{
-                FileInfo fi = new FileInfo(filePath);
-                result = fi.Length;
+				var fi = new FileInfo(filePath);
+
+				return fi.Length;
 			}
 			catch (Exception)
 			{
+				return 0;
 			}
-            return result;
 		}
 
 		/// <summary>

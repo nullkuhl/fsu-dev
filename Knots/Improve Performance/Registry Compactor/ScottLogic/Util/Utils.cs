@@ -12,6 +12,9 @@ namespace ScottLogic.Util
 		/// The <see cref="ScottLogic.Util"/> namespace defines utils used in the ScottLogic PieChart
 		/// </summary>
 
+		[System.Runtime.CompilerServices.CompilerGenerated]
+		class NamespaceDoc { }
+
         /// <summary>
         /// Converts a coordinate from the polar coordinate system to the cartesian coordinate system.
         /// </summary>

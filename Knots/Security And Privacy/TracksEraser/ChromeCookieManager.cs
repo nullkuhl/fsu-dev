@@ -31,8 +31,8 @@ namespace FreemiumUtilities.TracksEraser
 		/// <returns></returns>
 		public static List<CookieData> GetChromeCookies()
 		{
-            List<CookieData> cookies = new List<CookieData>();
-			if (!string.IsNullOrEmpty(GetCHromePath()))
+			var cookies = new List<CookieData>();
+			if (GetCHromePath() != "")
 			{
 				using (var conn = new SQLiteConnection("Data Source=" + GetCHromePath()))
 				{
@@ -46,6 +46,7 @@ namespace FreemiumUtilities.TracksEraser
 							{
 								while (reader.Read())
 								{
+									//for (int i = 0; i < reader.FieldCount; i++)
 									{
 										var data = new CookieData
 										           	{
@@ -78,7 +79,7 @@ namespace FreemiumUtilities.TracksEraser
 		/// <param name="id"></param>
 		public static void DeleteCookie(object id)
 		{
-			if (!string.IsNullOrEmpty(GetCHromePath()))
+			if (GetCHromePath() != "")
 			{
 				using (var conn = new SQLiteConnection("Data Source=" + GetCHromePath()))
 				{

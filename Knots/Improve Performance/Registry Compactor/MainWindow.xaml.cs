@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Media.Imaging;
-using System.IO;
-using System.Windows.Interop;
 
 namespace RegistryCompactor
 {
@@ -31,7 +29,6 @@ namespace RegistryCompactor
 		public MainWindow()
 		{
 			InitializeComponent();
-          
 		}
 
 		#endregion
@@ -51,10 +48,10 @@ namespace RegistryCompactor
 				MessageBoxResult.OK)
 				return;
 
-            SecureDesktop secureDesktop = new SecureDesktop();
+			var secureDesktop = new SecureDesktop();
 			secureDesktop.Show();
 
-            AnalyzingProgress progressWindow = new AnalyzingProgress();
+			var progressWindow = new AnalyzingProgress();
 			progressWindow.ShowDialog();
 
 			secureDesktop.Close();
@@ -88,9 +85,6 @@ namespace RegistryCompactor
 
 		#region methods Analyzing Results
 
-        /// <summary>
-        /// Window Initialization
-        /// </summary>
 		void Init()
 		{
 			double oldRegistrySize = Utilites.GetOldRegistrySize(), newRegistrySize = Utilites.GetNewRegistrySize();
@@ -109,7 +103,7 @@ namespace RegistryCompactor
 			                         			diffRegistrySizeMB)
 			                         	};
 
-            BitmapImage logo = new BitmapImage();
+			var logo = new BitmapImage();
 
 			if ((100 - ((newRegistrySize / oldRegistrySize) * 100)) >= 5)
 			{
@@ -131,11 +125,6 @@ namespace RegistryCompactor
 			CurrentStep.Content = String.Format(Properties.Resources.StepXofY, 2, 3);
 		}
 
-        /// <summary>
-        /// Handles click event of Compact button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 		void buttonCompact_Click(object sender, RoutedEventArgs e)
 		{
 			if (
@@ -144,10 +133,10 @@ namespace RegistryCompactor
 				MessageBoxResult.No)
 				return;
 
-            SecureDesktop secureDesktop = new SecureDesktop();
+			var secureDesktop = new SecureDesktop();
 			secureDesktop.Show();
 
-            CompactingProgress compactingProgress = new CompactingProgress();
+			var compactingProgress = new CompactingProgress();
 			compactingProgress.ShowDialog();
 
 			secureDesktop.Close();
@@ -162,11 +151,6 @@ namespace RegistryCompactor
 			Close();
 		}
 
-        /// <summary>
-        /// Handles click event of Cancel button
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 		void buttonCancel_Click(object sender, RoutedEventArgs e)
 		{
 			gridAnalyzingResults.Visibility = Visibility.Collapsed;
@@ -174,19 +158,5 @@ namespace RegistryCompactor
 		}
 
 		#endregion
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-    
-   
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
-            {
-                 this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/PCCleanerIcon.ico", UriKind.RelativeOrAbsolute)).Stream);             
-            }
-            else
-            {           
-                this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/FSUIcon.ico", UriKind.RelativeOrAbsolute)).Stream);              
-            }
-        }
 	}
 }

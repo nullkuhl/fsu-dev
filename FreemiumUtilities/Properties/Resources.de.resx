@@ -197,7 +197,7 @@ Browser und behebt Probleme</value>
     <value>Wählen Sie die Chrome-Cookies aus, die Sie löschen möchten und klicken Sie unten auf "Gewählte Cookies jetzt löschen".</value>
   </data>
   <data name="check_mark_urls_ie" xml:space="preserve">
-    <value>Wählen Sie die Internet Explorer URLs aus, die Sie löschen möchten und klicken Sie unten auf "Gewählte URLs jetzt löschen".</value>
+    <value>Wählen Sie die Internet Explorer URLs aus, die Sie löschen möchten und klicken Sie unten auf "Gewählte URLs jetzt löschen"</value>
   </data>
   <data name="check_none" xml:space="preserve">
     <value>Alle abwählen</value>
@@ -425,7 +425,7 @@ und unwiederherstellbar</value>
 Dateien wieder her</value>
   </data>
   <data name="file_folder_list" xml:space="preserve">
-    <value>Microsoft allgemeiner Dialog - Datei-/Ordnerliste</value>
+    <value>Microsoft Allgemeiner Dialog - Datei-/Ordnerliste</value>
   </data>
   <data name="firefox" xml:space="preserve">
     <value>Mozilla Firefox</value>
@@ -578,7 +578,7 @@ Dateien von Ihren Datenträgern</value>
 Arbeitsspeicher im Hintergrund</value>
   </data>
   <data name="MinimiseToTrayCheckboxText" xml:space="preserve">
-    <value>In den Systembereich minimieren, wenn Programm geschlossen wird</value>
+    <value>In den Systembereich minimieren wenn Programm geschlossen wird</value>
   </data>
   <data name="Minimize" xml:space="preserve">
     <value>Minimieren</value>
@@ -777,10 +777,10 @@ und beschleunigt den Computer</value>
     <value>Elemente zum scannen auswählen</value>
   </data>
   <data name="SelectItemsToStartScanText" xml:space="preserve">
-    <value>Bitte wählen Sie mindestens ein Element um fortzufahren.</value>
+    <value>Bitte wählen Sie mindestens 1 Element um fortzufahren.</value>
   </data>
   <data name="SelectRestorePoint" xml:space="preserve">
-    <value>Bitte wählen Sie den Punkt, den Sie wiederherstellen wollen, und klicken dann auf "Wiederherstellen"</value>
+    <value>Bitte wählen Sie den Punkt den Sie wiederherstellen wollen und klicken dann auf "Wiederherstellen"</value>
   </data>
   <data name="SelectTracks" xml:space="preserve">
     <value>Spuren</value>
@@ -814,7 +814,7 @@ und beschleunigt den Computer</value>
   </data>
   <data name="SplitAndJoinDesc" xml:space="preserve">
     <value>Teilt große Dateien in kleine,
-besser verwaltbare Teile auf</value>
+bessere verwaltbare Teile auf</value>
   </data>
   <data name="SpyRemover" xml:space="preserve">
     <value>Spyware entfernen</value>
@@ -1097,7 +1097,7 @@ nützliche Windows-Programme</value>
     <value>am</value>
   </data>
   <data name="RunOnMinutes" xml:space="preserve">
-    <value>Minute(n)</value>
+    <value>Minute (n)</value>
   </data>
   <data name="RunWhenIdle" xml:space="preserve">
     <value>Im Leerlauf ausführen</value>
@@ -1106,7 +1106,7 @@ nützliche Windows-Programme</value>
     <value>Samstag</value>
   </data>
   <data name="ScheduleTaskMonth" xml:space="preserve">
-    <value>des Monats</value>
+    <value>des Monats (s)</value>
   </data>
   <data name="ScheduleTaskMonthly" xml:space="preserve">
     <value>Einer monatlichen Basis</value>
@@ -1142,7 +1142,7 @@ nützliche Windows-Programme</value>
     <value>Im Leerlauf</value>
   </data>
   <data name="WhenSystemIdle" xml:space="preserve">
-    <value>Wenn das System im Leerlauf für</value>
+    <value>Wenn das System im Leerlauf für:</value>
   </data>
   <data name="RegistryTools" xml:space="preserve">
     <value>Registry Tools</value>
@@ -1160,7 +1160,7 @@ nützliche Windows-Programme</value>
     <value>entschlüsseln mit System Utilities</value>
   </data>
   <data name="EncryptWithFreemiumTools" xml:space="preserve">
-    <value>Verschlüsseln mit System Utilities</value>
+    <value>verschlüsseln mit System Utilities</value>
   </data>
   <data name="FindEmptyFolders" xml:space="preserve">
     <value>leere Ordner finden mit System Utilities</value>
@@ -1169,7 +1169,7 @@ nützliche Windows-Programme</value>
     <value>Datei teilen mit System Utilities</value>
   </data>
   <data name="WipeWithFreemiumTools" xml:space="preserve">
-    <value>Sicher löschen mit System Utilities</value>
+    <value>sicher löschen mit System Utilities</value>
   </data>
   <data name="TimeFormat" xml:space="preserve">
     <value>HH:mm</value>
@@ -1362,7 +1362,7 @@ in ihnen wurde zurückgesetzt.</value>
     <value>Am {{date}} um {{time}}</value>
   </data>
   <data name="ScheduleWeeklyText" xml:space="preserve">
-    <value>Jeden {{day}} um {{time}} jede {{week}}</value>
+    <value>Jeden {{day}} um {{time}} alle {{week}}</value>
   </data>
   <data name="RestoreAndBackupCenter" xml:space="preserve">
     <value>Restore &amp; Backup Center</value>
@@ -1457,17 +1457,5 @@ Drücken Sie auf "OK", um. NET Framework v3.5 SP1 Download-Seite gehen.</value>
   </data>
   <data name="EntryPointsTo" xml:space="preserve">
     <value>Eintrag zeigt auf</value>
-  </data>
-  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
-    <value>Die Systemwiederherstellung ist deaktiviert. Möchten Sie dennoch auf eigenes Risiko fortfahren?</value>
-  </data>
-  <data name="CreatingRestorePoint" xml:space="preserve">
-    <value>Wiederherstellungspunkt erstellen...</value>
-  </data>
-  <data name="FileShredder" xml:space="preserve">
-    <value>Löschen Sie Dateien sicher</value>
-  </data>
-  <data name="select_day" xml:space="preserve">
-    <value>Mindestens einen Tag gewählt werden</value>
   </data>
 </root>

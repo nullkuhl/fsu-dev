@@ -117,8 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="access_denied" xml:space="preserve">
-    <value>You are not allowed to write to given destination. Please choose another destination folder.</value>
+  <data name="s360_min" xml:space="preserve">
+    <value>360 KB (minimum)</value>
   </data>
   <data name="add_self_joining" xml:space="preserve">
     <value>Add a self-joining executable</value>
@@ -150,9 +150,6 @@
   <data name="delete_pieces" xml:space="preserve">
     <value>Delete pieces and executable file after joining</value>
   </data>
-  <data name="doselect_join_file" xml:space="preserve">
-    <value>Would you like to select the files to join first?</value>
-  </data>
   <data name="do_events" xml:space="preserve">
     <value>Do events also at every</value>
   </data>
@@ -177,12 +174,6 @@
   <data name="file_splitter_joiner" xml:space="preserve">
     <value>Split &amp; Join</value>
   </data>
-  <data name="file_splitter_joiner_title" xml:space="preserve">
-    <value>Split &amp;&amp; Join</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
   <data name="idle" xml:space="preserve">
     <value>Idle</value>
   </data>
@@ -198,25 +189,19 @@
   <data name="join_file" xml:space="preserve">
     <value>Join file</value>
   </data>
-  <data name="join_interrupted" xml:space="preserve">
-    <value>Joining interrupted. Cannot continue!</value>
-  </data>
   <data name="may_not_respond" xml:space="preserve">
     <value>(the application may not respond for a long time if the value is too big)</value>
-  </data>
-  <data name="min_parts_count" xml:space="preserve">
-    <value>At least 2 part files to join</value>
-  </data>
-  <data name="not_enough_disk_space" xml:space="preserve">
-    <value>Not enough disk space. Please specify another folder.</value>
   </data>
   <data name="not_join_file" xml:space="preserve">
     <value>Not a .Join file</value>
   </data>
   <data name="num_of_files" xml:space="preserve">
-    <value>Number of file parts</value>
+    <value>Number of files to split your file into</value>
   </data>
   <data name="num_of_pieces" xml:space="preserve">
+    <value>Number of pieces</value>
+  </data>
+  <data name="num_of_pieces1" xml:space="preserve">
     <value>Number of pieces</value>
   </data>
   <data name="num_pieces" xml:space="preserve">
@@ -227,12 +212,6 @@
   </data>
   <data name="options" xml:space="preserve">
     <value>Options</value>
-  </data>
-  <data name="overwrite_confirm" xml:space="preserve">
-    <value>A file with the same name as the joined file already exists. Are you sure you want to overwrite this file?</value>
-  </data>
-  <data name="part_not_found" xml:space="preserve">
-    <value>A file part is missing. Cannot continue!</value>
   </data>
   <data name="part_num" xml:space="preserve">
     <value>Part nr.</value>
@@ -264,9 +243,6 @@
   <data name="resume" xml:space="preserve">
     <value>Resume</value>
   </data>
-  <data name="s360_min" xml:space="preserve">
-    <value>360 KB (minimum)</value>
-  </data>
   <data name="save_joined_file" xml:space="preserve">
     <value>Save joined file in folder</value>
   </data>
@@ -284,6 +260,9 @@
   </data>
   <data name="select_join_file" xml:space="preserve">
     <value>Select .Join file</value>
+  </data>
+  <data name="doselect_join_file" xml:space="preserve">
+    <value>Would you like to select the files to join first?</value>
   </data>
   <data name="select_split" xml:space="preserve">
     <value>Would you like to select a file to split</value>
@@ -306,9 +285,6 @@
   <data name="split_info" xml:space="preserve">
     <value>Split Info</value>
   </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Splitting interrupted. Cannot continue!</value>
-  </data>
   <data name="stream_reader" xml:space="preserve">
     <value>stream reader not closed</value>
   </data>
@@ -317,5 +293,32 @@
   </data>
   <data name="too_large" xml:space="preserve">
     <value>Specified part size is too large for splitting. Please specify a smaller part size</value>
+  </data>
+  <data name="file_splitter_joiner_title" xml:space="preserve">
+    <value>Split &amp;&amp; Join</value>
+  </data>
+  <data name="part_not_found" xml:space="preserve">
+    <value>A file part is missing. Cannot continue!</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="access_denied" xml:space="preserve">
+    <value>You are not allowed to write to given destination. Please choose another destination folder.</value>
+  </data>
+  <data name="join_interrupted" xml:space="preserve">
+    <value>Joining interrupted. Cannot continue!</value>
+  </data>
+  <data name="split_interrupted" xml:space="preserve">
+    <value>Splitting interrupted. Cannot continue!</value>
+  </data>
+  <data name="overwrite_confirm" xml:space="preserve">
+    <value>A file with the same name as the joined file already exists. Are you sure you want to overwrite this file?</value>
+  </data>
+  <data name="min_parts_count" xml:space="preserve">
+    <value>At least 2 part files to join</value>
+  </data>
+  <data name="not_enough_disk_space" xml:space="preserve">
+    <value>Not enough disk space. Please specify another folder.</value>
   </data>
 </root>

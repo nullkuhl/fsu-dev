@@ -7,7 +7,6 @@ using System.Threading;
 using System.Windows.Forms;
 using FreemiumUtil;
 using Microsoft.Win32;
-using Knots.Security.TracksEraserCore;
 
 namespace FreemiumUtilities.TracksEraser
 {
@@ -56,8 +55,9 @@ namespace FreemiumUtilities.TracksEraser
                     {
                         try
                         {
-                            FileInfo fileInfo = new FileInfo(lvCookiesIE.Items[i].Tag.ToString());
+                            var fileInfo = new FileInfo(lvCookiesIE.Items[i].Tag.ToString());
                             fileInfo.Delete();
+                            //listView1.Items[i].Remove();
                         }
                         catch (Exception)
                         {
@@ -86,7 +86,9 @@ namespace FreemiumUtilities.TracksEraser
                         {
                             string value = rk.GetValue(name).ToString();
                             if (item.Text == value)
+                            {
                                 rk.DeleteValue(name);
+                            }
                         }
                     }
                 }
@@ -126,10 +128,31 @@ namespace FreemiumUtilities.TracksEraser
         void FrmOptions_Load(object sender, EventArgs e)
         {
             SetCulture(new CultureInfo(CfgFile.Get("Lang")));
-            lvCookiesIE.Items.Clear();
+
+            //GetCookies();
+
+            string[] files;
             try
             {
-                lvCookiesIE.Items.AddRange(GetIECookies(cookiePath1));
+                files = Directory.GetFiles(cookiePath1, "*.txt");
+                lvCookiesIE.Items.Clear();
+
+                foreach (string sFile in files)
+                {
+                    var li = new ListViewItem();
+                    var fi = new FileInfo(sFile);
+                    var cView = new cCookieView(sFile);
+                    //Add item to listview
+                    li.Text = cView.Domain;
+                    li.Tag = fi.FullName;
+                    li.SubItems.Add(Environment.UserName);
+                    li.SubItems.Add(fi.Length.ToString());
+                    li.SubItems.Add(cView.Secure);
+                    li.SubItems.Add(fi.CreationTime.ToString());
+                    li.SubItems.Add(fi.Name);
+                    li.ImageIndex = 0;
+                    lvCookiesIE.Items.Add(li);
+                }
             }
             catch
             {
@@ -137,48 +160,35 @@ namespace FreemiumUtilities.TracksEraser
 
             try
             {
-                lvCookiesIE.Items.AddRange(GetIECookies(cookiePath2));
+                files = Directory.GetFiles(cookiePath2, "*.txt");
+                foreach (string sFile in files)
+                {
+                    var li = new ListViewItem();
+                    var fi = new FileInfo(sFile);
+                    var cView = new cCookieView(sFile);
+                    //Add item to listview
+                    li.Text = cView.Domain;
+                    li.Tag = fi.FullName;
+                    li.SubItems.Add(Environment.UserName);
+                    li.SubItems.Add(fi.Length.ToString());
+                    li.SubItems.Add(cView.Secure);
+                    li.SubItems.Add(fi.CreationTime.ToString());
+                    li.SubItems.Add(fi.Name);
+                    li.ImageIndex = 0;
+                    lvCookiesIE.Items.Add(li);
+                }
             }
             catch
             {
             }
+            foreach (ListViewItem item in lvCookiesIE.Items)
+                item.Checked = true;
 
             LoadIEURLs();
         }
 
         /// <summary>
-        /// Gets IE cookies
-        /// </summary>
-        /// <param name="path">path where the cookies are located</param>
-        /// <returns>array of listviewitems containing information about IE cookies</returns>
-        ListViewItem[] GetIECookies(string path)
-        {
-            string[] files = Directory.GetFiles(path, "*.txt");
-            ListViewItem[] lviItems = new ListViewItem[files.Length];
-            ListViewItem lvi;
-            int i = 0;
-            foreach (string sFile in files)
-            {
-                FileInfo fi = new FileInfo(sFile);
-                CCookieView cView = new CCookieView(sFile);
-                lvi = new ListViewItem();
-                lvi.Text = cView.Domain;
-                lvi.Tag = fi.FullName;
-                lvi.SubItems.Add(Environment.UserName);
-                lvi.SubItems.Add(fi.Length.ToString());
-                lvi.SubItems.Add(cView.Secure);
-                lvi.SubItems.Add(fi.CreationTime.ToString());
-                lvi.SubItems.Add(fi.Name);
-                lvi.ImageIndex = 0;
-                lvi.Checked = true;
-                lviItems[i] = lvi;
-                i++;
-            }
-            return lviItems;
-        }
-
-        /// <summary>
-        /// Set current language
+        /// change current language
         /// </summary>
         /// <param name="culture"></param>
         void SetCulture(CultureInfo culture)
@@ -228,9 +238,9 @@ namespace FreemiumUtilities.TracksEraser
                 Process[] pname = Process.GetProcessesByName("firefox");
                 if (pname.Length == 0)
                 {
-                    if (Helper.IsBrowserInstalled("firefox") == false)
+                    if (IsBrowserInstalled("firefox") == false)
                         throw new Exception();
-                    List<CookieData> cookies = Browser.GetCookies(BrowserType.FireFox);
+                    List<CookieData> cookies = FFCookieManager.GetCookies();
                     ListViewFF.Items.Clear();
                     foreach (CookieData data in cookies)
                     {
@@ -263,9 +273,9 @@ namespace FreemiumUtilities.TracksEraser
                 Process[] pname = Process.GetProcessesByName("chrome");
                 if (pname.Length == 0)
                 {
-                    if (Helper.IsBrowserInstalled("chrome") == false)
+                    if (IsBrowserInstalled("chrome") == false)
                         throw new Exception();
-                    List<CookieData> cookies = Browser.GetCookies(BrowserType.Chrome);
+                    List<CookieData> cookies = ChromeCookieManager.GetChromeCookies();
                     ListViewChrome.Items.Clear();
                     foreach (CookieData data in cookies)
                     {
@@ -288,6 +298,43 @@ namespace FreemiumUtilities.TracksEraser
             }
         }
 
+        /// <summary>
+        /// check if specific browser is installed
+        /// </summary>
+        /// <param name="browser"></param>
+        /// <returns></returns>
+        bool IsBrowserInstalled(string browser)
+        {
+            try
+            {
+                RegistryKey openSubKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Clients\StartMenuInternet");
+                if (openSubKey != null)
+                {
+                    string[] s1 = openSubKey.GetSubKeyNames();
+                    foreach (string s in s1)
+                        if (s.ToLower().Contains(browser))
+                            return true;
+                }
+            }
+            catch
+            {
+            }
+            try
+            {
+                RegistryKey openSubKey = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Wow6432Node\Clients\StartMenuInternet");
+                if (openSubKey != null)
+                {
+                    string[] s2 = openSubKey.GetSubKeyNames();
+                    foreach (string s in s2)
+                        if (s.ToLower().Contains(browser))
+                            return true;
+                }
+            }
+            catch
+            {
+            }
+            return false;
+        }
 
         /// <summary>
         /// handle click event to delete firefox cookies
@@ -304,7 +351,7 @@ namespace FreemiumUtilities.TracksEraser
                     foreach (ListViewItem item in ListViewFF.CheckedItems)
                     {
                         Application.DoEvents();
-                        Browser.DeleteCookie(BrowserType.FireFox, item.Tag);
+                        FFCookieManager.DeleteCookie(item.Tag);
                         ListViewFF.Items.Remove(item);
                     }
 
@@ -338,7 +385,7 @@ namespace FreemiumUtilities.TracksEraser
                         Application.DoEvents();
                         if (ListViewChrome.Items[i].Checked)
                         {
-                            Browser.DeleteCookie(BrowserType.Chrome, ListViewChrome.Items[i].Tag);
+                            ChromeCookieManager.DeleteCookie(ListViewChrome.Items[i].Tag);
                             ListViewChrome.Items[i].Remove();
                         }
                     }

@@ -42,17 +42,19 @@ namespace RegistryCompactor
 
 			foreach (Hive h in Compactor.RegistryHives)
 			{
-				decimal hiveSizeMB = decimal.Round(Convert.ToDecimal(h.OldHiveSize) / 1024 / 1024, 2);
+				var hiveSizeMB = decimal.Round(Convert.ToDecimal(h.OldHiveSize) / 1024 / 1024, 2);
 
 				string hiveInfo = h.HiveFileInfo.ToString();
 				string[] info = hiveInfo.Split('\\');
 
 				hiveInfo = info[info.Length - 2] + "\\"+  info[info.Length - 1];
+				//string hiveName = string.Format("{0} {1} ({2} MB)", h.RegistryHive, h.HiveFileInfo, hiveSizeMB);
 				string hiveName = string.Format("{0} ({1} MB)", hiveInfo, hiveSizeMB);
 
 				RegistryFiles.Add(new KeyValuePair<string, decimal>(hiveName, hiveSizeMB));
 			}
 			piePlotter.DataContext = RegistryFiles;
+
 		}
 	}
 }

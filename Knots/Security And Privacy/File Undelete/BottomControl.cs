@@ -6,37 +6,46 @@ using FileUndelete.Properties;
 
 namespace FileUndelete
 {
-    /// <summary>
-    /// Bottom styling control
-    /// </summary>
-    public partial class BottomControl : UserControl
-    {
-        /// <summary>
-        /// Contains bottom styling image
-        /// </summary>
-        public BottomControl()
-        {
-            InitializeComponent();
-            SetImage();
-        }
+	/// <summary>
+	/// Bottom styling control
+	/// </summary>
+	public partial class BottomControl : UserControl
+	{
+		/// <summary>
+		/// Contains bottom styling image
+		/// </summary>
+		public BottomControl()
+		{
+			InitializeComponent();
+			SetImage();
+		}
 
-        /// <summary>
-        /// Sets BotomBar.Image property to filename correspondent image object from resources
-        /// </summary>
-        void SetImage()
-        {
-            Image image = Resources.bottomBar;
-            try
-            {
-                string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
-                if (File.Exists(path))
-                    image = Image.FromFile(path);
-            }
-            catch (Exception)
-            {
-            }
+		/// <summary>
+		/// Sets BotomBar.Image property to filename correspondent image object from resources
+		/// </summary>
+		void SetImage()
+		{
+			Image image;
+			try
+			{
+				string path = Path.GetDirectoryName(GetType().Assembly.Location) + "\\Skins\\blue\\bottomblue.png";
+				image = Resources.bottomBar;
+				if (File.Exists(path))
+				{
+					image = Image.FromFile(path);
+				}
+			}
+			catch (Exception)
+			{
+				image = Resources.bottomBar;
+			}
 
-            lblBotomBar.Image = image;
-        }
-    }
+			if (image == null)
+			{
+				image = Resources.bottomBar;
+			}
+
+			lblBotomBar.Image = image;
+		}
+	}
 }

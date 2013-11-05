@@ -53,267 +53,68 @@ namespace SystemInformation
         /// </summary>
         void InitializeComponent()
         {
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.picturePanel = new System.Windows.Forms.PictureBox();
+            this.labelManDesc = new System.Windows.Forms.Label();
+            this.labelProcessor = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
+            this.labelNameDesc = new System.Windows.Forms.Label();
+            this.labelDescDesc = new System.Windows.Forms.Label();
+            this.labelAddrWdthDesc = new System.Windows.Forms.Label();
+            this.labelProcSpdDesc = new System.Windows.Forms.Label();
+            this.labelFSBSpdDesc = new System.Windows.Forms.Label();
+            this.labelL2CacheSzDesc = new System.Windows.Forms.Label();
+            this.labelL2CacheSpdDesc = new System.Windows.Forms.Label();
+            this.labelProcSockDesc = new System.Windows.Forms.Label();
+            this.labelNumCoresDesc = new System.Windows.Forms.Label();
+            this.labelManufacturer = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.labelDescription = new System.Windows.Forms.Label();
+            this.labelAddressWidth = new System.Windows.Forms.Label();
+            this.labelProcessorSpeed = new System.Windows.Forms.Label();
+            this.labelFSBSpeed = new System.Windows.Forms.Label();
+            this.labelL2CacheSize = new System.Windows.Forms.Label();
+            this.labelL2CacheSpeed = new System.Windows.Forms.Label();
+            this.labelProcessorSocket = new System.Windows.Forms.Label();
+            this.labelNumberCores = new System.Windows.Forms.Label();
+            this.labelNumLogicalProc = new System.Windows.Forms.Label();
+            this.labelNumLogicalProcDesc = new System.Windows.Forms.Label();
             this.labelPowerManagementCapabilities = new System.Windows.Forms.Label();
             this.labelPowerManagementCapabilitiesDesc = new System.Windows.Forms.Label();
             this.labelPowerManagementSupported = new System.Windows.Forms.Label();
             this.labelProcessorId = new System.Windows.Forms.Label();
             this.labelPowerManagementSupportedDesc = new System.Windows.Forms.Label();
             this.labelProcessorIdDesc = new System.Windows.Forms.Label();
-            this.labelNumLogicalProc = new System.Windows.Forms.Label();
-            this.labelNumLogicalProcDesc = new System.Windows.Forms.Label();
-            this.labelNumberCores = new System.Windows.Forms.Label();
-            this.labelProcessorSocket = new System.Windows.Forms.Label();
-            this.labelL2CacheSpeed = new System.Windows.Forms.Label();
-            this.labelL2CacheSize = new System.Windows.Forms.Label();
-            this.labelFSBSpeed = new System.Windows.Forms.Label();
-            this.labelProcessorSpeed = new System.Windows.Forms.Label();
-            this.labelAddressWidth = new System.Windows.Forms.Label();
-            this.labelDescription = new System.Windows.Forms.Label();
-            this.labelName = new System.Windows.Forms.Label();
-            this.labelManufacturer = new System.Windows.Forms.Label();
-            this.labelNumCoresDesc = new System.Windows.Forms.Label();
-            this.labelProcSockDesc = new System.Windows.Forms.Label();
-            this.labelL2CacheSpdDesc = new System.Windows.Forms.Label();
-            this.labelL2CacheSzDesc = new System.Windows.Forms.Label();
-            this.labelFSBSpdDesc = new System.Windows.Forms.Label();
-            this.labelProcSpdDesc = new System.Windows.Forms.Label();
-            this.labelAddrWdthDesc = new System.Windows.Forms.Label();
-            this.labelDescDesc = new System.Windows.Forms.Label();
-            this.labelNameDesc = new System.Windows.Forms.Label();
-            this.labelManDesc = new System.Windows.Forms.Label();
-            this.labelProcessor = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.picturePanel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelPowerManagementCapabilities
+            // labelTitle
             // 
-            this.labelPowerManagementCapabilities.BackColor = System.Drawing.Color.Transparent;
-            this.labelPowerManagementCapabilities.Location = new System.Drawing.Point(228, 362);
-            this.labelPowerManagementCapabilities.Name = "labelPowerManagementCapabilities";
-            this.labelPowerManagementCapabilities.Size = new System.Drawing.Size(266, 15);
-            this.labelPowerManagementCapabilities.TabIndex = 49;
-            this.labelPowerManagementCapabilities.Visible = false;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(80, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 25);
+            this.labelTitle.TabIndex = 7;
             // 
-            // labelPowerManagementCapabilitiesDesc
+            // picturePanel
             // 
-            this.labelPowerManagementCapabilitiesDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelPowerManagementCapabilitiesDesc.Location = new System.Drawing.Point(20, 362);
-            this.labelPowerManagementCapabilitiesDesc.Name = "labelPowerManagementCapabilitiesDesc";
-            this.labelPowerManagementCapabilitiesDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelPowerManagementCapabilitiesDesc.TabIndex = 48;
-            this.labelPowerManagementCapabilitiesDesc.Visible = false;
-            // 
-            // labelPowerManagementSupported
-            // 
-            this.labelPowerManagementSupported.BackColor = System.Drawing.Color.Transparent;
-            this.labelPowerManagementSupported.Location = new System.Drawing.Point(228, 342);
-            this.labelPowerManagementSupported.Name = "labelPowerManagementSupported";
-            this.labelPowerManagementSupported.Size = new System.Drawing.Size(266, 15);
-            this.labelPowerManagementSupported.TabIndex = 47;
-            // 
-            // labelProcessorId
-            // 
-            this.labelProcessorId.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcessorId.Location = new System.Drawing.Point(228, 322);
-            this.labelProcessorId.Name = "labelProcessorId";
-            this.labelProcessorId.Size = new System.Drawing.Size(266, 15);
-            this.labelProcessorId.TabIndex = 46;
-            // 
-            // labelPowerManagementSupportedDesc
-            // 
-            this.labelPowerManagementSupportedDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelPowerManagementSupportedDesc.Location = new System.Drawing.Point(20, 342);
-            this.labelPowerManagementSupportedDesc.Name = "labelPowerManagementSupportedDesc";
-            this.labelPowerManagementSupportedDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelPowerManagementSupportedDesc.TabIndex = 45;
-            // 
-            // labelProcessorIdDesc
-            // 
-            this.labelProcessorIdDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcessorIdDesc.Location = new System.Drawing.Point(20, 322);
-            this.labelProcessorIdDesc.Name = "labelProcessorIdDesc";
-            this.labelProcessorIdDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelProcessorIdDesc.TabIndex = 44;
-            // 
-            // labelNumLogicalProc
-            // 
-            this.labelNumLogicalProc.BackColor = System.Drawing.Color.Transparent;
-            this.labelNumLogicalProc.Location = new System.Drawing.Point(228, 303);
-            this.labelNumLogicalProc.Name = "labelNumLogicalProc";
-            this.labelNumLogicalProc.Size = new System.Drawing.Size(266, 15);
-            this.labelNumLogicalProc.TabIndex = 37;
-            // 
-            // labelNumLogicalProcDesc
-            // 
-            this.labelNumLogicalProcDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelNumLogicalProcDesc.Location = new System.Drawing.Point(19, 304);
-            this.labelNumLogicalProcDesc.Name = "labelNumLogicalProcDesc";
-            this.labelNumLogicalProcDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelNumLogicalProcDesc.TabIndex = 36;
-            this.labelNumLogicalProcDesc.Visible = false;
-            // 
-            // labelNumberCores
-            // 
-            this.labelNumberCores.BackColor = System.Drawing.Color.Transparent;
-            this.labelNumberCores.Location = new System.Drawing.Point(228, 283);
-            this.labelNumberCores.Name = "labelNumberCores";
-            this.labelNumberCores.Size = new System.Drawing.Size(266, 15);
-            this.labelNumberCores.TabIndex = 35;
-            // 
-            // labelProcessorSocket
-            // 
-            this.labelProcessorSocket.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcessorSocket.Location = new System.Drawing.Point(228, 264);
-            this.labelProcessorSocket.Name = "labelProcessorSocket";
-            this.labelProcessorSocket.Size = new System.Drawing.Size(266, 15);
-            this.labelProcessorSocket.TabIndex = 34;
-            // 
-            // labelL2CacheSpeed
-            // 
-            this.labelL2CacheSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.labelL2CacheSpeed.Location = new System.Drawing.Point(228, 244);
-            this.labelL2CacheSpeed.Name = "labelL2CacheSpeed";
-            this.labelL2CacheSpeed.Size = new System.Drawing.Size(266, 15);
-            this.labelL2CacheSpeed.TabIndex = 33;
-            // 
-            // labelL2CacheSize
-            // 
-            this.labelL2CacheSize.BackColor = System.Drawing.Color.Transparent;
-            this.labelL2CacheSize.Location = new System.Drawing.Point(228, 224);
-            this.labelL2CacheSize.Name = "labelL2CacheSize";
-            this.labelL2CacheSize.Size = new System.Drawing.Size(266, 15);
-            this.labelL2CacheSize.TabIndex = 32;
-            // 
-            // labelFSBSpeed
-            // 
-            this.labelFSBSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.labelFSBSpeed.Location = new System.Drawing.Point(228, 204);
-            this.labelFSBSpeed.Name = "labelFSBSpeed";
-            this.labelFSBSpeed.Size = new System.Drawing.Size(266, 15);
-            this.labelFSBSpeed.TabIndex = 31;
-            // 
-            // labelProcessorSpeed
-            // 
-            this.labelProcessorSpeed.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcessorSpeed.Location = new System.Drawing.Point(228, 184);
-            this.labelProcessorSpeed.Name = "labelProcessorSpeed";
-            this.labelProcessorSpeed.Size = new System.Drawing.Size(266, 15);
-            this.labelProcessorSpeed.TabIndex = 30;
-            // 
-            // labelAddressWidth
-            // 
-            this.labelAddressWidth.BackColor = System.Drawing.Color.Transparent;
-            this.labelAddressWidth.Location = new System.Drawing.Point(228, 164);
-            this.labelAddressWidth.Name = "labelAddressWidth";
-            this.labelAddressWidth.Size = new System.Drawing.Size(266, 15);
-            this.labelAddressWidth.TabIndex = 29;
-            // 
-            // labelDescription
-            // 
-            this.labelDescription.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescription.Location = new System.Drawing.Point(228, 144);
-            this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(266, 15);
-            this.labelDescription.TabIndex = 27;
-            // 
-            // labelName
-            // 
-            this.labelName.BackColor = System.Drawing.Color.Transparent;
-            this.labelName.Location = new System.Drawing.Point(228, 124);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(266, 15);
-            this.labelName.TabIndex = 26;
-            // 
-            // labelManufacturer
-            // 
-            this.labelManufacturer.BackColor = System.Drawing.Color.Transparent;
-            this.labelManufacturer.Location = new System.Drawing.Point(228, 104);
-            this.labelManufacturer.Name = "labelManufacturer";
-            this.labelManufacturer.Size = new System.Drawing.Size(266, 15);
-            this.labelManufacturer.TabIndex = 25;
-            // 
-            // labelNumCoresDesc
-            // 
-            this.labelNumCoresDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelNumCoresDesc.Location = new System.Drawing.Point(19, 284);
-            this.labelNumCoresDesc.Name = "labelNumCoresDesc";
-            this.labelNumCoresDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelNumCoresDesc.TabIndex = 24;
-            this.labelNumCoresDesc.Visible = false;
-            // 
-            // labelProcSockDesc
-            // 
-            this.labelProcSockDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcSockDesc.Location = new System.Drawing.Point(19, 264);
-            this.labelProcSockDesc.Name = "labelProcSockDesc";
-            this.labelProcSockDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelProcSockDesc.TabIndex = 23;
-            // 
-            // labelL2CacheSpdDesc
-            // 
-            this.labelL2CacheSpdDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelL2CacheSpdDesc.Location = new System.Drawing.Point(19, 244);
-            this.labelL2CacheSpdDesc.Name = "labelL2CacheSpdDesc";
-            this.labelL2CacheSpdDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelL2CacheSpdDesc.TabIndex = 22;
-            // 
-            // labelL2CacheSzDesc
-            // 
-            this.labelL2CacheSzDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelL2CacheSzDesc.Location = new System.Drawing.Point(19, 224);
-            this.labelL2CacheSzDesc.Name = "labelL2CacheSzDesc";
-            this.labelL2CacheSzDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelL2CacheSzDesc.TabIndex = 21;
-            // 
-            // labelFSBSpdDesc
-            // 
-            this.labelFSBSpdDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelFSBSpdDesc.Location = new System.Drawing.Point(19, 204);
-            this.labelFSBSpdDesc.Name = "labelFSBSpdDesc";
-            this.labelFSBSpdDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelFSBSpdDesc.TabIndex = 20;
-            // 
-            // labelProcSpdDesc
-            // 
-            this.labelProcSpdDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelProcSpdDesc.Location = new System.Drawing.Point(19, 184);
-            this.labelProcSpdDesc.Name = "labelProcSpdDesc";
-            this.labelProcSpdDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelProcSpdDesc.TabIndex = 19;
-            // 
-            // labelAddrWdthDesc
-            // 
-            this.labelAddrWdthDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelAddrWdthDesc.Location = new System.Drawing.Point(19, 164);
-            this.labelAddrWdthDesc.Name = "labelAddrWdthDesc";
-            this.labelAddrWdthDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelAddrWdthDesc.TabIndex = 18;
-            // 
-            // labelDescDesc
-            // 
-            this.labelDescDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelDescDesc.Location = new System.Drawing.Point(19, 144);
-            this.labelDescDesc.Name = "labelDescDesc";
-            this.labelDescDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelDescDesc.TabIndex = 16;
-            // 
-            // labelNameDesc
-            // 
-            this.labelNameDesc.BackColor = System.Drawing.Color.Transparent;
-            this.labelNameDesc.Location = new System.Drawing.Point(19, 124);
-            this.labelNameDesc.Name = "labelNameDesc";
-            this.labelNameDesc.Size = new System.Drawing.Size(203, 15);
-            this.labelNameDesc.TabIndex = 15;
+            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.CPU_48x48;
+            this.picturePanel.Location = new System.Drawing.Point(16, 16);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(48, 48);
+            this.picturePanel.TabIndex = 6;
+            this.picturePanel.TabStop = false;
             // 
             // labelManDesc
             // 
             this.labelManDesc.BackColor = System.Drawing.Color.Transparent;
             this.labelManDesc.Location = new System.Drawing.Point(19, 104);
             this.labelManDesc.Name = "labelManDesc";
-            this.labelManDesc.Size = new System.Drawing.Size(203, 15);
+            this.labelManDesc.Size = new System.Drawing.Size(188, 15);
             this.labelManDesc.TabIndex = 14;
             // 
             // labelProcessor
@@ -337,26 +138,225 @@ namespace SystemInformation
             this.labelSeparator.Size = new System.Drawing.Size(475, 3);
             this.labelSeparator.TabIndex = 12;
             // 
-            // labelTitle
+            // labelNameDesc
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(80, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 25);
-            this.labelTitle.TabIndex = 7;
+            this.labelNameDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelNameDesc.Location = new System.Drawing.Point(19, 124);
+            this.labelNameDesc.Name = "labelNameDesc";
+            this.labelNameDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelNameDesc.TabIndex = 15;
             // 
-            // picturePanel
+            // labelDescDesc
             // 
-            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.processor48;
-            this.picturePanel.Location = new System.Drawing.Point(16, 16);
-            this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(48, 48);
-            this.picturePanel.TabIndex = 6;
-            this.picturePanel.TabStop = false;
+            this.labelDescDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelDescDesc.Location = new System.Drawing.Point(19, 144);
+            this.labelDescDesc.Name = "labelDescDesc";
+            this.labelDescDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelDescDesc.TabIndex = 16;
+            // 
+            // labelAddrWdthDesc
+            // 
+            this.labelAddrWdthDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddrWdthDesc.Location = new System.Drawing.Point(19, 164);
+            this.labelAddrWdthDesc.Name = "labelAddrWdthDesc";
+            this.labelAddrWdthDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelAddrWdthDesc.TabIndex = 18;
+            // 
+            // labelProcSpdDesc
+            // 
+            this.labelProcSpdDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcSpdDesc.Location = new System.Drawing.Point(19, 184);
+            this.labelProcSpdDesc.Name = "labelProcSpdDesc";
+            this.labelProcSpdDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelProcSpdDesc.TabIndex = 19;
+            // 
+            // labelFSBSpdDesc
+            // 
+            this.labelFSBSpdDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelFSBSpdDesc.Location = new System.Drawing.Point(19, 204);
+            this.labelFSBSpdDesc.Name = "labelFSBSpdDesc";
+            this.labelFSBSpdDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelFSBSpdDesc.TabIndex = 20;
+            // 
+            // labelL2CacheSzDesc
+            // 
+            this.labelL2CacheSzDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelL2CacheSzDesc.Location = new System.Drawing.Point(19, 224);
+            this.labelL2CacheSzDesc.Name = "labelL2CacheSzDesc";
+            this.labelL2CacheSzDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelL2CacheSzDesc.TabIndex = 21;
+            // 
+            // labelL2CacheSpdDesc
+            // 
+            this.labelL2CacheSpdDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelL2CacheSpdDesc.Location = new System.Drawing.Point(19, 244);
+            this.labelL2CacheSpdDesc.Name = "labelL2CacheSpdDesc";
+            this.labelL2CacheSpdDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelL2CacheSpdDesc.TabIndex = 22;
+            // 
+            // labelProcSockDesc
+            // 
+            this.labelProcSockDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcSockDesc.Location = new System.Drawing.Point(19, 264);
+            this.labelProcSockDesc.Name = "labelProcSockDesc";
+            this.labelProcSockDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelProcSockDesc.TabIndex = 23;
+            // 
+            // labelNumCoresDesc
+            // 
+            this.labelNumCoresDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelNumCoresDesc.Location = new System.Drawing.Point(19, 284);
+            this.labelNumCoresDesc.Name = "labelNumCoresDesc";
+            this.labelNumCoresDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelNumCoresDesc.TabIndex = 24;
+            this.labelNumCoresDesc.Visible = false;
+            // 
+            // labelManufacturer
+            // 
+            this.labelManufacturer.BackColor = System.Drawing.Color.Transparent;
+            this.labelManufacturer.Location = new System.Drawing.Point(209, 104);
+            this.labelManufacturer.Name = "labelManufacturer";
+            this.labelManufacturer.Size = new System.Drawing.Size(285, 15);
+            this.labelManufacturer.TabIndex = 25;
+            // 
+            // labelName
+            // 
+            this.labelName.BackColor = System.Drawing.Color.Transparent;
+            this.labelName.Location = new System.Drawing.Point(209, 124);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(285, 15);
+            this.labelName.TabIndex = 26;
+            // 
+            // labelDescription
+            // 
+            this.labelDescription.BackColor = System.Drawing.Color.Transparent;
+            this.labelDescription.Location = new System.Drawing.Point(209, 144);
+            this.labelDescription.Name = "labelDescription";
+            this.labelDescription.Size = new System.Drawing.Size(285, 15);
+            this.labelDescription.TabIndex = 27;
+            // 
+            // labelAddressWidth
+            // 
+            this.labelAddressWidth.BackColor = System.Drawing.Color.Transparent;
+            this.labelAddressWidth.Location = new System.Drawing.Point(209, 164);
+            this.labelAddressWidth.Name = "labelAddressWidth";
+            this.labelAddressWidth.Size = new System.Drawing.Size(285, 15);
+            this.labelAddressWidth.TabIndex = 29;
+            // 
+            // labelProcessorSpeed
+            // 
+            this.labelProcessorSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcessorSpeed.Location = new System.Drawing.Point(209, 184);
+            this.labelProcessorSpeed.Name = "labelProcessorSpeed";
+            this.labelProcessorSpeed.Size = new System.Drawing.Size(285, 15);
+            this.labelProcessorSpeed.TabIndex = 30;
+            // 
+            // labelFSBSpeed
+            // 
+            this.labelFSBSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.labelFSBSpeed.Location = new System.Drawing.Point(209, 204);
+            this.labelFSBSpeed.Name = "labelFSBSpeed";
+            this.labelFSBSpeed.Size = new System.Drawing.Size(285, 15);
+            this.labelFSBSpeed.TabIndex = 31;
+            // 
+            // labelL2CacheSize
+            // 
+            this.labelL2CacheSize.BackColor = System.Drawing.Color.Transparent;
+            this.labelL2CacheSize.Location = new System.Drawing.Point(209, 224);
+            this.labelL2CacheSize.Name = "labelL2CacheSize";
+            this.labelL2CacheSize.Size = new System.Drawing.Size(285, 15);
+            this.labelL2CacheSize.TabIndex = 32;
+            // 
+            // labelL2CacheSpeed
+            // 
+            this.labelL2CacheSpeed.BackColor = System.Drawing.Color.Transparent;
+            this.labelL2CacheSpeed.Location = new System.Drawing.Point(209, 244);
+            this.labelL2CacheSpeed.Name = "labelL2CacheSpeed";
+            this.labelL2CacheSpeed.Size = new System.Drawing.Size(285, 15);
+            this.labelL2CacheSpeed.TabIndex = 33;
+            // 
+            // labelProcessorSocket
+            // 
+            this.labelProcessorSocket.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcessorSocket.Location = new System.Drawing.Point(209, 264);
+            this.labelProcessorSocket.Name = "labelProcessorSocket";
+            this.labelProcessorSocket.Size = new System.Drawing.Size(285, 15);
+            this.labelProcessorSocket.TabIndex = 34;
+            // 
+            // labelNumberCores
+            // 
+            this.labelNumberCores.BackColor = System.Drawing.Color.Transparent;
+            this.labelNumberCores.Location = new System.Drawing.Point(209, 283);
+            this.labelNumberCores.Name = "labelNumberCores";
+            this.labelNumberCores.Size = new System.Drawing.Size(285, 15);
+            this.labelNumberCores.TabIndex = 35;
+            // 
+            // labelNumLogicalProc
+            // 
+            this.labelNumLogicalProc.BackColor = System.Drawing.Color.Transparent;
+            this.labelNumLogicalProc.Location = new System.Drawing.Point(209, 303);
+            this.labelNumLogicalProc.Name = "labelNumLogicalProc";
+            this.labelNumLogicalProc.Size = new System.Drawing.Size(285, 15);
+            this.labelNumLogicalProc.TabIndex = 37;
+            // 
+            // labelNumLogicalProcDesc
+            // 
+            this.labelNumLogicalProcDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelNumLogicalProcDesc.Location = new System.Drawing.Point(19, 304);
+            this.labelNumLogicalProcDesc.Name = "labelNumLogicalProcDesc";
+            this.labelNumLogicalProcDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelNumLogicalProcDesc.TabIndex = 36;
+            this.labelNumLogicalProcDesc.Visible = false;
+            // 
+            // labelPowerManagementCapabilities
+            // 
+            this.labelPowerManagementCapabilities.BackColor = System.Drawing.Color.Transparent;
+            this.labelPowerManagementCapabilities.Location = new System.Drawing.Point(209, 362);
+            this.labelPowerManagementCapabilities.Name = "labelPowerManagementCapabilities";
+            this.labelPowerManagementCapabilities.Size = new System.Drawing.Size(285, 15);
+            this.labelPowerManagementCapabilities.TabIndex = 49;
+            this.labelPowerManagementCapabilities.Visible = false;
+            // 
+            // labelPowerManagementCapabilitiesDesc
+            // 
+            this.labelPowerManagementCapabilitiesDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelPowerManagementCapabilitiesDesc.Location = new System.Drawing.Point(17, 362);
+            this.labelPowerManagementCapabilitiesDesc.Name = "labelPowerManagementCapabilitiesDesc";
+            this.labelPowerManagementCapabilitiesDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelPowerManagementCapabilitiesDesc.TabIndex = 48;
+            this.labelPowerManagementCapabilitiesDesc.Visible = false;
+            // 
+            // labelPowerManagementSupported
+            // 
+            this.labelPowerManagementSupported.BackColor = System.Drawing.Color.Transparent;
+            this.labelPowerManagementSupported.Location = new System.Drawing.Point(209, 342);
+            this.labelPowerManagementSupported.Name = "labelPowerManagementSupported";
+            this.labelPowerManagementSupported.Size = new System.Drawing.Size(285, 15);
+            this.labelPowerManagementSupported.TabIndex = 47;
+            // 
+            // labelProcessorId
+            // 
+            this.labelProcessorId.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcessorId.Location = new System.Drawing.Point(209, 322);
+            this.labelProcessorId.Name = "labelProcessorId";
+            this.labelProcessorId.Size = new System.Drawing.Size(285, 15);
+            this.labelProcessorId.TabIndex = 46;
+            // 
+            // labelPowerManagementSupportedDesc
+            // 
+            this.labelPowerManagementSupportedDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelPowerManagementSupportedDesc.Location = new System.Drawing.Point(17, 342);
+            this.labelPowerManagementSupportedDesc.Name = "labelPowerManagementSupportedDesc";
+            this.labelPowerManagementSupportedDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelPowerManagementSupportedDesc.TabIndex = 45;
+            // 
+            // labelProcessorIdDesc
+            // 
+            this.labelProcessorIdDesc.BackColor = System.Drawing.Color.Transparent;
+            this.labelProcessorIdDesc.Location = new System.Drawing.Point(17, 322);
+            this.labelProcessorIdDesc.Name = "labelProcessorIdDesc";
+            this.labelProcessorIdDesc.Size = new System.Drawing.Size(188, 15);
+            this.labelProcessorIdDesc.TabIndex = 44;
             // 
             // Cpu
             // 

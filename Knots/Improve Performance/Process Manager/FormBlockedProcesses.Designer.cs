@@ -36,7 +36,7 @@ namespace ProcessManager
         void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.lvBlockedProcesses = new System.Windows.Forms.ListView();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -53,7 +53,7 @@ namespace ProcessManager
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.lvBlockedProcesses);
+            this.splitContainer1.Panel1.Controls.Add(this.listView1);
             // 
             // splitContainer1.Panel2
             // 
@@ -63,15 +63,15 @@ namespace ProcessManager
             this.splitContainer1.SplitterDistance = 416;
             this.splitContainer1.TabIndex = 0;
             // 
-            // lvBlockedProcesses
+            // listView1
             // 
-            this.lvBlockedProcesses.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvBlockedProcesses.Location = new System.Drawing.Point(0, 0);
-            this.lvBlockedProcesses.Name = "lvBlockedProcesses";
-            this.lvBlockedProcesses.Size = new System.Drawing.Size(391, 416);
-            this.lvBlockedProcesses.TabIndex = 0;
-            this.lvBlockedProcesses.UseCompatibleStateImageBehavior = false;
-            this.lvBlockedProcesses.View = System.Windows.Forms.View.List;
+            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Location = new System.Drawing.Point(0, 0);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(391, 416);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // btnClose
             // 
@@ -93,7 +93,7 @@ namespace ProcessManager
             this.btnRemove.UseVisualStyleBackColor = true;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
-            // FormBlockedProcesses
+            // FrmBlockedProcesses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -101,7 +101,7 @@ namespace ProcessManager
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
-            this.Name = "FormBlockedProcesses";
+            this.Name = "FrmBlockedProcesses";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Blocked Process";
@@ -118,6 +118,6 @@ namespace ProcessManager
         System.Windows.Forms.SplitContainer splitContainer1;
         System.Windows.Forms.Button btnClose;
         System.Windows.Forms.Button btnRemove;
-        System.Windows.Forms.ListView lvBlockedProcesses;
+        System.Windows.Forms.ListView listView1;
     }
 }

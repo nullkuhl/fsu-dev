@@ -6,6 +6,9 @@ namespace ShortcutsFixer.Models
 	/// The <see cref="ShortcutsFixer.Models"/> namespace contains a model classes of the Shortcuts fixer knot
 	/// </summary>
 
+	[System.Runtime.CompilerServices.CompilerGenerated]
+	class NamespaceDoc { }
+
 	/// <summary>
 	/// Shortcut item model
 	/// </summary>

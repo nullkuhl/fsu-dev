@@ -128,7 +128,7 @@ namespace RegistryCompactor
 		/// </summary>
 		public static void AutoResizeColumns(ListView listView)
 		{
-			GridView gv = listView.View as GridView;
+			var gv = listView.View as GridView;
 
 			if (gv != null)
 			{
@@ -186,7 +186,7 @@ namespace RegistryCompactor
 		/// <returns>True if it was found</returns>
 		public static bool SearchPath(string fileName, string path, out string retPath)
 		{
-			StringBuilder strBuffer = new StringBuilder(260);
+			var strBuffer = new StringBuilder(260);
 
 			int ret = SearchPath(((!string.IsNullOrEmpty(path)) ? (path) : (null)), fileName, null, 260, strBuffer, null);
 
@@ -212,8 +212,8 @@ namespace RegistryCompactor
 				// File cant exists, keep retrying until we get a file that doesnt exist
 				if (File.Exists(tempPath))
 					return GetTempHivePath();
-                else
-    				return tempPath;
+
+				return tempPath;
 			}
 			catch (IOException)
 			{
@@ -271,7 +271,7 @@ namespace RegistryCompactor
                     if (drive.IsReady)
                     {
                         string strDrivePath = drive.Name.Substring(0, 2);
-                        StringBuilder strDeviceName = new StringBuilder(260);
+                        var strDeviceName = new StringBuilder(260);
 
                         // Convert C: to \Device\HarddiskVolume1
                         if (QueryDosDevice(strDrivePath, strDeviceName, 260) > 0)

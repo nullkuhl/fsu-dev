@@ -6,11 +6,15 @@ using BaseWPFHelpers;
 using System.Windows.Media;
 using System.Windows;
 
-/// <summary>
-/// The <see cref="ScottLogic.Controls.PieChart"/> namespace defines the ScottLogic PieChart
-/// </summary>
 namespace ScottLogic.Controls.PieChart
 {
+	/// <summary>
+	/// The <see cref="ScottLogic.Controls.PieChart"/> namespace defines the ScottLogic PieChart
+	/// </summary>
+
+	[System.Runtime.CompilerServices.CompilerGenerated]
+	class NamespaceDoc { }
+
     /// <summary>
     /// Converter which uses the IColorSelector associated with the Legend to
     /// select a suitable color for rendering an item.

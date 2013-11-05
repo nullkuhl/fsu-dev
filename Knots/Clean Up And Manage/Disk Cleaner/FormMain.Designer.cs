@@ -145,7 +145,7 @@ namespace Disk_Cleaner
             this.ProcessedFiles.HideSelection = false;
             this.ProcessedFiles.Location = new System.Drawing.Point(16, 60);
             this.ProcessedFiles.Name = "ProcessedFiles";
-            this.ProcessedFiles.Size = new System.Drawing.Size(385, 273);
+            this.ProcessedFiles.Size = new System.Drawing.Size(385, 261);
             this.ProcessedFiles.TabIndex = 19;
             this.ProcessedFiles.UseCompatibleStateImageBehavior = false;
             this.ProcessedFiles.View = System.Windows.Forms.View.Details;
@@ -164,6 +164,7 @@ namespace Disk_Cleaner
             this.lblWait.TabIndex = 3;
             this.lblWait.Tag = "2";
             this.lblWait.Text = "Please wait until Disk Cleaner finishes scanning the selected drives.";
+            this.lblWait.Click += new System.EventHandler(this.lblWait_Click);
             // 
             // lblSelectDrives
             // 
@@ -216,7 +217,7 @@ namespace Disk_Cleaner
             this.grbDescription.Controls.Add(this.labelGroup);
             this.grbDescription.Location = new System.Drawing.Point(15, 247);
             this.grbDescription.Name = "grbDescription";
-            this.grbDescription.Size = new System.Drawing.Size(385, 86);
+            this.grbDescription.Size = new System.Drawing.Size(385, 74);
             this.grbDescription.TabIndex = 11;
             this.grbDescription.TabStop = false;
             this.grbDescription.Tag = "3";
@@ -224,9 +225,9 @@ namespace Disk_Cleaner
             // 
             // buttonViewFiles
             // 
-            this.buttonViewFiles.Location = new System.Drawing.Point(301, 42);
+            this.buttonViewFiles.Location = new System.Drawing.Point(297, 42);
             this.buttonViewFiles.Name = "buttonViewFiles";
-            this.buttonViewFiles.Size = new System.Drawing.Size(75, 38);
+            this.buttonViewFiles.Size = new System.Drawing.Size(75, 23);
             this.buttonViewFiles.TabIndex = 2;
             this.buttonViewFiles.Text = "View Files";
             this.buttonViewFiles.UseVisualStyleBackColor = true;
@@ -247,7 +248,7 @@ namespace Disk_Cleaner
             this.labelGroup.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelGroup.Location = new System.Drawing.Point(3, 16);
             this.labelGroup.Name = "labelGroup";
-            this.labelGroup.Size = new System.Drawing.Size(379, 67);
+            this.labelGroup.Size = new System.Drawing.Size(379, 55);
             this.labelGroup.TabIndex = 0;
             // 
             // labelGain
@@ -346,7 +347,7 @@ namespace Disk_Cleaner
             // 
             // buttonNext
             // 
-            this.buttonNext.Location = new System.Drawing.Point(330, 350);
+            this.buttonNext.Location = new System.Drawing.Point(330, 347);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(75, 23);
             this.buttonNext.TabIndex = 6;
@@ -357,7 +358,7 @@ namespace Disk_Cleaner
             // buttonBack
             // 
             this.buttonBack.Enabled = false;
-            this.buttonBack.Location = new System.Drawing.Point(240, 350);
+            this.buttonBack.Location = new System.Drawing.Point(240, 347);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(75, 23);
             this.buttonBack.TabIndex = 5;
@@ -367,7 +368,7 @@ namespace Disk_Cleaner
             // 
             // buttonOptions
             // 
-            this.buttonOptions.Location = new System.Drawing.Point(5, 350);
+            this.buttonOptions.Location = new System.Drawing.Point(5, 347);
             this.buttonOptions.Name = "buttonOptions";
             this.buttonOptions.Size = new System.Drawing.Size(75, 23);
             this.buttonOptions.TabIndex = 4;
@@ -379,7 +380,7 @@ namespace Disk_Cleaner
             // pnlMain
             // 
             this.pnlMain.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlMain.Location = new System.Drawing.Point(6, 339);
+            this.pnlMain.Location = new System.Drawing.Point(6, 327);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(400, 4);
             this.pnlMain.TabIndex = 3;

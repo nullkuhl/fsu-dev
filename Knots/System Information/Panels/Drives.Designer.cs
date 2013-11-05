@@ -54,16 +54,10 @@ namespace SystemInformation
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Drives));
-            this.imagelistDrives = new System.Windows.Forms.ImageList(this.components);
-            this.labelLegend = new System.Windows.Forms.Label();
-            this.listviewDrives = new System.Windows.Forms.ListView();
-            this.PhysDrive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Capacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ModelNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelPhysHD = new System.Windows.Forms.Label();
-            this.labelSeparator2 = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.picturePanel = new System.Windows.Forms.PictureBox();
+            this.labelVolumes = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
             this.listviewVolumes = new System.Windows.Forms.ListView();
             this.Drive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.VolumeLabel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -73,12 +67,122 @@ namespace SystemInformation
             this.FreeSpace = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.PercentFree = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ready = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelVolumes = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.picturePanel = new System.Windows.Forms.PictureBox();
+            this.imagelistDrives = new System.Windows.Forms.ImageList(this.components);
+            this.listviewDrives = new System.Windows.Forms.ListView();
+            this.PhysDrive = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Capacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ModelNumber = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Status = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelPhysHD = new System.Windows.Forms.Label();
+            this.labelSeparator2 = new System.Windows.Forms.Label();
+            this.labelLegend = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
+            // 
+            // labelTitle
+            // 
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(80, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 25);
+            this.labelTitle.TabIndex = 7;
+            // 
+            // picturePanel
+            // 
+            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Drive_48x48;
+            this.picturePanel.Location = new System.Drawing.Point(16, 16);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(48, 48);
+            this.picturePanel.TabIndex = 6;
+            this.picturePanel.TabStop = false;
+            // 
+            // labelVolumes
+            // 
+            this.labelVolumes.AutoSize = true;
+            this.labelVolumes.BackColor = System.Drawing.Color.Transparent;
+            this.labelVolumes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelVolumes.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelVolumes.Location = new System.Drawing.Point(16, 76);
+            this.labelVolumes.Name = "labelVolumes";
+            this.labelVolumes.Size = new System.Drawing.Size(0, 17);
+            this.labelVolumes.TabIndex = 15;
+            // 
+            // labelSeparator
+            // 
+            this.labelSeparator.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator.Location = new System.Drawing.Point(16, 98);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
+            this.labelSeparator.TabIndex = 14;
+            // 
+            // listviewVolumes
+            // 
+            this.listviewVolumes.BackColor = System.Drawing.SystemColors.Window;
+            this.listviewVolumes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Drive,
+            this.VolumeLabel,
+            this.FileSystem,
+            this.TotalSize,
+            this.UsedSpace,
+            this.FreeSpace,
+            this.PercentFree,
+            this.Ready});
+            this.listviewVolumes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listviewVolumes.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.listviewVolumes.FullRowSelect = true;
+            this.listviewVolumes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.listviewVolumes.Location = new System.Drawing.Point(16, 110);
+            this.listviewVolumes.MultiSelect = false;
+            this.listviewVolumes.Name = "listviewVolumes";
+            this.listviewVolumes.ShowGroups = false;
+            this.listviewVolumes.Size = new System.Drawing.Size(482, 134);
+            this.listviewVolumes.SmallImageList = this.imagelistDrives;
+            this.listviewVolumes.TabIndex = 16;
+            this.listviewVolumes.UseCompatibleStateImageBehavior = false;
+            this.listviewVolumes.View = System.Windows.Forms.View.Details;
+            // 
+            // Drive
+            // 
+            this.Drive.Width = 40;
+            // 
+            // VolumeLabel
+            // 
+            this.VolumeLabel.Width = 90;
+            // 
+            // FileSystem
+            // 
+            this.FileSystem.Width = 40;
+            // 
+            // TotalSize
+            // 
+            this.TotalSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TotalSize.Width = 70;
+            // 
+            // UsedSpace
+            // 
+            this.UsedSpace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.UsedSpace.Width = 72;
+            // 
+            // FreeSpace
+            // 
+            this.FreeSpace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.FreeSpace.Width = 70;
+            // 
+            // PercentFree
+            // 
+            this.PercentFree.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PercentFree.Width = 52;
+            // 
+            // Ready
+            // 
+            this.Ready.Width = 22;
             // 
             // imagelistDrives
             // 
@@ -90,17 +194,6 @@ namespace SystemInformation
             this.imagelistDrives.Images.SetKeyName(3, "CDROM_16x16.png");
             this.imagelistDrives.Images.SetKeyName(4, "UsbDrive_16x16.png");
             this.imagelistDrives.Images.SetKeyName(5, "Unknown_16x16.png");
-            // 
-            // labelLegend
-            // 
-            this.labelLegend.AutoSize = true;
-            this.labelLegend.BackColor = System.Drawing.Color.Transparent;
-            this.labelLegend.ForeColor = System.Drawing.Color.Black;
-            this.labelLegend.Location = new System.Drawing.Point(300, 78);
-            this.labelLegend.Name = "labelLegend";
-            this.labelLegend.Size = new System.Drawing.Size(0, 15);
-            this.labelLegend.TabIndex = 20;
-            this.labelLegend.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // listviewDrives
             // 
@@ -165,109 +258,16 @@ namespace SystemInformation
             this.labelSeparator2.Size = new System.Drawing.Size(482, 3);
             this.labelSeparator2.TabIndex = 17;
             // 
-            // listviewVolumes
+            // labelLegend
             // 
-            this.listviewVolumes.BackColor = System.Drawing.SystemColors.Window;
-            this.listviewVolumes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Drive,
-            this.VolumeLabel,
-            this.FileSystem,
-            this.TotalSize,
-            this.UsedSpace,
-            this.FreeSpace,
-            this.PercentFree,
-            this.Ready});
-            this.listviewVolumes.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listviewVolumes.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.listviewVolumes.FullRowSelect = true;
-            this.listviewVolumes.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.listviewVolumes.Location = new System.Drawing.Point(16, 110);
-            this.listviewVolumes.MultiSelect = false;
-            this.listviewVolumes.Name = "listviewVolumes";
-            this.listviewVolumes.ShowGroups = false;
-            this.listviewVolumes.Size = new System.Drawing.Size(482, 134);
-            this.listviewVolumes.SmallImageList = this.imagelistDrives;
-            this.listviewVolumes.TabIndex = 16;
-            this.listviewVolumes.UseCompatibleStateImageBehavior = false;
-            this.listviewVolumes.View = System.Windows.Forms.View.Details;
-            // 
-            // Drive
-            // 
-            this.Drive.Width = 40;
-            // 
-            // VolumeLabel
-            // 
-            this.VolumeLabel.Width = 90;
-            // 
-            // FileSystem
-            // 
-            this.FileSystem.Width = 40;
-            // 
-            // TotalSize
-            // 
-            this.TotalSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TotalSize.Width = 70;
-            // 
-            // UsedSpace
-            // 
-            this.UsedSpace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.UsedSpace.Width = 72;
-            // 
-            // FreeSpace
-            // 
-            this.FreeSpace.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.FreeSpace.Width = 70;
-            // 
-            // PercentFree
-            // 
-            this.PercentFree.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.PercentFree.Width = 52;
-            // 
-            // Ready
-            // 
-            this.Ready.Width = 22;
-            // 
-            // labelVolumes
-            // 
-            this.labelVolumes.AutoSize = true;
-            this.labelVolumes.BackColor = System.Drawing.Color.Transparent;
-            this.labelVolumes.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVolumes.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelVolumes.Location = new System.Drawing.Point(16, 76);
-            this.labelVolumes.Name = "labelVolumes";
-            this.labelVolumes.Size = new System.Drawing.Size(0, 17);
-            this.labelVolumes.TabIndex = 15;
-            // 
-            // labelSeparator
-            // 
-            this.labelSeparator.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator.Location = new System.Drawing.Point(16, 98);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
-            this.labelSeparator.TabIndex = 14;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(80, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 25);
-            this.labelTitle.TabIndex = 7;
-            // 
-            // picturePanel
-            // 
-            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.Drive_48x48;
-            this.picturePanel.Location = new System.Drawing.Point(16, 16);
-            this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(48, 48);
-            this.picturePanel.TabIndex = 6;
-            this.picturePanel.TabStop = false;
+            this.labelLegend.AutoSize = true;
+            this.labelLegend.BackColor = System.Drawing.Color.Transparent;
+            this.labelLegend.ForeColor = System.Drawing.Color.Black;
+            this.labelLegend.Location = new System.Drawing.Point(344, 78);
+            this.labelLegend.Name = "labelLegend";
+            this.labelLegend.Size = new System.Drawing.Size(0, 15);
+            this.labelLegend.TabIndex = 20;
+            this.labelLegend.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Drives
             // 

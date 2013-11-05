@@ -129,6 +129,7 @@ namespace FreemiumUtilities.TracksEraser
             this.spcTracks = new System.Windows.Forms.SplitContainer();
             this.tcMain = new System.Windows.Forms.TabControl();
             this.tbpTracks = new System.Windows.Forms.TabPage();
+            this.trvTracks = new FreemiumUtilities.TracksEraser.TriStateTreeView();
             this.spcResults = new System.Windows.Forms.SplitContainer();
             this.txtResults = new System.Windows.Forms.TextBox();
             this.lblResults = new System.Windows.Forms.Label();
@@ -138,7 +139,6 @@ namespace FreemiumUtilities.TracksEraser
             this.RunEraser = new System.Windows.Forms.Button();
             this.ucBottom = new FreemiumUtilities.TracksEraser.BottomControl();
             this.ucTop = new FreemiumUtilities.TracksEraser.TopControl();
-            this.trvTracks = new FreemiumUtilities.TracksEraser.TriStateTreeView();
             this.tlsMain.SuspendLayout();
             this.spcTracks.Panel1.SuspendLayout();
             this.spcTracks.Panel2.SuspendLayout();
@@ -185,7 +185,7 @@ namespace FreemiumUtilities.TracksEraser
             this.tsbErase.Name = "tsbErase";
             this.tsbErase.Size = new System.Drawing.Size(135, 22);
             this.tsbErase.Text = "Erase checked tracks";
-            this.tsbErase.Click += new System.EventHandler(this.tsbErase_Click);
+            this.tsbErase.Click += new System.EventHandler(this.tsbErase_Click_1);
             // 
             // tssFirst
             // 
@@ -280,127 +280,6 @@ namespace FreemiumUtilities.TracksEraser
             this.tbpTracks.TabIndex = 0;
             this.tbpTracks.Text = "Tracks";
             this.tbpTracks.UseVisualStyleBackColor = true;
-            // 
-            // spcResults
-            // 
-            this.spcResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.spcResults.IsSplitterFixed = true;
-            this.spcResults.Location = new System.Drawing.Point(0, 0);
-            this.spcResults.Name = "spcResults";
-            this.spcResults.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // spcResults.Panel1
-            // 
-            this.spcResults.Panel1.Controls.Add(this.txtResults);
-            this.spcResults.Panel1.Controls.Add(this.lblResults);
-            this.spcResults.Panel1MinSize = 480;
-            // 
-            // spcResults.Panel2
-            // 
-            this.spcResults.Panel2.Controls.Add(this.Scanninglbl);
-            this.spcResults.Panel2.Controls.Add(this.pcbScanning);
-            this.spcResults.Panel2.Controls.Add(this.btnAnalyse);
-            this.spcResults.Panel2.Controls.Add(this.RunEraser);
-            this.spcResults.Panel2MinSize = 10;
-            this.spcResults.Size = new System.Drawing.Size(574, 514);
-            this.spcResults.SplitterDistance = 480;
-            this.spcResults.SplitterWidth = 1;
-            this.spcResults.TabIndex = 0;
-            // 
-            // txtResults
-            // 
-            this.txtResults.BackColor = System.Drawing.Color.White;
-            this.txtResults.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtResults.Location = new System.Drawing.Point(0, 20);
-            this.txtResults.Multiline = true;
-            this.txtResults.Name = "txtResults";
-            this.txtResults.ReadOnly = true;
-            this.txtResults.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtResults.Size = new System.Drawing.Size(574, 460);
-            this.txtResults.TabIndex = 1;
-            this.txtResults.WordWrap = false;
-            // 
-            // lblResults
-            // 
-            this.lblResults.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblResults.Location = new System.Drawing.Point(0, 0);
-            this.lblResults.Name = "lblResults";
-            this.lblResults.Size = new System.Drawing.Size(574, 20);
-            this.lblResults.TabIndex = 0;
-            this.lblResults.Text = "Results";
-            // 
-            // Scanninglbl
-            // 
-            this.Scanninglbl.AutoSize = true;
-            this.Scanninglbl.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Scanninglbl.Location = new System.Drawing.Point(26, 0);
-            this.Scanninglbl.MinimumSize = new System.Drawing.Size(200, 30);
-            this.Scanninglbl.Name = "Scanninglbl";
-            this.Scanninglbl.Padding = new System.Windows.Forms.Padding(5, 10, 0, 0);
-            this.Scanninglbl.Size = new System.Drawing.Size(200, 30);
-            this.Scanninglbl.TabIndex = 5;
-            this.Scanninglbl.Text = "Scanning";
-            this.Scanninglbl.Visible = false;
-            // 
-            // pcbScanning
-            // 
-            this.pcbScanning.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pcbScanning.Image = TracksEraser.Properties.Resources.scanning;
-            this.pcbScanning.InitialImage = null;
-            this.pcbScanning.Location = new System.Drawing.Point(0, 0);
-            this.pcbScanning.Margin = new System.Windows.Forms.Padding(2);
-            this.pcbScanning.Name = "pcbScanning";
-            this.pcbScanning.Padding = new System.Windows.Forms.Padding(10, 9, 0, 0);
-            this.pcbScanning.Size = new System.Drawing.Size(26, 33);
-            this.pcbScanning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pcbScanning.TabIndex = 4;
-            this.pcbScanning.TabStop = false;
-            this.pcbScanning.Visible = false;
-            // 
-            // btnAnalyse
-            // 
-            this.btnAnalyse.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAnalyse.Location = new System.Drawing.Point(294, 0);
-            this.btnAnalyse.Name = "btnAnalyse";
-            this.btnAnalyse.Size = new System.Drawing.Size(140, 33);
-            this.btnAnalyse.TabIndex = 2;
-            this.btnAnalyse.Text = "Analyse";
-            this.btnAnalyse.UseVisualStyleBackColor = true;
-            this.btnAnalyse.Click += new System.EventHandler(this.btnAnalyse_Click);
-            // 
-            // RunEraser
-            // 
-            this.RunEraser.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RunEraser.Enabled = false;
-            this.RunEraser.Location = new System.Drawing.Point(434, 0);
-            this.RunEraser.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
-            this.RunEraser.Name = "RunEraser";
-            this.RunEraser.Size = new System.Drawing.Size(140, 33);
-            this.RunEraser.TabIndex = 3;
-            this.RunEraser.Text = "Run Eraser";
-            this.RunEraser.UseVisualStyleBackColor = true;
-            this.RunEraser.Click += new System.EventHandler(this.tsbErase_Click);
-            // 
-            // ucBottom
-            // 
-            this.ucBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucBottom.Location = new System.Drawing.Point(0, 612);
-            this.ucBottom.Margin = new System.Windows.Forms.Padding(0);
-            this.ucBottom.MaximumSize = new System.Drawing.Size(0, 31);
-            this.ucBottom.MinimumSize = new System.Drawing.Size(0, 31);
-            this.ucBottom.Name = "ucBottom";
-            this.ucBottom.Size = new System.Drawing.Size(831, 31);
-            this.ucBottom.TabIndex = 0;
-            // 
-            // ucTop
-            // 
-            this.ucTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ucTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ucTop.Location = new System.Drawing.Point(0, 0);
-            this.ucTop.Margin = new System.Windows.Forms.Padding(4);
-            this.ucTop.Name = "ucTop";
-            this.ucTop.Size = new System.Drawing.Size(831, 64);
-            this.ucTop.TabIndex = 5;
             // 
             // trvTracks
             // 
@@ -560,6 +439,125 @@ namespace FreemiumUtilities.TracksEraser
             this.trvTracks.TabIndex = 1;
             this.trvTracks.TriStateStyleProperty = FreemiumUtilities.TracksEraser.TriStateTreeView.TriStateStyles.Standard;
             this.trvTracks.AfterCheck += new System.Windows.Forms.TreeViewEventHandler(this.trvTracks_AfterCheck);
+            // 
+            // spcResults
+            // 
+            this.spcResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.spcResults.IsSplitterFixed = true;
+            this.spcResults.Location = new System.Drawing.Point(0, 0);
+            this.spcResults.Name = "spcResults";
+            this.spcResults.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // spcResults.Panel1
+            // 
+            this.spcResults.Panel1.Controls.Add(this.txtResults);
+            this.spcResults.Panel1.Controls.Add(this.lblResults);
+            this.spcResults.Panel1MinSize = 480;
+            // 
+            // spcResults.Panel2
+            // 
+            this.spcResults.Panel2.Controls.Add(this.Scanninglbl);
+            this.spcResults.Panel2.Controls.Add(this.pcbScanning);
+            this.spcResults.Panel2.Controls.Add(this.btnAnalyse);
+            this.spcResults.Panel2.Controls.Add(this.RunEraser);
+            this.spcResults.Panel2MinSize = 10;
+            this.spcResults.Size = new System.Drawing.Size(574, 514);
+            this.spcResults.SplitterDistance = 480;
+            this.spcResults.SplitterWidth = 1;
+            this.spcResults.TabIndex = 0;
+            // 
+            // txtResults
+            // 
+            this.txtResults.BackColor = System.Drawing.Color.White;
+            this.txtResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtResults.Location = new System.Drawing.Point(0, 20);
+            this.txtResults.Multiline = true;
+            this.txtResults.Name = "txtResults";
+            this.txtResults.ReadOnly = true;
+            this.txtResults.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtResults.Size = new System.Drawing.Size(574, 460);
+            this.txtResults.TabIndex = 1;
+            this.txtResults.WordWrap = false;
+            // 
+            // lblResults
+            // 
+            this.lblResults.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblResults.Location = new System.Drawing.Point(0, 0);
+            this.lblResults.Name = "lblResults";
+            this.lblResults.Size = new System.Drawing.Size(574, 20);
+            this.lblResults.TabIndex = 0;
+            this.lblResults.Text = "Results";
+            // 
+            // Scanninglbl
+            // 
+            this.Scanninglbl.AutoSize = true;
+            this.Scanninglbl.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Scanninglbl.Location = new System.Drawing.Point(26, 0);
+            this.Scanninglbl.MinimumSize = new System.Drawing.Size(200, 30);
+            this.Scanninglbl.Name = "Scanninglbl";
+            this.Scanninglbl.Padding = new System.Windows.Forms.Padding(5, 10, 0, 0);
+            this.Scanninglbl.Size = new System.Drawing.Size(200, 30);
+            this.Scanninglbl.TabIndex = 5;
+            this.Scanninglbl.Text = "Scanning";
+            this.Scanninglbl.Visible = false;
+            // 
+            // pcbScanning
+            // 
+            this.pcbScanning.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pcbScanning.Location = new System.Drawing.Point(0, 0);
+            this.pcbScanning.Margin = new System.Windows.Forms.Padding(2);
+            this.pcbScanning.Name = "pcbScanning";
+            this.pcbScanning.Padding = new System.Windows.Forms.Padding(10, 9, 0, 0);
+            this.pcbScanning.Size = new System.Drawing.Size(26, 33);
+            this.pcbScanning.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pcbScanning.TabIndex = 4;
+            this.pcbScanning.TabStop = false;
+            this.pcbScanning.Visible = false;
+            // 
+            // btnAnalyse
+            // 
+            this.btnAnalyse.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAnalyse.Location = new System.Drawing.Point(330, 0);
+            this.btnAnalyse.Name = "btnAnalyse";
+            this.btnAnalyse.Size = new System.Drawing.Size(122, 33);
+            this.btnAnalyse.TabIndex = 2;
+            this.btnAnalyse.Text = "Analyse";
+            this.btnAnalyse.UseVisualStyleBackColor = true;
+            this.btnAnalyse.Click += new System.EventHandler(this.tsbAnalyse_Click);
+            // 
+            // RunEraser
+            // 
+            this.RunEraser.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RunEraser.Enabled = false;
+            this.RunEraser.Location = new System.Drawing.Point(452, 0);
+            this.RunEraser.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.RunEraser.Name = "RunEraser";
+            this.RunEraser.Size = new System.Drawing.Size(122, 33);
+            this.RunEraser.TabIndex = 3;
+            this.RunEraser.Text = "Run Eraser";
+            this.RunEraser.UseVisualStyleBackColor = true;
+            this.RunEraser.Click += new System.EventHandler(this.tsbErase_Click_1);
+            // 
+            // ucBottom
+            // 
+            this.ucBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.ucBottom.Location = new System.Drawing.Point(0, 612);
+            this.ucBottom.Margin = new System.Windows.Forms.Padding(0);
+            this.ucBottom.MaximumSize = new System.Drawing.Size(0, 31);
+            this.ucBottom.MinimumSize = new System.Drawing.Size(0, 31);
+            this.ucBottom.Name = "ucBottom";
+            this.ucBottom.Size = new System.Drawing.Size(831, 31);
+            this.ucBottom.TabIndex = 0;
+            // 
+            // ucTop
+            // 
+            this.ucTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            this.ucTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ucTop.Location = new System.Drawing.Point(0, 0);
+            this.ucTop.Margin = new System.Windows.Forms.Padding(4);
+            this.ucTop.Name = "ucTop";
+            this.ucTop.Size = new System.Drawing.Size(831, 64);
+            this.ucTop.TabIndex = 5;
             // 
             // FormMain
             // 

@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="abort_it" xml:space="preserve">
-    <value>Abort</value>
-  </data>
   <data name="about_us" xml:space="preserve">
     <value>About Us</value>
   </data>
@@ -165,9 +162,6 @@
   <data name="dir_destroyed" xml:space="preserve">
     <value>Directory Destroyed</value>
   </data>
-  <data name="eliminate_folders" xml:space="preserve">
-    <value>Delete folders, too</value>
-  </data>
   <data name="emptying_content_failed" xml:space="preserve">
     <value>Emptying file contents failed</value>
   </data>
@@ -204,14 +198,8 @@
   <data name="file_selection" xml:space="preserve">
     <value>File Selection</value>
   </data>
-  <data name="file_shredded" xml:space="preserve">
-    <value>{0} file(s) shredded successfully</value>
-  </data>
   <data name="file_shredder" xml:space="preserve">
-    <value>Erase files securely</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
+    <value>File Eraser</value>
   </data>
   <data name="invalid_path" xml:space="preserve">
     <value>Invalid Path</value>
@@ -245,9 +233,6 @@
   </data>
   <data name="processing_file" xml:space="preserve">
     <value>Processing file</value>
-  </data>
-  <data name="scanning" xml:space="preserve">
-    <value>Scanning</value>
   </data>
   <data name="select_file" xml:space="preserve">
     <value>Select a File</value>
@@ -284,5 +269,17 @@
   </data>
   <data name="visit_us" xml:space="preserve">
     <value>Visit Us</value>
+  </data>
+  <data name="file_shredded" xml:space="preserve">
+    <value>File(s) Shredded</value>
+  </data>
+  <data name="scanning" xml:space="preserve">
+    <value>Scanning</value>
+  </data>
+  <data name="abort_it" xml:space="preserve">
+    <value>Abort</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

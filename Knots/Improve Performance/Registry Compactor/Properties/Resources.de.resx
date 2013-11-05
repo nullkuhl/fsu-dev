@@ -130,9 +130,6 @@
   <data name="icon_registry_compactor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icon-registry-compactor.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="AlreadyRunningError" xml:space="preserve">
     <value>Es scheint bereits ein anderes Programm ausgeführt zu werden...</value>
   </data>
@@ -142,23 +139,14 @@
   <data name="AnalyseRegistry" xml:space="preserve">
     <value>Registry analysieren</value>
   </data>
-  <data name="Analyze" xml:space="preserve">
-    <value>Analysieren</value>
+  <data name="AnalyzingResults" xml:space="preserve">
+    <value>Analyseergebnisse</value>
   </data>
   <data name="AnalyzeBeforeCompactError" xml:space="preserve">
     <value>Sie müssen zuerst den Schlüssel analysieren, bevor Sie ihn kompaktieren können</value>
   </data>
-  <data name="AnalyzeRegistry" xml:space="preserve">
-    <value>Analyse der Registry</value>
-  </data>
-  <data name="Analyzing" xml:space="preserve">
-    <value>Analyse läuft</value>
-  </data>
   <data name="AnalyzingRegistry" xml:space="preserve">
     <value>Analyse läuft…</value>
-  </data>
-  <data name="AnalyzingResults" xml:space="preserve">
-    <value>Analyseergebnisse</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Abbrechen</value>
@@ -175,26 +163,11 @@
   <data name="Compacting" xml:space="preserve">
     <value>Kompaktierung läuft…</value>
   </data>
-  <data name="CompactingRegistry" xml:space="preserve">
-    <value>Registry optimieren</value>
-  </data>
   <data name="CreateSystemRestorePointsAutomatically" xml:space="preserve">
     <value>Systemwiederherstellungspunkte automatisch erstellen</value>
   </data>
-  <data name="DefragmentRegistry" xml:space="preserve">
-    <value>Optimieren der Registry</value>
-  </data>
-  <data name="DefragRegistry" xml:space="preserve">
-    <value>Optimieren der Registry</value>
-  </data>
-  <data name="DisplaySystemInformation" xml:space="preserve">
-    <value>Systeminfos anzeigen</value>
-  </data>
   <data name="ElaspedTime" xml:space="preserve">
     <value>Vergangene Zeit:</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="HiveListError" xml:space="preserve">
     <value>Schlüsselliste konnte nicht geöffnet werden... Dies kann zu Problemen führen!</value>
@@ -241,17 +214,11 @@
   <data name="ProgramStats" xml:space="preserve">
     <value>Programmstatistiken</value>
   </data>
-  <data name="RegHive" xml:space="preserve">
-    <value>Registry-Einheit</value>
-  </data>
   <data name="RegistryAlreadyCompacted" xml:space="preserve">
     <value>Die Registry wurde anscheinend bereits optimiert.</value>
   </data>
   <data name="RegistryCompactor" xml:space="preserve">
     <value>Registry optimieren</value>
-  </data>
-  <data name="RegistryCompactorDesc" xml:space="preserve">
-    <value>Dieses Modul defragmentiert, optimiert und verdichtet die Windows-Registry, indem unnötige Lücken und verschwendeter Platz entfernt werden. Dies kann die Systemleistung verbessern und den Registry-Zugriff beschleunigen.</value>
   </data>
   <data name="RegistryCompactorOptions" xml:space="preserve">
     <value>Registry optimieren - Optionen</value>
@@ -283,12 +250,6 @@
   <data name="RegistryValueAlreadyCompactedError" xml:space="preserve">
     <value>Der Schlüssel wurde bereits optimiert</value>
   </data>
-  <data name="RestartComputerQuestion" xml:space="preserve">
-    <value>Sie müssen Ihren Computer neu starten, damit die Änderungen angewendet werden. Möchten Sie Ihren Computer jetzt neu starten?</value>
-  </data>
-  <data name="ReviewAnalysisResults" xml:space="preserve">
-    <value>Analyseergebnisse</value>
-  </data>
   <data name="Saved" xml:space="preserve">
     <value>Gespeichert</value>
   </data>
@@ -303,24 +264,6 @@
   </data>
   <data name="SpaceSaved" xml:space="preserve">
     <value>Gewonnener Speicherplatz:</value>
-  </data>
-  <data name="StartRegistryDefrag" xml:space="preserve">
-    <value>Optimierung starten</value>
-  </data>
-  <data name="Step1Desc" xml:space="preserve">
-    <value>Der Grad der Registry-Fragmentierung wird überprüft</value>
-  </data>
-  <data name="Step2Desc" xml:space="preserve">
-    <value>Es wird ein Analysebericht angefertigt und eine Empfehlung gegeben</value>
-  </data>
-  <data name="Step3Desc" xml:space="preserve">
-    <value>Die Registry wird optimiert. Am Ende ist ein Neustart erforderlich</value>
-  </data>
-  <data name="StepsToComplete" xml:space="preserve">
-    <value>3-Stufen, um den Vorgang abzuschließen:</value>
-  </data>
-  <data name="StepXofY" xml:space="preserve">
-    <value>Schritt {0} von {1}</value>
   </data>
   <data name="SystemInformation" xml:space="preserve">
     <value>Systeminformationen</value>
@@ -340,10 +283,64 @@
   <data name="UpdaterError" xml:space="preserve">
     <value>Das Update-Programm hat einen Fehler festgestellt</value>
   </data>
+  <data name="WindowsRegistryInformation" xml:space="preserve">
+    <value>Windows-Registrysinformationen</value>
+  </data>
+  <data name="Analyzing" xml:space="preserve">
+    <value>Analyse läuft</value>
+  </data>
+  <data name="StepXofY" xml:space="preserve">
+    <value>Schritt {0} von {1}</value>
+  </data>
+  <data name="CompactingRegistry" xml:space="preserve">
+    <value>Registry optimieren</value>
+  </data>
+  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AnalyzeRegistry" xml:space="preserve">
+    <value>Analyse der Registry</value>
+  </data>
+  <data name="DefragmentRegistry" xml:space="preserve">
+    <value>Optimieren der Registry</value>
+  </data>
+  <data name="DefragRegistry" xml:space="preserve">
+    <value>Optimieren der Registry</value>
+  </data>
+  <data name="DisplaySystemInformation" xml:space="preserve">
+    <value>Systeminfos anzeigen</value>
+  </data>
+  <data name="RegistryCompactorDesc" xml:space="preserve">
+    <value>Dieses Modul defragmentiert, optimiert und verdichtet die Windows-Registry, indem unnötige Lücken und verschwendeter Platz entfernt werden. Dies kann die Systemleistung verbessern und den Registry-Zugriff beschleunigen.</value>
+  </data>
+  <data name="ReviewAnalysisResults" xml:space="preserve">
+    <value>Analyseergebnisse</value>
+  </data>
+  <data name="StartRegistryDefrag" xml:space="preserve">
+    <value>Optimierung starten</value>
+  </data>
+  <data name="Step1Desc" xml:space="preserve">
+    <value>Der Grad der Registry-Fragmentierung wird überprüft</value>
+  </data>
+  <data name="Step2Desc" xml:space="preserve">
+    <value>Es wird ein Analysebericht angefertigt und eine Empfehlung gegeben</value>
+  </data>
+  <data name="Step3Desc" xml:space="preserve">
+    <value>Die Registry wird optimiert. Am Ende ist ein Neustart erforderlich</value>
+  </data>
+  <data name="StepsToComplete" xml:space="preserve">
+    <value>3-Stufen, um den Vorgang abzuschließen:</value>
+  </data>
   <data name="ViewSystemInfo" xml:space="preserve">
     <value>Systeminfo</value>
   </data>
-  <data name="WindowsRegistryInformation" xml:space="preserve">
-    <value>Windows-Registryinformationen</value>
+  <data name="RestartComputerQuestion" xml:space="preserve">
+    <value>Sie müssen Ihren Computer neu starten, damit die Änderungen angewendet werden. Möchten Sie Ihren Computer jetzt neu starten?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="RegHive" xml:space="preserve">
+    <value>Registry-Einheit</value>
   </data>
 </root>

@@ -45,42 +45,52 @@ namespace DiskAnalysis
         [DllImport("user32.dll")]
         private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
 
+
         /// <summary>
         /// constructor for ScanWindow
         /// </summary>
         public ScanWindow(bool isFirstRun)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "ctor");
             InitializeComponent();
-            CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
+            var culture = new CultureInfo(CfgFile.Get("Lang"));
             Thread.CurrentThread.CurrentUICulture = culture;
             Loaded += ScanWindow_Loaded;
+            //Closing += new CancelEventHandler(ScanWindow_Closing);
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "ctor");
 
             if (isFirstRun)
             {
                 btnCancel.Content = rm.GetString("Close");
+                //this.btnCancel.Visibility = System.Windows.Visibility.Hidden;
+                //this.btnCancel
             }
             else
             {
                 btnCancel.Content = rm.GetString("Cancel");
+                //this.btnCancel.Visibility = System.Windows.Visibility.Visible;
             }
         }
 
-        /// <summary>
-        /// Handles Window Loaded event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+
         void ScanWindow_Loaded(object sender, RoutedEventArgs e)
         {
             try
             {
                 var hwnd = new WindowInteropHelper(this).Handle;
                 SetWindowLong(hwnd, GWL_STYLE, GetWindowLong(hwnd, GWL_STYLE) & ~WS_SYSMENU);
+
+                LogClass.AddInfoToLog(LogClass.LogInfo.Start, "ScanWindow_Loaded");
+
                 DriveData = new ObservableCollection<DriveData>();
                 bwDiskScanner = new BackgroundWorker();
                 bwDiskScanner.DoWork += bwDiskScanner_DoWork;
                 bwDiskScanner.RunWorkerCompleted += bwDiskScanner_RunWorkerCompleted;
                 bwDiskScanner.RunWorkerAsync();
+
+                LogClass.AddInfoToLog(LogClass.LogInfo.End, "ScanWindow_Loaded");
+
+
             }
             catch (Exception ex)
             {
@@ -98,32 +108,30 @@ namespace DiskAnalysis
 
         }
 
-        /// <summary>
-        /// Background thread's completed event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void bwDiskScanner_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwDiskScanner_RunWorkerCompleted");
+
             rbAllDrives.IsChecked = true;
 
             if (!App.PassedDir)
             {
+                LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_RunWorkerCompleted");
                 return;
             }
             rbFolder.IsChecked = true;
             tbFolder.Text = App.PassDir;
             DialogResult = true;
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_RunWorkerCompleted");
         }
 
-        /// <summary>
-        /// Background thread
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void bwDiskScanner_DoWork(object sender, DoWorkEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "bwDiskScanner_DoWork");
+            // Set Default control states
             Dispatcher.Invoke(DispatcherPriority.Normal, new Action(GetDriveInfo));
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "bwDiskScanner_DoWork");
         }
 
         /// <summary>
@@ -131,18 +139,23 @@ namespace DiskAnalysis
         /// </summary>
         void GetDriveInfo()
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "GetDriveInfo");
+
             try
             {
                 DriveInfo[] drives = null;
+
                 try
                 {
                     drives = DriveInfo.GetDrives();
                 }
                 catch (IOException ex)
                 {
+                    LogClass.AddErrorToLog(" Method - GetDriveInfo - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
                 catch (UnauthorizedAccessException ex)
                 {
+                    LogClass.AddErrorToLog(" Method - GetDriveInfo - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 }
 
                 if (drives != null)
@@ -153,12 +166,13 @@ namespace DiskAnalysis
                         {
                             if ((drive.DriveType == DriveType.Fixed || drive.DriveType == DriveType.Removable) && drive.IsReady)
                             {
-                                DriveData d = new DriveData(drive);
+                                var d = new DriveData(drive);
                                 DriveData.Add(d);
                             }
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            LogClass.AddErrorToLog(" Method - GetDriveInfo - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                         }
                     }
                     dgDrives.ItemsSource = DriveData;
@@ -166,8 +180,11 @@ namespace DiskAnalysis
             }
             catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - GetDriveInfo - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "GetDriveInfo");
         }
 
         /// <summary>
@@ -177,6 +194,8 @@ namespace DiskAnalysis
         /// <param name="e"></param>
         void btnOK_Click(object sender, RoutedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "btnOK_Click");
+
             try
             {
                 if ((bool)rbAllDrives.IsChecked ||
@@ -186,9 +205,12 @@ namespace DiskAnalysis
                     DialogResult = true;
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - btnOK_Click - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "btnOK_Click");
         }
 
         /// <summary>
@@ -202,9 +224,11 @@ namespace DiskAnalysis
             {
                 res = dgDrives.ItemsSource.Cast<DriveData>().Any(item => item.IsChecked);
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - IsAnyDriveSelected - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+
             return res;
         }
 
@@ -227,6 +251,7 @@ namespace DiskAnalysis
         /// <param name="e"></param>
         void btnCancel_Click(object sender, RoutedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Info, "btnCancel_Click");
             if (btnCancel.Content.ToString() == rm.GetString("Cancel"))
                 DialogResult = false;
             else
@@ -240,6 +265,8 @@ namespace DiskAnalysis
         /// <param name="e"></param>
         void rbAllDrives_Checked(object sender, RoutedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "rbAllDrives_Checked");
+
             try
             {
                 if (DriveData != null)
@@ -247,60 +274,82 @@ namespace DiskAnalysis
                     foreach (DriveData d in DriveData)
                     {
                         d.IsChecked = true;
+
                         var row = (DataGridRow)dgDrives.ItemContainerGenerator.ContainerFromItem(d);
                         SetSelectionInGrid(row, d.IsChecked);
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - rbAllDrives_Checked - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "rbAllDrives_Checked");
         }
 
         /// <summary>
-        /// Sets selection in grid
+        /// handle Checked event to choose individual drives
         /// </summary>
-        /// <param name="row">row to select</param>
-        /// <param name="isChecked">true if checked, false - otherwise</param>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void rbDrives_Checked(object sender, RoutedEventArgs e)
+        {
+            //foreach (DriveData d in driveData)
+            //{
+            //    d.IsChecked = false;
+            //    DataGridRow row = (DataGridRow)dgDrives.ItemContainerGenerator.ContainerFromItem(d);
+            //    SetSelectionInGrid(row, d.IsChecked);
+            //}
+        }
+
         static void SetSelectionInGrid(DataGridRow row, bool isChecked)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "SetSelectionInGrid");
+
             try
             {
                 if (row != null)
                 {
                     var presenter = WpfExtensions.GetVisualChild<DataGridCellsPresenter>(row);
-                    DataGridCell cell = presenter.ItemContainerGenerator.ContainerFromIndex(0) as DataGridCell;
+                    var cell = presenter.ItemContainerGenerator.ContainerFromIndex(0) as DataGridCell;
                     if (cell != null)
                     {
                         ((CheckBox)cell.Content).IsChecked = isChecked;
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - SetSelectionInGrid - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "SetSelectionInGrid");
         }
 
-        /// <summary>
-        /// Handles DataGridRow SelectionChanged event
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void dgDrives_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "dgDrives_SelectionChanged");
+
             try
             {
-                DataGrid dataGrid = sender as DataGrid;
+                var dataGrid = sender as DataGrid;
                 if (dataGrid == null) return;
-                DriveData d = (dataGrid.SelectedItem as DriveData);
+                var d = (dataGrid.SelectedItem as DriveData);
                 if (d != null) d.IsChecked = !d.IsChecked;
                 rbDrives.IsChecked = true;
+
+                //var _row = ((DataGridRow)dgDrives.CurrentItem).
                 var row = (DataGridRow)dataGrid.ItemContainerGenerator.ContainerFromItem(d);
                 SetSelectionInGrid(row, d.IsChecked);
+                //((DriveData)dgDrives.CurrentItem).IsChecked = d.IsChecked;
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - dgDrives_SelectionChanged - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "dgDrives_SelectionChanged");
         }
 
         /// <summary>
@@ -310,6 +359,7 @@ namespace DiskAnalysis
         /// <param name="e"></param>
         void rbFolder_Checked(object sender, RoutedEventArgs e)
         {
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "rbFolder_Checked");
             try
             {
                 if (DriveData != null)
@@ -317,14 +367,16 @@ namespace DiskAnalysis
                     foreach (DriveData d in DriveData)
                     {
                         d.IsChecked = false;
-                        DataGridRow row = (DataGridRow)dgDrives.ItemContainerGenerator.ContainerFromItem(d);
+                        var row = (DataGridRow)dgDrives.ItemContainerGenerator.ContainerFromItem(d);
                         SetSelectionInGrid(row, d.IsChecked);
                     }
                 }
             }
-            catch
+            catch (Exception ex)
             {
+                LogClass.AddErrorToLog(" Method - rbFolder_Checked - Exeption [" + ex.GetType().Name + "] - " + ex.Message);
             }
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "rbFolder_Checked");
         }
 
         /// <summary>
@@ -334,7 +386,9 @@ namespace DiskAnalysis
         /// <param name="e"></param>
         void btnBrowse_Click(object sender, RoutedEventArgs e)
         {
-            FolderBrowserDialog dlg = new FolderBrowserDialog();
+            LogClass.AddInfoToLog(LogClass.LogInfo.Start, "btnBrowse_Click");
+
+            var dlg = new FolderBrowserDialog();
             DialogResult result = dlg.ShowDialog(this.GetIWin32Window());
 
             if (result == System.Windows.Forms.DialogResult.OK)
@@ -342,6 +396,8 @@ namespace DiskAnalysis
                 rbFolder.IsChecked = true;
                 tbFolder.Text = dlg.SelectedPath;
             }
+
+            LogClass.AddInfoToLog(LogClass.LogInfo.End, "btnBrowse_Click");
         }
 
         /// <summary>

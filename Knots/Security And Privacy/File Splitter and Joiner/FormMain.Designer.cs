@@ -222,7 +222,7 @@ namespace FileSplitterAndJoiner
             this.chkIsJoinFileGenerating.AutoSize = true;
             this.chkIsJoinFileGenerating.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.chkIsJoinFileGenerating.ForeColor = System.Drawing.Color.Black;
-            this.chkIsJoinFileGenerating.Location = new System.Drawing.Point(258, 213);
+            this.chkIsJoinFileGenerating.Location = new System.Drawing.Point(258, 192);
             this.chkIsJoinFileGenerating.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkIsJoinFileGenerating.Name = "chkIsJoinFileGenerating";
             this.chkIsJoinFileGenerating.Size = new System.Drawing.Size(224, 19);
@@ -234,7 +234,7 @@ namespace FileSplitterAndJoiner
             // txtNumberOfFiles
             // 
             this.txtNumberOfFiles.Enabled = false;
-            this.txtNumberOfFiles.Location = new System.Drawing.Point(6, 51);
+            this.txtNumberOfFiles.Location = new System.Drawing.Point(6, 32);
             this.txtNumberOfFiles.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumberOfFiles.MaxLength = 4;
             this.txtNumberOfFiles.Name = "txtNumberOfFiles";
@@ -246,7 +246,7 @@ namespace FileSplitterAndJoiner
             // txtNumberOfBytesAfterSplit
             // 
             this.txtNumberOfBytesAfterSplit.Enabled = false;
-            this.txtNumberOfBytesAfterSplit.Location = new System.Drawing.Point(6, 51);
+            this.txtNumberOfBytesAfterSplit.Location = new System.Drawing.Point(6, 32);
             this.txtNumberOfBytesAfterSplit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNumberOfBytesAfterSplit.MaxLength = 14;
             this.txtNumberOfBytesAfterSplit.Name = "txtNumberOfBytesAfterSplit";
@@ -260,7 +260,7 @@ namespace FileSplitterAndJoiner
             // btnSplitFile
             // 
             this.btnSplitFile.Enabled = false;
-            this.btnSplitFile.Location = new System.Drawing.Point(250, 262);
+            this.btnSplitFile.Location = new System.Drawing.Point(250, 241);
             this.btnSplitFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSplitFile.Name = "btnSplitFile";
             this.btnSplitFile.Size = new System.Drawing.Size(121, 26);
@@ -416,7 +416,7 @@ namespace FileSplitterAndJoiner
             this.grbNumberOfBytes.ForeColor = System.Drawing.Color.Black;
             this.grbNumberOfBytes.Location = new System.Drawing.Point(6, 122);
             this.grbNumberOfBytes.Name = "grbNumberOfBytes";
-            this.grbNumberOfBytes.Size = new System.Drawing.Size(164, 84);
+            this.grbNumberOfBytes.Size = new System.Drawing.Size(164, 63);
             this.grbNumberOfBytes.TabIndex = 23;
             this.grbNumberOfBytes.TabStop = false;
             this.grbNumberOfBytes.Text = "data size in which splitting occurs after";
@@ -425,7 +425,7 @@ namespace FileSplitterAndJoiner
             // 
             this.cboFileSizes.Enabled = false;
             this.cboFileSizes.FormattingEnabled = true;
-            this.cboFileSizes.Location = new System.Drawing.Point(107, 51);
+            this.cboFileSizes.Location = new System.Drawing.Point(107, 32);
             this.cboFileSizes.Name = "cboFileSizes";
             this.cboFileSizes.Size = new System.Drawing.Size(50, 23);
             this.cboFileSizes.TabIndex = 15;
@@ -438,7 +438,7 @@ namespace FileSplitterAndJoiner
             this.grbSplitInfo.ForeColor = System.Drawing.Color.Black;
             this.grbSplitInfo.Location = new System.Drawing.Point(305, 122);
             this.grbSplitInfo.Name = "grbSplitInfo";
-            this.grbSplitInfo.Size = new System.Drawing.Size(177, 84);
+            this.grbSplitInfo.Size = new System.Drawing.Size(177, 63);
             this.grbSplitInfo.TabIndex = 25;
             this.grbSplitInfo.TabStop = false;
             this.grbSplitInfo.Text = "Split Info";
@@ -450,7 +450,7 @@ namespace FileSplitterAndJoiner
             this.tcMain.Location = new System.Drawing.Point(1, 70);
             this.tcMain.Name = "tcMain";
             this.tcMain.SelectedIndex = 0;
-            this.tcMain.Size = new System.Drawing.Size(498, 324);
+            this.tcMain.Size = new System.Drawing.Size(498, 304);
             this.tcMain.TabIndex = 4;
             // 
             // tbpFileSplitter
@@ -467,7 +467,7 @@ namespace FileSplitterAndJoiner
             this.tbpFileSplitter.Location = new System.Drawing.Point(4, 24);
             this.tbpFileSplitter.Name = "tbpFileSplitter";
             this.tbpFileSplitter.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpFileSplitter.Size = new System.Drawing.Size(490, 296);
+            this.tbpFileSplitter.Size = new System.Drawing.Size(490, 276);
             this.tbpFileSplitter.TabIndex = 0;
             this.tbpFileSplitter.Text = "File Splitter";
             this.tbpFileSplitter.UseVisualStyleBackColor = true;
@@ -478,7 +478,7 @@ namespace FileSplitterAndJoiner
             this.grbNumberOfFiles.ForeColor = System.Drawing.Color.Black;
             this.grbNumberOfFiles.Location = new System.Drawing.Point(176, 122);
             this.grbNumberOfFiles.Name = "grbNumberOfFiles";
-            this.grbNumberOfFiles.Size = new System.Drawing.Size(123, 84);
+            this.grbNumberOfFiles.Size = new System.Drawing.Size(123, 63);
             this.grbNumberOfFiles.TabIndex = 27;
             this.grbNumberOfFiles.TabStop = false;
             this.grbNumberOfFiles.Text = "Number of files to split your file into";
@@ -486,7 +486,7 @@ namespace FileSplitterAndJoiner
             // btnPauseSplitting
             // 
             this.btnPauseSplitting.Enabled = false;
-            this.btnPauseSplitting.Location = new System.Drawing.Point(377, 262);
+            this.btnPauseSplitting.Location = new System.Drawing.Point(377, 241);
             this.btnPauseSplitting.Name = "btnPauseSplitting";
             this.btnPauseSplitting.Size = new System.Drawing.Size(105, 26);
             this.btnPauseSplitting.TabIndex = 26;
@@ -496,7 +496,7 @@ namespace FileSplitterAndJoiner
             // 
             // prbSplitting
             // 
-            this.prbSplitting.Location = new System.Drawing.Point(13, 244);
+            this.prbSplitting.Location = new System.Drawing.Point(13, 223);
             this.prbSplitting.Name = "prbSplitting";
             this.prbSplitting.Size = new System.Drawing.Size(469, 12);
             this.prbSplitting.TabIndex = 20;
@@ -513,7 +513,7 @@ namespace FileSplitterAndJoiner
             this.tbpFileJoiner.Location = new System.Drawing.Point(4, 24);
             this.tbpFileJoiner.Name = "tbpFileJoiner";
             this.tbpFileJoiner.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpFileJoiner.Size = new System.Drawing.Size(490, 296);
+            this.tbpFileJoiner.Size = new System.Drawing.Size(490, 276);
             this.tbpFileJoiner.TabIndex = 1;
             this.tbpFileJoiner.Text = "File Joiner";
             this.tbpFileJoiner.UseVisualStyleBackColor = true;
@@ -521,7 +521,7 @@ namespace FileSplitterAndJoiner
             // btnPauseJoining
             // 
             this.btnPauseJoining.Enabled = false;
-            this.btnPauseJoining.Location = new System.Drawing.Point(377, 262);
+            this.btnPauseJoining.Location = new System.Drawing.Point(377, 241);
             this.btnPauseJoining.Name = "btnPauseJoining";
             this.btnPauseJoining.Size = new System.Drawing.Size(105, 26);
             this.btnPauseJoining.TabIndex = 27;
@@ -569,7 +569,7 @@ namespace FileSplitterAndJoiner
             this.cboIsPiecesDeletedAfterJoining.Checked = true;
             this.cboIsPiecesDeletedAfterJoining.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cboIsPiecesDeletedAfterJoining.ForeColor = System.Drawing.Color.Black;
-            this.cboIsPiecesDeletedAfterJoining.Location = new System.Drawing.Point(208, 198);
+            this.cboIsPiecesDeletedAfterJoining.Location = new System.Drawing.Point(208, 192);
             this.cboIsPiecesDeletedAfterJoining.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboIsPiecesDeletedAfterJoining.Name = "cboIsPiecesDeletedAfterJoining";
             this.cboIsPiecesDeletedAfterJoining.Size = new System.Drawing.Size(274, 19);
@@ -649,7 +649,7 @@ namespace FileSplitterAndJoiner
             // 
             // prbJoining
             // 
-            this.prbJoining.Location = new System.Drawing.Point(13, 244);
+            this.prbJoining.Location = new System.Drawing.Point(13, 223);
             this.prbJoining.Name = "prbJoining";
             this.prbJoining.Size = new System.Drawing.Size(469, 12);
             this.prbJoining.TabIndex = 21;
@@ -657,7 +657,7 @@ namespace FileSplitterAndJoiner
             // btnJoinFile
             // 
             this.btnJoinFile.Enabled = false;
-            this.btnJoinFile.Location = new System.Drawing.Point(249, 262);
+            this.btnJoinFile.Location = new System.Drawing.Point(249, 241);
             this.btnJoinFile.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnJoinFile.Name = "btnJoinFile";
             this.btnJoinFile.Size = new System.Drawing.Size(122, 26);
@@ -668,7 +668,7 @@ namespace FileSplitterAndJoiner
             // 
             // stsMain
             // 
-            this.stsMain.Location = new System.Drawing.Point(0, 397);
+            this.stsMain.Location = new System.Drawing.Point(0, 376);
             this.stsMain.Name = "stsMain";
             this.stsMain.Size = new System.Drawing.Size(499, 22);
             this.stsMain.TabIndex = 8;
@@ -677,7 +677,7 @@ namespace FileSplitterAndJoiner
             // ucBottom
             // 
             this.ucBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ucBottom.Location = new System.Drawing.Point(0, 419);
+            this.ucBottom.Location = new System.Drawing.Point(0, 398);
             this.ucBottom.Margin = new System.Windows.Forms.Padding(0);
             this.ucBottom.MaximumSize = new System.Drawing.Size(0, 36);
             this.ucBottom.MinimumSize = new System.Drawing.Size(0, 36);
@@ -699,7 +699,7 @@ namespace FileSplitterAndJoiner
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ClientSize = new System.Drawing.Size(499, 455);
+            this.ClientSize = new System.Drawing.Size(499, 434);
             this.Controls.Add(this.stsMain);
             this.Controls.Add(this.ucBottom);
             this.Controls.Add(this.ucTop);

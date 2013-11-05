@@ -6,224 +6,215 @@ using System.Windows.Media.Animation;
 
 namespace FreemiumUtilities
 {
-    /// <summary>
-    /// Interaction logic for AboutBox.xaml
-    /// </summary>
-    public partial class AboutBox
-    {
-        static AboutBox clickContext;
+	/// <summary>
+	/// Interaction logic for AboutBox.xaml
+	/// </summary>
+	public partial class AboutBox
+	{
+		static AboutBox clickContext;
 
-        /// <summary>
-        /// AboutBox constructor
-        /// </summary>
-        public AboutBox()
-        {
-            InitializeComponent();
-            Loaded += AboutBox_Loaded;
-            Unloaded += AboutBox_Unloaded;
-            clickContext = this;
-        }
+		/// <summary>
+		/// AboutBox constructor
+		/// </summary>
+		public AboutBox()
+		{
+			InitializeComponent();
+			Loaded += AboutBox_Loaded;
+			Unloaded += AboutBox_Unloaded;
+			clickContext = this;
+		}
 
-        /// <summary>
-        /// Animates the inner box
-        /// </summary>
-        public void AnimateInnerBox()
-        {
-            DoubleAnimation animFadeIn = new DoubleAnimation
-            {
-                From = 0,
-                To = 1,
-                Duration = new Duration(TimeSpan.FromMilliseconds(800))
-            };
-            Inner.BeginAnimation(OpacityProperty, animFadeIn);
-        }
+		/// <summary>
+		/// Animates the inner box
+		/// </summary>
+		public void AnimateInnerBox()
+		{
+			var animFadeIn = new DoubleAnimation {From = 0, To = 1, Duration = new Duration(TimeSpan.FromMilliseconds(800))};
+			Inner.BeginAnimation(OpacityProperty, animFadeIn);
+		}
 
-        /// <summary>
-        /// Animates the AboutBox closing process
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void Close(object sender, RoutedEventArgs e)
-        {
-            Storyboard sb = new Storyboard();
-            DoubleAnimation animFadeIn = new DoubleAnimation
-            {
-                From = 1,
-                To = 0,
-                Duration = new Duration(TimeSpan.FromMilliseconds(300))
-            };
-            sb.Children.Add(animFadeIn);
-            Storyboard.SetTarget(animFadeIn, this);
-            Storyboard.SetTargetProperty(animFadeIn, new PropertyPath(OpacityProperty));
-            sb.Completed += sb_Completed;
-            sb.Begin();
-        }
+		/// <summary>
+		/// Animates the AboutBox closing process
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void Close(object sender, RoutedEventArgs e)
+		{
+			var sb = new Storyboard();
 
-        /// <summary>
-        /// Fired when the pre-closing animation is done.
-        /// Actually closes the app.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        void sb_Completed(object sender, EventArgs e)
-        {
-            Close();
-        }
+			var animFadeIn = new DoubleAnimation {From = 1, To = 0, Duration = new Duration(TimeSpan.FromMilliseconds(300))};
 
-        /// <summary>
-        /// Checks is the mouse clicked inside the UI element
-        /// </summary>
-        /// <param name="element">UI element</param>
-        /// <param name="point">Screen coordinates of the point where the mouse is clicked</param>
-        /// <returns>True if mouse is clicked inside the UI element</returns>
-        static bool IsMouseClickWithin(Window element, Point point)
-        {
-            return (point.X > element.Left && point.X < (element.Left + element.Width)) &&
-                   (point.Y > element.Top && point.Y < (element.Top + element.Height));
-        }
+			sb.Children.Add(animFadeIn);
 
-        /// <summary>
-        /// Animates the window when the mouse is clicked outside it
-        /// </summary>
-        /// <param name="point">Screen coordinates of the point where the mouse is clicked</param>
-        static void AnimateClickOutside(Point point)
-        {
-            if (clickContext != null && clickContext.IsActive && !IsMouseClickWithin(clickContext, point))
-            {
-                Storyboard sb = new Storyboard();
+			Storyboard.SetTarget(animFadeIn, this);
+			Storyboard.SetTargetProperty(animFadeIn, new PropertyPath(OpacityProperty));
+			sb.Completed += sb_Completed;
 
-                double originalLeft = (int)clickContext.Left;
+			sb.Begin();
+		}
 
-                DoubleAnimation animLeft = new DoubleAnimation
-                                {
-                                    From = originalLeft - 20,
-                                    To = originalLeft + 20,
-                                    Duration = new Duration(TimeSpan.FromMilliseconds(100)),
-                                    AutoReverse = true,
-                                    RepeatBehavior = new RepeatBehavior(2),
-                                    FillBehavior = FillBehavior.Stop
-                                };
+		/// <summary>
+		/// Fired when the pre-closing animation is done.
+		/// Actually closes the app.
+		/// </summary>
+		/// <param name="sender"></param>
+		/// <param name="e"></param>
+		void sb_Completed(object sender, EventArgs e)
+		{
+			Close();
+		}
 
-                sb.Children.Add(animLeft);
-                Storyboard.SetTarget(animLeft, clickContext);
-                Storyboard.SetTargetProperty(animLeft, new PropertyPath(LeftProperty));
-                sb.Begin();
-            }
-        }
+		/// <summary>
+		/// Checks is the mouse clicked inside the UI element
+		/// </summary>
+		/// <param name="element">UI element</param>
+		/// <param name="point">Screen coordinates of the point where the mouse is clicked</param>
+		/// <returns>True if mouse is clicked inside the UI element</returns>
+		static bool IsMouseClickWithin(Window element, Point point)
+		{
+			return (point.X > element.Left && point.X < (element.Left + element.Width)) &&
+			       (point.Y > element.Top && point.Y < (element.Top + element.Height));
+		}
 
-        /*
-         * Mouse hook
-         */
-        public void AboutBox_Loaded(object sender, RoutedEventArgs e)
-        {
-            hookID = SetHook(_proc);
-        }
+		/// <summary>
+		/// Animates the window when the mouse is clicked outside it
+		/// </summary>
+		/// <param name="point">Screen coordinates of the point where the mouse is clicked</param>
+		static void AnimateClickOutside(Point point)
+		{
+			if (clickContext != null && clickContext.IsActive && !IsMouseClickWithin(clickContext, point))
+			{
+				var sb = new Storyboard();
 
-        void AboutBox_Unloaded(object sender, RoutedEventArgs e)
-        {
-            UnhookWindowsHookEx(hookID);
-        }
+				var originalLeft = (int) clickContext.Left;
 
-        #region Mouse hook
+				var animLeft = new DoubleAnimation
+				               	{
+				               		From = originalLeft - 20,
+				               		To = originalLeft + 20,
+				               		Duration = new Duration(TimeSpan.FromMilliseconds(100)),
+				               		AutoReverse = true,
+				               		RepeatBehavior = new RepeatBehavior(2),
+				               		FillBehavior = FillBehavior.Stop
+				               	};
 
-        const int WH_MOUSE_LL = 14;
-        static readonly LowLevelMouseProc _proc = HookCallback;
-        static IntPtr hookID = IntPtr.Zero;
+				sb.Children.Add(animLeft);
 
-        static IntPtr SetHook(LowLevelMouseProc proc)
-        {
-            IntPtr p = IntPtr.Zero;
-            try
-            {
-                using (Process curProcess = Process.GetCurrentProcess())
-                using (ProcessModule curModule = curProcess.MainModule)
-                {
-                    p = SetWindowsHookEx(WH_MOUSE_LL, proc, GetModuleHandle(curModule.ModuleName), 0);
-                }
-            }
-            catch
-            {
-            }
-            return p;
-        }
+				Storyboard.SetTarget(animLeft, clickContext);
+				Storyboard.SetTargetProperty(animLeft, new PropertyPath(LeftProperty));
 
-        static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
-        {
-            if (nCode >= 0 && MouseMessages.WM_LBUTTONUP == (MouseMessages)wParam)
-            {
-                MSLLHOOKSTRUCT hookStruct = (MSLLHOOKSTRUCT)Marshal.PtrToStructure(lParam, typeof(MSLLHOOKSTRUCT));
-                double x = Convert.ToDouble(hookStruct.pt.x);
-                double y = Convert.ToDouble(hookStruct.pt.y);
-                AnimateClickOutside(new Point(x, y));
-            }
-            return CallNextHookEx(hookID, nCode, wParam, lParam);
-        }
+				sb.Begin();
+			}
+		}
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern IntPtr SetWindowsHookEx(int idHook,
-                                              LowLevelMouseProc lpfn, IntPtr hMod, uint dwThreadId);
+		/*
+		 * Mouse hook
+		 */
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        [return: MarshalAs(UnmanagedType.Bool)]
-        static extern bool UnhookWindowsHookEx(IntPtr hhk);
+		public void AboutBox_Loaded(object sender, RoutedEventArgs e)
+		{
+			hookID = SetHook(_proc);
+		}
 
-        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
-                                            IntPtr wParam, IntPtr lParam);
+		void AboutBox_Unloaded(object sender, RoutedEventArgs e)
+		{
+			UnhookWindowsHookEx(hookID);
+		}
 
-        [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        static extern IntPtr GetModuleHandle(string lpModuleName);
+		#region Mouse hook
 
-        void GoToSite(object sender, RoutedEventArgs e)
-        {
-            ((MainWindow)Application.Current.MainWindow).OpenRootUrl(sender, e);
-        }
+		const int WH_MOUSE_LL = 14;
+		static readonly LowLevelMouseProc _proc = HookCallback;
+		static IntPtr hookID = IntPtr.Zero;
 
-        #region Nested type: LowLevelMouseProc
+		static IntPtr SetHook(LowLevelMouseProc proc)
+		{
+			using (Process curProcess = Process.GetCurrentProcess())
+			using (ProcessModule curModule = curProcess.MainModule)
+			{
+				return SetWindowsHookEx(WH_MOUSE_LL, proc,
+				                        GetModuleHandle(curModule.ModuleName), 0);
+			}
+		}
 
-        delegate IntPtr LowLevelMouseProc(int nCode, IntPtr wParam, IntPtr lParam);
+		static IntPtr HookCallback(int nCode, IntPtr wParam, IntPtr lParam)
+		{
+			if (nCode >= 0 && MouseMessages.WM_LBUTTONUP == (MouseMessages) wParam)
+			{
+				var hookStruct = (MSLLHOOKSTRUCT) Marshal.PtrToStructure(lParam, typeof (MSLLHOOKSTRUCT));
+				//Debug.WriteLine(hookStruct.pt.x + ", " + hookStruct.pt.y);
+				double x = Convert.ToDouble(hookStruct.pt.x);
+				double y = Convert.ToDouble(hookStruct.pt.y);
+				AnimateClickOutside(new Point(x, y));
+			}
+			return CallNextHookEx(hookID, nCode, wParam, lParam);
+		}
 
-        #endregion
+		[DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		static extern IntPtr SetWindowsHookEx(int idHook,
+		                                      LowLevelMouseProc lpfn, IntPtr hMod, uint dwThreadId);
 
-        #region Nested type: MSLLHOOKSTRUCT
+		[DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		[return: MarshalAs(UnmanagedType.Bool)]
+		static extern bool UnhookWindowsHookEx(IntPtr hhk);
 
-        [StructLayout(LayoutKind.Sequential)]
-        struct MSLLHOOKSTRUCT
-        {
-            public POINT pt;
-            readonly uint mouseData;
-            public readonly uint flags;
-            public readonly uint time;
-            public readonly IntPtr dwExtraInfo;
-        }
+		[DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		static extern IntPtr CallNextHookEx(IntPtr hhk, int nCode,
+		                                    IntPtr wParam, IntPtr lParam);
 
-        #endregion
+		[DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+		static extern IntPtr GetModuleHandle(string lpModuleName);
 
-        #region Nested type: MouseMessages
+		void GoToSite(object sender, RoutedEventArgs e)
+		{
+			((MainWindow) Application.Current.MainWindow).OpenRootUrl(sender, e);
+		}
 
-        enum MouseMessages
-        {
-            WM_LBUTTONDOWN = 0x0201,
-            WM_LBUTTONUP = 0x0202,
-            WM_MOUSEMOVE = 0x0200,
-            WM_MOUSEWHEEL = 0x020A,
-            WM_RBUTTONDOWN = 0x0204,
-            WM_RBUTTONUP = 0x0205
-        }
+		#region Nested type: LowLevelMouseProc
 
-        #endregion
+		delegate IntPtr LowLevelMouseProc(int nCode, IntPtr wParam, IntPtr lParam);
 
-        #region Nested type: POINT
+		#endregion
 
-        [StructLayout(LayoutKind.Sequential)]
-        struct POINT
-        {
-            public readonly int x;
-            public readonly int y;
-        }
+		#region Nested type: MSLLHOOKSTRUCT
 
-        #endregion
+		[StructLayout(LayoutKind.Sequential)]
+		struct MSLLHOOKSTRUCT
+		{
+			public POINT pt;
+			readonly uint mouseData;
+			public readonly uint flags;
+			public readonly uint time;
+			public readonly IntPtr dwExtraInfo;
+		}
 
-        #endregion
-    }
+		#endregion
+
+		#region Nested type: MouseMessages
+
+		enum MouseMessages
+		{
+			WM_LBUTTONDOWN = 0x0201,
+			WM_LBUTTONUP = 0x0202,
+			WM_MOUSEMOVE = 0x0200,
+			WM_MOUSEWHEEL = 0x020A,
+			WM_RBUTTONDOWN = 0x0204,
+			WM_RBUTTONUP = 0x0205
+		}
+
+		#endregion
+
+		#region Nested type: POINT
+
+		[StructLayout(LayoutKind.Sequential)]
+		struct POINT
+		{
+			public readonly int x;
+			public readonly int y;
+		}
+
+		#endregion
+
+		#endregion
+	}
 }

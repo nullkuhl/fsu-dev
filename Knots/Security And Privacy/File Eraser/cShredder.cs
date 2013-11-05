@@ -3,19 +3,18 @@ using System.Text;
 using System.Runtime.InteropServices;
 using System.Collections;
 using System.Resources;
-using System.Windows.Forms;
 
 namespace FileEraser
 {
-    /// <summary>
-    /// cShredder
-    /// </summary>
+	/// <summary>
+	/// cShredder
+	/// </summary>
     [System.Security.Permissions.PermissionSet(System.Security.Permissions.SecurityAction.Demand, Name = "FullTrust")]
     public class cShredder
     {
-        /// <summary>
-        /// Resource manager
-        /// </summary>
+		/// <summary>
+		/// Resource manager
+		/// </summary>
         public ResourceManager rm = new ResourceManager("FileEraser.Resources",
             System.Reflection.Assembly.GetExecutingAssembly());
 
@@ -125,9 +124,9 @@ namespace FileEraser
 
         #region Enum
 
-        /// <summary>
-        /// Move methods
-        /// </summary>
+		/// <summary>
+		/// Move methods
+		/// </summary>
         public enum EMoveMethod : uint
         {
             Begin = 0,
@@ -237,122 +236,122 @@ namespace FileEraser
 
         #region Struct
 
-        /// <summary>
-        /// File times
-        /// </summary>
+		/// <summary>
+		/// File times
+		/// </summary>
         [StructLayout(LayoutKind.Sequential)]
         public struct FILETIME
         {
-            /// <summary>
-            /// LowDateTime
-            /// </summary>
+			/// <summary>
+			/// LowDateTime
+			/// </summary>
             public UInt32 dwLowDateTime;
-            /// <summary>
-            /// HighDateTime
-            /// </summary>
+			/// <summary>
+			/// HighDateTime
+			/// </summary>
             public UInt32 dwHighDateTime;
         };
 
-        /// <summary>
-        /// Win32 find data
-        /// </summary>
+		/// <summary>
+		/// Win32 find data
+		/// </summary>
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
         public struct WIN32_FIND_DATAA
         {
-            /// <summary>
-            /// File attributes
-            /// </summary>
+			/// <summary>
+			/// File attributes
+			/// </summary>
             public Int32 dwFileAttributes;
-            /// <summary>
-            /// Creation time
-            /// </summary>
+			/// <summary>
+			/// Creation time
+			/// </summary>
             public FILETIME ftCreationTime;
-            /// <summary>
-            /// Last access time
-            /// </summary>
+			/// <summary>
+			/// Last access time
+			/// </summary>
             public FILETIME ftLastAccessTime;
-            /// <summary>
-            /// Last write time
-            /// </summary>
+			/// <summary>
+			/// Last write time
+			/// </summary>
             public FILETIME ftLastWriteTime;
-            /// <summary>
-            /// File size high
-            /// </summary>
+			/// <summary>
+			/// File size high
+			/// </summary>
             public Int32 nFileSizeHigh;
-            /// <summary>
-            /// File size low
-            /// </summary>
+			/// <summary>
+			/// File size low
+			/// </summary>
             public Int32 nFileSizeLow;
-            /// <summary>
-            /// Reserved0
-            /// </summary>
+			/// <summary>
+			/// Reserved0
+			/// </summary>
             public Int32 dwReserved0;
-            /// <summary>
-            /// Reserved1
-            /// </summary>
+			/// <summary>
+			/// Reserved1
+			/// </summary>
             public Int32 dwReserved1;
 
-            /// <summary>
-            /// File name
-            /// </summary>
+			/// <summary>
+			/// File name
+			/// </summary>
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
             public string cFileName;
 
-            /// <summary>
-            /// Alternate file name
-            /// </summary>
+			/// <summary>
+			/// Alternate file name
+			/// </summary>
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_ALTERNATE)]
             public string cAlternate;
         }
 
-        /// <summary>
-        /// Win32 find data
-        /// </summary>
+		/// <summary>
+		/// Win32 find data
+		/// </summary>
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
         public struct WIN32_FIND_DATAW
         {
-            /// <summary>
-            /// File attributes
-            /// </summary>
-            public Int32 dwFileAttributes;
-            /// <summary>
-            /// Creation time
-            /// </summary>
-            public FILETIME ftCreationTime;
-            /// <summary>
-            /// Last access time
-            /// </summary>
-            public FILETIME ftLastAccessTime;
-            /// <summary>
-            /// Last write time
-            /// </summary>
-            public FILETIME ftLastWriteTime;
-            /// <summary>
-            /// File size high
-            /// </summary>
-            public Int32 nFileSizeHigh;
-            /// <summary>
-            /// File size low
-            /// </summary>
-            public Int32 nFileSizeLow;
-            /// <summary>
-            /// Reserved0
-            /// </summary>
-            public Int32 dwReserved0;
-            /// <summary>
-            /// Reserved1
-            /// </summary>
-            public Int32 dwReserved1;
+			/// <summary>
+			/// File attributes
+			/// </summary>
+			public Int32 dwFileAttributes;
+			/// <summary>
+			/// Creation time
+			/// </summary>
+			public FILETIME ftCreationTime;
+			/// <summary>
+			/// Last access time
+			/// </summary>
+			public FILETIME ftLastAccessTime;
+			/// <summary>
+			/// Last write time
+			/// </summary>
+			public FILETIME ftLastWriteTime;
+			/// <summary>
+			/// File size high
+			/// </summary>
+			public Int32 nFileSizeHigh;
+			/// <summary>
+			/// File size low
+			/// </summary>
+			public Int32 nFileSizeLow;
+			/// <summary>
+			/// Reserved0
+			/// </summary>
+			public Int32 dwReserved0;
+			/// <summary>
+			/// Reserved1
+			/// </summary>
+			public Int32 dwReserved1;
 
-            /// <summary>
-            /// File name
-            /// </summary>
+			/// <summary>
+			/// File name
+			/// </summary>
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
             public string cFileName;
 
-            /// <summary>
-            /// Alternate file name
-            /// </summary>
+			/// <summary>
+			/// Alternate file name
+			/// </summary>
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_ALTERNATE)]
             public string cAlternateFileName;
         }
@@ -360,41 +359,41 @@ namespace FileEraser
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         struct LUID
         {
-            readonly Int32 LowPart;
-            readonly Int32 HighPart;
+        	readonly Int32 LowPart;
+        	readonly Int32 HighPart;
         }
 
-        /// <summary>
-        /// LUID and attributes
-        /// </summary>
+		/// <summary>
+		/// LUID and attributes
+		/// </summary>
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         struct LUID_AND_ATTRIBUTES
         {
-            /// <summary>
-            /// LUID
-            /// </summary>
+			/// <summary>
+			/// LUID
+			/// </summary>
             public LUID pLuid;
 
-            /// <summary>
-            /// Attributes
-            /// </summary>
+			/// <summary>
+			/// Attributes
+			/// </summary>
             public Int32 Attributes;
         }
 
-        /// <summary>
-        /// Token privileges
-        /// </summary>
+		/// <summary>
+		/// Token privileges
+		/// </summary>
         [StructLayout(LayoutKind.Sequential, Pack = 1)]
         struct TOKEN_PRIVILEGES
         {
-            /// <summary>
-            /// Privileges count
-            /// </summary>
+			/// <summary>
+			/// Privileges count
+			/// </summary>
             public Int32 PrivilegesCount;
 
-            /// <summary>
-            /// Privileges
-            /// </summary>
+			/// <summary>
+			/// Privileges
+			/// </summary>
             public LUID_AND_ATTRIBUTES Privileges;
         }
         #endregion
@@ -427,7 +426,7 @@ namespace FileEraser
 
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern Int32 ReadFile(IntPtr hFile, IntPtr lpBuffer, UInt32 nNumberOfBytesToRead, ref UInt32 lpNumberOfBytesRead, IntPtr lpOverlapped);
-
+        
         [DllImport("kernel32.dll", SetLastError = true)]
         static extern Int32 CloseHandle(IntPtr hObject);
 
@@ -466,11 +465,11 @@ namespace FileEraser
         [return: MarshalAs(UnmanagedType.Bool)]
         static extern Boolean FindNextFileW(IntPtr hFindFile, out WIN32_FIND_DATAW lpFindFileData);
 
-        /// <summary>
-        /// Find close
-        /// </summary>
-        /// <param name="hFindFile"></param>
-        /// <returns></returns>
+		/// <summary>
+		/// Find close
+		/// </summary>
+		/// <param name="hFindFile"></param>
+		/// <returns></returns>
         [DllImport("kernel32", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern Boolean FindClose(IntPtr hFindFile);
@@ -527,7 +526,7 @@ namespace FileEraser
         [DllImport("kernel32.dll")]
         static extern uint WaitForMultipleObjects(uint nCount, IntPtr[] pHandles,
         Boolean bWaitAll, uint dwMilliseconds);
-
+        
         // privilege - needed changes
         [DllImport("advapi32.dll", SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -548,40 +547,49 @@ namespace FileEraser
         #endregion
 
         #region Events
-        /// <summary>
-        /// Error delegate
-        /// </summary>
-        /// <param name="ErrType"></param>
-        /// <param name="Err"></param>
+        //public delegate void ProgressMaxDelegate(Int32 Max);
+        //public event ProgressMaxDelegate ProgressMax;
+
+        //public delegate void ProgressTickDelegate();
+        //public event ProgressTickDelegate ProgressTick;
+
+        //public delegate void CompleteDelegate();
+        //public event CompleteDelegate Complete;
+
+		/// <summary>
+		/// Error delegate
+		/// </summary>
+		/// <param name="ErrType"></param>
+		/// <param name="Err"></param>
         public delegate void ErrorDelegate(Int32 ErrType, String Err);
 
-        /// <summary>
-        /// Error event
-        /// </summary>
+		/// <summary>
+		/// Error event
+		/// </summary>
         public event ErrorDelegate InError;
 
-        /// <summary>
-        /// File count delegate
-        /// </summary>
-        /// <param name="Count"></param>
-        /// <param name="Cancel"></param>
+		/// <summary>
+		/// File count delegate
+		/// </summary>
+		/// <param name="Count"></param>
+		/// <param name="Cancel"></param>
         public delegate void FileCountDelegate(Int32 Count, ref Boolean Cancel);
 
-        /// <summary>
-        /// File count event
-        /// </summary>
+		/// <summary>
+		/// File count event
+		/// </summary>
         public event FileCountDelegate FileCount;
 
-        /// <summary>
-        /// Status delegate
-        /// </summary>
-        /// <param name="Status"></param>
-        /// <param name="Message"></param>
+		/// <summary>
+		/// Status delegate
+		/// </summary>
+		/// <param name="Status"></param>
+		/// <param name="Message"></param>
         public delegate void StatusDelegate(Int32 Status, string Message);
 
-        /// <summary>
-        /// Status event
-        /// </summary>
+		/// <summary>
+		/// Status event
+		/// </summary>
         public event StatusDelegate Status;
         #endregion
 
@@ -595,7 +603,7 @@ namespace FileEraser
         string sFilePath = String.Empty;
         string[] tkRights = { SE_ASSIGNPRIMARYTOKEN_NAME, SE_BACKUP_NAME, SE_DEBUG_NAME, SE_INC_BASE_PRIORITY_NAME, SE_RESTORE_NAME, SE_SECURITY_NAME, SE_TCB_NAME };
 
-        #endregion
+    	#endregion
 
         #region Properties
         /// <summary>
@@ -711,6 +719,7 @@ namespace FileEraser
         /// <returns>Boolean</returns>
         public Boolean startShredder()
         {
+            //Boolean bC = false;
             // reset collections
             new ArrayList();
             new ArrayList();
@@ -740,17 +749,20 @@ namespace FileEraser
                     if (!fileExists(UNICODE_PREFIX + FilePath))
                     {
                         if (InError != null)
-                            InError(003, rm.GetString("file_path_invalid") + "!");
+                            InError(003, rm.GetString("file_path_invalid")+"!");
                     }
                     if (CloseInstance)
                         closeProcess(FilePath);
                     // relay processing status
+                    //Status(0, rm.GetString("processing_file")+" " + FilePath);
                     if (shredFile(UNICODE_PREFIX + FilePath))
                     {
+                        //Status(0, rm.GetString("file")+" " + FilePath + rm.GetString("deleted"));
                         return true;
                     }
                     else
                     {
+                        //Status(0, rm.GetString("could_not_delete")+" " + FilePath);
                         adjustToken(false, tkRights);
                         return false;
                     }
@@ -773,14 +785,13 @@ namespace FileEraser
         {
             IntPtr hFile = IntPtr.Zero;
             IntPtr pBuffer = IntPtr.Zero;
+            IntPtr pName = Marshal.StringToHGlobalAuto(sPath);
             UInt32 nFileLen = 0;
             UInt32 dwSize = BUFFER_SIZE;
             byte bR = 0;
 
             try
-            {                
-                IntPtr pName = Marshal.StringToHGlobalAuto(sPath);            
-
+            {
                 // reset attributes
                 if (AnyAttribute)
                     stripAttributes(sPath);
@@ -826,14 +837,14 @@ namespace FileEraser
                 // reduce to zero bytes
                 if (zeroFile(pName) != true)
                     if (InError != null)
-                        InError(005, rm.GetString("emptying_content_failed") + ".");
+                        InError(005, rm.GetString("emptying_content_failed")+".");
                 // paranoid mode
                 if (ParanoidMode)
                     orphanFile(pName);
                 // rename the file
                 if (renameFile(sPath) != true)
                     if (InError != null)
-                        InError(006, rm.GetString("file_not_renamed") + ".");
+                        InError(006, rm.GetString("file_not_renamed")+".");
 
                 return true;
             }
@@ -858,7 +869,7 @@ namespace FileEraser
             UInt32 nFileLen = fileSize(hFile);
             UInt32 dwSeek = 0;
             UInt32 btWritten = 0;
-
+            
             try
             {
                 if (nFileLen < BUFFER_SIZE)
@@ -873,7 +884,6 @@ namespace FileEraser
                         SetFilePointerEx(hFile, dwSeek, IntPtr.Zero, FILE_BEGIN);
                         WriteFile(hFile, pBuffer, BUFFER_SIZE, ref btWritten, IntPtr.Zero);
                         dwSeek += btWritten;
-                        Application.DoEvents();
                     } while ((nFileLen - dwSeek) > BUFFER_SIZE);
                     WriteFile(hFile, pBuffer, (nFileLen - dwSeek), ref btWritten, IntPtr.Zero);
                 }
@@ -909,7 +919,7 @@ namespace FileEraser
                 if (ReadFile(hFile, pBuffer, pSize, ref iRead, IntPtr.Zero) == 0)
                 {
                     if (InError != null)
-                        InError(004, rm.GetString("failed_verification") + ".");
+                        InError(004, rm.GetString("failed_verification")+".");
                     return false; // bad read
                 }
                 if (RtlCompareMemory(pCompare, pBuffer, pSize) == pSize)
@@ -1043,6 +1053,8 @@ namespace FileEraser
                 NewState.Privileges.pLuid = tLuid;
                 NewState.Privileges.Attributes = (Enable ? SE_PRIVILEGE_ENABLED : 0);
                 // Adjust the token privilege
+                //IntPtr pState = IntPtr.Zero;
+                //Marshal.StructureToPtr(NewState, pState, true);
                 return (AdjustTokenPrivileges(hToken, false, ref NewState, (uint)Marshal.SizeOf(NewState), IntPtr.Zero, IntPtr.Zero));
             }
             finally
@@ -1054,10 +1066,10 @@ namespace FileEraser
             }
         }
 
-        /// <summary>
-        /// Checks if the user is admin
-        /// </summary>
-        /// <returns></returns>
+		/// <summary>
+		/// Checks if the user is admin
+		/// </summary>
+		/// <returns></returns>
         public Boolean IsAdmin()
         {
             IntPtr hToken = IntPtr.Zero;
@@ -1277,5 +1289,56 @@ namespace FileEraser
             return true;
         }
         #endregion
+
+        #region Directory
+        /// <summary>
+        /// Create a list of files to be deleted
+        /// </summary>
+        /// <param name="sPath">string - directory path</param>
+        /// <param name="bRecurse">Boolean recurse subfolders</param>
+        //void preLoader(string sPath, Boolean bRecurse)
+        //{
+        //    IntPtr hFile = IntPtr.Zero;
+
+        //    try
+        //    {
+        //        hFile = FindFirstFileW(sPath + "*.*", out W32);
+        //        if (hFile.ToInt32() != -1)
+        //        {
+        //            do
+        //            {
+        //                if ((W32.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0)
+        //                {
+        //                    if (W32.cFileName != "." && W32.cFileName != "..")
+        //                    {
+        //                        if (bRecurse)
+        //                        {
+        //                            // recurse directory
+        //                            if (DeleteFolders)
+        //                                DirectoryList.Add(sPath + W32.cFileName + @"\");
+        //                            preLoader(sPath + W32.cFileName + @"\", true);
+        //                        }
+        //                    }
+        //                }
+        //                else
+        //                {
+        //                    //add files
+        //                    FileList.Add(sPath + W32.cFileName);
+        //                }
+        //            } while (FindNextFileW(hFile, out W32));
+        //            FindClose(hFile);
+        //        }
+        //    }
+        //    finally
+        //    {
+        //        if (hFile != IntPtr.Zero)
+        //            FindClose(hFile);
+        //    }
+        //    return;
+        //}
+        #endregion
+
     }
 }
+
+

@@ -216,9 +216,6 @@
   <data name="files1" xml:space="preserve">
     <value>files</value>
   </data>
-  <data name="FilesRestored" xml:space="preserve">
-    <value>Files successfully restored</value>
-  </data>
   <data name="file_type" xml:space="preserve">
     <value>Filetype</value>
   </data>
@@ -237,17 +234,11 @@
   <data name="help" xml:space="preserve">
     <value>Help</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
   <data name="if_unsure" xml:space="preserve">
     <value>If you are unsure of these options, it is recommended to leave them at their default</value>
   </data>
   <data name="include" xml:space="preserve">
     <value>Include</value>
-  </data>
-  <data name="info" xml:space="preserve">
-    <value>Information</value>
   </data>
   <data name="last_access" xml:space="preserve">
     <value>Last access</value>
@@ -299,9 +290,6 @@
   </data>
   <data name="pending" xml:space="preserve">
     <value>pending</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
   </data>
   <data name="processing_junk_files" xml:space="preserve">
     <value>Processing junk files</value>
@@ -381,9 +369,6 @@
   <data name="wait_until_scanning" xml:space="preserve">
     <value>Please wait until scanning the selected drives has been finished</value>
   </data>
-  <data name="waste_files" xml:space="preserve">
-    <value>Files inside the Windows temp folder are always considered as waste</value>
-  </data>
   <data name="windows_components" xml:space="preserve">
     <value>Windows components</value>
   </data>
@@ -405,43 +390,19 @@
   <data name="zero_files_def" xml:space="preserve">
     <value>Zero-byte files don't hold any data and can usually be deleted</value>
   </data>
-  <data name="error_file" xml:space="preserve">
-    <value>Error file</value>
+  <data name="FilesRestored" xml:space="preserve">
+    <value>Files successfully restored</value>
   </data>
-  <data name="intermediate_file" xml:space="preserve">
-    <value>Intermediate file</value>
+  <data name="info" xml:space="preserve">
+    <value>Information</value>
   </data>
-  <data name="log_file" xml:space="preserve">
-    <value>Log file</value>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
-  <data name="memory_dump_files" xml:space="preserve">
-    <value>Memory dump files</value>
+  <data name="waste_files" xml:space="preserve">
+    <value>Files inside the Windows temp folder are always considered as waste</value>
   </data>
-  <data name="office_bkup_file" xml:space="preserve">
-    <value>Office backup file</value>
-  </data>
-  <data name="outdated_file" xml:space="preserve">
-    <value>Outdated file</value>
-  </data>
-  <data name="saved_disk_error_data" xml:space="preserve">
-    <value>Saved disk error data from scandisk</value>
-  </data>
-  <data name="temporary_file" xml:space="preserve">
-    <value>Temporary file</value>
-  </data>
-  <data name="temporary_file_created_during_setup" xml:space="preserve">
-    <value>Temporary file created during setup</value>
-  </data>
-  <data name="temp_bkup_file" xml:space="preserve">
-    <value>Temporary backup file</value>
-  </data>
-  <data name="temp_dir_info" xml:space="preserve">
-    <value>Temporary directory information</value>
-  </data>
-  <data name="temp_help_file_search_data" xml:space="preserve">
-    <value>Temporary help file search data</value>
-  </data>
-  <data name="win_help_sys_temp_file" xml:space="preserve">
-    <value>Windows help system temp file</value>
+  <data name="processing" xml:space="preserve">
+    <value>Processing...</value>
   </data>
 </root>

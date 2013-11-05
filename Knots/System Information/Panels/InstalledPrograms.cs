@@ -376,8 +376,6 @@ namespace SystemInformation
 						catch { }
 						//} // Only display entries that are not system components.
 					} // Iterate through all of the values
-                    // Process UI events.
-                    Application.DoEvents();
 				} // Get all installed programs.
 
 				// Close the sub key.
@@ -647,7 +645,7 @@ namespace SystemInformation
 			catch
 			{
 				// cannot find file
-				MessageBox.Show(rm.GetString("installedprogs_unable_to_open_website"), Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+				MessageBox.Show(rm.GetString("installedprogs_unable_to_open_website") + ".", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 			}
 
 		}

@@ -43,11 +43,11 @@
                     <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
                 </Merging>
             </Assembly>
-            <Assembly AssemblyName="TracksEraserCore, Culture=neutral, PublicKeyToken=null" MandatoryPath=".\FreemiumUtilities\bin\Release\Libraries\TracksEraserCore.dll">
+            <Assembly AssemblyName="TracksEraser, Culture=neutral, PublicKeyToken=null" MandatoryPath=".\FreemiumUtilities\bin\Release\Applications\TracksEraser.dll">
                 <Embedding />
                 <Merging />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtil.dll">
+            <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null">
                 <Merging />
                 <Embedding />
             </Assembly>
@@ -71,7 +71,7 @@
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.ShortcutFixer, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.ShortcutFixer.dll">
+            <Assembly AssemblyName="FreemiumUtilities.ShortcutFixer, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.ShortcutFixer.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
@@ -79,11 +79,11 @@
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.Spyware, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.Spyware.dll">
+            <Assembly AssemblyName="FreemiumUtilities.Spyware, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.Spyware.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.TempCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.TempCleaner.dll">
+            <Assembly AssemblyName="FreemiumUtilities.TempCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.TempCleaner.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
@@ -95,7 +95,7 @@
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.RegCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.RegCleaner.dll">
+            <Assembly AssemblyName="FreemiumUtilities.RegCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.RegCleaner.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
@@ -103,7 +103,7 @@
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.StartupManager, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.StartupManager.dll">
+            <Assembly AssemblyName="FreemiumUtilities.StartupManager, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.StartupManager.dll">
                 <Merging />
                 <Embedding />
             </Assembly>
@@ -255,7 +255,7 @@
                     <Obfuscation />
                 </Merging>
             </Assembly>
-            <Assembly AssemblyName="FreemiumUtilities.TracksEraser, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\FreemiumUtilities.TracksEraser.dll">
+            <Assembly AssemblyName="FreemiumUtilities.TracksEraser, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Applications\FreemiumUtilities.TracksEraser.dll">
                 <Merging />
                 <Embedding />
             </Assembly>

@@ -127,9 +127,6 @@
   <data name="aborted" xml:space="preserve">
     <value>Abgebrochen</value>
   </data>
-  <data name="abort_button" xml:space="preserve">
-    <value>Abbrechen</value>
-  </data>
   <data name="cancel" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
@@ -151,17 +148,11 @@
   <data name="delete_checked_folders" xml:space="preserve">
     <value>Ausgewählte Ordner löschen</value>
   </data>
-  <data name="del_folder" xml:space="preserve">
-    <value>Ordner löschen</value>
-  </data>
   <data name="drives" xml:space="preserve">
     <value>Laufwerke</value>
   </data>
   <data name="empty_folder_finder" xml:space="preserve">
     <value>Leere Ordner aufspüren</value>
-  </data>
-  <data name="error_deleting_file" xml:space="preserve">
-    <value>Fehler beim Löschen der Datei</value>
   </data>
   <data name="exclude" xml:space="preserve">
     <value>Ausschließen (dauerhaft)</value>
@@ -169,35 +160,14 @@
   <data name="excluded" xml:space="preserve">
     <value>Erfolgreich ausgeschlossen</value>
   </data>
-  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
-    <value>Das ausgewählte Verzeichnis kann nicht geöffnet werden! Möglicherweise existiert es nicht mehr.</value>
-  </data>
-  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
-    <value>Verzeichnis kann nicht geöffnet werden</value>
-  </data>
   <data name="folder_name" xml:space="preserve">
     <value>Ordnername</value>
   </data>
   <data name="folder_path" xml:space="preserve">
     <value>Ordnerpfad</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
-  <data name="ignore" xml:space="preserve">
-    <value>Ignorieren</value>
-  </data>
-  <data name="ignore_all" xml:space="preserve">
-    <value>Alle ignorieren</value>
-  </data>
-  <data name="ManyFoldersToOpen" xml:space="preserve">
-    <value>Sie versuchen {0} Ordner zur gleichen Zeit zu öffnen. Dieses kann zum Absturz des Windows Explorers führen. Möchten Sie fortfahren?</value>
-  </data>
   <data name="no_drives_selected" xml:space="preserve">
     <value>Keine Laufwerke ausgewählt</value>
-  </data>
-  <data name="OpeningFolders" xml:space="preserve">
-    <value>Hinweis</value>
   </data>
   <data name="open_folder" xml:space="preserve">
     <value>Ordner öffnen</value>
@@ -207,9 +177,6 @@
   </data>
   <data name="processing" xml:space="preserve">
     <value>Verarbeitung läuft…</value>
-  </data>
-  <data name="retry" xml:space="preserve">
-    <value>Wiederholen</value>
   </data>
   <data name="scanning" xml:space="preserve">
     <value>Überprüfung läuft</value>
@@ -230,12 +197,42 @@
     <value>Jetzt überprüfen</value>
   </data>
   <data name="select_drive_folder" xml:space="preserve">
-    <value>Wählen Sie ein Laufwerk/Ordner zur Überprüfung</value>
+    <value>Wählen Sie ein Laufwerk oder einen Ordner zur Überprüfung aus</value>
   </data>
   <data name="select_folder" xml:space="preserve">
-    <value>Bitte wählen Sie zunächst die zu löschenden Ordner aus.</value>
+    <value>Wählen Sie die zu löschenden Ordner aus</value>
   </data>
-  <data name="select_folder_to_remove" xml:space="preserve">
-    <value>Bitte wählen Sie zunächst ein Verzeichnis aus.</value>
+  <data name="error_deleting_file" xml:space="preserve">
+    <value>Fehler beim Löschen der Datei</value>
+  </data>
+  <data name="abort_button" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="ignore" xml:space="preserve">
+    <value>Ignorieren</value>
+  </data>
+  <data name="ignore_all" xml:space="preserve">
+    <value>Alle ignorieren</value>
+  </data>
+  <data name="retry" xml:space="preserve">
+    <value>Wiederholen</value>
+  </data>
+  <data name="del_folder" xml:space="preserve">
+    <value>Ordner löschen</value>
+  </data>
+  <data name="ManyFoldersToOpen" xml:space="preserve">
+    <value>Sie versuchen {0} Ordner zur gleichen Zeit zu öffnen. Dieses kann zum Absturz des Windows Explorers führen. Möchten Sie fortfahren?</value>
+  </data>
+  <data name="OpeningFolders" xml:space="preserve">
+    <value>Hinweis</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="FolderCannotBeOpenedMessage" xml:space="preserve">
+    <value>Das ausgewählte Verzeichnis kann nicht geöffnet werden! Möglicherweise existiert es nicht mehr.</value>
+  </data>
+  <data name="FolderCannotBeOpenedTitle" xml:space="preserve">
+    <value>Verzeichnis kann nicht geöffnet werden</value>
   </data>
 </root>

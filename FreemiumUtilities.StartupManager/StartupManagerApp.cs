@@ -4,107 +4,111 @@ using System.Collections.ObjectModel;
 using System.Windows.Forms;
 using FreemiumUtilities.Infrastructure;
 
-/// <summary>
-/// The <see cref="FreemiumUtilities.StartupManager"/> namespace defines a Startup Manager 1 Click-Maintenance application
-/// </summary>
 namespace FreemiumUtilities.StartupManager
 {
-    /// <summary>
-    /// Startup Manager 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
-    /// </summary>
-    public class StartupManagerApp : OneClickApp
-    {
-        #region Instance Variables
+	/// <summary>
+	/// The <see cref="FreemiumUtilities.StartupManager"/> namespace defines a Startup Manager 1 Click-Maintenance application
+	/// </summary>
 
-        ProgressUpdate callback;
-        CancelComplete cancelComplete;
-        ScanComplete complete;
-        bool fixAfterScan;
+	[System.Runtime.CompilerServices.CompilerGenerated]
+	class NamespaceDoc { }
 
-        #endregion
+	/// <summary>
+	/// Startup Manager 1 Click-Maintenance application <see cref="OneClickApp"/> implementation
+	/// </summary>
+	public class StartupManagerApp : OneClickApp
+	{
+		#region Instance Variables
 
-        #region Properties
+		ProgressUpdate callback;
+		CancelComplete cancelComplete;
+		ScanComplete complete;
+		bool fixAfterScan;
 
-        /// <summary>
-        /// Apps to delete collection
-        /// </summary>
-        public List<string> AppsToDelete = new List<string>();
+		#endregion
 
-        /// <summary>
-        /// A list of all the problems this application encountered
-        /// </summary>
-        public ObservableCollection<Problem> LstProblems = new ObservableCollection<Problem>();
-        /// <summary>
-        /// ListView items collection
-        /// </summary>
-        public List<ListViewItem> LstVwItemLst = new List<ListViewItem>();
-        /// <summary>
-        /// <see cref="FrmDetails"/> instance
-        /// </summary>
-        public FrmDetails FrmDetails;
-        /// <summary>
-        /// <see cref="FrmStartupMan"/> instance
-        /// </summary>
-        public FrmStartupMan FrmSrtUpMan = new FrmStartupMan();
-        /// <summary>
-        /// Problems count
-        /// </summary>
-        public override int ProblemsCount { get; set; }
-        /// <summary>
-        /// App execution termination flag
-        /// </summary>
-        public bool ABORT { get; set; }
+		#region Properties
 
-        #endregion
+		/// <summary>
+		/// Apps to delete collection
+		/// </summary>
+		public List<string> AppsToDelete = new List<string>();
 
-        #region Constructor
+		/// <summary>
+		/// A list of all the problems this application encountered
+		/// </summary>
+		public ObservableCollection<Problem> LstProblems = new ObservableCollection<Problem>();
+		/// <summary>
+		/// ListView items collection
+		/// </summary>
+		public List<ListViewItem> LstVwItemLst = new List<ListViewItem>();
+		/// <summary>
+		/// <see cref="FrmDetails"/> instance
+		/// </summary>
+		public FrmDetails FrmDetails;
+		/// <summary>
+		/// <see cref="FrmStartupMan"/> instance
+		/// </summary>
+		public FrmStartupMan FrmSrtUpMan = new FrmStartupMan();
+		/// <summary>
+		/// Problems count
+		/// </summary>
+		public override int ProblemsCount { get; set; }
+		/// <summary>
+		/// App execution termination flag
+		/// </summary>
+		public bool ABORT { get; set; }
 
-        /// <summary>
-        /// constructor for StartupManagerApp
-        /// </summary>
-        public StartupManagerApp()
-        {
-            AppsToDelete = FileRW.ReadFile("Resources\\Startup_ToBeRemoved.csv");
-        }
+		#endregion
 
-        #endregion
+		#region Constructor
 
-        /// <summary>
-        /// convert list
-        /// </summary>
-        /// <param name="listData"></param>
-        /// <returns></returns>
-        ObservableCollection<Problem> ConvertLists(IEnumerable<ListViewItem> listData)
-        {
-            if (listData == null) throw new ArgumentNullException("listData");
-            ObservableCollection<Problem> problems = new ObservableCollection<Problem>();
+		/// <summary>
+		/// constructor for StartupManagerApp
+		/// </summary>
+		public StartupManagerApp()
+		{
+			AppsToDelete = FileRW.ReadFile("Resources\\Startup_ToBeRemoved.csv");
+		}
 
-            foreach (ListViewItem lvItem in listData)
-            {
-                problems.Add(new Problem
-                                {
-                                    Name = lvItem.SubItems[1].Text,
-                                    Description = lvItem.SubItems[0].Text,
-                                    Location = lvItem.SubItems[4].Text
-                                });
-            }
+		#endregion
 
-            return problems;
-        }
+		/// <summary>
+		/// convert list
+		/// </summary>
+		/// <param name="listData"></param>
+		/// <returns></returns>
+		ObservableCollection<Problem> ConvertLists(IEnumerable<ListViewItem> listData)
+		{
+			if (listData == null) throw new ArgumentNullException("listData");
+			var problems = new ObservableCollection<Problem>();
 
-        #region Public Methods
+			foreach (ListViewItem lvItem in listData)
+			{
+				problems.Add(new Problem
+				             	{
+				             		Name = lvItem.SubItems[1].Text,
+				             		Description = lvItem.SubItems[0].Text,
+				             		Location = lvItem.SubItems[4].Text
+				             	});
+			}
 
-        /// <summary>
-        /// start scanning
-        /// </summary>
-        /// <param name="callback"></param>
-        /// <param name="complete"></param>
-        /// <param name="cancelComplete"></param>
-        /// <param name="fixAfterScan"></param>
-        public override void StartScan(ProgressUpdate callback, ScanComplete complete, CancelComplete cancelComplete,
-                                       bool fixAfterScan)
-        {
-            ABORT = false;
+			return problems;
+		}
+
+		#region Public Methods
+
+		/// <summary>
+		/// start scanning
+		/// </summary>
+		/// <param name="callback"></param>
+		/// <param name="complete"></param>
+		/// <param name="cancelComplete"></param>
+		/// <param name="fixAfterScan"></param>
+		public override void StartScan(ProgressUpdate callback, ScanComplete complete, CancelComplete cancelComplete,
+		                               bool fixAfterScan)
+		{
+			ABORT = false;
 
             try
             {
@@ -113,7 +117,7 @@ namespace FreemiumUtilities.StartupManager
                 this.cancelComplete = cancelComplete;
                 this.fixAfterScan = fixAfterScan;
 
-                List<ListViewItem> problems = new List<ListViewItem>();
+                var problems = new List<ListViewItem>();
                 FrmSrtUpMan.FillListview();
 
                 for (int i = 0; i < AppsToDelete.Count; i++)
@@ -138,24 +142,24 @@ namespace FreemiumUtilities.StartupManager
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
-            complete(fixAfterScan);
-        }
+			complete(fixAfterScan);
+		}
 
-        /// <summary>
-        /// cancel scanning
-        /// </summary>
-        public override void CancelScan()
-        {
-            ABORT = true;
-        }
+		/// <summary>
+		/// cancel scanning
+		/// </summary>
+		public override void CancelScan()
+		{
+			ABORT = true;
+		}
 
-        /// <summary>
-        /// start fixing
-        /// </summary>
-        /// <param name="callback"></param>
-        public override void StartFix(ProgressUpdate callback)
-        {
-            ABORT = false;
+		/// <summary>
+		/// start fixing
+		/// </summary>
+		/// <param name="callback"></param>
+		public override void StartFix(ProgressUpdate callback)
+		{
+			ABORT = false;
 
             try
             {
@@ -176,17 +180,17 @@ namespace FreemiumUtilities.StartupManager
             {
                 // ToDo: send exception details via SmartAssembly bug reporting!
             }
-            complete(fixAfterScan);
-        }
+			complete(fixAfterScan);
+		}
 
-        /// <summary>
-        /// cancel fixing
-        /// </summary>
-        public override void CancelFix()
-        {
-            ABORT = true;
-        }
+		/// <summary>
+		/// cancel fixing
+		/// </summary>
+		public override void CancelFix()
+		{
+			ABORT = true;
+		}
 
-        #endregion
-    }
+		#endregion
+	}
 }

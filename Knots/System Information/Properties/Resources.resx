@@ -151,9 +151,6 @@
   <data name="Services_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Services_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Sound_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Sound_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Folder" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Folder.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,17 +163,14 @@
   <data name="Network_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Network_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Computer_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Computer_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Sound_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Sound_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Users_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Users_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="UsbDrive_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\UsbDrive_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Computer_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Computer_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Unknown_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Unknown_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,8 +187,8 @@
   <data name="Date_Time_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Date-Time_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="UsbDrive_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\UsbDrive_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="covus_waiting" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\covus_waiting.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,26 +196,14 @@
   <data name="UserDisabled_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\UserDisabled_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Video_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Video_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CDROM_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CDROM_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Windows_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Windows_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SpecialFolder_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SpecialFolder_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Floppy_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Floppy_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Drive_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Drive_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Drive_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Drive_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,11 +217,11 @@
   <data name="Windows_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="FSUIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\FSUIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="System_Information_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\System Information_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Drive_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Drive_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Windows_Vista_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows Vista_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -247,8 +229,8 @@
   <data name="Blank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Blank.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CDROM_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CDROM_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Sound_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Sound_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Windows_XP_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows XP_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,29 +253,38 @@
   <data name="Installed_Programs_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Installed Programs_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="thinBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\thinBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SpecialFolder_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SpecialFolder_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Network_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Network_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Windows2000_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Windows2000_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Network_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Network_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Windows_48x48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Windows_48x48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Video_16x16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Video_16x16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bottomBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bottomBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="thinBar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\thinBar.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="processor16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\processor16.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="processor48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\processor48.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="PCCleanerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PCCleanerIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="FSUIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\FSUIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

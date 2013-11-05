@@ -183,26 +183,8 @@
   <data name="file_encrypter_decrypter" xml:space="preserve">
     <value>Ver- &amp; Entschlüsseln</value>
   </data>
-  <data name="file_encrypter_decrypter_title" xml:space="preserve">
-    <value>Ver- &amp;&amp; Entschlüsseln</value>
-  </data>
-  <data name="file_open_failed" xml:space="preserve">
-    <value>Die entschlüsselte Datei konnte nicht geöffnet werden.</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
-  </data>
   <data name="open_file_decrypt" xml:space="preserve">
     <value>Datei nach erfolgreicher Entschlüsselung öffnen</value>
-  </data>
-  <data name="original_delete" xml:space="preserve">
-    <value>Wenn die Originaldatei gelöscht wird, können Sie nicht mehr darauf zugreifen, wenn Sie Ihr Passwort vergessen haben. Möchten Sie dennoch fortfahren?</value>
-  </data>
-  <data name="output_exists_message" xml:space="preserve">
-    <value>Die Ausgabedatei "%1" existiert bereits. Möchten Sie die Datei überschreiben?</value>
-  </data>
-  <data name="output_exists_title" xml:space="preserve">
-    <value>Ausgabedatei existiert bereits</value>
   </data>
   <data name="pass" xml:space="preserve">
     <value>Passwort</value>
@@ -240,13 +222,28 @@
   <data name="select_path_decrypt" xml:space="preserve">
     <value>Pfad für entschlüsselte Datei auswählen</value>
   </data>
-  <data name="split_interrupted" xml:space="preserve">
-    <value>Splitting unterbrochen. Prozess kann nicht fortgesetzt werden.</value>
-  </data>
   <data name="succ" xml:space="preserve">
     <value>Erfolg</value>
   </data>
   <data name="wrong_pass" xml:space="preserve">
     <value>Falsches Passwort</value>
+  </data>
+  <data name="file_encrypter_decrypter_title" xml:space="preserve">
+    <value>Ver- &amp;&amp; Entschlüsseln</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="original_delete" xml:space="preserve">
+    <value>Wenn die Originaldatei gelöscht wird, können Sie nicht mehr darauf zugreifen, wenn Sie Ihr Passwort vergessen haben. Möchten Sie dennoch fortfahren?</value>
+  </data>
+  <data name="output_exists_message" xml:space="preserve">
+    <value>Die Ausgabedatei "%1" existiert bereits. Möchten Sie die Datei überschreiben?</value>
+  </data>
+  <data name="output_exists_title" xml:space="preserve">
+    <value>Ausgabedatei existiert bereits</value>
+  </data>
+  <data name="file_open_failed" xml:space="preserve">
+    <value>Die entschlüsselte Datei konnte nicht geöffnet werden.</value>
   </data>
 </root>

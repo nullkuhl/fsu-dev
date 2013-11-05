@@ -1,13 +1,18 @@
 ﻿using System.Windows.Shapes;
 using System.Windows.Media;
 using System.Windows;
+
 using ScottLogic.Util;
 
-/// <summary>
-/// The <see cref="ScottLogic.Shapes"/> namespace defines shapes used in the ScottLogic PieChart
-/// </summary>
 namespace ScottLogic.Shapes
 {
+	/// <summary>
+	/// The <see cref="ScottLogic.Shapes"/> namespace defines shapes used in the ScottLogic PieChart
+	/// </summary>
+
+	[System.Runtime.CompilerServices.CompilerGenerated]
+	class NamespaceDoc { }
+
     /// <summary>
     /// A pie piece shape
     /// </summary>
@@ -170,7 +175,7 @@ namespace ScottLogic.Shapes
             get
             {
                 // Create a StreamGeometry for describing the shape
-                StreamGeometry geometry = new StreamGeometry { FillRule = FillRule.EvenOdd };
+            	var geometry = new StreamGeometry {FillRule = FillRule.EvenOdd};
 
             	using (StreamGeometryContext context = geometry.Open())
                 {
@@ -213,8 +218,8 @@ namespace ScottLogic.Shapes
 
             }
 
-            Size outerArcSize = new Size(Radius, Radius);
-            Size innerArcSize = new Size(InnerRadius, InnerRadius);
+            var outerArcSize = new Size(Radius, Radius);
+            var innerArcSize = new Size(InnerRadius, InnerRadius);
 
             context.BeginFigure(innerArcStartPoint, true, true);
             context.LineTo(outerArcStartPoint, true, true);
@@ -223,4 +228,5 @@ namespace ScottLogic.Shapes
             context.ArcTo(innerArcStartPoint, innerArcSize, 0, largeArc, SweepDirection.Counterclockwise, true, true);
         }
     }
+
 }

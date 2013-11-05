@@ -44,14 +44,6 @@ namespace ShortcutsFixer
 		public ScanForm()
 		{
 			InitializeComponent();
-            if (!System.IO.File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
-            {
-                this.Icon = Properties.Resources.PCCleanerIcon;
-            }
-            else
-            {
-                this.Icon = Properties.Resources.FSUIcon;
-            }
 		}
 
 		/// <summary>
@@ -77,7 +69,7 @@ namespace ShortcutsFixer
 			InitList();
 			prbMain.Value = 0;
 			CloseScanWindow = false;
-			fileLabel.Text = string.Empty;
+			fileLabel.Text = "";
 			Obj = new WshShellClass();
 			RadioButtonCheckUpdate();
 		}
@@ -136,11 +128,16 @@ namespace ShortcutsFixer
                         if (drive.DriveType == DriveType.Fixed)
                         {
                             sDriveName.Append(drive.Name, 0, 2);
+                            //checkedListBoxDrives.Items.Add(drive.VolumeLabel + " (" + sDriveName + ")");
                             checkedListViewDrives.Items.Add(drive.VolumeLabel + " (" + sDriveName + ")");
                             checkedListViewDrives.Items[i].ImageIndex = 0;
                             checkedListViewDrives.Items[i].Name = drive.Name;
                             i++;
-                            sDriveName.Remove(0, 2);                      
+                            sDriveName.Remove(0, 2);
+                            //  sDriveName.Remove(0, 2);
+
+
+                            //   MessageBox.Show(sDriveName.ToString());
                         }
                     }
                     catch
@@ -188,6 +185,29 @@ namespace ShortcutsFixer
 		/// <param name="e"></param>
 		void radioButtonDesktop_CheckedChanged(object sender, EventArgs e)
 		{
+			/*
+			try
+			{
+				if (this.radioButtonDesktop.Checked == true)
+				{
+					this.checkedListViewDrives.Enabled = false;
+					for (int i = 0; i < this.checkedListViewDrives.Items.Count; i++)
+					{
+						this.checkedListViewDrives.Items[i].Checked = false;
+					}
+				}
+				else if (this.radioButtonDrives.Checked == true)
+				{
+					this.checkedListViewDrives.Enabled = true;
+				}
+
+				this.buttonScan.Enabled = true;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}*/
+			//The Above code is exported to function below:
 			RadioButtonCheckUpdate();
 		}
 
@@ -197,7 +217,7 @@ namespace ShortcutsFixer
 		/// <param name="culture"></param>
 		void SetCulture(CultureInfo culture)
 		{
-            ResourceManager rm = new ResourceManager("ShortcutsFixer.Resources", typeof(ScanForm).Assembly);
+			var rm = new ResourceManager("ShortcutsFixer.Resources", typeof(ScanForm).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
 
 			radioButtonDesktop.Text = rm.GetString("scan_start_desktop");

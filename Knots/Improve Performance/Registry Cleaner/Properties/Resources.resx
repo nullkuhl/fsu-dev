@@ -130,20 +130,8 @@
   <data name="icon_registry_Cleaner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\icon-registry-Cleaner.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AdminRightsNeeded" xml:space="preserve">
-    <value>You need administrative rights to use this functionality.</value>
-  </data>
-  <data name="AllCategories" xml:space="preserve">
-    <value>All Categories</value>
+  <data name="RegistryCleaner" xml:space="preserve">
+    <value>Clean registry</value>
   </data>
   <data name="AttemptedDeletionOfValue" xml:space="preserve">
     <value>Attempted deletion of value:</value>
@@ -166,26 +154,17 @@
   <data name="Failed" xml:space="preserve">
     <value>failed.</value>
   </data>
-  <data name="Finish" xml:space="preserve">
-    <value>Finish</value>
-  </data>
   <data name="FontScanTitle" xml:space="preserve">
     <value>System Fonts</value>
   </data>
   <data name="HelpScanTitle" xml:space="preserve">
     <value>Help files</value>
   </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/company/faq/</value>
-  </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>History and Start Menu</value>
   </data>
   <data name="InvalidSelection" xml:space="preserve">
     <value>Invalid Selection</value>
-  </data>
-  <data name="ItemsCleared" xml:space="preserve">
-    <value>items cleared</value>
   </data>
   <data name="Key" xml:space="preserve">
     <value>Key</value>
@@ -205,38 +184,14 @@
   <data name="NotStartedHeader" xml:space="preserve">
     <value>Check registry categories and press Scan now</value>
   </data>
-  <data name="NowScanning" xml:space="preserve">
-    <value>Processing</value>
-  </data>
-  <data name="ProblemsFound" xml:space="preserve">
-    <value>problems were found. A rescan is recommended to find more problems.</value>
-  </data>
-  <data name="ProblemsFoundClickClear" xml:space="preserve">
-    <value>problems were found. Select the ones you want to remove and press Start cleaning.</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing</value>
-  </data>
-  <data name="RegistryCleaner" xml:space="preserve">
-    <value>Clean registry</value>
-  </data>
-  <data name="RegistryCleaningCompleted" xml:space="preserve">
-    <value>Registry has been cleaned.</value>
-  </data>
   <data name="RegistryScanCanceled" xml:space="preserve">
     <value>Registry scan canceled.</value>
-  </data>
-  <data name="RegistryScanCompleted" xml:space="preserve">
-    <value>Registry scan completed.</value>
   </data>
   <data name="RemoveSuccess" xml:space="preserve">
     <value>Items were removed successfully.</value>
   </data>
   <data name="RestoreDisabled" xml:space="preserve">
     <value>Restoring is disabled.</value>
-  </data>
-  <data name="Root" xml:space="preserve">
-    <value>Root</value>
   </data>
   <data name="ScanAborted" xml:space="preserve">
     <value>Please select some modules first.</value>
@@ -246,9 +201,6 @@
   </data>
   <data name="ScanAgain" xml:space="preserve">
     <value>Scan again</value>
-  </data>
-  <data name="Scanning" xml:space="preserve">
-    <value>Scanning:</value>
   </data>
   <data name="ScanningRegistry" xml:space="preserve">
     <value>Scanning Registry</value>
@@ -290,10 +242,7 @@
     <value>System Restore is unavailable or deactivated. Option was disabled.</value>
   </data>
   <data name="SystemRestoreUnavailable" xml:space="preserve">
-    <value>System Restore is either disabled or unavailable on this computer.</value>
-  </data>
-  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
-    <value>System Restore is turned off, Would you like to continue at your own risk?</value>
+    <value>System Restore is either disabled or unavailable on this computer. </value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
@@ -309,5 +258,56 @@
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Would you like to create a system restore point before proceeding? This process may take several minutes to complete.</value>
+  </data>
+  <data name="NowScanning" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="ProblemsFound" xml:space="preserve">
+    <value>problems were found. A rescan is recommended to find more problems.</value>
+  </data>
+  <data name="ProblemsFoundClickClear" xml:space="preserve">
+    <value>problems were found. Select the ones you want to remove and press Start cleaning.</value>
+  </data>
+  <data name="ajax_loader" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\ajax-loader.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ItemsCleared" xml:space="preserve">
+    <value>items cleared</value>
+  </data>
+  <data name="RegistryCleaningCompleted" xml:space="preserve">
+    <value>Registry has been cleaned.</value>
+  </data>
+  <data name="RegistryScanCompleted" xml:space="preserve">
+    <value>Registry scan completed.</value>
+  </data>
+  <data name="Scanning" xml:space="preserve">
+    <value>Scanning:</value>
+  </data>
+  <data name="AdminRightsNeeded" xml:space="preserve">
+    <value>You need administrative rights to use this functionality.</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing</value>
+  </data>
+  <data name="help_off" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_off.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_on" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\help_on.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>All Categories</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>System Restore is turned off, Would you like to continue at your own risk?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
+  </data>
+  <data name="Root" xml:space="preserve">
+    <value>Root</value>
   </data>
 </root>

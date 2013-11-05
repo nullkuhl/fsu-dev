@@ -120,14 +120,11 @@
   <data name="action" xml:space="preserve">
     <value>Action</value>
   </data>
-  <data name="all_extensions" xml:space="preserve">
-    <value>All extensions</value>
-  </data>
   <data name="all_or_part_of_filename1" xml:space="preserve">
     <value>All or part of the file name. You can use wildcards, eg. *.doc.</value>
   </data>
   <data name="all_or_part_of_filename2" xml:space="preserve">
-    <value>? Match one character of anything</value>
+    <value>? Match one char acter of anything</value>
   </data>
   <data name="all_or_part_of_filename3" xml:space="preserve">
     <value>* Match any number of anything</value>
@@ -153,9 +150,6 @@
   <data name="current_progress" xml:space="preserve">
     <value>Current progress</value>
   </data>
-  <data name="failed" xml:space="preserve">
-    <value>Failed</value>
-  </data>
   <data name="files_found" xml:space="preserve">
     <value>files found</value>
   </data>
@@ -177,20 +171,8 @@
   <data name="filter" xml:space="preserve">
     <value>Filter</value>
   </data>
-  <data name="filter_off" xml:space="preserve">
-    <value>Filter: OFF</value>
-  </data>
-  <data name="filter_on" xml:space="preserve">
-    <value>Filter: ON</value>
-  </data>
   <data name="folders" xml:space="preserve">
     <value>Folders</value>
-  </data>
-  <data name="found" xml:space="preserve">
-    <value>Found:  {0}</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="include_non_recoverable" xml:space="preserve">
     <value>Also include non recoverable files</value>
@@ -200,9 +182,6 @@
   </data>
   <data name="less_than" xml:space="preserve">
     <value>Less than</value>
-  </data>
-  <data name="LongOperationQuestion" xml:space="preserve">
-    <value>This can take several minutes. Do you really want to continue?</value>
   </data>
   <data name="lost" xml:space="preserve">
     <value>Lost</value>
@@ -216,17 +195,11 @@
   <data name="no" xml:space="preserve">
     <value>No</value>
   </data>
-  <data name="no_filter" xml:space="preserve">
-    <value>No Filter</value>
-  </data>
   <data name="ok" xml:space="preserve">
     <value>OK</value>
   </data>
   <data name="original_path" xml:space="preserve">
     <value>Original Path</value>
-  </data>
-  <data name="processing" xml:space="preserve">
-    <value>Processing...</value>
   </data>
   <data name="quick_panel" xml:space="preserve">
     <value>Quick Panel</value>
@@ -253,7 +226,7 @@
     <value>Scan Finished</value>
   </data>
   <data name="scan_finished_no_data_collected" xml:space="preserve">
-    <value>Scan is finished, however it seems that no files were retrievable from the data collected off your hard disk.</value>
+    <value>Scan is finished, however it seems that no files were retrievable from the data collected off your hard disk</value>
   </data>
   <data name="search" xml:space="preserve">
     <value>Search</value>
@@ -275,5 +248,32 @@
   </data>
   <data name="yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="processing" xml:space="preserve">
+    <value>Processing...</value>
+  </data>
+  <data name="failed" xml:space="preserve">
+    <value>Failed</value>
+  </data>
+  <data name="all_extensions" xml:space="preserve">
+    <value>All extensions</value>
+  </data>
+  <data name="filter_off" xml:space="preserve">
+    <value>Filter: OFF</value>
+  </data>
+  <data name="found" xml:space="preserve">
+    <value>Found:  {0}</value>
+  </data>
+  <data name="no_filter" xml:space="preserve">
+    <value>No Filter</value>
+  </data>
+  <data name="filter_on" xml:space="preserve">
+    <value>Filter: ON</value>
+  </data>
+  <data name="LongOperationQuestion" xml:space="preserve">
+    <value>This can take several minutes. Do you really want to continue?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/company/faq/</value>
   </data>
 </root>

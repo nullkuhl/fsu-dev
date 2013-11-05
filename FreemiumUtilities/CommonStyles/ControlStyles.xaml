@@ -128,14 +128,14 @@
 	</Style>
 
 	<Style x:Key="ScanForIssueButtonStyle" TargetType="{x:Type Button}">
-		<Setter Property="Width" Value="235" />
+		<Setter Property="Width" Value="217" />
 		<Setter Property="Height" Value="51" />
 		<Setter Property="Control.HorizontalAlignment" Value="Left" />
 		<Setter Property="Control.VerticalAlignment" Value="Top" />
 		<Setter Property="Control.HorizontalContentAlignment" Value="Left" />
 		<Setter Property="Control.VerticalContentAlignment" Value="Top" />
 		<Setter Property="Panel.Background" Value="{StaticResource ScanForIssueBackground}" />
-		<Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="TextElement.FontSize" Value="19.9" />
 		<Setter Property="TextElement.FontWeight" Value="Bold" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -450,8 +450,8 @@
 	<Style x:Key="OneClickCheckBox" BasedOn="{StaticResource OneCLickCheckBoxBase}" TargetType="{x:Type CheckBox}" />
 
 	<Style x:Key="OneClickCheckBoxWrap" TargetType="{x:Type Grid}">
-		<Setter Property="Width" Value="358" />
-		<Setter Property="Height" Value="70" />
+		<Setter Property="Width" Value="320" />
+		<Setter Property="Height" Value="58" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -474,7 +474,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="15" />
 		<Setter Property="Foreground" Value="#FF406678" />
 		<Setter Property="Margin" Value="0,0,0,1" />
@@ -486,11 +486,12 @@
 	</Style>
 
 	<Style x:Key="CheckBoxContentText" TargetType="{x:Type TextBlock}">
+
 		<Setter Property="Margin" Value="0,0,20,0" />
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.65" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="Height" Value="25" />
@@ -571,7 +572,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.74" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
@@ -586,7 +587,7 @@
 
 	<Style x:Key="OptionsLink" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -640,7 +641,7 @@
 
 	<Style x:Key="TransparentButton" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -680,7 +681,7 @@
 
 	<Style x:Key="TransparentButtonSimple" TargetType="{x:Type Button}">
 		<Setter Property="Margin" Value="17,10,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Foreground" Value="#009BB8" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -713,7 +714,7 @@
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="Effect">
 			<Setter.Value>
@@ -748,7 +749,7 @@
 		<Setter Property="SnapsToDevicePixels" Value="true" />
 		<Setter Property="OverridesDefaultStyle" Value="true" />
 		<Setter Property="TextElement.Foreground" Value="#808080" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="TextElement.FontSize" Value="11.74" />
 		<Setter Property="FocusVisualStyle" Value="{StaticResource RadioButtonFocusVisual}" />
 		<Setter Property="Template">
@@ -809,7 +810,7 @@
         <Setter Property="Control.VerticalAlignment" Value="Top" />
         <Setter Property="Control.HorizontalContentAlignment" Value="Left" />
         <Setter Property="Control.VerticalContentAlignment" Value="Top" />
-        <Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+        <Setter Property="TextElement.FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
         <Setter Property="TextElement.FontSize" Value="11.7" />
         <Setter Property="Foreground" Value="#FFFFFF" />
         <Setter Property="Border.BorderThickness" Value="1" />
@@ -1171,8 +1172,8 @@ StrokeThickness="0">
 		<Setter Property="TextElement.Foreground" Value="#FF4682B4" />
 		<Setter Property="Control.HorizontalContentAlignment" Value="Left" />
 		<Setter Property="Control.VerticalContentAlignment" Value="Top" />
-		<Setter Property="FrameworkElement.Width" Value="340" />
-		<Setter Property="FrameworkElement.Height" Value="80" />
+		<Setter Property="FrameworkElement.Width" Value="310" />
+		<Setter Property="FrameworkElement.Height" Value="74" />
 		<Setter Property="Control.Padding" Value="0" />
 		<Setter Property="Control.Margin" Value="10,0,10,0" />
 		<Setter Property="FocusVisualStyle" Value="{x:Null}" />
@@ -1223,16 +1224,14 @@ StrokeThickness="0">
 		<Setter Property="Stretch" Value="None" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="SnapsToDevicePixels" Value="False" />
-        <Setter Property="RenderOptions.BitmapScalingMode" Value="NearestNeighbor" />
-        <Setter Property="RenderOptions.EdgeMode" Value="Aliased" />
-    </Style>
+		<Setter Property="SnapsToDevicePixels" Value="True" />
+	</Style>
 
 	<Style x:Key="FunctionalButtonTitle" TargetType="{x:Type TextBlock}">
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="15" />
 		<Setter Property="Foreground" Value="#FF406678" />
 		<Setter Property="Margin" Value="0,0,0,1" />
@@ -1242,7 +1241,7 @@ StrokeThickness="0">
 		<Setter Property="TextWrapping" Value="Wrap" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="HorizontalAlignment" Value="Left" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="FontSize" Value="11.75" />
 		<Setter Property="LineHeight" Value="15" />
 		<Setter Property="LineStackingStrategy" Value="BlockLineHeight" />
@@ -1275,9 +1274,9 @@ StrokeThickness="0">
 		<Setter Property="HorizontalAlignment" Value="Left" />
 		<Setter Property="VerticalAlignment" Value="Top" />
 		<Setter Property="TextWrapping" Value="Wrap" />
-        <Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 75" />
 		<Setter Property="FontSize" Value="11.889" />
-		<Setter Property="FontWeight" Value="ExtraBlack" />
+		<Setter Property="FontWeight" Value="Bold" />
 		<Setter Property="Foreground" Value="#FF97A9B3" />
 	</Style>
 
@@ -1339,7 +1338,7 @@ StrokeThickness="0">
 	</Style>
 
 	<Style x:Key="ProgressBarOuther" TargetType="{x:Type Border}">
-		<Setter Property="Width" Value="475" />
+		<Setter Property="Width" Value="404" />
 		<Setter Property="Height" Value="22" />
 		<Setter Property="Margin" Value="0,11,0,0" />
 		<Setter Property="CornerRadius" Value="2" />
@@ -1348,7 +1347,7 @@ StrokeThickness="0">
 	</Style>
 
 	<Style x:Key="ProgressBarWrap" TargetType="{x:Type Border}">
-		<Setter Property="Width" Value="475" />
+		<Setter Property="Width" Value="404" />
 		<Setter Property="Height" Value="21" />
 		<Setter Property="CornerRadius" Value="2" />
 		<Setter Property="Background" Value="#D1DADB" />
@@ -1470,7 +1469,7 @@ StrokeThickness="0">
 
 	<Style x:Key="ScanStatus" TargetType="{x:Type TextBlock}">
 		<Setter Property="Padding" Value="6,3,0,0" />
-		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue LT Std" />
+		<Setter Property="FontFamily" Value="/FreemiumUtilities;component/Fonts/#Helvetica Neue CE 55" />
 		<Setter Property="Foreground" Value="#808080" />
 		<Setter Property="FontWeight" Value="Normal" />
 		<Setter Property="ClipToBounds" Value="True" />

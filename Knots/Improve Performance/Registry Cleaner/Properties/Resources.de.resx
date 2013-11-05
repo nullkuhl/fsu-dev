@@ -142,12 +142,6 @@
   <data name="AdminRightsNeeded" xml:space="preserve">
     <value>Sie benötigen Administratorrechte, um diese Funktion verwenden zu können.</value>
   </data>
-  <data name="AllCategories" xml:space="preserve">
-    <value>Alle Kategorien</value>
-  </data>
-  <data name="AttemptedDeletionOfValue" xml:space="preserve">
-    <value>Versuchte Löschung Wert:</value>
-  </data>
   <data name="CancelScan" xml:space="preserve">
     <value>Abbrechen</value>
   </data>
@@ -155,7 +149,7 @@
     <value>Kategorien</value>
   </data>
   <data name="ControlScanTitle" xml:space="preserve">
-    <value>System-Scan</value>
+    <value>System-scan</value>
   </data>
   <data name="Data" xml:space="preserve">
     <value>Daten</value>
@@ -174,9 +168,6 @@
   </data>
   <data name="HelpScanTitle" xml:space="preserve">
     <value>Hilfedateien</value>
-  </data>
-  <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
   </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>Verlauf &amp; Startmenü</value>
@@ -235,9 +226,6 @@
   <data name="RestoreDisabled" xml:space="preserve">
     <value>Systemwiederherstellung ist deaktiviert.</value>
   </data>
-  <data name="Root" xml:space="preserve">
-    <value>Stamm</value>
-  </data>
   <data name="ScanAborted" xml:space="preserve">
     <value>Wählen Sie bitte zuerst einige Einträge aus.</value>
   </data>
@@ -292,9 +280,6 @@
   <data name="SystemRestoreUnavailable" xml:space="preserve">
     <value>Die Systemwiederherstellung ist deaktiviert oder auf diesem Computer nicht verfügbar.</value>
   </data>
-  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
-    <value>Die Systemwiederherstellung ist deaktiviert. Möchten Sie dennoch auf eigenes Risiko fortfahren?</value>
-  </data>
   <data name="Type" xml:space="preserve">
     <value>Typ</value>
   </data>
@@ -302,12 +287,24 @@
     <value>Installationsstrings</value>
   </data>
   <data name="UserScanTitle" xml:space="preserve">
-    <value>Benutzer-Scan</value>
+    <value>Benutzerscan</value>
   </data>
   <data name="VdmScanTitle" xml:space="preserve">
     <value>Virtuelle Geräte</value>
   </data>
   <data name="WouldYouLikeToCreateRestorePoint" xml:space="preserve">
     <value>Möchten Sie einen Systemwiederherstellungspunkt erstellen, bevor Sie fortfahren? Dieser Vorgang kann mehrere Minuten dauern.</value>
+  </data>
+  <data name="AllCategories" xml:space="preserve">
+    <value>Alle Kategorien</value>
+  </data>
+  <data name="SystemRestoreUnavailableRunFixAnyway" xml:space="preserve">
+    <value>Die Systemwiederherstellung ist deaktiviert. Möchten Sie dennoch auf eigenes Risiko fortfahren?</value>
+  </data>
+  <data name="HelpUrl" xml:space="preserve">
+    <value>http://freemium.com/public/downloads/de/pdf/HandbuchFreemiumSystemUtilitiesDeutsch.pdf</value>
+  </data>
+  <data name="Root" xml:space="preserve">
+    <value>Wurzel</value>
   </data>
 </root>

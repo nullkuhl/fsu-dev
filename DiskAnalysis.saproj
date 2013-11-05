@@ -30,7 +30,7 @@
                 <Merging />
                 <Embedding />
             </Assembly>
-            <Assembly AssemblyName="WPFToolkit, Culture=neutral, PublicKeyToken=null" HintPath=".\FreemiumUtilities\bin\Release\Libraries\WPFToolkit.dll">
+            <Assembly AssemblyName="WPFToolkit, Culture=neutral, PublicKeyToken=31bf3856ad364e35" HintPath=".\FreemiumUtilities\bin\Release\Libraries\WPFToolkit.dll">
                 <Merging />
             </Assembly>
             <Assembly AssemblyName="Telerik.Windows.Data, Culture=neutral, PublicKeyToken=5803cfa389c90ce7" HintPath=".\FreemiumUtilities\bin\Release\Libraries\Telerik.Windows.Data.dll">

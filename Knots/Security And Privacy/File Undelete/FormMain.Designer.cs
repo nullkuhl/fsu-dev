@@ -311,8 +311,9 @@ namespace FileUndelete
             // 
             this.imlFiles.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imlFiles.ImageStream")));
             this.imlFiles.TransparentColor = System.Drawing.Color.Transparent;
-            this.imlFiles.Images.SetKeyName(0, "hdd.ico");
-            this.imlFiles.Images.SetKeyName(1, "text_plain.png");
+            this.imlFiles.Images.SetKeyName(0, "icon-file.png");
+            this.imlFiles.Images.SetKeyName(1, "hdd.ico");
+            this.imlFiles.Images.SetKeyName(2, "text_plain.png");
             // 
             // btnFilter
             // 
@@ -348,15 +349,18 @@ namespace FileUndelete
             // ucBottom
             // 
             resources.ApplyResources(this.ucBottom, "ucBottom");
+            this.ucBottom.MaximumSize = new System.Drawing.Size(0, 31);
+            this.ucBottom.MinimumSize = new System.Drawing.Size(0, 31);
             this.ucBottom.Name = "ucBottom";
             // 
             // ucTop
             // 
             resources.ApplyResources(this.ucTop, "ucTop");
             this.ucTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            this.ucTop.MinimumSize = new System.Drawing.Size(784, 0);
             this.ucTop.Name = "ucTop";
             // 
-            // FormMain
+            // frmMain
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

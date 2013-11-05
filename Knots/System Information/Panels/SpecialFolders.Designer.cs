@@ -53,26 +53,58 @@ namespace SystemInformation
         /// </summary>
         void InitializeComponent()
         {
-            this.labelHint = new System.Windows.Forms.Label();
+            this.labelTitle = new System.Windows.Forms.Label();
+            this.picturePanel = new System.Windows.Forms.PictureBox();
+            this.labelFolders = new System.Windows.Forms.Label();
+            this.labelSeparator = new System.Windows.Forms.Label();
             this.listviewFolders = new System.Windows.Forms.ListView();
             this.ColumnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ColumnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.labelFolders = new System.Windows.Forms.Label();
-            this.labelSeparator = new System.Windows.Forms.Label();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.picturePanel = new System.Windows.Forms.PictureBox();
+            this.labelHint = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picturePanel)).BeginInit();
             this.SuspendLayout();
             // 
-            // labelHint
+            // labelTitle
             // 
-            this.labelHint.AutoSize = true;
-            this.labelHint.BackColor = System.Drawing.Color.Transparent;
-            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHint.Location = new System.Drawing.Point(249, 80);
-            this.labelHint.Name = "labelHint";
-            this.labelHint.Size = new System.Drawing.Size(0, 13);
-            this.labelHint.TabIndex = 49;
+            this.labelTitle.AutoSize = true;
+            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
+            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
+            this.labelTitle.Location = new System.Drawing.Point(80, 28);
+            this.labelTitle.Name = "labelTitle";
+            this.labelTitle.Size = new System.Drawing.Size(0, 25);
+            this.labelTitle.TabIndex = 7;
+            // 
+            // picturePanel
+            // 
+            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
+            this.picturePanel.Image = global::SystemInformation.Properties.Resources.SpecialFolder_48x48;
+            this.picturePanel.Location = new System.Drawing.Point(16, 16);
+            this.picturePanel.Name = "picturePanel";
+            this.picturePanel.Size = new System.Drawing.Size(48, 48);
+            this.picturePanel.TabIndex = 6;
+            this.picturePanel.TabStop = false;
+            // 
+            // labelFolders
+            // 
+            this.labelFolders.AutoSize = true;
+            this.labelFolders.BackColor = System.Drawing.Color.Transparent;
+            this.labelFolders.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFolders.ForeColor = System.Drawing.Color.SteelBlue;
+            this.labelFolders.Location = new System.Drawing.Point(16, 78);
+            this.labelFolders.Name = "labelFolders";
+            this.labelFolders.Size = new System.Drawing.Size(0, 17);
+            this.labelFolders.TabIndex = 32;
+            // 
+            // labelSeparator
+            // 
+            this.labelSeparator.BackColor = System.Drawing.Color.Black;
+            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.labelSeparator.Location = new System.Drawing.Point(16, 100);
+            this.labelSeparator.Name = "labelSeparator";
+            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
+            this.labelSeparator.TabIndex = 31;
             // 
             // listviewFolders
             // 
@@ -96,53 +128,21 @@ namespace SystemInformation
             // 
             // ColumnHeader1
             // 
-            this.ColumnHeader1.Width = 134;
+            this.ColumnHeader1.Width = 122;
             // 
             // ColumnHeader2
             // 
             this.ColumnHeader2.Width = 335;
             // 
-            // labelFolders
+            // labelHint
             // 
-            this.labelFolders.AutoSize = true;
-            this.labelFolders.BackColor = System.Drawing.Color.Transparent;
-            this.labelFolders.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFolders.ForeColor = System.Drawing.Color.SteelBlue;
-            this.labelFolders.Location = new System.Drawing.Point(16, 78);
-            this.labelFolders.Name = "labelFolders";
-            this.labelFolders.Size = new System.Drawing.Size(0, 17);
-            this.labelFolders.TabIndex = 32;
-            // 
-            // labelSeparator
-            // 
-            this.labelSeparator.BackColor = System.Drawing.Color.Black;
-            this.labelSeparator.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelSeparator.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.labelSeparator.Location = new System.Drawing.Point(16, 100);
-            this.labelSeparator.Name = "labelSeparator";
-            this.labelSeparator.Size = new System.Drawing.Size(482, 3);
-            this.labelSeparator.TabIndex = 31;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.BackColor = System.Drawing.Color.Transparent;
-            this.labelTitle.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTitle.ForeColor = System.Drawing.Color.DarkBlue;
-            this.labelTitle.Location = new System.Drawing.Point(80, 28);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(0, 25);
-            this.labelTitle.TabIndex = 7;
-            // 
-            // picturePanel
-            // 
-            this.picturePanel.BackColor = System.Drawing.Color.Transparent;
-            this.picturePanel.Image = global::SystemInformation.Properties.Resources.SpecialFolder_48x48;
-            this.picturePanel.Location = new System.Drawing.Point(16, 16);
-            this.picturePanel.Name = "picturePanel";
-            this.picturePanel.Size = new System.Drawing.Size(48, 48);
-            this.picturePanel.TabIndex = 6;
-            this.picturePanel.TabStop = false;
+            this.labelHint.AutoSize = true;
+            this.labelHint.BackColor = System.Drawing.Color.Transparent;
+            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHint.Location = new System.Drawing.Point(322, 80);
+            this.labelHint.Name = "labelHint";
+            this.labelHint.Size = new System.Drawing.Size(0, 13);
+            this.labelHint.TabIndex = 49;
             // 
             // SpecialFolders
             // 

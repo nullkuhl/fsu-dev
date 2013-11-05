@@ -120,12 +120,6 @@
   <data name="all_files" xml:space="preserve">
     <value>Alle Dateien (*)</value>
   </data>
-  <data name="all_filesystem_objects" xml:space="preserve">
-    <value>Alle Dateisystemobjekte</value>
-  </data>
-  <data name="background" xml:space="preserve">
-    <value>Hintergrund</value>
-  </data>
   <data name="click_check_mark" xml:space="preserve">
     <value>Klicken Sie auf das Auswahlkästchen vor dem Eintrag, um diesen an- bzw. abzuwählen. 
 Um ihn permanent zu entfernen, klicken Sie unten auf 'Entfernen'</value>
@@ -154,12 +148,6 @@ Um ihn permanent zu entfernen, klicken Sie unten auf 'Entfernen'</value>
   <data name="directory" xml:space="preserve">
     <value>Verzeichnis</value>
   </data>
-  <data name="directory_background" xml:space="preserve">
-    <value>Verzeichnis\Hintergrund</value>
-  </data>
-  <data name="directory_shell" xml:space="preserve">
-    <value>Verzeichnis\Eingabe</value>
-  </data>
   <data name="drive" xml:space="preserve">
     <value>Laufwerk</value>
   </data>
@@ -180,9 +168,6 @@ Um ihn permanent zu entfernen, klicken Sie unten auf 'Entfernen'</value>
   </data>
   <data name="internal_name" xml:space="preserve">
     <value>Interner Name</value>
-  </data>
-  <data name="lnkfile" xml:space="preserve">
-    <value>Verknüpfung</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Neu</value>
@@ -222,5 +207,20 @@ Um ihn permanent zu entfernen, klicken Sie unten auf 'Entfernen'</value>
   </data>
   <data name="version_info" xml:space="preserve">
     <value>Versionsinformationen</value>
+  </data>
+  <data name="all_filesystem_objects" xml:space="preserve">
+    <value>AllFilesystemObjects</value>
+  </data>
+  <data name="background" xml:space="preserve">
+    <value>Background</value>
+  </data>
+  <data name="directory_background" xml:space="preserve">
+    <value>Directory\Background</value>
+  </data>
+  <data name="directory_shell" xml:space="preserve">
+    <value>Directory\shell</value>
+  </data>
+  <data name="lnkfile" xml:space="preserve">
+    <value>Shortcut</value>
   </data>
 </root>

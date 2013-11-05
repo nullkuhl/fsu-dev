@@ -36,7 +36,8 @@ namespace ShortcutsFixer
 			restobj = new Restore();
 			var myTable = new DataTable("dataTable");
 			myTable.Columns.Add(rm.GetString("name"), typeof (string));
-			myTable.Columns.Add(rm.GetString("path"), typeof (string));			
+			myTable.Columns.Add(rm.GetString("path"), typeof (string));
+			//myTable.Columns.Add(rm.GetString("date"), typeof(DateTime));
 			myTable.Columns.Add("Date", typeof (DateTime));
 			myTable.Columns.Add(rm.GetString("sel"), typeof (bool));
 
@@ -79,7 +80,7 @@ namespace ShortcutsFixer
 		/// <param name="culture"></param>
 		void SetCulture(CultureInfo culture)
 		{
-            ResourceManager rm = new ResourceManager("ShortcutsFixer.Resources", typeof(BackupForm).Assembly);
+			var rm = new ResourceManager("ShortcutsFixer.Resources", typeof(BackupForm).Assembly);
 			Thread.CurrentThread.CurrentUICulture = culture;
 			lblRestorePoints.Text = rm.GetString("following_restore_points");
 			Text = rm.GetString("backup");

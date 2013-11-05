@@ -115,9 +115,9 @@
             // 
             // lblHelp
             // 
-            this.lblHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHelp.Image = global::Disk_Cleaner.Properties.Resources.help_off;
             this.lblHelp.Location = new System.Drawing.Point(524, 15);
             this.lblHelp.Margin = new System.Windows.Forms.Padding(0);

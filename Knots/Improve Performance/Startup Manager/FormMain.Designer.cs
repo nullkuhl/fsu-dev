@@ -288,9 +288,9 @@ namespace StartupManager
             // 
             // listviewStartup
             // 
-            this.listviewStartup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listviewStartup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listviewStartup.BackColor = System.Drawing.SystemColors.Window;
             this.listviewStartup.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ItemName,
@@ -335,8 +335,8 @@ namespace StartupManager
             // 
             // panelDetails
             // 
-            this.panelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelDetails.Controls.Add(this.firstCover);
             this.panelDetails.Controls.Add(this.labelArguments);
             this.panelDetails.Controls.Add(this.labelProductNameDesc);
@@ -461,7 +461,7 @@ namespace StartupManager
             this.labelFileVersion.BackColor = System.Drawing.Color.Transparent;
             this.labelFileVersion.ForeColor = System.Drawing.Color.Black;
             this.labelFileVersion.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelFileVersion.Location = new System.Drawing.Point(510, 33);
+            this.labelFileVersion.Location = new System.Drawing.Point(480, 33);
             this.labelFileVersion.Name = "labelFileVersion";
             this.labelFileVersion.Size = new System.Drawing.Size(238, 17);
             this.labelFileVersion.TabIndex = 78;
@@ -471,7 +471,7 @@ namespace StartupManager
             this.labelDescription.BackColor = System.Drawing.Color.Transparent;
             this.labelDescription.ForeColor = System.Drawing.Color.Black;
             this.labelDescription.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.labelDescription.Location = new System.Drawing.Point(510, 13);
+            this.labelDescription.Location = new System.Drawing.Point(480, 13);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(238, 17);
             this.labelDescription.TabIndex = 77;
