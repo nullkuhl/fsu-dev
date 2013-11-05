@@ -1390,16 +1390,6 @@ namespace FreeGamingBooster.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
-        /// </summary>
-        internal static System.Drawing.Icon GBicon {
-            get {
-                object obj = ResourceManager.GetObject("GBicon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Getting tracks....
         /// </summary>
         internal static string GettingTracks {
@@ -2188,6 +2178,16 @@ namespace FreeGamingBooster.Properties {
         internal static string Options {
             get {
                 return ResourceManager.GetString("Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon PCCleanerIcon {
+            get {
+                object obj = ResourceManager.GetObject("PCCleanerIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

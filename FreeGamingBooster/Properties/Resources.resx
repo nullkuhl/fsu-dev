@@ -1409,8 +1409,8 @@ managable parts and rejoin them</value>
   <data name="select_day" xml:space="preserve">
     <value>At least one day should be chosen</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="GBicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\GBicon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="PCCleanerIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\PCCleanerIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
