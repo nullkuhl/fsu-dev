@@ -616,7 +616,7 @@ files quick and effectively</value>
     <value>System Help Files</value>
   </data>
   <data name="HelpUrl" xml:space="preserve">
-    <value>http://freemium.com/free-computer-cleaner/faq/</value>
+    <value>http://freemium.com/free-gaming-booster/faq/</value>
   </data>
   <data name="HistoryScanTitle" xml:space="preserve">
     <value>History and Start Menu</value>
@@ -938,7 +938,7 @@ and optionally stop them</value>
     <value>Results</value>
   </data>
   <data name="RootUrl" xml:space="preserve">
-    <value>http://freemium.com/free-computer-cleaner/</value>
+    <value>http://freemium.com/free-gaming-booster/</value>
   </data>
   <data name="RunAsAdmin" xml:space="preserve">
     <value>This program needs administrator privilege in order to run. Please restart this program as admin.</value>
