@@ -258,6 +258,7 @@
     <None Include="Resources\help_on.png" />
     <None Include="Resources\FSUIcon.ico" />
     <None Include="Resources\PCCleanerIcon.ico" />
+    <None Include="Resources\GBicon.ico" />
     <Content Include="Resources\Startup Manager.ico" />
   </ItemGroup>
   <ItemGroup>

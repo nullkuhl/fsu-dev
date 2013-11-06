@@ -38,6 +38,7 @@ namespace WindowsStandardTools
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.spcMain = new System.Windows.Forms.SplitContainer();
+            this.ucTop = new WindowsStandardTools.TopControl();
             this.tlpMain = new System.Windows.Forms.TableLayoutPanel();
             this.lblData = new System.Windows.Forms.Label();
             this.lblAdd = new System.Windows.Forms.Label();
@@ -54,7 +55,6 @@ namespace WindowsStandardTools
             this.BackupNote = new System.Windows.Forms.Label();
             this.CheckDisk = new System.Windows.Forms.Button();
             this.ucBottom = new WindowsStandardTools.BottomControl();
-            this.ucTop = new WindowsStandardTools.TopControl();
             this.spcMain.Panel1.SuspendLayout();
             this.spcMain.Panel2.SuspendLayout();
             this.spcMain.SuspendLayout();
@@ -82,6 +82,16 @@ namespace WindowsStandardTools
             this.spcMain.SplitterDistance = 67;
             this.spcMain.SplitterWidth = 1;
             this.spcMain.TabIndex = 0;
+            // 
+            // ucTop
+            // 
+            this.ucTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
+            this.ucTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ucTop.Location = new System.Drawing.Point(0, 0);
+            this.ucTop.MaximumSize = new System.Drawing.Size(0, 64);
+            this.ucTop.Name = "ucTop";
+            this.ucTop.Size = new System.Drawing.Size(665, 64);
+            this.ucTop.TabIndex = 0;
             // 
             // tlpMain
             // 
@@ -275,16 +285,6 @@ namespace WindowsStandardTools
             this.ucBottom.Name = "ucBottom";
             this.ucBottom.Size = new System.Drawing.Size(665, 31);
             this.ucBottom.TabIndex = 1;
-            // 
-            // ucTop
-            // 
-            this.ucTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(247)))));
-            this.ucTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ucTop.Location = new System.Drawing.Point(0, 0);
-            this.ucTop.MaximumSize = new System.Drawing.Size(0, 64);
-            this.ucTop.Name = "ucTop";
-            this.ucTop.Size = new System.Drawing.Size(665, 64);
-            this.ucTop.TabIndex = 0;
             // 
             // FormMain
             // 

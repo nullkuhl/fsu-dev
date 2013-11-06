@@ -422,6 +422,15 @@ namespace MemoryOptimizer
 
         void FormMain_Load(object sender, EventArgs e)
         {
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = Properties.Resources.GBicon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
+            
             bool tominimize = false;
             string[] args = Environment.GetCommandLineArgs();
 
@@ -716,6 +725,11 @@ namespace MemoryOptimizer
         delegate void DelegateStep(bool clear);
 
         #endregion
+
+        private void ucTop_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
     /// <summary>

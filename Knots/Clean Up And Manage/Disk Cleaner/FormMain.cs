@@ -1086,7 +1086,11 @@ namespace Disk_Cleaner
         {
             CultureInfo culture = new CultureInfo(CfgFile.Get("Lang"));
             SetCulture(culture);
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = Properties.Resources.GBicon;
+            }
+            else if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
             {
                 this.Icon = Properties.Resources.PCCleanerIcon;
             }

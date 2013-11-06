@@ -1210,7 +1210,11 @@ namespace RegistryCleaner
         /// <param name="e"></param>
         void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/GBicon.ico", UriKind.RelativeOrAbsolute)).Stream);
+            }
+            else if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
             {
                 this.Icon = BitmapFrame.Create(Application.GetResourceStream(new Uri(@"pack://application:,,/Images/PCCleanerIcon.ico", UriKind.RelativeOrAbsolute)).Stream);
             }

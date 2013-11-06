@@ -143,7 +143,11 @@ namespace StartupManager
                                     rm.GetString("startup_manager"), MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = Properties.Resources.GBicon;
+            }
+            else if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
             {
                 this.Icon = Properties.Resources.PCCleanerIcon;
             }

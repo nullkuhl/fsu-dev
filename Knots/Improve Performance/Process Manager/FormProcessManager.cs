@@ -474,6 +474,15 @@ namespace ProcessManager
 
         void FrmProcessManager_Load(object sender, EventArgs e)
         {
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = Properties.Resources.GBicon;
+            }
+            else
+            {
+                this.Icon = Properties.Resources.FSUIcon;
+            }
+
             string lang = CfgFile.Get("Lang");
             SetCulture(new CultureInfo(lang));
 

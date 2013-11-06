@@ -594,6 +594,7 @@ namespace MemoryOptimizer
             this.ucTop.Name = "ucTop";
             this.ucTop.Size = new System.Drawing.Size(450, 64);
             this.ucTop.TabIndex = 9;
+            this.ucTop.Load += new System.EventHandler(this.ucTop_Load);
             // 
             // FormMain
             // 

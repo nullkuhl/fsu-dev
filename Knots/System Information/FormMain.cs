@@ -230,7 +230,11 @@ namespace SystemInformation
 		public FormMain()
 		{
 			InitializeComponent();
-            if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
+            {
+                this.Icon = Properties.Resources.GBicon;
+            }
+            else if (!File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreemiumUtilities.exe"))
             {
                 this.Icon = Properties.Resources.PCCleanerIcon;
             }
