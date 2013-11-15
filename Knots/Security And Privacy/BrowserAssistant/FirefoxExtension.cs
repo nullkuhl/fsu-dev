@@ -14,10 +14,10 @@ namespace BrowserAssistant
     public class FirefoxExtension : IBrowserExtension
     {
         static string defProfilePath;
-
         static bool ff4Mode;
         static XDocument extensionsRdf;
         static SQLiteConnection sqliteConn;
+
         readonly XElement descElement;
         readonly string userDisabled;
         string changeRequired;

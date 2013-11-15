@@ -53,7 +53,6 @@ namespace FreeGamingBooster
             Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
             if (CfgFile.Get("FirstRun") != "0")
             {
-                FirstRun();
                 CfgFile.Set("FirstRun", "0");
             }
 
@@ -145,35 +144,7 @@ namespace FreeGamingBooster
             }
         }
 
-        /// <summary>
-        /// The code runned on a first application run at the specific machine
-        /// Adds the Windows Explorer context menu items for a quick launch a few knots
-        /// </summary>
-        static void FirstRun()
-        {
-            // ANALYSE
-            SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Drive\shell\FreemiumAnalyze\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Drive\shell\FreemiumAnalyze\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Directory\shell\FreemiumAnalyze\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Directory\shell\FreemiumAnalyze\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("AnalyzeWithFreemiumTools"), "ANALYSE");
-            CfgFile.Set("ShowContextMenuAnalyze", "1");
-
-            // EMPTYFOLDERS
-            SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Drive\shell\FreemiumFindEmptyFolders\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Drive\shell\FreemiumFindEmptyFolders\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            SetContextMenuRegistryKey(Registry.CurrentUser, @"Software\Classes\Directory\shell\FreemiumFindEmptyFolders\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            SetContextMenuRegistryKey(Registry.ClassesRoot, @"Directory\shell\FreemiumFindEmptyFolders\",
-                                      WPFLocalizeExtensionHelpers.GetUIString("FindEmptyFolders"), "EMPTYFOLDERS");
-            CfgFile.Set("ShowContextMenuFindEmptyFolders", "1");
-        }
-
+        
         /// <summary>
         /// Inits the model
         /// </summary>
