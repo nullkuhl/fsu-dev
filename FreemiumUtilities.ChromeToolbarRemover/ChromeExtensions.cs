@@ -123,9 +123,41 @@ namespace FreemiumUtilities.ChromeToolbarRemover
         /// </summary>
         /// <param name="extensions"></param>
         public static void SaveChanges(IEnumerable<ChromeExtension> extensions)
-        {            
+        {
+            List<string> prevDisabledObjects = new List<string>();
+            List<string> prevEnabledObjects = new List<string>();
             foreach (ChromeExtension e in extensions.Where(ex => ex.hasChanged))
+            {
+                if (e.IsEnabled)
+                    prevDisabledObjects.Add(e.jsonProp.Name);
+                else
+                    prevEnabledObjects.Add(e.jsonProp.Name);
                 ((JValue)e.jsonProp.Value["state"]).Value = e.IsEnabled ? 1 : 0;
+            }
+
+            if (jsonObj["extensions"]["known_disabled"] != null)
+            {
+                var allDisabledObjects = jsonObj["extensions"]["known_disabled"].ToArray();
+                foreach (JToken disabledObject in allDisabledObjects)
+                {
+                    if (prevDisabledObjects.Contains(disabledObject.ToString()))
+                        disabledObject.Remove();
+                }
+            }
+
+            ////ASK Toolbar          
+            //var allChromeOverrides = jsonObj["extensions"]["chrome_url_overrides"].Select(j => ((JProperty)j).Value).ToArray();
+            //foreach (var overrideObject in allChromeOverrides)
+            //{
+            //    foreach (var objVal in overrideObject)
+            //    {
+            //        foreach (var disabledItem in prevEnabledObjects)
+            //        {
+            //            if (objVal.ToString().Contains(disabledItem.ToString()))
+            //                objVal.Remove();
+            //        }
+            //    }
+            //}
 
             try
             {

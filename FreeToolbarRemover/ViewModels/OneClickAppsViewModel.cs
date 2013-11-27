@@ -789,7 +789,7 @@ namespace FreeToolbarRemover.ViewModels
             else
             // This code runs only after all apps in OneClickAppsRunningQueue iterated
             {
-                Instance.Status = OneClickAppStatus.FixFinished;
+                    Instance.Status = OneClickAppStatus.FixFinished;
                 StatusTitle = WPFLocalizeExtensionHelpers.GetUIString("RepairComplete");
                 StatusTitleKey = "RepairComplete";
                 StatusText = String.Empty;
