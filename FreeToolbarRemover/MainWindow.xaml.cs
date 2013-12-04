@@ -157,7 +157,7 @@ namespace FreeToolbarRemover
 
             model.OneClickApps.Add(new OneClickAppViewModel(
                                 WPFLocalizeExtensionHelpers.GetUIString("IEExplorer"),
-                                @"Images/icon-registry-cleaner.png",
+                                @"Images/icon-ie.png",
                                 true,
                                 OneClickAppStatus.NotStarted,
                                 WPFLocalizeExtensionHelpers.GetUIString("BrowserOneClickDesc"),
@@ -166,7 +166,7 @@ namespace FreeToolbarRemover
 
             model.OneClickApps.Add(new OneClickAppViewModel(
                                     WPFLocalizeExtensionHelpers.GetUIString("firefox"),
-                                    @"Images/icon-disc-cleaner.png",
+                                    @"Images/icon-ff.png",
                                     true,
                                     OneClickAppStatus.NotStarted,
                                     WPFLocalizeExtensionHelpers.GetUIString("BrowserOneClickDesc"),
@@ -175,7 +175,7 @@ namespace FreeToolbarRemover
 
             model.OneClickApps.Add(new OneClickAppViewModel(
                                    WPFLocalizeExtensionHelpers.GetUIString("google"),
-                                   @"Images/icon-disc-cleaner.png",
+                                   @"Images/icon-chrome.png",
                                    true,
                                    OneClickAppStatus.NotStarted,
                                    WPFLocalizeExtensionHelpers.GetUIString("BrowserOneClickDesc"),

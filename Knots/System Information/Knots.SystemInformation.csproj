@@ -588,28 +588,12 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
 	<ApplicationIcon>Resources\GBicon.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ToolBarRemoverDebug|x86'">
-    <OutputPath>bin\x86\ToolBarRemoverDebug\</OutputPath>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\SysInfo.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
-    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
-	<ApplicationIcon>Resources\GBicon.ico</ApplicationIcon>
-  </PropertyGroup>
+ 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ToolBarRemoverRelease|AnyCPU'">
     <OutputPath>bin\ToolBarRemoverRelease\</OutputPath>
 	<ApplicationIcon>Resources\GBicon.ico</ApplicationIcon>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ToolBarRemoverRelease|x86'">
-    <OutputPath>bin\x86\ToolBarRemoverRelease\</OutputPath>
-	<ApplicationIcon>Resources\GBicon.ico</ApplicationIcon>
-  </PropertyGroup>
+
   <Import Project="$(MSBuildBinPath)/Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if "$(ConfigurationName)" == "GamingBoosterDebug" (
@@ -621,9 +605,9 @@
 ) else if "$(ConfigurationName)" == "PCCleanerRelease" (
   xcopy "$(TargetDir)*.*" "$(SolutionDir)PCCleaner\$(OutDir)" /Y /S /I /R
 ) else if "$(ConfigurationName)" == "ToolBarRemoverDebug" (
-  xcopy "$(TargetDir)*.*" "$(SolutionDir)ToolbarRemover\$(OutDir)" /Y /S /I /R
+   xcopy "$(TargetDir)*.*" "$(SolutionDir)FreeToolbarRemover\$(OutDir)" /Y /S /I /R
 ) else if "$(ConfigurationName)" == "ToolBarRemoverRelease" (
-  xcopy "$(TargetDir)*.*" "$(SolutionDir)ToolbarRemover\$(OutDir)" /Y /S /I /R
+  xcopy "$(TargetDir)*.*" "$(SolutionDir)FreeToolbarRemover\$(OutDir)" /Y /S /I /R
 ) else (
 xcopy "$(ProjectDir)bin\*.*" "$(SolutionDir)FreemiumUtilities\bin\" /Y /E /I
 )</PostBuildEvent>

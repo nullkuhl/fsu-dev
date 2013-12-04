@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Win32;
 using System.Windows.Forms;
+using System.Windows;
 
 namespace FreemiumUtilities.IEToolbarRemover
 {
@@ -38,7 +39,7 @@ namespace FreemiumUtilities.IEToolbarRemover
 #if DEBUG
             MessageBox.Show("Error:\r\n" + ex.Message + "\r\nStack Trace:\r\n" + ex.StackTrace);
 #else
-			System.Windows.MessageBox.Show("Error:\r\n" + ex.Message);
+			MessageBox.Show("Error:\r\n" + ex.Message);
 #endif
         }
     }

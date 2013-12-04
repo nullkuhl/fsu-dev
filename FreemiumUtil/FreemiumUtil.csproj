@@ -332,7 +332,16 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if "$(ConfigurationName)" == "PCCleanerDebug" (
+    <PostBuildEvent>
+	if "$(ConfigurationName)" == "ToolBarRemoverDebug" (
+ xcopy "$(TargetDir)*.*" "$(SolutionDir)FreeToolbarRemover\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\BrowserAssistant\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R
+) else if "$(ConfigurationName)" == "ToolBarRemoverRelease" (
+ xcopy "$(TargetDir)*.*" "$(SolutionDir)FreeToolbarRemover\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\Security And Privacy\BrowserAssistant\$(OutDir)\Libraries\" /Y /S /I /R
+ xcopy "$(TargetPath)" "$(SolutionDir)Knots\System Information\$(OutDir)\Libraries\" /Y /S /I /R
+) else if "$(ConfigurationName)" == "PCCleanerDebug" (
  xcopy "$(TargetPath)" "$(SolutionDir)PCCleaner\$(OutDir)\Libraries\" /Y /S /I /R
  xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)\Libraries\" /Y /S /I /R
  xcopy "$(TargetPath)" "$(SolutionDir)FreemiumUtilities.ShortcutFixer\$(OutDir)\Libraries\" /Y /S /I /R
