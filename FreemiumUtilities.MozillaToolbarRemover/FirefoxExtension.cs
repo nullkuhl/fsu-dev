@@ -52,7 +52,10 @@ namespace FreemiumUtilities.MozillaToolbarRemover
         public FirefoxExtension(DbDataRecord r)
         {
             Id = r["id"].ToString();
-            Name = r["name"].ToString();
+            if (!string.IsNullOrEmpty(r["name"].ToString()))
+                Name = r["name"].ToString();
+            else
+                Name = r["id"].ToString();
             Version = r["version"].ToString();
             userDisabled = (long)r["userDisabled"] == 1 ? "true" : "false";
             isEnabled = userDisabled == "false";
