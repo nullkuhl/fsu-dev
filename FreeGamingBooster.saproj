@@ -1,0 +1,90 @@
+<SmartAssemblyProject ProjectId="{0b01edec-3f42-4b68-ba1c-e6f706c63c9d}" Version="2.0">
+    <MainAssemblyFileName>.\FreeGamingBooster\bin\GamingBoosterRelease\FreeGamingBooster.exe</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <Options>
+            <ExceptionReporting Template="res:{SmartExceptions}.1033.dll" />
+            <FeatureUsageReporting Template="res:SmartUsageWithUIConsentFirstRun1033.dll" />
+            <StringsEncoding />
+            <StrongNameSigning />
+            <OtherOptimizations />
+            <Obfuscation FieldsNameMangling="2" NameMangling="3" />
+            <OtherProtections />
+            <Debugging />
+        </Options>
+        <ApplicationName />
+        <Destination DestinationFileName=".\FreeGamingBooster\bin\GamingBoosterRelease\obfuscated\FreeGamingBooster.exe" />
+        <Assemblies>
+            <Assembly AssemblyName="FreeGamingBooster, Culture=neutral, PublicKeyToken=null">
+                <Embedding />
+                <Merging>
+                    <ResourcesCompression />
+                    <MemberRefsProxy />
+                    <Pruning />
+                    <Obfuscation Obfuscate="1">
+                        <Exclusion>
+                            <Token Table="WholeType">
+                                <Assembly>FreeGamingBooster</Assembly>
+                                <Module>FreeGamingBooster.exe</Module>
+                                <ItemType>Class</ItemType>
+                                <Namespace>FreeGamingBooster.Properties</Namespace>
+                                <Name>Resources</Name>
+                            </Token>
+                            <Token Table="WholeType">
+                                <Assembly>FreeGamingBooster</Assembly>
+                                <Module>FreeGamingBooster.exe</Module>
+                                <ItemType>Enum</ItemType>
+                                <Namespace>FreeGamingBooster.Models</Namespace>
+                                <Name>OneClickAppStatus</Name>
+                            </Token>
+                        </Exclusion>
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="1" ObfuscationLevel="4" />
+                </Merging>
+            </Assembly>
+            <Assembly AssemblyName="mscriptable, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\mscriptable.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Microsoft.Win32.TaskScheduler, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\Microsoft.Win32.TaskScheduler.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="System.Tuples, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\System.Tuples.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.Infrastructure, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\FreemiumUtilities.Infrastructure.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="WPFLocalizeExtension, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\WPFLocalizeExtension.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="XAMLMarkupExtensions, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\XAMLMarkupExtensions.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtil, Culture=neutral, PublicKeyToken=null">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.TempCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\FreemiumUtilities.TempCleaner.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.RegCleaner, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\FreemiumUtilities.RegCleaner.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="RegistryCleanerCore, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\RegistryCleanerCore.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="FreemiumUtilities.StartupManager, Culture=neutral, PublicKeyToken=null" HintPath=".\FreeGamingBooster\bin\GamingBoosterRelease\Libraries\FreemiumUtilities.StartupManager.dll">
+                <Merging />
+                <Embedding />
+            </Assembly>
+        </Assemblies>
+    </Configuration>
+</SmartAssemblyProject>

@@ -51,7 +51,7 @@ namespace ClickMaint
             lblProcID.Text = string.Format("This process ID: {0}", Process.GetCurrentProcess().Id);
             try
             {
-                Process[] processes = Process.GetProcessesByName("FreemiumUtilities");
+                Process[] processes = Process.GetProcessesByName(Environment.GetCommandLineArgs()[1]);
 
                 string[] args = Environment.GetCommandLineArgs();
                 
@@ -64,7 +64,7 @@ namespace ClickMaint
                 {
                     Process p = new Process
                                 {
-                                    StartInfo = { FileName = Environment.CurrentDirectory + "\\FreemiumUtilities.exe" }
+                                    StartInfo = { FileName = Environment.CurrentDirectory + "\\" + Environment.GetCommandLineArgs()[1] + ".exe" }
                                 };
                     p.Start();
                    //Thread.Sleep(5000);
@@ -144,7 +144,7 @@ namespace ClickMaint
             this.Name = "frmMain";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
-            this.Text = "Communicating via Messages Demo";
+            this.Text = "Communicating via Messages";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.ResumeLayout(false);
 

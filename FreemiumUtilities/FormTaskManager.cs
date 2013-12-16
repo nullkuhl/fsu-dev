@@ -238,7 +238,7 @@ namespace FreemiumUtilities
                 {
                     td.RegistrationInfo.Description = "Freemium 1 ClickMaint";
                     td.Settings.Enabled = true;
-                    td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe"));
+                    td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", System.Diagnostics.Process.GetCurrentProcess().ProcessName, Environment.CurrentDirectory));
                     trgCollection = td.Triggers;
                 }
 

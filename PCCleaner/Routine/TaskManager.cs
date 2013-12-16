@@ -132,12 +132,12 @@ namespace PCCleaner.Routine
                 {
                     if (scanOnly)
                     {
-                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, Environment.CurrentDirectory);
+                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", System.Diagnostics.Process.GetCurrentProcess().ProcessName, Environment.CurrentDirectory);
                     }
                     else
                     {
-                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe",
-                                                                    ScanAndFixCommandLineArg, Environment.CurrentDirectory);
+                        task.Definition.Actions[0] = new ExecAction(Environment.CurrentDirectory + "\\1Click.exe"
+                                                                     , System.Diagnostics.Process.GetCurrentProcess().ProcessName+ " " + ScanAndFixCommandLineArg, Environment.CurrentDirectory);
                     }
                     task.RegisterChanges();
                 }
@@ -165,7 +165,7 @@ namespace PCCleaner.Routine
                 td.RegistrationInfo.Description = "PCCleanerUtilities 1 ClickMaint";
                 td.Principal.RunLevel = TaskRunLevel.Highest;
                 // Create an action that will launch Notepad whenever the trigger fires
-                td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe", null, Environment.CurrentDirectory));                
+                td.Actions.Add(new ExecAction(Environment.CurrentDirectory + "\\1Click.exe",  System.Diagnostics.Process.GetCurrentProcess().ProcessName, Environment.CurrentDirectory));                
                 WeeklyTrigger mTrigger = new WeeklyTrigger();
                 mTrigger.DaysOfWeek = DaysOfTheWeek.Friday;
                 mTrigger.StartBoundary = DateTime.Today.AddHours(12);

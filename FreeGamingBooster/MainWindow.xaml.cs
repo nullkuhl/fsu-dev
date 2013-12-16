@@ -53,6 +53,7 @@ namespace FreeGamingBooster
             Thread.CurrentThread.CurrentUICulture = LocalizeDictionary.Instance.Culture;
             if (CfgFile.Get("FirstRun") != "0")
             {
+                FirstRun();
                 CfgFile.Set("FirstRun", "0");
             }
 
@@ -144,7 +145,15 @@ namespace FreeGamingBooster
             }
         }
 
-        
+        /// <summary>
+        /// The code runned on a first application run at the specific machine
+        /// Adds the Windows Explorer context menu items for a quick launch a few knots
+        /// </summary>
+        static void FirstRun()
+        {
+            // Nothing to do for this product here (no context menues).
+        }
+
         /// <summary>
         /// Inits the model
         /// </summary>

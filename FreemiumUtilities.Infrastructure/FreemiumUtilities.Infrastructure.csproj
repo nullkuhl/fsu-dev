@@ -104,48 +104,12 @@
     <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
     <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ToolBarRemoverDebug|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\ToolBarRemoverDebug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;ToolBarRemover</DefineConstants>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Debug\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
-    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ToolBarRemoverRelease|AnyCPU'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\ToolBarRemoverRelease\</OutputPath>
-    <DefineConstants>TRACE;ToolBarRemover</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <CodeAnalysisLogFile>bin\Release\FreemiumUtilities.Infrastructure.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
-    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
-    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
-    <UseVSHostingProcess>false</UseVSHostingProcess>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
-    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
-    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
-    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="WindowsBase" />
-    <Reference Include="WPFLocalizeExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="WPFLocalizeExtension">
       <HintPath>..\FreemiumUtilities\Libraries\WPFLocalizeExtension.dll</HintPath>
     </Reference>
   </ItemGroup>
@@ -185,18 +149,6 @@
  xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.StartupManager\$(OutDir)Libraries\" /Y
  xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.TempCleaner\$(OutDir)Libraries\" /Y
  xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.RegCleaner\$(OutDir)Libraries\" /Y
-) else if "$(ConfigurationName)" == "ToolBarRemoverDebug" (
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreeToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.IEToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ChromeToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.MozillaToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.SpywareRemover\$(OutDir)Libraries\" /Y
-) else if "$(ConfigurationName)" == "ToolBarRemoverRelease" (
-xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreeToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.IEToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.ChromeToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.MozillaToolbarRemover\$(OutDir)Libraries\" /Y
- xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.SpywareRemover\$(OutDir)Libraries\" /Y
 ) else (
  xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities\$(OutDir)Libraries\" /Y
  xcopy "$(TargetDir)FreemiumUtilities.Infrastructure.dll" "$(SolutionDir)FreemiumUtilities.Spyware\$(OutDir)Libraries\" /Y

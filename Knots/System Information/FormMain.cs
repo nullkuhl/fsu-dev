@@ -230,7 +230,7 @@ namespace SystemInformation
 		public FormMain()
 		{
 			InitializeComponent();
-            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeToolbarRemover.exe"))
+            if (File.Exists(System.IO.Directory.GetCurrentDirectory() + "\\FreeGamingBooster.exe"))
             {
                 this.Icon = Properties.Resources.GBicon;
             }
